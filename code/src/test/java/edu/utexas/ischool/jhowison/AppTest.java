@@ -4,6 +4,11 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+
+
 /**
  * Unit test for simple App.
  */
@@ -35,4 +40,10 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+	public void testTTLFileLoad() throws Exception
+	{
+		TTLRepository testRepo = new TTLRepository();
+		assertThat(testRepo, instanceOf(TTLRepository.class) );
+	}
 }

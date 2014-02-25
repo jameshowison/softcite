@@ -25,7 +25,7 @@ public class CodeCounts {
 		
 		// use the FileManager to load the .ttl file as the model
 //		Model model = FileManager.get().loadModel("/Users/howison/Dropbox/Shared Software Citation Folder/ttl-coding/JamesCoding/JamesCoding.ttl");
-		Model model = FileManager.get().loadModel("/Users/howison/Dropbox/Shared Software Citation Folder/ttl-coding/CatherineCoding/CatherineCoding.ttl");
+		Model model = FileManager.get().loadModel("../../../../../../../../data/SoftwareCitationDataset.ttl");
 		
 		if (model == null) {
 			throw new IllegalArgumentException(

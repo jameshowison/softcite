@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.008" errors="0" skipped="0" tests="1" name="edu.utexas.ischool.jhowison.AppTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.8-b03-424"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M3720"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/howison/Documents/Development/softcitecode"/>
+    <property name="java.runtime.version" value="1.6.0_33-b03-424-11M3720"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/howison/Documents/Development/softcitecode"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/howison/Documents/Development/softcitecode/target/surefire/surefirebooter3178751524331873615.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/sp/bmzp__fx02q_3l6rb5q7n4pw0000gp/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="MacRoman"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="surefire.test.class.path" value="/Users/howison/Documents/Development/softcitecode/target/test-classes:/Users/howison/Documents/Development/softcitecode/target/classes:/Users/howison/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/howison/.m2/repository/org/apache/jena/jena-arq/2.9.0-incubating/jena-arq-2.9.0-incubating.jar:/Users/howison/.m2/repository/org/apache/jena/jena-core/2.7.0-incubating/jena-core-2.7.0-incubating.jar:/Users/howison/.m2/repository/org/apache/jena/jena-iri/0.9.0-incubating/jena-iri-0.9.0-incubating.jar:/Users/howison/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/howison/.m2/repository/org/apache/httpcomponents/httpclient/4.1.2/httpclient-4.1.2.jar:/Users/howison/.m2/repository/org/apache/httpcomponents/httpcore/4.1.3/httpcore-4.1.3.jar:/Users/howison/.m2/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar:/Users/howison/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/Users/howison/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/howison/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/Users/howison/.m2/repository/org/slf4j/slf4j-log4j12/1.6.4/slf4j-log4j12-1.6.4.jar:/Users/howison/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.7.4"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/howison"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="MacRoman"/>
+    <property name="user.name" value="howison"/>
+    <property name="java.class.path" value="/Users/howison/Documents/Development/softcitecode/target/test-classes:/Users/howison/Documents/Development/softcitecode/target/classes:/Users/howison/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/howison/.m2/repository/org/apache/jena/jena-arq/2.9.0-incubating/jena-arq-2.9.0-incubating.jar:/Users/howison/.m2/repository/org/apache/jena/jena-core/2.7.0-incubating/jena-core-2.7.0-incubating.jar:/Users/howison/.m2/repository/org/apache/jena/jena-iri/0.9.0-incubating/jena-iri-0.9.0-incubating.jar:/Users/howison/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/howison/.m2/repository/org/apache/httpcomponents/httpclient/4.1.2/httpclient-4.1.2.jar:/Users/howison/.m2/repository/org/apache/httpcomponents/httpcore/4.1.3/httpcore-4.1.3.jar:/Users/howison/.m2/repository/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar:/Users/howison/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/Users/howison/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/howison/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/Users/howison/.m2/repository/org/slf4j/slf4j-log4j12/1.6.4/slf4j-log4j12-1.6.4.jar:/Users/howison/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar:"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="/Users/howison/Documents/Development/softcitecode/target/surefire/surefirebooter3178751524331873615.jar /Users/howison/Documents/Development/softcitecode/target/surefire/surefire282283047031642388tmp /Users/howison/Documents/Development/softcitecode/target/surefire/surefire1490518965865352343tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_33"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="localRepository" value="/Users/howison/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_33-424"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.001" classname="edu.utexas.ischool.jhowison.AppTest" name="testApp"/>
+</testsuite>

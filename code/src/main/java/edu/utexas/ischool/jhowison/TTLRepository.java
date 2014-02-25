@@ -45,4 +45,25 @@ public class TTLRepository {
 		return this.model;
 	}
 	
+	public static int getNumberPublications() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (count(DISTINCT ?publication) AS ?pubCount)");
+		queryStr.append("WHERE  {");
+		queryStr.append("       ?publication rdf:type bioj:article .");
+		queryStr.append("}");
+
+		Query query = queryStr.asQuery();
+		
+		// Execute the query and obtain results
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+		Iterator<QuerySolution> results = qe.execSelect();
+		int count = -1;
+		for ( ; results.hasNext() ; ) {
+			QuerySolution soln = results.next() ;
+			count = soln.get("?pubCount").asLiteral().getInt();
+		}
+		return count;
+	}
+	
 }

@@ -46,4 +46,10 @@ public class AppTest
 		TTLRepository testRepo = new TTLRepository();
 		assertThat(testRepo, instanceOf(TTLRepository.class) );
 	}
+	
+	public void testNumberOfPublications()
+	{
+		TTLRepository testRepo = new TTLRepository();
+		assertEquals(TTLRepository.getNumberPublications(),90);
+	}
 }

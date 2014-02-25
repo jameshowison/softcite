@@ -33,9 +33,18 @@
 		<plugin>
 		  <groupId>org.codehaus.mojo</groupId>
 		  <artifactId>exec-maven-plugin</artifactId>
-		  <version>1.1</version>
-		  <configuration>
-		    <mainClass>edu.utexas.ischool.jhowison.TestMatches</mainClass>
+		  <version>1.2.1</version>
+		  <!-- <executions>
+			<execution>
+				<goals>
+					<goal>exec</goal>
+				</goals>
+			</execution>
+		  </executions>	 -->
+		  <configuration> <!--
+		  	Note that this is run with mvn exec:java
+		  -->
+		    <mainClass>edu.utexas.ischool.jhowison.CodeCounts</mainClass>
 		  </configuration>
 		</plugin>
 	</plugins>

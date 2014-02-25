@@ -26,7 +26,8 @@ public class TestMatches {
 		
 		// use the FileManager to load the .ttl file as the model
 //		Model model = FileManager.get().loadModel("/Users/howison/Dropbox/Shared Software Citation Folder/ttl-coding/JamesCoding/JamesCoding.ttl");
-		Model rawModel = FileManager.get().loadModel("/Users/howison/Dropbox/Shared Software Citation Folder/ttl-coding/testingMatchesQueries.ttl");
+		TTLRepository myRep = new TTLRepository();
+		Model rawModel = myRep.getModel();
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 		// Attach a very basic reasoner
 		InfModel model = ModelFactory.createInfModel(reasoner, rawModel);

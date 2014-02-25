@@ -22,6 +22,8 @@ import com.hp.hpl.jena.sparql.engine.*;
 
 public class TTLRepository {
 	
+	public static Model model;
+	
 	public TTLRepository() {
 		//
 		
@@ -31,11 +33,16 @@ public class TTLRepository {
 //		String myPath = fileURL.getPath();  // this is throwing an NPE.
 //		Model model = FileManager.get().loadModel(myPath);
 		
-		Model model = FileManager.get().loadModel("https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl");
+		this.model = FileManager.get().loadModel("https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl");
 		
-		if (model == null) {
+		if (this.model == null) {
 			throw new IllegalArgumentException(
 			"ttl file not found");
 		}
 	}
+	
+	public Model getModel() {
+		return this.model;
+	}
+	
 }

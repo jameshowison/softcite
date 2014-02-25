@@ -23,9 +23,8 @@ public class CodeCounts {
 	
 	public static void main(String[] args) {
 		
-		// use the FileManager to load the .ttl file as the model
-//		Model model = FileManager.get().loadModel("/Users/howison/Dropbox/Shared Software Citation Folder/ttl-coding/JamesCoding/JamesCoding.ttl");
-		Model model = FileManager.get().loadModel("../../../../../../../../data/SoftwareCitationDataset.ttl");
+		TTLRepository myRep = new TTLRepository();
+		Model model = myRep.getModel();
 		
 		if (model == null) {
 			throw new IllegalArgumentException(

@@ -19204,5 +19204,5 @@ bioj:J_THERM_BIOL rdf:type bioj:journal ;
 	dc:identifier <urn:issn:0306-4565> ;
 	dc:title "Journal of Thermal Biology" ;
 	
-
+.
 

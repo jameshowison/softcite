@@ -1,0 +1,121 @@
+1.  change all ca:isTargetof  to ca:isTargetOf
+2.  change all bioj:(\d) to bioj:a$1
+
+bioj:2007-48-UNDERSEA_HYPERBAR_M
+bioj:2008-02-WATERBIRDS
+
+bioj:a2007-48-UNDERSEA_HYPERBAR_M
+bioj:a2008-02-WATERBIRDS
+
+sed 's/bioj:\([[:digit:]]\)/bioj:a\1/g'
+
+3.  Standardize  ontology location to http://james.howison.name/ontologies/.  This means changing http://howison.ischool.utexas.edu/
+
+4.  Fix dc:isPartOf so that the ISSN is urn:ISSN:number not dc:number
+
+dc:urn dc:1896-1851 ;
+
+dc:urn <urn:issn:1896-1851> ;
+
+sed 's/dc:\([[:digit:]][[:digit:]][[:digit:]][[:digit:]]-[[:digit:]][[:digit:]][[:digit:]][[:digit:]]\)/<urn:issn:\1>/g'
+
+also change dc:urn to dc:identifier
+
+sed 's/dc:urn/dc:identifier/g'
+
+cleanup one or two (wish I'd included the X!):
+
+sed 's/dc:ISSN1744-4292/<urn:issn:1744-4292>/g'
+
+sed 's/dc:1365-313X/<urn:issn:1365-313X>/g'
+
+sed 's/dc:1076-836X/<urn:issn:1076-836X>/g'
+
+sed 's/dc:1303-829X/<urn:issn:1303-829X>/g'
+
+sed 's/dc:1618-095X/<urn:issn:1618-095X>/g'
+sed 's/dc:1365-294X/<urn:issn:1365-294X>/g'
+dc:
+
+
+---------------
+Wed Feb 12 17:32:24 CST 2014
+---------------
+
+
+Then I deleted everything and re-imported:
+
+CatherineCoding-singly_coded_AS_OF_01-22-13.ttl (md5: ccd8ccc2ec799d8466d7855d4141a9d0)
+Julia-singlyCoded.ttl (md5: 23c789d8625f791dd68b61531c91ddeb)
+journalCodes.ttl (md5: 105a323084a050c0266e75720eb65d0f)
+
+Hmmmm, that gives 398 selections, not the 404 that I found before...ug.
+
+60 articles with selections:
+
+SELECT (COUNT(DISTINCT ?article) as ?articles_with_selection)
+WHERE {
+	?article rdf:type bioj:article ;
+	         bioj:has_selection ?sel .
+}
+
+---------------
+Wed Feb 12 17:39:40 CST 2014
+---------------
+
+
+SELECT ?strata (COUNT(DISTINCT ?article) as ?articles_with_selection)
+WHERE {
+      ?article rdf:type bioj:article ;
+                  dc:isPartOf ?journal ;
+	         bioj:has_selection ?sel .
+      ?journal bioj:strata ?strata .
+}
+GROUP BY ?strata
+ORDER BY ?strata
+
+hmmmm, nothing under bioj:strata.  Damn, forgot to update the journalCodes.ttl stuff with the http://james.howison.name/ontologies/.
+
+Delete everything and report.
+
+CatherineCoding-singly_coded_AS_OF_01-22-13.ttl (md5: ccd8ccc2ec799d8466d7855d4141a9d0)
+Julia-singlyCoded.ttl (md5: 23c789d8625f791dd68b61531c91ddeb)
+journalCodes.ttl (md5: e10d0c07c0bd3433ce846817234bee70)
+
+---------------
+Wed Feb 12 17:54:18 CST 2014
+---------------
+
+Hmmm, seem to be 3 journals without strata?
+
+These appear to be differently spelled in the isPartOf and the rdf:tupe bioj:journal statements.
+
+http://james.howison.name/ontologies/bio-journal-sample#J_INTEGR-PLANT-BIOL
+http://james.howison.name/ontologies/bio-journal-sample#J_INTEGR_PLANT_BIOL
+
+and 
+
+NAT-GENET (one dc:isPartOf) vs NAT_GENET (dc:isPartOf and rdf:type bioj:journal)
+
+http://james.howison.name/ontologies/bio-journal-sample#J_THERM_BIOL
+
+was just never coded for strata?
+
+Hmmmm, there really isn't a consistent coding of - vs _ in journal name URIs.
+
+Ok: actual changes:
+
+sed 's/NAT-GENET/NAT_GENET/g'
+
+sed 's/INTEGR-PLANT-BIOL/INTEGR_PLANT_BIOL/g'  # Note this changes a bunch of selections too.
+
+Post these changes import:
+MD5 (CatherineCoding-singly_coded_AS_OF_01-22-13.ttl) = a55483c3a6c246d7f0c936ff0cda041e
+MD5 (journalCodes.ttl) = e10d0c07c0bd3433ce846817234bee70
+MD5 (JuliaCoding-singlyCoded.ttl) = 67dac9287dc23b2d0b3230536e88e0c5
+
+---------------
+Thu Feb 13 09:36:40 CST 2014
+---------------
+
+Hmmm, J_THERM_BIOL.  I think this was a replacement for an article, perhaps a review article?

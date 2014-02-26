@@ -52,8 +52,24 @@ public class TTLRepository {
 		queryStr.append("WHERE  {");
 		queryStr.append("       ?publication rdf:type bioj:article .");
 		queryStr.append("}");
+		
+		return queryReturnsSingleInt(queryStr, "pubCount");
+	}
+	
+	public static int getNumberSelections() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (COUNT(DISTINCT ?article) as ?articles_with_selection)");
+		queryStr.append("WHERE {");
+		queryStr.append("	?article rdf:type bioj:article ;");
+		queryStr.append("         bioj:has_selection ?sel .");
+		queryStr.append("}");
 
-		Query query = queryStr.asQuery();
+		return queryReturnsSingleInt(queryStr, "articles_with_selection");
+	}
+	
+	private static int queryReturnsSingleInt (ParameterizedSparqlString paramQueryString, String targetVar) {
+		Query query = paramQueryString.asQuery();
 		
 		// Execute the query and obtain results
 		QueryExecution qe = QueryExecutionFactory.create(query, model);
@@ -61,9 +77,8 @@ public class TTLRepository {
 		int count = -1;
 		for ( ; results.hasNext() ; ) {
 			QuerySolution soln = results.next() ;
-			count = soln.get("?pubCount").asLiteral().getInt();
+			count = soln.get(targetVar).asLiteral().getInt();
 		}
 		return count;
 	}
-	
 }

@@ -7609,7 +7609,7 @@ bioj:has_selection bioj:a2010-13-PLANT_J-C01 ;
 #end of new article header with index of article selections
 
 # start coding for selection
-bioj:a2010-13-PLANT_J-CO1 rdf:type bioj:selection ;
+bioj:a2010-13-PLANT_J-C01 rdf:type bioj:selection ;
           	  bioj:full_quote "Image data processing was performed using GENESPRING software (Agilent)." ;
 
               ca:isTargetOf 

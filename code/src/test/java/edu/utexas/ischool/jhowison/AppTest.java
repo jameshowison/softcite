@@ -34,12 +34,18 @@ public class AppTest
 	@Test 
 	public void testNumberOfPublications()
 	{
-		assertEquals(TTLRepository.getNumberPublications(),90);
+		assertEquals(90, TTLRepository.getNumberPublications());
 	}
 	
 	@Ignore
 	public void testNumberOfSelections()
 	{
-		assertEquals(TTLRepository.getNumberSelections(),-1);
+		assertEquals(-1, TTLRepository.getNumberSelections());
+	}
+	
+	@Test
+	public void testBiojSelectionWithoutRDFtype()
+	{
+		assertEquals(0, TTLRepository.getBiojSelectionWithoutRDFtype());
 	}
 }

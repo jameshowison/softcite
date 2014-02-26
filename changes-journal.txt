@@ -119,3 +119,20 @@ Thu Feb 13 09:36:40 CST 2014
 ---------------
 
 Hmmm, J_THERM_BIOL.  I think this was a replacement for an article, perhaps a review article?
+
+---------------
+Wed Feb 26 09:57:57 CST 2014
+---------------
+
+Ok, selections.
+
+	?sel rdf:type bioj:selection  shows 398
+	
+	?article citec:has_selection ?sel shows 285.
+	
+Why?
+
+UNION of those two has 401 DISTINCT URLs.
+
+Want ?sel where not bioj:selection.  Do this with a FILTER.  Found 3 URL typo issues. see commits: 508b603219d5cf10781fced4f8fdfd2c45e0049b and 47c207f0e0bd4426970a0ebd4a3de5ca34c5e6ac
+

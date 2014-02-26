@@ -33,7 +33,9 @@ public class TTLRepository {
 //		String myPath = fileURL.getPath();  // this is throwing an NPE.
 //		Model model = FileManager.get().loadModel(myPath);
 		
-		this.model = FileManager.get().loadModel("https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl");
+		this.model = FileManager.get().loadModel(
+			"https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl"
+		);
 		
 		if (this.model == null) {
 			throw new IllegalArgumentException(
@@ -59,13 +61,31 @@ public class TTLRepository {
 	public static int getNumberSelections() {
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
 		
-		queryStr.append("SELECT (COUNT(DISTINCT ?article) as ?articles_with_selection)");
+		queryStr.append("SELECT (COUNT(DISTINCT ?sel) as ?selectionCount)");
 		queryStr.append("WHERE {");
-		queryStr.append("	?article rdf:type bioj:article ;");
-		queryStr.append("         bioj:has_selection ?sel .");
+		queryStr.append(" { ?article bioj:has_selection ?sel }");
+		
+		queryStr.append(" { ?article bioj:has_selection ?sel }");
+	//	queryStr.append("	?article bioj:has_selection ?sel .");
 		queryStr.append("}");
+		
+		
 
-		return queryReturnsSingleInt(queryStr, "articles_with_selection");
+		return queryReturnsSingleInt(queryStr, "selectionCount");
+	}
+	
+	public static int getBiojSelectionWithoutRDFtype() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (COUNT(DISTINCT ?sel) as ?selectionCount)");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?article bioj:has_selection ?sel  ");
+		queryStr.append("  FILTER NOT EXISTS {");
+		queryStr.append("    ?sel rdf:type bioj:selection .");
+		queryStr.append("  } ");
+		queryStr.append("}");
+		
+		return queryReturnsSingleInt(queryStr, "selectionCount");
 	}
 	
 	private static int queryReturnsSingleInt (ParameterizedSparqlString paramQueryString, 

@@ -18655,7 +18655,7 @@ bioj:a2000-22-AM_J_BOT rdf:type bioj:article ;
 	dc:isPartOf bioj:AM_J_BOT ;
 .
 
-bioj:a2002-22-AM_J_B0T_B01 rdf:type bioj:selection ;
+bioj:a2002-22-AM_J_BOT_B01 rdf:type bioj:selection ;
 	ca:memo "DECORANA analysis is mentioned later in the paper, and likely refers to this software" ;
 	
 	bioj:full_quote "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites." ;

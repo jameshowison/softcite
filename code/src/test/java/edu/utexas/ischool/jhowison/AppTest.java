@@ -1,8 +1,11 @@
 package edu.utexas.ischool.jhowison;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.Ignore;
+
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -12,44 +15,31 @@ import static org.hamcrest.Matchers.*;
 /**
  * Unit test for simple App.
  */
+//@RunWith(Junit4.class)
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
-
+	private TTLRepository testRepo;
+	
+	@Before
+	public void setUpRepository() {
+		this.testRepo = new TTLRepository();
+	}
+	
+	@Test 
 	public void testTTLFileLoad() throws Exception
 	{
-		TTLRepository testRepo = new TTLRepository();
 		assertThat(testRepo, instanceOf(TTLRepository.class) );
 	}
 	
+	@Test 
 	public void testNumberOfPublications()
 	{
-		TTLRepository testRepo = new TTLRepository();
 		assertEquals(TTLRepository.getNumberPublications(),90);
+	}
+	
+	@Ignore
+	public void testNumberOfSelections()
+	{
+		assertEquals(TTLRepository.getNumberSelections(),-1);
 	}
 }

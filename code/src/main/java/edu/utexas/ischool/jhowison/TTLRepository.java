@@ -68,7 +68,8 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "articles_with_selection");
 	}
 	
-	private static int queryReturnsSingleInt (ParameterizedSparqlString paramQueryString, String targetVar) {
+	private static int queryReturnsSingleInt (ParameterizedSparqlString paramQueryString, 
+											  String targetVar) {
 		Query query = paramQueryString.asQuery();
 		
 		// Execute the query and obtain results

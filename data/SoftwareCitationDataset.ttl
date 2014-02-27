@@ -18,9 +18,6 @@
 # These are used by a basic reasoner to inpute additional statements
 ##################################
 
-# anything on the right of has_selection must be an article.
-bioj:has_selection rdfs:range bioj:article .
-
 ####################################
 # CatherineCoding-singly_coded_AS_OF_01-22-13.ttl, which is itself an amalgum of other files
 ####################################

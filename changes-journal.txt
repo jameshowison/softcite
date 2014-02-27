@@ -136,3 +136,65 @@ UNION of those two has 401 DISTINCT URLs.
 
 Want ?sel where not bioj:selection.  Do this with a FILTER.  Found 3 URL typo issues. see commits: 508b603219d5cf10781fced4f8fdfd2c45e0049b and 47c207f0e0bd4426970a0ebd4a3de5ca34c5e6ac
 
+---------------
+Thu Feb 27 09:21:25 CST 2014
+---------------
+
+Articles have selections, some of those selections have_references.  The Reference receives codes, so it is a selection as well.
+
+SELECT COUNT(DISTINCT ?sel) 
+WHERE {
+  ?article bioj:has_selection ?sel .
+  ?sel bioj:has_reference ?ref .
+  ?ref rdf:type bioj:selection . 
+}
+==> 126.
+There are 126 has_reference statements?
+
+The solution here might be to directly associate the has_reference with the articles.  Should make them easier to consider?  Going to depend a little on the specific questions, though.
+
+SELECT (COUNT(DISTINCT ?sel) as ?selectionCount)
+WHERE {
+    ?sel rdf:type bioj:selection 
+  	FILTER NOT EXISTS {
+		   ?article bioj:has_selection ?sel
+		}
+}
+==> 114
+There are 114 bioj:selections not directly associated with an article?
+
+So there are 126 - 114 has_reference statements that are directly associated?
+
+Nope, all Domains of bioj:has_reference are bioj:selections.
+
+hmmm.
+
+SELECT COUNT(DISTINCT ?ref)
+WHERE {
+  [] bioj:has_reference ?ref .
+}
+==> 112.  references.
+bah.
+
+SELECT COUNT(DISTINCT ?direct_sel) 
+WHERE {
+  ?article bioj:has_selection ?direct_sel ;
+           rdf:type bioj:article .
+  ?direct_sel bioj:has_reference ?ref .
+  ?ref rdf:type bioj:selection . 
+}
+126 selections with references.
+
+Ok, that's easy, some references occur in more than one selection.
+
+Q: how many direct selections have references? A: 126.
+Q: how many references occur in more than one selection?
+
+SELECT COUNT(DISTINCT ?ref)
+WHERE {
+  ?sel1 bioj:has_reference ?ref .
+  ?sel2 bioj:has_reference ?ref .
+  FILTER (?sel1 != ?sel2 )
+}
+
+Yup.  That gives 22. Which is the difference between 126 and 114.

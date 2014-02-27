@@ -18854,7 +18854,7 @@ bioj:BMC_PLANT_BIOL rdf:type bioj:journal ;
 	dc:identifier <urn:issn:1471-2229> ;
 	dc:title "BMC Plant Biology" ;
 	bioj:strata "111-1455" ;
-	bioj:hasAuthorInstructions "urlhttp://www.biomedcentral.com/bmcplantbiol/authors/instructions" ;
+	bioj:hasAuthorInstructions "http://www.biomedcentral.com/bmcplantbiol/authors/instructions" ;
 .
 
 bioj:CELL rdf:type bioj:journal ;

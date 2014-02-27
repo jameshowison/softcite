@@ -257,5 +257,26 @@ software_pubication
 
 replaced 1.
 
+---------------
+Thu Feb 27 10:28:37 CST 2014
+---------------
+
+bioj:J_MOL_CATAL_B-ENZYM rdf:type bioj:journal ;
+	dc:identifier <urn:issn:1873-3158> ;
+	dc:title "Journal of Molecular Catalysis B: Enzymatic" ;
+	bioj:strata "111-1455" ;
+	bioj:hasAuthorInstructions "http://www.elsevier.com/journals/journal-of-molecular-catalysis-b-enzymatic/1381-1177/guide-for-authors" ;
+	bioj:hasSoftwarePolicy "text" ;
+	bioj:hasSoftwarePolicy "url" ;
+.
+
+Doesn't look quite right.  Are the bottom two just left-over templates?
+
+Found
+
+urlhttp://www.biomedcentral.com/bmcplantbiol/authors/instructions
+
+removed the url part of it.
+
 
 

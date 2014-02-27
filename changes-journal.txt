@@ -270,7 +270,7 @@ bioj:J_MOL_CATAL_B-ENZYM rdf:type bioj:journal ;
 	bioj:hasSoftwarePolicy "url" ;
 .
 
-Doesn't look quite right.  Are the bottom two just left-over templates?
+Doesn't look quite right.  Are the bottom two just left-over templates and you meant that that policy doesn't have any Software Policy?
 
 Found
 
@@ -278,5 +278,8 @@ urlhttp://www.biomedcentral.com/bmcplantbiol/authors/instructions
 
 removed the url part of it.
 
+---------------
+Thu Feb 27 10:31:02 CST 2014
+---------------
 
 

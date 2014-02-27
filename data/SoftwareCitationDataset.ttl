@@ -9650,7 +9650,7 @@ bioj:a2010-45-NEW_PHYTOL-C01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:domain-publication ;
+    	  ca:appliesCode citec:domain_publication ;
 		] ;
 
 
@@ -9670,7 +9670,7 @@ bioj:a2010-45-NEW_PHYTOL-C01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:domain-publication ;
+    	  ca:appliesCode citec:domain_publication ;
 		] ;
 
 

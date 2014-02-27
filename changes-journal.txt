@@ -207,7 +207,7 @@ Ok, confirming vocabulary extent and possibility of typos.
 
 Get all things used as a property.
 
-SELECT ?p
+SELECT DISTINCT ?p
 WHERE {
  [] ?p []
 }
@@ -223,5 +223,31 @@ bioj:full_quote / bioj:fullquote
 
 Also notice lack of consistentcy between underscore_separated and studlyCaps.
 
+Made the two changes above.
 
+---------------
+Thu Feb 27 10:05:04 CST 2014
+---------------
+
+SELECT DISTINCT (strafter(str(?p), "#") as ?localName)
+WHERE {
+ [] ?p []
+}
+ORDER BY ?localName
+
+SELECT DISTINCT ?s
+WHERE {
+ ?s ?p ?o
+}
+ORDER BY ?s
+
+but I only want those that match a namespace?
+Can cut this down with regex.
+
+found
+
+citec:domain-publication
+citec:domain_publication
+
+replaced 2.
 

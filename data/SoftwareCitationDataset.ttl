@@ -18908,8 +18908,6 @@ bioj:J_MOL_CATAL_B-ENZYM rdf:type bioj:journal ;
 	dc:title "Journal of Molecular Catalysis B: Enzymatic" ;
 	bioj:strata "111-1455" ;
 	bioj:hasAuthorInstructions "http://www.elsevier.com/journals/journal-of-molecular-catalysis-b-enzymatic/1381-1177/guide-for-authors" ;
-	bioj:hasSoftwarePolicy "text" ;
-	bioj:hasSoftwarePolicy "url" ;
 .
 
 bioj:J_MOL_NEUROSCI rdf:type bioj:journal ;

@@ -282,4 +282,23 @@ removed the url part of it.
 Thu Feb 27 10:31:02 CST 2014
 ---------------
 
+Email back from Julia 
+
+Yeah, that's exactly what that is. I just checked it against the notes I had in Excel for each journal and both those fields are blank.
+
+
+On Thu, Feb 27, 2014 at 10:33 AM, James Howison <jhowison@ischool.utexas.edu> wrote:
+bioj:J_MOL_CATAL_B-ENZYM rdf:type bioj:journal ;
+        dc:identifier <urn:issn:1873-3158> ;
+        dc:title "Journal of Molecular Catalysis B: Enzymatic" ;
+        bioj:strata "111-1455" ;
+        bioj:hasAuthorInstructions "http://www.elsevier.com/journals/journal-of-molecular-catalysis-b-enzymatic/1381-1177/guide-for-authors" ;
+        bioj:hasSoftwarePolicy "text" ;
+        bioj:hasSoftwarePolicy "url" ;
+.
+
+Doesn't look quite right.  Are the bottom two just left-over templates and you meant that that policy doesn't include any Software Policy?
+
+Thanks,
+James
 

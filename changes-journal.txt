@@ -198,3 +198,30 @@ WHERE {
 }
 
 Yup.  That gives 22. Which is the difference between 126 and 114.
+
+---------------
+Thu Feb 27 09:50:11 CST 2014
+---------------
+
+Ok, confirming vocabulary extent and possibility of typos.
+
+Get all things used as a property.
+
+SELECT ?p
+WHERE {
+ [] ?p []
+}
+ORDER BY ?p
+
+Then visually inspect for near typos.
+
+e.g.,
+
+ca:isTargetof instead of ca:isTargetOf
+
+bioj:full_quote / bioj:fullquote
+
+Also notice lack of consistentcy between underscore_separated and studlyCaps.
+
+
+

@@ -15709,7 +15709,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C07 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:software_pubication ;
+    	  ca:appliesCode citec:software_publication ;
 		] ;
 
 

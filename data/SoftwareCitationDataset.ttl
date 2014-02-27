@@ -18159,7 +18159,7 @@ bioj:a2002-39-SYST_BOT rdf:type bioj:article ;
 .
 
 bioj:a2002-39-SYST_BOT-B01 rdf:type bioj:selection ;
-	bioj:fullquote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
+	bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
@@ -18250,7 +18250,7 @@ bioj:a2002-39-SYST_BOT-B01 rdf:type bioj:selection ;
 .
 
 bioj:a2002-39-SYST_BOT-B02 rdf:type bioj:selection ;
-	bioj:fullquote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
+	bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
@@ -18343,7 +18343,7 @@ bioj:a2002-39-SYST_BOT-B02 rdf:type bioj:selection ;
 .
 
 bioj:a2002-39-SYST_BOT-B03 rdf:type bioj:selection ;
-	bioj:fullquote  "A variety of parameters was explored in the alignment of the ITS sequences performed with the package ClustalX 1,8-PPC (Thomson et al. 1997). The final alignment was adjusted manually, so as to keep the number of the total mutational changes to a minimum (the aligned data matrix can be obtained from the first author upon request). Indels were included in the analyses and coded according to the principles suggested by Simmons and Ochoterena (2000). Substitutions and indels were given equal weight in all phylogenetic analyses." ;
+	bioj:full_quote  "A variety of parameters was explored in the alignment of the ITS sequences performed with the package ClustalX 1,8-PPC (Thomson et al. 1997). The final alignment was adjusted manually, so as to keep the number of the total mutational changes to a minimum (the aligned data matrix can be obtained from the first author upon request). Indels were included in the analyses and coded according to the principles suggested by Simmons and Ochoterena (2000). Substitutions and indels were given equal weight in all phylogenetic analyses." ;
 	bioj:matches bioj:none ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;

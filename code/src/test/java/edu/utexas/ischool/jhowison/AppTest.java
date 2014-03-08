@@ -67,4 +67,12 @@ public class AppTest
 		assertEquals(30, TTLRepository.getArticlesPerStrata("111-1455"));
 	}
 	
+	@Ignore
+	public void articleWithoutStrata()
+	{
+		assertEquals(30, TTLRepository.getArticleWithoutStrata());
+	}
+	
+	
+	
 }

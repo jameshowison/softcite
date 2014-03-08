@@ -118,5 +118,34 @@ public class TTLRepository {
 		return count;
 	}
 	
+	public static int getArticleWithoutStrata() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT *");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?article dc:isPartOf ?journal . ");
+		queryStr.append("  FILTER NOT EXISTS {");
+		queryStr.append("    ?journal bioj:strata ?strata");
+		queryStr.append("  } ");
+		queryStr.append("}");
+		
+		formatResultSet(queryStr);
+		return -1;
+	}
 	
+	private static void formatResultSet (ParameterizedSparqlString paramQueryString) {
+		Query query = paramQueryString.asQuery();
+		
+		// Execute the query and obtain results
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+		ResultSet results = qe.execSelect();
+		
+		// Output query results	
+		ResultSetFormatter.out(System.out, results, query);
+		
+		// Important - free up resources used running the query
+		qe.close();
+
+	}
+		
 }

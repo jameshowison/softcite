@@ -302,3 +302,20 @@ Doesn't look quite right.  Are the bottom two just left-over templates and you m
 Thanks,
 James
 
+---------------
+Fri Mar  7 22:22:28 MST 2014
+---------------
+
+What are queries that actually matter?
+
+What proportion of articles had software mentions?
+
+What is the count of software mentions per article?
+Output so that they can be graphed with ggplot2.
+
+---------------
+Fri Mar  7 22:27:47 MST 2014
+---------------
+
+Note: what do I need to do to move the reference selections from being associated with their in-text location to being directly associated with the articles?
+

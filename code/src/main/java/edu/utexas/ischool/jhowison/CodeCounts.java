@@ -56,38 +56,8 @@ public class CodeCounts {
 		// Output query results	
 		ResultSetFormatter.out(System.out, results1, query1);
 		
-		// Important - free up resources used running the query
-		qe1.close();
-
-
-		/**************************************************				
-		 QUERY 2 - SOFTWARE NAMES:
-		 Create a new query that retrieves a unique list of software names found during the course of coding
-		**************************************************/
-
-		String queryString2 = 
-
-			"PREFIX citec: <http://james.howison.name/ontologies/software-citation-coding#>" + " " +
-			"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + " " +
-			"SELECT DISTINCT ?listOfUniqueSoftwareNames" + " " +
-			"WHERE  {" +
-				"?selection a citec:software_name ." + " " +
-				"?selection rdfs:label ?listOfUniqueSoftwareNames ." +
-			"}";
-
-		Query query2 = QueryFactory.create(queryString2);
-		
-		// Execute the query and obtain results
-		QueryExecution qe2 = QueryExecutionFactory.create(query2, model);
-		ResultSet results2 = qe2.execSelect();
-		
-		// Output query results	
-		ResultSetFormatter.out(System.out, results2, query2);
-		
-		// Important - free up resources used running the query
-		qe2.close();
-		// END QUERY 2 - CODE COUNT
-
+		// Replacement for list of software packages.  Outputs to Std out.
+		myRep.getSoftwarePackageList()
 
 	}
 

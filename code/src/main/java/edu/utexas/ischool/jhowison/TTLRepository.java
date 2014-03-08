@@ -147,5 +147,18 @@ public class TTLRepository {
 		qe.close();
 
 	}
+
+	public static void getSoftwarePackageList() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT DISTINCT ?listOfUniqueSoftwareNames");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?selection red:type citec:software_name . ");
+		queryStr.append("  ?selection rdfs:label ?listOfUniqueSoftwareNames .");
+		queryStr.append("}");
+		
+		formatResultSet(queryStr);
+	}
+	
 		
 }

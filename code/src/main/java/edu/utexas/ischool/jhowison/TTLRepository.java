@@ -34,7 +34,8 @@ public class TTLRepository {
 //		Model model = FileManager.get().loadModel(myPath);
 		
 		this.model = FileManager.get().loadModel(
-			"https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl"
+//			"https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl"
+			"/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/data/SoftwareCitationDataset.ttl" 
 		);
 		
 		if (this.model == null) {
@@ -88,6 +89,20 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "selectionCount");
 	}
 	
+	public static int getArticlesPerStrata(String strataString) {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (COUNT(DISTINCT ?article) as ?articleCount)");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?article dc:isPartOf ?journal . ");
+		queryStr.append("  ?journal bioj:strata \"");
+		queryStr.append(strataString);
+		queryStr.append("\" . ");
+		queryStr.append("}");
+		
+		return queryReturnsSingleInt(queryStr, "articleCount");
+	}
+	
 	private static int queryReturnsSingleInt (ParameterizedSparqlString paramQueryString, 
 											  String targetVar) {
 		Query query = paramQueryString.asQuery();
@@ -102,4 +117,6 @@ public class TTLRepository {
 		}
 		return count;
 	}
+	
+	
 }

@@ -48,4 +48,23 @@ public class AppTest
 	{
 		assertEquals(0, TTLRepository.getBiojSelectionWithoutRDFtype());
 	}
+	
+	@Test
+	public void articlesPerStrata1()
+	{
+		assertEquals(30, TTLRepository.getArticlesPerStrata("1-10"));
+	}
+	
+	@Test
+	public void articlesPerStrata2()
+	{
+		assertEquals(30, TTLRepository.getArticlesPerStrata("11-110"));
+	}
+	
+	@Ignore
+	public void articlesPerStrata3()
+	{
+		assertEquals(30, TTLRepository.getArticlesPerStrata("111-1455"));
+	}
+	
 }

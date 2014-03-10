@@ -486,5 +486,12 @@ This seems to work:
 
 sed 's/ca:appliesCode citec:\(.*\)[[:space:]]/ca:appliesCode [ rdf:type citec:\1 ]/g'
 
+What test will help ensure things are not fucked up:
 
+How many code applications:
+
+SELECT COUNT?code
+WHERE {
+  ca:isTargetOf [ ca:appliesCode ?code ]
+}
 

@@ -427,15 +427,64 @@ query for
 FILTER NOT EXISTS {
   ?code rdfs:label ?label
 }
+
+---------------
+Mon Mar 10 09:32:53 CDT 2014
+---------------
 			
 hmmmm, inconsistent prefixes:
 
 http://james.howison.name/ontologies/citation-codes#in-text_mention
 
+citec http://james.howison.name/ontologies/citation-codes
+
 http://james.howison.name/ontologies/software-citation-coding#in-text_mention
 
+Fixed in https://github.com/jameshowison/softcite/commit/574a264fd9e9a73bb8548fa44fb5d996e24817af
 
+---------------
+Mon Mar 10 09:34:36 CDT 2014
+---------------
 
-	
+Back to making the citec codes consistent.  Would need to change:
+
+citec:in-text_mention
+citec:software_used
+citec:identifiable
+citec:findable
+citec:unfindable_version
+citec:access_free
+citec:source_unavailable
+citec:prohibited_modify
+citec:matchesPreferredCite
+citec:domain_publication
+citec:configuration_details
+citec:unidentifiable
+citec:unfindable
+citec:source_available
+citec:permission_modify
+citec:software_publication
+citec:no_access
+citec:users_manual
+citec:access_purchase
+citec:project_name
+citec:missesPreferredCite
+citec:project_page
+citec:software_not_used
+citec:findable_version
+citec:users_guide
+
+Or:
+
+ca:isTargetOf 
+[ rdf:type ca:CodeApplication ;
+  ca:hasCoder "jbullard" ;
+  ca:appliesCode [ rdf:type citec:software_used ];
+] ;
+
+This seems to work:
+
+sed 's/ca:appliesCode citec:\(.*\)[[:space:]]/ca:appliesCode [ rdf:type citec:\1 ]/g'
+
 
 

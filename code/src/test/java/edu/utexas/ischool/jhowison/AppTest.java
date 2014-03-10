@@ -73,6 +73,13 @@ public class AppTest
 		assertEquals(0, TTLRepository.getArticleWithoutStrata());
 	}
 	
+	@Test
+	public void getAllCodeCount()
+	{
+		assertEquals(588, TTLRepository.getAllCodeCount());
+	}
+	
+	
 	
 	
 }

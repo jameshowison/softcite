@@ -133,6 +133,17 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "articleCount");
 	}
 	
+	public static int getAllCodeCount() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (COUNT(DISTINCT ?code) as ?codeCount)");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?s ca:isTargetOf [ ca:appliesCode ?code ] ");
+		queryStr.append("}");
+		
+		return queryReturnsSingleInt(queryStr, "codeCount");
+	}
+	
 	private static void formatResultSet (ParameterizedSparqlString paramQueryString) {
 		Query query = paramQueryString.asQuery();
 		

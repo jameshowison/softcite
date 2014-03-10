@@ -144,6 +144,31 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "codedObjectCount");
 	}
 	
+	public static int getCodeTypeCount() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append(" SELECT (COUNT(DISTINCT ?codeType) as ?codeTypeCount) ");
+		queryStr.append(" WHERE { ");
+		queryStr.append(" 	{  ");
+		queryStr.append(" 		?s ca:appliesCode ?codeType . ");
+		queryStr.append(" 		FILTER NOT EXISTS { ");
+		queryStr.append(" 		  ?codeType rdfs:label ?label ");
+		queryStr.append(" 		} ");
+		queryStr.append(" 	}  ");
+		queryStr.append(" 	UNION  ");
+		queryStr.append(" 	{ ");
+		queryStr.append(" 		?s ca:appliesCode ?code . ");
+		queryStr.append(" 		?code rdf:type ?codeType ");
+		queryStr.append(" 		FILTER EXISTS { ");
+		queryStr.append(" 		  ?code rdfs:label ?label ");
+		queryStr.append(" 		} ");
+		queryStr.append(" 	}  ");
+		queryStr.append(" } ");
+
+		
+		return queryReturnsSingleInt(queryStr, "codeTypeCount");
+	}
+	
 	private static void formatResultSet (ParameterizedSparqlString paramQueryString) {
 		Query query = paramQueryString.asQuery();
 		

@@ -495,3 +495,40 @@ WHERE {
   ca:isTargetOf [ ca:appliesCode ?code ]
 }
 
+Also counting codeTypes
+
+For direct-coded this is (ie unlabled)
+
+?s ca:appliesCode ?codeType .
+FILTER NOT EXISTS {
+  ?codeType rdfs:label ?label
+}
+
+For indirect coded this is (ie labeled)
+
+?s ca:appliesCode ?code .
+?code rdf:type ?codeType
+FILTER EXISTS {
+  ?code rdfs:label ?label
+}
+
+Thus together:
+
+{ 
+?s ca:appliesCode ?codeType .
+FILTER NOT EXISTS {
+  ?codeType rdfs:label ?label
+}
+} UNION {
+?s ca:appliesCode ?code .
+?code rdf:type ?codeType
+FILTER EXISTS {
+  ?code rdfs:label ?label
+}
+} 
+
+---------------
+Mon Mar 10 10:26:11 CDT 2014
+---------------
+
+sed 's/^		\([	]*\)\(.*\)$/		queryStr.append(" \1\2 ");/g'

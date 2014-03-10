@@ -1,4 +1,3 @@
-
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19201,13 +19200,15 @@ bioj:PHYTOMEDICINE rdf:type bioj:journal ;
 	dc:identifier <urn:issn:1618-095X> ;
 	dc:title "Phytomedicine" ;
 	bioj:strata "111-1455" ;
-	bioj:hasAuthorInstructions "http://www.elsevier-data.de/journals/PHYMED_author_instructions.pdf"
+	bioj:hasAuthorInstructions "http://www.elsevier-data.de/journals/PHYMED_author_instructions.pdf" ;
 	
 .
 
 bioj:J_THERM_BIOL rdf:type bioj:journal ;
 	dc:identifier <urn:issn:0306-4565> ;
 	dc:title "Journal of Thermal Biology" ;
+	bioj:strata "111-1455" ;
+	bioj:hasAuthorInstructions "http://www.elsevier.com/journals/journal-of-thermal-biology/0306-4565/guide-for-authors" ;
 	
 .
 

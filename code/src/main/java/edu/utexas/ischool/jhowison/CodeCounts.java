@@ -57,7 +57,7 @@ public class CodeCounts {
 		ResultSetFormatter.out(System.out, results1, query1);
 		
 		// Replacement for list of software packages.  Outputs to Std out.
-		myRep.getSoftwarePackageList()
+		myRep.getSoftwarePackageList();
 
 	}
 

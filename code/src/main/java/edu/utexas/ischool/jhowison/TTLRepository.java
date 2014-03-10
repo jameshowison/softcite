@@ -121,7 +121,7 @@ public class TTLRepository {
 	public static int getArticleWithoutStrata() {
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
 		
-		queryStr.append("SELECT *");
+		queryStr.append("SELECT (COUNT(DISTINCT ?article) as ?articleCount)");
 		queryStr.append("WHERE {");
 		queryStr.append("  ?article dc:isPartOf ?journal . ");
 		queryStr.append("  FILTER NOT EXISTS {");
@@ -129,8 +129,8 @@ public class TTLRepository {
 		queryStr.append("  } ");
 		queryStr.append("}");
 		
-		formatResultSet(queryStr);
-		return -1;
+		
+		return queryReturnsSingleInt(queryStr, "articleCount");
 	}
 	
 	private static void formatResultSet (ParameterizedSparqlString paramQueryString) {

@@ -319,3 +319,123 @@ Fri Mar  7 22:27:47 MST 2014
 
 Note: what do I need to do to move the reference selections from being associated with their in-text location to being directly associated with the articles?
 
+bioj:a2002-39-SYST_BOT-B04 rdf:type bioj:selection ;
+	bioj:full_quote "All phylogenies were inferred using the program PAUP* version 4.0b6 (Swofford 2001). Bootstrap analyses based on 1,000 replicates were performed to explore the robustness of the trees. The following options were used for all analyses: parsimony, branch and bound search, stepwise furthest addition sequence, collapse zero-length branches." ;
+	bioj:has_reference bioj-cited:Swofford-2001 ;
+.
+
+bioj-cited:Swofford-2001 rdf:type bioj:selection ;
+	ca:memo "Paup* is available from Sinaeur Associate's online catalogue." ;
+
+	bioj:full_quote "SWOFFORD, D. 2001. PAUP*: Phylogenetic Analysis Using Parsimony, vers.4.0b6. Sunderland, Massachusetts: Sinauer Associates, Inc. Publishers." ;
+	
+	ca:isTargetOf 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:project_name ;
+	] ;
+
+.
+
+if 
+
+?article bioj:has_selection ?sel .
+?sel bioj:has_reference ?ref .
+
+then
+
+?article bioj:has_selection ?sel .
+
+no, that doesn't put the codes on the original selection ... which is really the mention.
+
+if 
+?article bioj:has_selection ?sel .
+?sel bioj:has_reference ?ref .
+?ref ca:isTargetOf ?code .
+
+then
+?sel ca:isTargetOf ?code .
+
+
+or, without adding additional statements:
+
+when querying for ?code use
+
+?article bioj:has_selection ?sel .
+?sel ca:isTargetOf ?code .
+OPTIONAL {
+  ?sel bioj:has_reference ?ref .
+  ?ref ca:isTargetOf ?code .
+}
+
+bioj:a2002-39-SYST_BOT bioj:has_selection ?sel .
+?sel ca:isTargetOf ?code .
+OPTIONAL {
+  ?sel bioj:has_reference ?ref .
+  ?ref ca:isTargetOf ?code .
+}
+
+
+---------------
+Mon Mar 10 09:16:58 CDT 2014
+---------------
+
+
+hmm, trouble querying between:
+
+ca:isTargetOf 
+[ rdf:type ca:CodeApplication ;
+  ca:hasCoder "jbullard" ;
+  ca:appliesCode citec:software_used ;
+] ;
+
+And
+ 
+ca:isTargetOf 
+[ rdf:type ca:CodeApplication ;
+  ca:hasCoder "jbullard" ;
+  ca:appliesCode [ rdf:type citec:software_name ;
+  				   rdfs:label "PAUP*" ] ;
+] ;
+
+
+ca:appliesCode citec:software_used ;  is a code, with a known URL, code name encoded in URL
+ca:appliesCode [ rdf:type citec:software_name ;
+				   rdfs:label "PAUP*" ] ; is also a code, with an anon URL, code name encoded in type statement for anon node.
+				
+For consistency, could change all 
+ca:appliesCode citec:software_used ;
+
+to 
+  ca:appliesCode [ rdf:type citec:software_used ];
+
+Then one has this hierarchy:
+
+citec:software_used rdf:type citec:code .
+citec:software_name rdf:type citec:code .
+
+Such that the specific code applied is an anon instance of that code, allowing the addition of memos and labels carrying specific info (e.g., name of the software, version number etc.)
+
+Ask the intuitive question: what type of a code is this? ==> software_name
+
+Would need to:
+
+sed 's/citec:software_used/[ rdf:type citec:software_used ]/g'
+
+query for 
+?s ca:appliesCode ?code
+FILTER NOT EXISTS {
+  ?code rdfs:label ?label
+}
+			
+hmmmm, inconsistent prefixes:
+
+http://james.howison.name/ontologies/citation-codes#in-text_mention
+
+http://james.howison.name/ontologies/software-citation-coding#in-text_mention
+
+
+
+	
+
+

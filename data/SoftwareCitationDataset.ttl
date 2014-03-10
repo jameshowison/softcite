@@ -16310,18 +16310,18 @@ bioj:a2007-41-MOL_THER rdf:type bioj:article ;
 # Start JuliaCoding-singlyCoded.ttl, which is itself an amalgum of other files
 ####################################
 
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+#@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+#@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+#@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+#@prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
-@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+#@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
 
-@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
-@prefix citec: <http://james.howison.name/ontologies/citation-codes#> .
-@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample#> .
+#@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+#@prefix citec: <http://james.howison.name/ontologies/citation-codes#> .
+#@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample#> .
 
-@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+#@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
 
 bioj:a2003-39-J_COMPUT_AID_MOL_DES rdf:type bioj:article ;
 	ca:memo "This article describes a computational approach to studying enzymes and the application of their approach to HIV protease. The authors describe how they built at a consensus structure of the enzyme, manipulated it for testing, and built a predictive model. The equations used in their algorithm are included. The authors discuss the accuracy of their model, finding that its predictivity exceeds other established methods." ;

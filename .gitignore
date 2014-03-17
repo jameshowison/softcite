@@ -9,3 +9,4 @@
 *.war
 *.ear
 target/
+output/*.csv

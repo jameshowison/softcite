@@ -34,21 +34,22 @@
 		  <groupId>org.codehaus.mojo</groupId>
 		  <artifactId>exec-maven-plugin</artifactId>
 		  <version>1.2.1</version>
-		  <!-- <executions>
+		  <executions>
 			<execution>
+				<phase>test</phase>
 				<goals>
-					<goal>exec</goal>
+					<goal>java</goal>
 				</goals>
+		  		<configuration> 
+		    		<mainClass>edu.utexas.ischool.jhowison.OutputResults</mainClass>
+					<arguments>
+						<argument>/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/output</argument>
+					</arguments>
+		  		</configuration>
 			</execution>
-		  </executions>	 -->
-		  <configuration> <!--
-		  	Note that this is run with mvn exec:java
-		  -->
-		    <mainClass>edu.utexas.ischool.jhowison.CodeCounts</mainClass>
-		  </configuration>
+		  </executions>
 		</plugin>
 	</plugins>
 	</build>
-	
 </project>
 

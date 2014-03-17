@@ -551,3 +551,15 @@ select * where
   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
 	}
 }
+
+---------------
+Mon Mar 17 08:12:58 CDT 2014
+---------------
+
+What are queries that actually matter?
+
+What proportion of articles had software mentions?  By strata?  Get a ggplot2 plot of this?
+
+What is the count of software mentions per article?
+Output so that they can be graphed with ggplot2.
+

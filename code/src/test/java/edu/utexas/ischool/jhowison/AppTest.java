@@ -86,6 +86,15 @@ public class AppTest
 		assertEquals(31, TTLRepository.getCodeTypeCount());
 	}
 	
+	@Test
+	public void articlesWithCodeCount()
+	{
+		assertEquals(59, TTLRepository.getArticlesWithCodeApplied(
+		  "http://james.howison.name/ontologies/software-citation-coding#in-text_mention")
+		);
+	}
+	
+	
 	
 	
 }

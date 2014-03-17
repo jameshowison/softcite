@@ -368,11 +368,14 @@ OPTIONAL {
   ?ref ca:isTargetOf ?code .
 }
 
-bioj:a2002-39-SYST_BOT bioj:has_selection ?sel .
-?sel ca:isTargetOf ?code .
-OPTIONAL {
-  ?sel bioj:has_reference ?ref .
-  ?ref ca:isTargetOf ?code .
+select * where 
+{
+	bioj:a2002-39-SYST_BOT bioj:has_selection ?sel .
+	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	OPTIONAL {
+  		?sel bioj:has_reference ?ref .
+  		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	}
 }
 
 
@@ -532,3 +535,19 @@ Mon Mar 10 10:26:11 CDT 2014
 ---------------
 
 sed 's/^		\([	]*\)\(.*\)$/		queryStr.append(" \1\2 ");/g'
+
+---------------
+Wed Mar 12 10:03:37 CDT 2014
+---------------
+
+All articles with in-text_mentions:
+
+select * where 
+{
+	?article bioj:has_selection ?sel .
+	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	OPTIONAL {
+  		?sel bioj:has_reference ?ref .
+  		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	}
+}

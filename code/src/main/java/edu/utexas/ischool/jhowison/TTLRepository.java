@@ -170,6 +170,25 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "codeTypeCount");
 	}
 	
+	public static int getArticlesWithCodeApplied(String codeApplied) {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append(" SELECT (COUNT(DISTINCT ?article) as ?articleCount)  ");
+		queryStr.append(" WHERE");
+		queryStr.append(" { ");
+		queryStr.append(" 	?article bioj:has_selection ?sel . ");
+		queryStr.append(" 	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 	OPTIONAL { ");
+		queryStr.append("   		?sel bioj:has_reference ?ref . ");
+		queryStr.append("   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 	} ");
+		queryStr.append(" }		 ");
+
+		queryStr.setIri("code", codeApplied);
+		return queryReturnsSingleInt(queryStr, "articleCount");
+	}
+
+	
 	private static void formatResultSet (ParameterizedSparqlString paramQueryString) {
 		Query query = paramQueryString.asQuery();
 		

@@ -18690,7 +18690,6 @@ bioj:a2002-22-AM_J_BOT_B01 rdf:type bioj:selection ;
 	  ca:hasCoder "jbullard" ;
 	  ca:appliesCode [ rdf:type citec:findable ];
 	] ;
-	;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;

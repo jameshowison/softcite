@@ -563,3 +563,67 @@ What proportion of articles had software mentions?  By strata?  Get a ggplot2 pl
 What is the count of software mentions per article?
 Output so that they can be graphed with ggplot2.
 
+---------------
+Thu Mar 20 08:59:47 CDT 2014
+---------------
+
+What is a general way to turn this from open world to closed world.  ie when I ask for software mentions I get (plyr style)
+
+article, code, value
+mentioned, citec:mention, true
+unmentioned, citec:mention, false
+software_name, citec:software_name, excel
+no_name, citec:software_name, false
+
+Could add a code (but that would need a selection?) rdfs:label for each of those that don't have it.
+
+Could make the queries all UNION  or some kind of outer join by using OPTIONAL.
+
+select * where 
+{
+	?article rdf:type bioj:article .
+	OPTIONAL {
+		?article bioj:has_selection ?sel .
+		?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	}
+	OPTIONAL {
+  		?sel bioj:has_reference ?ref .
+  		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	}
+}
+
+Or could post-process the query against one that has default false
+
+SELECT ?article WHERE
+ { ?article rdf:type bioj:article }
+
+then set the code to false for all.
+
+articles$code <- "citec:mention"
+articles$value <- false
+
+then rest the code to true just for those that have that code
+
+articles$value
+
+apparently this has to do with the ?with command, or ifelse, but really it's a 
+
+y <- with(DF, (Indoor - Outdoor >= 1) * 1)
+
+---------------
+Thu Mar 20 10:43:01 CDT 2014
+---------------
+
+New Strategy.  Use SWRL rules.
+
+
+article(?a), has_selection(?a, ?sel), isTargetOf(?sel,?ca), appliesCode(?ca, ?code), in-text_mention(?code) -> ArticleWithMention(?a)
+
+Article(?a), hasMention(?a, ?m) -> ArticleWithMention(?a)
+
+---------------
+Thu Mar 20 19:24:39 CDT 2014
+---------------
+
+Ok, new, new strategy, SPIN (or simply CONSTRUCT SPARQL queries).  Switching current changes into branch called nestedOptionals.
+

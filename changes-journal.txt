@@ -627,3 +627,6 @@ Thu Mar 20 19:24:39 CDT 2014
 
 Ok, new, new strategy, SPIN (or simply CONSTRUCT SPARQL queries).  Switching current changes into branch called nestedOptionals.
 
+basically need to declare and store some spin:rules
+
+http://spinrdf.org/spin.html#spin-rules

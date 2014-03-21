@@ -86,7 +86,7 @@ public class AppTest
 		assertEquals(31, TTLRepository.getCodeTypeCount());
 	}
 	
-	@Test
+	@Ignore
 	public void articlesWithCodeCount()
 	{
 		assertEquals(59, TTLRepository.getArticlesWithCodeApplied(

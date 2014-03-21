@@ -175,8 +175,10 @@ public class TTLRepository {
 		
 		queryStr.append(" SELECT (COUNT(DISTINCT ?article) as ?articleCount)  ");
 		queryStr.append( getArticlesWithCodeAppliedQueryWherePart() );
-
 		queryStr.setIri("code", codeApplied);
+		
+		System.out.println(queryStr.toString());
+
 		return queryReturnsSingleInt(queryStr, "articleCount");
 	}
 	
@@ -185,15 +187,21 @@ public class TTLRepository {
 		
 		queryStr.append(" WHERE");
 		queryStr.append(" { ");
-		queryStr.append(" 	?article bioj:has_selection ?sel . ");
 		queryStr.append(" 	?article dc:isPartOf ?journal .");
 		queryStr.append(" 	?journal bioj:strata ?strata . ");
-		queryStr.append(" 	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
 		queryStr.append(" 	OPTIONAL { ");
+		queryStr.append(" 		?article bioj:has_selection ?sel . ");
+		queryStr.append("   	OPTIONAL {");
+		queryStr.append(" 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?anycode ] ] . ");
+		queryStr.append("		}");
+		queryStr.append("   	OPTIONAL {");
 		queryStr.append("   		?sel bioj:has_reference ?ref . ");
 		queryStr.append("   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 		} ");
 		queryStr.append(" 	} ");
+		queryStr.append(" FILTER (?anycode = ?code || ! BOUND(?anycode)) ");
 		queryStr.append(" }		 ");
+		
 
 		return queryStr.toString();
 	}
@@ -201,7 +209,7 @@ public class TTLRepository {
 	public static ResultSet getArticlesWithCodeAppliedByStrata(String codeApplied) {
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
 		
-		queryStr.append(" SELECT ?journal ?strata ?article ");
+		queryStr.append(" SELECT ?journal ?strata ?article ?anycode");
 		queryStr.append( getArticlesWithCodeAppliedQueryWherePart() );
 //		queryStr.append(" GROUP BY ?strata " );
 

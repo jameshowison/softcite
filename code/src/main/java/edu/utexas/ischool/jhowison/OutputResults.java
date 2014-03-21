@@ -28,7 +28,7 @@ public class OutputResults {
 		TTLRepository myRepository = new TTLRepository();
 		
 		ResultSet articlesWithMentionsByStrata = myRepository.getArticlesWithCodeAppliedByStrata(
-		  "http://james.howison.name/ontologies/software-citation-coding#in-text_mention"
+		  "http://james.howison.name/ontologies/software-citation-coding#findable"
 		);
 		
 		writeResultsToOutputFile(articlesWithMentionsByStrata, myPathToOutput, "articles_with_mentions_by_strata.csv");

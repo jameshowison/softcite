@@ -630,3 +630,30 @@ Ok, new, new strategy, SPIN (or simply CONSTRUCT SPARQL queries).  Switching cur
 basically need to declare and store some spin:rules
 
 http://spinrdf.org/spin.html#spin-rules
+
+According to:
+
+http://topbraid.org/examples/spinsquare.n3
+
+What I need to do is to attach a spin:rule to a Class declaration.  That spin:rule then contains a CONSTRUCT sparql query.  Ideally I can store those in textual format.
+
+Presumably when I then run an ontology model with inferencing the CONSTRUCT query is run.
+
+So what CONSTRUCT query to run.
+
+Want to infer that a bioj:article with at least one selection that has a code in-text_mention applied is a bioj:ArticleWithMention
+
+CONSTRUCT {
+  ?this rdf:type bioj:ArticleWithMention
+} 
+WHERE {
+  ?this rdf:type bioj:article ;
+        bioj:has_selection ?sel .
+  ?sel  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+  OPTIONAL { 
+        ?sel bioj:has_reference ?ref .
+        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+  }
+}
+
+Ok!  That worked :)

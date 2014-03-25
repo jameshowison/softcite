@@ -47,7 +47,6 @@
 		  <version>1.2.1</version>
 		  <executions>
 			<execution>
-				<phase>test</phase>
 				<goals>
 					<goal>java</goal>
 				</goals>

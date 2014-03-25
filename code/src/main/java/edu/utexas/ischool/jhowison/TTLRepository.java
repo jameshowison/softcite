@@ -15,8 +15,18 @@ import com.hp.hpl.jena.util.*;
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.query.*;
 
+import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+
 import com.hp.hpl.jena.sparql.*;
 import com.hp.hpl.jena.sparql.engine.*;
+
+import org.topbraid.spin.constraints.ConstraintViolation;
+import org.topbraid.spin.constraints.SPINConstraints;
+import org.topbraid.spin.inference.SPINInferences;
+import org.topbraid.spin.system.SPINLabels;
+import org.topbraid.spin.system.SPINModuleRegistry;
+import org.topbraid.spin.util.JenaUtil;
 
 
 
@@ -241,6 +251,29 @@ public class TTLRepository {
 		queryStr.append("}");
 		
 		formatResultSet(queryStr);
+	}
+	
+	public static void runSPINrules() {
+		model.read(
+	"https://raw.github.com/jameshowison/softcite/spin-attempt/data/SPINrules.ttl");
+		
+		// Create OntModel with imports
+		OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
+		
+		// Create and add Model for inferred triples
+		// reuse prefixes.
+		Model newTriples = ModelFactory.createDefaultModel();
+		newTriples.setNsPrefixes(model);
+		ontModel.addSubModel(newTriples);
+
+		// Register locally defined functions
+		SPINModuleRegistry.get().registerAll(ontModel, null);
+
+		// Run all inferences
+		SPINInferences.run(ontModel, newTriples, null, null, false, null);
+		System.out.println("Inferred triples: " + newTriples.size());
+		
+		newTriples.write(System.out, "TTL");
 	}
 	
 		

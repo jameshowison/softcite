@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>changes-journal.txt</string>
+	<string>data/SPINrules.ttl</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,7 +18,7 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>309</integer>
+	<integer>489</integer>
 	<key>metaData</key>
 	<dict>
 		<key>changes-journal.txt</key>
@@ -28,7 +28,7 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>629</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -54,14 +54,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>7</integer>
+				<integer>75</integer>
 				<key>line</key>
-				<integer>46</integer>
+				<integer>54</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>19</integer>
+			<integer>30</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>47</integer>
+				<key>line</key>
+				<integer>54</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>87</integer>
+				<key>line</key>
+				<integer>54</integer>
+			</dict>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/CodeCounts.java</key>
 		<dict>
@@ -93,19 +109,65 @@
 				<integer>23</integer>
 			</dict>
 		</dict>
+		<key>code/src/main/java/edu/utexas/ischool/jhowison/KennedysInferencingAndConstraintsExample.java</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>59</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>18</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>59</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/OutputResults.java</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>75</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>30</integer>
+				<integer>0</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>17</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>36</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</key>
 		<dict>
@@ -163,19 +225,65 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>data/SPINrules.ttl</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>59</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
 		<key>data/SoftwareCitationDataset.ttl</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>133</integer>
+				<integer>27</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>116</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>70</integer>
+				<key>line</key>
+				<integer>12</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
 		</dict>
 		<key>output/README</key>
 		<dict>
@@ -210,6 +318,7 @@
 	<array>
 		<string>changes-journal.txt</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</string>
+		<string>code/src/main/java/edu/utexas/ischool/jhowison/KennedysInferencingAndConstraintsExample.java</string>
 		<string>code/target/surefire-reports/edu.utexas.ischool.jhowison.AppTest.txt</string>
 		<string>code/target/surefire-reports/TEST-edu.utexas.ischool.jhowison.AppTest.xml</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/CodeCounts.java</string>
@@ -219,12 +328,11 @@
 		<string>output/README</string>
 		<string>code/pom.xml</string>
 		<string>data/SoftwareCitationDataset.ttl</string>
+		<string>data/SPINrules.ttl</string>
 		<string>code/src/test/java/edu/utexas/ischool/jhowison/AppTest.java</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
-	<key>showFileHierarchyPanel</key>
-	<true/>
 	<key>treeState</key>
 	<dict>
 		<key>softcite</key>
@@ -232,154 +340,7 @@
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
-			<dict>
-				<key>code</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict>
-						<key>Rscripts</key>
-						<dict>
-							<key>isExpanded</key>
-							<true/>
-							<key>subItems</key>
-							<dict/>
-						</dict>
-						<key>src</key>
-						<dict>
-							<key>isExpanded</key>
-							<true/>
-							<key>subItems</key>
-							<dict>
-								<key>main</key>
-								<dict>
-									<key>isExpanded</key>
-									<true/>
-									<key>subItems</key>
-									<dict>
-										<key>java</key>
-										<dict>
-											<key>isExpanded</key>
-											<true/>
-											<key>subItems</key>
-											<dict>
-												<key>edu</key>
-												<dict>
-													<key>isExpanded</key>
-													<true/>
-													<key>subItems</key>
-													<dict>
-														<key>utexas</key>
-														<dict>
-															<key>isExpanded</key>
-															<true/>
-															<key>subItems</key>
-															<dict>
-																<key>ischool</key>
-																<dict>
-																	<key>isExpanded</key>
-																	<true/>
-																	<key>subItems</key>
-																	<dict>
-																		<key>jhowison</key>
-																		<dict>
-																			<key>isExpanded</key>
-																			<true/>
-																			<key>subItems</key>
-																			<dict/>
-																		</dict>
-																	</dict>
-																</dict>
-															</dict>
-														</dict>
-													</dict>
-												</dict>
-											</dict>
-										</dict>
-									</dict>
-								</dict>
-								<key>test</key>
-								<dict>
-									<key>isExpanded</key>
-									<true/>
-									<key>subItems</key>
-									<dict>
-										<key>java</key>
-										<dict>
-											<key>isExpanded</key>
-											<true/>
-											<key>subItems</key>
-											<dict>
-												<key>edu</key>
-												<dict>
-													<key>isExpanded</key>
-													<true/>
-													<key>subItems</key>
-													<dict>
-														<key>utexas</key>
-														<dict>
-															<key>isExpanded</key>
-															<true/>
-															<key>subItems</key>
-															<dict>
-																<key>ischool</key>
-																<dict>
-																	<key>isExpanded</key>
-																	<true/>
-																	<key>subItems</key>
-																	<dict>
-																		<key>jhowison</key>
-																		<dict>
-																			<key>isExpanded</key>
-																			<true/>
-																			<key>subItems</key>
-																			<dict/>
-																		</dict>
-																	</dict>
-																</dict>
-															</dict>
-														</dict>
-													</dict>
-												</dict>
-											</dict>
-										</dict>
-									</dict>
-								</dict>
-							</dict>
-						</dict>
-						<key>target</key>
-						<dict>
-							<key>isExpanded</key>
-							<true/>
-							<key>subItems</key>
-							<dict>
-								<key>surefire-reports</key>
-								<dict>
-									<key>isExpanded</key>
-									<true/>
-									<key>subItems</key>
-									<dict/>
-								</dict>
-							</dict>
-						</dict>
-					</dict>
-				</dict>
-				<key>data</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict/>
-				</dict>
-				<key>output</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict/>
-				</dict>
-			</dict>
+			<dict/>
 		</dict>
 	</dict>
 	<key>windowFrame</key>

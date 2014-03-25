@@ -94,6 +94,12 @@ public class AppTest
 		);
 	}
 	
+	@Test
+	public void testSPINoutput()
+	{
+		TTLRepository.runSPINrules();
+	}
+	
 	
 	
 	

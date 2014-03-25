@@ -20,9 +20,6 @@ bioj:article a rdfs:Class ;
 	spin:rule [ rdf:type sp:Construct ;	
 				sp:text """
 	# Asserts a new type for articles with any selections coded as mentions
-	PREFIX ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#>
-	PREFIX bioj: <http://james.howison.name/ontologies/bio-journal-sample#>
-	PREFIX citec: <http://james.howison.name/ontologies/software-citation-coding#>
 	CONSTRUCT {
 	  ?this rdf:type bioj:ArticleWithMention .
 	} 

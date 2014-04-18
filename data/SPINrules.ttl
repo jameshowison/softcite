@@ -29,8 +29,74 @@ bioj:article a rdfs:Class ;
 	  ?sel  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
 	  OPTIONAL { 
 	        ?sel bioj:has_reference ?ref .
-	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	  }
+	}
+				"""
+	] ;
+	spin:rule [ rdf:type sp:Construct ;	
+				sp:text """
+	# Asserts a new type for articles with any selections coded as software-used
+	CONSTRUCT {
+	  ?this rdf:type bioj:ArticleWithSoftwareUsed .
+	} 
+	WHERE {
+	  ?this rdf:type bioj:ArticleWithMention ;
+	        bioj:has_selection ?sel .
+	  ?sel  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
+	  OPTIONAL { 
+	        ?sel bioj:has_reference ?ref .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
 	  }
 	}
 				"""
 	] .
+
+bioj:selection a rdfs:Class ;
+	spin:rule [ rdf:type sp:Construct ;	
+				sp:text """
+	# Asserts a new type for selections that are software mentions.
+	CONSTRUCT {
+	  ?this rdf:type bioj:SoftwareMention .
+	} 
+	WHERE {
+	  ?article bioj:has_selection ?this .
+	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	  OPTIONAL { 
+	        ?this bioj:has_reference ?ref .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
+	  }
+	}"""
+	] ; 
+	spin:rule [ rdf:type sp:Construct ;	
+				sp:text """
+	# Asserts a new type for selections that are identifiable software mentions.
+	CONSTRUCT {
+	  ?this rdf:type bioj:IdentifiableSoftwareMention .
+	} 
+	WHERE {
+      ?this rdf:type bioj:SoftwareMention .
+	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:identifiable ] ] .
+	  OPTIONAL { 
+	        ?this bioj:has_reference ?ref .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:identifiable ] ] .
+	  }
+	}"""
+	] ; 
+	spin:rule [ rdf:type sp:Construct ;	
+				sp:text """
+	# Asserts a new type for selections that are findable software mentions.
+	CONSTRUCT {
+	  ?this rdf:type bioj:FindableSoftwareMention .
+	} 
+	WHERE {
+      ?this rdf:type bioj:SoftwareMention .
+	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:findable ] ] .
+	  OPTIONAL { 
+	        ?this bioj:has_reference ?ref .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:findable ] ] .
+	  }
+	}"""
+	] .
+	
+	

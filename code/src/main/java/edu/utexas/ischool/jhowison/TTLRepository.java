@@ -34,6 +34,8 @@ public class TTLRepository {
 	
 	public static Model model;
 	
+	public static String path = "/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/data/";
+	
 	public TTLRepository() {
 		//
 		
@@ -254,8 +256,10 @@ public class TTLRepository {
 	}
 	
 	public static void runSPINrules() {
-		model.read(
-	"https://raw.github.com/jameshowison/softcite/spin-attempt/data/SPINrules.ttl");
+	//	model.read(
+//	"https://raw.github.com/jameshowison/softcite/spin-attempt/data/SPINrules.ttl");
+		
+		model.read(path + "SPINrules.ttl");
 		
 		// Create OntModel with imports
 		OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);

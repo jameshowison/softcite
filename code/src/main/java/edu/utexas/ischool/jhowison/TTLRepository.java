@@ -46,8 +46,7 @@ public class TTLRepository {
 //		Model model = FileManager.get().loadModel(myPath);
 		
 		this.model = FileManager.get().loadModel(
-//			"https://raw.github.com/jameshowison/softcite/master/data/SoftwareCitationDataset.ttl"
-			"/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/data/SoftwareCitationDataset.ttl" 
+			path + "SoftwareCitationDataset.ttl" 
 		);
 		
 		if (this.model == null) {

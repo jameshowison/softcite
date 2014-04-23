@@ -55,36 +55,34 @@
 
 bioj:selection a rdfs:Class ;
 	spin:rule [ rdf:type sp:Construct ;	
-			#	spin:thisUnbound "true"^^xsd:boolean ;
 				sp:text """
-	# Distinguish between direct and citation selections
-	CONSTRUCT {
-  		?this rdf:type bioj:DirectSelection .
-	} 
-	WHERE { 
-		?this rdf:type bioj:selection .  
-		?sel rdf:type bioj:selection .  
-		FILTER NOT EXISTS { 
-	         ?sel bioj:has_reference ?this .
-	    }
-	}"""
-	] ;
-
-	spin:rule [ rdf:type sp:Construct ;	
-				spin:thisUnbound "true"^^xsd:boolean ;
-				sp:text """
-	# Moves all codes directly onto selection, even if they originated
+	# Moves all codes directly onto DirectSelection, even if they originated
 	# on a reference.
 	CONSTRUCT {
 	  ?this ca:isTargetOf [ ca:appliesCode ?coding ] .
 	} 
 	WHERE { 
-      ?article rdf:type bioj:article .
-      ?article bioj:selection ?this .
-      ?this bioj:has_reference ?ref .
+	  ?this bioj:has_reference ?ref .
 	  ?ref ca:isTargetOf [ ca:appliesCode ?coding ] .
 	}"""
 	] ;
+	
+#	spin:rule [ rdf:type sp:Construct ;	
+#			#	spin:thisUnbound "true"^^xsd:boolean ;
+#				sp:text """
+#	# Step 1: Distinguish between direct and citation selections
+#	CONSTRUCT {
+#  		?this rdf:type bioj:DirectSelection .
+#	} 
+#	WHERE { 
+#		?this rdf:type bioj:selection .  
+#		?sel rdf:type bioj:selection .  
+#		FILTER NOT EXISTS { 
+#	         ?sel bioj:has_reference ?this .
+#	    }
+#	}"""
+#	] ;
+
 	
 #	spin:rule [ rdf:type sp:Construct ;	
 #				sp:text """
@@ -134,10 +132,10 @@ bioj:selection a rdfs:Class ;
 
 .
 	
-#bioj:SoftwareMention a rdfs:Class ;
+#bioj:DirectSelection a rdfs:Class ;
 #	spin:rule [ rdf:type sp:Construct ;	
 #				sp:text """
-#	# Step 2: Moves all codes directly onto SoftwareMention, even if they originated
+#	# Step 2: Moves all codes directly onto DirectSelection, even if they originated
 #	# on a reference.
 #	CONSTRUCT {
 #	  ?this ca:isTargetOf [ ca:appliesCode ?coding ] .

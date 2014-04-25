@@ -1,0 +1,13 @@
+SELECT ?selection ?article ?journal ?strata ?code
+WHERE {
+	?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	OPTIONAL {
+  		?selection bioj:has_reference ?ref .
+  		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	}
+}
+
+		

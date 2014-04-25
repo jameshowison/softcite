@@ -1,0 +1,13 @@
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+
+PREFIX ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
+
+PREFIX bioj: <http://james.howison.name/ontologies/bio-journal-sample#>
+PREFIX citec: <http://james.howison.name/ontologies/software-citation-coding#>
+PREFIX bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#>
+
+PREFIX dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/>

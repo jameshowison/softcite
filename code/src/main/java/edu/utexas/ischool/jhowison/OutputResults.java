@@ -20,12 +20,14 @@ import com.hp.hpl.jena.sparql.engine.*;
 
 
 public class OutputResults {
+	
+	public static TTLRepository myRepository;
 		
 	public static void main(String[] args) {
 		
 		String myPathToOutput = args[0];
 		
-		TTLRepository myRepository = new TTLRepository();
+		myRepository = new TTLRepository();
 		
 		ResultSet allCodes = myRepository.getCodedResults();
 		
@@ -43,6 +45,7 @@ public class OutputResults {
 			}
 			FileOutputStream oFile = new FileOutputStream(myFile, false); // don't append
 			ResultSetFormatter.outputAsCSV(oFile, results);
+			//ResultSetFormatter.out(oFile, results, myRepository.model);
 			oFile.close();
 		}
 		catch(IOException ex){

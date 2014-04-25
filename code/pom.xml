@@ -50,11 +50,14 @@
 				<goals>
 					<goal>java</goal>
 				</goals>
-		  		<configuration> 
-		    		<mainClass>edu.utexas.ischool.jhowison.KennedysInferencingAndConstraintsExample</mainClass>
-		  		</configuration>
 			</execution>
 		  </executions>
+		<configuration> 
+    		<mainClass>edu.utexas.ischool.jhowison.OutputResults</mainClass>
+            <arguments>
+				<argument>${basedir}/../output</argument>
+			</arguments> 
+  		</configuration>
 		</plugin>
 	</plugins>
 	</build>

@@ -94,7 +94,7 @@ public class AppTest
 		);
 	}
 	
-	@Test
+	@Ignore
 	public void testSPINoutput()
 	{
 		TTLRepository.runSPINrules();

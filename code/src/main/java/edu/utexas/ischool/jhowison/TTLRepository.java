@@ -254,6 +254,31 @@ public class TTLRepository {
 		formatResultSet(queryStr);
 	}
 	
+	public static ResultSet getCodedResults() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+
+		queryStr.append("SELECT ?sel ?article ?journal ?strata ?code");
+		queryStr.append(" WHERE");
+		queryStr.append(" { ");
+		queryStr.append(" 	?article bioj:has_selection ?sel . ");
+		queryStr.append(" 	?article dc:isPartOf ?journal .");
+		queryStr.append(" 	?journal bioj:strata ?strata . ");
+		queryStr.append(" 	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 	OPTIONAL { ");
+		queryStr.append("   		?sel bioj:has_reference ?ref . ");
+		queryStr.append("   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 	} ");
+		queryStr.append(" }		 ");
+
+		Query query = queryStr.asQuery();
+		
+		// Execute the query and obtain results
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+		ResultSet results = qe.execSelect();
+		
+		return results;
+	}
+	
 	public static void runSPINrules() {
 	//	model.read(
 //	"https://raw.github.com/jameshowison/softcite/spin-attempt/data/SPINrules.ttl");

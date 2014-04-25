@@ -27,11 +27,9 @@ public class OutputResults {
 		
 		TTLRepository myRepository = new TTLRepository();
 		
-		ResultSet articlesWithMentionsByStrata = myRepository.getArticlesWithCodeAppliedByStrata(
-		  "http://james.howison.name/ontologies/software-citation-coding#in-text_mention"
-		);
+		ResultSet allCodes = myRepository.getCodedResults();
 		
-		writeResultsToOutputFile(articlesWithMentionsByStrata, myPathToOutput, "articles_with_mentions_by_strata.csv");
+		writeResultsToOutputFile(allCodes, myPathToOutput, "all_codes.csv");
 	}
 	
 	private static void writeResultsToOutputFile(ResultSet results, String path, String filename) {

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>data/SoftwareCitationDataset.ttl</string>
+	<string>output/all_codes.csv</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -26,30 +26,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>666</integer>
+				<integer>660</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>635</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>11</integer>
-				<key>line</key>
-				<integer>666</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>666</integer>
-			</dict>
+			<integer>633</integer>
 		</dict>
 		<key>code/Rscripts/graphMentions.r</key>
 		<dict>
@@ -70,14 +54,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>48</integer>
+				<integer>57</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>30</integer>
+			<integer>29</integer>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/CodeCounts.java</key>
 		<dict>
@@ -144,37 +128,51 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>24</integer>
+			<integer>20</integer>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>212</integer>
+				<integer>272</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>220</integer>
+			<integer>249</integer>
+		</dict>
+		<key>code/src/main/java/edu/utexas/ischool/jhowison/TestMatches.java</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>69</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>40</integer>
 		</dict>
 		<key>code/src/test/java/edu/utexas/ischool/jhowison/AppTest.java</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>8</integer>
 				<key>line</key>
-				<integer>94</integer>
+				<integer>96</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -214,14 +212,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>54</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>87</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>68</integer>
+			<integer>51</integer>
 		</dict>
 		<key>data/SoftwareCitationDataset.ttl</key>
 		<dict>
@@ -230,12 +228,12 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>88</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>134</integer>
+			<integer>88</integer>
 		</dict>
 		<key>output/README</key>
 		<dict>
@@ -245,6 +243,20 @@
 				<integer>17</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>output/all_codes.csv</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>274</integer>
+				<key>line</key>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -270,6 +282,7 @@
 	<array>
 		<string>changes-journal.txt</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</string>
+		<string>code/src/main/java/edu/utexas/ischool/jhowison/TestMatches.java</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/KennedysInferencingAndConstraintsExample.java</string>
 		<string>code/target/surefire-reports/edu.utexas.ischool.jhowison.AppTest.txt</string>
 		<string>code/target/surefire-reports/TEST-edu.utexas.ischool.jhowison.AppTest.xml</string>
@@ -279,6 +292,7 @@
 		<string>code/Rscripts/graphMentions.r</string>
 		<string>output/README</string>
 		<string>code/pom.xml</string>
+		<string>output/all_codes.csv</string>
 		<string>data/SoftwareCitationDataset.ttl</string>
 		<string>data/SPINrules.ttl</string>
 		<string>code/src/test/java/edu/utexas/ischool/jhowison/AppTest.java</string>
@@ -412,10 +426,17 @@
 					<key>subItems</key>
 					<dict/>
 				</dict>
+				<key>output</key>
+				<dict>
+					<key>isExpanded</key>
+					<true/>
+					<key>subItems</key>
+					<dict/>
+				</dict>
 			</dict>
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{300, 672}, {1362, 746}}</string>
+	<string>{{59, 132}, {1362, 746}}</string>
 </dict>
 </plist>

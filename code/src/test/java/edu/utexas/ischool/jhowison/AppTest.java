@@ -76,7 +76,6 @@ public class AppTest
 	@Test
 	public void getCodedObjectCount()
 	{
-		//588
 		assertEquals(2284, TTLRepository.getCodedObjectCount());
 	}
 	

@@ -257,15 +257,15 @@ public class TTLRepository {
 	public static ResultSet getCodedResults() {
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
 
-		queryStr.append("SELECT ?sel ?article ?journal ?strata ?code");
+		queryStr.append("SELECT ?selection ?article ?journal ?strata ?code");
 		queryStr.append(" WHERE");
 		queryStr.append(" { ");
-		queryStr.append(" 	?article bioj:has_selection ?sel . ");
+		queryStr.append(" 	?article bioj:has_selection ?selection . ");
 		queryStr.append(" 	?article dc:isPartOf ?journal .");
 		queryStr.append(" 	?journal bioj:strata ?strata . ");
-		queryStr.append(" 	?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
+		queryStr.append(" 	?selection ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
 		queryStr.append(" 	OPTIONAL { ");
-		queryStr.append("   		?sel bioj:has_reference ?ref . ");
+		queryStr.append("   		?selection bioj:has_reference ?ref . ");
 		queryStr.append("   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . ");
 		queryStr.append(" 	} ");
 		queryStr.append(" }		 ");

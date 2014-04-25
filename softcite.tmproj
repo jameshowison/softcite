@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>output/all_codes.csv</string>
+	<string>code/src/main/java/edu/utexas/ischool/jhowison/OutputResults.java</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -128,23 +128,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>40</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>38</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>20</integer>
+			<integer>19</integer>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>34</integer>
 				<key>line</key>
-				<integer>272</integer>
+				<integer>267</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -249,20 +249,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>output/all_codes.csv</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>274</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>output/articles_with_mentions_by_strata.csv</key>
 		<dict>
 			<key>caret</key>
@@ -288,12 +274,11 @@
 		<string>code/target/surefire-reports/TEST-edu.utexas.ischool.jhowison.AppTest.xml</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/CodeCounts.java</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/OutputResults.java</string>
-		<string>output/articles_with_mentions_by_strata.csv</string>
 		<string>code/Rscripts/graphMentions.r</string>
 		<string>output/README</string>
 		<string>code/pom.xml</string>
-		<string>output/all_codes.csv</string>
 		<string>data/SoftwareCitationDataset.ttl</string>
+		<string>output/articles_with_mentions_by_strata.csv</string>
 		<string>data/SPINrules.ttl</string>
 		<string>code/src/test/java/edu/utexas/ischool/jhowison/AppTest.java</string>
 	</array>

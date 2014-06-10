@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>code/src/main/java/edu/utexas/ischool/jhowison/OutputResults.java</string>
+	<string>code/Rscripts/analysisViaRRDF.r</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -35,6 +35,66 @@
 			<key>firstVisibleLine</key>
 			<integer>633</integer>
 		</dict>
+		<key>code/Rscripts/all_codes_query.sparql</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<key>code/Rscripts/analysisViaRRDF.r</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>57</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>5</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>57</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+		</dict>
 		<key>code/Rscripts/graphMentions.r</key>
 		<dict>
 			<key>caret</key>
@@ -42,7 +102,51 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>9</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>53</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+		</dict>
+		<key>code/Rscripts/mentions_by_strata.sparql</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>66</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>code/Rscripts/sparql_prefixes.sparql</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>12</integer>
+				<key>line</key>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -128,28 +232,44 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>40</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>38</integer>
+				<integer>46</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>19</integer>
+			<integer>20</integer>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>267</integer>
+				<integer>259</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>249</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>27</integer>
+				<key>line</key>
+				<integer>270</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>259</integer>
+			</dict>
 		</dict>
 		<key>code/src/main/java/edu/utexas/ischool/jhowison/TestMatches.java</key>
 		<dict>
@@ -170,14 +290,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>96</integer>
+				<integer>79</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>71</integer>
+			<integer>69</integer>
 		</dict>
 		<key>code/target/surefire-reports/TEST-edu.utexas.ischool.jhowison.AppTest.xml</key>
 		<dict>
@@ -226,14 +346,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>53</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>734</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>88</integer>
+			<integer>717</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>35</integer>
+				<key>line</key>
+				<integer>734</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>53</integer>
+				<key>line</key>
+				<integer>734</integer>
+			</dict>
 		</dict>
 		<key>output/README</key>
 		<dict>
@@ -249,25 +385,42 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>output/articles_with_mentions_by_strata.csv</key>
+		<key>output/all_codes.csv</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>304</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>14</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>180</integer>
 			<key>firstVisibleLine</key>
-			<integer>39</integer>
+			<integer>7</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>294</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>304</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>changes-journal.txt</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/TTLRepository.java</string>
+		<string>output/all_codes.csv</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/TestMatches.java</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/KennedysInferencingAndConstraintsExample.java</string>
 		<string>code/target/surefire-reports/edu.utexas.ischool.jhowison.AppTest.txt</string>
@@ -275,10 +428,13 @@
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/CodeCounts.java</string>
 		<string>code/src/main/java/edu/utexas/ischool/jhowison/OutputResults.java</string>
 		<string>code/Rscripts/graphMentions.r</string>
+		<string>code/Rscripts/analysisViaRRDF.r</string>
+		<string>code/Rscripts/all_codes_query.sparql</string>
+		<string>code/Rscripts/mentions_by_strata.sparql</string>
+		<string>code/Rscripts/sparql_prefixes.sparql</string>
 		<string>output/README</string>
 		<string>code/pom.xml</string>
 		<string>data/SoftwareCitationDataset.ttl</string>
-		<string>output/articles_with_mentions_by_strata.csv</string>
 		<string>data/SPINrules.ttl</string>
 		<string>code/src/test/java/edu/utexas/ischool/jhowison/AppTest.java</string>
 	</array>
@@ -300,6 +456,13 @@
 					<true/>
 					<key>subItems</key>
 					<dict>
+						<key>Rscripts</key>
+						<dict>
+							<key>isExpanded</key>
+							<true/>
+							<key>subItems</key>
+							<dict/>
+						</dict>
 						<key>src</key>
 						<dict>
 							<key>isExpanded</key>
@@ -422,6 +585,6 @@
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{59, 132}, {1362, 746}}</string>
+	<string>{{17, 36}, {1306, 710}}</string>
 </dict>
 </plist>

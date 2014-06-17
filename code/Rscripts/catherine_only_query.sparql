@@ -1,7 +1,7 @@
-SELECT DISTINCT ?itemURIC
+SELECT DISTINCT ?itemURI
 WHERE { 
-  ?itemURIC bioj:matches bioj:none .
-  ?itemURIC ca:isTargetOf 
+  ?itemURI bioj:matches bioj:none .
+  ?itemURI ca:isTargetOf 
 	    			[ ca:hasCoder "cgrady" ;  
 	      			  ca:appliesCode citec:in-text_mention ;  
 	    			] ;  

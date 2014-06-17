@@ -1,12 +1,12 @@
-SELECT DISTINCT ?itemURIC
+SELECT DISTINCT ?itemURI
 WHERE { 
-  ?itemURIJ bioj:matches ?itemURIC .
+  ?itemURIJ bioj:matches ?itemURI .
   ?itemURIJ ca:isTargetOf 
 	    			[ ca:hasCoder "jhowison" ;  
 	      			  ca:appliesCode citec:in-text_mention ;  
 	    			] ;  
 	  . 
-  ?itemURIC ca:isTargetOf  
+  ?itemURI ca:isTargetOf  
 				[ ca:hasCoder "cgrady" ;  
       			  ca:appliesCode citec:in-text_mention ;  
 			    ] ; 

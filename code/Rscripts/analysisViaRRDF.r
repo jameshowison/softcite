@@ -52,7 +52,7 @@ jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCoding
 
 combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 
-summarize.rdf(combindedCoding)  # 2432 triples
+#summarize.rdf(combindedCoding)  # 2432 triples
 
 #combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
 
@@ -74,6 +74,25 @@ james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query,
 catherine_only_query <- paste(readLines("code/Rscripts/catherine_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
 catherine_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, catherine_only_query, collapse=" "))
+
+# combine lists into frame.
+agreement_data_both <- data.frame("urls" = agreement_urls, "james" = 1, "catherine" = 1)
+
+agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "catherine" = 0)
+
+agreement_data_catherine <- data.frame("urls" = catherine_only_urls, "james" = 0, "catherine" = 1)
+
+agreement_data <- rbind(agreement_data_both, agreement_data_james)
+agreement_data <- rbind(agreement_data, agreement_data_catherine)
+
+library(irr)
+
+agree(agreement_data[,2:3])
+
+
+
+
+
 
 # Now produce a few relevant graphs.
 

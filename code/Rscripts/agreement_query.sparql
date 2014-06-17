@@ -3,12 +3,12 @@ WHERE {
   ?itemURIJ bioj:matches ?itemURIC .
   ?itemURIJ ca:isTargetOf 
 	    			[ ca:hasCoder "jhowison" ;  
-	      			  ca:appliesCode citec:in_text_mention ;  
+	      			  ca:appliesCode citec:in-text_mention ;  
 	    			] ;  
 	  . 
   ?itemURIC ca:isTargetOf  
 				[ ca:hasCoder "cgrady" ;  
-      			  ca:appliesCode citec:in_text_mention ;  
+      			  ca:appliesCode citec:in-text_mention ;  
 			    ] ; 
   . 
 }

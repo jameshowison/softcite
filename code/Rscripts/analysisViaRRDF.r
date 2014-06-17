@@ -46,9 +46,9 @@ data <- data.frame(code_matrix)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
-jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/CatherineCoding.ttl", format="TURTLE")
+catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/CatherineCoding.ttl", format="TURTLE")
 
-catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCoding.ttl", format="TURTLE")
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCoding.ttl", format="TURTLE")
 
 combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 

@@ -18,7 +18,7 @@ bioj:bothJ1 a bioj:selection ;
 	    ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "jhowison" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 .
 
@@ -27,7 +27,7 @@ bioj:bothC1 a bioj:selection ;
 		ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "cgrady" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 		ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
@@ -42,7 +42,7 @@ bioj:bothJ2 a bioj:selection ;
 	    ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "jhowison" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 	    ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
@@ -56,7 +56,7 @@ bioj:bothC2 a bioj:selection ;
 		ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "cgrady" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 		ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
@@ -71,7 +71,7 @@ bioj:jamesonlyJ2 a bioj:selection ;
 	    ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "jhowison" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 .
 
@@ -81,7 +81,7 @@ bioj:CatherineonlyC2 a bioj:selection ;
         ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "cgrady" ;
-           ca:appliesCode citec:in_text_mention ;
+           ca:appliesCode citec:in-text_mention ;
          ] ;
 .
 

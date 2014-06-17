@@ -54,7 +54,7 @@ combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 
 summarize.rdf(combindedCoding)  # 2432 triples
 
-combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
+#combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
 
 # Ok, need to get three numbers.  Both agreeing, J not C, and C not J.
 
@@ -65,9 +65,15 @@ combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testing
 
 agreement_query <- paste(readLines("code/Rscripts/agreement_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
-agreements <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
+agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
 
+james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
+james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
+
+catherine_only_query <- paste(readLines("code/Rscripts/catherine_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+catherine_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, catherine_only_query, collapse=" "))
 
 # Now produce a few relevant graphs.
 

@@ -1,0 +1,9 @@
+SELECT DISTINCT ?itemURIC
+WHERE { 
+  ?itemURIC bioj:matches bioj:none .
+  ?itemURIC ca:isTargetOf 
+	    			[ ca:hasCoder "cgrady" ;  
+	      			  ca:appliesCode citec:in_text_mention ;  
+	    			] ;  
+	  . 
+}

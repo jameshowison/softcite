@@ -1,0 +1,9 @@
+SELECT DISTINCT ?itemURIJ
+WHERE { 
+  ?itemURIJ bioj:matches bioj:none .
+  ?itemURIJ ca:isTargetOf 
+	    			[ ca:hasCoder "jhowison" ;  
+	      			  ca:appliesCode citec:in_text_mention ;  
+	    			] ;  
+	  . 
+}

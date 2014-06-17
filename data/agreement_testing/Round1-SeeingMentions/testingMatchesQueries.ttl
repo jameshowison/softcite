@@ -67,7 +67,7 @@ bioj:bothC2 a bioj:selection ;
 
 # matches none, as though only coded by, say, James
 bioj:jamesonlyJ2 a bioj:selection ;
-        bioj:matches ca:none ;
+        bioj:matches bioj:none ;
 	    ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "jhowison" ;
@@ -77,7 +77,7 @@ bioj:jamesonlyJ2 a bioj:selection ;
 
 # matches none, as though only coded by, say, Catherine
 bioj:CatherineonlyC2 a bioj:selection ;
-        bioj:matches ca:none ;
+        bioj:matches bioj:none ;
         ca:isTargetOf 
          [ rdf:type ca:CodeApplication ;
            ca:hasCoder "cgrady" ;

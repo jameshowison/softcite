@@ -1,6 +1,6 @@
 library(rrdf)
 library(ggplot2)
-
+library(dplyr)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
@@ -8,11 +8,55 @@ softciteData = load.rdf("data/SoftwareCitationDataset.ttl", format="TURTLE")
 
 summarize.rdf(softciteData)
 prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UTF-8"), collapse=" ")
-query <- paste(readLines("code/Rscripts/all_codes_query.sparql", encoding="UTF-8"), collapse=" ")
 
-code_matrix <- sparql.rdf(softciteData, paste(prefixes, query, collapse=" "))
+# Sample summary statistics
+no_codes_query <- paste(readLines("code/Rscripts/all_data_no_codes.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+code_matrix <- sparql.rdf(softciteData, paste(prefixes, no_codes_query, collapse=" "))
 
 data <- data.frame(code_matrix)
+
+data %.%
+  group_by(strata) %.%
+  summarise(freq=count_distinct(journal_title))
+
+data %.% 
+  group_by(journal_title) %.% 
+  summarise(freq = length(unique(article))) %.% 
+  arrange(desc(freq))
+  
+  data %.% 
+    group_by(stata,journal_title) %.% 
+    summarise(freq = length(unique(article))) %.% 
+    arrange(desc(freq))
+
+
+
+
+all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collapse=" "))
+
+data <- data.frame(code_matrix)
+
+#################
+#  Percent Agreement, between cgrady and jhowison as coders
+#  Uses data from different files.
+#################
+
+setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
+
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/CatherineCoding.ttl", format="TURTLE")
+
+catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCoding.ttl", format="TURTLE")
+
+combindedCoding = combine.rdf(jamesCoding,catherineCoding)
+
+summarize.rdf(combindedCoding)  # 2432 triples
+
+agreement_query <- paste(readLines("code/Rscripts/agreement_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+
 
 # Now produce a few relevant graphs.
 

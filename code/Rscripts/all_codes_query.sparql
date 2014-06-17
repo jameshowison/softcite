@@ -9,5 +9,4 @@ WHERE {
   		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
 	}
 }
-
 		

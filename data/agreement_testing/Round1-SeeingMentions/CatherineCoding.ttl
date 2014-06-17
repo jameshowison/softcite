@@ -1,0 +1,1139 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+
+@prefix bioj: <http://howison.ischool.utexas.edu/bio-journal-sample#> .
+@prefix citec: <http://howison.ischool.utexas.edu/citation-codes#> .
+@prefix bioj-cited: <http://howison.ischool.utexas.edu/bio-journal-sample-cited#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+bioj:a2004-40-NAT_GENET rdf:type bioj:article ;
+	ca:memo "Article contains graphs, computer-generated graphics and statistical results without mentioning the software involved.  Also mentions a few machines (e.g., PCR and an X-ray absorptionmetry system from GE medical systems) that clearly have software in them)" ;
+	ca:memo "At the end of the article, accession numbers are given for what appear to be different proteins (or something like that) used in the study. There's an Accession Numbers section for proteins and a References section for papers -- software has no dedicated section." ;
+# in-text mention with reference.
+
+bioj:has_selection bioj:a2004-40-NAT_GENET-C01 ;
+bioj:has_selection bioj:a2004-40-NAT_GENET-C02 .
+
+bioj:a2004-40-NAT_GENET-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote "we narrowed the intervals for Dsk1 and Dsk7 to 2.6 Mb and 1.8 Mb, respectively (according to Ensembl v5.3.1; ref. 6)";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:version_number ; rdfs:label "5.3.1" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Ensembl" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Hubbard, T. et al. The Ensembl genome database project. Nucleic Acids Res. 30, 38–41 (2002).";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] . # end in-text mention with reference
+# in-text mention.
+bioj:a2004-40-NAT_GENET-C02 rdf:type bioj:selection ;
+          	  bioj:full_quote "position on the current Ensembl mouse genomic assembly is shown" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Ensembl" ] ;
+               ] . # end in-text mention
+
+bioj:a2001-35-NAT_BIOTECHNOL rdf:type bioj:article ;
+
+							bioj:has_supplement bioj:a2001-35-NAT_BIOTECHNOL-supp ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+. # dot ends bioj:article long statement.
+
+bioj:a2007-24-SCIENCE rdf:type bioj:article ;
+							bioj:has_supplement bioj:a2007-24-SCIENCE-supp ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+	ca:memo "Science journal policy states that 'All computer codes involved in the creation or analysis of data must also be available to any reader of Science.' Where is that code?"
+. # dot ends bioj:article long statement.
+
+bioj:a2008-39-NAT_BIOTECHNOL rdf:type bioj:article ;
+							bioj:has_supplement bioj:a2008-39-NAT_BIOTECHNOL-supp ;
+	ca:memo "Software mentions are not uniform within this article (one mention includes version number, where another does not.)" ;
+bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-C01 ;
+bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-C02 ;
+bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-C03 ;
+bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-C04 ;
+bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-C05 .
+
+# in-text mention.
+bioj:a2008-39-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote """All images were analyzed with GenePix3.0
+(Molecular Devices).""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "GenePix" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "3.0" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Molecular Devices" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2008-39-NAT_BIOTECHNOL-C02 rdf:type bioj:selection ;
+          	  bioj:full_quote "IC50s were measured by fitting data to a three-parameter logistic curve using the formula Y=a+(b-a)/(1+10^(X-c)) (BioDataFit, Chang Bioscience)." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BioDataFit" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Chang Bioscience" ] ;
+               ] .# end in-text mention
+# in-text mention.
+bioj:a2008-39-NAT_BIOTECHNOL-C03 rdf:type bioj:selection ;
+          	  bioj:full_quote "Dissociation equilibrium constants were determined by fitting data to the equation describing equilibrium binding; Y=a*X/(b + X) (a and b represent maximum binding and Kd, respectively) by nonlinear least- squares regression fitting (BioDataFit, Chang Bioscience)." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BioDataFit" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Chang Bioscience" ] ;
+               ] .# end in-text mention
+# in-text mention.
+bioj:a2008-39-NAT_BIOTECHNOL-C04 rdf:type bioj:selection ;
+          	  bioj:full_quote "IC50s were measured by fitting data to a three-parameter logistic curve using the formula Y = a+ (b – a)/(1 + 10^(X – c)) (a, b and c represent minimum binding, maximum binding and logEC50, respectively)(BioDataFit, Chang Bioscience)." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BioDataFit" ] ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Chang Bioscience" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2008-39-NAT_BIOTECHNOL-C05 rdf:type bioj:selection ;
+          	  bioj:full_quote "Data were fit to a 3 parameter logistic curve using the formula Y=a+(b-a)/(1+10^(X-c)) (BioDataFit, Chang Bioscience)" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BioDataFit" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Chang Bioscience" ] ;
+               ] ;# end in-text mention
+. # dot ends bioj:article long statement.
+
+bioj:a2001-40-MOL_ECOL rdf:type bioj:article ;
+# in-text mention with reference.
+
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C01 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C02 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C03 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C04 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C05 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C06 ;
+bioj:has_selection bioj:a2001-40-MOL_ECOL-C07 .
+
+bioj:a2001-40-MOL_ECOL-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote "Sequences were deposited in GenBank (Accession nos AF407841–AF408058) and were aligned manually after an initial alignment with the clustal option (Thompson et al. 1994) in the computer program sequencenavigator (Perkin Elmer, Applied Biosystems)." ;
+			  ca:memo "This is a strange software mention in that it mentions a piece of software (Sequence Navigator) and points to a reference, but the reference is not to a paper about Sequence Navigator, but rather a paper about a different piece of software called CLUSTAL W, of which Sequence Navigator apparently has a clustal option that does something similar to what CLUSTAL W does (?). Does this count as a reference regarding the software, or should these be two separate mentions?" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Sequence Navigator" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Perkin Elmer, Applied Biosystems" ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:configuration_details ;
+               ] ;	
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Thompson JD, Higgins DG, Gibson TJ (1994) CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice. Nucleic Acids Research, 22, 4673– 4680.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] . # end in-text mention
+# in-text mention.
+
+bioj:a2001-40-MOL_ECOL-C02 rdf:type bioj:selection ;
+          	  bioj:full_quote "The 16S sequences were collapsed to haplotypes with the collapse 1.0 tool provided by David Posada (http:// bioag.byu.edu/zoology/crandall_lab). For" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "COLLAPSE" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "1.0" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "David Posada" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:url ; rdfs:label "http:// bioag.byu.edu/zoology/crandall_lab" ] ;
+               ] . # end in-text mention
+# in-text mention with reference.
+
+bioj:a2001-40-MOL_ECOL-C03 rdf:type bioj:selection ;
+          	  bioj:full_quote "For the maximum likelihood (ML) analyses, the best-fit model of nucleotide substitution (TrNef + G) was selected using the hierarchy of likelihood ratio tests implemented in modeltest 3.0 (Posada & Crandall 1998)" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Modeltest" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:version_number ; rdfs:label "3.0" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Posada D, Crandall KA (1998) Modeltest: testing the model of DNA substitution. Bioinformatics, 14, 817–818.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] . # end in-text mention with reference
+# in-text mention with reference.
+bioj:a2001-40-MOL_ECOL-C04 rdf:type bioj:selection ;
+          	  bioj:full_quote "ML analyses were performed with paup 4.03b (Swofford 1998).";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:version_number ; rdfs:label "4.03b" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "PAUP" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Swofford DL (1998) PAUP*. Phylogenetic Analysis Using Parsimony (*and Other Methods), Version 4. Sinauer Associates, Sunderland.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention with reference.
+bioj:a2001-40-MOL_ECOL-C05 rdf:type bioj:selection ;
+          	  bioj:full_quote "The calculations were performed using amova 1.55 (Excoffier et al. 1992).";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "AMOVA" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:version_number ; rdfs:label "1.55" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Excoffier L, Smouse PE, Quattro JM (1992) Analysis of molecular variance from metric distances among DNA haplotypes: applica- tion to human mitochondrial DNA restriction data. Genetics, 131, 479–491.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention.
+ bioj:a2001-40-MOL_ECOL-C06 rdf:type bioj:selection ;
+          	  bioj:full_quote "These standardized shell morphology variables were used to perform a principal component analysis (PCA) and discriminant analysis (DA), with statistica (StatSoft, Inc. 1995)." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Statistica" ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:creator ; rdfs:label "StatSoft, Inc." ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode [ a citec:date ; rdfs:label "1995" ] ;
+               ] .# end in-text mention
+# in-text mention.
+bioj:a2001-40-MOL_ECOL-C07 rdf:type bioj:selection ;
+          	  bioj:full_quote "Partial least square (PLS) analysis was performed using the PLS option of the package ntsys-pc version 2.2f" ;
+			  ca:memo "This mention indicates the option or setting used to run it" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NTSYS-pc" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "2.2f" ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:configuration_details ;
+               ] ; # end in-text mention
+. # dot ends bioj:article long statement.
+
+bioj:a2009-35-DEV_CELL rdf:type bioj:article ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+. # dot ends bioj:article long statement.
+
+bioj:a2000-04-MOL_ECOL rdf:type bioj:article ;
+
+bioj:has_selection bioj:a2000-04-MOL_ECOL-C01.
+
+# in-text mention with reference.
+bioj:a2000-04-MOL_ECOL-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote """"FST was used to describe the variation among populations and
+was calculated using biosys (Swofford & Selander 1981).""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BIOSYS" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "ï»¿Mitton, J. B., Kreiser, B. R., & Latta, R. G. (2000). Glacial refugia of limber pine (Pinus flexilis James) inferred from the population structure of mitochondrial DNA. Molecular ecology, 9(1), 91-7. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10652078";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				]  # end in-text mention with reference
+. # dot ends bioj:article long statement.
+
+bioj:a2002-48-TURK_J_ZOOL rdf:type bioj:article ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+. # dot ends bioj:article long statement.
+
+bioj:a2010-05-BMC_MOL_BIOL rdf:type bioj:article ;
+# in-text mention.
+
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C01 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C02 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C03 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C04 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C05 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C06 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C07 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C08 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C09 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C10 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C11 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C12 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C13 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C14 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C15 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C16 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C17 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C18 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C19 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C20 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C21 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C22 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C23 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C24 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C25 ;
+bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-C26 . 
+
+bioj:a2010-05-BMC_MOL_BIOL-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote """Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] .# end in-text mention
+
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C02 rdf:type bioj:selection ;
+          	  bioj:full_quote """Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] . # end in-text mention
+
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C03 rdf:type bioj:selection ;
+          	  bioj:full_quote """Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] . # end in-text mention
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C04 rdf:type bioj:selection ;
+          	  bioj:full_quote """The stability of candidate EC genes was analysed using
+geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).""";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A, Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] . # end in-text mention with reference
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C05 rdf:type bioj:selection ;
+          	  bioj:full_quote """The stability of candidate EC genes was analysed using
+geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).""";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Andersen CL, Jensen JL, Orntoft TF: Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets. Cancer Res 2004, 64(15):5245-5250.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C06 rdf:type bioj:selection ;
+          	  bioj:full_quote """Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).""";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A, Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C07 rdf:type bioj:selection ;
+          	  bioj:full_quote """Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).""";
+			bioj:matches bioj:none ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Hellemans J, Mortier G, De Paepe A, Speleman F, Vandesompele J: qBase relative quantification framework and software for management and automated analysis of real-time quantitative PCR data. Genome Biology 2007, 8(2):R19.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C08 rdf:type bioj:selection ;
+          	  bioj:full_quote "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].";
+			ca:memo "The references cited at the end of that paragraph [9,10]; appear to be non-software-related papers." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A, Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C09 rdf:type bioj:selection ;
+          	  bioj:full_quote "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Andersen CL, Jensen JL, Orntoft TF: Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets. Cancer Res 2004, 64(15):5245-5250";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C10 rdf:type bioj:selection ;
+          	  bioj:full_quote """In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes. B2M and PPIA were identified as the most stable pairing. In order to achieve a pair-wise variation value (V) below the cut-off of 0.15 additional genes should theoretically be used; however this cut-off point is not absolute [14] and may not always be achievable [42]. No significant difference in target gene expression was observed when the top three most stable EC genes identified by geNorm were used confirming that using of a pair of genes may be more practicable given cost, work load and sample availability considerations.""" ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C11 rdf:type bioj:selection ;
+          	  bioj:full_quote """NormFinder was designed to identify EC genes with
+the lowest stability values; these values are calculated based on intra- and inter-group variation. In this study NormFinder was used to define the best combination of genes using tumour and normal as group identifiers in the calculations""" ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] .# end in-text mention
+# in-text mention with reference.
+bioj:a2010-05-BMC_MOL_BIOL-C12 rdf:type bioj:selection ;
+          	  bioj:full_quote "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms. QBasePlus was used to confirm our selection of the B2M and PPIA pairing as the best combination of ECs in colorectal tissue.";
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Hellemans J, Mortier G, De Paepe A, Speleman F, Vandesompele J: qBase relative quantification framework and software for management and automated analysis of real-time quantitative PCR data. Genome Biology 2007, 8(2):R19.";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "cgrady" ;
+		             ca:appliesCode citec:reference ;
+		           ] ;
+				] .# end in-text mention with reference
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C13 rdf:type bioj:selection ;
+          	  bioj:full_quote "Figure 2 Analysis of candidate EC genes using geNorm. (A): Average expression stability values of eligible EC genes. Expression stability of the control genes as calculated by geNorm. Stability" ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] .# end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C14 rdf:type bioj:selection ;
+          	  bioj:full_quote "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation. This factor is calculated using the variable V as the pairwise variation (Vn/Vn + 1) between two sequential NFs (NFn and NFn + 1). To meet the recommended cut off V-value which is the point at which it is unnecessary to include additional genes in a normalisation strategy. The recommended limit for V value is 0.15 but it is not always achievable. In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:configuration_details ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C15 rdf:type bioj:selection ;
+          	  bioj:full_quote "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C16 rdf:type bioj:selection ;
+          	  bioj:full_quote "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C17 rdf:type bioj:selection ;
+          	  bioj:full_quote "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C18 rdf:type bioj:selection ;
+          	  bioj:full_quote "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C19 rdf:type bioj:selection ;
+          	  bioj:full_quote "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C20 rdf:type bioj:selection ;
+          	  bioj:full_quote "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C21 rdf:type bioj:selection ;
+          	  bioj:full_quote "An RNA integrity number (RIN) was generated for each sample using the Agilent 2100 Expert Software (Version B.02.03) based on the ratio of ribosomal bands and also the presence or absence of degradation products on the electrophoretic and gel-like images." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "B.02.03" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Agilent 2100 Expert Software" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C22 rdf:type bioj:selection ;
+          	  bioj:full_quote "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes. It applies ∆∆Ct method was used where ∆∆Ct =(Ct target gene, test sample - Ct endogenous control, test sample) - (Ct target gene, calibrator sample - Ct endogenous control, calibrator sample). Relative quanti- ties were corrected for efficiency of amplification and fold change in gene expression between groups was cal- culated as E-∆∆Ct ± s.e.m. Where more than one endo- genous control are used, fold change estimates were calculated using the geometric mean of EC quantities relative to the calibrator sample which could be the minimum, maximum or a named sample or an average." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:configuration_details ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C23 rdf:type bioj:selection ;
+          	  bioj:full_quote """Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "geNorm" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C24 rdf:type bioj:selection ;
+          	  bioj:full_quote """Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "NormFinder" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C25 rdf:type bioj:selection ;
+          	  bioj:full_quote "It is further validated with qBasePlus." ;
+			bioj:matches bioj:none ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "qBasePlus" ] ;
+               ] . # end in-text mention
+# in-text mention.
+bioj:a2010-05-BMC_MOL_BIOL-C26 rdf:type bioj:selection ;
+          	  bioj:full_quote "Sta- tistical analysis was carried out with Minitab® 15 (Mini- tab Ltd, Coventry, UK)." ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Minitab" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "15" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Minitab Ltd" ] ;
+               ] ;
+.
+
+bioj:a2007-48-UNDERSEA_HYPERBAR_M rdf:type bioj:article ;
+bioj:has_selection bioj:a2007-48-UNDERSEA_HYPERBAR_M-C01 .
+# in-text mention.
+bioj:a2007-48-UNDERSEA_HYPERBAR_M-C01 rdf:type bioj:selection ;
+          	  bioj:full_quote """Data were analyzed using Microsoft
+Excel Version 2003, (Microsoft Corp., Redmond, WA.).""" ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:in-text_mention ;
+               ] ;	
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;	
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Excel" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:creator ; rdfs:label "Microsoft Corp." ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:version_number ; rdfs:label "2003" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "cgrady" ;
+             	 ca:appliesCode [ a citec:date ; rdfs:label "2003" ] ;
+               ] .# end in-text mention
+# dot ends bioj:article long statement.
+
+bioj:a2008-02-WATERBIRDS rdf:type bioj:article ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+. # dot ends bioj:article long statement.
+
+bioj:a2007-41-MOL_THER rdf:type bioj:article ;
+	ca:memo "No software mentions in this article. - cgrady" ;
+. # dot ends bioj:article long statement.

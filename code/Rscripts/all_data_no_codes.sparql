@@ -1,0 +1,7 @@
+SELECT ?article ?journal_title ?strata
+WHERE {
+	?article dc:isPartOf ?journal_url .
+	?journal_url bioj:strata ?strata ;
+	             dc:title ?journal_title .
+}
+		

@@ -658,10 +658,31 @@ WHERE {
 
 Ok!  That worked :)
 
----------------
-Tue Mar 25 14:16:43 CDT 2014
----------------
+===============================================================
+Tue Jun 17 10:23:31 CDT 2014
+===============================================================
 
-Of
+Trying to recover agreement coding.
 
-loveelsapo1
+Three parts.
+
+1. Raw percent agreement on identifying software 
+
+2. Cohen's Kappa on mention characteristics codes applied by James and Catherine
+
+? Did we retest when training Julia as a coder?
+
+3. Cohen's Kappa on Julia and James searching for software codes
+
+
+
+1. Raw agreement.
+
+This was done with the JamesCoding.ttl and CatherineCoding.ttl.  James went through and inspected the fulltext quotes, allocating bioj:matches with the URL of Catherines.  Those without a match were coded bioj:none.  Only CatherineCoding.ttl every ended up in the SoftwareCiationDataset.ttl, because didn't want multiple coders applying codes to selections (too complex for querying.).  That's why there are bioj:matches none statements in the SoftwareCitationDataset.ttl, but none with actual matches.
+
+TODO: move the JamesCoding.ttl and CatherineCoding.ttl files into a new folder in data.
+TODO: write rrdf queries to get dataset for percentage agreement (this is rewriting the jena java files)
+TODO: write short code for agreement.  Custom code because excluding both disagreed as agreement?  Could still use agree in irr package, I think.
+
+Can test on testingMatchingQueries.ttl.
+

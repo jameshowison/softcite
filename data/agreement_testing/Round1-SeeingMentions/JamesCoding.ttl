@@ -1,0 +1,1344 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-cited#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+
+bioj:a2004-40-NAT_GENET rdf:type bioj:article ;
+	ca:memo "Article contains graphs, computer-generated graphics and statistical results without mentioning the software involved.  Also mentions a few machines (e.g., PCR and an X-ray absorptionmetry system from GE medical systems) that clearly have software in them)" ;
+# in-text mention with reference.
+   bioj:has_selection bioj:a2004-40-NAT_GENET-J01 ;
+   bioj:has_selection bioj:a2004-40-NAT_GENET-J02 . 
+
+bioj:a2004-40-NAT_GENET-J01 rdf:type bioj:selection ;
+			  bioj:full_quote "we narrowed the intervals for Dsk1 and Dsk7 to 2.6 Mb and 1.8 Mb, respectively (according to Ensembl v5.3.1; ref. 6)";
+			  bioj:matches bioj:a2004-40-NAT_GENET-C01 ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "jhowison" ;
+                 ca:appliesCode citec:in_text_mention ;
+               ] ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "jhowison" ;
+                 ca:appliesCode citec:software_used ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "jhowison" ;
+                 ca:appliesCode [ a citec:version_number ; rdfs:label "5.3.1" ] ;
+               ] ;
+			  ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "jhowison" ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Ensembl" ] ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Hubbard, T. et al. The Ensembl genome database project. Nucleic Acids Res. 30, 38–41 (2002).";
+		          ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "jhowison" ;
+		             ca:appliesCode citec:software_reference ;
+		           ] ;
+				] ;
+.  # end in-text citation
+
+bioj:a2004-40-NAT_GENET-J02 rdf:type bioj:selection ;
+	          	  bioj:full_quote "position on the current Ensembl mouse genomic assembly is shown" ;
+				bioj:matches bioj:a2004-40-NAT_GENET-C02 ;
+	              ca:isTargetOf 
+	               [ rdf:type ca:CodeApplication ;
+	                 ca:hasCoder "jhowison" ;
+	                 ca:appliesCode citec:in-text_mention ;
+	               ] ;	
+				  ca:isTargetOf 
+	               [ rdf:type ca:CodeApplication ;
+	                 ca:hasCoder "jhowison" ;
+	             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Ensembl" ] ;
+	               ] ;
+.
+
+bioj:a2001-50-CELL rdf:type bioj:article ;
+  bioj:has_selection bioj:a2001-50-CELL-J01 ;
+  bioj:has_selection bioj:a2001-50-CELL-J02 ;
+  bioj:has_selection bioj:a2001-50-CELL-J03 .
+
+bioj:a2001-50-CELL-J01 rdf:type bioj:selection ;
+      	  bioj:full_quote "we clustered the original raw data using the Cluster software (Eisen et al., 1998)";
+          bioj:in_doc_location bioj:methods_section ;
+          ca:isTargetOf 
+           [ rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode citec:in-text_mention ;
+             ca:memo "" ;
+           ] ;
+		  ca:isTargetOf 
+           [ rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:software_name ;
+                          rdfs:label "Cluster" ] ;
+             ca:memo "" ;
+           ] ;
+		  bioj:has_reference 
+			  [ rdf:type bioj:selection ;
+	      	  bioj:full_quote "Eisen, M.B., Spellman, P.T., Brown, P.O., and Botstein, D. (1998). Cluster analysis and display of genome-wide expression patterns. Proc. Natl. Acad. Sci. USA 95, 14863–14868." ] .
+	
+bioj:a2001-50-CELL-J02 rdf:type bioj:selection ;
+          	  bioj:full_quote "in (c), the clustering was performed by Gasch et al. (2000)";
+              bioj:in_doc_location bioj:methods_section ;
+              ca:isTargetOf 
+               [ rdf:type ca:CodeApplication ;
+                 ca:hasCoder "jhowison" ;
+                 ca:appliesCode citec:in-text_mention ;
+                 ca:memo "" ;
+               ] ;
+			  bioj:has_reference 
+				  [ rdf:type bioj:selection ;
+		      	  bioj:full_quote "Gasch, A.P., Spellman, P.T., Kao, C.M., Carmel-Harel, O., Eisen, M.B., Storz, G., Botstein, D., and Brown, P.O. (2000). Genomic ex- pression programs in the response of yeast cells to environmental changes. Mol. Biol. Cell 11, 4241–4257.";
+					ca:memo "Note that this paper appears to be the next version of the Eisen (1988) reference" ;
+		           ] ;
+.
+		
+bioj:a2001-50-CELL-J03 rdf:type bioj:selection ;
+	          	  bioj:full_quote "coupled to MetaMorph imaging software (Universal Imaging Corporation, Downingtown, PA).";
+	              bioj:in_doc_location bioj:experimental_procedures_appendix ;
+	ca:memo "Note that calling this location experimental_procedures appendix, it's similar to a supplement." ;
+	              ca:isTargetOf 
+	               [ rdf:type ca:CodeApplication ;
+	                 ca:hasCoder "jhowison" ;
+	                 ca:appliesCode citec:in-text_mention;
+	                 ca:memo "" ;
+	               ] ;
+				  ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "jhowison" ;
+		             ca:appliesCode [ rdf:type citec:software_name ;
+		                          rdfs:label "MetaMorph" ] ;
+		             ca:memo "" ;
+				   ]; 
+				  ca:isTargetOf 
+		           [ rdf:type ca:CodeApplication ;
+		             ca:hasCoder "jhowison" ;
+		             ca:appliesCode [ rdf:type citec:creator;
+		                          rdfs:label "Universal Imaging Corporation" ] ;
+		             ca:memo "" ;
+					] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL rdf:type bioj:article ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J01 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J02 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J03 ;	
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J04 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J05 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J06 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J07 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J08 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J09 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J10 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J11 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J12 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J13 ;	
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J14 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J15 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J16 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J17 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J18 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J19 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J20 ;
+	bioj:has_selection bioj:a2010-05-BMC_MOL_BIOL-J21 ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J01 rdf:type bioj:selection ;
+	bioj:full_quote "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference";
+	bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C01 ;
+	bioj:in_doc_location bioj:abstract ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name; 
+	       	              rdfs:label "geNorm" ] ;
+	  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J02 rdf:type bioj:selection ;
+	bioj:full_quote "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference";
+	bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C02 ;
+	bioj:in_doc_location bioj:abstract ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name; 
+	       	              rdfs:label "NormFinder" ] ;
+	  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J03 rdf:type bioj:selection ;
+	bioj:full_quote "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference";
+	bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C03 ;
+	bioj:in_doc_location bioj:abstract ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name; 
+	       	              rdfs:label "qBasePlus" ] ;
+	  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J04 rdf:type bioj:selection ;
+	bioj:full_quote "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes";
+	ca:memo "Note that Catherine selected the full paragraph and applied mutliple in-text_mentions, while I did that at sentence level.  Not really a semantic disagreement" ;
+	                bioj:in_doc_location bioj:results ;
+					bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C04 ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:in-text_mention ;
+					  ] ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:software_used ;
+					  ] ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode [ rdf:type citec:software_name; 
+					       rdfs:label "geNorm" ] ;
+					  ] ;
+					bioj:has_reference [ rdf:type bioj:selection ;
+						      	       bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A, Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034." ] ;
+.
+			
+bioj:a2010-05-BMC_MOL_BIOL-J05 rdf:type bioj:selection ;
+          	  bioj:full_quote "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes";
+                bioj:in_doc_location bioj:results ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C05 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       rdfs:label "NormFinder" ] ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Andersen CL, Jensen JL, Orntoft TF: Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets. Cancer Res 2004, 64(15):5245-5250." ] ;									
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J06 rdf:type bioj:selection ;
+          	  bioj:full_quote "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.";
+                bioj:in_doc_location bioj:results ;
+				ca:memo "Note that this one has two references, one is the same as nearby mentions [8].  Note also that I didn't code the second GeNorm mention, since it's semantically similar.  Nor did I code 'the Equivalance test [37] which sounded more like a method than a tool, per se." ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C06 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name ; 
+				       rdfs:label "qBasePlus" ] ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A,Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034." ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Hellemans J, Mortier G, De Paepe A, Speleman F, Vandesompele J: qBase relative quantification framework and software for management and automated analysis of real-time quantitative PCR data. Genome Biology 2007, 8(2):R19." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J07 rdf:type bioj:selection ;
+          	  bioj:full_quote "The Equivalence test [37] was used to examine the expression of candidate ECs.";
+                bioj:in_doc_location bioj:results ;
+				bioj:matches bioj:none ;
+				ca:memo "Originally I did not code this as I thought it was a method, but later text reveals it to be a tool.  Note on agreement, Catherine did not code this one (her C07 is a different thing, a different way of coding the two in-text references)." ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name ; 
+				     rdfs:label "The Equivalence Test" ] ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Haller F, Kulle B, Schwager S, Gunawan B, von Heydebreck A, Sultmann H, Fuzesi L: Equivalence test in quantitative reverse transcription polymerase chain reaction: confirmation of reference genes suitable for normalization. Anal Biochem 2004, 335(1):1-9." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J08 rdf:type bioj:selection ;
+          	  bioj:full_quote "Many analytical programmes for relative quantification have been developed, certain of which enable the identification of EC genes from a study population [37,40,41].";
+			  ca:memo "This one is a bit confusing since it's just three references, should those all be separate selections?  Agreement note.  Catherine didn't see these as software_not_used so that's three misses on that code and three on has_reference." ;
+                bioj:in_doc_location bioj:results ;
+				bioj:matches bioj:none ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_not_used ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Haller F, Kulle B, Schwager S, Gunawan B, von Heydebreck A, Sultmann H, Fuzesi L: Equivalence test in quantitative reverse transcription polymerase chain reaction: confirmation of reference genes suitable for normalization. Anal Biochem 2004, 335(1):1-9." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J09 rdf:type bioj:selection ;
+          	  bioj:full_quote "Many analytical programmes for relative quantification have been developed, certain of which enable the identification of EC genes from a study population [37,40,41].";
+			  ca:memo "This one is a bit confusing since it's just three references, should those all be separate selections?" ;
+                bioj:in_doc_location bioj:results ;
+				bioj:matches bioj:none ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_not_used ;
+				  ] ;						
+				bioj:has_reference [ rdf:type bioj:selection ;
+	      	    bioj:full_quote "Szabo A, Perou CM, Karaca M, Perreard L, Quackenbush JF, Bernard PS: Statistical modeling for selecting housekeeper genes. Genome Biol 2004, 5(8):R59." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J10 rdf:type bioj:selection ;
+          	  bioj:full_quote "Many analytical programmes for relative quantification have been developed, certain of which enable the identification of EC genes from a study population [37,40,41].";
+			  ca:memo "This one is a bit confusing since it's just three references, should those all be separate selections?   We decided that they should be, so Yes." ;
+                bioj:in_doc_location bioj:results ;
+				bioj:matches bioj:none ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_not_used ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+				bioj:full_quote "Pfaffl MW, Tichopad A, Prgomet C, Neuvians TP: Determination of stable housekeeping genes, differentially regulated target genes and sample integrity: BestKeeper–Excel-based tool using pair-wise correlations. Biotechnol Lett 2004, 26(6):509-515." ] ;				
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J11 rdf:type bioj:selection ;
+          	  bioj:full_quote "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise comparison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C09 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       rdfs:label "NormFinder" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Andersen CL, Jensen JL, Orntoft TF: Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets. Cancer Res 2004, 64(15):5245-5250." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J12 rdf:type bioj:selection ;
+          	  bioj:full_quote "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise comparison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C08 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       rdfs:label "geNorm" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Vandesompele J, De Preter K, Pattyn F, Poppe B, Van Roy N, De Paepe A, Speleman F: Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes. Genome Biol 2002, 3(7):RESEARCH0034." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J13 rdf:type bioj:selection ;
+          	  bioj:full_quote "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms.";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C12 ;
+				ca:memo "Seems like they developed this?" ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:memo "Note capitalization problem in software_name." ;
+				     ca:appliesCode [ rdf:type citec:software_name ; 
+				       rdfs:label "qBasePlus" ] ;
+				  ] ;
+				bioj:has_reference [ rdf:type bioj:selection ;
+					      	       bioj:full_quote "Hellemans J, Mortier G, De Paepe A, Speleman F, Vandesompele J: qBase relative quantification framework and software for management and automated analysis of real-time quantitative PCR data. Genome Biology 2007, 8(2):R19." ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J14 rdf:type bioj:selection ;
+          	  bioj:full_quote "Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C15 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "geNorm" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J15 rdf:type bioj:selection ;
+          	  bioj:full_quote "Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C16 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "NormFinder" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J16 rdf:type bioj:selection ;
+          	  bioj:full_quote "Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.";
+                bioj:in_doc_location bioj:discussion ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C17 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "qBaseplus" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J17 rdf:type bioj:selection ;
+          	  bioj:full_quote "An RNA integrity number (RIN) was generated for each sample using the Agilent 2100 Expert Software (Version B.02.03) based on the ratio of ribosomal bands and also the presence or absence of degradation products on the electrophoretic and gel-like images. A threshold value of RIN ≥ 7 was applied and RNA purity was verified by an average A260/A280 ratio of 1.98 (range 1.97-2.01) and A260/A230 ration of 1.7 (range 1.5-1.83).";
+                bioj:in_doc_location bioj:methods_appendix ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C21 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name ; 
+				       rdfs:label "Agilent 2100 Expert Software" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:version_number ; 
+				       rdfs:label "B.02.03" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:configuration_details ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J18 rdf:type bioj:selection ;
+          	  bioj:full_quote "QBasePlus was used for calculation of PDCD4 expression relative to";
+                bioj:in_doc_location bioj:methods_appendix ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C22 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "qBaseplus" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:configuration_details ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J19 rdf:type bioj:selection ;
+          	  bioj:full_quote "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.";
+                bioj:in_doc_location bioj:methods_appendix ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C23 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "geNorm" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J20 rdf:type bioj:selection ;
+          	  bioj:full_quote "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.";
+                bioj:in_doc_location bioj:methods_appendix ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C24 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name; 
+				       	              rdfs:label "NormFinder" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+.
+
+bioj:a2010-05-BMC_MOL_BIOL-J21 rdf:type bioj:selection ;
+          	  bioj:full_quote "Statistical analysis was carried out with Minitab® 15 (Mini-tab Ltd, Coventry, UK).";
+                bioj:in_doc_location bioj:methods_appendix ;
+				bioj:matches bioj:a2010-05-BMC_MOL_BIOL-C26 ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:in-text_mention ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:software_name ; 
+				       	              rdfs:label "Minitab" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_used ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:version_number ; 
+				       	              rdfs:label "15" ] ;
+				  ] ;
+				ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				     ca:hasCoder "jhowison" ;
+				     ca:appliesCode [ rdf:type citec:creator ; 
+				                      rdfs:label "Mini-tab Ltd" ] ;
+				  ] ;
+.
+
+bioj:a2001-40-MOL_ECOL rdf:type bioj:article ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J01 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J02 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J03 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J04 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J05 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J06 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J07 ;
+  bioj:has_selection bioj:a2001-40-MOL_ECOL-J08 ;
+.
+
+bioj:a2001-40-MOL_ECOL-J01 rdf:type bioj:selection ;
+	bioj:full_quote "an initial alignment with the clustal option (Thompson et al. 1994)"; 
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:none ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       rdfs:label "CLUSTAL" ] ;
+	  ] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+		      	       bioj:full_quote """Thompson JD, Higgins DG, Gibson TJ (1994) CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice. Nucleic Acids Research, 22, 4673–4680.""" ] ;
+.
+
+bioj:a2001-40-MOL_ECOL-J02 rdf:type bioj:selection ;
+    bioj:full_quote "computer program sequencenavigator (Perkin Elmer, Applied Biosystems).";
+    bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C01 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	]; 
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       rdfs:label "SEQUENCENAVIGATOR" ] ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creator ; 
+	                      rdfs:label "Perkin Elmer, Applied Biosystems" ] ;
+	] ;
+.
+	
+bioj:a2001-40-MOL_ECOL-J03 rdf:type bioj:selection ;
+	bioj:full_quote "The 16S sequences were collapsed to haplotypes with the collapse 1.0 tool provided by David Posada (http:// bioag.byu.edu /zoology/crandall_lab)";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C02 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       rdfs:label "COLLAPSE" ] ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode  [ rdf:type citec:version_number ; 
+	       	              rdfs:label "1.0" ] ;;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creator ; 
+	                      rdfs:label "David Posada (http:// bioag.byu.edu /zoology/crandall_lab)" ] ;
+		ca:memo "Also includes a URL locator, something we were only expect"
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:url ; 
+	                      rdfs:label "http:// bioag.byu.edu /zoology/crandall_lab" ] ;
+	  ] ;					
+.
+
+bioj:a2001-40-MOL_ECOL-J04 rdf:type bioj:selection ;
+	bioj:full_quote "likelihood ratio tests implemented in modeltest 3.0 (Posada & Crandall 1998)";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C03 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       rdfs:label "MODELTEST" ] ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:version_number ; 
+	       rdfs:label "3.0" ] ;
+	  ] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+		      	       bioj:full_quote "Posada D, Crandall KA (1998) Modeltest: testing the model of DNA substitution. Bioinformatics, 14, 817–818." ] ;
+.
+
+bioj:a2001-40-MOL_ECOL-J05 rdf:type bioj:selection ;
+	bioj:full_quote "ML analyses were performed with paup 4.03b (Swofford 1998).";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C04 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+ 	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+      ca:hasCoder "jhowison" ;
+      ca:appliesCode [ rdf:type citec:software_name ; 
+        rdfs:label "PAUP" ] ;
+   ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	    ca:hasCoder "jhowison" ;
+	    ca:appliesCode [ rdf:type citec:version_number ; 
+	      rdfs:label "4.03b" ] ;
+	 ] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+	      	       bioj:full_quote "Swofford DL (1998) PAUP*. Phylogenetic Analysis Using Parsimony (*and Other Methods), Version 4. Sinauer Associates, Sunderland." ] ;
+.
+
+bioj:a2001-40-MOL_ECOL-J06 rdf:type bioj:selection ;
+	bioj:full_quote "The calculations were performed using amova 1.55 (Excoffier et al. 1992).";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C05 ;
+  	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		ca:hasCoder "jhowison" ;
+		ca:appliesCode citec:in-text_mention ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		ca:hasCoder "jhowison" ;
+		ca:appliesCode citec:software_used ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+       ca:hasCoder "jhowison" ;
+       ca:appliesCode [ rdf:type citec:software_name ; 
+         				rdfs:label "AMOVA" ] ;
+    ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+     	ca:hasCoder "jhowison" ;
+     	ca:appliesCode [ rdf:type citec:version_number ; 
+       					 rdfs:label "1.55" ] ;
+	] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+		bioj:full_quote "Excoffier L, Smouse PE, Quattro JM (1992) Analysis of molecular variance from metric distances among DNA haplotypes: applica- tion to human mitochondrial DNA restriction data. Genetics, 131, 479–491." ] ;			  
+.
+
+bioj:a2001-40-MOL_ECOL-J07 rdf:type bioj:selection ;
+	bioj:full_quote "perform a principal component analysis (PCA) and discriminant analysis (DA), with statistica (StatSoft, Inc. 1995).";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C06 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       				  rdfs:label "STATISTICA" ] ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	   ca:hasCoder "jhowison" ;
+	   ca:appliesCode [ rdf:type citec:creator ; 
+	     				rdfs:label "StatSoft, Inc. 1995" ] ;
+	] ;
+.
+
+bioj:a2001-40-MOL_ECOL-J08 rdf:type bioj:selection ;
+	bioj:full_quote "Partial least square (PLS) analysis was performed using the PLS option of the package ntsys-pc version 2.2f";
+	bioj:in_doc_location bioj:methods ;
+	bioj:matches bioj:a2001-40-MOL_ECOL-C07 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	       rdfs:label "NTSYS-PC" ] ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:version_number ; 
+	                     rdfs:label "2.2f" ]
+	  ] ;
+.
+
+bioj:a2002-48-TURK_J_ZOOL rdf:type bioj:article ;
+	ca:memo "No mention of software in this article." ;
+. # end 2002-48-TURK_J_ZOOL
+
+bioj:a2008-39-NAT_BIOTECHNOL rdf:type bioj:article ;
+	ca:memo """Article clearly includes graphs and colored pictures that are likely the result of software use.  Also mentioned 'automated DNS sequencing' which is probably software inside a sequencing machine.  This is really a sort of wet-lab engineering project.""" ;
+	bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-J01 ;
+	bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-J02 ;
+	bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-J03 ;
+	bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-J04 ;
+	bioj:has_selection bioj:a2008-39-NAT_BIOTECHNOL-J05 ;
+.
+
+bioj:a2008-39-NAT_BIOTECHNOL-J01 rdf:type bioj:selection ;
+     bioj:full_quote "All images were analyzed with GenePix3.0 (Molecular Devices)";
+	 bioj:in_doc_location bioj:methods_appendix ;
+	 bioj:matches bioj:a2008-39-NAT_BIOTECHNOL-C01 ;
+	 ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode citec:in-text_mention ;
+		  ] ;
+	 ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode citec:software_used ;
+		  ] ;
+	 ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	      ca:hasCoder "jhowison" ;
+	      ca:appliesCode [ rdf:type citec:software_name ; 
+	                      rdfs:label "GenePix" ]
+	   ] ;
+	 ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	      ca:hasCoder "jhowison" ;
+	      ca:appliesCode [ rdf:type citec:version_number ; 
+	                      rdfs:label "3.0" ]
+	   ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	    ca:hasCoder "jhowison" ;
+	    ca:appliesCode [ rdf:type citec:creater ; 
+	                    rdfs:label "Molecular Devices" ]
+	 ] ;
+.
+
+bioj:a2008-39-NAT_BIOTECHNOL-J02 rdf:type bioj:selection ;
+    bioj:full_quote "IC50s were measured by fitting data to a three-parameter logistic curve using the formula Y 1⁄4 a+(b – a)/(1 + 10^(X – c)) (BioDataFit, Chang Bioscience).";
+	bioj:in_doc_location bioj:methods_appendix ;
+	bioj:matches bioj:a2008-39-NAT_BIOTECHNOL-C02 ;
+	ca:memo "Little indication that this is software, discovered by noticing formula and fitting then googling BioDataFit" ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                      rdfs:label "BioDataFit" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:configuration_details ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                      rdfs:label "Chang Bioscience" ]
+	  ] ;
+.
+
+bioj:a2008-39-NAT_BIOTECHNOL-J03 rdf:type bioj:selection ;
+	bioj:full_quote "The number of colonies was determined using Image J (National Institutes of Health) following fixation and staining with crystal violet.";
+	bioj:in_doc_location bioj:methods_appendix ;
+	bioj:matches bioj:none ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                     rdfs:label "Image J" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "National Institutes of Health" ]
+	  ] ;
+.
+
+bioj:a2008-39-NAT_BIOTECHNOL-J04 rdf:type bioj:selection ;
+      bioj:full_quote "nonlinear least- squares regression fitting (BioDataFit, Chang Bioscience)";
+	  bioj:in_doc_location bioj:methods_appendix ;
+	  bioj:matches bioj:a2008-39-NAT_BIOTECHNOL-C03 ;
+	  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			     ca:hasCoder "jhowison" ;
+			     ca:appliesCode citec:in-text_mention ;
+			  ] ;
+	  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			     ca:hasCoder "jhowison" ;
+			     ca:appliesCode citec:software_used ;
+			  ] ;
+	  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	       ca:hasCoder "jhowison" ;
+	       ca:appliesCode [ rdf:type citec:software_name ; 
+	                       rdfs:label "BioDataFit" ]
+	    ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "Chang Bioscience" ]
+	  ] ;
+.
+
+bioj:a2008-39-NAT_BIOTECHNOL-J05 rdf:type bioj:selection ;
+	bioj:full_quote "Data were fit to a 3 parameter logistic curve using the formula Y=a+(b-a)/(1+10^(X-c)) (BioDataFit, Chang Bioscience) and IC50 was calculated at 0.49±0.01 μM (p value - 0.0003)";
+	bioj:in_doc_location bioj:supplement ;
+	bioj:matches bioj:a2008-39-NAT_BIOTECHNOL-C05 ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	   ca:hasCoder "jhowison" ;
+	   ca:appliesCode citec:in-text_mention ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	   ca:hasCoder "jhowison" ;
+	   ca:appliesCode citec:software_used ;
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                     rdfs:label "BioDataFit" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	   ca:hasCoder "jhowison" ;
+	   ca:appliesCode [ rdf:type citec:creater ; 
+	                   rdfs:label "Chang Bioscience" ]
+	] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:configuration_details ;
+	  ] ;		
+.
+
+bioj:a2000-04-MOL_ECOL rdf:type bioj:article ;
+	bioj:has_selection bioj:a2000-04-MOL_ECOL-J01;
+.
+
+bioj:a2000-04-MOL_ECOL-J01 rdf:type bioj:selection ;
+	bioj:full_quote "FST was used to describe the variation among populations and was calculated using biosys (Swofford & Selander 1981).";
+	bioj:in_doc_location bioj:methods ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                      rdfs:label "BIOSYS" ]
+	  ] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+		      	       	 bioj:full_quote "Swofford DL, Selander RB (1981) biosys-1: a Fortran program for the comprehensive analyses of electrophoretic data in population genetics and systematics. Journal of Heredity, 72, 281– 283." ] ;
+.
+
+bioj:a2008-02-WATERBIRDS rdf:type bioj:article ;
+
+		bioj:has_selection bioj:a2008-02-WATERBIRDS ;
+.
+
+bioj:a2008-02-WATERBIRDS rdf:type bioj:selection ;
+        bioj:full_quote "OSRA is a Geographic Information System (GIS) based dataset of environmental, cul- tural and economic resources in the coastal zone (Gilbert 2001)";
+	ca:memo "This is an odd one primarily because the software mentioned triggered the emergency response (to an oil spill) but wasn't really used in the research.  After discussion we agreed that this was not a relevant mention because it was background to the paper, not relevant to the research.  It isn't even software_not_used because the scientists didn't think about using it; someone else used it." ;
+	bioj:in_doc_location bioj:introduction ;
+	bioj:matches bioj:none; 
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                     rdfs:label "Oil Spill Response Atlas (OSRA)" ]
+	  ] ;
+	bioj:has_reference [ rdf:type bioj:selection ;
+	     	       		 bioj:full_quote "Gilbert, T. D. 2001. Geographic Information Systems based tools for marine pollution response. Port Technology International 13: 25-27." ] ;
+. # end bioj:a2008-02-WATERBIRDS
+
+bioj:a2007-24-SCIENCE rdf:type bioj:article ;
+	ca:memo "Again graphics included without mention of drawing program.  No idea if this is important.  It's a little unclear to me whether the GISP2 ice core dataset also includes software analysis. It just seems impossible that these timescaling exercises are done without software, but none is mentioned." ;
+.
+
+bioj:a2007-41-MOL_THER rdf:type bioj:article ;
+	ca:memo "No mention of software, this is a gel type study, where they manually read gets to see protein expression (or something similar to that);"
+. # end bioj:a2007-41-MOL_THER 
+	 
+bioj:a2007-48-UNDERSEA_HYPERBAR_M rdf:type bioj:article ;
+	bioj:has_selection bioj:a2007-48-UNDERSEA_HYPERBAR_M-J01 ;
+.
+
+bioj:a2007-48-UNDERSEA_HYPERBAR_M-J01 rdf:type bioj:selection ;
+    bioj:full_quote "Data were analyzed using Microsoft Excel Version 2003, (Microsoft Corp., Redmond, WA.)";
+	bioj:matches bioj:a2007-48-UNDERSEA_HYPERBAR_M-C01 ;	  
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:in-text_mention ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_used ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:software_name ; 
+	                     rdfs:label "Microsoft Excel" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:version_number ; 
+	                     rdfs:label "Version 2003" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	    ca:hasCoder "jhowison" ;
+	    ca:appliesCode citec:date ;
+	 ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	    ca:hasCoder "jhowison" ;
+	    ca:appliesCode [ rdf:type citec:creater ; 
+	                    rdfs:label "Microsoft Corp., Redmond, WA." ]
+	 ] ;
+.
+
+bioj:a2001-35-NAT_BIOTECHNOL rdf:type bioj:article ;
+  ca:memo "Another gel type study" ;
+. # end bioj:a2001-35-NAT_BIOTECHNOL
+				
+bioj:a2009-35-DEV_CEL rdf:type bioj:article ;
+  ca:memo "This paper took videos of cell formation.  They discuss the hardware they used to make the videos but not the software used to play them, take screen shots or make their graphs/drawings. Explored some unknown named stuff in the methods section (TMR Red, VECTASHIELD), both appeared to be lab hardware or chemical kits." ;
+. # end 2009-35-DEV_CEL
+
+# Agreement sample with Julia from here on.
+
+bioj:a2004-01-NAT_GENET rdf:type bioj:article ;
+  ca:memo "Mentions sequence analysis on p 37, but does not mention software that was used.  Some possibility that it was done by hand?  Also mention of PCR; the machines certainly have.  Overall this is a wet lab based study, with manipulation of genetic material, staining and microscopy. " ;
+. # end 
+
+bioj:a2001-16-CELL rdf:type bioj:article ;
+  ca:memo "Graphics clearly computer produced, no mention of drawing software.  Including bar-graph production and stats in Table 1, drawings around stain pics.  Discusses sequencing on p89 without discussing software used. " ;
+  bioj:has_selection bioj:a2001-16-CELL-J01;
+  bioj:has_selection bioj:a2001-16-CELL-J02;
+
+. # end 
+
+bioj:a2001-16-CELL-J01 rdf:type bioj:selection ;
+  bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scan- ning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
+  bioj:in_doc_location bioj:main_article ;
+  bioj:matches bioj:bioj:a2001-16-CELL-B01 ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+	               ca:appliesCode citec:in-text_mention ;
+			          ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+				   ca:appliesCode citec:software_used ;
+					  ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                        rdfs:label "NIH-Image" ];
+			         ];
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:version_number ; 
+			                        rdfs:label "1.62" ] ;
+			         ] ;
+. # end selection
+
+bioj:a2001-16-CELL-J02 rdf:type bioj:selection ;
+  bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scanning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
+  bioj:in_doc_location bioj:main_article ;
+  bioj:matches bioj:bioj:a2001-16-CELL-B02 ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+	               ca:appliesCode citec:in-text_mention ;
+			          ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+				   ca:appliesCode citec:software_used ;
+					  ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                        rdfs:label "Photoshop" ];
+			         ];
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:version_number ; 
+			                        rdfs:label "5.0" ] ;
+			         ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+       ca:hasCoder "jhowison" ;
+       ca:appliesCode 	[ rdf:type citec:creator ; 
+	                        rdfs:label "Adobe" ] ; ;
+    ] ;
+  
+. # end selection
+
+bioj:a2009-28-NANOMEDICINE-UK rdf:type bioj:article ;
+	ca:memo "This paper looks at wrapping an antibiotic in a nano-material towards improving its efficiency.  They report statistics, but don't mention the software used."
+. # end 
+
+bioj:a2002-29-CELL-RES rdf:type bioj:article ;
+  ca:memo "This article studies scorpion venim's differential effect on insect and human cells.  They outsourced sequencing to commerical sequencing providers and did peptide sequencing in the lab using an Applied Biosys machine."
+. # end 
+
+bioj:a2008-16-AQUAT-ECOSYST-HEALTH rdf:type bioj:article ;
+  ca:memo "This article is about techniques for calculating water flow in water bodies.  They have some fairly complex data manipulations using equations, but they don't mention how they managed the data nor how they did the calculations."
+. # end 
+
+bioj:a2002-39-SYST-BOT rdf:type bioj:article ;
+	bioj:has_selection bioj:a2002-39-SYST-BOT-J01 ;
+	bioj:has_selection bioj:a2002-39-SYST-BOT-J02 ;
+	bioj:has_selection bioj:a2002-39-SYST-BOT-J03 ;
+    bioj:has_selection bioj:a2002-39-SYST-BOT-J04 ;
+. # end 
+
+bioj:a2002-39-SYST-BOT-J01 rdf:type bioj:selection ;
+          	  bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994).";
+			  bioj:in_doc_location bioj:materials-and-methods ;
+			  bioj:matches bioj:a2002-39-SYST_BOT-B01 ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:in-text_mention ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:software_used ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                       rdfs:label "Staden" ]
+			    ] ;
+			  bioj:has_reference bioj-cited:1996-Staden ;
+.
+
+bioj-cited:1996-Staden rdf:type bioj:selection ;
+	bioj:matches bioj-cited:Staden-1996 ;
+	bioj:full_quote "STADEN, R. 1996. The staden sequence analysis package. Molecular Biotechnology 5: 233–241."  ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "Standen, R" ]
+	  ] ;
+.
+
+bioj:a2002-39-SYST-BOT-J02 rdf:type bioj:selection ;
+          	  bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994).";
+			  bioj:in_doc_location bioj:methods ;
+			  bioj:matches bioj:a2002-39-SYST_BOT-B02 ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:in-text_mention ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:software_used ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				       ca:hasCoder "jhowison" ;
+				       ca:appliesCode [ rdf:type citec:software_name ; 
+				                       rdfs:label "GDE" ]
+				    ] ;
+				  bioj:has_reference bioj-cited:1994-Smith ;
+.				
+
+bioj-cited:1994-Smith rdf:type bioj:selection ;
+	bioj:matches bioj-cited:Smith_Overbeek-1994 ;
+	bioj:full_quote "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET. 1994. The genetic data environment, an expandable guide for multiple sequence analyses. Cabios 10: 671–675." ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication  ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET." ]
+	  ] ;
+.
+
+bioj:a2002-39-SYST-BOT-J03 rdf:type bioj:selection ;
+         bioj:full_quote "All phylogenies were inferred using the program PAUP* version 4.0b6 (Swofford 2001). Bootstrap analyses based on 1,000 replicates were performed to explore the robustness of the trees. The following options were used for all analyses: parsimony, branch and bound search, stepwise furthest addition sequence, collapse zero-length branches.";
+	    bioj:in_doc_location bioj:methods ;
+     	bioj:matches bioj:a2002-39-SYST_BOT-B04 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:software_name ; 
+                             rdfs:label "PAUP*" ]
+          ] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:version_number ; 
+                             rdfs:label "4.0b6" ]
+          ] ;
+
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode citec:configuration_details ;
+             ca:memo "Two sentences full of configuration details."
+          ] ;     
+        bioj:has_reference bioj-cited:2001-Swofford ;
+.
+bioj-cited:2001-Swofford rdf:type bioj:selection ;
+	   bioj:matches bioj-cited:Swofford-2001 ;
+       bioj:full_quote "SWOFFORD, D. 2001. PAUP*: Phylogenetic Analysis Using Parsimony, vers.4.0b6. Sunderland, Massachusetts: Sinauer Associates, Inc. Publishers." ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode citec:software_publication ;
+		  ] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:creater ; 
+		                     rdfs:label "SWOFFORD, D." ]
+		  ] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:version_number ; 
+		                     rdfs:label "vers.4.0b6" ]
+		  ] ;	
+		
+. # end selection
+
+bioj:a2002-39-SYST-BOT-J04 rdf:type bioj:selection ;
+         bioj:full_quote "Bremer support (1994) was calculated using the program Autodecay version 4.0.2���� PPC (Eriksson 1998).";
+	    bioj:in_doc_location bioj:methods ;
+	    bioj:matches bioj:a2002-39-SYST_BOT-B05 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:software_name ; 
+                             rdfs:label "Autodecay" ]
+          ] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:version_number ; 
+                             rdfs:label "4.0.2 PPC" ]
+          ] ;
+        bioj:has_reference bioj-cited:1998-Eriksson ;
+.
+
+bioj-cited:1998-Ericksson rdf:type bioj:selection ;
+   bioj:matches bioj-cited:Eriksson-1998 ;
+   bioj:full_quote "ERIKSSON, T. 1998. Autodecay, vers. 4.0.2���� Stockholm: Department of Botany." ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "ERIKSSON, T" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:version_number ; 
+	                     rdfs:label "vers. 4.0.2��" ]
+	  ] ;
+. # end selection
+
+bioj:a2000-22-AM-J-BOT rdf:type bioj:article ;
+  bioj:has_selection bioj:a2000-22-AM-J-BOT-J01 ;
+  ca:memo "Does statistics and graphing but doesn't mention that software, unclear if all the stats were done by the one mention or if that was something specialized. Note that I had to look up DECORANA, looks like that is the Detrended Correspondence Analysis in the one mention, so general stats weren't mentioned."
+. # end 
+
+bioj:a2000-22-AM-J-BOT-J01 rdf:type bioj:selection ;
+         bioj:full_quote "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.";
+	    bioj:in_doc_location bioj:methods ;
+	    bioj:matches bioj:a2002-22-AM_J_B0T_B01 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:software_name ; 
+		                     rdfs:label "PC-ORD" ]
+		  ] ;
+		bioj:has_reference bioj-cited:1993-McCune ;
+. # end selection
+
+bioj-cited:1993-McCune rdf:type bioj:selection ; 
+					   bioj:matches bioj-cited:McCune-1993 ;
+					   bioj:full_quote """MCCUNE, B. 1993. Multivariate analysis on the PC-ORD system. Oregon State University, Corvallis, Oregon. USA.""" ;  #  1993-McCune tag on paper in Mendeley ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_publication ; #domain_publication, #users_guide, #project_page, #project_name.  Go and look at the type of thing that is at the 'end' of the reference.
+					  ] ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode [ rdf:type citec:creater ; 
+					                     rdfs:label "McCune, B" ]
+					  ] ;
+.
+
+bioj:a2004-09-PHYTOMEDICINE rdf:type bioj:article ;
+  ca:memo "This was a mouse-feeding experiment focusing on Ginseng for Diabeties. Mentions Students t-test, but not which software used. Also graphs.  Research sponsored by Ginseng board of Winsconsin." ;
+. # end 
+
+

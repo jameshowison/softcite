@@ -54,7 +54,18 @@ combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 
 summarize.rdf(combindedCoding)  # 2432 triples
 
+combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
+
+# Ok, need to get three numbers.  Both agreeing, J not C, and C not J.
+
+# One useful format:
+# URL, J, C 
+# ..., coded, coded 
+# ..., not-coded, coded
+
 agreement_query <- paste(readLines("code/Rscripts/agreement_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+agreements <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
 
 
 

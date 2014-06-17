@@ -686,3 +686,6 @@ TODO: write short code for agreement.  Custom code because excluding both disagr
 
 Can test on testingMatchingQueries.ttl.
 
+Ok.  Took JamesCoding.ttl and CatherineCoding.ttl from the CombinedDataset folder.
+
+Hmmm, querying weirdness, moved prefixes from SoftwareCitationDataset.ttl just in case that's the problem.

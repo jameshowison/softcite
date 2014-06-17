@@ -7,8 +7,10 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 
 @prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
-@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-cited#> .
 @prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
 
 bioj:a2004-40-NAT_GENET rdf:type bioj:article ;
 	ca:memo "Article contains graphs, computer-generated graphics and statistical results without mentioning the software involved.  Also mentions a few machines (e.g., PCR and an X-ray absorptionmetry system from GE medical systems) that clearly have software in them)" ;

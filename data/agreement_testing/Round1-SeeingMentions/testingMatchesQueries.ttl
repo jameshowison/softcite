@@ -1,0 +1,92 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+ #both identified :item1 and :item 2
+bioj:bothJ1 a bioj:selection ;
+	    bioj:matches bioj:bothC1 ;
+	    ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "jhowison" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+.
+
+# matches item1 (but not specified, as though in Catherine's file)
+bioj:bothC1 a bioj:selection ;
+		ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "cgrady" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+		ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "cgrady" ;
+           ca:appliesCode citec:software_used ;
+         ] ;
+.
+
+ #both identified :item1 and :item 2
+bioj:bothJ2 a bioj:selection ;
+	    bioj:matches bioj:bothC2 ;
+	    ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "jhowison" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+	    ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "jhowison" ;
+           ca:appliesCode citec:software_used ;
+         ] ;
+.
+
+# matches item1 (but not specified, as though in Catherine's file)
+bioj:bothC2 a bioj:selection ;
+		ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "cgrady" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+		ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "cgrady" ;
+           ca:appliesCode citec:software_used ;
+         ] ;
+.
+
+# matches none, as though only coded by, say, James
+bioj:jamesonlyJ2 a bioj:selection ;
+        bioj:matches ca:none ;
+	    ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "jhowison" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+.
+
+# matches none, as though only coded by, say, Catherine
+bioj:CatherineonlyC2 a bioj:selection ;
+        bioj:matches ca:none ;
+        ca:isTargetOf 
+         [ rdf:type ca:CodeApplication ;
+           ca:hasCoder "cgrady" ;
+           ca:appliesCode citec:in_text_mention ;
+         ] ;
+.
+
+
+
+
+
+

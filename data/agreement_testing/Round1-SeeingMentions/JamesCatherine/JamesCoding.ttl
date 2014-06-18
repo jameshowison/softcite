@@ -975,10 +975,10 @@ bioj:a2000-04-MOL_ECOL-J01 rdf:type bioj:selection ;
 
 bioj:a2008-02-WATERBIRDS rdf:type bioj:article ;
 
-		bioj:has_selection bioj:a2008-02-WATERBIRDS ;
+		bioj:has_selection bioj:a2008-02-WATERBIRDS-J01 ;
 .
 
-bioj:a2008-02-WATERBIRDS rdf:type bioj:selection ;
+bioj:a2008-02-WATERBIRDS-J01 rdf:type bioj:selection ;
         bioj:full_quote "OSRA is a Geographic Information System (GIS) based dataset of environmental, cul- tural and economic resources in the coastal zone (Gilbert 2001)";
 	ca:memo "This is an odd one primarily because the software mentioned triggered the emergency response (to an oil spill) but wasn't really used in the research.  After discussion we agreed that this was not a relevant mention because it was background to the paper, not relevant to the research.  It isn't even software_not_used because the scientists didn't think about using it; someone else used it." ;
 	bioj:in_doc_location bioj:introduction ;
@@ -1068,7 +1068,7 @@ bioj:a2001-16-CELL rdf:type bioj:article ;
 bioj:a2001-16-CELL-J01 rdf:type bioj:selection ;
   bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scan- ning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
   bioj:in_doc_location bioj:main_article ;
-  bioj:matches bioj:bioj:a2001-16-CELL-B01 ;
+  bioj:matches bioj:a2001-16-CELL-B01 ;
   ca:isTargetOf [  rdf:type ca:CodeApplication ;
 	               ca:hasCoder "jhowison" ;
 	               ca:appliesCode citec:in-text_mention ;
@@ -1092,7 +1092,7 @@ bioj:a2001-16-CELL-J01 rdf:type bioj:selection ;
 bioj:a2001-16-CELL-J02 rdf:type bioj:selection ;
   bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scanning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
   bioj:in_doc_location bioj:main_article ;
-  bioj:matches bioj:bioj:a2001-16-CELL-B02 ;
+  bioj:matches bioj:a2001-16-CELL-B02 ;
   ca:isTargetOf [  rdf:type ca:CodeApplication ;
 	               ca:hasCoder "jhowison" ;
 	               ca:appliesCode citec:in-text_mention ;

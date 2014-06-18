@@ -46,9 +46,9 @@ data <- data.frame(code_matrix)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
-catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/CatherineCoding.ttl", format="TURTLE")
+catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/CatherineCoding.ttl", format="TURTLE")
 
-jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCoding.ttl", format="TURTLE")
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/JamesCoding.ttl", format="TURTLE")
 
 combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 
@@ -63,7 +63,7 @@ combindedCoding = combine.rdf(jamesCoding,catherineCoding)
 # ..., coded, coded 
 # ..., not-coded, coded
 
-agreement_query <- paste(readLines("code/Rscripts/agreement_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+agreement_query <- paste(readLines("code/Rscripts/catherine_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
 agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
 
@@ -89,8 +89,48 @@ library(irr)
 
 agree(agreement_data[,2:3])
 
+##########################################
+# Percent agreement. James and Julia.
+#########################################
 
+setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
+juliaCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JuliaCoding.ttl", format="TURTLE")
+
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JamesCoding.ttl", format="TURTLE")
+
+combindedCoding = combine.rdf(jamesCoding,juliaCoding)
+
+# ..., not-coded, coded
+
+agreement_query <- paste(readLines("code/Rscripts/julia_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
+
+james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
+
+julia_only_query <- paste(readLines("code/Rscripts/julia_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+julia_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, julia_only_query, collapse=" "))
+
+# combine lists into frame.
+agreement_data <- data.frame("urls" = agreement_urls, "james" = 1, "julia" = 1)
+
+if (length(james_only_urls) > 0) {
+  agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "julia" = 0)
+  agreement_data <- rbind(agreement_data, agreement_data_james)
+}
+
+if (length(julia_only_urls) > 0) {
+  agreement_data_julia <- data.frame("urls" = julia_only_urls, "james" = 0, "julia" = 1)
+  agreement_data <- rbind(agreement_data, agreement_data_julia)
+}
+
+library(irr)
+
+agree(agreement_data[,2:3])
 
 
 

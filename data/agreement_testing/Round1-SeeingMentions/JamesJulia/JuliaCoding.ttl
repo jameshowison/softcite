@@ -1,0 +1,519 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+bioj:2004-01-NAT_GENET rdf:type bioj:article ;                        
+	ca:memo "No software mentions in this article - jbullard";
+.
+
+bioj:2001-16-CELL rdf:type bioj:article ;
+	bioj:has_selection bioj:2001-16-CELL-B01 ;
+	bioj:has_selection bioj:2001-16-CELL-B02 ;
+	
+	dc:date "2001" ;
+	
+	dc:isPartOf bioj:CELL ;
+.
+
+bioj:2001-16-CELL-B01 rdf:type bioj:selection ; 
+	ca:memo "According to some of Catherine's coding, NIH could be a creator code here. I didn't code creator here because it wasn't as explicit as in James' examples" ;
+	
+	bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scanning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0." ;
+
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ; 
+	  				   rdfs:label "NIH-Image" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				   rdfs:label "1.62" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:creator ; 
+	  				   rdfs:label "NIH" ] ;
+	] ;
+	
+.
+	
+bioj:2001-16-CELL-B02 rdf:type bioj:selection ;
+	bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scanning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0." ;
+
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ; 
+	  				   rdfs:label "Adobe Photoshop" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				   rdfs:label "5.0" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:creator ; 
+	  				   rdfs:label "Adobe" ] ;
+	] ;
+	
+.
+
+bioj:2009-28-NANOMEDICINE-UK rdf:type bioj:article ;
+	ca:memo "No software mentions in this article - jbullard";
+	
+	dc:date "2009" ;
+	
+	dc:isPartOf bioj:NANOMEDICINE-UK ;
+.
+
+bioj:2002-29-CELL_RES rdf:type bioj:article ; 
+	ca:memo "No software mentions in this article - jbullard";
+	
+	dc:date "2002" ;
+	
+	dc:isPartOf bioj:CELL_RES ;
+.
+
+bioj:2008-16-AQUAT_ECOSYST_HEALTH rdf:type bioj:article ;
+	ca:memo "No software mentions in this article - jbullard";
+	
+	dc:date "2008" ;
+	
+	dc:isPartOf bioj:AQUAT_ECOSYST_HEALTH ;
+.
+
+bioj:2002-39-SYST_BOT rdf:type bioj:article ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-B01 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-B02 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-B03 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-B04 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-B05 ;
+	
+	dc:date "2002" ;
+	
+	dc:isPartOf bioj:SYST_BOT ;
+.
+
+bioj:2002-39-SYST_BOT-B01 rdf:type bioj:selection ;
+	bioj:fullquote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	 ] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "Staden" ] ;
+	] ;
+	
+	bioj:has_reference bioj-cited:Staden-1996 ;
+.
+
+	bioj-cited:Staden-1996 rdf:type bioj:selection ;
+		#Staden-1996 in Mendeley	
+		bioj:full_quote "STADEN, R. 1996. The staden sequence analysis package. Molecular Biotechnology 5: 233–241." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:software_publication ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "Staden, R." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "Staden sequence analysis" ]
+ 		] ;
+	
+.
+
+bioj:2002-39-SYST_BOT-B02 rdf:type bioj:selection ;
+	bioj:fullquote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994)." ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	 ] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "GDE" ] ;
+	] ;
+	
+	bioj:has_reference bioj-cited:Smith_Overbeek-1994 ;
+.
+
+	bioj-cited:Smith_Overbeek-1994 rdf:type bioj:selection ;
+		ca:memo "This paper isn't available to UT Austin online and is not in the Mendeley set. Coding is based on the abstract available on PubMed." ;
+	
+		bioj:full_quote "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET. 1994. The genetic data environment, an expandable guide for multiple sequence analyses. Cabios 10: 671–675." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:software_publication ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "the genetic data environment" ]
+ 		] ;
+
+.
+
+bioj:2002-39-SYST_BOT-B03 rdf:type bioj:selection ;
+	bioj:fullquote  "A variety of parameters was explored in the alignment of the ITS sequences performed with the package ClustalX 1,8-PPC (Thomson et al. 1997). The final alignment was adjusted manually, so as to keep the number of the total mutational changes to a minimum (the aligned data matrix can be obtained from the first author upon request). Indels were included in the analyses and coded according to the principles suggested by Simmons and Ochoterena (2000). Substitutions and indels were given equal weight in all phylogenetic analyses." ;
+	bioj:matches bioj:none ;
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "ClustalX" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				   rdfs:label "1,8-PPC" ] ;
+	] ;
+	
+	ca:isTargetOf 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:configuration_details ;
+	] ;
+
+	bioj:has_reference bioj-cited:Thomson_Gibson-1997 ;				 
+.
+
+	bioj-cited:Thomson_Gibson-1997 rdf:type bioj:selection ;
+		#Thomson_Gibson-1997 in Mendeley
+		bioj:full_quote "THOMSON, J. D., T. J. GIBSON, F. PLEWNIAK, F. JEANMOUGIN, and D. G. HIGGINS. 1997. The ClustalX windows interface: flexible strategies for multiple sequence alignment aided by quality analysis tools. Nucleid Acids Research 24: 4876–4882." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:software_publication ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "THOMSON, J. D., T. J. GIBSON, F. PLEWNIAK, F. JEANMOUGIN, and D. G. HIGGINS." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "ClustalX" ]
+ 		] ;
+
+.
+
+bioj:2002-39-SYST_BOT-B04 rdf:type bioj:selection ;
+	bioj:full_quote "All phylogenies were inferred using the program PAUP* version 4.0b6 (Swofford 2001). Bootstrap analyses based on 1,000 replicates were performed to explore the robustness of the trees. The following options were used for all analyses: parsimony, branch and bound search, stepwise furthest addition sequence, collapse zero-length branches." ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "PAUP*" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				   rdfs:label "4.0b6" ] ;
+	] ;
+
+	ca:isTargetOf 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:configuration_details ;
+	] ;
+	
+	bioj:has_reference bioj-cited:Swofford-2001 ;
+.
+
+	bioj-cited:Swofford-2001 rdf:type bioj:selection ;
+		ca:memo "Paup* is available from Sinaeur Associate's online catalogue." ;
+	
+		bioj:full_quote "SWOFFORD, D. 2001. PAUP*: Phylogenetic Analysis Using Parsimony, vers.4.0b6. Sunderland, Massachusetts: Sinauer Associates, Inc. Publishers." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:project_name ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "SWOFFORD, D." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "PAUP*" ]
+ 		] ;
+ 		
+ 		ca:isTargetOf
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+	  	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				       rdfs:label "4.0b6" ] ;
+		] ;
+.
+
+bioj:2002-39-SYST_BOT-B05 rdf:type bioj:selection ;
+	bioj:full_quote "Bremer support (1994) was calculated using the program Autodecay version 4.0.29 PPC (Eriksson 1998)." ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "Autodecay" ] ;
+	] ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				   rdfs:label "4.0.2' PPC" ] ;
+	] ;
+	
+	bioj:has_reference bioj-cited:Eriksson-1998 ;
+.
+
+
+	bioj-cited:Eriksson-1998 rdf:type bioj:selection ;
+		bioj:full_quote "ERIKSSON, T. 1998. Autodecay, vers. 4.0.29 Stockholm: Department of Botany." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:project_name ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "ERIKSSON, T." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "Autodecay" ]
+ 		] ;
+ 		
+ 		ca:isTargetOf
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+	  	  ca:appliesCode [ rdf:type citec:version_number ; 
+	  				       rdfs:label "4.0.29" ] ;
+		] ;
+.
+
+
+bioj:2000-22-AM_J_BOT rdf:type bioj:article ;
+	bioj:has_selection bioj:2002-22-AM_J_BOT_B01 ;
+
+	dc:date "2000" ;
+	
+	dc:isPartOf bioj:AM_J_BOT ;
+.
+
+bioj:2002-22-AM_J_B0T_B01 rdf:type bioj:selection ;
+	ca:memo "DECORANA analysis is mentioned later in the paper, and likely refers to this software" ;
+	
+	bioj:full_quote "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites." ;
+	
+	ca:isTargetOf
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:in-text_mention ;
+	] ;
+	
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode citec:software_used ;
+	] ;
+	 
+	ca:isTargetof 
+	[ rdf:type ca:CodeApplication ;
+	  ca:hasCoder "jbullard" ;
+	  ca:appliesCode [ rdf:type citec:software_name ;
+	  				   rdfs:label "PC-ORD" ] ;
+	] ;
+	
+	bioj:has_reference bioj-cited:McCune-1993 ;
+.
+
+	bioj-cited:McCune-1993 rdf:type bioj:selection ;
+		ca:memo "Other papers cite a more recent publication of this software, including one from 1999 that could have been used here. Some that cite this version often label it 'August 1993 version'." ;
+		
+		bioj:full_quote "MCCUNE, B. 1993. Multivariate analysis on the PC-ORD system. Oregon State University, Corvallis, Oregon. USA." ;
+		
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+    	  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode citec:project_name ;
+		] ;
+
+
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:creator ;
+    					   rdfs:label "MCCUNE, B." ]
+ 		] ;
+ 		
+ 		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+    	  ca:appliesCode [ rdf:type citec:software_name ;
+    					   rdfs:label "PC-ORD" ]
+ 		] ;
+ 		
+.
+
+bioj:2004-09-PHYTOMEDICINE rdf:type bioj:article ;
+	ca:memo "No software mentions in this article - jbullard";
+	
+	dc:date "2004" ;
+	
+	dc:isPartOf bioj:PHYTOMEDICINE ;
+.

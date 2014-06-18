@@ -1,0 +1,304 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+# Agreement sample with Julia from here on.
+
+bioj:2004-01-NAT_GENET rdf:type bioj:article ;
+  ca:memo "Mentions sequence analysis on p 37, but does not mention software that was used.  Some possibility that it was done by hand?  Also mention of PCR; the machines certainly have.  Overall this is a wet lab based study, with manipulation of genetic material, staining and microscopy. " ;
+. # end 
+
+bioj:2001-16-CELL rdf:type bioj:article ;
+  ca:memo "Graphics clearly computer produced, no mention of drawing software.  Including bar-graph production and stats in Table 1, drawings around stain pics.  Discusses sequencing on p89 without discussing software used. " ;
+  bioj:has_selection bioj:2001-16-CELL-J01;
+  bioj:has_selection bioj:2001-16-CELL-J02;
+
+. # end 
+
+bioj:2001-16-CELL-J01 rdf:type bioj:selection ;
+  bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scan- ning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
+  bioj:in_doc_location bioj:main_article ;
+  bioj:matches bioj:bioj:2001-16-CELL-B01 ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+	               ca:appliesCode citec:in-text_mention ;
+			          ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+				   ca:appliesCode citec:software_used ;
+					  ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                        rdfs:label "NIH-Image" ];
+			         ];
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:version_number ; 
+			                        rdfs:label "1.62" ] ;
+			         ] ;
+. # end selection
+
+bioj:2001-16-CELL-J02 rdf:type bioj:selection ;
+  bioj:full_quote "Images were collected on a Bio-Rad MRC 1024 laser scanning confocal microscope and processed with NIH-Image1.62 and Adobe Photoshop 5.0.";
+  bioj:in_doc_location bioj:main_article ;
+  bioj:matches bioj:bioj:2001-16-CELL-B02 ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+	               ca:appliesCode citec:in-text_mention ;
+			          ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	               ca:hasCoder "jhowison" ;
+				   ca:appliesCode citec:software_used ;
+					  ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                        rdfs:label "Photoshop" ];
+			         ];
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:version_number ; 
+			                        rdfs:label "5.0" ] ;
+			         ] ;
+  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+       ca:hasCoder "jhowison" ;
+       ca:appliesCode 	[ rdf:type citec:creator ; 
+	                        rdfs:label "Adobe" ] ; ;
+    ] ;
+  
+. # end selection
+
+bioj:2009-28-NANOMEDICINE-UK rdf:type bioj:article ;
+	ca:memo "This paper looks at wrapping an antibiotic in a nano-material towards improving its efficiency.  They report statistics, but don't mention the software used."
+. # end 
+
+bioj:2002-29-CELL_RES rdf:type bioj:article ;
+  ca:memo "This article studies scorpion venim's differential effect on insect and human cells.  They outsourced sequencing to commerical sequencing providers and did peptide sequencing in the lab using an Applied Biosys machine."
+. # end 
+
+bioj:2008-16-AQUAT_ECOSYST_HEALTH rdf:type bioj:article ;
+  ca:memo "This article is about techniques for calculating water flow in water bodies.  They have some fairly complex data manipulations using equations, but they don't mention how they managed the data nor how they did the calculations."
+. # end 
+
+bioj:2002-39-SYST_BOT rdf:type bioj:article ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-J01 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-J02 ;
+	bioj:has_selection bioj:2002-39-SYST_BOT-J03 ;
+    bioj:has_selection bioj:2002-39-SYST_BOT-J04 ;
+. # end 
+
+bioj:2002-39-SYST_BOT-J01 rdf:type bioj:selection ;
+          	  bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994).";
+			  bioj:in_doc_location bioj:materials-and-methods ;
+			  bioj:matches bioj:2002-39-SYST_BOT-B01 ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:in-text_mention ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:software_used ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+			       ca:hasCoder "jhowison" ;
+			       ca:appliesCode [ rdf:type citec:software_name ; 
+			                       rdfs:label "Staden" ]
+			    ] ;
+			  bioj:has_reference bioj-cited:1996-Staden ;
+.
+
+bioj-cited:1996-Staden rdf:type bioj:selection ;
+	bioj:matches bioj-cited:Staden-1996 ;
+	bioj:full_quote "STADEN, R. 1996. The staden sequence analysis package. Molecular Biotechnology 5: 233–241."  ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "Standen, R" ]
+	  ] ;
+.
+
+bioj:2002-39-SYST_BOT-J02 rdf:type bioj:selection ;
+          	  bioj:full_quote "All sequences were assembled and edited using the Staden package (Staden 1996) and GDE (Smith et al. 1994).";
+			  bioj:in_doc_location bioj:methods ;
+			  bioj:matches bioj:2002-39-SYST_BOT-B02 ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:in-text_mention ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode citec:software_used ;
+					  ] ;
+			  ca:isTargetOf [  rdf:type ca:CodeApplication ;
+				       ca:hasCoder "jhowison" ;
+				       ca:appliesCode [ rdf:type citec:software_name ; 
+				                       rdfs:label "GDE" ]
+				    ] ;
+				  bioj:has_reference bioj-cited:1994-Smith ;
+.				
+
+bioj-cited:1994-Smith rdf:type bioj:selection ;
+	bioj:matches bioj-cited:Smith_Overbeek-1994 ;
+	bioj:full_quote "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET. 1994. The genetic data environment, an expandable guide for multiple sequence analyses. Cabios 10: 671–675." ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication  ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "SMITH, S. W., R. OVERBEEK, C. R. WOESE, W. GILBERT, and P. M. GILLEVET." ]
+	  ] ;
+.
+
+bioj:2002-39-SYST_BOT-J03 rdf:type bioj:selection ;
+         bioj:full_quote "All phylogenies were inferred using the program PAUP* version 4.0b6 (Swofford 2001). Bootstrap analyses based on 1,000 replicates were performed to explore the robustness of the trees. The following options were used for all analyses: parsimony, branch and bound search, stepwise furthest addition sequence, collapse zero-length branches.";
+	    bioj:in_doc_location bioj:methods ;
+     	bioj:matches bioj:2002-39-SYST_BOT-B04 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:software_name ; 
+                             rdfs:label "PAUP*" ]
+          ] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:version_number ; 
+                             rdfs:label "4.0b6" ]
+          ] ;
+
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode citec:configuration_details ;
+             ca:memo "Two sentences full of configuration details."
+          ] ;     
+        bioj:has_reference bioj-cited:2001-Swofford ;
+.
+bioj-cited:2001-Swofford rdf:type bioj:selection ;
+	   bioj:matches bioj-cited:Swofford-2001 ;
+       bioj:full_quote "SWOFFORD, D. 2001. PAUP*: Phylogenetic Analysis Using Parsimony, vers.4.0b6. Sunderland, Massachusetts: Sinauer Associates, Inc. Publishers." ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode citec:software_publication ;
+		  ] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:creater ; 
+		                     rdfs:label "SWOFFORD, D." ]
+		  ] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:version_number ; 
+		                     rdfs:label "vers.4.0b6" ]
+		  ] ;	
+		
+. # end selection
+
+bioj:2002-39-SYST_BOT-J04 rdf:type bioj:selection ;
+         bioj:full_quote "Bremer support (1994) was calculated using the program Autodecay version 4.0.2���� PPC (Eriksson 1998).";
+	    bioj:in_doc_location bioj:methods ;
+	    bioj:matches bioj:2002-39-SYST_BOT-B05 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:software_name ; 
+                             rdfs:label "Autodecay" ]
+          ] ;
+        ca:isTargetOf [  rdf:type ca:CodeApplication ;
+             ca:hasCoder "jhowison" ;
+             ca:appliesCode [ rdf:type citec:version_number ; 
+                             rdfs:label "4.0.2 PPC" ]
+          ] ;
+        bioj:has_reference bioj-cited:1998-Eriksson ;
+.
+
+bioj-cited:1998-Ericksson rdf:type bioj:selection ;
+   bioj:matches bioj-cited:Eriksson-1998 ;
+   bioj:full_quote "ERIKSSON, T. 1998. Autodecay, vers. 4.0.2���� Stockholm: Department of Botany." ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode citec:software_publication ;
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:creater ; 
+	                     rdfs:label "ERIKSSON, T" ]
+	  ] ;
+	ca:isTargetOf [  rdf:type ca:CodeApplication ;
+	     ca:hasCoder "jhowison" ;
+	     ca:appliesCode [ rdf:type citec:version_number ; 
+	                     rdfs:label "vers. 4.0.2��" ]
+	  ] ;
+. # end selection
+
+bioj:2000-22-AM_J_BOT rdf:type bioj:article ;
+  bioj:has_selection bioj:2000-22-AM_J_BOT-J01 ;
+  ca:memo "Does statistics and graphing but doesn't mention that software, unclear if all the stats were done by the one mention or if that was something specialized. Note that I had to look up DECORANA, looks like that is the Detrended Correspondence Analysis in the one mention, so general stats weren't mentioned."
+. # end 
+
+bioj:2000-22-AM_J_BOT-J01 rdf:type bioj:selection ;
+         bioj:full_quote "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.";
+	    bioj:in_doc_location bioj:methods ;
+	    bioj:matches bioj:2002-22-AM_J_B0T_B01 ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:in-text_mention ;
+			    ] ;
+	    ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					   ca:hasCoder "jhowison" ;
+					   ca:appliesCode citec:software_used ;
+				] ;
+		ca:isTargetOf [  rdf:type ca:CodeApplication ;
+		     ca:hasCoder "jhowison" ;
+		     ca:appliesCode [ rdf:type citec:software_name ; 
+		                     rdfs:label "PC-ORD" ]
+		  ] ;
+		bioj:has_reference bioj-cited:1993-McCune ;
+. # end selection
+
+bioj-cited:1993-McCune rdf:type bioj:selection ; 
+					   bioj:matches bioj-cited:McCune-1993 ;
+					   bioj:full_quote """MCCUNE, B. 1993. Multivariate analysis on the PC-ORD system. Oregon State University, Corvallis, Oregon. USA.""" ; #  1993-McCune tag on paper in Mendeley ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+				     ca:appliesCode citec:software_publication ; #domain_publication, #users_guide, #project_page, #project_name.  Go and look at the type of thing that is at the 'end' of the reference.
+					  ] ;
+					ca:isTargetOf [  rdf:type ca:CodeApplication ;
+					     ca:hasCoder "jhowison" ;
+					     ca:appliesCode [ rdf:type citec:creater ; 
+					                     rdfs:label "McCune, B" ]
+					  ] ;
+.
+
+bioj:2004-09-PHYTOMEDICINE rdf:type bioj:article ;
+  ca:memo "This was a mouse-feeding experiment focusing on Ginseng for Diabeties. Mentions Students t-test, but not which software used. Also graphs.  Research sponsored by Ginseng board of Winsconsin." ;
+. # end 

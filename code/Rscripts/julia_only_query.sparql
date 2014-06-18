@@ -1,0 +1,9 @@
+SELECT DISTINCT ?itemURI
+WHERE { 
+  ?itemURI bioj:matches bioj:none .
+  ?itemURI ca:isTargetOf 
+	    			[ ca:hasCoder "jbullard" ;  
+	      			  ca:appliesCode citec:in-text_mention ;  
+	    			] ;  
+	  . 
+}

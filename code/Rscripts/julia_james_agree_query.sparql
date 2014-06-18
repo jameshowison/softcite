@@ -1,0 +1,14 @@
+SELECT DISTINCT ?itemURI
+WHERE { 
+  ?itemURIJ bioj:matches ?itemURI .
+  ?itemURIJ ca:isTargetOf 
+	    			[ ca:hasCoder "jhowison" ;  
+	      			  ca:appliesCode citec:in-text_mention ;  
+	    			] ;  
+	  . 
+  ?itemURI ca:isTargetOf  
+				[ ca:hasCoder "jbullard" ;  
+      			  ca:appliesCode citec:in-text_mention ;  
+			    ] ; 
+  . 
+}

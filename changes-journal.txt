@@ -689,3 +689,9 @@ Can test on testingMatchingQueries.ttl.
 Ok.  Took JamesCoding.ttl and CatherineCoding.ttl from the CombinedDataset folder.
 
 Hmmm, querying weirdness, moved prefixes from SoftwareCitationDataset.ttl just in case that's the problem.
+
+===============================================================
+Wed Jun 18 15:29:44 CDT 2014
+===============================================================
+
+Note that I took out a bioj:matches bioj:none for bioj:a2008-39-NAT_BIOTECHNOL-C03, since it was actually referenced by J04.

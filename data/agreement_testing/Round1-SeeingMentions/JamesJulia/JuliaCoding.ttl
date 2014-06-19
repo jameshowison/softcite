@@ -33,13 +33,13 @@ bioj:2001-16-CELL-B01 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	
 	ca:isTargetOf
@@ -71,13 +71,13 @@ bioj:2001-16-CELL-B02 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	
 	ca:isTargetOf
@@ -145,13 +145,13 @@ bioj:2002-39-SYST_BOT-B01 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	 ] ;
 	 
 	ca:isTargetof 
@@ -171,7 +171,7 @@ bioj:2002-39-SYST_BOT-B01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:software_publication ;
+    	  ca:appliesCode [ rdf:type citec:software_publication ];
 		] ;
 
 
@@ -197,13 +197,13 @@ bioj:2002-39-SYST_BOT-B02 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	 ] ;
 	 
 	ca:isTargetof 
@@ -224,7 +224,7 @@ bioj:2002-39-SYST_BOT-B02 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:software_publication ;
+    	  ca:appliesCode [ rdf:type citec:software_publication ];
 		] ;
 
 
@@ -250,13 +250,13 @@ bioj:2002-39-SYST_BOT-B03 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	 
 	ca:isTargetof 
@@ -276,7 +276,7 @@ bioj:2002-39-SYST_BOT-B03 rdf:type bioj:selection ;
 	ca:isTargetOf 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:configuration_details ;
+	  ca:appliesCode [ rdf:type citec:configuration_details ];
 	] ;
 
 	bioj:has_reference bioj-cited:Thomson_Gibson-1997 ;				 
@@ -289,7 +289,7 @@ bioj:2002-39-SYST_BOT-B03 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:software_publication ;
+    	  ca:appliesCode [ rdf:type citec:software_publication ];
 		] ;
 
 
@@ -315,13 +315,13 @@ bioj:2002-39-SYST_BOT-B04 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	 
 	ca:isTargetof 
@@ -341,7 +341,7 @@ bioj:2002-39-SYST_BOT-B04 rdf:type bioj:selection ;
 	ca:isTargetOf 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:configuration_details ;
+	  ca:appliesCode [ rdf:type citec:configuration_details ];
 	] ;
 	
 	bioj:has_reference bioj-cited:Swofford-2001 ;
@@ -355,7 +355,7 @@ bioj:2002-39-SYST_BOT-B04 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:project_name ;
+    	  ca:appliesCode [ rdf:type citec:project_name ];
 		] ;
 
 
@@ -387,13 +387,13 @@ bioj:2002-39-SYST_BOT-B05 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	 
 	ca:isTargetof 
@@ -420,7 +420,7 @@ bioj:2002-39-SYST_BOT-B05 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:project_name ;
+    	  ca:appliesCode [ rdf:type citec:project_name ];
 		] ;
 
 
@@ -463,13 +463,13 @@ bioj:2002-22-AM_J_B0T_B01 rdf:type bioj:selection ;
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:in-text_mention ;
+	  ca:appliesCode [ rdf:type citec:in-text_mention ];
 	] ;
 	
 	ca:isTargetof 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode citec:software_used ;
+	  ca:appliesCode [ rdf:type citec:software_used ];
 	] ;
 	 
 	ca:isTargetof 
@@ -490,7 +490,7 @@ bioj:2002-22-AM_J_B0T_B01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode citec:project_name ;
+    	  ca:appliesCode [ rdf:type citec:project_name ];
 		] ;
 
 

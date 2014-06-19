@@ -695,3 +695,11 @@ Wed Jun 18 15:29:44 CDT 2014
 ===============================================================
 
 Note that I took out a bioj:matches bioj:none for bioj:a2008-39-NAT_BIOTECHNOL-C03, since it was actually referenced by J04.
+
+===============================================================
+Thu Jun 19 09:48:51 CDT 2014
+===============================================================
+
+Ran the change of non-labeled codes to anon nodes through the agreement files.
+
+sed 's/ca:appliesCode citec:\(.*\)[[:space:]]/ca:appliesCode [ rdf:type citec:\1 ]/g'

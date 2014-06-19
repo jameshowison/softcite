@@ -25,12 +25,12 @@ bioj:a2004-40-NAT_GENET-C01 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -48,7 +48,7 @@ bioj:a2004-40-NAT_GENET-C01 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] . # end in-text mention with reference
 # in-text mention.
@@ -57,12 +57,12 @@ bioj:a2004-40-NAT_GENET-C02 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -98,12 +98,12 @@ bioj:a2008-39-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -126,12 +126,12 @@ bioj:a2008-39-NAT_BIOTECHNOL-C02 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -149,12 +149,12 @@ bioj:a2008-39-NAT_BIOTECHNOL-C03 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -173,12 +173,12 @@ bioj:a2008-39-NAT_BIOTECHNOL-C04 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -196,12 +196,12 @@ bioj:a2008-39-NAT_BIOTECHNOL-C05 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -232,7 +232,7 @@ bioj:a2001-40-MOL_ECOL-C01 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -247,7 +247,7 @@ bioj:a2001-40-MOL_ECOL-C01 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:configuration_details ;
+                 ca:appliesCode [ rdf:type citec:configuration_details ];
                ] ;	
 			  bioj:has_reference 
 				  [ rdf:type bioj:selection ;
@@ -255,7 +255,7 @@ bioj:a2001-40-MOL_ECOL-C01 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] . # end in-text mention
 # in-text mention.
@@ -265,12 +265,12 @@ bioj:a2001-40-MOL_ECOL-C02 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -299,12 +299,12 @@ bioj:a2001-40-MOL_ECOL-C03 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -322,7 +322,7 @@ bioj:a2001-40-MOL_ECOL-C03 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] . # end in-text mention with reference
 # in-text mention with reference.
@@ -331,12 +331,12 @@ bioj:a2001-40-MOL_ECOL-C04 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -354,7 +354,7 @@ bioj:a2001-40-MOL_ECOL-C04 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention with reference.
@@ -363,12 +363,12 @@ bioj:a2001-40-MOL_ECOL-C05 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -386,7 +386,7 @@ bioj:a2001-40-MOL_ECOL-C05 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention.
@@ -395,12 +395,12 @@ bioj:a2001-40-MOL_ECOL-C05 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -424,12 +424,12 @@ bioj:a2001-40-MOL_ECOL-C07 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -444,7 +444,7 @@ bioj:a2001-40-MOL_ECOL-C07 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:configuration_details ;
+                 ca:appliesCode [ rdf:type citec:configuration_details ];
                ] ; # end in-text mention
 . # dot ends bioj:article long statement.
 
@@ -463,12 +463,12 @@ was calculated using biosys (Swofford & Selander 1981).""" ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -481,7 +481,7 @@ was calculated using biosys (Swofford & Selander 1981).""" ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				]  # end in-text mention with reference
 . # dot ends bioj:article long statement.
@@ -525,12 +525,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C01 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -544,12 +544,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C02 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -563,12 +563,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C03 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -582,12 +582,12 @@ geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -600,7 +600,7 @@ geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] . # end in-text mention with reference
 # in-text mention with reference.
@@ -610,12 +610,12 @@ geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -628,7 +628,7 @@ geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention with reference.
@@ -637,12 +637,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C06 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -655,7 +655,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C06 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention with reference.
@@ -665,12 +665,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C07 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -683,7 +683,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C07 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention with reference.
@@ -693,12 +693,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C08 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -711,7 +711,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C08 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention with reference.
@@ -720,12 +720,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C09 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -738,7 +738,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C09 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention.
@@ -748,12 +748,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C10 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -768,12 +768,12 @@ the lowest stability values; these values are calculated based on intra- and int
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -786,12 +786,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C12 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -804,7 +804,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C12 rdf:type bioj:selection ;
 		          ca:isTargetOf 
 		           [ rdf:type ca:CodeApplication ;
 		             ca:hasCoder "cgrady" ;
-		             ca:appliesCode citec:reference ;
+		             ca:appliesCode [ rdf:type citec:reference ];
 		           ] ;
 				] .# end in-text mention with reference
 # in-text mention.
@@ -814,12 +814,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C13 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -833,12 +833,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C14 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -848,7 +848,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C14 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:configuration_details ;
+                 ca:appliesCode [ rdf:type citec:configuration_details ];
                ] . # end in-text mention
 # in-text mention.
 bioj:a2010-05-BMC_MOL_BIOL-C15 rdf:type bioj:selection ;
@@ -856,12 +856,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C15 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -874,12 +874,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C16 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -892,12 +892,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C17 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -911,12 +911,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C18 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -930,12 +930,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C19 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -949,12 +949,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C20 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -967,12 +967,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C21 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -990,12 +990,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C22 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -1005,7 +1005,7 @@ bioj:a2010-05-BMC_MOL_BIOL-C22 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:configuration_details ;
+                 ca:appliesCode [ rdf:type citec:configuration_details ];
                ] . # end in-text mention
 # in-text mention.
 bioj:a2010-05-BMC_MOL_BIOL-C23 rdf:type bioj:selection ;
@@ -1013,12 +1013,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C23 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -1031,12 +1031,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C24 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -1050,12 +1050,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C25 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -1068,12 +1068,12 @@ bioj:a2010-05-BMC_MOL_BIOL-C26 rdf:type bioj:selection ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -1101,12 +1101,12 @@ Excel Version 2003, (Microsoft Corp., Redmond, WA.).""" ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:in-text_mention ;
+                 ca:appliesCode [ rdf:type citec:in-text_mention ];
                ] ;	
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-                 ca:appliesCode citec:software_used ;
+                 ca:appliesCode [ rdf:type citec:software_used ];
                ] ;	
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;

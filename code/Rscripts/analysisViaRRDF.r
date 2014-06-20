@@ -30,9 +30,6 @@ data %.%
     summarise(freq = length(unique(article))) %.% 
     arrange(desc(freq))
 	
-journals <- group_by(data,journal_title)
-(per_article <- summarise(journals, mentions = n()))
-
 
 all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
@@ -40,13 +37,246 @@ code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collaps
 
 data <- data.frame(code_matrix)
 
+############
+# Overall summary
+############
+
+data %.%
+  summarize( journal_count = n_distinct(journal), 
+             article_count = n_distinct(article), 
+			 mention_count = n_distinct(selection)
+			)
+
+############
+# Summary by strata
+############
+
+mentions_by_strata <- data %.%
+  group_by(strata) %.%
+  summarize( journal_count = n_distinct(journal), 
+             article_count = n_distinct(article), 
+			 mention_count = n_distinct(selection)
+			)
+
+# Percentage of articles with mentions
+round(mentions_by_strata$article_count / 30,2)
+
+############
+# Summary by journal, sorted
+###########
+data %.%
+  group_by(journal) %.%
+  summarize( article_count = n_distinct(article), 
+			 mention_count = n_distinct(selection)
+			) %.%
+  arrange(desc(mention_count))
+  
+########
+# Summary by article, sorted by mention_count
+##########
+data %.%
+  group_by(strata,article) %.%
+  summarize(  mention_count = n_distinct(selection)
+			) %.%
+  arrange(desc(mention_count))
+  
+  
+  
+
+##########
+# Graphic of mention_count per article, split by strata.
+# This turns out to be tricky, because you want a bar_plot, where the x axis is article
+# the y axis is a count of mentions, but the ordering of the x axis is based on the count 
+# of mentions.  Easier to use the grouped df and stat="identity" than to use stat="bin"
+##########
+
+mention_count_by_article <- data %.%
+    group_by(strata,article) %.%
+    summarize(  mention_count = n_distinct(selection)
+    ) %.%
+    arrange(desc(mention_count))
+	
+# Arrange(desc(mention_count)) doesn't actually produce an ordered factor	
+# but that's what we need.
+
+mention_count_by_article$article <- with(mention_count_by_article, reorder(article,-mention_count))
+	
+ggplot(mention_count_by_article,aes(x=article,y=mention_count)) + geom_bar(stat="identity") + facet_wrap(~strata) + scale_x_discrete(labels=c())
+
+# Alternative, to answer the question of what was the distribution of mentions by article.
+
+ggplot(mention_count_by_article,aes(x=strata,y=mention_count)) + geom_boxplot() + scale_y_continuous(name = "Mentions in article") + scale_x_discrete(name="Journal Impact Factor rank")
+
+ggsave(filename="output/MentionsByStrataBoxplot.png", width=5, height=2)
+
+#########################
+# Types of mentions
+########################
+
+# with citations.
+
+# mention with domain publication
+
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection bioj:has_reference ?ref .
+  	?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:domain_publication  ] ] .
+}
+"
+
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "cite_to_domain_pub"
+
+types <- temp
+ 
+# Citation to user manual
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection bioj:has_reference ?ref .
+  	?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_publication  ] ] .
+}
+"
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "cite_to_software_pub"
+
+types <- rbind(types,temp)
+
+# citation to project_name
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection bioj:has_reference ?ref .
+  	?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_name  ] ] .
+}
+"
+
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "cite_to_project_name"
+
+types <- rbind(types,temp)
+
+# citation to project page.
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection bioj:has_reference ?ref .
+  	?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_page  ] ] .
+}
+"
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "cite_to_project_page"
+
+types <- rbind(types,temp)
 
 
-all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+# Instrument style citation
+#in-text_mention, software_name, creator, no has_ref
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+  MINUS { ?selection bioj:has_reference ?ref }
+}
+"
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collapse=" "))
+temp$mention_type <- "like_instrument"
 
-data <- data.frame(code_matrix)
+types <- rbind(types,temp)
+
+# Name and URL
+#in-text_mention, software_name, URL, no has_ref
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url] ] .
+  MINUS { ?selection bioj:has_reference ?ref }
+  MINUS {  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator] ] . }
+}
+"
+
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "url_in_text"
+
+types <- rbind(types,temp)
+
+# Name only
+#in-text_mention, software_name, no has_ref, no URL, no creator
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
+  MINUS { ?selection bioj:has_reference ?ref }
+  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
+  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
+}
+"
+
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "name_only"
+
+types <- rbind(types,temp)
+
+# not even by name
+#in-text_mention, no ref, no creator, no software_name, no url
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?selection bioj:full_quote ?fullquote .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+  MINUS { ?selection bioj:has_reference ?ref }
+  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
+  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
+  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .}
+}
+"
+
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "not_even_name"
+
+types <- rbind(types,temp)
+
+
+
+
 
 #################
 #  Percent Agreement, between cgrady and jhowison as coders

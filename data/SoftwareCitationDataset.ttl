@@ -18880,7 +18880,7 @@ bioj:ISR_J_PLANT_SCI rdf:type bioj:journal ;
 
 bioj:J_CELL_BIOL rdf:type bioj:journal ;
 	dc:identifier <urn:issn:1540-8140> ;
-	dc:title "Title TextThe Journal of Cell Biology" ;
+	dc:title "The Journal of Cell Biology" ;
 	bioj:strata "11-110" ;
 	bioj:hasAuthorInstructions "http://jcb.rupress.org.ezproxy.lib.utexas.edu/site/misc/ifora.xhtml" ;
 	bioj:hasSoftwarePolicy "Free exchange of materials: For all articles published since January 1, 1999, JCB requires the free exchange of all clones, cell lines, and biological reagents used in the study. The source code for all computational methods published in JCB must be made freely available as supplemental material hosted at www.jcb.org. These requirements are in accordance with the recommendations articulated by the National Academy of Sciences." ;

@@ -3194,11 +3194,25 @@ bioj:a2009-31-NATURE-C04 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
                  ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
-
+			   
+               ca:isTargetOf 
+                [ rdf:type ca:CodeApplication ;
+                  ca:hasCoder "jhowison" ;
+				  ca:memo "Added by James during analysis" ;
+                  ca:appliesCode [ rdf:type citec:software_name ; rdfs:label "Genome Analyser II" ];
+                ] ;
+				
+                ca:isTargetOf 
+                 [ rdf:type ca:CodeApplication ;
+                   ca:hasCoder "jhowison" ;
+ 				  ca:memo "Added by James during analysis" ;
+                   ca:appliesCode [ rdf:type citec:version_number ];
+                 ] ;
+			   
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-             	 ca:appliesCode [ a citec:creator ; rdfs:label "Illumina" ] ;
+             	 ca:appliesCode [ rdf:type citec:creator ; rdfs:label "Illumina" ] ;
                ] ;
 
               ca:isTargetOf 

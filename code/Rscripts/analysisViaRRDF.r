@@ -6,7 +6,8 @@ setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
 softciteData = load.rdf("data/SoftwareCitationDataset.ttl", format="TURTLE")
 
-summarize.rdf(softciteData)
+# summarize.rdf(softciteData)
+
 prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UTF-8"), collapse=" ")
 
 # Sample summary statistics
@@ -18,26 +19,21 @@ data <- data.frame(code_matrix)
 
 data %.%
   group_by(strata) %.%
-  summarise(freq=count_distinct(journal_title))
+  summarise(freq=n_distinct(journal_title))
 
 data %.% 
   group_by(journal_title) %.% 
-  summarise(freq = length(unique(article))) %.% 
+  summarise(freq = n_distinct(article)) %.% 
   arrange(desc(freq))
   
   data %.% 
-    group_by(stata,journal_title) %.% 
-    summarise(freq = length(unique(article))) %.% 
+    group_by(strata,journal_title) %.% 
+    summarise(freq = n_distinct(article)) %.% 
     arrange(desc(freq))
+	
+by_journal <- group_by(data,journal_title)
+(per_article <- summarise(by_article, mentions = n()))
 
-
-
-
-all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collapse=" "))
-
-data <- data.frame(code_matrix)
 
 #################
 #  Percent Agreement, between cgrady and jhowison as coders
@@ -131,6 +127,24 @@ if (length(julia_only_urls) > 0) {
 library(irr)
 
 agree(agreement_data[,2:3])
+
+
+###############################################
+# Analysis of Full data set.
+###############################################
+softciteData = load.rdf("data/SoftwareCitationDataset.ttl", format="TURTLE")
+
+all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collapse=" "))
+
+data <- data.frame(code_matrix)
+
+# How many mentions overall?
+data %.% 
+  group_by(stata,journal_title) %.% 
+  summarise(freq = length(unique(article))) %.% 
+  arrange(desc(freq))
 
 
 

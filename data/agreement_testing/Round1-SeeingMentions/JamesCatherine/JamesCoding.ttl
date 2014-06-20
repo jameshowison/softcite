@@ -1330,7 +1330,7 @@ bioj-cited:1993-McCune rdf:type bioj:selection ;
 					   bioj:full_quote """MCCUNE, B. 1993. Multivariate analysis on the PC-ORD system. Oregon State University, Corvallis, Oregon. USA.""" ;  #  1993-McCune tag on paper in Mendeley ;
 					ca:isTargetOf [  rdf:type ca:CodeApplication ;
 					     ca:hasCoder "jhowison" ;
-				     ca:appliesCode [ rdf:type citec:software_publication ; #domain_publication, #users_guide, #project_page, #project_name.  Go and look at the type of thing that is at the 'end' of the ]reference.
+				     ca:appliesCode [ rdf:type citec:software_publication ]  #domain_publication, #users_guide, #project_page, #project_name.  Go and look at the type of thing that is at the 'end' of the ]reference.
 					  ] ;
 					ca:isTargetOf [  rdf:type ca:CodeApplication ;
 					     ca:hasCoder "jhowison" ;

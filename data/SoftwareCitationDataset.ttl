@@ -17290,7 +17290,7 @@ bioj:a2010-20-J_INTEGR_PLANT_BIOL-B01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode [ rdf:type citec:users_guide ];
+    	  ca:appliesCode [ rdf:type citec:users_manual ];
 		] ;
 
 
@@ -18086,7 +18086,7 @@ bioj:a2004-25-J_THERM_BIOL-B01 rdf:type bioj:selection ;
 		ca:isTargetOf 
 		[ rdf:type ca:CodeApplication ;
     	  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode [ rdf:type citec:users_guide ];
+    	  ca:appliesCode [ rdf:type citec:users_manual ];
 		] ;
 
 

@@ -184,7 +184,25 @@ temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")
 
 temp$mention_type <- "cite_to_project_page"
 
+# users_manual
 types <- rbind(types,temp)
+
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+  ?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	?selection bioj:has_reference ?ref .
+  	?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:users_manual  ] ] .
+}
+"
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+temp$mention_type <- "cite_to_users_manual"
+
+types <- rbind(types,temp)
+
 
 
 # Instrument style citation
@@ -275,6 +293,14 @@ temp$mention_type <- "not_even_name"
 types <- rbind(types,temp)
 
 
+types %.%
+group_by(mention_type) %.%
+summarize(num_type = n_distinct(selection))
+
+types %.%
+group_by(selection) %.%
+summarize(num_type = n_distinct(mention_type)) %.%
+filter(num_type > 1)
 
 
 

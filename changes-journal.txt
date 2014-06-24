@@ -703,3 +703,102 @@ Thu Jun 19 09:48:51 CDT 2014
 Ran the change of non-labeled codes to anon nodes through the agreement files.
 
 sed 's/ca:appliesCode citec:\(.*\)[[:space:]]/ca:appliesCode [ rdf:type citec:\1 ]/g'
+
+===============================================================
+Fri Jun 20 15:04:51 CDT 2014
+===============================================================
+question.  Should there be selections with more than one has_ref?  eg
+
+bioj:a2003-22-CR_BIOL-C02        2
+bioj:a2007-36-BMC_PLANT_BIOL-B03        2
+
+Causes havoc with mention typing ... and some other things.  Also throws off mention count ...
+
+Also typing seems to have missed some mentions.
+
+length(unique(types$selection))
+[1] 274
+
+There are 284 mentions.  So which ones are missing and why?
+
+Really should put those types on via SPIN rules.
+
+SELECT ?selection ?article ?journal ?strata ?ref
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+  FILTER NOT EXISTS { ?selection bioj:has_reference ?ref }
+  FILTER (?selection = bioj:a2009-31-NATURE-C04)
+}
+
+hopelessly stuck on getting bioj:a2009-31-NATURE-C04 to show up in the query for like_instrumentation citation type.
+
+Unbelievable.  It was a problem with the testing filter.  can't do ?selection = bioj:a2009-31-NATURE-C04
+
+must do.
+
+FILTER regex(str(?selection) , "a2009-31-NATURE-C04", "i")
+
+Ok, everything has a type except for:
+
+(no_type <- data[!data$selection %in% types$selection, ])
+
+bioj:a2009-35-NAT_BIOTECHNOL-C06  / C-05.  (which at least makes sense with the two less thing!)
+
+Ok, only two have two types.  Huzzah.
+
+               selection num_of_types
+1               bioj:a2003-22-CR_BIOL-C02            2
+2        bioj:a2007-36-BMC_PLANT_BIOL-B03            2
+
+===============================================================
+Mon Jun 23 16:05:38 CDT 2014
+===============================================================
+Checking to see whether coding softare mentions with multiple citations were coded as multiple selections.
+
+
+#############
+# How many selections have greater than one has_reference?
+# clearly bioj:a2003-22-CR_BIOL-C02 and bioj:a2007-36-BMC_PLANT_BIOL-B03 do (both have at least 1 soft pub and 1 domain pub )
+#############
+
+query <- "
+SELECT ?selection ?ref
+WHERE {
+  ?selection bioj:has_reference ?ref
+}
+"
+
+multi_refs <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+
+multi_refs %.%
+group_by(selection) %.%
+summarize(num_refs = n_distinct(ref)) %.%
+arrange(desc(num_refs))
+
+#################
+# How many coded the other way (same full_quote multiple selections, one for each ref?)
+###############
+query <- "
+SELECT ?selection ?quote ?ref
+WHERE {
+  ?selection bioj:has_reference ?ref ;
+             bioj:full_quote ?quote .
+}
+"
+
+multi_refs <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+
+multi_refs %.%
+group_by(quote) %.%
+summarize(num_sels = n_distinct(selection)) %.%
+arrange(desc(num_sels))
+
+
+Nope.  all of the second kind were multiple bits of software.  So there are just a few with multiple cites, but that is fine.

@@ -9,7 +9,10 @@
 *.war
 *.ear
 target/
+
+# Temp output files
 output/*.csv
 output/*.pdf
 output/*.png
+.RData
 

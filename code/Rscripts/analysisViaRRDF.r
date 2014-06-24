@@ -1,12 +1,13 @@
 library(rrdf)
 library(ggplot2)
+library(reshape2)
 library(dplyr)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
 softciteData = load.rdf("data/SoftwareCitationDataset.ttl", format="TURTLE")
 
-summarize.rdf(softciteData)
+#summarize.rdf(softciteData)
 prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UTF-8"), collapse=" ")
 
 # Sample summary statistics
@@ -16,20 +17,20 @@ code_matrix <- sparql.rdf(softciteData, paste(prefixes, no_codes_query, collapse
 
 data <- data.frame(code_matrix)
 
-data %.%
-  group_by(strata) %.%
-  summarise(freq=count_distinct(journal_title))
-
-data %.% 
-  group_by(journal_title) %.% 
-  summarise(freq = length(unique(article))) %.% 
-  arrange(desc(freq))
-  
-  data %.% 
-    group_by(stata,journal_title) %.% 
-    summarise(freq = length(unique(article))) %.% 
-    arrange(desc(freq))
-	
+# data %.%
+#   group_by(strata) %.%
+#   summarise(freq=count_distinct(journal_title))
+#
+# data %.%
+#   group_by(journal_title) %.%
+#   summarise(freq = length(unique(article))) %.%
+#   arrange(desc(freq))
+#
+#   data %.%
+#     group_by(stata,journal_title) %.%
+#     summarise(freq = length(unique(article))) %.%
+#     arrange(desc(freq))
+#
 
 all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
 
@@ -99,9 +100,9 @@ mention_count_by_article <- data %.%
 # Arrange(desc(mention_count)) doesn't actually produce an ordered factor	
 # but that's what we need.
 
-mention_count_by_article$article <- with(mention_count_by_article, reorder(article,-mention_count))
+#mention_count_by_article$article <- with(mention_count_by_article, reorder(article,-mention_count))
 	
-ggplot(mention_count_by_article,aes(x=article,y=mention_count)) + geom_bar(stat="identity") + facet_wrap(~strata) + scale_x_discrete(labels=c())
+#ggplot(mention_count_by_article,aes(x=article,y=mention_count)) + geom_bar(stat="identity") + facet_wrap(~strata) + scale_x_discrete(labels=c())
 
 # Alternative, to answer the question of what was the distribution of mentions by article.
 
@@ -130,7 +131,8 @@ WHERE {
 
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "cite_to_domain_pub"
+#temp$mention_type <- "cite_to_domain_pub"
+temp$mention_type <- "Cite to publication"
 
 types <- temp
  
@@ -147,7 +149,7 @@ WHERE {
 "
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "cite_to_software_pub"
+temp$mention_type <- "Cite to publication"
 
 types <- rbind(types,temp)
 
@@ -165,7 +167,8 @@ WHERE {
 
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "cite_to_project_name"
+#temp$mention_type <- "cite_to_project_name"
+temp$mention_type <- "Cite to name"
 
 types <- rbind(types,temp)
 
@@ -182,7 +185,8 @@ WHERE {
 "
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "cite_to_project_page"
+#temp$mention_type <- "cite_to_project_page"
+temp$mention_type <- "Cite to name"
 
 # users_manual
 types <- rbind(types,temp)
@@ -199,7 +203,7 @@ WHERE {
 "
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "cite_to_users_manual"
+temp$mention_type <- "Cite to manual"
 
 types <- rbind(types,temp)
 
@@ -210,23 +214,46 @@ types <- rbind(types,temp)
 query <- "
 SELECT ?selection ?article ?journal ?strata
 WHERE {
-  ?article bioj:has_selection ?selection .
-  ?article dc:isPartOf ?journal .
-  ?journal bioj:strata ?strata .
-  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
-  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
-  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
-  MINUS { ?selection bioj:has_reference ?ref }
+    ?article bioj:has_selection ?selection .
+    ?article dc:isPartOf ?journal .
+    ?journal bioj:strata ?strata .
+    ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+    ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
+    ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+    FILTER NOT EXISTS { ?selection bioj:has_reference ?ref }
 }
 "
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "like_instrument"
+temp$mention_type <- "Like instrument"
 
 types <- rbind(types,temp)
 
+# special type for bioj:a2009-35-NAT_BIOTECHNOL-C06  / C-05. This is "Zeiss software" has a creator but no software name.
+query <- "
+SELECT ?selection ?article ?journal ?strata
+WHERE {
+    ?article bioj:has_selection ?selection .
+    ?article dc:isPartOf ?journal .
+    ?journal bioj:strata ?strata .
+    ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
+    ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+	FILTER NOT EXISTS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] . }
+    FILTER NOT EXISTS { ?selection bioj:has_reference ?ref }
+}
+"
+temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+#temp$mention_type <- "Like instrument_no_name"
+temp$mention_type <- "Like instrument"
+
+types <- rbind(types,temp)
+
+
+
 # Name and URL
-#in-text_mention, software_name, URL, no has_ref
+#in-text_mention, URL, no has_ref
+# Some, including bioj:a2006-47-SYST_BIOL-C02 don't have software_name but have a URL.
 query <- "
 SELECT ?selection ?article ?journal ?strata
 WHERE {
@@ -234,16 +261,15 @@ WHERE {
   ?article dc:isPartOf ?journal .
   ?journal bioj:strata ?strata .
   ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
-  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
   ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url] ] .
-  MINUS { ?selection bioj:has_reference ?ref }
-  MINUS {  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator] ] . }
+  FILTER NOT EXISTS  { ?selection bioj:has_reference ?ref }
+  FILTER NOT EXISTS  {  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator] ] . }
 }
 "
 
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "url_in_text"
+temp$mention_type <- "URL in text"
 
 types <- rbind(types,temp)
 
@@ -257,15 +283,15 @@ WHERE {
   ?journal bioj:strata ?strata .
   ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
   ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .
-  MINUS { ?selection bioj:has_reference ?ref }
-  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
-  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
+  FILTER NOT EXISTS  { ?selection bioj:has_reference ?ref }
+  FILTER NOT EXISTS  { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
+  FILTER NOT EXISTS  { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
 }
 "
 
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "name_only"
+temp$mention_type <- "Name only"
 
 types <- rbind(types,temp)
 
@@ -279,28 +305,129 @@ WHERE {
   ?article dc:isPartOf ?journal .
   ?journal bioj:strata ?strata .
   ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] . 
-  MINUS { ?selection bioj:has_reference ?ref }
-  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
-  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
-  MINUS { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .}
+  FILTER NOT EXISTS  { ?selection bioj:has_reference ?ref }
+  FILTER NOT EXISTS  { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . }
+  FILTER NOT EXISTS  { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .}
+  FILTER NOT EXISTS  { ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ] ] .}
 }
 "
 
 temp <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-temp$mention_type <- "not_even_name"
+temp$mention_type <- "No name"
 
 types <- rbind(types,temp)
 
 
-types %.%
-group_by(mention_type) %.%
-summarize(num_type = n_distinct(selection))
+
+mention_type_levels <- c("Cite to publication",
+						 "Cite to name",
+						 "Cite to manual",
+						 "Like instrument",
+						 "URL in text",
+						 "Name only",
+						 "No name")
+						 
+types$mention_type <- factor(types$mention_type, levels=mention_type_levels)
+
+
+
+# Graph totals for mention types.
+ggplot(types,aes(x=mention_type)) + 
+  geom_bar() + 
+ # scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
+  scale_x_discrete(name="Mention Type") +
+ # scale_fill_grey() + 
+  theme(legend.position="none",
+        panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_text(vjust=0.1),
+		text=element_text(size=10),
+		axis.text.x=element_text(angle=25,hjust=1)) +
+  ggtitle("Types of software mentions")
+
+ggsave(filename="output/MentionTypesOverall.png", width=5, height=4)
+
+# Table for software mentions, including proportions
+total_mentions <- n_distinct(types$selection)
 
 types %.%
-group_by(selection) %.%
-summarize(num_type = n_distinct(mention_type)) %.%
-filter(num_type > 1)
+group_by(mention_type) %.%
+summarize(num_type = n_distinct(selection), 
+          proportion = round(num_type / total_mentions, 2) ) %.%
+arrange(desc(num_type))
+
+# Mentions by strata
+mentions_by_strata <- types %.% group_by(strata) %.%
+summarize(total_in_strata = n_distinct(selection))
+
+types_by_strata <- types %.%
+group_by(strata, mention_type) %.%
+summarize(type_in_strata = n_distinct(selection))
+
+types_by_strata <- merge(types_by_strata,mentions_by_strata)
+
+types_by_strata <- within(types_by_strata, proportion <- round(type_in_strata / total_in_strata, 2))
+
+# Count By strata, cahgne from long format to wide format.
+dcast(types_by_strata,mention_type~strata,sum,value.var="type_in_strata")
+#           mention_type 1-10 11-110 111-1455
+# 1 Cite to name    2      8        6
+# 2  Cite to publication   47     34       24
+# 3 Cite to manual    3      0        3
+# 4      Like instrument   33     14        5
+# 5            Name only   36     25       28
+# 6        Not even name    3      1        0
+# 7          URL in text    6      7        0
+
+# > dcast(types_by_strata,mention_type~strata,sum,value.var="proportion")
+#           mention_type 1-10 11-110 111-1455
+# 1 Cite to name 0.02   0.09     0.09
+# 2  Cite to publication 0.36   0.38     0.37
+# 3 Cite to manual 0.02   0.00     0.05
+# 4      Like instrument 0.25   0.16     0.08
+# 5            Name only 0.28   0.28     0.43
+# 6        Not even name 0.02   0.01     0.00
+# 7          URL in text 0.05   0.08     0.00
+
+#ggplot(types_by_strata,aes(y=mention_type,x=strata)) + geom_tile(aes(fill=proportion), color="white") + scale_fill_gradient(low="white",high="steelblue")
+
+
+# reverse levels back for faceted presentation
+#types_by_strata$mention_type <- factor(types_by_strata$mention_type, 
+	                           # levels = mention_type_levels)
+#ggplot(types_by_strata,aes(x=mention_type,y=proportion)) + geom_bar(stat="identity") + facet_grid(strata~.)
+
+# Ok, try a dodge bar chart.
+
+#ggplot(types_by_strata,aes(x=mention_type,y=proportion,fill=strata)) + geom_bar(stat="identity",position="dodge") + theme(axis.text.x = element_text(size = rel(1.5), angle = 45, hjust = 1)) + scale_fill_grey()
+
+#ggplot(types_by_strata,aes(x=strata,y=proportion,fill=strata)) + geom_bar(stat="identity",position="dodge") + facet_wrap(~mention_type,nrow=2,ncol=4) + scale_fill_grey() + scale_y_continuous(limits=c(0,1))
+
+# Ok, this one is the one to use.  First drop the lower proportion mention_types
+
+types_for_graph <- filter(types_by_strata, mention_type %in% c("Cite to publication","Like instrument","Name only"))
+# Then graph as dodged bars?
+ggplot(types_for_graph,aes(x=strata,y=proportion,fill=strata)) + 
+  geom_bar(stat="identity") + 
+  facet_grid(.~mention_type) + 
+  scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
+  scale_x_discrete(name="Strata") +
+  scale_fill_grey() + 
+  theme(legend.position="none",
+        panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_text(vjust=0.1),
+		text=element_text(size=10),
+		axis.text.x=element_text(angle=25,hjust=1)) +
+  ggtitle("Major software mention types by journal strata")
+  
+ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
+
 
 
 

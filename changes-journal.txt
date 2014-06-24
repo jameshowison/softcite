@@ -802,3 +802,34 @@ arrange(desc(num_sels))
 
 
 Nope.  all of the second kind were multiple bits of software.  So there are just a few with multiple cites, but that is fine.
+
+===============================================================
+Tue Jun 24 15:04:33 CDT 2014
+===============================================================
+
+Ok, normalizing software names.
+
+Used jaro-winkler distance clustering, then manually inspected clusters.
+
+Changes made.
+
+new code in software_name.  bioj:normalized_name
+- or just add this as a column in the R analysis?
+
+groups to merge (based on reading clusters)
+
+Image J,ImageJ
+Excel,excel
+BLAST,Basic Local Alignment Search Tool (BLAST),TBLASTN,BLASTP,BLASTX
+SAS,Statistical Analysis Software
+Stereo Investigator,StereoInvestigator
+USeq,USeq IntersectLists,USeq IntersectRegions,USeq AggregatePlots,USeq FNG
+PAUP*,PAUP
+ClustalW/ClustalX,ClustalW,CLUSTAL W,CLUSTALW,ClustalX
+
+
+===============================================================
+Tue Jun 24 15:16:49 CDT 2014
+===============================================================
+a2008-06-NAT_GENET-C02
+a2008-06-NAT_GENET-C01

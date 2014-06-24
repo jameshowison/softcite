@@ -2,6 +2,7 @@ library(rrdf)
 library(ggplot2)
 library(reshape2)
 library(dplyr)
+library(irr)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 
@@ -37,6 +38,98 @@ all_codes_query <- paste(readLines("code/Rscripts/all_codes_query.sparql", warn=
 code_matrix <- sparql.rdf(softciteData, paste(prefixes, all_codes_query, collapse=" "))
 
 data <- data.frame(code_matrix)
+
+#################
+#  Percent Agreement, between cgrady and jhowison as coders
+#  Uses data from different files.
+#################
+
+setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
+
+catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/CatherineCoding.ttl", format="TURTLE")
+
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/JamesCoding.ttl", format="TURTLE")
+
+combindedCoding = combine.rdf(jamesCoding,catherineCoding)
+
+#summarize.rdf(combindedCoding)  # 2432 triples
+
+#combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
+
+# Ok, need to get three numbers.  Both agreeing, J not C, and C not J.
+
+# One useful format:
+# URL, J, C 
+# ..., coded, coded 
+# ..., not-coded, coded
+
+agreement_query <- paste(readLines("code/Rscripts/catherine_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
+
+james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
+
+catherine_only_query <- paste(readLines("code/Rscripts/catherine_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+catherine_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, catherine_only_query, collapse=" "))
+
+# combine lists into frame.
+agreement_data_both <- data.frame("urls" = agreement_urls, "james" = 1, "catherine" = 1)
+
+agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "catherine" = 0)
+
+agreement_data_catherine <- data.frame("urls" = catherine_only_urls, "james" = 0, "catherine" = 1)
+
+agreement_data <- rbind(agreement_data_both, agreement_data_james)
+agreement_data <- rbind(agreement_data, agreement_data_catherine)
+
+library(irr)
+
+agree(agreement_data[,2:3])
+
+##########################################
+# Percent agreement. James and Julia.
+#########################################
+
+setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
+
+juliaCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JuliaCoding.ttl", format="TURTLE")
+
+jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JamesCoding.ttl", format="TURTLE")
+
+combindedCoding = combine.rdf(jamesCoding,juliaCoding)
+
+# ..., not-coded, coded
+
+agreement_query <- paste(readLines("code/Rscripts/julia_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
+
+james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
+
+julia_only_query <- paste(readLines("code/Rscripts/julia_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
+
+julia_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, julia_only_query, collapse=" "))
+
+# combine lists into frame.
+agreement_data <- data.frame("urls" = agreement_urls, "james" = 1, "julia" = 1)
+
+if (length(james_only_urls) > 0) {
+  agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "julia" = 0)
+  agreement_data <- rbind(agreement_data, agreement_data_james)
+}
+
+if (length(julia_only_urls) > 0) {
+  agreement_data_julia <- data.frame("urls" = julia_only_urls, "james" = 0, "julia" = 1)
+  agreement_data <- rbind(agreement_data, agreement_data_julia)
+}
+
+agree(agreement_data[,2:3])
+
 
 ############
 # Overall summary
@@ -428,101 +521,88 @@ ggplot(types_for_graph,aes(x=strata,y=proportion,fill=strata)) +
   
 ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
 
+#########################
+# Move to individual codes.
+##########################
 
+# First, most of these only really make sense at an article-software combo, since
+# many of the mentions are for the same pieces of software.
 
+# How many pieces of software mentioned.  Unique values of software_name label.
+query <- "
+SELECT ?selection ?article ?journal ?strata ?software_name
+WHERE {
+  ?article bioj:has_selection ?selection .
+  ?article dc:isPartOf ?journal .
+  ?journal bioj:strata ?strata .
+  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ; rdfs:label ?software_name ] ] . 
+}
+"
 
-#################
-#  Percent Agreement, between cgrady and jhowison as coders
-#  Uses data from different files.
-#################
+software_names <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
 
-setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
+# Going to need to search for those that are similar too.
+# get just list of names and make all lower case.
+all_names <- to.lower(unique(software_names$software_name))
 
-catherineCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/CatherineCoding.ttl", format="TURTLE")
+# Make dissimilarity matrix
+stringdisttest <- stringdistmatrix(all_names,all_names,method="jw",p=0.1)
+# Perform clustering using this matrix
+nameCluster<-agnes(stringdisttest,diss=T)
+# cut the tree down low (ie make 6 groups)
+name_cluster_labels <- cutree(nameCluster,k=13)
+culstered_names <- data.frame(software_name = all_names, cluster_label = name_cluster_labels)
+arrange(culstered_names,cluster_label)
 
-jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesCatherine/JamesCoding.ttl", format="TURTLE")
+# Make a copy
+software_names$standardized_name <- software_names$software_name
 
-combindedCoding = combine.rdf(jamesCoding,catherineCoding)
+# Replace if a match
+name_mappings <- list(
+	"Image J"             = c("ImageJ"),
+	"Excel"               = c("excel"),
+	"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
+	                          "TBLASTN",
+							  "BLASTP",
+							  "BLASTX",
+							  "BLASTN"),
+	"SAS"                 = c("Statistical Analysis Software"),
+	"Stereo Investigator" = c("StereoInvestigator"),
+	"USeq"                = c("USeq IntersectLists",
+	                          "USeq IntersectRegions",
+							  "USeq AggregatePlots",
+							  "USeq FNG"),
+	"PAUP"                = c("PAUP*"),
+	"ClustalW"            = c("CLUSTAL W",
+							  "CLUSTALW",
+							  "ClustalX")
+)
 
-#summarize.rdf(combindedCoding)  # 2432 triples
+# replace_name <- function(replacement) {
+# 	software_names$standardized_name <- replace(software_names$standardized_name,
+# 				  software_names$software_name %in% name_mappings[[replacement]],
+# 				  replacement)
+#
+# }
+#
+# lapply(names(name_mappings), replace_name)
 
-#combindedCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/testingMatchesQueries.ttl", format="TURTLE")
-
-# Ok, need to get three numbers.  Both agreeing, J not C, and C not J.
-
-# One useful format:
-# URL, J, C 
-# ..., coded, coded 
-# ..., not-coded, coded
-
-agreement_query <- paste(readLines("code/Rscripts/catherine_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
-
-james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
-
-catherine_only_query <- paste(readLines("code/Rscripts/catherine_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-catherine_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, catherine_only_query, collapse=" "))
-
-# combine lists into frame.
-agreement_data_both <- data.frame("urls" = agreement_urls, "james" = 1, "catherine" = 1)
-
-agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "catherine" = 0)
-
-agreement_data_catherine <- data.frame("urls" = catherine_only_urls, "james" = 0, "catherine" = 1)
-
-agreement_data <- rbind(agreement_data_both, agreement_data_james)
-agreement_data <- rbind(agreement_data, agreement_data_catherine)
-
-library(irr)
-
-agree(agreement_data[,2:3])
-
-##########################################
-# Percent agreement. James and Julia.
-#########################################
-
-setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
-
-juliaCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JuliaCoding.ttl", format="TURTLE")
-
-jamesCoding = load.rdf("data/agreement_testing/Round1-SeeingMentions/JamesJulia/JamesCoding.ttl", format="TURTLE")
-
-combindedCoding = combine.rdf(jamesCoding,juliaCoding)
-
-# ..., not-coded, coded
-
-agreement_query <- paste(readLines("code/Rscripts/julia_james_agree_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-agreement_urls <- sparql.rdf(combindedCoding, paste(prefixes, agreement_query, collapse=" "))
-
-james_only_query <- paste(readLines("code/Rscripts/james_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-james_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, james_only_query, collapse=" "))
-
-julia_only_query <- paste(readLines("code/Rscripts/julia_only_query.sparql", warn=FALSE, encoding="UTF-8"), collapse=" ")
-
-julia_only_urls <- sparql.rdf(combindedCoding, paste(prefixes, julia_only_query, collapse=" "))
-
-# combine lists into frame.
-agreement_data <- data.frame("urls" = agreement_urls, "james" = 1, "julia" = 1)
-
-if (length(james_only_urls) > 0) {
-  agreement_data_james <- data.frame("urls" = james_only_urls, "james" = 1, "julia" = 0)
-  agreement_data <- rbind(agreement_data, agreement_data_james)
+for (i in 1:length(name_mappings)) {
+	replacement <- names(name_mappings[i])
+	items_to_replace <- name_mappings[i][[replacement]]
+	software_names$standardized_name <- replace(software_names$standardized_name, 
+		                                        software_names$software_name %in% items_to_replace, 
+												replacement)
 }
 
-if (length(julia_only_urls) > 0) {
-  agreement_data_julia <- data.frame("urls" = julia_only_urls, "james" = 0, "julia" = 1)
-  agreement_data <- rbind(agreement_data, agreement_data_julia)
-}
+#software_names %.%
+#filter(standardized_name != software_name) %.%
+#arrange(standardized_name)
 
-library(irr)
-
-agree(agreement_data[,2:3])
+software_names %.%
+group_by(standardized_name) %.%
+summarize(num_articles = n_distinct(article)) %.%
+arrange(desc(num_articles))
 
 
 

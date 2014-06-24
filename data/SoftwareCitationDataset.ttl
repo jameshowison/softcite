@@ -15274,7 +15274,7 @@ bioj:has_selection bioj:a2000-04-MOL_ECOL-C01.
 
 # in-text mention with reference.
 bioj:a2000-04-MOL_ECOL-C01 rdf:type bioj:selection ;
-          	  bioj:full_quote """"FST was used to describe the variation among populations and
+          	  bioj:full_quote """FST was used to describe the variation among populations and
 was calculated using biosys (Swofford & Selander 1981).""" ;
               ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;

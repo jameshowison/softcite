@@ -6417,7 +6417,7 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Datlab" ] ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "DatLab" ] ;
                ] ;
 
 			  ca:isTargetOf 

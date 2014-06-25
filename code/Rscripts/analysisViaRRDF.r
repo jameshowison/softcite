@@ -559,7 +559,7 @@ standardizeSoftwareNames <- function(data) {
 	data$standardized_name <- data$software_name
 	# Replace if a match
 	name_mappings <- list(
-		"Image J"             = c("ImageJ"),
+		"ImageJ"             = c("Image J"),
 		"Excel"               = c("excel"),
 		"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
 		                          "TBLASTN",
@@ -623,43 +623,41 @@ all_codes <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse
 # standardize software names
 all_codes <- standardizeSoftwareNames(all_codes)
 
-count_software_names <- n_distinct(all_codes$standardized_name)
-
 # Takes a pair of codes and compares them in total and then across strata.
-analyzeCode <- function(data,code_list) {
-	
-	# filter the data frame
-	reduced_data <- filter(data, code %in% code_list)
-	# retain ordering of code_list and drop other levels
-	reduced_data$code <- factor(reduced_data$code,levels=code_list)
-	#print(levels(reduced_data$code))
-	
-	reduced_data %.%
-	  group_by(code) %.%
-	  summarize(num_software_with_code=n_distinct(standardized_name))
-	
-	#Plot by strata
-	ggplot(reduced_data,aes(x=code,fill=strata)) + 
-	  geom_bar() + 
-	#  facet_grid(.~code) + 
-	  #scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
-	  scale_x_discrete(name="Strata") +
-	  scale_fill_grey() + 
- 	 #ggtitle("Major software mention types by journal strata") +
-	  theme(legend.position="none",
-	        panel.grid.major.x = element_blank(),
-			panel.grid.minor.y = element_blank(),
-			panel.border = element_blank(),
-			axis.title.y=element_text(vjust=0.3),
-			axis.title.x=element_text(vjust=0.1),
-			text=element_text(size=10),
-			axis.text.x=element_text(angle=25,hjust=1))
-	 
-	# ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
-	
-}
+# analyzeCode <- function(data,code_list) {
+#
+# 	# filter the data frame
+# 	reduced_data <- filter(data, code %in% code_list)
+# 	# retain ordering of code_list and drop other levels
+# 	reduced_data$code <- factor(reduced_data$code,levels=code_list)
+# 	#print(levels(reduced_data$code))
+#
+# 	reduced_data %.%
+# 	  group_by(code) %.%
+# 	  summarize(num_software_with_code=n_distinct(standardized_name))
+#
+# 	#Plot by strata
+# 	ggplot(reduced_data,aes(x=code,fill=strata)) +
+# 	  geom_bar() +
+# 	#  facet_grid(.~code) +
+# 	  #scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
+# 	  scale_x_discrete(name="Strata") +
+# 	  scale_fill_grey() +
+#  	 #ggtitle("Major software mention types by journal strata") +
+# 	  theme(legend.position="none",
+# 	        panel.grid.major.x = element_blank(),
+# 			panel.grid.minor.y = element_blank(),
+# 			panel.border = element_blank(),
+# 			axis.title.y=element_text(vjust=0.3),
+# 			axis.title.x=element_text(vjust=0.1),
+# 			text=element_text(size=10),
+# 			axis.text.x=element_text(angle=25,hjust=1))
+#
+# 	# ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
+#
+# }
 
-analyzeCode(all_codes,c("citec:identifiable","citec:unidentifiable"))
+#analyzeCode(all_codes,c("citec:identifiable","citec:unidentifiable"))
 # analyzeCode(all_codes,c("citec:findable","citec:unfindable"))
 # analyzeCode(all_codes,c("citec:access_free", "citec:access_purchase", "citec:no_access"))
 # analyzeCode(all_codes,c("citec:accessible", "citec:no_access"))
@@ -707,12 +705,110 @@ all_codes$standardized_code <- gsub("^citec:","",all_codes$standardized_code, pe
 # capitalize first letter
 all_codes$standardized_code <- gsub("^(.)","\\U\\1",all_codes$standardized_code, perl=TRUE)
 
-# Alternative: comparison of proportions with codes in guttman scale order
-ordered_function_codes <- factor(c("Identifiable","Findable","Accessible","Source available","Modifiable"))
+
+###########################
+# Identifiable and/or findable
+##########################
+
+###
+# Create a field for article_name combination.
+###
+all_codes$article_software <- paste(all_codes$standardized_name, all_codes$article, sep="_")
+
+# Number of units of analysis
+units_of_analysis <- n_distinct(all_codes$article_software)
+
+ordered_function_codes <- factor(c("Identifiable","Findable"))
+
+function_codes <- filter(all_codes, standardized_code %in% ordered_function_codes)
+function_codes$standardized_code <- factor(function_codes$standardized_code, levels = ordered_function_codes)
+
+# Plot per strata. - unused, there is little variance
+# ggplot(function_codes,aes(x=standardized_code,fill=standardized_code)) +
+# geom_bar() +
+# facet_grid(.~strata,margins=T) +
+# scale_fill_grey(guide = guide_legend(title="Extent of Locatability")) +
+# scale_x_discrete(name="") +
+# scale_y_continuous(name="Count of Software") +
+# ggtitle("Locatability by strata") +
+# theme(
+# 	legend.position="bottom",
+#     panel.grid.major.x = element_blank(),
+# 	panel.grid.minor.y = element_blank(),
+# 	panel.border = element_blank(),
+# 	axis.title.y=element_text(vjust=0.3),
+# 	#axis.title.x=element_text(vjust=0.1),
+# 	text=element_text(size=10),
+# 	axis.text.x=element_blank(),
+# 	axis.ticks.x=element_blank()
+# )
+
+# Convert count of software with the code to proportion of unique software with that code
+function_code_proportions <- function_codes %.%
+  group_by(standardized_code) %.%
+  summarize(num_software_with_code=n_distinct(article_software),
+            proportion_with_code=round((num_software_with_code / units_of_analysis), 2))
+
+# Now plot the proportions.
+ggplot(function_code_proportions,aes(x=standardized_code,y=proportion_with_code)) +
+geom_bar(stat="identity",aes(fill=standardized_code)) +
+scale_fill_grey(start=0.8,end=0.4) + 
+scale_y_continuous(limits=c(0,1))
+
+# Hmmm, how many were unidentifiable?
+all_codes %.% 
+filter(code == "citec:unidentifiable") %.%
+summarize(num = n_distinct(article_software))
+
+# Ug. there are only 7 unidentifiable.  Thus the 156 / 211 ratio is definitely wrong.  Need to sort out the bioj:references_same_software and move the codes?
+# Also Image J is unidentifiable?
+
+
+# Breakdown for Findable (ie of those that have version_number, what proportion were findable_version
+findables <- all_codes %.%
+	filter(code %in% c("citec:version_number", "citec:findable_version")) %.%
+	group_by(code) %.%
+	summarize(count=n_distinct(software_name))
+
+#proportion of those with version_numbers that were findable_version
+total_findable <- filter(findables, code=="citec:findable_version")$count[1]
+total_with_version_num <- filter(findables, code=="citec:version_number")$count[1]
+
+proportion = round(total_findable / total_with_version_num, 2)
+
+##########################
+# Per piece of software. This groups by standardized_name, not article_software.
+#########################
+count_software_names <- n_distinct(all_codes$standardized_name)
+
+ordered_function_codes <- factor(c("Accessible","Source available","Modifiable"))
 
 # Convert count of software with the code to proportion of unique software with that code
 function_codes <- filter(all_codes, standardized_code %in% ordered_function_codes)
 function_codes$standardized_code <- factor(function_codes$standardized_code, levels = ordered_function_codes)
+
+# Plot per strata.
+ggplot(function_codes,aes(x=standardized_code,fill=standardized_code)) +
+geom_bar() +
+facet_grid(.~strata,margins=T) + 
+scale_fill_grey(guide = guide_legend(title="Extent of Accessibility")) + 
+scale_x_discrete(name="") +
+scale_y_continuous(name="Count of Software") +
+ggtitle("Accessibility by strata") +
+theme(
+	legend.position="bottom",
+    panel.grid.major.x = element_blank(),
+	panel.grid.minor.y = element_blank(),
+	panel.border = element_blank(),
+	axis.title.y=element_text(vjust=0.3),
+	#axis.title.x=element_text(vjust=0.1),
+	text=element_text(size=10),
+	axis.text.x=element_blank(),
+	axis.ticks.x=element_blank()
+)
+
+
+ggsave(filename="output/AccessibilityByStrata.png", width=5, height=4)
 
 function_code_proportions <- function_codes %.%
   group_by(standardized_code) %.%
@@ -722,21 +818,10 @@ function_code_proportions <- function_codes %.%
 # Now plot the proportions.
 ggplot(function_code_proportions,aes(x=standardized_code,y=proportion_with_code)) +
 geom_bar(stat="identity",aes(fill=standardized_code)) +
+facet_grid(.~strata) +
 scale_fill_grey(start=0.8,end=0.4) + 
 scale_y_continuous(limits=c(0,1))
 
-
-# Breakdown for Findable (ie of those that have version_number, what proportion were findable_version
-findables <- all_codes %.%
-	filter(code %in% c("citec:version_number", "citec:findable_version")) %.%
-	group_by(code) %.%
-	summarize(count=n_distinct(software_name))
-
-#proportion of those with version_numbers that were findable
-total_findable <- filter(findables, code=="citec:findable_version")$count[1]
-total_with_version_num <- filter(findables, code=="citec:version_number")$count[1]
-
-proportion = round(total_findable / total_with_version_num, 2)
 
 
 # Breakdown for Acessible (ie of those that were accessible, how many were available for free vs for pay?)

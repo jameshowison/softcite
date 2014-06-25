@@ -833,3 +833,26 @@ Tue Jun 24 15:16:49 CDT 2014
 ===============================================================
 a2008-06-NAT_GENET-C02
 a2008-06-NAT_GENET-C01
+
+===============================================================
+Wed Jun 25 13:35:44 CDT 2014
+===============================================================
+
+Ug. there are only 7 unidentifiable.  Thus the 156 / 211 ratio is definitely wrong.  Need to sort out the bioj:references_same_software and move the codes?
+Also Image J is unidentifiable? -- hmmm, ImageJ preferred over Image J, fixed in standardized names.  But how has that affected the analysis of the codes?
+
+I think I need to re-organize the codes.  
+
+For identifiable/findable/findable version those should be for software-article.
+
+article contains article_software_link (merger of all mentions in that article)
+	software_mention contributes to article_software_link.
+
+article_software_mention is identifiable/findable/version_findable
+
+article_software_mention references software_package
+
+software_package is accessible/free/purchase/source/modify.
+
+
+Each software package should have a URL, then the accessibility codes should be attached to that URL.  Each article should have a bioj:mentions_software

@@ -554,55 +554,203 @@ name_cluster_labels <- cutree(nameCluster,k=13)
 culstered_names <- data.frame(software_name = all_names, cluster_label = name_cluster_labels)
 arrange(culstered_names,cluster_label)
 
-# Make a copy
-software_names$standardized_name <- software_names$software_name
+standardizeSoftwareNames <- function(data) {
+	# Make a copy
+	data$standardized_name <- data$software_name
+	# Replace if a match
+	name_mappings <- list(
+		"Image J"             = c("ImageJ"),
+		"Excel"               = c("excel"),
+		"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
+		                          "TBLASTN",
+								  "BLASTP",
+								  "BLASTX",
+								  "BLASTN"),
+		"SPSS"                = c("statistical Packages for the Social Sciences"),
+		"SAS"                 = c("Statistical Analysis Software"),
+		"Stereo Investigator" = c("StereoInvestigator"),
+		"USeq"                = c("USeq IntersectLists",
+		                          "USeq IntersectRegions",
+								  "USeq AggregatePlots",
+								  "USeq FNG"),
+		"PAUP"                = c("PAUP*"),
+		"ClustalW"            = c("CLUSTAL W",
+								  "CLUSTALW",
+								  "ClustalX")
+	)
 
-# Replace if a match
-name_mappings <- list(
-	"Image J"             = c("ImageJ"),
-	"Excel"               = c("excel"),
-	"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
-	                          "TBLASTN",
-							  "BLASTP",
-							  "BLASTX",
-							  "BLASTN"),
-	"SAS"                 = c("Statistical Analysis Software"),
-	"Stereo Investigator" = c("StereoInvestigator"),
-	"USeq"                = c("USeq IntersectLists",
-	                          "USeq IntersectRegions",
-							  "USeq AggregatePlots",
-							  "USeq FNG"),
-	"PAUP"                = c("PAUP*"),
-	"ClustalW"            = c("CLUSTAL W",
-							  "CLUSTALW",
-							  "ClustalX")
-)
-
-# replace_name <- function(replacement) {
-# 	software_names$standardized_name <- replace(software_names$standardized_name,
-# 				  software_names$software_name %in% name_mappings[[replacement]],
-# 				  replacement)
-#
-# }
-#
-# lapply(names(name_mappings), replace_name)
-
-for (i in 1:length(name_mappings)) {
-	replacement <- names(name_mappings[i])
-	items_to_replace <- name_mappings[i][[replacement]]
-	software_names$standardized_name <- replace(software_names$standardized_name, 
-		                                        software_names$software_name %in% items_to_replace, 
-												replacement)
+	for (i in 1:length(name_mappings)) {
+		replacement <- names(name_mappings[i])
+		items_to_replace <- name_mappings[i][[replacement]]
+		data$standardized_name <- replace(data$standardized_name, 
+			                                        data$software_name %in% items_to_replace, 
+													replacement)
+	}
+	return(data)
 }
 
-#software_names %.%
-#filter(standardized_name != software_name) %.%
-#arrange(standardized_name)
-
-software_names %.%
+data %.%
 group_by(standardized_name) %.%
 summarize(num_articles = n_distinct(article)) %.%
 arrange(desc(num_articles))
+
+##################
+# Which of these pieces of software perform which functions.
+##################
+
+# get all codes.
+query <- "
+SELECT ?strata ?journal ?article ?selection ?software_name ?code
+WHERE {
+	?article bioj:has_selection ?selection .
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+	{
+	  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	  ?selection ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ; 
+	                                              rdfs:label ?software_name ] ] .
+	} 
+	UNION 
+	{
+  		?selection bioj:has_reference ?ref .
+  		?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	}
+}
+"
+
+all_codes <- data.frame(sparql.rdf(softciteData, paste(prefixes, query, collapse=" ")))
+
+# standardize software names
+all_codes <- standardizeSoftwareNames(all_codes)
+
+count_software_names <- n_distinct(all_codes$standardized_name)
+
+# Takes a pair of codes and compares them in total and then across strata.
+analyzeCode <- function(data,code_list) {
+	
+	# filter the data frame
+	reduced_data <- filter(data, code %in% code_list)
+	# retain ordering of code_list and drop other levels
+	reduced_data$code <- factor(reduced_data$code,levels=code_list)
+	#print(levels(reduced_data$code))
+	
+	reduced_data %.%
+	  group_by(code) %.%
+	  summarize(num_software_with_code=n_distinct(standardized_name))
+	
+	#Plot by strata
+	ggplot(reduced_data,aes(x=code,fill=strata)) + 
+	  geom_bar() + 
+	#  facet_grid(.~code) + 
+	  #scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
+	  scale_x_discrete(name="Strata") +
+	  scale_fill_grey() + 
+ 	 #ggtitle("Major software mention types by journal strata") +
+	  theme(legend.position="none",
+	        panel.grid.major.x = element_blank(),
+			panel.grid.minor.y = element_blank(),
+			panel.border = element_blank(),
+			axis.title.y=element_text(vjust=0.3),
+			axis.title.x=element_text(vjust=0.1),
+			text=element_text(size=10),
+			axis.text.x=element_text(angle=25,hjust=1))
+	 
+	# ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
+	
+}
+
+analyzeCode(all_codes,c("citec:identifiable","citec:unidentifiable"))
+# analyzeCode(all_codes,c("citec:findable","citec:unfindable"))
+# analyzeCode(all_codes,c("citec:access_free", "citec:access_purchase", "citec:no_access"))
+# analyzeCode(all_codes,c("citec:accessible", "citec:no_access"))
+# analyzeCode(all_codes,c("citec:source_available", "citec:source_unavailable"))
+# analyzeCode(all_codes,c("citec:permission_modify", "citec:prohibited_modify"))
+
+
+# standardize codes
+all_codes$standardized_code <- all_codes$code 
+# reduce accessible
+all_codes$standardized_code <- gsub("citec:access_free|citec:access_purchase",
+                                    "citec:accessible",
+									all_codes$standardized_code, perl=TRUE)		
+
+
+# fix modify
+all_codes$standardized_code <- gsub("citec:permission_modify",
+                                    "citec:modifiable",
+									all_codes$standardized_code, perl=TRUE)		
+
+# fix findable version
+# those software_name that are findable but don't also have unfindable version
+# findable_selections <- all_codes %.% filter(code == "citec:findable")
+# unfindable_version_selections <- all_codes %.% filter(code == "citec:unfindable_version")
+# findable_version_selections <- setdiff(findable_selections$selection,unfindable_version_selections$selection)
+# # add a row for a code with standardized code
+# for(i in 1:length(findable_selections)) {
+# 	# find current row.
+# 	current_row <- all_codes %.% filter(selection==findable_selections[[i]])
+# 	print(current_row)
+# }
+# fix modify
+
+all_codes$standardized_code <- gsub("citec:permission_modify",
+                                    "citec:modifiable",
+									all_codes$standardized_code, perl=TRUE)		
+
+
+# remove underscores									
+all_codes$standardized_code <- gsub("_"," ",all_codes$standardized_code, perl=TRUE)		
+								
+# remove citec: prefix									
+all_codes$standardized_code <- gsub("^citec:","",all_codes$standardized_code, perl=TRUE)				
+									
+# capitalize first letter
+all_codes$standardized_code <- gsub("^(.)","\\U\\1",all_codes$standardized_code, perl=TRUE)
+
+# Alternative: comparison of proportions with codes in guttman scale order
+ordered_function_codes <- factor(c("Identifiable","Findable","Accessible","Source available","Modifiable"))
+
+# Convert count of software with the code to proportion of unique software with that code
+function_codes <- filter(all_codes, standardized_code %in% ordered_function_codes)
+function_codes$standardized_code <- factor(function_codes$standardized_code, levels = ordered_function_codes)
+
+function_code_proportions <- function_codes %.%
+  group_by(standardized_code) %.%
+  summarize(num_software_with_code=n_distinct(standardized_name),
+            proportion_with_code=round(num_software_with_code / count_software_names, 2))
+
+# Now plot the proportions.
+ggplot(function_code_proportions,aes(x=standardized_code,y=proportion_with_code)) +
+geom_bar(stat="identity",aes(fill=standardized_code)) +
+scale_fill_grey(start=0.8,end=0.4) + 
+scale_y_continuous(limits=c(0,1))
+
+
+# Breakdown for Findable (ie of those that have version_number, what proportion were findable_version
+findables <- all_codes %.%
+	filter(code %in% c("citec:version_number", "citec:findable_version")) %.%
+	group_by(code) %.%
+	summarize(count=n_distinct(software_name))
+
+#proportion of those with version_numbers that were findable
+total_findable <- filter(findables, code=="citec:findable_version")$count[1]
+total_with_version_num <- filter(findables, code=="citec:version_number")$count[1]
+
+proportion = round(total_findable / total_with_version_num, 2)
+
+
+# Breakdown for Acessible (ie of those that were accessible, how many were available for free vs for pay?)
+accessible <- all_codes %.%
+filter(standardized_code == "Accessible") %.% 
+summarize(total_accessible = n())
+
+all_codes %.%
+filter(standardized_code == "Accessible") %.%
+group_by(code) %.%
+summarize(num_with_code=n_distinct(standardized_name),
+          proportion_with_code=round(num_with_code / accessible$total_accessible, 2))
+
+
 
 
 
@@ -641,8 +789,3 @@ ggplot(tempdata, aes(x=strata, fill=code)) + geom_bar() + scale_y_continuous(nam
 tempdata <- subset(data, code == "citec:source_available" | code == "citec:source_unavailable")
 tempdata$code <- ordered(tempdata$code, levels=c("citec:source_available", "citec:source_unavailable"))
 ggplot(tempdata, aes(x=strata, fill=code)) + geom_bar() + scale_y_continuous(name = "Count of mentions") + scale_x_discrete(name = "strata impact factor (30 articles per strata)")
-
-=======
->>>>>>> External Changes
-=======
->>>>>>> External Changes

@@ -333,9 +333,27 @@ public class TTLRepository {
 
 		// Run all inferences
 		SPINInferences.run(ontModel, newTriples, null, null, false, null);
-		System.out.println("Inferred triples: " + newTriples.size());
+		//System.out.println("Inferred triples: " + newTriples.size());
 		
-		newTriples.write(System.out, "TTL");
+		String fullFileName = path + "../output/inferredStatements.ttl";
+		
+		try {
+			File myFile = new File(fullFileName);
+		
+			if ( ! myFile.exists() ) {
+				myFile.createNewFile();
+			}
+			FileOutputStream oFile = new FileOutputStream(myFile, false); // don't append
+			newTriples.write(oFile, "TTL");
+			oFile.close();
+		}
+		catch(IOException ex){
+        	System.out.println( ex.toString() );
+        	System.out.println("Could not find file: " + fullFileName);
+    	} 
+		
+		
+		
 	}
 	
 		

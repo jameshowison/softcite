@@ -14,5 +14,6 @@ target/
 output/*.csv
 output/*.pdf
 output/*.png
+output/*.ttl
 .RData
 

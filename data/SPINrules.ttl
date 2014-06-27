@@ -61,6 +61,28 @@ bioj:InTextSelection a rdfs:Class ;
 ] ;
 .
 
+bioj:SoftwareMention a rdfs:Class ;
+            spin:rule [ rdf:type sp:Construct ;
+			sp:text """
+	# Moves codes from selections (and references to relevant Mention)
+	CONSTRUCT {
+	  ?this citec:has_software_name true ;
+	        citec:original_name ?software_name .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	  		bioj:from_selection ?sel .
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
+			                                      rdfs:label ?software_name ] ] .
+	  OPTIONAL { ?sel bioj:has_reference ?ref . 
+		         ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
+			                                           rdfs:label ?software_name ] ] .
+				}
+	}"""
+] ;
+.
+
+
 
 #bioj:article a rdfs:Class ;	
 #	spin:rule [ rdf:type sp:Construct ;	

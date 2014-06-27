@@ -119,7 +119,7 @@ bioj:SoftwareMention a rdfs:Class ;
 
             spin:rule [ rdf:type sp:Construct ;
 			sp:text """
-	# Moves version_number and/or date. Either code can be on original or any reference.
+	# Deal with Software Used
 	CONSTRUCT {
 	  ?this citec:has_software_used true ;
 	}
@@ -137,7 +137,7 @@ bioj:SoftwareMention a rdfs:Class ;
 ];	
         spin:rule [ rdf:type sp:Construct ;
 		sp:text """
-# Moves version_number and/or date. Either code can be on original or any reference.
+# And software not used.
 CONSTRUCT {
   ?this citec:has_software_used false ;
 }
@@ -153,6 +153,77 @@ WHERE {
 	
 }"""
 ] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Deal with URL.
+CONSTRUCT {
+  ?this citec:has_url true ;
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+ 		{ 
+ 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] . 
+ 		} UNION {
+ 			?sel bioj:has_reference ?ref . 
+ 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .
+ 		}
+	
+}"""
+] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Deal with no url
+CONSTRUCT {
+  ?this citec:has_url false ;
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+		FILTER NOT EXISTS { ?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] . }
+		FILTER NOT EXISTS {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url  ] ] .
+		}
+	
+}"""
+] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Deal with configuration_details.
+CONSTRUCT {
+  ?this citec:has_configuration_details false ;
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+ 		{ 
+ 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] . 
+ 		} UNION {
+ 			?sel bioj:has_reference ?ref . 
+ 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] .
+ 		}
+	
+}"""
+] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Deal with no url
+CONSTRUCT {
+  ?this citec:has_configuration_details false ;
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+		FILTER NOT EXISTS { ?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] . }
+		FILTER NOT EXISTS {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details  ] ] .
+		}
+	
+}"""
+] ;
+
 .
 
 

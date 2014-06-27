@@ -887,19 +887,5 @@ no_access -> is_accessible = F
 source_available -> is_source_available = T / F
 permission_modify -> is_explicitly_modifiable = T /F
  
-SELECT
-WHERE {
-	?article
-}
-	
-howto: use references_same_software
-	
+Move typing from R analysis to SPIN rules.  Should be pretty simple combination of true and falses.
 
-article_software_mention is identifiable/findable/version_findable
-
-article_software_mention references software_package
-
-software_package is accessible/free/purchase/source/modify.
-
-
-Each software package should have a URL, then the accessibility codes should be attached to that URL.  Each article should have a bioj:mentions_software

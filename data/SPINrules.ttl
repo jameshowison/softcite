@@ -70,18 +70,18 @@ bioj:selection a rdfs:Class ;
 	}"""
 	] ;
 
-	spin:rule [ rdf:type sp:Construct ;	
+	spin:rule [ rdf:type sp:Construct ;
 				spin:thisUnbound "true"^^xsd:boolean ;
 				sp:text """
-	# Moves all codes directly onto selection, even if they originated
-	# on a reference.
+	 # Moves all codes directly onto selection, even if they originated
+	 # on a reference.
 	CONSTRUCT {
 	  ?this ca:isTargetOf [ ca:appliesCode ?coding ] .
-	} 
-	WHERE { 
-      ?article rdf:type bioj:article .
-      ?article bioj:selection ?this .
-      ?this bioj:has_reference ?ref .
+	}
+	WHERE {
+	      ?article rdf:type bioj:article .
+	      ?article bioj:selection ?this .
+	      ?this bioj:has_reference ?ref .
 	  ?ref ca:isTargetOf [ ca:appliesCode ?coding ] .
 	}"""
 	] ;

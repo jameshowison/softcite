@@ -756,7 +756,7 @@ scale_fill_grey(start=0.8,end=0.4) +
 scale_y_continuous(limits=c(0,1))
 
 # Hmmm, how many were unidentifiable?
-all_codes %.% 
+all_codes %.%
 filter(code == "citec:unidentifiable") %.%
 summarize(num = n_distinct(article_software))
 

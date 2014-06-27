@@ -94,6 +94,13 @@ public class AppTest
 	}
 	
 	@Test
+	public void countReferenceSelections()
+	{
+		assertEquals(59, TTLRepository.countReferenceSelections());
+	}
+	
+	
+	@Test
 	public void testSPINoutput()
 	{
 		TTLRepository.runSPINrules();

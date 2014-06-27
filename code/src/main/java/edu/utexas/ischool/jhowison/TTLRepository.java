@@ -32,7 +32,7 @@ import org.topbraid.spin.util.JenaUtil;
 
 public class TTLRepository {
 	
-	public static Model model;
+	public static InfModel model;
 	
 	public static String path = "/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/data/";
 	
@@ -45,14 +45,34 @@ public class TTLRepository {
 //		String myPath = fileURL.getPath();  // this is throwing an NPE.
 //		Model model = FileManager.get().loadModel(myPath);
 		
-		this.model = FileManager.get().loadModel(
+		Model codedData =  FileManager.get().loadModel(
 			path + "SoftwareCitationDataset.ttl" 
 		);
 		
-		if (this.model == null) {
+		if (codedData == null) {
 			throw new IllegalArgumentException(
 			"ttl file not found");
 		}
+		
+		this.model = ModelFactory.createRDFSModel(codedData);
+		
+		this.model.read(path + "VocabularyStatements.ttl");
+		
+		// Model infStatements = FileManager.get().loadModel(
+		// 	path + "VocabularyStatements.ttl"
+		// );
+		//
+		// if (infStatements == null) {
+		// 	throw new IllegalArgumentException(
+		// 	"inf ttl file not found");
+		// }
+		//
+		// this.model.add(infStatements)
+		//
+		// // Add a basic rdfs reasoner.
+		// InfModel inf = ModelFactory.createRDFSModel(this.model)
+			
+			
 	}
 	
 	public Model getModel() {
@@ -278,6 +298,20 @@ public class TTLRepository {
 		
 		return results;
 	}
+	
+	public static int countReferenceSelections() {
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
+		
+		queryStr.append("SELECT (COUNT(DISTINCT ?ref) as ?refCount)");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?ref rdf:type bioj:ReferenceSelection . ");
+		queryStr.append("}");
+		
+		
+		return queryReturnsSingleInt(queryStr, "refCount");
+	}
+	
+	
 	
 	public static void runSPINrules() {
 	//	model.read(

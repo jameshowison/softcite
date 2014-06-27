@@ -76,10 +76,10 @@ public class AppTest
 	@Test
 	public void getCodedObjectCount()
 	{
-		assertEquals(2284, TTLRepository.getCodedObjectCount());
+		assertEquals(2286, TTLRepository.getCodedObjectCount());
 	}
 	
-	@Test
+	@Ignore
 	public void codeTypeCount()
 	{
 		assertEquals(31, TTLRepository.getCodeTypeCount());
@@ -93,7 +93,7 @@ public class AppTest
 		);
 	}
 	
-	@Ignore
+	@Test
 	public void testSPINoutput()
 	{
 		TTLRepository.runSPINrules();

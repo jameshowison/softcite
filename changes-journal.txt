@@ -847,6 +847,53 @@ For identifiable/findable/findable version those should be for software-article.
 
 article contains article_software_link (merger of all mentions in that article)
 	software_mention contributes to article_software_link.
+	
+
+Declarative style:
+
+Create a mention by merging all of the codes from references.
+
+Create a ReferenceSelection type for any selection that is the RHS of a has_reference statement.
+Create a InTextSelection type for any selection that has the "in-text_mention" code.
+
+
+Create a new URI for each InTextSelection as SoftwareMention
+
+Move all of the codes for each selection and any reference onto that SoftwareMention.
+Include links back to the Selections
+
+Using standardized_names, create a SoftwarePackage URI, one for each standardized Name.
+
+For each Article
+  For each SoftwarePackage
+  	if SoftwarePackage in the article
+
+Create SoftwareInArticleLink
+link to each of the SoftwareMention that map to it using the software_name <-> standardized_name link.
+link to the SoftwarePackage through standardized_name -> software_name link.
+Add attributes according to tags on SoftwareMention
+coded
+identifiable ->  is_identifiable TRUE / FALSE
+findable -> is_findable TRUE / FALSE
+creator -> is_credited TRUE / FALSE
+
+Add attributes to SoftwarePackages, according to tags on linked SoftwareInArticleLink -> Selections
+if any Selection is coded 
+
+acesss_purchase -> is_accessible = T, is_free = F
+access_free -> is_accessible = T, is_free = T
+no_access -> is_accessible = F
+
+source_available -> is_source_available = T / F
+permission_modify -> is_explicitly_modifiable = T /F
+ 
+SELECT
+WHERE {
+	?article
+}
+	
+howto: use references_same_software
+	
 
 article_software_mention is identifiable/findable/version_findable
 

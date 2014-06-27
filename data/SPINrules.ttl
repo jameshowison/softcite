@@ -19,7 +19,7 @@
 bioj:selection a rdfs:Class ;
             spin:rule [ rdf:type sp:Construct ;
 			sp:text """
-	# Step 1: Asserts a new type for selections that are software mentions.
+	# Asserts a new type for selections that are software mentions.
 	CONSTRUCT {
 	  ?this rdf:type bioj:InTextSelection .
 	}
@@ -29,17 +29,38 @@ bioj:selection a rdfs:Class ;
 ] ;
 .
 
-bioj:ReferenceSelection a rdfs:Class ;
+# bioj:ReferenceSelection a rdfs:Class ;
+#             spin:rule [ rdf:type sp:Construct ;
+# 			sp:text """
+# 	CONSTRUCT {
+# 	  ?this rdf:type bioj:DectectedReference .
+# 	}
+# 	WHERE {
+# 	  ?this  rdf:type bioj:ReferenceSelection .
+# 	}"""
+# ] ;
+# .
+
+bioj:InTextSelection a rdfs:Class ;
             spin:rule [ rdf:type sp:Construct ;
 			sp:text """
+	# Asserts a new type for selections that are software mentions.
 	CONSTRUCT {
-	  ?this rdf:type bioj:DectectedReference .
+	  ?newNode rdf:type bioj:SoftwareMention ;
+	           bioj:from_selection ?this .
 	}
 	WHERE {
-	  ?this  rdf:type bioj:ReferenceSelection .
+	  ?this  rdf:type bioj:InTextSelection .
+	  BIND( URI ( CONCAT ("http://james.howison.name/ontologies/software-citation-coding#",
+	              strafter(str(?this), "#"),
+				  "-mention" )
+				 ) 
+				  as ?newNode 
+		   )
 	}"""
 ] ;
 .
+
 
 #bioj:article a rdfs:Class ;	
 #	spin:rule [ rdf:type sp:Construct ;	

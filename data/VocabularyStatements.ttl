@@ -17,4 +17,4 @@
 # These are used by a basic reasoner to inpute additional statements
 ##################################
 
-bioj:has_reference rdfs:domain bioj:ReferenceSelection .
+bioj:has_reference rdfs:range bioj:ReferenceSelection .

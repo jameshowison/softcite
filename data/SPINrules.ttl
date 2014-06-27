@@ -16,7 +16,8 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 
-bioj:selection a rdfs:Class ;spin:rule [ rdf:type sp:Construct ;
+bioj:selection a rdfs:Class ;
+            spin:rule [ rdf:type sp:Construct ;
 			sp:text """
 	# Step 1: Asserts a new type for selections that are software mentions.
 	CONSTRUCT {
@@ -26,6 +27,19 @@ bioj:selection a rdfs:Class ;spin:rule [ rdf:type sp:Construct ;
 	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
 	}"""
 ] ;
+.
+
+bioj:ReferenceSelection a rdfs:Class ;
+            spin:rule [ rdf:type sp:Construct ;
+			sp:text """
+	CONSTRUCT {
+	  ?this rdf:type bioj:DectectedReference .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:ReferenceSelection .
+	}"""
+] ;
+.
 
 #bioj:article a rdfs:Class ;	
 #	spin:rule [ rdf:type sp:Construct ;	
@@ -129,7 +143,7 @@ bioj:selection a rdfs:Class ;spin:rule [ rdf:type sp:Construct ;
 #	}"""
 #	] ;
 
-.
+#.
 	
 #bioj:SoftwareMention a rdfs:Class ;
 #	spin:rule [ rdf:type sp:Construct ;	

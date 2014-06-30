@@ -12,40 +12,48 @@
 
 @prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
 
-bioj:mapping-imagej 
-		rdf:type bioj:name_mapping ;
+citec:software-imagej 
+		rdf:type citec:software_package ;
 		rdfs:label "ImageJ" ;
-		bioj:alternative_name "Image J" ; 
+		citec:alternative_name "Image J" ; 
 .
 
-bioj:mapping-blast  
-		rdf:type bioj:name_mapping ;
+citec:software-blast  
+		rdf:type citec:software_package ;
 		rdfs:label "BLAST" ;
-		bioj:alternative_name "Basic Local Alignment Search Tool (BLAST)" ; 
-		bioj:alternative_name "TBLASTN" ; 
-		bioj:alternative_name "BLASTP" ; 
-		bioj:alternative_name "BLASTX" ; 
-		bioj:alternative_name "BLASTN" ; 
+		citec:alternative_name "Basic Local Alignment Search Tool (BLAST)" ,
+							  "TBLASTN" ,
+			 				  "BLASTP" ,
+							  "BLASTX" ,
+							  "BLASTN" ; 
 .
 
-# name_mappings <- list(
-# 	"ImageJ"             = c("Image J"),
-# 	"Excel"               = c("excel"),
-# 	"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
-# 	                          "TBLASTN",
-# 							  "BLASTP",
-# 							  "BLASTX",
-# 							  "BLASTN"),
-# 	"SPSS"                = c("statistical Packages for the Social Sciences"),
-# 	"SAS"                 = c("Statistical Analysis Software"),
-# 	"Stereo Investigator" = c("StereoInvestigator"),
-# 	"USeq"                = c("USeq IntersectLists",
-# 	                          "USeq IntersectRegions",
-# 							  "USeq AggregatePlots",
-# 							  "USeq FNG"),
-# 	"PAUP"                = c("PAUP*"),
-# 	"ClustalW"            = c("CLUSTAL W",
-# 							  "CLUSTALW",
-# 							  "ClustalX")
-# )
+citec:software-stereo-investigator  
+		rdf:type citec:software_package ;
+		rdfs:label "Stereo Investigator" ;
+		citec:alternative_name "StereoInvestigator" ; 
+.
+
+citec:software-useq  
+		rdf:type citec:software_package ;
+		rdfs:label "Useq" ;
+		citec:alternative_name "USeq IntersectLists",
+ 	                          "USeq IntersectRegions",
+ 							  "USeq AggregatePlots", 							  
+							  "USeq FNG" ; 
+.
+
+citec:software-paup 
+		rdf:type citec:software_package ;
+		rdfs:label "PAUP" ;
+		citec:alternative_name "PAUP*" ;
+.
+
+citec:software-clustal-w
+		rdf:type citec:software_package ;
+		rdfs:label "ClustalW" ;
+		citec:alternative_name "CLUSTAL W",
+ 							  "CLUSTALW",
+ 							  "ClustalX" ;
+.
 

@@ -223,6 +223,17 @@ WHERE {
 	
 }"""
 ] ;
+#         spin:rule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Copy name to standardized_name
+# CONSTRUCT {
+#   ?this citec:standardized_name ?name ;
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     citec:original_name ?name .
+# }"""
+# ] ;
 
 .
 

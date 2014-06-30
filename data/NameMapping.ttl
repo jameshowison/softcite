@@ -1,0 +1,51 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+bioj:mapping-imagej 
+		rdf:type bioj:name_mapping ;
+		rdfs:label "ImageJ" ;
+		bioj:alternative_name "Image J" ; 
+.
+
+bioj:mapping-blast  
+		rdf:type bioj:name_mapping ;
+		rdfs:label "BLAST" ;
+		bioj:alternative_name "Basic Local Alignment Search Tool (BLAST)" ; 
+		bioj:alternative_name "TBLASTN" ; 
+		bioj:alternative_name "BLASTP" ; 
+		bioj:alternative_name "BLASTX" ; 
+		bioj:alternative_name "BLASTN" ; 
+.
+
+# name_mappings <- list(
+# 	"ImageJ"             = c("Image J"),
+# 	"Excel"               = c("excel"),
+# 	"BLAST"               = c("Basic Local Alignment Search Tool (BLAST)",
+# 	                          "TBLASTN",
+# 							  "BLASTP",
+# 							  "BLASTX",
+# 							  "BLASTN"),
+# 	"SPSS"                = c("statistical Packages for the Social Sciences"),
+# 	"SAS"                 = c("Statistical Analysis Software"),
+# 	"Stereo Investigator" = c("StereoInvestigator"),
+# 	"USeq"                = c("USeq IntersectLists",
+# 	                          "USeq IntersectRegions",
+# 							  "USeq AggregatePlots",
+# 							  "USeq FNG"),
+# 	"PAUP"                = c("PAUP*"),
+# 	"ClustalW"            = c("CLUSTAL W",
+# 							  "CLUSTALW",
+# 							  "ClustalX")
+# )
+

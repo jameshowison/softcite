@@ -261,6 +261,21 @@ public class TTLRepository {
 		qe.close();
 
 	}
+	
+	private static void formatResultSet (ParameterizedSparqlString paramQueryString, Model model) {
+		Query query = paramQueryString.asQuery();
+		
+		// Execute the query and obtain results
+		QueryExecution qe = QueryExecutionFactory.create(query, model);
+		ResultSet results = qe.execSelect();
+		
+		// Output query results	
+		ResultSetFormatter.out(System.out, results, query);
+		
+		// Important - free up resources used running the query
+		qe.close();
+
+	}
 
 	public static void getSoftwarePackageList() {
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(model);
@@ -311,6 +326,82 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "refCount");
 	}
 	
+	// Creates a URI for each software package in dataset
+	public static void createSoftwarePackages(Model inferred) {
+		// Read in InferredStatements.ttl
+		// standardized_name is a copy of original_name
+
+		Model mappings = FileManager.get().loadModel(
+			path + "NameMapping.ttl" ); 
+
+		// Creates using prefix mapping
+		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(mappings);
+		
+		// Query should get all of the names
+		queryStr.append("SELECT ?mapping ?alternative_name ");
+		queryStr.append("WHERE {");
+		queryStr.append("  ?mapping rdf:type bioj:name_mapping ; ");
+		queryStr.append("           rdfs:label ?standardized_name ; ");
+		queryStr.append("           bioj:alternative_name ?alternative_name  . ");
+		queryStr.append("}");
+		
+//		formatResultSet(queryStr,mappings);
+		
+		QueryExecution qe = QueryExecutionFactory.create(queryStr.asQuery(), mappings);
+		Iterator<QuerySolution> results = qe.execSelect();
+		
+		
+		
+		for ( ; results.hasNext() ; ) {
+			QuerySolution soln = results.next() ;
+
+			RDFNode mappingNode = soln.get("mapping");
+			RDFNode nameNode = soln.get("alternative_name");
+
+			ParameterizedSparqlString constructQuery = new ParameterizedSparqlString(inferred);
+
+			//This will be parameterized with each result above and results added to inferred
+			constructQuery.append("CONSTRUCT  { ?mention bioj:mentions_software ?mapping } ");
+			constructQuery.append("WHERE {");
+			constructQuery.append("  ?mention citec:original_name ?alternative_name . ");
+			constructQuery.append("}");
+
+			constructQuery.setParam("mapping", mappingNode);
+			constructQuery.setParam("alternative_name", nameNode);
+
+	//		System.out.println(constructQuery.toString());
+
+			QueryExecution qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), inferred);
+
+			Model constructResults = qeConstruct.execConstruct();
+			mappings.add(constructResults);
+		}
+
+		String fullFileName = path + "../output/inferredStatementsMappings.ttl";
+
+		try {
+			File myFile = new File(fullFileName);
+
+			if ( ! myFile.exists() ) {
+				myFile.createNewFile();
+			}
+			FileOutputStream oFile = new FileOutputStream(myFile, false); // don't append
+			mappings.write(oFile, "TTL");
+			oFile.close();
+		}
+		catch(IOException ex){
+		        	System.out.println( ex.toString() );
+		        	System.out.println("Could not find file: " + fullFileName);
+		    	}
+		// change standardized to
+		// Get all original_names
+		// For each name, see if it is a Key of the Map
+
+		// Create a SoftwarePackage URI
+		// with rdfs:label standardized_name
+		//      has_name_form standardized_name
+		// if name is in alternatives
+	}
 	
 	
 	public static void runSPINrules() {
@@ -336,6 +427,8 @@ public class TTLRepository {
 		//System.out.println("Inferred triples: " + newTriples.size());
 		
 		String fullFileName = path + "../output/inferredStatements.ttl";
+		
+		createSoftwarePackages(newTriples);
 		
 		try {
 			File myFile = new File(fullFileName);

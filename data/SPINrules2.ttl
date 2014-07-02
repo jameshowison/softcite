@@ -16,8 +16,14 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 
+# Create a class of rules that run first.
+# This is needed to do a if not true then false clean up on is_credited.
+bioj:runFirstRule rdfs:subPropertyOf spin:rule .
+
+bioj:runFirstRule spin:nextRuleProperty spin:rule .
+
 bioj:SoftwareMention a rdfs:Class ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Create software packages for each non-alternative
 	CONSTRUCT {
@@ -38,7 +44,7 @@ bioj:SoftwareMention a rdfs:Class ;
 		    ) as ?software_package )
 	}"""
 ] ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Create ArticleSoftwareLinks
 	CONSTRUCT {
@@ -66,7 +72,12 @@ bioj:SoftwareMention a rdfs:Class ;
 .
 
 bioj:ArticleSoftwareLink a rdfs:Class ;
-    spin:rule [ rdf:type sp:Construct ;
+
+#####################
+# Identifiable / Unidentifiable
+####################
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Move identifiable true code to ArticleSoftwareLink
 	# True if any are true, but that is dealt with later.
@@ -85,10 +96,35 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 		}
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move identifiable true code to ArticleSoftwareLink
+	# True if any are true, but that is dealt with later.
+	CONSTRUCT {
+		?this citec:is_identifiable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
+		} UNION {
+			?sel bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
+		}
+	}"""
+] ;
+
+#####################
+# Findable / Unfindable
+####################
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Move findable true code to ArticleSoftwareLink
-	# True if any selections were coded findable; false dealt with later.
+	# True if any selections were coded true
 	CONSTRUCT {
 		?this citec:is_findable true .
 	}
@@ -104,7 +140,26 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 		}
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable true code to ArticleSoftwareLink
+	# True if any selections were coded findable; false dealt with later.
+	CONSTRUCT {
+		?this citec:is_findable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
+		}
+	}"""
+] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret creator codes.
 	CONSTRUCT {
@@ -123,12 +178,26 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}"""
 ] ;
 
+# This is the last rule to run (because it's not a bioj:runFirstRule)
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_credited false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		FILTER NOT EXISTS { ?this citec:is_credited true . }
+	}"""
+] ;
+
 
 .
 
 
 bioj:SoftwarePackage a rdfs:Class ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
@@ -147,7 +216,7 @@ bioj:SoftwarePackage a rdfs:Class ;
 		FILTER (?code = citec:access_purchase || ?code = citec:access_free)
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
@@ -165,7 +234,7 @@ bioj:SoftwarePackage a rdfs:Class ;
 		}
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
@@ -183,7 +252,7 @@ bioj:SoftwarePackage a rdfs:Class ;
 		}
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
@@ -201,7 +270,7 @@ bioj:SoftwarePackage a rdfs:Class ;
 		}
 	}"""
 ] ;
-    spin:rule [ rdf:type sp:Construct ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
@@ -218,7 +287,8 @@ bioj:SoftwarePackage a rdfs:Class ;
 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:permission_modify ] ] .
 		}
 	}"""
-] ;    spin:rule [ rdf:type sp:Construct ;
+] ;    
+    bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {

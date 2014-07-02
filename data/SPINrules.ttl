@@ -44,7 +44,7 @@ bioj:selection a rdfs:Class ;
 bioj:InTextSelection a rdfs:Class ;
             spin:rule [ rdf:type sp:Construct ;
 			sp:text """
-	# Asserts a new type for selections that are software mentions.
+	# Creates a new node for SoftwareMentions
 	CONSTRUCT {
 	  ?newNode rdf:type bioj:SoftwareMention ;
 	           bioj:from_selection ?this .
@@ -223,17 +223,6 @@ WHERE {
 	
 }"""
 ] ;
-#         spin:rule [ rdf:type sp:Construct ;
-# 		sp:text """
-# # Copy name to standardized_name
-# CONSTRUCT {
-#   ?this citec:standardized_name ?name ;
-# }
-# WHERE {
-#   ?this  rdf:type bioj:SoftwareMention ;
-# 	     citec:original_name ?name .
-# }"""
-# ] ;
 
 .
 

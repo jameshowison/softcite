@@ -76,10 +76,12 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 		?this rdf:type bioj:ArticleSoftwareLink ;
 		      citec:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
-		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
-								  ca:hasCoder "jbullard" ;
-								  ca:appliesCode [ rdf:type citec:identifiable ];
-								] ;
+		{ 
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
+		} UNION {
+			?sel bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
+		}
 	}"""
 ] ;
     spin:rule [ rdf:type sp:Construct ;
@@ -93,27 +95,30 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 		?this rdf:type bioj:ArticleSoftwareLink ;
 		      citec:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
-		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
-								  ca:hasCoder "jbullard" ;
-								  ca:appliesCode [ rdf:type citec:findable ];
-								] ;
+		{ 
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
+		}
 	}"""
 ] ;
     spin:rule [ rdf:type sp:Construct ;
 	sp:text """
-	# Move creator true code to ArticleSoftwareLink
-	# True if any selections were coded creator; false dealt with later.
+	# Interpret creator codes.
 	CONSTRUCT {
-		?this citec:is_findable true .
+		?this citec:is_credited true .
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
 		      citec:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
-		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
-								  ca:hasCoder "jbullard" ;
-								  ca:appliesCode [ rdf:type citec:findable ];
-								] ;
+		{ 
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:creator ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:creator ] ] ;
+		}
 	}"""
 ] ;
 

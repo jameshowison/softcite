@@ -42,7 +42,7 @@ bioj:SoftwareMention a rdfs:Class ;
 	# Create ArticleSoftwareLinks
 	CONSTRUCT {
 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
-	  	        citec:mentions_software ?software_package ;
+	  	        bioj:mentions_software ?software_package ;
 				citec:from_article ?article ;
 				citec:from_mention ?this .
 	  ?this citec:article_software_link ?article_software_link .
@@ -62,6 +62,62 @@ bioj:SoftwareMention a rdfs:Class ;
 	   		    ) as ?article_software_link )
 	}"""
 ] ;
+.
+
+bioj:ArticleSoftwareLink a rdfs:Class ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move identifiable true code to ArticleSoftwareLink
+	# True if any are true, but that is dealt with later.
+	CONSTRUCT {
+		?this citec:is_identifiable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
+								  ca:hasCoder "jbullard" ;
+								  ca:appliesCode [ rdf:type citec:identifiable ];
+								] ;
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable true code to ArticleSoftwareLink
+	# True if any selections were coded findable; false dealt with later.
+	CONSTRUCT {
+		?this citec:is_findable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
+								  ca:hasCoder "jbullard" ;
+								  ca:appliesCode [ rdf:type citec:findable ];
+								] ;
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move creator true code to ArticleSoftwareLink
+	# True if any selections were coded creator; false dealt with later.
+	CONSTRUCT {
+		?this citec:is_findable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      citec:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		?sel 	ca:isTargetOf   [ rdf:type ca:CodeApplication ;
+								  ca:hasCoder "jbullard" ;
+								  ca:appliesCode [ rdf:type citec:findable ];
+								] ;
+	}"""
+] ;
+
+
 .
 
 

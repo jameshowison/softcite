@@ -327,7 +327,7 @@ public class TTLRepository {
 	}
 	
 	// Creates a URI for each software package in dataset
-	public static void createSoftwarePackages(Model inferred) {
+	public static Model createSoftwarePackages(Model inferred) {
 		// Read in InferredStatements.ttl
 		// standardized_name is a copy of original_name
 
@@ -373,25 +373,27 @@ public class TTLRepository {
 			QueryExecution qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), inferred);
 
 			Model constructResults = qeConstruct.execConstruct();
-			mappings.add(constructResults);
+			inferred.add(constructResults);
 		}
+		
+		return inferred;
 
-		String fullFileName = path + "../output/inferredStatementsMappings.ttl";
-
-		try {
-			File myFile = new File(fullFileName);
-
-			if ( ! myFile.exists() ) {
-				myFile.createNewFile();
-			}
-			FileOutputStream oFile = new FileOutputStream(myFile, false); // don't append
-			mappings.write(oFile, "TTL");
-			oFile.close();
-		}
-		catch(IOException ex){
-		        	System.out.println( ex.toString() );
-		        	System.out.println("Could not find file: " + fullFileName);
-		    	}
+		// String fullFileName = path + "../output/inferredStatementsMappings.ttl";
+//
+// 		try {
+// 			File myFile = new File(fullFileName);
+//
+// 			if ( ! myFile.exists() ) {
+// 				myFile.createNewFile();
+// 			}
+// 			FileOutputStream oFile = new FileOutputStream(myFile, false); // don't append
+// 			mappings.write(oFile, "TTL");
+// 			oFile.close();
+// 		}
+// 		catch(IOException ex){
+// 		        	System.out.println( ex.toString() );
+// 		        	System.out.println("Could not find file: " + fullFileName);
+// 		    	}
 		// change standardized to
 		// Get all original_names
 		// For each name, see if it is a Key of the Map
@@ -425,9 +427,33 @@ public class TTLRepository {
 		SPINInferences.run(ontModel, newTriples, null, null, false, null);
 		//System.out.println("Inferred triples: " + newTriples.size());
 		
-		String fullFileName = path + "../output/inferredStatements.ttl";
+		// Do name mapping.
+		newTriples = createSoftwarePackages(newTriples);
 		
-		createSoftwarePackages(newTriples);
+		// Continue with other SPIN rules
+		// first add all triples to original model.
+		model.add(newTriples);
+		// Now add new rules
+		model.read(path + "SPINrules2.ttl");
+		
+		OntModel ontModel2 = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
+		
+		// Create and add Model for inferred triples
+		// reuse prefixes.
+		Model newTriples2 = ModelFactory.createDefaultModel();
+		newTriples2.setNsPrefixes(model);
+		ontModel2.addSubModel(newTriples2);
+
+		// Register locally defined functions
+		SPINModuleRegistry.get().registerAll(ontModel2, null);
+
+		// Run all inferences
+		SPINInferences.run(ontModel2, newTriples2, null, null, false, null);
+		
+		newTriples.add(newTriples2);
+		
+		// save out the newTriples.
+		String fullFileName = path + "../output/inferredStatements.ttl";
 		
 		try {
 			File myFile = new File(fullFileName);

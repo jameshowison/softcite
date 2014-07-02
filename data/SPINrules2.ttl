@@ -21,8 +21,9 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Create software packages for each non-alternative
 	CONSTRUCT {
-	  ?software_package a citec:software_package ;
-	                    rdfs:label ?name .
+	  ?software_package a bioj:SoftwarePackage ;
+	                    rdfs:label ?name ;
+						bioj:mentioned_in ?this .
 	  ?this bioj:mentions_software ?software_package ;
 	           
 	}
@@ -125,4 +126,116 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 
 .
 
+
+bioj:SoftwarePackage a rdfs:Class ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_accessible true
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+		}
+		FILTER (?code = citec:access_purchase || ?code = citec:access_free)
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_accessible false
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:no_access ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:no_access ] ] .
+		}
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_source_accessible true
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:source_available ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:source_available ] ] .
+		}
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_source_accessible false
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:source_unavailable ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:source_unavailable ] ] .
+		}
+	}"""
+] ;
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_explicitly_modifiable true
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:permission_modify ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:permission_modify ] ] .
+		}
+	}"""
+] ;    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_explicitly_modifiable false
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:prohibited_modify ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:prohibited_modify ] ] .
+		}
+	}"""
+] ;
+
+.
 

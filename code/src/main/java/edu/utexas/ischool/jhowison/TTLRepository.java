@@ -327,12 +327,12 @@ public class TTLRepository {
 	}
 	
 	// Creates a URI for each software package in dataset
-	public static Model createSoftwarePackages(Model inferred) {
+	public static Model createSoftwarePackages(Model inferred, String mappingFile) {
 		// Read in InferredStatements.ttl
 		// standardized_name is a copy of original_name
 
 		Model mappings = FileManager.get().loadModel(
-			path + "NameMapping.ttl" ); 
+			path + mappingFile ); 
 
 		// Creates using prefix mapping
 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(mappings);
@@ -360,7 +360,8 @@ public class TTLRepository {
 
 			//This will be parameterized with each result above and results added to inferred
 			constructQuery.append("CONSTRUCT {");
-			constructQuery.append("  ?mention bioj:mentions_software ?software_package } ");
+			constructQuery.append("  ?mention bioj:mentions_software ?software_package . ");
+			constructQuery.append("  ?software_package bioj:mentioned_in ?mention . } ");
 			constructQuery.append("WHERE {");
 			constructQuery.append("  ?mention citec:original_name ?alternative_name . ");
 			constructQuery.append("}");
@@ -375,6 +376,9 @@ public class TTLRepository {
 			Model constructResults = qeConstruct.execConstruct();
 			inferred.add(constructResults);
 		}
+		
+		// Add SoftwarePackages for these mappings, others are created later.
+		inferred.add(mappings);
 		
 		return inferred;
 
@@ -408,20 +412,19 @@ public class TTLRepository {
 	public static void runSPINrules() {
 
 		// Each set of rules runs, saving the results into a file which is the 
-		// starting point for the next set of rules.
-		
+		// starting point for the next set of rules.		
 		saveResults(model);
 		
 		Model resultsModel = runSPINruleSet(model, "SPINrules.ttl");
 		saveResults(resultsModel);
 		
-		// resultsModel = createSoftwarePackages(newTriples);
-// 		saveResults(resultsModel);
+		resultsModel = createSoftwarePackages(resultsModel, "NameMapping.ttl");
+		saveResults(resultsModel);
+
+ 		resultsModel = runSPINruleSet(resultsModel, "SPINrules2.ttl");
+ 		saveResults(resultsModel);
 //
-// 		resultsModel = runSPINrules(model, "SPINrules2.ttl");
-// 		saveResults(resultsModel);
-//
-// 		resultsModel = runSPINrules(model, "SPINCategorizationRules.ttl");
+// 		resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
 // 		saveResults(resultsModel);
 	}
 	

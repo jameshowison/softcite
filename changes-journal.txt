@@ -934,6 +934,8 @@ Seems I have done the types replication via SPIN?
 
 There was some confusion with multiple runs of the SPIN rules?  I have one set that runs, then some Java stuff happens about project names, then another set runs.
 
+Hmmmm, the name mappings aren't working perfectly.  Not sure if I should add the ones with alternatives, or let the SPIN rules do that.  Checking now.
 
+Ok, seems that it was a missing inverse statement.
 
 

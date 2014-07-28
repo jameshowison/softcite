@@ -51,7 +51,7 @@ bioj:SoftwareMention a rdfs:Class ;
 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
 	  	        bioj:mentions_software ?software_package ;
 				citec:from_article ?article ;
-				citec:from_mention ?this .
+				bioj:from_mention ?this .
 	  ?this citec:article_software_link ?article_software_link .
 	}
 	WHERE {
@@ -86,7 +86,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
@@ -106,7 +106,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
@@ -130,7 +130,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
@@ -149,7 +149,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
@@ -167,7 +167,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:creator ] ] ;
@@ -187,7 +187,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      citec:from_mention ?mention .
+		      bioj:from_mention ?mention .
 		FILTER NOT EXISTS { ?this citec:is_credited true . }
 	}"""
 ] ;
@@ -201,19 +201,38 @@ bioj:SoftwarePackage a rdfs:Class ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
-		?this citec:is_accessible true
+		?this citec:is_accessible true ;
+		      citec:is_free       true .
 	}
 	WHERE {
 		?this rdf:type bioj:SoftwarePackage ;
 		      bioj:mentioned_in ?mention .
 		?mention bioj:from_selection ?sel .
 		{ 
-			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:access_free ] ] . 
 		} UNION {
 			?sel bioj:has_reference ?ref . 
-	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:access_free ] ] .
 		}
-		FILTER (?code = citec:access_purchase || ?code = citec:access_free)
+	}"""
+] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_accessible true ;
+		      citec:is_free       false .
+	}
+	WHERE {
+		?this rdf:type bioj:SoftwarePackage ;
+		      bioj:mentioned_in ?mention .
+		?mention bioj:from_selection ?sel .
+		{ 
+			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:access_purchase ] ] . 
+		} UNION {
+			?sel bioj:has_reference ?ref . 
+	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:access_purchase ] ] .
+		}
 	}"""
 ] ;
     bioj:runFirstRule [ rdf:type sp:Construct ;

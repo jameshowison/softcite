@@ -886,6 +886,54 @@ no_access -> is_accessible = F
 
 source_available -> is_source_available = T / F
 permission_modify -> is_explicitly_modifiable = T /F
+
+===============================================================
+Wed Jul  2 15:23:57 CDT 2014
+===============================================================
+
  
 Move typing from R analysis to SPIN rules.  Should be pretty simple combination of true and falses.
+
+===============================================================
+Wed Jul  2 16:27:14 CDT 2014
+===============================================================
+
+Discovered, in a2000-42-NATURE-C05 that the software has 2 names, one in the text, one in the reference.  Merging those through the name mapping from CNS to 
+
+Hmmm, this is because mentions end up with multiple original_names.
+
+Change alterntive strategy.
+# replace alternatives with standard
+INSERT {
+  ?s ca:appliesCode [ rdf:type citec:software_name ;
+    			      rdfs:label "CNS" ]
+}
+WHERE {
+  ?s ca:appliesCode [ rdf:type citec:software_name ;
+    				  rdfs:label "Crystallography & NMR system" ]
+}
+
+# delete alternatives
+DELETE {
+  ?s ca:appliesCode ?ca
+}
+WHERE {
+  ?ca rdf:type citec:software_name ;
+      rdfs:label "Crystallography & NMR system" 
+}
+
+Not clear I can do this right now.
+
+Going to replicate types analysis via SPIN.
+
+===============================================================
+Mon Jul 28 09:25:04 CDT 2014
+===============================================================
+
+Seems I have done the types replication via SPIN?
+
+There was some confusion with multiple runs of the SPIN rules?  I have one set that runs, then some Java stuff happens about project names, then another set runs.
+
+
+
 

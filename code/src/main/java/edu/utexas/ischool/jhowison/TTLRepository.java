@@ -452,7 +452,31 @@ public class TTLRepository {
 		
 		newTriples.add(newTriples2);
 		
-		// save out the newTriples.
+		// Now do the categorization rules
+		model.add(newTriples2);
+		
+		model.read(path + "SPINCategorizationRules.ttl");
+	
+		OntModel ontModel3 = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
+	
+		// Create and add Model for inferred triples
+		// reuse prefixes.
+		Model newTriples3 = ModelFactory.createDefaultModel();
+		newTriples3.setNsPrefixes(model);
+		ontModel3.addSubModel(newTriples3);
+
+		// Register locally defined functions
+		SPINModuleRegistry.get().registerAll(ontModel3, null);
+
+		// Run all inferences
+		SPINInferences.run(ontModel3, newTriples3, null, null, false, null);
+	
+		newTriples.add(newTriples3);
+		
+		// Save out everything together
+		newTriples.add(model);
+		
+		// save out everything
 		String fullFileName = path + "../output/inferredStatements.ttl";
 		
 		try {
@@ -469,6 +493,7 @@ public class TTLRepository {
         	System.out.println( ex.toString() );
         	System.out.println("Could not find file: " + fullFileName);
     	} 
+		
 		
 		
 		

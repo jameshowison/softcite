@@ -936,6 +936,20 @@ There was some confusion with multiple runs of the SPIN rules?  I have one set t
 
 Hmmmm, the name mappings aren't working perfectly.  Not sure if I should add the ones with alternatives, or let the SPIN rules do that.  Checking now.
 
-Ok, seems that it was a missing inverse statement.
+Ok, seems that it was a missing inverse statement. Fixed.
+
+
+a2003-44-SCIENCE-BLASTX.  Should that exist? It's an alternative name, no? It's all good, that's an ArticleSoftwareLink correctly linked to citec:software-BLAST.
+
+===============================================================
+Mon Jul 28 10:14:26 CDT 2014
+===============================================================
+
+Hmmm, some are missing is_findable true/false.  e.g., bioj:a2003-44-SCIENCE-C02
+
+
+Seems this is related to bioj:references_same_software, since those codes are created by tracking from the Mention back to the Selection and looking for codes there.
+
+Could I create a SPIN validation to discover the missing is_findable ?  Probably.
 
 

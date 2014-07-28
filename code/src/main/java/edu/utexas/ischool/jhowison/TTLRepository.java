@@ -426,6 +426,11 @@ public class TTLRepository {
 //
 // 		resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
 // 		saveResults(resultsModel);
+
+// Run contraint checks
+	
+		runSPINconstraints(resultsModel, "SPINConstraintChecks.ttl");
+			
 	}
 	
 	private static void saveResults(Model newTriples) {
@@ -482,5 +487,33 @@ public class TTLRepository {
 		return incoming;
 	}
 	
+	private static void runSPINconstraints(Model incoming, String rulePath) {	
+		//Create a copy of incoming to add rules to.
+		Model tempModel = ModelFactory.createDefaultModel();
+		tempModel.add(incoming);
 		
+		// Add the rules to the tempModel
+		tempModel.read(path + rulePath);
+		
+		// Create OntModel with imports
+		OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,tempModel);
+		
+		// Create and add Model for inferred triples
+		Model newTriples = ModelFactory.createDefaultModel();
+		ontModel.addSubModel(newTriples);
+
+		// Register locally defined functions
+		SPINModuleRegistry.get().registerAll(ontModel, null);
+
+		// Run all inferences
+		SPINInferences.run(ontModel, newTriples, null, null, false, null);
+		System.out.println("Inferred triples: " + newTriples.size());
+
+		// Run all constraints
+		List<ConstraintViolation> cvs = SPINConstraints.check(ontModel, null);
+		System.out.println("Constraint violations:");
+		for(ConstraintViolation cv : cvs) {
+			System.out.println(" - at " + SPINLabels.get().getLabel(cv.getRoot()) + ": " + cv.getMessage());
+		}
+	}
 }

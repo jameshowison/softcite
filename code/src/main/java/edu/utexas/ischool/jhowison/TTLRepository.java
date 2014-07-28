@@ -406,76 +406,26 @@ public class TTLRepository {
 	
 	
 	public static void runSPINrules() {
-	//	model.read(
-//	"https://raw.github.com/jameshowison/softcite/spin-attempt/data/SPINrules.ttl");
-		
-		model.read(path + "SPINrules.ttl");
-		
-		// Create OntModel with imports
-		OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
-		
-		// Create and add Model for inferred triples
-		// reuse prefixes.
-		Model newTriples = ModelFactory.createDefaultModel();
-		newTriples.setNsPrefixes(model);
-		ontModel.addSubModel(newTriples);
 
-		// Register locally defined functions
-		SPINModuleRegistry.get().registerAll(ontModel, null);
-
-		// Run all inferences
-		SPINInferences.run(ontModel, newTriples, null, null, false, null);
-		//System.out.println("Inferred triples: " + newTriples.size());
+		// Each set of rules runs, saving the results into a file which is the 
+		// starting point for the next set of rules.
 		
-		// Do name mapping.
-		newTriples = createSoftwarePackages(newTriples);
+		saveResults(model);
 		
-		// Continue with other SPIN rules
-		// first add all triples to original model.
-		model.add(newTriples);
-		// Now add new rules
-		model.read(path + "SPINrules2.ttl");
+		Model resultsModel = runSPINruleSet(model, "SPINrules.ttl");
+		saveResults(resultsModel);
 		
-		OntModel ontModel2 = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
-		
-		// Create and add Model for inferred triples
-		// reuse prefixes.
-		Model newTriples2 = ModelFactory.createDefaultModel();
-		newTriples2.setNsPrefixes(model);
-		ontModel2.addSubModel(newTriples2);
-
-		// Register locally defined functions
-		SPINModuleRegistry.get().registerAll(ontModel2, null);
-
-		// Run all inferences
-		SPINInferences.run(ontModel2, newTriples2, null, null, false, null);
-		
-		newTriples.add(newTriples2);
-		
-		// Now do the categorization rules
-		model.add(newTriples2);
-		
-		model.read(path + "SPINCategorizationRules.ttl");
+		// resultsModel = createSoftwarePackages(newTriples);
+// 		saveResults(resultsModel);
+//
+// 		resultsModel = runSPINrules(model, "SPINrules2.ttl");
+// 		saveResults(resultsModel);
+//
+// 		resultsModel = runSPINrules(model, "SPINCategorizationRules.ttl");
+// 		saveResults(resultsModel);
+	}
 	
-		OntModel ontModel3 = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,model);
-	
-		// Create and add Model for inferred triples
-		// reuse prefixes.
-		Model newTriples3 = ModelFactory.createDefaultModel();
-		newTriples3.setNsPrefixes(model);
-		ontModel3.addSubModel(newTriples3);
-
-		// Register locally defined functions
-		SPINModuleRegistry.get().registerAll(ontModel3, null);
-
-		// Run all inferences
-		SPINInferences.run(ontModel3, newTriples3, null, null, false, null);
-	
-		newTriples.add(newTriples3);
-		
-		// Save out everything together
-		newTriples.add(model);
-		
+	private static void saveResults(Model newTriples) {
 		// save out everything
 		String fullFileName = path + "../output/inferredStatements.ttl";
 		
@@ -489,14 +439,44 @@ public class TTLRepository {
 			newTriples.write(oFile, "TTL");
 			oFile.close();
 		}
-		catch(IOException ex){
+		catch ( IOException ex ){
         	System.out.println( ex.toString() );
         	System.out.println("Could not find file: " + fullFileName);
     	} 
+	
 		
+	}
+	
+	private static Model runSPINruleSet(Model incoming, String rulePath) {	
 		
+		//Create a copy of incoming to add rules to.
+		Model tempModel = ModelFactory.createDefaultModel();
+		tempModel.add(incoming);
 		
+		// Add the rules to the tempModel
+		tempModel.read(path + rulePath);
 		
+		// Create OntModel with imports
+		OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM, tempModel);
+		
+		// Create and add Model for inferred triples
+		// reuse prefixes.
+		Model newTriples = ModelFactory.createDefaultModel();
+		newTriples.setNsPrefixes(tempModel);
+		ontModel.addSubModel(newTriples);
+
+		// Register locally defined functions
+		SPINModuleRegistry.get().registerAll(ontModel, null);
+
+		// Run all inferences
+		SPINInferences.run(ontModel, newTriples, null, null, false, null);
+		//System.out.println("Inferred triples: " + newTriples.size());
+		
+		// Continue with other SPIN rules
+		// first add all triples to original model.
+		incoming.add(newTriples);
+		
+		return incoming;
 	}
 	
 		

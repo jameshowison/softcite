@@ -27,7 +27,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Cite to publication.  A Mention that includes a reference.
 	CONSTRUCT {
-	  ?this citec:mention_category "Cite to publication" .
+	  ?this citec:mention_category citec:CiteToPublicationMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -39,7 +39,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Cite to user_manual.  
 	CONSTRUCT {
-	  ?this citec:mention_category "Cite to user manual" .
+	  ?this citec:mention_category citec:CiteToUserManualMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -52,7 +52,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Cite to user_manual.  
 	CONSTRUCT {
-	  ?this citec:mention_category "Cite to name or website" .
+	  ?this citec:mention_category citec:CiteToNameOrWebsiteMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -64,7 +64,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Like Instrument
 	CONSTRUCT {
-	  ?this citec:mention_category "Like instrument" .
+	  ?this citec:mention_category citec:LikeInstrumentMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -76,7 +76,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# In-text URL
 	CONSTRUCT {
-	  ?this citec:mention_category "URL in text" .
+	  ?this citec:mention_category citec:URLinTextMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -89,7 +89,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Name only
 	CONSTRUCT {
-	  ?this citec:mention_category "Name only" .
+	  ?this citec:mention_category citec:NameOnlyMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
@@ -103,7 +103,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			sp:text """
 	# Not even name
 	CONSTRUCT {
-	  ?this citec:mention_category "Not even name" .
+	  ?this citec:mention_category citec:NotEvenNameMentionCategorization .
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;

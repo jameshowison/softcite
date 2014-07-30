@@ -18,3 +18,31 @@
 ##################################
 
 bioj:has_reference rdfs:range bioj:ReferenceSelection .
+
+# QUick type hierarchy
+citec:MentionCategorization a rdfs:Class .
+
+citec:CitationMentionCategorization rdfs:subClassOf citec:MentionCategorization .
+
+# Set of individuals, one for each type, with text labels
+
+citec:CiteToPublicationMentionCategorization a citec:CitationMentionCategorization ;
+	rdfs:label "Cite to publication" .
+  
+citec:CiteToUserManualMentionCategorization a citec:CitationMentionCategorization ;
+	rdfs:label "Cite to user manual" .
+
+citec:CiteToNameOrWebsiteMentionCategorization a citec:CitationMentionCategorization ;
+	rdfs:label "Cite to name or website" .
+
+citec:LikeInstrumentMentionCategorization a citec:MentionCategorization ;
+	rdfs:label  "Like instrument" .
+
+citec:URLinTextMentionCategorization a citec:MentionCategorization ;
+	rdfs:label  "URL in text" .
+
+citec:NameOnlyMentionCategorization a citec:MentionCategorization ;
+    rdfs:label "Name only" .
+
+citec:NotEvenNameMentionCategorization a citec:MentionCategorization ;
+	rdfs:label  "Not even name" .

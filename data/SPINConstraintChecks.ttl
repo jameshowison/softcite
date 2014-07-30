@@ -54,7 +54,7 @@ spin:constraint
                 spl:predicate citec:mention_category ;
                 spl:minCount 1 ;
                 spl:maxCount 1 ;
-                #spl:valueType xsd:string ;
+                # spl:valueType citec:MentionClassification ;
                # spl:defaultValue ex:Red
               ] ;
 			  

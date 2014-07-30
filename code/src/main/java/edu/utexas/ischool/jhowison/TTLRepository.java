@@ -428,6 +428,7 @@ public class TTLRepository {
 		saveResults(resultsModel);
 
 		// Run contraint checks
+		resultsModel.read(path + "VocabularyStatements.ttl");
 	
 		runSPINconstraints(resultsModel, "SPINConstraintChecks.ttl");
 			

@@ -945,11 +945,29 @@ a2003-44-SCIENCE-BLASTX.  Should that exist? It's an alternative name, no? It's 
 Mon Jul 28 10:14:26 CDT 2014
 ===============================================================
 
-Hmmm, some are missing is_findable true/false.  e.g., bioj:a2003-44-SCIENCE-C02
+Hmmm, some are missing is_findable true/false.  e.g., bioj:a2004-46-NATURE-GAP
+
+<http://james.howison.name/ontologies/bio-journal-sample#a2007-14-NAT_GENET-Image%20J>
+
+bioj:a2003-44-SCIENCE-TBLASTN
 
 
 Seems this is related to bioj:references_same_software, since those codes are created by tracking from the Mention back to the Selection and looking for codes there.
 
 Could I create a SPIN validation to discover the missing is_findable ?  Probably.
 
+===============================================================
+Mon Jul 28 16:48:13 CDT 2014
+===============================================================
 
+Ok, I think the referencesSameSoftware was a red herring, because those tags on one of the mentions will bring the properties to the ArticleSoftwareLinks.
+
+a2008-06-NAT_GENET-C02 -> DatLab just doesn't have the coding.  And it is software_used.
+
+Also a2007-51-NAT_GENET-C01 "EIGENSTRAT"
+
+a2007-14-NAT_GENET-C04
+
+So far, these have all been Catherine Coded, perhaps Julia just didn't do these?  No, a2003-39-J_COMPUT_AID_MOL_DES-B01 is a Julia coded one.
+
+Note that these don't have identifiable or findable, but they do have credited true because that one is done by negation, a pretty bad idea, really.

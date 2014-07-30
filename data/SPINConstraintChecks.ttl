@@ -19,14 +19,24 @@
 
 bioj:ArticleSoftwareLink a rdfs:Class ;
 
+	# spin:constraint
+	#             [ a       sp:Ask ;
+	#               sp:text """
+	#                   # must have a citec:is_findable property
+	#                   ASK WHERE {
+	#                       ?this a bioj:ArticleSoftwareLink .
+	# 				  FILTER NOT EXISTS { ?this citec:is_findable true }
+	# 				  FILTER NOT EXISTS { ?this citec:is_findable false }
+	#                   }"""
+	#             ] ;
 	spin:constraint
             [ a       sp:Ask ;
               sp:text """
-                  # must have a citec:is_findable property
+                  # must have a citec:is_identifiable property
                   ASK WHERE {
                       ?this a bioj:ArticleSoftwareLink .
-					  FILTER NOT EXISTS { ?this citec:is_findable true }
-					  FILTER NOT EXISTS { ?this citec:is_findable false }
+					  FILTER NOT EXISTS { ?this citec:is_identifiable true }
+					  FILTER NOT EXISTS { ?this citec:is_identifiable false }
                   }"""
             ] 
 	

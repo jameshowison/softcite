@@ -194,41 +194,6 @@ WHERE {
 	
 }"""
 ] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Deal with configuration_details.
-CONSTRUCT {
-  ?this citec:has_configuration_details false ;
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
- 		{ 
- 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] . 
- 		} UNION {
- 			?sel bioj:has_reference ?ref . 
- 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] .
- 		}
-	
-}"""
-] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Deal with no url
-CONSTRUCT {
-  ?this citec:has_configuration_details false ;
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
-		FILTER NOT EXISTS { ?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details ] ] . }
-		FILTER NOT EXISTS {
-			?sel bioj:has_reference ?ref . 
-	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:configuration_details  ] ] .
-		}
-	
-}"""
-] ;
 
             bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """

@@ -164,6 +164,36 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 		}
 	}"""
 ] ;
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# If any Mention for this Link includes configuration details then this does too.
+	
+	CONSTRUCT {
+		?this citec:has_version_indicator true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention citec:has_version_indicator true .
+	}"""
+] ;
+
+#This is the last rule to run (because it's not a bioj:runFirstRule)
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:has_version_indicator false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		FILTER NOT EXISTS { ?this citec:has_version_indicator true . }
+	}"""
+] ;
+
+
+
     bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret creator codes.
@@ -192,7 +222,6 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
-		      bioj:from_mention ?mention .
 		FILTER NOT EXISTS { ?this citec:is_credited true . }
 	}"""
 ] ;

@@ -9,18 +9,61 @@ inferredData = load.rdf("output/inferredStatements.ttl", format="TURTLE")
 
 prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UTF-8"), collapse=" ")
 
-# Begin with analysis of mentions. 
+# Begin with analysis of mention classifications
+query <- "
+SELECT ?article ?journal ?strata ?selection ?mention ?category
+WHERE {
+	?mention rdf:type bioj:SoftwareMention ;
+			 citec:mention_category [ rdfs:label ?category ] ;
+   	 		 bioj:from_selection ?selection .
+	?article bioj:has_selection ?selection ;
+	         dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+}
+"
+
+mentions <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+# melt to vertical format.
+mmentions <- melt(mentions, id=1:5)
+
+mmentions$value <- factor(mmentions$value,levels=c("Cite to publication", "Cite to user manual", "Cite to name or website", "Like instrument" , "URL in text", "Name only", "Not even name"))
+
+mmentions %.%
+group_by(value) %.%
+summarize(num=n_distinct(mention))
+
+ggplot(mmentions,aes(x=value)) +
+geom_bar() +
+facet_grid(.~strata,margins=T) +
+scale_fill_grey(guide = guide_legend(title="")) + 
+scale_x_discrete(name="") +
+scale_y_continuous(name="Count of Mentions") +
+#ggtitle("Accessibility by strata") +
+theme(
+	legend.position="bottom",
+    panel.grid.major.x = element_blank(),
+	panel.grid.minor.y = element_blank(),
+	panel.border = element_blank(),
+	axis.title.y=element_text(vjust=0.3),
+	#axis.title.x=element_text(vjust=0.1),
+	text=element_text(size=10)
+#	axis.text.x=element_blank(),
+#	axis.ticks.x=element_blank()
+ )
+
 
 # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 # bioj:from_selection
 # citec:from_mention      citec:a2001-40-MOL_ECOL-C05-mention ;
 query <- "
-SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable
+SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable ?version
 WHERE {
 	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
 							citec:is_credited       ?credited ;
 							citec:is_findable       ?findable ;
 							citec:is_identifiable   ?identifiable ;
+							citec:has_version_indicator ?version ;
 	 						bioj:from_mention [ bioj:from_selection ?selection ] .
 	?article bioj:has_selection ?selection ;
 	         dc:isPartOf ?journal .
@@ -57,7 +100,13 @@ theme(
  )
  
 mlinks %.%
+filter(variable=="version") %.%
+group_by(value) %.%
 summarize(num=n_distinct(software_article_link))
+
+mlinks %.%
+summarize(num=n_distinct(software_article_link))
+
 
 ##################
 # Software analysis

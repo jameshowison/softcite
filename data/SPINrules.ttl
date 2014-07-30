@@ -16,8 +16,14 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 
+# Create a class of rules that run first.
+# This is needed to do a if not true then false clean up on is_credited.
+bioj:runFirstRule rdfs:subPropertyOf spin:rule .
+
+bioj:runFirstRule spin:nextRuleProperty spin:rule .
+
 bioj:selection a rdfs:Class ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Asserts a new type for selections that are software mentions.
 	CONSTRUCT {
@@ -30,7 +36,7 @@ bioj:selection a rdfs:Class ;
 .
 
 # bioj:ReferenceSelection a rdfs:Class ;
-#             spin:rule [ rdf:type sp:Construct ;
+#             bioj:runFirstRule [ rdf:type sp:Construct ;
 # 			sp:text """
 # 	CONSTRUCT {
 # 	  ?this rdf:type bioj:DectectedReference .
@@ -42,7 +48,7 @@ bioj:selection a rdfs:Class ;
 # .
 
 bioj:InTextSelection a rdfs:Class ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Creates a new node for SoftwareMentions
 	CONSTRUCT {
@@ -62,7 +68,7 @@ bioj:InTextSelection a rdfs:Class ;
 .
 
 bioj:SoftwareMention a rdfs:Class ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Moves software_name codes.
 	CONSTRUCT {
@@ -82,7 +88,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			}
 	}"""
 ] ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Deal with few without a name.
 	CONSTRUCT {
@@ -98,7 +104,7 @@ bioj:SoftwareMention a rdfs:Class ;
 			}
 	}"""
 ] ;
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Moves version_number and/or date. Either code can be on original or any reference.
 	CONSTRUCT {
@@ -117,7 +123,7 @@ bioj:SoftwareMention a rdfs:Class ;
 	}"""
 ] ;
 
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Deal with Software Used
 	CONSTRUCT {
@@ -135,7 +141,7 @@ bioj:SoftwareMention a rdfs:Class ;
 		
 	}"""
 ];	
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # And software not used.
 CONSTRUCT {
@@ -153,7 +159,7 @@ WHERE {
 	
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Deal with URL.
 CONSTRUCT {
@@ -171,7 +177,7 @@ WHERE {
 	
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Deal with no url
 CONSTRUCT {
@@ -188,7 +194,7 @@ WHERE {
 	
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Deal with configuration_details.
 CONSTRUCT {
@@ -206,7 +212,7 @@ WHERE {
 	
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Deal with no url
 CONSTRUCT {
@@ -224,7 +230,7 @@ WHERE {
 }"""
 ] ;
 
-            spin:rule [ rdf:type sp:Construct ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
 	# Does this specific Mention do any crediting? Can be on in-text or in reference.
 	CONSTRUCT {
@@ -242,20 +248,20 @@ WHERE {
 		
 	}"""
 ];	
+
         spin:rule [ rdf:type sp:Construct ;
 		sp:text """
-# Create a boolean for whether the Mention has a citation.
+# Runs after all other rules. If creator not true then it's false.
 CONSTRUCT {
-  ?this citec:has_citation false ;
+  ?this citec:has_creator false ;
 }
 WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
-		 FILTER NOT EXISTS { ?sel bioj:has_reference ?ref } .
+  ?this rdf:type bioj:SoftwareMention .
+  FILTER NOT EXISTS { ?this citec:has_creator true } 
 }"""
 ] ;
 
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Citations to domain publications
 CONSTRUCT {
@@ -269,7 +275,7 @@ WHERE {
 }"""
 ] ;
 
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Citations to software publications
 CONSTRUCT {
@@ -283,9 +289,9 @@ WHERE {
 }"""
 ] ;
 
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
-# Citations to domain publications
+# Citations to user_manuals
 CONSTRUCT {
   ?this citec:has_citation true ;
         citec:citation_type "user_manual" .
@@ -296,7 +302,7 @@ WHERE {
   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:users_manual  ] ] .
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Citations to domain publications
 CONSTRUCT {
@@ -309,7 +315,7 @@ WHERE {
   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_name  ] ] .
 }"""
 ] ;
-        spin:rule [ rdf:type sp:Construct ;
+        bioj:runFirstRule [ rdf:type sp:Construct ;
 		sp:text """
 # Citations to domain publications
 CONSTRUCT {
@@ -323,12 +329,25 @@ WHERE {
 }"""
 ] ;
 
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Runs after all other rules. If creator not true then it's false.
+CONSTRUCT {
+  ?this citec:has_citation false ;
+}
+WHERE {
+  ?this rdf:type bioj:SoftwareMention .
+  FILTER NOT EXISTS { ?this citec:has_citation true } 
+}"""
+] ;
+
+
 .
 
 
 
 #bioj:article a rdfs:Class ;	
-#	spin:rule [ rdf:type sp:Construct ;	
+#	bioj:runFirstRule [ rdf:type sp:Construct ;	
 #				sp:text """
 #	# Asserts a new type for articles with any selections coded as mentions
 #	CONSTRUCT {
@@ -345,7 +364,7 @@ WHERE {
 #	}
 #				"""
 #	] ;
-#	spin:rule [ rdf:type sp:Construct ;	
+#	bioj:runFirstRule [ rdf:type sp:Construct ;	
 #				sp:text """
 #	# Asserts a new type for articles with any selections coded as software-used
 #	CONSTRUCT {
@@ -365,7 +384,7 @@ WHERE {
 
 
 # bioj:selection a rdfs:Class ;
-# 	spin:rule [ rdf:type sp:Construct ;
+# 	bioj:runFirstRule [ rdf:type sp:Construct ;
 # 			#	spin:thisUnbound "true"^^xsd:boolean ;
 # 				sp:text """
 # 	# Distinguish between direct and citation selections
@@ -381,7 +400,7 @@ WHERE {
 # 	}"""
 # 	] ;
 
-	# spin:rule [ rdf:type sp:Construct ;
+	# bioj:runFirstRule [ rdf:type sp:Construct ;
 	# 			spin:thisUnbound "true"^^xsd:boolean ;
 	# 			sp:text """
 	#  # Moves all codes directly onto selection, even if they originated
@@ -398,7 +417,7 @@ WHERE {
 	# ] ;
 	
 
-#	spin:rule [ rdf:type sp:Construct ;	
+#	bioj:runFirstRule [ rdf:type sp:Construct ;	
 #				sp:text """
 #	# Asserts a new type for selections that are identifiable software mentions.
 #	CONSTRUCT {
@@ -413,7 +432,7 @@ WHERE {
 #	  }
 #	}"""
 #	] ; 
-#	spin:rule [ rdf:type sp:Construct ;	
+#	bioj:runFirstRule [ rdf:type sp:Construct ;	
 #				sp:text """
 #	# Asserts a new type for selections that are findable software mentions.
 #	CONSTRUCT {
@@ -432,7 +451,7 @@ WHERE {
 #.
 	
 #bioj:SoftwareMention a rdfs:Class ;
-#	spin:rule [ rdf:type sp:Construct ;	
+#	bioj:runFirstRule [ rdf:type sp:Construct ;	
 #				sp:text """
 #	# Step 2: Moves all codes directly onto SoftwareMention, even if they originated
 #	# on a reference.

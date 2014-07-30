@@ -183,22 +183,24 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}"""
 ] ;
 
-# This is the last rule to run (because it's not a bioj:runFirstRule)
-#     spin:rule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Interpret software package codes
-# 	CONSTRUCT {
-# 		?this citec:is_credited false .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		FILTER NOT EXISTS { ?this citec:is_credited true . }
-# 	}"""
-# ] ;
+#This is the last rule to run (because it's not a bioj:runFirstRule)
+    spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:is_credited false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		FILTER NOT EXISTS { ?this citec:is_credited true . }
+	}"""
+] ;
 
 
 .
+
+
 
 
 bioj:SoftwarePackage a rdfs:Class ;

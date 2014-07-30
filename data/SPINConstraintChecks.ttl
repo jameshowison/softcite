@@ -49,13 +49,15 @@ bioj:SoftwareMention a rdfs:Class ;
 
 spin:constraint
               [ a       spl:Attribute ;
-                rdfs:comment "must have one and exactly one classification "^^xsd:string ;
+                rdfs:comment "Must have one and exactly one classification "^^xsd:string ;
+				rdfs:label "Must have one and exactly one classification "^^xsd:string ;
                 spl:predicate citec:mention_category ;
-                spl:minCount 10 ;
-                spl:maxCount 12 ;
-                spl:valueType xsd:string ;
+                spl:minCount 1 ;
+                spl:maxCount 1 ;
+                #spl:valueType xsd:string ;
                # spl:defaultValue ex:Red
-              ]
+              ] ;
+			  
 ;
 # spin:constraint
 #             [ a       sp:Ask ;

@@ -224,6 +224,105 @@ WHERE {
 }"""
 ] ;
 
+            spin:rule [ rdf:type sp:Construct ;
+			sp:text """
+	# Does this specific Mention do any crediting? Can be on in-text or in reference.
+	CONSTRUCT {
+	  ?this citec:has_creator true .
+	}
+	WHERE {
+  	  ?this  rdf:type bioj:SoftwareMention ;
+  		     bioj:from_selection ?sel .
+	 		{ 
+	 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . 
+	 		} UNION {
+	 			?sel bioj:has_reference ?ref . 
+	 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+	 		}
+		
+	}"""
+];	
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Create a boolean for whether the Mention has a citation.
+CONSTRUCT {
+  ?this citec:has_citation false ;
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+		 FILTER NOT EXISTS { ?sel bioj:has_reference ?ref } .
+}"""
+] ;
+
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Citations to domain publications
+CONSTRUCT {
+  ?this citec:has_citation true ;
+        citec:citation_type "publication" .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection [ bioj:has_reference ?ref ] .
+  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:domain_publication  ] ] .
+}"""
+] ;
+
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Citations to software publications
+CONSTRUCT {
+  ?this citec:has_citation true ;
+        citec:citation_type "publication" .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection [ bioj:has_reference ?ref ] .
+  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_publication  ] ] .
+}"""
+] ;
+
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Citations to domain publications
+CONSTRUCT {
+  ?this citec:has_citation true ;
+        citec:citation_type "user_manual" .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection [ bioj:has_reference ?ref ] .
+  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:users_manual  ] ] .
+}"""
+] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Citations to domain publications
+CONSTRUCT {
+  ?this citec:has_citation true ;
+        citec:citation_type "name_or_website" .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection [ bioj:has_reference ?ref ] .
+  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_name  ] ] .
+}"""
+] ;
+        spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+# Citations to domain publications
+CONSTRUCT {
+  ?this citec:has_citation true ;
+        citec:citation_type "name_or_website" .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection [ bioj:has_reference ?ref ] .
+  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_page  ] ] .
+}"""
+] ;
+
 .
 
 

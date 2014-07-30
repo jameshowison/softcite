@@ -25,13 +25,94 @@ bioj:runFirstRule spin:nextRuleProperty spin:rule .
 bioj:SoftwareMention a rdfs:Class ;
             bioj:runFirstRule [ rdf:type sp:Construct ;
 			sp:text """
-	# Create software packages for each non-alternative
+	# Cite to publication.  A Mention that includes a reference.
 	CONSTRUCT {
-	  ?software_package a citec:JamesWasHere .
+	  ?this citec:mention_category "Cite to publication" .
 	}
 	WHERE {
-	  ?this  rdf:type bioj:SoftwareMention .
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation true ;
+			 citec:citation_type "publication" .
 	}"""
 ] ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Cite to user_manual.  
+	CONSTRUCT {
+	  ?this citec:mention_category "Cite to user manual" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation true ;
+			 citec:citation_type "user_manual" .
+	}"""
+] ;
+
+            bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Cite to user_manual.  
+	CONSTRUCT {
+	  ?this citec:mention_category "Cite to name or website" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation true ;
+			 citec:citation_type "name_or_website" .
+	}"""
+] ;
+            bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Like Instrument
+	CONSTRUCT {
+	  ?this citec:mention_category "Like instrument" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation false ;
+			 citec:has_creator  true .
+	}"""
+] ;            
+			bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# In-text URL
+	CONSTRUCT {
+	  ?this citec:mention_category "URL in text" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation false ;
+			 citec:has_creator  false ;
+			 citec:has_url      true .
+	}"""
+] ;
+			bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Name only
+	CONSTRUCT {
+	  ?this citec:mention_category "Name only" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation false ;
+			 citec:has_creator  false ;
+			 citec:has_url      false ;
+			 citec:has_software_name true .
+	}"""
+] ;
+			bioj:runFirstRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Not even name
+	CONSTRUCT {
+	  ?this citec:mention_category "Not even name" .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+	         citec:has_citation false ;
+			 citec:has_creator  false ;
+			 citec:has_url      false ;
+			 citec:has_software_name false .
+	}"""
+] ;
+
 .
 

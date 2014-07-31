@@ -167,7 +167,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 
     bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
-	# If any Mention for this Link includes configuration details then this does too.
+	# If any Mention for this Link includes version_indicator then this does too.
 	
 	CONSTRUCT {
 		?this citec:has_version_indicator true .
@@ -182,7 +182,6 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 #This is the last rule to run (because it's not a bioj:runFirstRule)
     spin:rule [ rdf:type sp:Construct ;
 	sp:text """
-	# Interpret software package codes
 	CONSTRUCT {
 		?this citec:has_version_indicator false .
 	}
@@ -192,6 +191,43 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	}"""
 ] ;
 
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable true code to ArticleSoftwareLink
+	CONSTRUCT {
+		?this citec:version_is_findable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
+		}
+	}"""
+] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable false code to ArticleSoftwareLink
+	
+	CONSTRUCT {
+		?this citec:version_is_findable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
+		}
+	}"""
+] ;
 
 
     bioj:runFirstRule [ rdf:type sp:Construct ;

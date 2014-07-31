@@ -426,12 +426,18 @@ public class TTLRepository {
 
 		resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
 		saveResults(resultsModel);
-
+			
+	}
+	
+	public static void runSPINconstraintsOnly() {
+		
+		Model resultsModel = ModelFactory.createDefaultModel();
+		// read 
+		resultsModel.read(path + "../output/inferredStatements.ttl");
 		// Run contraint checks
 		resultsModel.read(path + "VocabularyStatements.ttl");
 	
 		runSPINconstraints(resultsModel, "SPINConstraintChecks.ttl");
-			
 	}
 	
 	private static void saveResults(Model newTriples) {
@@ -507,14 +513,14 @@ public class TTLRepository {
 		SPINModuleRegistry.get().registerAll(ontModel, null);
 
 		// Run all inferences
-		SPINInferences.run(ontModel, newTriples, null, null, false, null);
-		System.out.println("Inferred triples: " + newTriples.size());
+		// SPINInferences.run(ontModel, newTriples, null, null, false, null);
+	// 	System.out.println("Inferred triples: " + newTriples.size());
 
 		// Run all constraints
 		List<ConstraintViolation> cvs = SPINConstraints.check(ontModel, null);
 		System.out.println("Constraint violations:");
 		for(ConstraintViolation cv : cvs) {
-			System.out.println(" - at " + SPINLabels.get().getLabel(cv.getRoot()) + ": " + cv.getMessage());
+			System.out.println(" - at " + SPINLabels.get().getCustomizedLabel(cv.getRoot()) + ": " + cv.getMessage());
 		}
 	}
 }

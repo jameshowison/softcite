@@ -106,6 +106,12 @@ public class AppTest
 		TTLRepository.runSPINrules();
 	}
 	
+	@Test
+	public void testSPINConstraints()
+	{
+		TTLRepository.runSPINconstraintsOnly();
+	}
+	
 	
 	
 	

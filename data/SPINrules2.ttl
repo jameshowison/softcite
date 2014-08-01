@@ -16,6 +16,11 @@
 @prefix spin:    <http://spinrdf.org/spin#> .
 @prefix spl:     <http://spinrdf.org/spl#> .
 
+<http://james.howison.name/ontologies/software-citation-coding-constraints>
+  rdf:type owl:Ontology ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://spinrdf.org/spl> .
+
 # Create a class of rules that run first.
 # This is needed to do a if not true then false clean up on is_credited.
 bioj:runFirstRule rdfs:subPropertyOf spin:rule .

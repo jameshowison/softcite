@@ -520,7 +520,7 @@ public class TTLRepository {
 		List<ConstraintViolation> cvs = SPINConstraints.check(ontModel, null);
 		System.out.println("Constraint violations:");
 		for(ConstraintViolation cv : cvs) {
-			System.out.println(" - at " + SPINLabels.get().getCustomizedLabel(cv.getRoot()) + ": " + cv.getMessage());
+			System.out.println(" - at " + SPINLabels.get().getLabel(cv.getRoot()) + ": " + cv.getMessage());
 		}
 	}
 }

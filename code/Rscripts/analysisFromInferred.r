@@ -57,13 +57,15 @@ theme(
 # bioj:from_selection
 # citec:from_mention      citec:a2001-40-MOL_ECOL-C05-mention ;
 query <- "
-SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable ?version
+SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable 
+#?version ?version_findable
 WHERE {
 	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
 							citec:is_credited       ?credited ;
 							citec:is_findable       ?findable ;
 							citec:is_identifiable   ?identifiable ;
-							citec:has_version_indicator ?version ;
+						#	citec:has_version_indicator ?version ;
+						#	citec:version_is_findable ?version_findable ;
 	 						bioj:from_mention [ bioj:from_selection ?selection ] .
 	?article bioj:has_selection ?selection ;
 	         dc:isPartOf ?journal .
@@ -105,7 +107,20 @@ group_by(value) %.%
 summarize(num=n_distinct(software_article_link))
 
 mlinks %.%
+filter(variable=="version_findable"|variable=="version") %.%
+group_by(variable) %.%
 summarize(num=n_distinct(software_article_link))
+
+mlinks %.%
+summarize(num=n_distinct(software_article_link))
+
+total_mentions = summarize(mlinks, n_distinct(software_article_link))[1,1]
+
+mlinks %.%
+filter(value=="true") %.%
+group_by(variable) %.%
+summarize(num=n_distinct(software_article_link),
+	      percent=round( num / total_mentions, 2 ) )
 
 
 ##################
@@ -131,12 +146,22 @@ WHERE {
 
 software <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 
-software %.%
-group_by(software) %.%
-summarize(count = n()) %.%
-filter(count > 1)
-
 # melt to vertical format.
 msoftware <- melt(software, id=1)
+
+total_software = summarize(msoftware, n_distinct(software))[1,1]
+
+msoftware %.%
+filter(value=="true") %.%
+group_by(variable) %.%
+summarize(num=n_distinct(software),
+	      percent=round( num / total_software, 2 ) )
+
+
+# Ok, across the three units of analysis (Mentions, ArticleSoftwareLinks, SoftwarePackages), need percentages for each of the tags.
+
+tags <- c("identifiable","findable","accessible","source","modifiable")
+
+# for each tag, need the percentage of whatever the unit of analysis was.
 
 

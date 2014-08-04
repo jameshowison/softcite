@@ -311,128 +311,44 @@ WHERE {
 }"""
 ] ;
 
+        bioj:runFirstRule [ rdf:type sp:Construct ;
+		sp:text """
+# Does this Mention match a preferred cite?
+CONSTRUCT {
+  ?this citec:matches_preferred_cite true .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+ 		{ 
+ 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] . 
+ 		} UNION {
+ 			?sel bioj:has_reference ?ref . 
+ 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] .
+ 		}
+}"""
+];	        
+		bioj:runFirstRule [ rdf:type sp:Construct ;
+		sp:text """
+# Does this Mention match a preferred cite?
+CONSTRUCT {
+  ?this citec:matches_preferred_cite false .
+}
+WHERE {
+  ?this  rdf:type bioj:SoftwareMention ;
+	     bioj:from_selection ?sel .
+ 		{ 
+ 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] . 
+ 		} UNION {
+ 			?sel bioj:has_reference ?ref . 
+ 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] .
+ 		}
+}"""
+];	
+
+
 
 .
 
-
-
-#bioj:article a rdfs:Class ;	
-#	bioj:runFirstRule [ rdf:type sp:Construct ;	
-#				sp:text """
-#	# Asserts a new type for articles with any selections coded as mentions
-#	CONSTRUCT {
-#	  ?this rdf:type bioj:ArticleWithMention .
-#	} 
-#	WHERE {
-#	  ?this rdf:type bioj:article ;
-#	        bioj:has_selection ?sel .
-#	  ?sel  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
-#	  OPTIONAL { 
-#	        ?sel bioj:has_reference ?ref .
-#	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:in-text_mention ] ] .
-#	  }
-#	}
-#				"""
-#	] ;
-#	bioj:runFirstRule [ rdf:type sp:Construct ;	
-#				sp:text """
-#	# Asserts a new type for articles with any selections coded as software-used
-#	CONSTRUCT {
-#	  ?this rdf:type bioj:ArticleWithSoftwareUsed .
-#	} 
-#	WHERE {
-#	  ?this rdf:type bioj:ArticleWithMention ;
-#	        bioj:has_selection ?sel .
-#	  ?sel  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
-#	  OPTIONAL { 
-#	        ?sel bioj:has_reference ?ref .
-#	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
-#	  }
-#	}
-#				"""
-#	] .
-
-
-# bioj:selection a rdfs:Class ;
-# 	bioj:runFirstRule [ rdf:type sp:Construct ;
-# 			#	spin:thisUnbound "true"^^xsd:boolean ;
-# 				sp:text """
-# 	# Distinguish between direct and citation selections
-# 	CONSTRUCT {
-#   		?this rdf:type bioj:DirectSelection .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:selection .
-# 		?sel rdf:type bioj:selection .
-# 		FILTER NOT EXISTS {
-# 	         ?sel bioj:has_reference ?this .
-# 	    }
-# 	}"""
-# 	] ;
-
-	# bioj:runFirstRule [ rdf:type sp:Construct ;
-	# 			spin:thisUnbound "true"^^xsd:boolean ;
-	# 			sp:text """
-	#  # Moves all codes directly onto selection, even if they originated
-	#  # on a reference.
-	# CONSTRUCT {
-	#   ?this ca:isTargetOf [ ca:appliesCode ?coding ] .
-	# }
-	# WHERE {
-	#       ?article rdf:type bioj:article .
-	#       ?article bioj:selection ?this .
-	#       ?this bioj:has_reference ?ref .
-	#   ?ref ca:isTargetOf [ ca:appliesCode ?coding ] .
-	# }"""
-	# ] ;
-	
-
-#	bioj:runFirstRule [ rdf:type sp:Construct ;	
-#				sp:text """
-#	# Asserts a new type for selections that are identifiable software mentions.
-#	CONSTRUCT {
-#	  ?this rdf:type bioj:IdentifiableSoftwareMention .
-#	} 
-#	WHERE {
-#      ?this rdf:type bioj:SoftwareMention .
-#	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:identifiable ] ] .
-#	  OPTIONAL { 
-#	        ?this bioj:has_reference ?ref .
-#	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:identifiable ] ] .
-#	  }
-#	}"""
-#	] ; 
-#	bioj:runFirstRule [ rdf:type sp:Construct ;	
-#				sp:text """
-#	# Asserts a new type for selections that are findable software mentions.
-#	CONSTRUCT {
-#	  ?this rdf:type bioj:FindableSoftwareMention .
-#	} 
-#	WHERE {
-#      ?this rdf:type bioj:SoftwareMention .
-#	  ?this  ca:isTargetOf [ ca:appliesCode [ rdf:type citec:findable ] ] .
-#	  OPTIONAL { 
-#	        ?this bioj:has_reference ?ref .
-#	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:findable ] ] .
-#	  }
-#	}"""
-#	] ;
-
-#.
-	
-#bioj:SoftwareMention a rdfs:Class ;
-#	bioj:runFirstRule [ rdf:type sp:Construct ;	
-#				sp:text """
-#	# Step 2: Moves all codes directly onto SoftwareMention, even if they originated
-#	# on a reference.
-#	CONSTRUCT {
-#	  ?this ca:isTargetOf [ ca:appliesCode ?coding ] .
-#	} 
-#	WHERE { 
-#	  ?this bioj:has_reference ?ref .
-#	  ?ref ca:isTargetOf [ ca:appliesCode ?coding ] .
-#	}"""
-#	] ;
-#.
 
 

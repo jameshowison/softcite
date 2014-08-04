@@ -971,3 +971,19 @@ a2007-14-NAT_GENET-C04
 So far, these have all been Catherine Coded, perhaps Julia just didn't do these?  No, a2003-39-J_COMPUT_AID_MOL_DES-B01 is a Julia coded one.
 
 Note that these don't have identifiable or findable, but they do have credited true because that one is done by negation, a pretty bad idea, really.
+
+===============================================================
+Fri Aug  1 08:45:09 CDT 2014
+===============================================================
+
+Hey, SPIN is cool, I was very glad to find it.  I've messed around with SWRL a while back, but given that I vaguely understand SPARQL this is much, much, easier.
+ 
+If you do edit these files by hand, I would still recommend to make them easier to open with TopBraid (Free Edition) and similar RDF tools. All you would need to do is add some owl:Ontology into every file and define explicit owl:imports so that when you load the example file, it will pull all other necessary files into TopBraid. This may help you get more feedback because more people could understand what's going on (without stepping through Java code). Just an idea.
+
+I've created a new branch for my attempt to do this:
+
+https://github.com/jameshowison/softcite/tree/topbraid
+
+It's a little complicated by the need to "drop out" to some Java code to do some name mapping (some of the programs that I'm writing data about have alternative names), quite likely this can be done via SPIN but it isn't at the moment.
+
+If I understand correctly, I should have a "main file" of rdf that imports the other files.  Would one typically do a vocab file as the main file, then import the individuals and the spin rules and constraints?  At present I've just add the owl imports for SPIN etc and opened my SPINConstraints.ttl file in TopBraid FE. In the SPIN overview tab I see only the constraint for bioj:ArticleSoftwareLink, but not the constraints for 

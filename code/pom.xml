@@ -54,10 +54,7 @@
 			</execution>
 		  </executions>
 		<configuration> 
-    		<mainClass>edu.utexas.ischool.jhowison.OutputResults</mainClass>
-            <arguments>
-				<argument>${basedir}/../output</argument>
-			</arguments> 
+    		<mainClass>edu.utexas.ischool.jhowison.KennedysInferencingAndConstraintsExample</mainClass>
   		</configuration>
 		</plugin>
 	</plugins>

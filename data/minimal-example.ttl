@@ -1,0 +1,225 @@
+# baseURI: http://james.howison.name/ontologies/minimal-example
+# imports: http://spinrdf.org/spin
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix minimal-example: <http://james.howison.name/ontologies/minimal-example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ca:CodeApplication
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+ca:appliesCode
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+ca:hasCoder
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+ca:isTargetOf
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+ca:memo
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+bioj:InTextSelection
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bioj:article
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+bioj:full_quote
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+bioj:has_reference
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+bioj:references_same_software
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf owl:ObjectProperty ;
+.
+bioj:selection
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object bioj:InTextSelection ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "?0"^^xsd:string ;
+              ] ;
+            sp:predicate ca:isTargetOf ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object [
+                sp:varName "?1"^^xsd:string ;
+              ] ;
+            sp:predicate ca:appliesCode ;
+            sp:subject [
+                sp:varName "?0"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object citec:in-text_mention ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "?1"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Asserts a new type for selections that are software mentions."^^xsd:string ;
+    ] ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://james.howison.name/ontologies/minimal-example>
+  rdf:type owl:Ontology ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+citec:Code
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+citec:PublicationType
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:access_free
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:configuration_details
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:creator
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:date
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:domain_publication
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:PublicationType ;
+.
+citec:findable
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:identifiable
+  rdf:type owl:Class ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object bioj:InTextSelection ;
+            sp:predicate rdf:type ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object [
+                sp:varName "?0"^^xsd:string ;
+              ] ;
+            sp:predicate ca:isTargetOf ;
+            sp:subject spin:_this ;
+          ]
+          [
+            sp:object [
+                sp:varName "?1"^^xsd:string ;
+              ] ;
+            sp:predicate ca:appliesCode ;
+            sp:subject [
+                sp:varName "?0"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object citec:in-text_mention ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "?1"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+    ] ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:in-text_mention
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:matchesPreferredCite
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:permission_modify
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:prohibited_modify
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:software_name
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:software_publication
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:PublicationType ;
+.
+citec:software_used
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:source_unavailable
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:unfindable
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:unfindable_version
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:unidentifiable
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.
+citec:users_manual
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:PublicationType ;
+.
+citec:version_number
+  rdf:type owl:Class ;
+  rdfs:subClassOf citec:Code ;
+.

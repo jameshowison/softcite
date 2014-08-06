@@ -67,11 +67,11 @@ spin:constraint
                 CONSTRUCT {
                     _:violation a spin:ConstraintViolation ;
                          spin:violationRoot ?this ;
-                         rdfs:label "Cannot have missed or matched cite if no citation" ;
+                         rdfs:label "Cannot have matched cite if no citation" ;
                 }
                 WHERE {
 					?this citec:has_citation false ;
-						  citec:matches_preferred_cite ?value .
+						  citec:matches_preferred_cite true .
 			    }"""
           ] ;			  
 .

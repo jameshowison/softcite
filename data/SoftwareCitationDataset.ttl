@@ -4131,14 +4131,6 @@ bioj:a2009-35-NAT_BIOTECHNOL-C02 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:software_name ; rdfs:label "Image J" ] ;
                ] ;
-
-#begin citation functions
-
-	ca:isTargetOf
-	[ rdf:type ca:CodeApplication ;
-	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:unidentifiable ];
-	] ;
 	
 #end citation functions
 

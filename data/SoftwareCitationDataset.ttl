@@ -6172,6 +6172,7 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:software_name ; rdfs:label "EIGENSTRAT" ] ;
                ] ;
+			   
 . # end coding for selection
 
 #new article header with index of article selections
@@ -6228,6 +6229,30 @@ bioj:a2007-14-NAT_GENET-C01 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
                  ca:appliesCode [ rdf:type citec:configuration_details ];
                ] ;
+			   
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:identifiable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:findable ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable_version ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:no_access ;
+		   	] ;
 . # end coding for selection
 
 bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
@@ -6257,6 +6282,55 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "GraphPad" ] ;
                ] ;
+			   
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:identifiable ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unidentifiable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:findable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable_version ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:access_purchase ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:source_unavailable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:prohibited_modify ;
+		   	] ;
+	
 . # end coding for selection
 
 # start coding for selection
@@ -6280,6 +6354,50 @@ bioj:a2007-14-NAT_GENET-C03 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:software_name ; rdfs:label "Image J" ] ;
                ] ;
+			   
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:identifiable ;
+		   	] ;
+	
+		   	ca:isTargetOf 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:findable ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable_version ;
+		   	] ;
+	
+		   	ca:isTargetOf 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:access_free ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:source_available ;
+		   	] ;
+	
+		   	ca:isTargetOf 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:permission_modify ;
+		   	] ;
+	
+		   	ca:isTargetOf 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:missesPreferredCite ;
+		   	] ;
+	
+		   	ca:memo "Documentation includes 2 articles and one program citation, dating between 1997 and 2012" ;
 . # coding for selection
 
 # start coding for selection
@@ -6351,6 +6469,42 @@ bioj:a2005-12-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "Universal Imaging Corporation" ] ;
                ] ;
+			   
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:identifiable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:findable ;
+		   	] ;
+	
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable_version ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:access_purchase ;
+		   	] ;
+
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:source_unavailable ;
+		   	] ;
+
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:prohibited_modify ;
+		   	] ;
  . # end coding for selection
 
 #new article header with index of article selections
@@ -6425,6 +6579,45 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "Oroboros Instruments" ] ;
                ] ;
+			   
+			   #begin citation functions for DatLab bioj:a2008-06-NAT_GENET-C02
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:identifiable ;
+			   	] ;
+
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:findable ;
+			   	] ;
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:unfindable_version ;
+			   	] ;
+
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:access_purchase ;
+			   	] ;
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:source_unavailable ;
+			   	] ;
+
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:prohibited_modify ;
+			   	] ;
+			   
 . # end coding for selection
 
 # start coding for selection
@@ -6448,6 +6641,50 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:software_name ; rdfs:label "jMRUI" ] ;
                ] ;
+			   
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:identifiable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:findable ;
+		   	] ;
+
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:unfindable_version ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:access_free ;
+		   	] ;
+
+		   	ca:isTargetOf
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:source_unavailable ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:permission_modify ;
+		   	] ;
+	
+		   	ca:isTargetof 
+		   	[ rdf:type ca:CodeApplication ;
+		   	  ca:hasCoder "jbullard" ;
+		   	  ca:appliesCode citec:missesPreferredCite ;
+		   	] ;
+	
+		   	ca:memo "License requires users cite a 2001 article when publishing research. This article does not reference the citation or any software-specific reference." ;
 . # end coding for selection
 
 

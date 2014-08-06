@@ -6165,6 +6165,46 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
              	 ca:appliesCode [ a citec:software_name ; rdfs:label "EIGENSTRAT" ] ;
                ] ;
 			   
+			   #begin citation functions for Eigenstrat bioj:a2007-51-NAT_GENET-C01
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:identifiable ;
+			   	] ;
+	
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:findable ;
+			   	] ;
+	
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:unfindable_version ;
+			   	] ;
+	
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:access_free ;
+			   	] ;
+	
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:source_available ;
+			   	] ;
+	
+			   	ca:isTargetof 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode citec:permission_modify ;
+			   	] ;
+	
+			   #end citation functions   
+			   
 . # end coding for selection
 
 #new article header with index of article selections

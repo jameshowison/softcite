@@ -1,0 +1,29 @@
+--------------------------
+There were 59 articles with mentions and 31 articles without.
+--------------
+Counts of articles, mentions, and Journals
+Source: local data frame [3 x 4]
+
+    strata journal_count article_count mention_count
+1     1-10             5            23           130
+2   11-110            17            19            89
+3 111-1455            17            17            65
+--------------
+# Percentage of articles with mentions
+[1] 0.77 0.63 0.57
+--------------------
+Outputted MentionsByStrataBoxplot.png
+--------------
+Table 3. Types of software mentions in publications
+Source: local data frame [7 x 2]
+
+                    value num
+1     Cite to publication 105
+2     Cite to user manual   6
+3 Cite to name or website  16
+4         Like instrument  52
+5             URL in text  13
+6               Name only  89
+7           Not even name   4
+--------------------
+Outputted TypesOfSoftwareMentions.png

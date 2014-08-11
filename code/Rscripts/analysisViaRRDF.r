@@ -151,9 +151,10 @@ mentions_by_strata <- data %.%
              article_count = n_distinct(article), 
 			 mention_count = n_distinct(selection)
 			)
-
 # Percentage of articles with mentions
 round(mentions_by_strata$article_count / 30,2)
+
+
 
 ############
 # Summary by journal, sorted

@@ -6170,37 +6170,37 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:identifiable ;
+			   	  ca:appliesCode [ rdf:type citec:identifiable ];
 			   	] ;
 	
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:findable ;
+			   	  ca:appliesCode [ rdf:type citec:findable ];
 			   	] ;
 	
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:unfindable_version ;
+			   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 			   	] ;
 	
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:access_free ;
+			   	  ca:appliesCode [ rdf:type citec:access_free ];
 			   	] ;
 	
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:source_available ;
+			   	  ca:appliesCode [ rdf:type citec:source_available ];
 			   	] ;
 	
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:permission_modify ;
+			   	  ca:appliesCode [ rdf:type citec:permission_modify ];
 			   	] ;
 	
 			   #end citation functions   
@@ -6265,25 +6265,25 @@ bioj:a2007-14-NAT_GENET-C01 rdf:type bioj:selection ;
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:identifiable ;
+		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:findable ;
+		   	  ca:appliesCode [ rdf:type citec:findable ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable_version ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:no_access ;
+		   	  ca:appliesCode [ rdf:type citec:no_access ];
 		   	] ;
 . # end coding for selection
 
@@ -6318,49 +6318,49 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:identifiable ;
+		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unidentifiable ;
+		   	  ca:appliesCode [ rdf:type citec:unidentifiable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:findable ;
+		   	  ca:appliesCode [ rdf:type citec:findable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable_version ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:access_purchase ;
+		   	  ca:appliesCode [ rdf:type citec:access_purchase ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:source_unavailable ;
+		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:prohibited_modify ;
+		   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
 		   	] ;
 	
 . # end coding for selection
@@ -6390,43 +6390,43 @@ bioj:a2007-14-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:identifiable ;
+		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
 		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:findable ;
+		   	  ca:appliesCode [ rdf:type citec:findable ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable_version ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
 		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:access_free ;
+		   	  ca:appliesCode [ rdf:type citec:access_free ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:source_available ;
+		   	  ca:appliesCode [ rdf:type citec:source_available ];
 		   	] ;
 	
 		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:permission_modify ;
+		   	  ca:appliesCode [ rdf:type citec:permission_modify ];
 		   	] ;
 	
 		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:missesPreferredCite ;
+		   	  ca:appliesCode [ rdf:type citec:missesPreferredCite ];
 		   	] ;
 	
 		   	ca:memo "Documentation includes 2 articles and one program citation, dating between 1997 and 2012" ;
@@ -6505,38 +6505,39 @@ bioj:a2005-12-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:identifiable ;
+		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:findable ;
+		   	  ca:appliesCode [ rdf:type citec:findable ];
 		   	] ;
 	
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable_version ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:access_purchase ;
+		   	  ca:appliesCode [ rdf:type citec:access_purchase ];
 		   	] ;
 
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:source_unavailable ;
+		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:prohibited_modify ;
+		   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
 		   	] ;
+
  . # end coding for selection
 
 #new article header with index of article selections
@@ -6617,37 +6618,37 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:identifiable ;
+			   	  ca:appliesCode [ rdf:type citec:identifiable ];
 			   	] ;
 
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:findable ;
+			   	  ca:appliesCode [ rdf:type citec:findable ];
 			   	] ;
 
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:unfindable_version ;
+			   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 			   	] ;
 
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:access_purchase ;
+			   	  ca:appliesCode [ rdf:type citec:access_purchase ];
 			   	] ;
 
 			   	ca:isTargetOf
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:source_unavailable ;
+			   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 			   	] ;
 
 			   	ca:isTargetof 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
-			   	  ca:appliesCode citec:prohibited_modify ;
+			   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
 			   	] ;
 			   
 . # end coding for selection
@@ -6677,43 +6678,43 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:identifiable ;
+		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:findable ;
+		   	  ca:appliesCode [ rdf:type citec:findable ];
 		   	] ;
 
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:unfindable_version ;
+		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:access_free ;
+		   	  ca:appliesCode [ rdf:type citec:access_free ];
 		   	] ;
 
 		   	ca:isTargetOf
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:source_unavailable ;
+		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:permission_modify ;
+		   	  ca:appliesCode [ rdf:type citec:permission_modify ];
 		   	] ;
 	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode citec:missesPreferredCite ;
+		   	  ca:appliesCode [ rdf:type citec:missesPreferredCite ];
 		   	] ;
 	
 		   	ca:memo "License requires users cite a 2001 article when publishing research. This article does not reference the citation or any software-specific reference." ;

@@ -4,6 +4,8 @@ library(reshape2)
 library(dplyr)
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
+#source("code/Rscripts//analysisFromInferred.r")
+
 
 # Output goes to this file (using print)
 sink("output/analysis_output.txt")
@@ -200,6 +202,15 @@ WHERE {
 
 software_with_names <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 
+software_in_articles <- software_with_names %.%
+group_by(software_name) %.%
+summarize(article_count = n_distinct(article))
+
+cat("--------------------\n")
+cat("Most used software\n")
+print(software_in_articles %.%
+filter(article_count > 1) %.%
+arrange(desc(article_count)))
 
 
 # # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)

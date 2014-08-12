@@ -29,3 +29,28 @@ Source: local data frame [7 x 2]
 Outputted Figure 2: TypesOfSoftwareMentions.png
 --------------------
 Outputted Figure 3: MentionTypesByStrata.png
+--------------------
+Most used software
+Source: local data frame [20 x 2]
+
+         software_name article_count
+1                 CCP4             4
+2             ClustalW             4
+3                Excel             4
+4                 PAUP             4
+5      Adobe Photoshop             3
+6                BLAST             3
+7                  HKL             3
+8               ImageJ             3
+9            MetaMorph             3
+10           NIH Image             3
+11                   O             3
+12                SPSS             3
+13                 CNS             2
+14           ModelTest             2
+15                   R             2
+16              REFMAC             2
+17                 SAS             2
+18               SOLVE             2
+19 Stereo Investigator             2
+20            Treeview             2

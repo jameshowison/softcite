@@ -40,7 +40,7 @@ citec:software-Useq
 		citec:alternative_name "USeq IntersectLists",
  	                          "USeq IntersectRegions",
  							  "USeq AggregatePlots", 							  
-							  "USeq FNG" ; 
+							  "USeq FNG" , "USeq" , "USeq QCSeqs" ; 
 .
 
 citec:software-PAUP 
@@ -97,7 +97,7 @@ citec:software-MacClade
 citec:software-PHYLIP
 		rdf:type citec:software_package ;
 		rdfs:label "PHYLIP" ;
-		citec:alternative_name "PHYLIP SEQBOOT" ;
+		citec:alternative_name "PHYLIP SEQBOOT" , "PHYLIP CONSENSE" ;
 .
 
 citec:software-MacClade
@@ -109,7 +109,7 @@ citec:software-MacClade
 citec:software-Treeview
 		rdf:type citec:software_package ;
 		rdfs:label "Treeview" ;
-		citec:alternative_name "TREEVIEW" ;
+		citec:alternative_name "TREEVIEW" , "TreeView" ;
 .
 
 citec:software-Swiss-Model
@@ -141,6 +141,49 @@ citec:software-BioNJ
 		rdfs:label "BioNJ" ;
 		citec:alternative_name "BIONJ" ;
 .
+
+citec:software-SPSS	
+		rdf:type citec:software_package ;
+		rdfs:label "SPSS" ;
+		citec:alternative_name "statistical Packages for the Social Sciences" ;
+.
+
+citec:software-Excel
+		rdf:type citec:software_package ;
+		rdfs:label "Excel" ;
+		citec:alternative_name "excel" ;
+.
+
+citec:software-MapMaker
+		rdf:type citec:software_package ;
+		rdfs:label "MapMaker" ;
+		citec:alternative_name "Mapmaker" , "Map-Maker" ;
+.
+
+citec:software-MetaMorph
+		rdf:type citec:software_package ;
+		rdfs:label "MetaMorph" ;
+		citec:alternative_name "Metamorph Imaging System", "Metamorph" ;
+.
+
+citec:software-MitoProt
+		rdf:type citec:software_package ;
+		rdfs:label "MitoProt" ;
+		citec:alternative_name "MitoProt II" ;
+.
+
+citec:software-NIHImage
+		rdf:type citec:software_package ;
+		rdfs:label "NIH Image" ;
+		citec:alternative_name "NIH image" , "NIH-Image" ;
+.
+
+citec:software-ModelTest
+		rdf:type citec:software_package ;
+		rdfs:label "ModelTest" ;
+		citec:alternative_name "Modeltest" ;
+.
+
 
 
 # CLUSTAL W. Treeveew. a2003-44-BBA-GEN_SUBJECTS-B01.  These are different packages.

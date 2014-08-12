@@ -328,8 +328,6 @@ public class TTLRepository {
 	
 	// Creates a URI for each software package in dataset
 	public static Model createSoftwarePackages(Model inferred, String mappingFile) {
-		// Read in InferredStatements.ttl
-		// standardized_name is a copy of original_name
 
 		Model mappings = FileManager.get().loadModel(
 			path + mappingFile ); 
@@ -418,11 +416,11 @@ public class TTLRepository {
 		Model resultsModel = runSPINruleSet(model, "SPINrules.ttl");
 		saveResults(resultsModel);
 		
-		// resultsModel = createSoftwarePackages(resultsModel, "NameMapping.ttl");
-		// saveResults(resultsModel);
-		//
-		//  		resultsModel = runSPINruleSet(resultsModel, "SPINrules2.ttl");
-		//  		saveResults(resultsModel);
+		resultsModel = createSoftwarePackages(resultsModel, "NameMapping.ttl");
+		saveResults(resultsModel);
+
+ 		resultsModel = runSPINruleSet(resultsModel, "SPINrules2.ttl");
+ 		saveResults(resultsModel);
 		//
 		// resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
 		// saveResults(resultsModel);

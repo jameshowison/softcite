@@ -34,6 +34,16 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	#               ] ;
 
 	spin:constraint
+	            [ a       spl:Attribute ;
+	              rdfs:comment "Must only mention 1 piece of software "^^xsd:string ;
+	              spl:predicate bioj:mentions_software;
+	              spl:minCount 1 ;
+	              spl:maxCount 1 ;
+	              # spl:valueType citec:MentionClassification ;
+	             # spl:defaultValue ex:Red
+	            ] ;
+
+	spin:constraint
 	          [ a       sp:Construct ;
 	            sp:text """
 	                CONSTRUCT {
@@ -52,37 +62,28 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 
 bioj:SoftwareMention a rdfs:Class ;
 #
-spin:constraint
-              [ a       spl:Attribute ;
-                rdfs:comment "Must have one and exactly one classification "^^xsd:string ;
-                spl:predicate citec:mention_category ;
-                spl:minCount 1 ;
-                spl:maxCount 1 ;
-                # spl:valueType citec:MentionClassification ;
-               # spl:defaultValue ex:Red
-              ] ;
-spin:constraint
-            [ a       spl:Attribute ;
-              rdfs:comment "Must have one and exactly one original name for the software "^^xsd:string ;
-              spl:predicate citec:original_name ;
-              spl:minCount 1 ;
-              spl:maxCount 1 ;
-              # spl:valueType citec:MentionClassification ;
-             # spl:defaultValue ex:Red
-            ] ;
-spin:constraint
-          [ a       sp:Construct ;
-            sp:text """
-                CONSTRUCT {
-                    _:violation a spin:ConstraintViolation ;
-                         spin:violationRoot ?this ;
-                         rdfs:label "Cannot have matched cite if no citation" ;
-                }
-                WHERE {
-					?this citec:has_citation false ;
-						  citec:matches_preferred_cite true .
-			    }"""
-          ] ;			  
+# spin:constraint
+#               [ a       spl:Attribute ;
+#                 rdfs:comment "Must have one and exactly one classification "^^xsd:string ;
+#                 spl:predicate citec:mention_category ;
+#                 spl:minCount 1 ;
+#                 spl:maxCount 1 ;
+#                 # spl:valueType citec:MentionClassification ;
+#                # spl:defaultValue ex:Red
+#               ] ;
+# spin:constraint
+#           [ a       sp:Construct ;
+#             sp:text """
+#                 CONSTRUCT {
+#                     _:violation a spin:ConstraintViolation ;
+#                          spin:violationRoot ?this ;
+#                          rdfs:label "Cannot have matched cite if no citation" ;
+#                 }
+#                 WHERE {
+# 					?this citec:has_citation false ;
+# 						  citec:matches_preferred_cite true .
+# 			    }"""
+#           ] ;		  
 .
 
 # bioj:SoftwarePackage a rdfs:Class ;

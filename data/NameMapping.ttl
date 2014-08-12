@@ -69,3 +69,78 @@ citec:software-SAS
 		citec:alternative_name "Statistical Analysis Software",
  							  "SAS/STAT" ;
 .
+
+citec:software-AMoRe
+		rdf:type citec:software_package ;
+		rdfs:label "AMoRe" ;
+		citec:alternative_name "Amore", "AmoRe" ;
+.
+
+citec:software-WinNONLIN
+		rdf:type citec:software_package ;
+		rdfs:label "WinNONLIN" ;
+		citec:alternative_name "WinNONLIN106" ;
+.
+
+citec:software-WinNONLIN
+		rdf:type citec:software_package ;
+		rdfs:label "WinNONLIN" ;
+		citec:alternative_name "WinNONLIN106" ;
+.
+
+citec:software-MacClade
+		rdf:type citec:software_package ;
+		rdfs:label "MacClade" ;
+		citec:alternative_name "Macclade" ;
+.
+
+citec:software-PHYLIP
+		rdf:type citec:software_package ;
+		rdfs:label "PHYLIP" ;
+		citec:alternative_name "PHYLIP SEQBOOT" ;
+.
+
+citec:software-MacClade
+		rdf:type citec:software_package ;
+		rdfs:label "MacClade" ;
+		citec:alternative_name "Macclade" ;
+.
+
+citec:software-Treeview
+		rdf:type citec:software_package ;
+		rdfs:label "Treeview" ;
+		citec:alternative_name "TREEVIEW" ;
+.
+
+citec:software-Swiss-Model
+		rdf:type citec:software_package ;
+		rdfs:label "Swiss-Model" ;
+		citec:alternative_name "SWISS-MODEL", "Swiss-Pdb Viewer", "ProMod" ; # http://swissmodel.expasy.org/SM_References.html
+.
+
+citec:software-Staden
+		rdf:type citec:software_package ;
+		rdfs:label "Staden" ;
+		citec:alternative_name "Staden sequence analysis" ;
+.
+
+citec:software-GDE
+		rdf:type citec:software_package ;
+		rdfs:label "GDE" ;
+		citec:alternative_name "the genetic data environment" ;
+.
+
+citec:software-CCP4
+		rdf:type citec:software_package ;
+		rdfs:label "CCP4" ;
+		citec:alternative_name "DM" ;  # Collaborative_Computational-1994-02, a package within CCP4.
+.
+
+citec:software-BioNJ	
+		rdf:type citec:software_package ;
+		rdfs:label "BioNJ" ;
+		citec:alternative_name "BIONJ" ;
+.
+
+
+# CLUSTAL W. Treeveew. a2003-44-BBA-GEN_SUBJECTS-B01.  These are different packages.

@@ -83,14 +83,14 @@ bioj:SoftwareMention a rdfs:Class ;
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
 	  		bioj:from_selection ?sel .
-			{ 
+			 {
 				?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
 			                                      rdfs:label ?software_name ] ] . 
-			} UNION {
-				?sel bioj:has_reference ?ref . 
-		        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
-			                                           rdfs:label ?software_name ] ] .
-			}
+			 } UNION {
+			 	?sel bioj:has_reference ?ref .
+			 		        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
+			                                            rdfs:label ?software_name ] ] .
+			 }
 	}"""
 ] ;
             bioj:runFirstRule [ rdf:type sp:Construct ;

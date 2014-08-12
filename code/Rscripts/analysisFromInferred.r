@@ -192,11 +192,12 @@ cat("Outputted Figure 3: MentionTypesByStrata.png\n")
 ###################
 
 query <- "
-SELECT ?article_link ?article ?software_name
+SELECT ?article_link ?article ?software ?software_name
 WHERE {
 	?article_link rdf:type bioj:ArticleSoftwareLink ;
-	              bioj:mentions_software [ rdfs:label ?software_name ] ;
+	              bioj:mentions_software ?software ;
 				  citec:from_article ?article .
+	?software rdfs:label ?software_name .
 }
 "
 
@@ -212,6 +213,20 @@ print(software_in_articles %.%
 filter(article_count > 1) %.%
 arrange(desc(article_count)))
 
+query <- "
+SELECT DISTINCT ?software
+WHERE {
+	?software rdf:type bioj:SoftwarePackage .
+}
+"
+
+software_packages <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+
+cat("--------------------\n")
+cat("We found references to ")
+cat(nrow(count_unique_packages))
+cat(" 129 distinct pieces of software\n")
 
 # # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 # # bioj:from_selection

@@ -70,10 +70,12 @@ mention_count_by_article <- mentions %.%
 
 ggplot(mention_count_by_article,aes(x=strata,y=mention_count)) + geom_boxplot() + scale_y_continuous(name = "Mentions in article") + scale_x_discrete(name="Journal Impact Factor rank")
 
-ggsave(filename="output/MentionsByStrataBoxplot.png", width=5, height=2)
+ggsave(filename="output/Fig1-MentionsByStrataBoxplot.png", width=5, height=2)
 
 cat("--------------------\n")
 cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")
+
+
 ######################
 # Mention classifications
 #####################
@@ -109,10 +111,79 @@ theme(legend.position="none",
 	axis.text.x=element_text(angle=25,hjust=1)
 	)
 
-ggsave(filename="output/TypesOfSoftwareMentions.png", width=5, height=4)
+ggsave(filename="output/Fig2-TypesOfSoftwareMentions.png", width=5, height=4)
 cat("--------------------\n")
 cat("Outputted Figure 2: TypesOfSoftwareMentions.png\n")
 
+####################
+# Major mention types by strata.
+####################
+
+# Table for software mentions, including proportions
+# total_mentions <- n_distinct(mentions$selection)
+#
+# mentions %.%
+# group_by(category) %.%
+# summarize(num_type = n_distinct(selection),
+#           proportion = round(num_type / total_mentions, 2) ) %.%
+# arrange(desc(num_type))
+
+# Want proportions of each type within its strata.
+
+# Get total in strata
+mentions_by_strata <- mentions %.% group_by(strata) %.%
+summarize(total_in_strata = n_distinct(selection))
+
+#     strata total_in_strata
+# 1     1-10             130
+# 2   11-110              89
+# 3 111-1455              65
+
+# Count number of each category in each strata
+types_by_strata <- mentions %.%
+group_by(strata, category) %.%
+summarize(type_in_strata = n_distinct(selection))
+
+#      strata                category type_in_strata
+# 1      1-10 Cite to name or website              2
+# 2      1-10     Cite to publication             47
+# 6      1-10           Not even name              3
+# 7      1-10             URL in text              6
+# 8    11-110 Cite to name or website              8
+# 9    11-110     Cite to publication             34
+
+# Add the total for that strata to each row, to be used to create percentage
+types_by_strata <- merge(types_by_strata,mentions_by_strata)
+
+# create the percentage for each row.
+types_by_strata <- within(types_by_strata, proportion <- round(type_in_strata / total_in_strata, 2))
+
+# This would give you a usable table to show these data
+# dcast(types_by_strata, category ~ strata , sum, value.var="type_in_strata")
+
+# reduce to just the 'major categories
+types_for_graph <- filter(types_by_strata, category %in% c("Cite to publication","Like instrument","Name only"))
+
+# Then graph as dodged bars
+ggplot(types_for_graph,aes(x=strata,y=proportion,fill=strata)) + 
+  geom_bar(stat="identity") + 
+  facet_grid(.~category) + 
+  scale_y_continuous(name="Proportion",limits=c(0,0.5)) +
+  scale_x_discrete(name="Strata") +
+  scale_fill_grey() + 
+  theme(legend.position="none",
+        panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_text(vjust=0.1),
+		text=element_text(size=10),
+		axis.text.x=element_text(angle=25,hjust=1)) +
+#  ggtitle("Major software mention types by journal strata")
+  
+ggsave(filename="output/Fig3-MentionTypesByStrata.png", width=5, height=4)
+cat("--------------------\n")
+cat("Outputted Figure 3: MentionTypesByStrata.png\n")
 #
 # # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 # # bioj:from_selection

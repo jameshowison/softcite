@@ -12,7 +12,7 @@ Source: local data frame [3 x 4]
 # Percentage of articles with mentions
 [1] 0.77 0.63 0.57
 --------------------
-Outputted MentionsByStrataBoxplot.png
+Outputted Figure 1: MentionsByStrataBoxplot.png
 --------------
 Table 3. Types of software mentions in publications
 Source: local data frame [7 x 2]
@@ -26,4 +26,6 @@ Source: local data frame [7 x 2]
 6               Name only  89
 7           Not even name   4
 --------------------
-Outputted TypesOfSoftwareMentions.png
+Outputted Figure 2: TypesOfSoftwareMentions.png
+--------------------
+Outputted Figure 3: MentionTypesByStrata.png

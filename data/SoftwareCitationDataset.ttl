@@ -6321,22 +6321,10 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
-		   	ca:isTargetOf
-		   	[ rdf:type ca:CodeApplication ;
-		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode [ rdf:type citec:unidentifiable ];
-		   	] ;
-	
 		   	ca:isTargetof 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:findable ];
-		   	] ;
-	
-		   	ca:isTargetof 
-		   	[ rdf:type ca:CodeApplication ;
-		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode [ rdf:type citec:unfindable ];
 		   	] ;
 	
 		   	ca:isTargetOf

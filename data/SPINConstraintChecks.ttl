@@ -62,6 +62,15 @@ spin:constraint
                # spl:defaultValue ex:Red
               ] ;
 spin:constraint
+            [ a       spl:Attribute ;
+              rdfs:comment "Must have one and exactly one original name for the software "^^xsd:string ;
+              spl:predicate citec:original_name ;
+              spl:minCount 1 ;
+              spl:maxCount 1 ;
+              # spl:valueType citec:MentionClassification ;
+             # spl:defaultValue ex:Red
+            ] ;
+spin:constraint
           [ a       sp:Construct ;
             sp:text """
                 CONSTRUCT {

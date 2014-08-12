@@ -62,3 +62,10 @@ citec:software-CNS
 		rdfs:label "CNS" ;
 		citec:alternative_name "Crystallography & NMR system" ;
 .
+
+citec:software-SAS
+		rdf:type citec:software_package ;
+		rdfs:label "SAS" ;
+		citec:alternative_name "Statistical Analysis Software",
+ 							  "SAS/STAT" ;
+.

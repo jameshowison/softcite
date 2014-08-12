@@ -184,7 +184,24 @@ ggplot(types_for_graph,aes(x=strata,y=proportion,fill=strata)) +
 ggsave(filename="output/Fig3-MentionTypesByStrata.png", width=5, height=4)
 cat("--------------------\n")
 cat("Outputted Figure 3: MentionTypesByStrata.png\n")
-#
+
+###################
+# Summary of software mentioned
+###################
+
+query <- "
+SELECT ?article_link ?article ?software_name
+WHERE {
+	?article_link rdf:type bioj:ArticleSoftwareLink ;
+	              bioj:mentions_software [ rdfs:label ?software_name ] ;
+				  citec:from_article ?article .
+}
+"
+
+software_with_names <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+
+
 # # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 # # bioj:from_selection
 # # citec:from_mention      citec:a2001-40-MOL_ECOL-C05-mention ;

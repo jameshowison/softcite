@@ -83,14 +83,14 @@ bioj:SoftwareMention a rdfs:Class ;
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
 	  		bioj:from_selection ?sel .
-			 {
+			{ 
 				?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
 			                                      rdfs:label ?software_name ] ] . 
-			 } UNION {
-			 	?sel bioj:has_reference ?ref .
-			 		        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
-			                                            rdfs:label ?software_name ] ] .
-			 }
+			} UNION {
+				?sel bioj:has_reference ?ref . 
+		        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_name ;
+			                                           rdfs:label ?software_name ] ] .
+			}
 	}"""
 ] ;
             bioj:runFirstRule [ rdf:type sp:Construct ;
@@ -109,242 +109,242 @@ bioj:SoftwareMention a rdfs:Class ;
 			}
 	}"""
 ] ;
-            bioj:runFirstRule [ rdf:type sp:Construct ;
-			sp:text """
-	# Moves version_number and/or date. Either code can be on original or any reference.
-	CONSTRUCT {
-	  ?this citec:has_version_indicator true ;
-	}
-	WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-  		bioj:from_selection ?sel .
-		{ 
-			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] . 
-		} UNION {
-			?sel bioj:has_reference ?ref . 
-	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
-		}
-		FILTER (?code = citec:version_number || ?code = citec:date)
-	}"""
-] ;
-
-            bioj:runFirstRule [ rdf:type sp:Construct ;
-			sp:text """
-	# Deal with Software Used
-	CONSTRUCT {
-	  ?this citec:has_software_used true ;
-	}
-	WHERE {
-  	  ?this  rdf:type bioj:SoftwareMention ;
-  		     bioj:from_selection ?sel .
-	 		{ 
-	 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] . 
-	 		} UNION {
-	 			?sel bioj:has_reference ?ref . 
-	 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
-	 		}
-		
-	}"""
-];	
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# And software not used.
-CONSTRUCT {
-  ?this citec:has_software_used false ;
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
- 		{ 
- 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_not_used ] ] . 
- 		} UNION {
- 			?sel bioj:has_reference ?ref . 
- 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_not_used ] ] .
- 		}
-	
-}"""
-] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Deal with URL.
-CONSTRUCT {
-  ?this citec:has_url true ;
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
- 		{ 
- 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] . 
- 		} UNION {
- 			?sel bioj:has_reference ?ref . 
- 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .
- 		}
-	
-}"""
-] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Deal with no url
-CONSTRUCT {
-  ?this citec:has_url false ;
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
-		FILTER NOT EXISTS { ?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] . }
-		FILTER NOT EXISTS {
-			?sel bioj:has_reference ?ref . 
-	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url  ] ] .
-		}
-	
-}"""
-] ;
-
-            bioj:runFirstRule [ rdf:type sp:Construct ;
-			sp:text """
-	# Does this specific Mention do any crediting? Can be on in-text or in reference.
-	CONSTRUCT {
-	  ?this citec:has_creator true .
-	}
-	WHERE {
-  	  ?this  rdf:type bioj:SoftwareMention ;
-  		     bioj:from_selection ?sel .
-	 		{ 
-	 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] . 
-	 		} UNION {
-	 			?sel bioj:has_reference ?ref . 
-	 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
-	 		}
-		
-	}"""
-];	
-
-        spin:rule [ rdf:type sp:Construct ;
-		sp:text """
-# Runs after all other rules. If creator not true then it's false.
-CONSTRUCT {
-  ?this citec:has_creator false ;
-}
-WHERE {
-  ?this rdf:type bioj:SoftwareMention .
-  FILTER NOT EXISTS { ?this citec:has_creator true } 
-}"""
-] ;
-
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Citations to domain publications
-CONSTRUCT {
-  ?this citec:has_citation true ;
-        citec:citation_type "publication" .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection [ bioj:has_reference ?ref ] .
-  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:domain_publication  ] ] .
-}"""
-] ;
-
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Citations to software publications
-CONSTRUCT {
-  ?this citec:has_citation true ;
-        citec:citation_type "publication" .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection [ bioj:has_reference ?ref ] .
-  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_publication  ] ] .
-}"""
-] ;
-
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Citations to user_manuals
-CONSTRUCT {
-  ?this citec:has_citation true ;
-        citec:citation_type "user_manual" .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection [ bioj:has_reference ?ref ] .
-  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:users_manual  ] ] .
-}"""
-] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Citations to domain publications
-CONSTRUCT {
-  ?this citec:has_citation true ;
-        citec:citation_type "name_or_website" .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection [ bioj:has_reference ?ref ] .
-  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_name  ] ] .
-}"""
-] ;
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Citations to domain publications
-CONSTRUCT {
-  ?this citec:has_citation true ;
-        citec:citation_type "name_or_website" .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection [ bioj:has_reference ?ref ] .
-  ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_page  ] ] .
-}"""
-] ;
-
-        spin:rule [ rdf:type sp:Construct ;
-		sp:text """
-# Runs after all other rules. If creator not true then it's false.
-CONSTRUCT {
-  ?this citec:has_citation false ;
-}
-WHERE {
-  ?this rdf:type bioj:SoftwareMention .
-  FILTER NOT EXISTS { ?this citec:has_citation true } 
-}"""
-] ;
-
-        bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Does this Mention match a preferred cite?
-CONSTRUCT {
-  ?this citec:matches_preferred_cite true .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
- 		{ 
- 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] . 
- 		} UNION {
- 			?sel bioj:has_reference ?ref . 
- 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] .
- 		}
-}"""
-];	        
-		bioj:runFirstRule [ rdf:type sp:Construct ;
-		sp:text """
-# Does this Mention match a preferred cite?
-CONSTRUCT {
-  ?this citec:matches_preferred_cite false .
-}
-WHERE {
-  ?this  rdf:type bioj:SoftwareMention ;
-	     bioj:from_selection ?sel .
- 		{ 
- 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] . 
- 		} UNION {
- 			?sel bioj:has_reference ?ref . 
- 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] .
- 		}
-}"""
-];	
+#             bioj:runFirstRule [ rdf:type sp:Construct ;
+# 			sp:text """
+# 	# Moves version_number and/or date. Either code can be on original or any reference.
+# 	CONSTRUCT {
+# 	  ?this citec:has_version_indicator true ;
+# 	}
+# 	WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+#   		bioj:from_selection ?sel .
+# 		{
+# 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+# 		} UNION {
+# 			?sel bioj:has_reference ?ref .
+# 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type ?code ] ] .
+# 		}
+# 		FILTER (?code = citec:version_number || ?code = citec:date)
+# 	}"""
+# ] ;
+#
+#             bioj:runFirstRule [ rdf:type sp:Construct ;
+# 			sp:text """
+# 	# Deal with Software Used
+# 	CONSTRUCT {
+# 	  ?this citec:has_software_used true ;
+# 	}
+# 	WHERE {
+#   	  ?this  rdf:type bioj:SoftwareMention ;
+#   		     bioj:from_selection ?sel .
+# 	 		{
+# 	 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
+# 	 		} UNION {
+# 	 			?sel bioj:has_reference ?ref .
+# 	 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_used ] ] .
+# 	 		}
+#
+# 	}"""
+# ];
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # And software not used.
+# CONSTRUCT {
+#   ?this citec:has_software_used false ;
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection ?sel .
+#  		{
+#  			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_not_used ] ] .
+#  		} UNION {
+#  			?sel bioj:has_reference ?ref .
+#  	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_not_used ] ] .
+#  		}
+#
+# }"""
+# ] ;
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Deal with URL.
+# CONSTRUCT {
+#   ?this citec:has_url true ;
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection ?sel .
+#  		{
+#  			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .
+#  		} UNION {
+#  			?sel bioj:has_reference ?ref .
+#  	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] .
+#  		}
+#
+# }"""
+# ] ;
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Deal with no url
+# CONSTRUCT {
+#   ?this citec:has_url false ;
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection ?sel .
+# 		FILTER NOT EXISTS { ?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url ] ] . }
+# 		FILTER NOT EXISTS {
+# 			?sel bioj:has_reference ?ref .
+# 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:url  ] ] .
+# 		}
+#
+# }"""
+# ] ;
+#
+#             bioj:runFirstRule [ rdf:type sp:Construct ;
+# 			sp:text """
+# 	# Does this specific Mention do any crediting? Can be on in-text or in reference.
+# 	CONSTRUCT {
+# 	  ?this citec:has_creator true .
+# 	}
+# 	WHERE {
+#   	  ?this  rdf:type bioj:SoftwareMention ;
+#   		     bioj:from_selection ?sel .
+# 	 		{
+# 	 			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+# 	 		} UNION {
+# 	 			?sel bioj:has_reference ?ref .
+# 	 	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:creator ] ] .
+# 	 		}
+#
+# 	}"""
+# ];
+#
+#         spin:rule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Runs after all other rules. If creator not true then it's false.
+# CONSTRUCT {
+#   ?this citec:has_creator false ;
+# }
+# WHERE {
+#   ?this rdf:type bioj:SoftwareMention .
+#   FILTER NOT EXISTS { ?this citec:has_creator true }
+# }"""
+# ] ;
+#
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Citations to domain publications
+# CONSTRUCT {
+#   ?this citec:has_citation true ;
+#         citec:citation_type "publication" .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection [ bioj:has_reference ?ref ] .
+#   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:domain_publication  ] ] .
+# }"""
+# ] ;
+#
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Citations to software publications
+# CONSTRUCT {
+#   ?this citec:has_citation true ;
+#         citec:citation_type "publication" .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection [ bioj:has_reference ?ref ] .
+#   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:software_publication  ] ] .
+# }"""
+# ] ;
+#
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Citations to user_manuals
+# CONSTRUCT {
+#   ?this citec:has_citation true ;
+#         citec:citation_type "user_manual" .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection [ bioj:has_reference ?ref ] .
+#   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:users_manual  ] ] .
+# }"""
+# ] ;
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Citations to domain publications
+# CONSTRUCT {
+#   ?this citec:has_citation true ;
+#         citec:citation_type "name_or_website" .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection [ bioj:has_reference ?ref ] .
+#   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_name  ] ] .
+# }"""
+# ] ;
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Citations to domain publications
+# CONSTRUCT {
+#   ?this citec:has_citation true ;
+#         citec:citation_type "name_or_website" .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection [ bioj:has_reference ?ref ] .
+#   ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:project_page  ] ] .
+# }"""
+# ] ;
+#
+#         spin:rule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Runs after all other rules. If creator not true then it's false.
+# CONSTRUCT {
+#   ?this citec:has_citation false ;
+# }
+# WHERE {
+#   ?this rdf:type bioj:SoftwareMention .
+#   FILTER NOT EXISTS { ?this citec:has_citation true }
+# }"""
+# ] ;
+#
+#         bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Does this Mention match a preferred cite?
+# CONSTRUCT {
+#   ?this citec:matches_preferred_cite true .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection ?sel .
+#  		{
+#  			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] .
+#  		} UNION {
+#  			?sel bioj:has_reference ?ref .
+#  	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:matchesPreferredCite ] ] .
+#  		}
+# }"""
+# ];
+# 		bioj:runFirstRule [ rdf:type sp:Construct ;
+# 		sp:text """
+# # Does this Mention match a preferred cite?
+# CONSTRUCT {
+#   ?this citec:matches_preferred_cite false .
+# }
+# WHERE {
+#   ?this  rdf:type bioj:SoftwareMention ;
+# 	     bioj:from_selection ?sel .
+#  		{
+#  			?sel ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] .
+#  		} UNION {
+#  			?sel bioj:has_reference ?ref .
+#  	        ?ref ca:isTargetOf [ ca:appliesCode [ rdf:type citec:missesPreferredCite ] ] .
+#  		}
+# }"""
+# ];
 
 
 

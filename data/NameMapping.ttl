@@ -12,14 +12,14 @@
 
 @prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
 
-citec:software-ImageJ 
-		rdf:type citec:software_package ;
+bioj:software-ImageJ 
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "ImageJ" ;
 		citec:alternative_name "Image J" ; 
 .
 
-citec:software-BLAST 
-		rdf:type citec:software_package ;
+bioj:software-BLAST 
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "BLAST" ;
 		citec:alternative_name "Basic Local Alignment Search Tool (BLAST)" ,
 							  "TBLASTN" ,
@@ -28,14 +28,14 @@ citec:software-BLAST
 							  "BLASTN" ; 
 .
 
-citec:software-Stereo%20Investigator 
-		rdf:type citec:software_package ;
+bioj:software-Stereo%20Investigator 
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Stereo Investigator" ;
 		citec:alternative_name "StereoInvestigator" ; 
 .
 
-citec:software-Useq  
-		rdf:type citec:software_package ;
+bioj:software-Useq  
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Useq" ;
 		citec:alternative_name "USeq IntersectLists",
  	                          "USeq IntersectRegions",
@@ -43,143 +43,143 @@ citec:software-Useq
 							  "USeq FNG" , "USeq" , "USeq QCSeqs" ; 
 .
 
-citec:software-PAUP 
-		rdf:type citec:software_package ;
+bioj:software-PAUP 
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "PAUP" ;
 		citec:alternative_name "PAUP*" ;
 .
 
-citec:software-ClustalW
-		rdf:type citec:software_package ;
+bioj:software-ClustalW
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "ClustalW" ;
 		citec:alternative_name "CLUSTAL W",
  							  "CLUSTALW",
  							  "ClustalX" ;
 .
 
-citec:software-CNS
-		rdf:type citec:software_package ;
+bioj:software-CNS
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "CNS" ;
 		citec:alternative_name "Crystallography & NMR system" ;
 .
 
-citec:software-SAS
-		rdf:type citec:software_package ;
+bioj:software-SAS
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "SAS" ;
 		citec:alternative_name "Statistical Analysis Software",
  							  "SAS/STAT" ;
 .
 
-citec:software-AMoRe
-		rdf:type citec:software_package ;
+bioj:software-AMoRe
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "AMoRe" ;
 		citec:alternative_name "Amore", "AmoRe" ;
 .
 
-citec:software-WinNONLIN
-		rdf:type citec:software_package ;
+bioj:software-WinNONLIN
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "WinNONLIN" ;
 		citec:alternative_name "WinNONLIN106" ;
 .
 
-citec:software-WinNONLIN
-		rdf:type citec:software_package ;
+bioj:software-WinNONLIN
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "WinNONLIN" ;
 		citec:alternative_name "WinNONLIN106" ;
 .
 
-citec:software-MacClade
-		rdf:type citec:software_package ;
+bioj:software-MacClade
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "MacClade" ;
 		citec:alternative_name "Macclade" ;
 .
 
-citec:software-PHYLIP
-		rdf:type citec:software_package ;
+bioj:software-PHYLIP
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "PHYLIP" ;
 		citec:alternative_name "PHYLIP SEQBOOT" , "PHYLIP CONSENSE" ;
 .
 
-citec:software-MacClade
-		rdf:type citec:software_package ;
+bioj:software-MacClade
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "MacClade" ;
 		citec:alternative_name "Macclade" ;
 .
 
-citec:software-Treeview
-		rdf:type citec:software_package ;
+bioj:software-Treeview
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Treeview" ;
 		citec:alternative_name "TREEVIEW" , "TreeView" ;
 .
 
-citec:software-Swiss-Model
-		rdf:type citec:software_package ;
+bioj:software-Swiss-Model
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Swiss-Model" ;
 		citec:alternative_name "SWISS-MODEL", "Swiss-Pdb Viewer", "ProMod" ; # http://swissmodel.expasy.org/SM_References.html
 .
 
-citec:software-Staden
-		rdf:type citec:software_package ;
+bioj:software-Staden
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Staden" ;
 		citec:alternative_name "Staden sequence analysis" ;
 .
 
-citec:software-GDE
-		rdf:type citec:software_package ;
+bioj:software-GDE
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "GDE" ;
 		citec:alternative_name "the genetic data environment" ;
 .
 
-citec:software-CCP4
-		rdf:type citec:software_package ;
+bioj:software-CCP4
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "CCP4" ;
 		citec:alternative_name "DM" ;  # Collaborative_Computational-1994-02, a package within CCP4.
 .
 
-citec:software-BioNJ	
-		rdf:type citec:software_package ;
+bioj:software-BioNJ	
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "BioNJ" ;
 		citec:alternative_name "BIONJ" ;
 .
 
-citec:software-SPSS	
-		rdf:type citec:software_package ;
+bioj:software-SPSS	
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "SPSS" ;
 		citec:alternative_name "statistical Packages for the Social Sciences" ;
 .
 
-citec:software-Excel
-		rdf:type citec:software_package ;
+bioj:software-Excel
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "Excel" ;
 		citec:alternative_name "excel" ;
 .
 
-citec:software-MapMaker
-		rdf:type citec:software_package ;
+bioj:software-MapMaker
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "MapMaker" ;
 		citec:alternative_name "Mapmaker" , "Map-Maker" ;
 .
 
-citec:software-MetaMorph
-		rdf:type citec:software_package ;
+bioj:software-MetaMorph
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "MetaMorph" ;
 		citec:alternative_name "Metamorph Imaging System", "Metamorph" ;
 .
 
-citec:software-MitoProt
-		rdf:type citec:software_package ;
+bioj:software-MitoProt
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "MitoProt" ;
 		citec:alternative_name "MitoProt II" ;
 .
 
-citec:software-NIHImage
-		rdf:type citec:software_package ;
+bioj:software-NIHImage
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "NIH Image" ;
 		citec:alternative_name "NIH image" , "NIH-Image" ;
 .
 
-citec:software-ModelTest
-		rdf:type citec:software_package ;
+bioj:software-ModelTest
+		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "ModelTest" ;
 		citec:alternative_name "Modeltest" ;
 .

@@ -338,7 +338,7 @@ public class TTLRepository {
 		// Query should get all of the names
 		queryStr.append("SELECT ?software_package ?alternative_name ");
 		queryStr.append("WHERE {");
-		queryStr.append("  ?software_package rdf:type citec:software_package ; ");
+		queryStr.append("  ?software_package rdf:type bioj:SoftwarePackage ; ");
 		queryStr.append("           rdfs:label ?standardized_name ; ");
 		queryStr.append("           citec:alternative_name ?alternative_name  . ");
 		queryStr.append("}");
@@ -461,6 +461,8 @@ public class TTLRepository {
 	}
 	
 	private static Model runSPINruleSet(Model incoming, String rulePath) {	
+		
+		System.out.println("Running " + rulePath);
 		
 		//Create a copy of incoming to add rules to.
 		Model tempModel = ModelFactory.createDefaultModel();

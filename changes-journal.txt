@@ -970,6 +970,12 @@ a2007-14-NAT_GENET-C04
 
 So far, these have all been Catherine Coded, perhaps Julia just didn't do these?  No, a2003-39-J_COMPUT_AID_MOL_DES-B01 is a Julia coded one.
 
+===============================================================
+Wed Aug 13 16:33:10 CDT 2014
+===============================================================
+
+bioj:a2003-39-J_COMPUT_AID_MOL_DES-CScore - this is software_not_used.
+
 Note that these don't have identifiable or findable, but they do have credited true because that one is done by negation, a pretty bad idea, really.
 
 ===============================================================

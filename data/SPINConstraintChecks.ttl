@@ -20,6 +20,7 @@
   rdf:type owl:Ontology ;
   owl:imports <http://purl.org/dc/terms/> ;
   owl:imports <http://spinrdf.org/spl> .
+  
 
 bioj:ArticleSoftwareLink a rdfs:Class ;
 	
@@ -30,13 +31,13 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	                spl:maxCount 1 ;
 	                spl:valueType xsd:boolean ;
 	              ] ;
-	#   	spin:constraint
-	#                 [ a       spl:Attribute ;
-	#                   spl:predicate citec:is_identifiable ;
-	#                   spl:minCount 1 ;
-	#                   spl:maxCount 1 ;
-	#                   spl:valueType xsd:boolean ;
-	#                 ] ;
+	  	spin:constraint
+	                [ a       spl:Attribute ;
+	                  spl:predicate citec:is_identifiable ;
+	                  spl:minCount 1 ;
+	                  spl:maxCount 1 ;
+	                  spl:valueType xsd:boolean ;
+	                ] ;
 	# spin:constraint
 	#               [ a       spl:Attribute ;
 	#                 spl:predicate citec:has_version_indicator ;
@@ -45,13 +46,13 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	#                 spl:valueType xsd:boolean ;
 	#               ] ;
 	#
-	#   	spin:constraint
-	#                 [ a       spl:Attribute ;
-	#                   spl:predicate citec:is_findable ;
-	#                   spl:minCount 1 ;
-	#                   spl:maxCount 1 ;
-	#                   spl:valueType xsd:boolean ;
-	#                 ] ;
+	  	spin:constraint
+	                [ a       spl:Attribute ;
+	                  spl:predicate citec:is_findable ;
+	                  spl:minCount 1 ;
+	                  spl:maxCount 1 ;
+	                  spl:valueType xsd:boolean ;
+	                ] ;
 	#   	spin:constraint
 	#                 [ a       spl:Attribute ;
 	#                   spl:predicate citec:version_is_findable ;
@@ -112,6 +113,13 @@ spin:constraint
 			 		}
 			    }"""
           ] ;
+
+	  # spin:constraint
+	  #               [ a       spl:Attribute ;
+	  #                 spl:predicate citec:original_name ;
+	  #                 spl:minCount 1 ;
+	  #                 spl:maxCount 1 ;
+	  #               ] ;
 
 spin:constraint
               [ a       spl:Attribute ;

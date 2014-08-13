@@ -49,7 +49,7 @@ bioj:SoftwareMention a rdfs:Class ;
 ] ;
             bioj:runSecondRule [ rdf:type sp:Construct ;
 			sp:text """
-	# Create software packages for each non-alternative
+	# Create software packages for each non-alternative 
 	CONSTRUCT {
 	  ?software_package a bioj:SoftwarePackage ;
 	                    rdfs:label ?name ;
@@ -72,7 +72,7 @@ bioj:SoftwareMention a rdfs:Class ;
 
             bioj:runSecondRule [ rdf:type sp:Construct ;
 			sp:text """
-	# Create ArticleSoftwareLinks
+	# Create ArticleSoftwareLinks but only for software that was used
 	CONSTRUCT {
 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
 	  	        bioj:mentions_software ?software_package ;
@@ -83,7 +83,8 @@ bioj:SoftwareMention a rdfs:Class ;
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
 			 bioj:mentions_software ?software_package ;
-			 bioj:from_selection ?selection .
+			 bioj:from_selection ?selection ;
+			 citec:has_software_used true .
 	  ?software_package rdfs:label ?name .
 	  ?article bioj:has_selection ?selection .
 	   	  BIND (
@@ -103,93 +104,87 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 # Identifiable / Unidentifiable
 ####################
 
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move identifiable true code to ArticleSoftwareLink
-# 	# True if any are true, but that is dealt with later.
-# 	CONSTRUCT {
-# 		?this citec:is_identifiable true .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{ {
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
-# 		} UNION {
-# 			?sel bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
-# 		} } UNION {
-# 			?sel bioj:references_same_software ?sel2 .
-# 			?sel2 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
-# 		}
-# 	}"""
-# ] ;
-#
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move identifiable true code to ArticleSoftwareLink
-# 	# True if any are true, but that is dealt with later.
-# 	CONSTRUCT {
-# 		?this citec:is_identifiable false .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{ {
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
-# 		} UNION {
-# 			?sel bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
-# 		} } UNION {
-# 			?sel bioj:references_same_software ?sel2 .
-# 			?sel2 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
-# 		}
-# 	}"""
-# ] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move identifiable true code to ArticleSoftwareLink
+	# True if any are true, but that is dealt with later.
+	CONSTRUCT {
+		?this citec:is_identifiable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
+		} UNION {
+			?sel bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:identifiable ] ] ;
+		} 
+	}"""
+] ;
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move identifiable true code to ArticleSoftwareLink
+	# True if any are true, but that is dealt with later.
+	CONSTRUCT {
+		?this citec:is_identifiable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
+		} UNION {
+			?sel bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unidentifiable ] ] ;
+		}
+	}"""
+] ;
 
 #####################
 # Findable / Unfindable
 ####################
 
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move findable true code to ArticleSoftwareLink
-# 	CONSTRUCT {
-# 		?this citec:is_findable true .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
-# 		} UNION {
-# 			?sel  bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
-# 		}
-# 	}"""
-# ] ;
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move findable false code to ArticleSoftwareLink
-#
-# 	CONSTRUCT {
-# 		?this citec:is_findable false .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
-# 		} UNION {
-# 			?sel  bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
-# 		}
-# 	}"""
-# ] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable true code to ArticleSoftwareLink
+	CONSTRUCT {
+		?this citec:is_findable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable ] ] ;
+		}
+	}"""
+] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable false code to ArticleSoftwareLink
+
+	CONSTRUCT {
+		?this citec:is_findable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable ] ] ;
+		}
+	}"""
+] ;
 #
 #     bioj:runFirstRule [ rdf:type sp:Construct ;
 # 	sp:text """

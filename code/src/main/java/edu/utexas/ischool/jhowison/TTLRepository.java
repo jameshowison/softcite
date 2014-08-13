@@ -332,48 +332,48 @@ public class TTLRepository {
 		Model mappings = FileManager.get().loadModel(
 			path + mappingFile ); 
 
-		// Creates using prefix mapping
-		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(mappings);
-		
-		// Query should get all of the names
-		queryStr.append("SELECT ?software_package ?alternative_name ");
-		queryStr.append("WHERE {");
-		queryStr.append("  ?software_package rdf:type bioj:SoftwarePackage ; ");
-		queryStr.append("           rdfs:label ?standardized_name ; ");
-		queryStr.append("           citec:alternative_name ?alternative_name  . ");
-		queryStr.append("}");
-		
-//		formatResultSet(queryStr,mappings);
-		
-		QueryExecution qe = QueryExecutionFactory.create(queryStr.asQuery(), mappings);
-		Iterator<QuerySolution> results = qe.execSelect();
-		
-		for ( ; results.hasNext() ; ) {
-			QuerySolution soln = results.next() ;
-
-			RDFNode softwareNode = soln.get("software_package");
-			RDFNode nameNode = soln.get("alternative_name");
-
-			ParameterizedSparqlString constructQuery = new ParameterizedSparqlString(inferred);
-
-			//This will be parameterized with each result above and results added to inferred
-			constructQuery.append("CONSTRUCT {");
-			constructQuery.append("  ?mention bioj:mentions_software ?software_package . ");
-			constructQuery.append("  ?software_package bioj:mentioned_in ?mention . } ");
-			constructQuery.append("WHERE {");
-			constructQuery.append("  ?mention citec:original_name ?alternative_name . ");
-			constructQuery.append("}");
-
-			constructQuery.setParam("software_package", softwareNode);
-			constructQuery.setParam("alternative_name", nameNode);
-
-	//		System.out.println(constructQuery.toString());
-
-			QueryExecution qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), inferred);
-
-			Model constructResults = qeConstruct.execConstruct();
-			inferred.add(constructResults);
-		}
+		// // Creates using prefix mapping
+// 		ParameterizedSparqlString queryStr = new ParameterizedSparqlString(mappings);
+//
+// 		// Query should get all of the names
+// 		queryStr.append("SELECT ?software_package ?alternative_name ");
+// 		queryStr.append("WHERE {");
+// 		queryStr.append("  ?software_package rdf:type bioj:SoftwarePackage ; ");
+// 		queryStr.append("           rdfs:label ?standardized_name ; ");
+// 		queryStr.append("           citec:alternative_name ?alternative_name  . ");
+// 		queryStr.append("}");
+//
+// //		formatResultSet(queryStr,mappings);
+//
+// 		QueryExecution qe = QueryExecutionFactory.create(queryStr.asQuery(), mappings);
+// 		Iterator<QuerySolution> results = qe.execSelect();
+//
+// 		for ( ; results.hasNext() ; ) {
+// 			QuerySolution soln = results.next() ;
+//
+// 			RDFNode softwareNode = soln.get("software_package");
+// 			RDFNode nameNode = soln.get("alternative_name");
+//
+// 			ParameterizedSparqlString constructQuery = new ParameterizedSparqlString(inferred);
+//
+// 			//This will be parameterized with each result above and results added to inferred
+// 			constructQuery.append("CONSTRUCT {");
+// 			constructQuery.append("  ?mention bioj:mentions_software ?software_package . ");
+// 			constructQuery.append("  ?software_package bioj:mentioned_in ?mention . } ");
+// 			constructQuery.append("WHERE {");
+// 			constructQuery.append("  ?mention citec:original_name ?alternative_name . ");
+// 			constructQuery.append("}");
+//
+// 			constructQuery.setParam("software_package", softwareNode);
+// 			constructQuery.setParam("alternative_name", nameNode);
+//
+// 	//		System.out.println(constructQuery.toString());
+//
+// 			QueryExecution qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), inferred);
+//
+// 			Model constructResults = qeConstruct.execConstruct();
+// 			inferred.add(constructResults);
+// 		}
 		
 		// Add SoftwarePackages for these mappings, others are created later.
 		inferred.add(mappings);

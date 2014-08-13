@@ -62,7 +62,7 @@ bioj:InTextSelection a rdfs:Class ;
 	}
 	WHERE {
 	  ?this  rdf:type bioj:InTextSelection .
-	  BIND( URI ( CONCAT ("http://james.howison.name/ontologies/software-citation-coding#",
+	  BIND( URI ( CONCAT ("http://james.howison.name/ontologies/bio-journal-sample#",
 	              strafter(str(?this), "#"),
 				  "-mention" )
 				 ) 

@@ -422,8 +422,8 @@ public class TTLRepository {
  		resultsModel = runSPINruleSet(resultsModel, "SPINrules2.ttl");
  		saveResults(resultsModel);
 
-		resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
-		saveResults(resultsModel);
+		// resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
+		// saveResults(resultsModel);
 			
 	}
 	

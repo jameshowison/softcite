@@ -68,31 +68,33 @@ bioj:SoftwareMention a rdfs:Class ;
 		    ) as ?software_package )
 	}"""
 ] ;
-#             bioj:runFirstRule [ rdf:type sp:Construct ;
-# 			sp:text """
-# 	# Create ArticleSoftwareLinks
-# 	CONSTRUCT {
-# 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
-# 	  	        bioj:mentions_software ?software_package ;
-# 				citec:from_article ?article ;
-# 				bioj:from_mention ?this .
-# 	  ?this citec:article_software_link ?article_software_link .
-# 	}
-# 	WHERE {
-# 	  ?this  rdf:type bioj:SoftwareMention ;
-# 	  		 citec:original_name ?name ;
-# 			 bioj:mentions_software ?software_package ;
-# 			 bioj:from_selection ?selection .
-# 	  ?article bioj:has_selection ?selection .
-# 	   	  BIND (
-# 	   		 URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#",
-# 	   		            REPLACE(str(?article), '^.*(#|/)', ""),
-# 						"-",
-# 						ENCODE_FOR_URI(?name)
-# 	   			       )
-# 	   		    ) as ?article_software_link )
-# 	}"""
-# ] ;
+
+
+            bioj:runSecondRule [ rdf:type sp:Construct ;
+			sp:text """
+	# Create ArticleSoftwareLinks
+	CONSTRUCT {
+	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
+	  	        bioj:mentions_software ?software_package ;
+				bioj:from_article ?article ;
+				bioj:from_mention ?this .
+	  ?this bioj:article_software_link ?article_software_link .
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+			 bioj:mentions_software ?software_package ;
+			 bioj:from_selection ?selection .
+	  ?software_package rdfs:label ?name .
+	  ?article bioj:has_selection ?selection .
+	   	  BIND (
+	   		 URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#",
+	   		            REPLACE(str(?article), '^.*(#|/)', ""),
+						"-",
+						ENCODE_FOR_URI(?name)
+	   			       )
+	   		    ) as ?article_software_link )
+	}"""
+] ;
 .
 
 # bioj:ArticleSoftwareLink a rdfs:Class ;

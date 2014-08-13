@@ -23,35 +23,35 @@
 
 bioj:ArticleSoftwareLink a rdfs:Class ;
 	
-	spin:constraint
-              [ a       spl:Attribute ;
-                spl:predicate citec:is_credited ;
-                spl:minCount 1 ;
-                spl:maxCount 1 ;
-                spl:valueType xsd:boolean ;
-              ] ;
-	  	spin:constraint
-	                [ a       spl:Attribute ;
-	                  spl:predicate citec:is_identifiable ;
-	                  spl:minCount 1 ;
-	                  spl:maxCount 1 ;
-	                  spl:valueType xsd:boolean ;
-	                ] ;
-	spin:constraint
-	              [ a       spl:Attribute ;
-	                spl:predicate citec:has_version_indicator ;
-	                spl:minCount 1 ;
-	                spl:maxCount 1 ;
-	                spl:valueType xsd:boolean ;
-	              ] ;
-
-	  	spin:constraint
-	                [ a       spl:Attribute ;
-	                  spl:predicate citec:is_findable ;
-	                  spl:minCount 1 ;
-	                  spl:maxCount 1 ;
-	                  spl:valueType xsd:boolean ;
-	                ] ;
+	# spin:constraint
+	#               [ a       spl:Attribute ;
+	#                 spl:predicate citec:is_credited ;
+	#                 spl:minCount 1 ;
+	#                 spl:maxCount 1 ;
+	#                 spl:valueType xsd:boolean ;
+	#               ] ;
+	#   	spin:constraint
+	#                 [ a       spl:Attribute ;
+	#                   spl:predicate citec:is_identifiable ;
+	#                   spl:minCount 1 ;
+	#                   spl:maxCount 1 ;
+	#                   spl:valueType xsd:boolean ;
+	#                 ] ;
+	# spin:constraint
+	#               [ a       spl:Attribute ;
+	#                 spl:predicate citec:has_version_indicator ;
+	#                 spl:minCount 1 ;
+	#                 spl:maxCount 1 ;
+	#                 spl:valueType xsd:boolean ;
+	#               ] ;
+	#
+	#   	spin:constraint
+	#                 [ a       spl:Attribute ;
+	#                   spl:predicate citec:is_findable ;
+	#                   spl:minCount 1 ;
+	#                   spl:maxCount 1 ;
+	#                   spl:valueType xsd:boolean ;
+	#                 ] ;
 	#   	spin:constraint
 	#                 [ a       spl:Attribute ;
 	#                   spl:predicate citec:version_is_findable ;
@@ -60,15 +60,20 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	#                   spl:valueType xsd:boolean ;
 	#                 ] ;
 	#
-	# spin:constraint
-	#             [ a       spl:Attribute ;
-	#               rdfs:comment "Must only mention 1 piece of software "^^xsd:string ;
-	#               spl:predicate bioj:mentions_software;
-	#               spl:minCount 1 ;
-	#               spl:maxCount 1 ;
-	#               # spl:valueType citec:MentionClassification ;
-	#              # spl:defaultValue ex:Red
-	#             ] ;
+	spin:constraint
+	            [ a       spl:Attribute ;
+	              rdfs:comment "Must only mention 1 piece of software "^^xsd:string ;
+	              spl:predicate bioj:mentions_software;
+	              spl:minCount 1 ;
+	              spl:maxCount 1 ;
+	            ] ;
+	spin:constraint
+	            [ a       spl:Attribute ;
+	              rdfs:comment "Can only be about a single article. "^^xsd:string ;
+	              spl:predicate bioj:from_article ;
+	              spl:minCount 1 ;
+	              spl:maxCount 1 ;
+	            ] ;
 	#
 	# spin:constraint
 	#           [ a       sp:Construct ;

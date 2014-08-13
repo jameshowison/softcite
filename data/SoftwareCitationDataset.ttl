@@ -6213,7 +6213,7 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:identifiable ];
 			   	] ;
 	
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6225,7 +6225,7 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 			   	] ;
 	
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:access_free ];
@@ -6237,7 +6237,7 @@ bioj:a2007-51-NAT_GENET-C01 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:source_available ];
 			   	] ;
 	
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:permission_modify ];
@@ -6308,7 +6308,7 @@ bioj:a2007-14-NAT_GENET-C01 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6320,7 +6320,7 @@ bioj:a2007-14-NAT_GENET-C01 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:no_access ];
@@ -6361,7 +6361,7 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6373,7 +6373,7 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:access_purchase ];
@@ -6385,7 +6385,7 @@ bioj:a2007-14-NAT_GENET-C02 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
@@ -6536,7 +6536,7 @@ bioj:a2005-12-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6548,7 +6548,7 @@ bioj:a2005-12-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:access_purchase ];
@@ -6560,7 +6560,7 @@ bioj:a2005-12-NAT_BIOTECHNOL-C01 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
@@ -6649,7 +6649,7 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:identifiable ];
 			   	] ;
 
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6661,7 +6661,7 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 			   	] ;
 
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:access_purchase ];
@@ -6673,7 +6673,7 @@ bioj:a2008-06-NAT_GENET-C02 rdf:type bioj:selection ;
 			   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 			   	] ;
 
-			   	ca:isTargetof 
+			   	ca:isTargetOf 
 			   	[ rdf:type ca:CodeApplication ;
 			   	  ca:hasCoder "jbullard" ;
 			   	  ca:appliesCode [ rdf:type citec:prohibited_modify ];
@@ -6709,7 +6709,7 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:identifiable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:findable ];
@@ -6721,7 +6721,7 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:access_free ];
@@ -6733,13 +6733,13 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:permission_modify ];
 		   	] ;
 	
-		   	ca:isTargetof 
+		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;
 		   	  ca:hasCoder "jbullard" ;
 		   	  ca:appliesCode [ rdf:type citec:missesPreferredCite ];

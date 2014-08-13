@@ -184,6 +184,14 @@ bioj:software-ModelTest
 		citec:alternative_name "Modeltest" ;
 .
 
+bioj:software-ModelTest
+		rdf:type bioj:SoftwarePackage ;
+		rdfs:label "BOXSHADE" ;
+		citec:alternative_name "Boxshade" ;
+.
+
+
+
 
 
 # CLUSTAL W. Treeveew. a2003-44-BBA-GEN_SUBJECTS-B01.  These are different packages.

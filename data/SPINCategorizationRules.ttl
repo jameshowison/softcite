@@ -63,6 +63,7 @@ bioj:SoftwareMention a rdfs:Class ;
 	  ?this  rdf:type bioj:SoftwareMention ;
 	         citec:has_citation true ;
 			 citec:citation_type "name_or_website" .
+	  FILTER NOT EXISTS { ?this citec:citation_type "publication" }
 	}"""
 ] ;
             bioj:runFirstRule [ rdf:type sp:Construct ;

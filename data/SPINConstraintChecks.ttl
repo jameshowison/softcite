@@ -114,15 +114,15 @@ spin:constraint
 			    }"""
           ] ;
 
-# spin:constraint
-#               [ a       spl:Attribute ;
-#                 rdfs:comment "Must have one and exactly one classification "^^xsd:string ;
-#                 spl:predicate citec:mention_category ;
-#                 spl:minCount 1 ;
-#                 spl:maxCount 1 ;
-#                 # spl:valueType citec:MentionClassification ;
-#                # spl:defaultValue ex:Red
-#               ] ;
+spin:constraint
+              [ a       spl:Attribute ;
+                rdfs:comment "Must have one and exactly one classification "^^xsd:string ;
+                spl:predicate citec:mention_category ;
+                spl:minCount 1 ;
+                spl:maxCount 1 ;
+                # spl:valueType citec:MentionClassification ;
+               # spl:defaultValue ex:Red
+              ] ;
 # spin:constraint
 #           [ a       sp:Construct ;
 #             sp:text """

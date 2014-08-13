@@ -6128,6 +6128,46 @@ bioj:a2002-20-CELL-C01 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "NIH" ] ;
                ] ;
+			   
+			   
+			   ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:identifiable ];
+			   	] ;
+	
+			   	ca:isTargetOf 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:findable ];
+			   	] ;
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:unfindable_version ];
+				  ca:memo "earlier versions of NIH Image aren't available" ;
+			   	] ;
+
+	
+			   	ca:isTargetOf 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:access_free ];
+			   	] ;
+
+			   	ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:source_available ];
+			   	] ;
+
+			   	ca:isTargetOf 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ rdf:type citec:permission_modify ];
+			   	] ;
+
 . # end coding for selection
 
 #new article header with index of article selections
@@ -6753,6 +6793,21 @@ bioj:a2008-06-NAT_GENET-C05 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "Zeiss" ] ;
                ] ;
+			   
+			   ca:isTargetOf
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ a citec:identifiable ];
+			   	] ;
+	
+			   	ca:isTargetOf 
+			   	[ rdf:type ca:CodeApplication ;
+			   	  ca:hasCoder "jbullard" ;
+			   	  ca:appliesCode [ a citec:unfindable ];
+				  ca:memo "I can find plenty of mentions of the software with reference to the equipment manufacturer, but no information on the software itself" ;
+			   	] ;
+
+			   	
  . # end coding for selection
 
 #new article header with index of article selections

@@ -225,22 +225,38 @@ software_packages <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, 
 
 cat("--------------------\n")
 cat("We found references to ")
-cat(nrow(count_unique_packages))
-cat(" 129 distinct pieces of software\n")
+cat(nrow(software_packages))
+cat(" distinct pieces of software\n")
 
-# # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
-# # bioj:from_selection
-# # citec:from_mention      citec:a2001-40-MOL_ECOL-C05-mention ;
+# Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
+
+query <- "
+SELECT DISTINCT ?software_article_link
+WHERE {
+	?software_article_link rdf:type bioj:ArticleSoftwareLink .
+}
+"
+
+article_links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+
+cat("--------------------\n")
+cat("there are  ")
+cat(nrow(article_links))
+cat("  unique combinations of software and articles\n")
+
+
+
 # query <- "
 # SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable
-# #?version ?version_findable
+# ?version ?version_findable
 # WHERE {
 # 	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
 # 							citec:is_credited       ?credited ;
 # 							citec:is_findable       ?findable ;
 # 							citec:is_identifiable   ?identifiable ;
-# 						#	citec:has_version_indicator ?version ;
-# 						#	citec:version_is_findable ?version_findable ;
+# 							citec:has_version_indicator ?version ;
+# 							citec:version_is_findable ?version_findable ;
 # 	 						bioj:from_mention [ bioj:from_selection ?selection ] .
 # 	?article bioj:has_selection ?selection ;
 # 	         dc:isPartOf ?journal .
@@ -256,9 +272,9 @@ cat(" 129 distinct pieces of software\n")
 # # order factors
 # mlinks$variable <- factor(mlinks$variable,levels=c("identifiable","findable","credited"))
 # mlinks$value <- factor(mlinks$value,levels=c("true","false"))
-#
-# ggplot(mlinks,aes(x=variable,fill=value)) +
-# geom_bar() +
+# #
+# # ggplot(mlinks,aes(x=variable,fill=value)) +
+# # geom_bar() +
 # facet_grid(.~strata,margins=T) +
 # scale_fill_grey(guide = guide_legend(title="")) +
 # scale_x_discrete(name="") +

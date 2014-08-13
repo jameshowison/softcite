@@ -55,4 +55,6 @@ Source: local data frame [20 x 2]
 19 Stereo Investigator             2
 20            Treeview             2
 --------------------
-We found references to 
+We found references to 129 distinct pieces of software
+--------------------
+there are  212  unique combinations of software and articles

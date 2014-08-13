@@ -97,12 +97,12 @@ bioj:SoftwareMention a rdfs:Class ;
 ] ;
 .
 
-# bioj:ArticleSoftwareLink a rdfs:Class ;
-#
-# #####################
-# # Identifiable / Unidentifiable
-# ####################
-#
+bioj:ArticleSoftwareLink a rdfs:Class ;
+
+#####################
+# Identifiable / Unidentifiable
+####################
+
 #     bioj:runFirstRule [ rdf:type sp:Construct ;
 # 	sp:text """
 # 	# Move identifiable true code to ArticleSoftwareLink
@@ -148,11 +148,11 @@ bioj:SoftwareMention a rdfs:Class ;
 # 		}
 # 	}"""
 # ] ;
-#
-# #####################
-# # Findable / Unfindable
-# ####################
-#
+
+#####################
+# Findable / Unfindable
+####################
+
 #     bioj:runFirstRule [ rdf:type sp:Construct ;
 # 	sp:text """
 # 	# Move findable true code to ArticleSoftwareLink
@@ -254,42 +254,33 @@ bioj:SoftwareMention a rdfs:Class ;
 # 		}
 # 	}"""
 # ] ;
-#
-#
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Interpret creator codes.
-# 	CONSTRUCT {
-# 		?this citec:is_credited true .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:creator ] ] ;
-# 		} UNION {
-# 			?sel  bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:creator ] ] ;
-# 		}
-# 	}"""
-# ] ;
-#
-# #This is the last rule to run (because it's not a bioj:runFirstRule)
-#     spin:rule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Interpret software package codes
-# 	CONSTRUCT {
-# 		?this citec:is_credited false .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		FILTER NOT EXISTS { ?this citec:is_credited true . }
-# 	}"""
-# ] ;
-#
-#
-# .
+
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+		sp:text """
+		# Interpret creator codes. True if any mentions had a creator.
+		CONSTRUCT {
+			?this citec:is_credited true .
+		}
+		WHERE {
+			?this rdf:type bioj:ArticleSoftwareLink ;
+			      bioj:from_mention ?mention .
+			?mention citec:has_creator true .
+		}"""
+	] ;
+
+	bioj:runSecondRule [ rdf:type sp:Construct ;
+		sp:text """
+		# Otherwise false
+		CONSTRUCT {
+			?this citec:is_credited false .
+		}
+		WHERE {
+			?this rdf:type bioj:ArticleSoftwareLink .
+			FILTER NOT EXISTS { ?this citec:is_credited true }
+		}"""
+	] ;
+.
 
 
 

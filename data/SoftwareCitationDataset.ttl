@@ -17755,12 +17755,14 @@ bioj:a2003-44-BBA-GEN_SUBJECTS-B01 rdf:type bioj:selection ;
     					   rdfs:label "R.D.M. Page" ]
  		] ;
  		
- 		ca:isTargetOf 
-		[ rdf:type ca:CodeApplication ;
-		  ca:hasCoder "jbullard" ;
-    	  ca:appliesCode [ rdf:type citec:sofware_name ;
-    					   rdfs:label "TREEVIEW" ]
- 		] ;
+		#  		ca:isTargetOf
+		# [ rdf:type ca:CodeApplication ;
+		#   ca:hasCoder "jbullard" ;
+		#     	  ca:appliesCode [ rdf:type citec:sofware_name ;
+		#     					   rdfs:label "TREEVIEW" ]
+		#  		] ;
+		
+		ca:memo "Decided not to code the TreeView because it wasn't mentioned in the text; decision taken for consistency."
 	
 .
 
@@ -17971,7 +17973,7 @@ bioj:a2003-44-BBA-GEN_SUBJECTS-B03 rdf:type bioj:selection ;
 .
 
 bioj:a2003-44-BBA-GEN_SUBJECTS-B04 rdf:type bioj:selection ;
-	bioj:references_same_software bioj:a2003-44-BBA-GEN_SUBJECTS-B01 ;
+	#bioj:references_same_software bioj:a2003-44-BBA-GEN_SUBJECTS-B01 ;
 	bioj:full_quote "The tree was obtained by the alignment of Ag5 sequences from various Vespidae. It was obtained with the TreeView plot program using the data from the ClustalW alignment employing the neighbour joining (NJ) method." ;
 
 	bioj:in_doc_location bioj:figure_caption;
@@ -18000,6 +18002,45 @@ bioj:a2003-44-BBA-GEN_SUBJECTS-B04 rdf:type bioj:selection ;
 	   ca:hasCoder "jbullard" ;
 	   ca:appliesCode [ rdf:type citec:configuration_details ];
 	] ;
+	
+	#begin citation functions
+
+		ca:isTargetOf
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:identifiable ];
+		] ;
+	
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:findable ];
+		] ;
+	
+		ca:isTargetOf
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:unfindable_version ];
+		] ;
+	
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:access_free ];
+		] ;
+	
+		ca:isTargetOf
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:source_available ];
+		] ;
+	
+		ca:isTargetOf 
+		[ rdf:type ca:CodeApplication ;
+		  ca:hasCoder "jbullard" ;
+		  ca:appliesCode [ rdf:type citec:permission_modify ];
+		] ;
+	
 .
 
 bioj:a2003-44-BBA-GEN_SUBJECTS-B05 rdf:type bioj:selection ;

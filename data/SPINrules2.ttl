@@ -198,43 +198,44 @@ spin:rule [ rdf:type sp:Construct ;
 	}"""
 ] ;
 
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move findable true code to ArticleSoftwareLink
-# 	CONSTRUCT {
-# 		?this citec:version_is_findable true .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
-# 		} UNION {
-# 			?sel  bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
-# 		}
-# 	}"""
-# ] ;
-#     bioj:runFirstRule [ rdf:type sp:Construct ;
-# 	sp:text """
-# 	# Move findable false code to ArticleSoftwareLink
-#
-# 	CONSTRUCT {
-# 		?this citec:version_is_findable false .
-# 	}
-# 	WHERE {
-# 		?this rdf:type bioj:ArticleSoftwareLink ;
-# 		      bioj:from_mention ?mention .
-# 		?mention bioj:from_selection ?sel .
-# 		{
-# 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
-# 		} UNION {
-# 			?sel  bioj:has_reference ?ref .
-# 			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
-# 		}
-# 	}"""
-# ] ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable true code to ArticleSoftwareLink
+	CONSTRUCT {
+		?this citec:version_is_findable true .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:findable_version ] ] ;
+		}
+	}"""
+] ;
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Move findable false code to ArticleSoftwareLink
+
+	CONSTRUCT {
+		?this citec:version_is_findable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink ;
+		      bioj:from_mention ?mention .
+		?mention bioj:from_selection ?sel .
+		{
+			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
+		} UNION {
+			?sel  bioj:has_reference ?ref .
+			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
+		}
+	}"""
+] ;
 
 
     spin:rule [ rdf:type sp:Construct ;

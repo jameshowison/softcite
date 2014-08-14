@@ -53,13 +53,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	                  spl:maxCount 1 ;
 	                  spl:valueType xsd:boolean ;
 	                ] ;
-	#   	spin:constraint
-	#                 [ a       spl:Attribute ;
-	#                   spl:predicate citec:version_is_findable ;
-	#                   spl:minCount 1 ;
-	#                   spl:maxCount 1 ;
-	#                   spl:valueType xsd:boolean ;
-	#                 ] ;
+
 	spin:constraint
 	            [ a       spl:Attribute ;
 	              rdfs:comment "Must only mention 1 piece of software "^^xsd:string ;
@@ -74,22 +68,22 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	              spl:minCount 1 ;
 	              spl:maxCount 1 ;
 	            ] ;
-	#
-	# spin:constraint
-	#           [ a       sp:Construct ;
-	#             sp:text """
-	#                 CONSTRUCT {
-	#                     _:violation a spin:ConstraintViolation ;
-	#                          spin:violationRoot ?this ;
-	#                          spin:violationPath citec:version_is_findable ;
-	#                          rdfs:label "Can only find versions if they exist"
-	#                 }
-	#                 WHERE {
-	# 					?this a bioj:ArticleSoftwareLink ;
-	# 			              citec:has_version_indicator false ;
-	# 						  citec:version_is_findable true .
-	# 			    }"""
-	#           ] ;
+
+	spin:constraint
+	          [ a       sp:Construct ;
+	            sp:text """
+	                CONSTRUCT {
+	                    _:violation a spin:ConstraintViolation ;
+	                         spin:violationRoot ?this ;
+	                         spin:violationPath citec:version_is_findable ;
+	                         rdfs:label "Can only find versions if they exist"
+	                }
+	                WHERE {
+						?this a bioj:ArticleSoftwareLink ;
+				              citec:has_version_indicator false ;
+							  citec:version_is_findable true .
+				    }"""
+	          ] ;
 .
 
 bioj:SoftwareMention a rdfs:Class ;

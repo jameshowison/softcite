@@ -247,22 +247,22 @@ cat("  unique combinations of software and articles\n")
 
 
 
-# query <- "
-# SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable
-# ?version ?version_findable
-# WHERE {
-# 	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
-# 							citec:is_credited       ?credited ;
-# 							citec:is_findable       ?findable ;
-# 							citec:is_identifiable   ?identifiable ;
-# 							citec:has_version_indicator ?version ;
-# 							citec:version_is_findable ?version_findable ;
-# 	 						bioj:from_mention [ bioj:from_selection ?selection ] .
-# 	?article bioj:has_selection ?selection ;
-# 	         dc:isPartOf ?journal .
-# 	?journal bioj:strata ?strata .
-# }
-# "
+query <- "
+SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable
+?version ?version_findable
+WHERE {
+	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
+							citec:is_credited       ?credited ;
+							citec:is_findable       ?findable ;
+							citec:is_identifiable   ?identifiable ;
+							citec:has_version_indicator ?version ;
+							citec:version_is_findable ?version_findable ;
+	 						bioj:from_mention [ bioj:from_selection ?selection ] .
+	?article bioj:has_selection ?selection ;
+	         dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+}
+"
 #
 # links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 #

@@ -17705,12 +17705,6 @@ bioj:a2003-44-BBA-GEN_SUBJECTS-B01 rdf:type bioj:selection ;
 	  ca:hasCoder "jbullard" ;
 	  ca:appliesCode [ rdf:type citec:findable ];
 	] ;
-
-	ca:isTargetOf
-	[ rdf:type ca:CodeApplication ;
-	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:findable_version ];
-	] ;
 	
 	ca:isTargetOf 
 	[ rdf:type ca:CodeApplication ;
@@ -17815,12 +17809,6 @@ bioj:a2003-44-BBA-GEN_SUBJECTS-B02 rdf:type bioj:selection ;
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
 	  ca:appliesCode [ rdf:type citec:findable ];
-	] ;
-	
-	ca:isTargetOf
-	[ rdf:type ca:CodeApplication ;
-	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:findable_version ];
 	] ;
 	
 	ca:isTargetOf 

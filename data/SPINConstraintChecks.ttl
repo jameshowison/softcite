@@ -80,7 +80,7 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	                }
 	                WHERE {
 						?this a bioj:ArticleSoftwareLink ;
-				              citec:has_version_indicator false ;
+				              citec:is_versioned false ;
 							  citec:version_is_findable true .
 				    }"""
 	          ] ;

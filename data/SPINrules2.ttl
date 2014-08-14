@@ -220,14 +220,16 @@ spin:rule [ rdf:type sp:Construct ;
     bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Move findable false code to ArticleSoftwareLink
-
+	# unfindable_version was used even when there wasn't version info
+	# so here we only want the ones with actual version info.
 	CONSTRUCT {
 		?this citec:version_is_findable false .
 	}
 	WHERE {
 		?this rdf:type bioj:ArticleSoftwareLink ;
 		      bioj:from_mention ?mention .
-		?mention bioj:from_selection ?sel .
+		?mention bioj:from_selection ?sel ;
+		         citec:has_version_indicator true .
 		{
 			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
 		} UNION {

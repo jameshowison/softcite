@@ -248,49 +248,72 @@ cat("  unique combinations of software and articles\n")
 
 
 query <- "
-SELECT ?article ?journal ?strata ?selection ?software_article_link ?credited ?findable ?identifiable
-?version ?version_findable
+SELECT ?article ?journal ?strata ?software_article_link ?credited ?findable ?identifiable
 WHERE {
 	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
 							citec:is_credited       ?credited ;
 							citec:is_findable       ?findable ;
 							citec:is_identifiable   ?identifiable ;
-							citec:has_version_indicator ?version ;
-							citec:version_is_findable ?version_findable ;
-	 						bioj:from_mention [ bioj:from_selection ?selection ] .
-	?article bioj:has_selection ?selection ;
-	         dc:isPartOf ?journal .
+	 						bioj:from_article ?article . 
+	?article dc:isPartOf ?journal .
 	?journal bioj:strata ?strata .
 }
 "
 #
-# links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
-#
-# # melt to vertical format.
-# mlinks <- melt(links, id=1:5)
-#
-# # order factors
-# mlinks$variable <- factor(mlinks$variable,levels=c("identifiable","findable","credited"))
-# mlinks$value <- factor(mlinks$value,levels=c("true","false"))
+links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+# Convert to %
+# get totals
+links_by_strata <- links %.% group_by(strata) %.%
+summarize(total_in_strata = n_distinct(software_article_link))
+
+# melt to vertical format.
+mlinks <- melt(links, id=1:4)
+
+# Count number of each category in each strata
+link_counts <- mlinks %.%
+group_by(strata,variable,value) %.%
+summarize(count = n())
+
+# Add the total for that strata to each row, to be used to create percentage
+links_by_strata <- merge(links_by_strata,link_counts)
+
+# create the percentage for each row.
+links_by_strata <- within(links_by_strata, proportion <- round(count / total_in_strata, 2))
+
+cat("--------------------\n")
+cat("ArticleSoftwareLinks and credited, findable, identifiable\n")
+print(dcast(filter(links_by_strata, value=="true"),variable ~ strata , mean , value.var="proportion", margins="strata"))
+
+
+
+# Try to graph these by strata and overall.
+
+ggplot(mlinks, aes(x = variable)) + geom_bar(aes(y = (..count..)/sum(..count..),fill=value),position="stack") + scale_y_continuous(labels=percent_format()) 
+
+
+# order factors
+mlinks$variable <- factor(mlinks$variable,levels=c("identifiable","findable","credited"))
+mlinks$value <- factor(mlinks$value,levels=c("true","false"))
 # #
-# # ggplot(mlinks,aes(x=variable,fill=value)) +
-# # geom_bar() +
-# facet_grid(.~strata,margins=T) +
-# scale_fill_grey(guide = guide_legend(title="")) +
-# scale_x_discrete(name="") +
-# scale_y_continuous(name="Count of Software Article tuples") +
-# #ggtitle("Accessibility by strata") +
-# theme(
-# 	legend.position="bottom",
-#     panel.grid.major.x = element_blank(),
-# 	panel.grid.minor.y = element_blank(),
-# 	panel.border = element_blank(),
-# 	axis.title.y=element_text(vjust=0.3),
-# 	#axis.title.x=element_text(vjust=0.1),
-# 	text=element_text(size=10)
-# #	axis.text.x=element_blank(),
-# #	axis.ticks.x=element_blank()
-#  )
+ggplot(mlinks,aes(x=variable,fill=value)) +
+geom_bar() +
+facet_grid(.~strata,margins=F) +
+scale_fill_grey(guide = guide_legend(title="")) +
+scale_x_discrete(name="") +
+scale_y_continuous(name="Count of Software Article tuples") +
+#ggtitle("Accessibility by strata") +
+theme(
+	legend.position="bottom",
+    panel.grid.major.x = element_blank(),
+	panel.grid.minor.y = element_blank(),
+	panel.border = element_blank(),
+	axis.title.y=element_text(vjust=0.3),
+	#axis.title.x=element_text(vjust=0.1),
+	text=element_text(size=10)
+#	axis.text.x=element_blank(),
+#	axis.ticks.x=element_blank()
+ )
 #
 # mlinks %.%
 # filter(variable=="version") %.%

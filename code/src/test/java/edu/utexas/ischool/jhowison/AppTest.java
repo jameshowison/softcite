@@ -112,7 +112,11 @@ public class AppTest
 		TTLRepository.runSPINconstraintsOnly();
 	}
 	
-	
+	@Test
+	public void testExpandCodes()
+	{
+		TTLRepository.expandCodes();
+	}
 	
 	
 }

@@ -326,6 +326,76 @@ public class TTLRepository {
 		return queryReturnsSingleInt(queryStr, "refCount");
 	}
 	
+	public static void expandCodes() {
+
+		// Creates using prefix mapping
+		ParameterizedSparqlString constructQuery = new ParameterizedSparqlString(model);
+
+		// unidentifiable --> unfindable
+
+		constructQuery.append("CONSTRUCT {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:unfindable ] ;");
+		constructQuery.append("              ca:hasCoder \"auto-coder\" ] }");
+		constructQuery.append("WHERE {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:unidentifiable ] ]");
+		constructQuery.append("}");
+
+		QueryExecution qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), model);
+		Model constructResults = qeConstruct.execConstruct();
+		model.add(constructResults);
+			
+		// unfindable --> no_access
+		constructQuery = new ParameterizedSparqlString(model);
+
+		constructQuery.append("CONSTRUCT {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:no_access ] ;");
+		constructQuery.append("              ca:hasCoder \"auto-coder\" ] }");
+		constructQuery.append("WHERE {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:unfindable ] ]");
+		constructQuery.append("}");
+
+		qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), model);
+		constructResults = qeConstruct.execConstruct();
+		model.add(constructResults);
+		
+		// no_access --> source_unavailable
+		constructQuery = new ParameterizedSparqlString(model);
+
+		constructQuery.append("CONSTRUCT {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:source_unavailable ] ;");
+		constructQuery.append("              ca:hasCoder \"auto-coder\" ] }");
+		constructQuery.append("WHERE {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:no_access ] ]");
+		constructQuery.append("}");
+
+		qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), model);
+		constructResults = qeConstruct.execConstruct();
+		model.add(constructResults);
+		
+		constructQuery = new ParameterizedSparqlString(model);
+
+		constructQuery.append("CONSTRUCT {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:prohibited_modify ] ;");
+		constructQuery.append("              ca:hasCoder \"auto-coder\" ] }");
+		constructQuery.append("WHERE {");
+		constructQuery.append("  ?selection ca:isTargetOf ");
+		constructQuery.append("            [ ca:appliesCode  [ a  citec:source_unavailable ] ]");
+		constructQuery.append("}");
+
+		qeConstruct = QueryExecutionFactory.create(constructQuery.asQuery(), model);
+		constructResults = qeConstruct.execConstruct();
+		model.add(constructResults);
+
+		saveResults(model);
+	}
+	
 	// Creates a URI for each software package in dataset
 	public static Model createSoftwarePackages(Model inferred, String mappingFile) {
 

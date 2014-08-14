@@ -248,12 +248,14 @@ cat("  unique combinations of software and articles\n")
 
 
 query <- "
-SELECT ?article ?journal ?strata ?software_article_link ?credited ?findable ?identifiable
+SELECT ?article ?journal ?strata ?software_article_link ?credited ?findable ?identifiable ?versioned ?version_findable
 WHERE {
-	?software_article_link 	rdf:type bioj:ArticleSoftwareLink;
+	?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
 							citec:is_credited       ?credited ;
 							citec:is_findable       ?findable ;
 							citec:is_identifiable   ?identifiable ;
+							citec:is_versioned      ?versioned ;
+							citec:version_is_findable ?version_findable ;
 	 						bioj:from_article ?article . 
 	?article dc:isPartOf ?journal .
 	?journal bioj:strata ?strata .
@@ -285,35 +287,36 @@ cat("--------------------\n")
 cat("ArticleSoftwareLinks and credited, findable, identifiable\n")
 print(dcast(filter(links_by_strata, value=="true"),variable ~ strata , mean , value.var="proportion", margins="strata"))
 
+cat("\nprovided any version information: ")
+cat(nrow(filter(links,versioned == "true"))[1])
+cat("\n")
+cat("provided any version information and could be found: ")
+cat(nrow(filter(links,versioned == "true" & version_findable == "true"))[1])
+cat("\n")
 
 
-# Try to graph these by strata and overall.
-
-ggplot(mlinks, aes(x = variable)) + geom_bar(aes(y = (..count..)/sum(..count..),fill=value),position="stack") + scale_y_continuous(labels=percent_format()) 
-
-
-# order factors
-mlinks$variable <- factor(mlinks$variable,levels=c("identifiable","findable","credited"))
-mlinks$value <- factor(mlinks$value,levels=c("true","false"))
-# #
-ggplot(mlinks,aes(x=variable,fill=value)) +
-geom_bar() +
-facet_grid(.~strata,margins=F) +
-scale_fill_grey(guide = guide_legend(title="")) +
-scale_x_discrete(name="") +
-scale_y_continuous(name="Count of Software Article tuples") +
-#ggtitle("Accessibility by strata") +
-theme(
-	legend.position="bottom",
-    panel.grid.major.x = element_blank(),
-	panel.grid.minor.y = element_blank(),
-	panel.border = element_blank(),
-	axis.title.y=element_text(vjust=0.3),
-	#axis.title.x=element_text(vjust=0.1),
-	text=element_text(size=10)
-#	axis.text.x=element_blank(),
-#	axis.ticks.x=element_blank()
- )
+# # order factors
+# mlinks$variable <- factor(mlinks$variable,levels=c("identifiable","findable","credited"))
+# mlinks$value <- factor(mlinks$value,levels=c("true","false"))
+# # #
+# ggplot(mlinks,aes(x=variable,fill=value)) +
+# geom_bar() +
+# facet_grid(.~strata,margins=F) +
+# scale_fill_grey(guide = guide_legend(title="")) +
+# scale_x_discrete(name="") +
+# scale_y_continuous(name="Count of Software Article tuples") +
+# #ggtitle("Accessibility by strata") +
+# theme(
+# 	legend.position="bottom",
+#     panel.grid.major.x = element_blank(),
+# 	panel.grid.minor.y = element_blank(),
+# 	panel.border = element_blank(),
+# 	axis.title.y=element_text(vjust=0.3),
+# 	#axis.title.x=element_text(vjust=0.1),
+# 	text=element_text(size=10)
+# #	axis.text.x=element_blank(),
+# #	axis.ticks.x=element_blank()
+#  )
 #
 # mlinks %.%
 # filter(variable=="version") %.%

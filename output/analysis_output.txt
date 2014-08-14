@@ -61,7 +61,11 @@ We found references to 137 distinct pieces of software
 there are  172  unique combinations of software and articles
 --------------------
 ArticleSoftwareLinks and credited, findable, identifiable
-      variable 1-10 11-110 111-1455     (all)
-1     credited 0.81   0.76     0.78 0.7833333
-2     findable 0.87   0.89     0.94 0.9000000
-3 identifiable 0.92   1.00     1.00 0.9733333
+          variable 1-10 11-110 111-1455     (all)
+1         credited 0.81   0.76     0.78 0.7833333
+2         findable 0.87   0.89     0.94 0.9000000
+3     identifiable 0.92   1.00     1.00 0.9733333
+4        versioned 0.22   0.37     0.34 0.3100000
+5 version_findable  NaN   0.13     0.06 0.0950000
+provided any version information: 51
+provided any version information and could be found: 10

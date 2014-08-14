@@ -53,7 +53,20 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 	                  spl:maxCount 1 ;
 	                  spl:valueType xsd:boolean ;
 	                ] ;
-
+	  	spin:constraint
+	                [ a       spl:Attribute ;
+	                  spl:predicate citec:is_versioned ;
+	                  spl:minCount 1 ;
+	                  spl:maxCount 1 ;
+	                  spl:valueType xsd:boolean ;
+	                ] ;
+	  	spin:constraint
+	                [ a       spl:Attribute ;
+	                  spl:predicate citec:version_is_findable ;
+	                  spl:minCount 1 ;
+	                  spl:maxCount 1 ;
+	                  spl:valueType xsd:boolean ;
+	                ] ;
 	spin:constraint
 	            [ a       spl:Attribute ;
 	              rdfs:comment "Must only mention 1 piece of software "^^xsd:string ;

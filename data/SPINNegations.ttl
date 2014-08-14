@@ -49,4 +49,28 @@ spin:rule [ rdf:type sp:Construct ;
 	}"""
 ] ;
 
+spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Otherwise false
+	CONSTRUCT {
+		?this citec:is_versioned false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink .
+		FILTER NOT EXISTS { ?this citec:is_versioned true }
+	}"""
+] ;
+
+spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Otherwise false
+	CONSTRUCT {
+		?this citec:version_is_findable false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink .
+		FILTER NOT EXISTS { ?this citec:version_is_findable true }
+	}"""
+] ;
+
 .

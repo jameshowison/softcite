@@ -217,29 +217,6 @@ spin:rule [ rdf:type sp:Construct ;
 	}"""
 ] ;
 
-    bioj:runFirstRule [ rdf:type sp:Construct ;
-	sp:text """
-	# Move findable false code to ArticleSoftwareLink
-	# unfindable_version was used even when there wasn't version info
-	# so here we only want the ones with actual version info.
-	CONSTRUCT {
-		?this citec:version_is_findable false .
-	}
-	WHERE {
-		?this rdf:type bioj:ArticleSoftwareLink ;
-		      bioj:from_mention ?mention .
-		?mention bioj:from_selection ?sel ;
-		         citec:has_version_indicator true .
-		{
-			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
-		} UNION {
-			?sel  bioj:has_reference ?ref .
-			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:unfindable_version ] ] ;
-		}
-	}"""
-] ;
-
-
     spin:rule [ rdf:type sp:Construct ;
 		sp:text """
 		# Interpret creator codes. True if any mentions had a creator.
@@ -252,19 +229,6 @@ spin:rule [ rdf:type sp:Construct ;
 			?mention citec:has_creator true .
 		}"""
 	] ;
-
-	# spin:rule [ rdf:type sp:Construct ;
-	#             rdfs:comment "Step 2:" ;
-	# 	sp:text """
-	# 	# Otherwise false
-	# 	CONSTRUCT {
-	# 		?this citec:is_credited false .
-	# 	}
-	# 	WHERE {
-	# 		?this rdf:type bioj:ArticleSoftwareLink .
-	# 		FILTER NOT EXISTS { ?this citec:is_credited true }
-	# 	}"""
-	# ] ;
 .
 
 

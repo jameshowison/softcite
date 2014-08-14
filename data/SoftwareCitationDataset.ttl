@@ -5394,7 +5394,7 @@ bioj:a2007-32-CELL-C02 rdf:type bioj:selection ;
 
 # start coding for selection
 bioj:a2007-32-CELL-C03 rdf:type bioj:selection ;
-	bioj:references_same_software bioj:a2007-32-CELL-C06;
+	bioj:references_same_software bioj:a2007-32-CELL-C06 ;
           	  bioj:full_quote "The three soft-ware programs used—MitoProt (99.6%), TargetP (92.1%), and PSORT (73.9%)—gave a high probability for mito-chondrial localization." ;
 
               ca:isTargetOf 
@@ -5435,10 +5435,16 @@ bioj:a2007-32-CELL-C03 rdf:type bioj:selection ;
 	  ca:appliesCode [ rdf:type citec:unfindable_version ];
 	] ;
 	
+	# ca:isTargetOf
+	# [ rdf:type ca:CodeApplication ;
+	#   ca:hasCoder "jbullard" ;
+	#   ca:appliesCode [ rdf:type citec:no_access ];
+	# ] ;
+	
 	ca:isTargetOf 
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:no_access ];
+	  ca:appliesCode [ rdf:type citec:access_free ];
 	] ;
 	
 	ca:isTargetOf

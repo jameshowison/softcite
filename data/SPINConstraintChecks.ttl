@@ -150,36 +150,37 @@ spin:constraint
 #           ] ;
 .
 
-# bioj:SoftwarePackage a rdfs:Class ;
-#
-# 	spin:constraint
-# 	              [ a       spl:Attribute ;
-# 	                spl:predicate citec:is_accessible  ;
-# 	                spl:minCount 1 ;
-# 	                spl:maxCount 1 ;
-# 	                spl:valueType xsd:boolean ;
-# 				   ] ;
-# 	spin:constraint
-# 	             [ a       spl:Attribute ;
-# 	               spl:predicate citec:is_explicitly_modifiable  ;
-# 	               spl:minCount 1 ;
-# 	               spl:maxCount 1 ;
-# 	               spl:valueType xsd:boolean ;
-# 			   ] ;
-#    	spin:constraint
-#    	             [ a       spl:Attribute ;
-#    	               spl:predicate citec:is_free   ;
-#    	               spl:minCount 1 ;
-#    	               spl:maxCount 1 ;
-#    	               spl:valueType xsd:boolean ;
-#    			   ] ;
-#   	spin:constraint
-#   	             [ a       spl:Attribute ;
-#   	               spl:predicate citec:is_source_accessible   ;
-#   	               spl:minCount 1 ;
-#   	               spl:maxCount 1 ;
-#   	               spl:valueType xsd:boolean ;
-#   			   ] ;
+bioj:SoftwarePackageUsed a rdfs:Class ;
+   	# You can't have is_free be required because those without access have no information.
+	# spin:constraint
+   	#              [ a       spl:Attribute ;
+   	#                spl:predicate citec:is_free   ;
+   	#                spl:minCount 1 ;
+   	#                spl:maxCount 1 ;
+   	#                spl:valueType xsd:boolean ;
+   	# 		   ] ;
+
+	spin:constraint
+	              [ a       spl:Attribute ;
+	                spl:predicate citec:is_accessible  ;
+	                spl:minCount 1 ;
+	                spl:maxCount 1 ;
+	                spl:valueType xsd:boolean ;
+				   ] ;
+	spin:constraint
+	             [ a       spl:Attribute ;
+	               spl:predicate citec:is_explicitly_modifiable  ;
+	               spl:minCount 1 ;
+	               spl:maxCount 1 ;
+	               spl:valueType xsd:boolean ;
+			   ] ;
+  	spin:constraint
+  	             [ a       spl:Attribute ;
+  	               spl:predicate citec:is_source_accessible   ;
+  	               spl:minCount 1 ;
+  	               spl:maxCount 1 ;
+  	               spl:valueType xsd:boolean ;
+  			   ] ;
 #
 # .
 

@@ -196,7 +196,7 @@ SELECT ?article_link ?article ?software ?software_name
 WHERE {
 	?article_link rdf:type bioj:ArticleSoftwareLink ;
 	              bioj:mentions_software ?software ;
-				  citec:from_article ?article .
+				  bioj:from_article ?article .
 	?software rdfs:label ?software_name .
 }
 "

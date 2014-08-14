@@ -481,7 +481,9 @@ public class TTLRepository {
 
 		// Each set of rules runs, saving the results into a file which is the 
 		// starting point for the next set of rules.		
-		saveResults(model);
+		expandCodes();
+		
+		//saveResults(model);
 		
 		Model resultsModel = runSPINruleSet(model, "SPINrules.ttl");
 		saveResults(resultsModel);

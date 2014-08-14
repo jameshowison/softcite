@@ -1,0 +1,52 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+
+<http://james.howison.name/ontologies/software-citation-coding-constraints>
+  rdf:type owl:Ontology ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://spinrdf.org/spl> .
+
+bioj:ArticleSoftwareLink a rdfs:Class ;
+
+spin:rule [ rdf:type sp:Construct ;
+
+	sp:text """
+	# Otherwise false
+	CONSTRUCT {
+		?this citec:is_credited false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink .
+		FILTER NOT EXISTS { ?this citec:is_credited true }
+	}"""
+] ;
+
+
+spin:rule [ rdf:type sp:Construct ;
+	sp:text """
+	# Otherwise false
+	CONSTRUCT {
+		?this citec:is_versioned false .
+	}
+	WHERE {
+		?this rdf:type bioj:ArticleSoftwareLink .
+		FILTER NOT EXISTS { ?this citec:is_versioned true }
+	}"""
+] ;
+
+.

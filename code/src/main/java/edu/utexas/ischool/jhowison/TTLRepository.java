@@ -486,18 +486,19 @@ public class TTLRepository {
 		//saveResults(model);
 		
 		Model resultsModel = runSPINruleSet(model, "SPINrules.ttl");
-		saveResults(resultsModel);
+	//	saveResults(resultsModel);
 		
 		resultsModel = createSoftwarePackages(resultsModel, "NameMapping.ttl");
-		saveResults(resultsModel);
+	//	saveResults(resultsModel);
 
  		resultsModel = runSPINruleSet(resultsModel, "SPINrules2.ttl");
- 		saveResults(resultsModel);
+ 	//	saveResults(resultsModel);
 
 		resultsModel = runSPINruleSet(resultsModel, "SPINCategorizationRules.ttl");
-		saveResults(resultsModel);
+	//	saveResults(resultsModel);
 		
 		resultsModel = runSPINruleSet(resultsModel, "SPINNegations.ttl");
+	
 		saveResults(resultsModel);
 			
 	}

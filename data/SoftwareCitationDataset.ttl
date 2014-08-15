@@ -283,6 +283,7 @@ bioj:a2004-46-NATURE-C03 rdf:type bioj:selection ;
 	[ rdf:type ca:CodeApplication ;
 	  ca:hasCoder "jbullard" ;
 	  ca:appliesCode [ rdf:type citec:matchesPreferredCite ];
+	  ca:memo "Note that this matches because of C05, that's where the ref is."
 	] ;
 
 #end citation functions

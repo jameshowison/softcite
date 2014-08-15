@@ -993,3 +993,15 @@ https://github.com/jameshowison/softcite/tree/topbraid
 It's a little complicated by the need to "drop out" to some Java code to do some name mapping (some of the programs that I'm writing data about have alternative names), quite likely this can be done via SPIN but it isn't at the moment.
 
 If I understand correctly, I should have a "main file" of rdf that imports the other files.  Would one typically do a vocab file as the main file, then import the individuals and the spin rules and constraints?  At present I've just add the owl imports for SPIN etc and opened my SPINConstraints.ttl file in TopBraid FE. In the SPIN overview tab I see only the constraint for bioj:ArticleSoftwareLink, but not the constraints for 
+
+===============================================================
+Fri Aug 15 09:25:38 CDT 2014
+===============================================================
+
+These appear to lack the misses or matches coding.
+
+bioj:a2002-39-SYST_BOT-B04
+
+bioj:a2005-46-NATURE-C11 / bioj:a2005-46-NATURE-C08
+
+bioj:a2005-46-NATURE-C01

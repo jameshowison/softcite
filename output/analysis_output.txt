@@ -6,7 +6,7 @@ Source: local data frame [3 x 4]
 
     strata journal_count article_count mention_count
 1     1-10             5            23           130
-2   11-110            17            19            89
+2   11-110            17            19            91
 3 111-1455            17            17            65
 --------------
 # Percentage of articles with mentions
@@ -21,9 +21,9 @@ Source: local data frame [7 x 2]
 1     Cite to publication 105
 2     Cite to user manual   6
 3 Cite to name or website  15
-4         Like instrument  52
+4         Like instrument  53
 5             URL in text  13
-6               Name only  89
+6               Name only  90
 7           Not even name   4
 --------------------
 Outputted Figure 2: TypesOfSoftwareMentions.png
@@ -31,7 +31,7 @@ Outputted Figure 2: TypesOfSoftwareMentions.png
 Outputted Figure 3: MentionTypesByStrata.png
 --------------------
 Most used software
-Source: local data frame [21 x 2]
+Source: local data frame [20 x 2]
 
          software_name article_count
 1                 CCP4             4
@@ -46,27 +46,34 @@ Source: local data frame [21 x 2]
 10           NIH Image             3
 11                   O             3
 12                SPSS             3
-13            BOXSHADE             2
-14                 CNS             2
-15           ModelTest             2
-16                   R             2
-17              REFMAC             2
-18                 SAS             2
-19               SOLVE             2
-20 Stereo Investigator             2
-21            Treeview             2
+13                 CNS             2
+14           ModelTest             2
+15                   R             2
+16              REFMAC             2
+17                 SAS             2
+18               SOLVE             2
+19 Stereo Investigator             2
+20            Treeview             2
 --------------------
-We found references to 137 distinct pieces of software
+We found references to 147 distinct pieces of software (including software_not_used)
 --------------------
-there are  172  unique combinations of software and articles
+there are  183  unique combinations of software and articles
 --------------------
 ArticleSoftwareLinks and credited, findable, identifiable
           variable 1-10 11-110 111-1455     (all)
-1         credited 0.81   0.76     0.78 0.7833333
-2         findable 0.87   0.89     0.94 0.9000000
-3     identifiable 0.92   1.00     1.00 0.9733333
-4        versioned 0.22   0.37     0.34 0.3100000
-5 version_findable  NaN   0.13     0.06 0.0950000
+1         credited 0.79   0.75     0.79 0.7766667
+2         findable 0.85   0.85     0.91 0.8700000
+3     identifiable 0.90   0.96     0.97 0.9433333
+4        versioned 0.21   0.34     0.33 0.2933333
+5 version_findable  NaN   0.12     0.06 0.0900000
 
 provided any version information: 51
 provided any version information and could be found: 10
+--------------------
+there are  145  software packages used across our paper sample
+Source: local data frame [3 x 3]
+
+    variable num percent
+1 modifiable  29    0.20
+2     source  47    0.32
+3       free  69    0.48

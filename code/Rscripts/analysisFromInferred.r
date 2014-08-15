@@ -226,7 +226,7 @@ software_packages <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, 
 cat("--------------------\n")
 cat("We found references to ")
 cat(nrow(software_packages))
-cat(" distinct pieces of software\n")
+cat(" distinct pieces of software (including software_not_used)\n")
 
 # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 
@@ -340,40 +340,52 @@ cat("\n")
 # 	      percent=round( num / total_mentions, 2 ) )
 #
 #
-# ##################
-# # Software analysis
-# # a                               bioj:SoftwarePackage ;
-# # rdfs:label                      "Macclade" ;
-# # bioj:mentioned_in               citec:a2007-27-CLADISTICS-C03-mention ;
-# # citec:is_accessible             true ;
-# # citec:is_explicitly_modifiable  false ;
-# # citec:is_free                   true ;
-# # citec:is_source_accessible      false .
-# #################
-# query <- "
-# SELECT ?software ?accessible ?modifiable ?free ?source
-# WHERE {
-# 	?software	rdf:type                        bioj:SoftwarePackage ;
-# 				citec:is_accessible             ?accessible  ;
-# 				citec:is_explicitly_modifiable  ?modifiable  ;
-# 				citec:is_free                   ?free        ;
-# 				citec:is_source_accessible      ?source      ;
-# }
-# "
-#
-# software <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+##################
+# Software analysis
+# a                               bioj:SoftwarePackage ;
+# rdfs:label                      "Macclade" ;
+# bioj:mentioned_in               citec:a2007-27-CLADISTICS-C03-mention ;
+# citec:is_accessible             true ;
+# citec:is_explicitly_modifiable  false ;
+# citec:is_free                   true ;
+# citec:is_source_accessible      false .
+#################
+query <- "
+SELECT *
+WHERE {
+	?software	rdf:type                        bioj:SoftwarePackageUsed ;
+				#bioj:mentioned_in	[ bioj:article_software_link [ bioj:from_article [ dc:isPartOf [ bioj:strata ?strata ]]]];
+				citec:is_accessible             ?accessible  ;
+				citec:is_explicitly_modifiable  ?modifiable  ;
+				citec:is_source_accessible      ?source      .
+	OPTIONAL { ?software citec:is_free          ?free  }
+				
+}
+"
+
+#[ bioj:from_article ]
+
+software <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 #
 # # melt to vertical format.
-# msoftware <- melt(software, id=1)
+msoftware <- melt(software, id=1:2)
 #
-# total_software = summarize(msoftware, n_distinct(software))[1,1]
+total_software = summarize(msoftware, n_distinct(software))[1,1]
+
+cat("--------------------\n")
+cat("there are  ")
+cat(total_software)
+cat("  software packages used across our paper sample\n")
+
 #
-# msoftware %.%
-# filter(value=="true") %.%
-# group_by(variable) %.%
-# summarize(num=n_distinct(software),
-# 	      percent=round( num / total_software, 2 ) )
-#
+print(msoftware %.%
+filter(value=="true") %.%
+group_by(variable) %.%
+summarize(num=n_distinct(software),
+	      percent=round( num / total_software, 2 ) ))
+
+
+
 #
 # # Ok, across the three units of analysis (Mentions, ArticleSoftwareLinks, SoftwarePackages), need percentages for each of the tags.
 #

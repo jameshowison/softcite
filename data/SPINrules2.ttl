@@ -40,7 +40,8 @@ bioj:SoftwareMention a rdfs:Class ;
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
-	  		 citec:original_name ?name .
+	  		 citec:original_name ?name ;
+			 citec:has_software_used true .
 	  ?software_package rdf:type bioj:SoftwarePackage .
 	  { ?software_package rdfs:label ?name }
 	  UNION
@@ -59,7 +60,8 @@ bioj:SoftwareMention a rdfs:Class ;
 	}
 	WHERE {
 	  ?this  rdf:type bioj:SoftwareMention ;
-	  		 citec:original_name ?name .
+	  		 citec:original_name ?name ;
+			 citec:has_software_used true .
 	  FILTER NOT EXISTS { ?this bioj:mentions_software ?software }
 	  BIND (
 		 URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#software-",
@@ -68,9 +70,34 @@ bioj:SoftwareMention a rdfs:Class ;
 		    ) as ?software_package )
 	}"""
 ] ;
+            spin:rule [ rdf:type sp:Construct ;
+			sp:text """
+	# Create software packages for each package without a name
+	CONSTRUCT {
+	  ?software_package a bioj:SoftwarePackage ;
+	                    rdfs:label ?unknown_name ;
+						bioj:mentioned_in ?this .
+	  ?this bioj:mentions_software ?software_package ;
+
+	}
+	WHERE {
+	  ?this  rdf:type bioj:SoftwareMention ;
+ 	         citec:has_software_used true .
+	  FILTER NOT EXISTS { ?this citec:original_name ?no_name . }
+	  BIND (CONCAT("software-Unknown-",
+	  		            strafter(str(?this),"#")
+	  				) as ?unknown_name)
+	  BIND (
+	  		  URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#",
+	                 ENCODE_FOR_URI(?unknown_name)
+	  				    )
+	  			 ) as ?software_package )
+	}"""
+] ;
+ 
 
 
-            bioj:runSecondRule [ rdf:type sp:Construct ;
+            spin:rule [ rdf:type sp:Construct ;
 			sp:text """
 	# Create ArticleSoftwareLinks but only for software that was used
 	CONSTRUCT {
@@ -96,6 +123,33 @@ bioj:SoftwareMention a rdfs:Class ;
 	   		    ) as ?article_software_link )
 	}"""
 ] ;
+
+#             spin:rule [ rdf:type sp:Construct ;
+# 			sp:text """
+# 	# Create ArticleSoftwareLinks for unknown software
+# 	CONSTRUCT {
+# 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
+# 	  	        bioj:mentions_software ?software_package ;
+# 				bioj:from_article ?article ;
+# 				bioj:from_mention ?this .
+# 	  ?this bioj:article_software_link ?article_software_link .
+# 	}
+# 	WHERE {
+# 	  ?this  rdf:type bioj:SoftwareMention ;
+# 			 bioj:mentions_software ?software_package ;
+# 			 bioj:from_selection ?selection ;
+# 			 citec:has_software_used true .
+# 	  ?software_package rdfs:label ?name .
+# 	  ?article bioj:has_selection ?selection .
+# 	   	  BIND (
+# 	   		 URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#",
+# 	   		            REPLACE(str(?article), '^.*(#|/)', ""),
+# 						"-unknown"
+# 	   			       )
+# 	   		    ) as ?article_software_link )
+# 	}"""
+# ] ;
+
 .
 
 bioj:ArticleSoftwareLink a rdfs:Class ;

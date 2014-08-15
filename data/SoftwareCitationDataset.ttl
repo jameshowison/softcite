@@ -7476,6 +7476,7 @@ bioj:has_selection bioj:a2006-05-SYST_BIOL-C05 ;
 bioj:has_selection bioj:a2006-05-SYST_BIOL-C06 ;
 bioj:has_selection bioj:a2006-05-SYST_BIOL-C07 ;
 bioj:has_selection bioj:a2006-05-SYST_BIOL-C08 ;
+bioj:has_selection bioj:a2006-05-SYST_BIOL-C09 ;
 
 	dc:date "2006" ;
 	dc:isPartOf bioj:SYST_BIOL ;
@@ -9901,6 +9902,7 @@ bioj:has_selection bioj:a2010-45-NEW_PHYTOL-C12 ;
 bioj:has_selection bioj:a2010-45-NEW_PHYTOL-C13 ;
 bioj:has_selection bioj:a2010-45-NEW_PHYTOL-C14 ;
 bioj:has_selection bioj:a2010-45-NEW_PHYTOL-C15 ;
+bioj:has_selection bioj:a2010-45-NEW_PHYTOL-C16 ;
 
 	dc:date "2010" ;
 	dc:isPartOf bioj:NEW_PHYTOL ;

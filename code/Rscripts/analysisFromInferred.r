@@ -226,7 +226,7 @@ software_packages <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, 
 cat("--------------------\n")
 cat("We found references to ")
 cat(nrow(software_packages))
-cat(" distinct pieces of software (including software_not_used)\n")
+cat(" distinct pieces of software\n")
 
 # Then analysis of ArticleSoftwareLinks (identifiable/findable/credited)
 
@@ -351,10 +351,10 @@ cat("\n")
 # citec:is_source_accessible      false .
 #################
 query <- "
-SELECT *
+SELECT ?strata ?software ?accessible ?modifiable ?source ?free
 WHERE {
 	?software	rdf:type                        bioj:SoftwarePackageUsed ;
-				#bioj:mentioned_in	[ bioj:article_software_link [ bioj:from_article [ dc:isPartOf [ bioj:strata ?strata ]]]];
+				bioj:mentioned_in	[ bioj:article_software_link [ bioj:from_article [ dc:isPartOf [ bioj:strata ?strata ]]]];
 				citec:is_accessible             ?accessible  ;
 				citec:is_explicitly_modifiable  ?modifiable  ;
 				citec:is_source_accessible      ?source      .
@@ -384,16 +384,62 @@ group_by(variable) %.%
 summarize(num=n_distinct(software),
 	      percent=round( num / total_software, 2 ) ))
 
+# Do these across strata, but need totals in strata.
+# Get total in strata
+software_by_strata_totals <- software %.% group_by(strata) %.%
+summarize(total_in_strata = n_distinct(software))
+
+#     strata total_in_strata
+# 1     1-10             130
+# 2   11-110              89
+# 3 111-1455              65
+
+# Count number of each category in each strata
+software_by_strata <- msoftware %.%
+filter(value=="true") %.%
+group_by(variable,strata) %.%
+summarize(software_in_strata = n_distinct(software))
+
+#      strata                category type_in_strata
+# 1      1-10 Cite to name or website              2
+# 2      1-10     Cite to publication             47
+# 6      1-10           Not even name              3
+# 7      1-10             URL in text              6
+# 8    11-110 Cite to name or website              8
+# 9    11-110     Cite to publication             34
+
+# Add the total for that strata to each row, to be used to create percentage
+software_by_strata <- merge(software_by_strata,software_by_strata_totals)
+
+# create the percentage for each row.
+software_by_strata <- within(software_by_strata, proportion <- software_in_strata / total_in_strata)
+
+software_by_strata$variable <- factor(software_by_strata$variable, levels=c("accessible","free","source","modifiable"))
 
 
-#
-# # Ok, across the three units of analysis (Mentions, ArticleSoftwareLinks, SoftwarePackages), need percentages for each of the tags.
-#
-# tags <- c("identifiable","findable","accessible","source","modifiable")
-#
-# # for each tag, need the percentage of whatever the unit of analysis was.
-#
-#
+
+software_summary <- dcast(software_by_strata, variable ~ strata , mean , value.var="proportion", margins="strata")
+
+
+print(software_summary)
+
+ggplot(software_by_strata, aes(x=variable,y=proportion,fill=variable)) + 
+  geom_bar(stat="identity") + 
+  facet_grid(~strata) + 
+  scale_fill_grey(name="",start=0.1,end=0.5) +
+  theme(legend.position="bottom",
+        legend.text = element_text(size=14),
+        panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_blank(),
+		text=element_text(size=10),
+		axis.text.x=element_blank(),
+		axis.ticks.x=element_blank()
+		)
+
+ggsave(filename="output/Fig4-FunctionsByStrataBoxplot.png", width=5, height=2)
 
 sink()
 closeAllConnections()

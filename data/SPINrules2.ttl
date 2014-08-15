@@ -124,32 +124,6 @@ bioj:SoftwareMention a rdfs:Class ;
 	}"""
 ] ;
 
-#             spin:rule [ rdf:type sp:Construct ;
-# 			sp:text """
-# 	# Create ArticleSoftwareLinks for unknown software
-# 	CONSTRUCT {
-# 	  ?article_software_link rdf:type bioj:ArticleSoftwareLink ;
-# 	  	        bioj:mentions_software ?software_package ;
-# 				bioj:from_article ?article ;
-# 				bioj:from_mention ?this .
-# 	  ?this bioj:article_software_link ?article_software_link .
-# 	}
-# 	WHERE {
-# 	  ?this  rdf:type bioj:SoftwareMention ;
-# 			 bioj:mentions_software ?software_package ;
-# 			 bioj:from_selection ?selection ;
-# 			 citec:has_software_used true .
-# 	  ?software_package rdfs:label ?name .
-# 	  ?article bioj:has_selection ?selection .
-# 	   	  BIND (
-# 	   		 URI(CONCAT("http://james.howison.name/ontologies/bio-journal-sample#",
-# 	   		            REPLACE(str(?article), '^.*(#|/)', ""),
-# 						"-unknown"
-# 	   			       )
-# 	   		    ) as ?article_software_link )
-# 	}"""
-# ] ;
-
 .
 
 bioj:ArticleSoftwareLink a rdfs:Class ;

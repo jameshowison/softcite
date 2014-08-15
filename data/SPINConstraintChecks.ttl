@@ -97,31 +97,31 @@ bioj:ArticleSoftwareLink a rdfs:Class ;
 							  citec:version_is_findable true .
 				    }"""
 	          ] ;
-# 	  spin:constraint
-# 	            [ a       sp:Construct ;
-# 	              sp:text """
-# 	                  CONSTRUCT {
-# 	                      _:violation a spin:ConstraintViolation ;
-# 	                           spin:violationRoot ?this ;
-# 	                           rdfs:label "Cannot have matched cite if no citation" ;
-# 	                  }
-# 	                  WHERE {
-# 	  					?this citec:has_citation false ;
-# 	  						  citec:matches_preferred_cite true .
-# 	  			    }"""
-# 	            ] ;
-#
-# .
+	  spin:constraint
+	            [ a       sp:Construct ;
+	              sp:text """
+	                  CONSTRUCT {
+	                      _:violation a spin:ConstraintViolation ;
+	                           spin:violationRoot ?this ;
+	                           rdfs:label "Cannot have matched cite if no citation" ;
+	                  }
+	                  WHERE {
+	  					?this citec:has_citation false ;
+	  						  citec:matches_preferred_cite true .
+	  			    }"""
+	            ] ;
 
-# bioj:ReferencedArticleSoftwareLink a rdfs:Class ;
-#
-# spin:constraint
-#             [ a       spl:Attribute ;
-#               rdfs:comment "Can only either include or not include preferred cite"^^xsd:string ;
-#               spl:predicate citec:includes_preferred_cite ;
-#               spl:minCount 1 ;
-#               spl:maxCount 1 ;
-#             ] ;
+.
+
+bioj:ReferencedArticleSoftwareLink a rdfs:Class ;
+
+spin:constraint
+            [ a       spl:Attribute ;
+              rdfs:comment "Can either have nothing or one include preferred cite"^^xsd:string ;
+              spl:predicate citec:includes_preferred_cite ;
+              spl:minCount 0 ;
+              spl:maxCount 1 ;
+            ] ;
 
 .
 

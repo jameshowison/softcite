@@ -457,5 +457,34 @@ ggplot(software_by_strata, aes(x=variable,y=proportion,fill=variable)) +
 
 ggsave(filename="output/Fig4-FunctionsByStrataBoxplot.png", width=5, height=4)
 
+########################
+# Misses/Matches preferred citation
+########################
+
+query <- "
+SELECT ?strata ?article ?software_article_link ?software ?preferred
+WHERE {
+	?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
+							citec:includes_preferred_cite ?preferred ;
+							bioj:mentions_software ?software ;
+							bioj:from_article ?article . 
+	?article dc:isPartOf ?journal .
+	?journal bioj:strata ?strata .
+}
+"
+#
+links_preferred <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+cat("--------------------\n")
+cat("Preferred citation counts\n\n")
+
+# How many pieces of software are here?
+print(summarize(links_preferred,num_software = n_distinct(software), num_links = n_distinct(software_article_link),num_articles=n_distinct(article)))
+
+print(links_preferred %.%
+group_by(preferred) %.%
+summarize(count = n(), percent = round(n()/nrow(links_preferred),2),num_articles=n_distinct(article)))
+
+
 sink()
 closeAllConnections()

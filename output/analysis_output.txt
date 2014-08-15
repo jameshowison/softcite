@@ -85,3 +85,13 @@ Source: local data frame [4 x 3]
 2       free 0.5072464 0.5000000 0.3333333 0.4468599
 3     source 0.2898551 0.4333333 0.2333333 0.3188406
 4 modifiable 0.1594203 0.3166667 0.1333333 0.2031401
+--------------------
+Preferred citation counts
+
+  num_software num_links num_articles
+1           27        31           15
+Source: local data frame [2 x 4]
+
+  preferred count percent num_articles
+1     false    10    0.32            8
+2      true    21    0.68           11

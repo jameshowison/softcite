@@ -277,49 +277,47 @@ spin:rule [ rdf:type sp:Construct ;
 	] ;
 .
 
-# bioj:ReferencedArticleSoftwareLink a rdfs:Class ;
-#
-#     spin:rule [ rdf:type sp:Construct ;
-# 		sp:text """
-# 		# Bring over matchesPreferredCite.  Again, only needs one.
-# 		CONSTRUCT {
-# 			?this citec:uses_preferred_cite true .
-# 		}
-# 		WHERE {
-# 			?this rdf:type bioj:ReferencedArticleSoftwareLink ;
-# 						      bioj:from_mention ?mention .
-# 			?mention bioj:from_selection ?sel .
-# 	  		{
-# 	  			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:matchesPreferredCite  ] ] ;
-# 	  		} UNION {
-# 	  			?sel  bioj:has_reference ?ref .
-# 	  			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:matchesPreferredCite  ] ] ;
-# 	  		}
-# 		}"""
-# 	] ;
-#
-#     spin:rule [ rdf:type sp:Construct ;
-# 		sp:text """
-# 		# Bring over matchesPreferredCite.  This is a check.
-# 		CONSTRUCT {
-# 			?this citec:includes_preferred_cite false .
-# 		}
-# 		WHERE {
-# 			?this rdf:type bioj:ReferencedArticleSoftwareLink ;
-# 			      bioj:from_mention ?mention .
-# 			?mention bioj:from_selection ?sel .
-# 	  		{
-# 	  			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:missesPreferredCite  ] ] ;
-# 	  		} UNION {
-# 	  			?sel  bioj:has_reference ?ref .
-# 	  			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:missesPreferredCite  ] ] ;
-# 	  		}
-# 		}"""
-# 	] ;
-#
-# .
+bioj:ReferencedArticleSoftwareLink a rdfs:Class ;
 
+    spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+		# Bring over matchesPreferredCite.  Again, only needs one.
+		CONSTRUCT {
+			?this citec:includes_preferred_cite true .
+		}
+		WHERE {
+			?this rdf:type bioj:ReferencedArticleSoftwareLink ;
+				  bioj:from_mention ?mention .
+			?mention bioj:from_selection ?sel .
+	  		{
+	  			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:matchesPreferredCite  ] ] ;
+	  		} UNION {
+	  			?sel  bioj:has_reference ?ref .
+	  			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:matchesPreferredCite  ] ] ;
+	  		}
+		}"""
+	] ;
 
+    spin:rule [ rdf:type sp:Construct ;
+		sp:text """
+		# Bring over matchesPreferredCite.  This is a check.
+		CONSTRUCT {
+			?this citec:includes_preferred_cite false .
+		}
+		WHERE {
+			?this rdf:type bioj:ReferencedArticleSoftwareLink ;
+			      bioj:from_mention ?mention .
+			?mention bioj:from_selection ?sel .
+	  		{
+	  			?sel 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:missesPreferredCite  ] ] ;
+	  		} UNION {
+	  			?sel  bioj:has_reference ?ref .
+	  			?ref 	ca:isTargetOf   [ ca:appliesCode [ rdf:type citec:missesPreferredCite  ] ] ;
+	  		}
+		}"""
+	] ;
+
+.
 
 
 bioj:SoftwarePackage a rdfs:Class ;

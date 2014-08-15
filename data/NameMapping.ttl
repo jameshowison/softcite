@@ -184,12 +184,11 @@ bioj:software-ModelTest
 		citec:alternative_name "Modeltest" ;
 .
 
-bioj:software-ModelTest
+bioj:software-Boxshade
 		rdf:type bioj:SoftwarePackage ;
 		rdfs:label "BOXSHADE" ;
 		citec:alternative_name "Boxshade" ;
 .
-
 
 
 

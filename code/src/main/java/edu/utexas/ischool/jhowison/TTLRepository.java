@@ -393,7 +393,7 @@ public class TTLRepository {
 		constructResults = qeConstruct.execConstruct();
 		model.add(constructResults);
 
-		saveResults(model);
+		//saveResults(model);
 	}
 	
 	// Creates a URI for each software package in dataset
@@ -479,8 +479,8 @@ public class TTLRepository {
 	
 	public static void runSPINrules() {
 
-		// Each set of rules runs, saving the results into a file which is the 
-		// starting point for the next set of rules.		
+		// Each set of rules runs, saving the results into either model or resultsModel
+		// saves results into self.model
 		expandCodes();
 		
 		//saveResults(model);

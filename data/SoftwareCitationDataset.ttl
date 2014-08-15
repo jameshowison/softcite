@@ -4313,6 +4313,13 @@ bioj:a2009-35-NAT_BIOTECHNOL-C05 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
                  ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
+			  
+ 			  ca:isTargetOf 
+                [ rdf:type ca:CodeApplication ;
+                  ca:hasCoder "jhowison" ;
+              	 ca:appliesCode [ a citec:software ; rdfs:label "Software for Zeiss LSM 510" ] ;
+				 ca:memo "Applied during analysis to facilitate name matching" ;
+                ] ;
 
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
@@ -4379,6 +4386,13 @@ bioj:a2009-35-NAT_BIOTECHNOL-C06 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
              	 ca:appliesCode [ a citec:creator ; rdfs:label "Zeiss" ] ;
                ] ;
+			   
+  			  ca:isTargetOf 
+                 [ rdf:type ca:CodeApplication ;
+                   ca:hasCoder "jhowison" ;
+               	 ca:appliesCode [ a citec:software ; rdfs:label "Software for Zeiss LSM 510" ] ;
+ 				 ca:memo "Applied during analysis to facilitate name matching" ;
+                 ] ;
 . # end coding for selection
 
 # start coding for selection

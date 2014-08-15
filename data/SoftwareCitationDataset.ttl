@@ -15048,6 +15048,12 @@ bioj:a2001-40-MOL_ECOL-C01 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
                  ca:appliesCode [ rdf:type citec:configuration_details ];
                ] ;	
+               ca:isTargetOf 
+                [ rdf:type ca:CodeApplication ;
+                  ca:hasCoder "jhowison" ;
+                  ca:appliesCode [ rdf:type citec:software_used ];
+				  ca:memo "Added during analysis, this code was missing" ;
+                ] ;	
 				
 			  bioj:has_reference bioj-cited:THOMPSON-1994-02 ;
 

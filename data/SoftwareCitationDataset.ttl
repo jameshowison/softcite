@@ -2529,11 +2529,11 @@ bioj:a2005-46-NATURE-C06 rdf:type bioj:selection ;
 	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 	] ;
 	
-	ca:isTargetOf 
-	[ rdf:type ca:CodeApplication ;
-	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:permission_modify ];
-	] ;
+	# ca:isTargetOf
+	# [ rdf:type ca:CodeApplication ;
+	#   ca:hasCoder "jbullard" ;
+	#   ca:appliesCode [ rdf:type citec:permission_modify ];
+	# ] ;
 	
 #end citation functions
 
@@ -6739,11 +6739,11 @@ bioj:a2008-06-NAT_GENET-C03 rdf:type bioj:selection ;
 		   	  ca:appliesCode [ rdf:type citec:source_unavailable ];
 		   	] ;
 	
-		   	ca:isTargetOf 
-		   	[ rdf:type ca:CodeApplication ;
-		   	  ca:hasCoder "jbullard" ;
-		   	  ca:appliesCode [ rdf:type citec:permission_modify ];
-		   	] ;
+		   	# ca:isTargetOf
+		   	# [ rdf:type ca:CodeApplication ;
+		   	#   ca:hasCoder "jbullard" ;
+		   	#   ca:appliesCode [ rdf:type citec:permission_modify ];
+		   	# ] ;
 	
 		   	ca:isTargetOf 
 		   	[ rdf:type ca:CodeApplication ;

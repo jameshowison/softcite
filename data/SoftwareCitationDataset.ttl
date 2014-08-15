@@ -6785,6 +6785,13 @@ bioj:a2008-06-NAT_GENET-C04 rdf:type bioj:selection ;
                  ca:hasCoder "cgrady" ;
                  ca:appliesCode [ rdf:type citec:software_used ];
                ] ;
+			   
+               ca:isTargetOf 
+                [ rdf:type ca:CodeApplication ;
+                  ca:hasCoder "jhowison" ;
+                  ca:appliesCode [ rdf:type citec:unidentifiable ];
+				  ca:memo "Added during analysis, this is software_used must have citation codes" ;
+                ] ;
 . # end coding for selection
 
 # start coding for selection

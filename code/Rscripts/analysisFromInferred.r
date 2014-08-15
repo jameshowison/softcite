@@ -60,6 +60,12 @@ cat("# Percentage of articles with mentions\n")
 
 print(round(mentions_by_strata$article_count / 30,2))
 
+cat("--------------\n")
+cat("In total we found ")
+cat(summarize(mentions, count = n_distinct(mention))[1,1])
+cat(" mentions\n")
+
+
 ####################
 #  Mentions by strata boxplot
 ####################
@@ -92,9 +98,11 @@ mmentions$value <- factor(mmentions$value,levels=c("Cite to publication", "Cite 
 cat("--------------\n")
 cat("Table 3. Types of software mentions in publications\n")
 
+total_mentions <- nrow(mentions)
+
 print(mmentions %.%
 group_by(value) %.%
-summarize(num=n_distinct(mention)))
+summarize(num=n_distinct(mention), percent = round(n_distinct(mention) / total_mentions, 2)))
 
 ggplot(mmentions,aes(x=value)) +
 geom_bar() +
@@ -287,11 +295,19 @@ cat("--------------------\n")
 cat("ArticleSoftwareLinks and credited, findable, identifiable\n")
 print(dcast(filter(links_by_strata, value=="true"),variable ~ strata , mean , value.var="proportion", margins="strata"))
 
+has_version_info <- nrow(filter(links,versioned == "true"))
+
+versions_found <- nrow(filter(links,versioned == "true" & version_findable == "true"))[1]
+
 cat("\nprovided any version information: ")
-cat(nrow(filter(links,versioned == "true"))[1])
+cat(has_version_info)
+cat(" percent: ")
+cat(round(has_version_info/nrow(article_links),2))
 cat("\n")
 cat("provided any version information and could be found: ")
-cat(nrow(filter(links,versioned == "true" & version_findable == "true"))[1])
+cat(versions_found)
+cat(" percent: ")
+cat(round(versions_found/nrow(article_links),2))
 cat("\n")
 
 
@@ -439,7 +455,7 @@ ggplot(software_by_strata, aes(x=variable,y=proportion,fill=variable)) +
 		axis.ticks.x=element_blank()
 		)
 
-ggsave(filename="output/Fig4-FunctionsByStrataBoxplot.png", width=5, height=2)
+ggsave(filename="output/Fig4-FunctionsByStrataBoxplot.png", width=5, height=4)
 
 sink()
 closeAllConnections()

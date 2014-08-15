@@ -152,13 +152,6 @@ spin:constraint
               spl:maxCount 1 ;
 			  spl:valueType xsd:boolean ;
             ] ;
-# spin:constraint
-#             [ a       spl:Attribute ;
-#               rdfs:comment "Must have at least one ArticleSoftwareLink "^^xsd:string ;
-#               spl:predicate bioj:article_software_link ;
-#               spl:minCount 1 ;
-#               #spl:maxCount 1 ;
-#             ] ;
 			
 			spin:constraint
 			          [ a       sp:Construct ;

@@ -11,20 +11,22 @@ Source: local data frame [3 x 4]
 --------------
 # Percentage of articles with mentions
 [1] 0.77 0.63 0.57
+--------------
+In total we found 286 mentions
 --------------------
 Outputted Figure 1: MentionsByStrataBoxplot.png
 --------------
 Table 3. Types of software mentions in publications
-Source: local data frame [7 x 2]
+Source: local data frame [7 x 3]
 
-                    value num
-1     Cite to publication 105
-2     Cite to user manual   6
-3 Cite to name or website  15
-4         Like instrument  53
-5             URL in text  13
-6               Name only  90
-7           Not even name   4
+                    value num percent
+1     Cite to publication 105    0.37
+2     Cite to user manual   6    0.02
+3 Cite to name or website  15    0.05
+4         Like instrument  53    0.19
+5             URL in text  13    0.05
+6               Name only  90    0.31
+7           Not even name   4    0.01
 --------------------
 Outputted Figure 2: TypesOfSoftwareMentions.png
 --------------------
@@ -67,8 +69,8 @@ ArticleSoftwareLinks and credited, findable, identifiable
 4        versioned 0.21   0.34     0.33 0.2933333
 5 version_findable  NaN   0.12     0.06 0.0900000
 
-provided any version information: 51
-provided any version information and could be found: 10
+provided any version information: 51 percent: 0.28
+provided any version information and could be found: 10 percent: 0.05
 --------------------
 there are  146  software packages used across our paper sample
 Source: local data frame [4 x 3]

@@ -33,30 +33,299 @@ Outputted Figure 2: TypesOfSoftwareMentions.png
 Outputted Figure 3: MentionTypesByStrata.png
 --------------------
 Most used software
-Source: local data frame [20 x 2]
+CCP4
+ClustalW
+Excel
+PAUP
+Adobe Photoshop
+BLAST
+HKL
+ImageJ
+MetaMorph
+NIH Image
+O
+SPSS
+CNS
+ModelTest
+R
+REFMAC
+SAS
+SOLVE
+Stereo Investigator
+Treeview
+Adobe INDesign CS
+Agilent 2100 Expert Software
+AMoRe
+AMOVA
+Autodecay
+BeadStudio
+BIAevaluation
+BioDataFit
+BioEdit
+BioNJ
+BIOSYS
+BLAT
+BOXSHADE
+cactus online smiles translator
+CAD
+Calcusyn
+CALPHA
+Chart 5
+CHIMERA
+ChipViewer
+Cluster
+COLLAPSE
+COOT
+DatLab
+DENZO
+DYMEX®
+EIGENSTRAT
+Ensembl
+EnzFitter
+EPMR
+ESCET
+GAP
+GDE
+Gelworks 1D Advanced
+GenePix
+GENESPRING
+Genome Analyser II
+geNorm
+GoMiner
+Grafit
+Graph Pad Prizm
+GraphPad Prism
+GRASP
+GRID
+GRIN
+IDEG6
+Jalview
+JAZZ
+JMP(R)
+jMRUI
+Kodak Digital Science 1D
+KS300
+limma R package
+LSM510
+LSQKAB
+MacClade
+MapMaker
+MapQTL
+MATLAB
+Mfold
+Minitab
+MitoProt
+MOLREP
+MOLSCRIPT
+MorphoCode
+MrBayes
+NeuroZoom
+NormFinder
+NTSYS-pc
+Opticon Monitor 2
+OPUS
+PC-ORD
+PHASE
+PHASER
+Phred/Phrap/Consed
+PHYLIP
+PHYML
+PONDR
+POST
+PREDATOR
+Prism
+PROCHECK
+PSORT
+qBasePlus
+QUANTA
+Quantity One
+RACE
+RASTER3D
+RESOLVE
+RIBBONS
+SCALEPACK
+SCAMP
+Sedfit
+Sednterp
+Sequence Navigator
+SHELLSCALE
+SHP
+SIGMAA
+Sigmaplot
+Software for Zeiss LSM 510
+software-Unknown-a2003-22-CR_BIOL-C01-mention
+software-Unknown-a2003-44-SCIENCE-C09-mention
+software-Unknown-a2003-44-SCIENCE-C10-mention
+software-Unknown-a2006-05-SYST_BIOL-C05-mention
+software-Unknown-a2006-05-SYST_BIOL-C08-mention
+software-Unknown-a2006-47-SYST_BIOL-C02-mention
+software-Unknown-a2007-11-GENOME_RES-C09-mention
+software-Unknown-a2008-06-NAT_GENET-C04-mention
+Staden
+STATA
+Statistica
+Statview
+Swiss-Model
+SYSTAT
+TargetP
+TIMAT2
+TMHMM
+TRIM_DENZO
+tRNAScan-SE
+TRUNCATE
+Useq
+WinNONLIN
+X-PLOR
+X-Score
+XPREP
+Zeiss LSM Image Browser
 
-         software_name article_count
-1                 CCP4             4
-2             ClustalW             4
-3                Excel             4
-4                 PAUP             4
-5      Adobe Photoshop             3
-6                BLAST             3
-7                  HKL             3
-8               ImageJ             3
-9            MetaMorph             3
-10           NIH Image             3
-11                   O             3
-12                SPSS             3
-13                 CNS             2
-14           ModelTest             2
-15                   R             2
-16              REFMAC             2
-17                 SAS             2
-18               SOLVE             2
-19 Stereo Investigator             2
-20            Treeview             2
---------------------
+4
+4
+4
+4
+3
+3
+3
+3
+3
+3
+3
+3
+2
+2
+2
+2
+2
+2
+2
+2
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1--------------------
 We found references to 146 distinct pieces of software
 --------------------
 there are  182  unique combinations of software and articles
@@ -95,3 +364,72 @@ Source: local data frame [2 x 4]
   preferred count percent num_articles
 1     false    10    0.32            8
 2      true    21    0.68           11
+--------------------
+Appendix 1 table
+
+--------------------
+1-10
+Nature Genetics
+Science
+Nature Biotechnology
+Cell
+Nature
+
+--------------------
+11-110
+Nucleic Acids Research
+Nature Cell Biology
+Molecular Systems Biology
+Molecular Ecology
+The FASEB Journal
+Genome Research
+Molecular Therapy
+Nature Structural and Molecular Biology
+Developmental Cell
+Cladistics
+The Plant Journal
+Systematic Biology
+Acta Crystallographica. Section D: Biological Crystallography
+Human Molecular Genetics
+Stem Cells
+Nanomedicine
+New Phytologist
+Cell Research
+PLoS Biology
+National Academy of Sciences. Proceedings
+The Journal of Infectious Diseases
+The Journal of Cell Biology
+Molecular Psychiatry
+
+--------------------
+111-1455
+Applied Biochemistry and Biotechnology
+BMC Plant Biology
+Academie des Sciences. Comptes Rendus. Biologies
+American Journal of Botany
+Israel Journal of Plant Sciences
+Advances in Complex Systems
+Biochimica et Biophysica Acta. Proteins and Proteomics
+Journal of Molecular Neuroscience
+BMC Molecular Biology
+Turkish Journal of Biochemistry
+Phytomedicine
+Molecular Diagnosis and Therapy
+Zoological Studies
+Journal of Molecular Catalysis B: Enzymatic
+Australian Journal of Entomology
+Journal of Computer - Aided Molecular Design
+Waterbirds
+The Journal of Parasitology
+Acta Parasitologica
+Biochimica et Biophysica Acta. General Subjects
+Journal of Thermal Biology
+Protoplasma
+Aquatic Ecosystem Health & Management
+Turkish Journal of Zoology
+Arthropod Structure & Development
+Cytotechnology
+Undersea & Hyperbaric Medicine
+Systematic Botany
+Nucleosides, Nucleotides and Nucleic Acids
+Journal of Integrative Plant Biology

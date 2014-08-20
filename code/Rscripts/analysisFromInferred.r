@@ -217,9 +217,17 @@ summarize(article_count = n_distinct(article))
 
 cat("--------------------\n")
 cat("Most used software\n")
-print(software_in_articles %.%
-filter(article_count > 1) %.%
-arrange(desc(article_count)))
+
+most_used <- software_in_articles %.%
+#filter(article_count > 1) %.%
+arrange(desc(article_count))
+
+cat(paste(most_used$software_name, collapse="\n"))
+cat("\n\n")
+cat(paste(most_used$article_count, collapse="\n"))
+
+
+
 
 query <- "
 SELECT DISTINCT ?software
@@ -485,6 +493,32 @@ print(links_preferred %.%
 group_by(preferred) %.%
 summarize(count = n(), percent = round(n()/nrow(links_preferred),2),num_articles=n_distinct(article)))
 
+cat("--------------------\n")
+cat("Appendix 1 table")
+query <- "
+SELECT ?strata ?title 
+WHERE {
+  ?journal rdf:type bioj:journal ;
+          dc:title ?title ;
+          bioj:strata ?strata .
+}
+"
+journals <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+
+cat("\n\n--------------------\n")
+cat("1-10\n")
+j <- journals %.% filter(strata == "1-10") %.% select(title)
+cat(paste(j$title,collapse="\n"))
+
+cat("\n\n--------------------\n")
+cat("11-110\n")
+j <- journals %.% filter(strata == "11-110") %.% select(title)
+cat(paste(j$title,collapse="\n"))
+
+cat("\n\n--------------------\n")
+cat("111-1455\n")
+j <- journals %.% filter(strata == "111-1455") %.% select(title)
+cat(paste(j$title,collapse="\n"))
 
 sink()
 closeAllConnections()

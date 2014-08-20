@@ -346,9 +346,34 @@ WHERE {
 }"""
 ];
 
-
-
 .
+
+bioj:journal a rdfs:Class ;
+
+		bioj:runFirstRule [ rdf:type sp:Construct ;
+		sp:text """
+			CONSTRUCT {
+			  ?this citec:has_software_policy true .
+			}
+			WHERE {
+			  ?this  rdf:type bioj:journal ;
+			         bioj:hasSoftwarePolicy ?policy .
+
+			}"""
+		] ;
+
+		bioj:runFirstRule [ rdf:type sp:Construct ;
+		sp:text """
+			CONSTRUCT {
+			  ?this citec:has_software_policy false .
+			}
+			WHERE {
+			  ?this  rdf:type bioj:journal .
+			  FILTER NOT EXISTS { ?this bioj:hasSoftwarePolicy ?policy }
+			}"""
+		] ;
+.
+		
 
 
 

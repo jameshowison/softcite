@@ -433,3 +433,11 @@ Undersea & Hyperbaric Medicine
 Systematic Botany
 Nucleosides, Nucleotides and Nucleic Acids
 Journal of Integrative Plant Biology
+
+--------------------
+Percentage of journals with software citation guidelines
+    strata policy_in_strata total_in_strata proportion
+1     1-10                3               5       0.60
+2   11-110               10              23       0.43
+3 111-1455                1              30       0.03
+Overall : 0.24

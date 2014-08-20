@@ -215,4 +215,13 @@ bioj:SoftwarePackageUsed a rdfs:Class ;
 
 .
 
+bioj:journal a rdfs:Class ;
+	spin:constraint
+	             [ a       spl:Attribute ;
+	               spl:predicate citec:has_software_policy   ;
+	               spl:minCount 1 ;
+	               spl:maxCount 1 ;
+	               spl:valueType xsd:boolean ;
+			   ] ;
+.
 

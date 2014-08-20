@@ -496,11 +496,12 @@ summarize(count = n(), percent = round(n()/nrow(links_preferred),2),num_articles
 cat("--------------------\n")
 cat("Appendix 1 table")
 query <- "
-SELECT ?strata ?title 
+SELECT ?strata ?title ?policy
 WHERE {
   ?journal rdf:type bioj:journal ;
           dc:title ?title ;
-          bioj:strata ?strata .
+          bioj:strata ?strata ;
+		  citec:has_software_policy ?policy .
 }
 "
 journals <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
@@ -519,6 +520,31 @@ cat("\n\n--------------------\n")
 cat("111-1455\n")
 j <- journals %.% filter(strata == "111-1455") %.% select(title)
 cat(paste(j$title,collapse="\n"))
+
+journal_totals <- journals %.% group_by(strata) %.%
+summarize(total_in_strata = n_distinct(title))
+
+# Count number of each category in each strata
+journals_by_strata <- journals %.%
+filter(policy=="true") %.%
+group_by(strata) %.%
+summarize(policy_in_strata = n_distinct(title))
+
+
+# Add the total for that strata to each row, to be used to create percentage
+journals_by_strata <- merge(journals_by_strata,journal_totals)
+
+# create the percentage for each row.
+journals_by_strata <- within(journals_by_strata, proportion <- round(policy_in_strata / total_in_strata, 2))
+
+cat("\n\n--------------------\n")
+cat("Percentage of journals with software citation guidelines\n")
+
+print(journals_by_strata)
+cat("Overall : ")
+cat(round(sum(journals_by_strata$policy_in_strata) / sum(journals_by_strata$total_in_strata),2))
+
+
 
 sink()
 closeAllConnections()

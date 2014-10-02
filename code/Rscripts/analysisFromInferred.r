@@ -1,7 +1,10 @@
+library(scimapClient)
 library(rrdf)
 library(ggplot2)
 library(reshape2)
 library(dplyr)
+
+scimapRegister()
 
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 #source("code/Rscripts//analysisFromInferred.r")

@@ -1,0 +1,663 @@
+© 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES  Life extension through neurofibromin mitochondrial regulation and antioxidant therapy for neurofibromatosis-1 in Drosophila melanogaster James Jiayuan Tong1,2, Samuel E Schriner1, David McCleary1, Brian J Day3 & Douglas C Wallace1 We investigated the pathophysiology of neurofibromatosis-1 (NF1) in Drosophila melanogaster by inactivation or overexpression of the NF1 gene.
+NF1 gene mutants had shortened life spans and increased vulnerability to heat and oxidative stress in association with reduced mitochondrial respiration and elevated reactive oxygen species (ROS) production.
+Flies overexpressing NF1 had increased life spans, improved reproductive fitness, increased resistance to oxidative and heat stress in association with increased mitochondrial respiration and a 60% reduction in ROS production.
+These phenotypic effects proved to be modulated by the adenylyl cyclase/cyclic AMP (cAMP)/protein kinase A pathway, not the Ras/Raf pathway.
+Treatment of wild-type D. melanogaster with cAMP analogs increased their life span, and treatment of NF1 mutants with metalloporphyrin catalytic antioxidant compounds restored their life span.
+Thus, neurofibromin regulates longevity and stress resistance through cAMP regulation of mitochondrial respiration and ROS production, and NF1 may be treatable using catalytic antioxidants.
+NF1 is one of the most common neurogenetic diseases, with a prevalence of 1 in 3,000 worldwide1–3.
+More than 10% of humans harboring mutations in NF1 gene develop malignant tumors early in life1,2, and the life expectancy of individuals with NF1 is reduced by at least 10 to 15 years1–3.
+In addition to cafe´-au-lait spots and neurofibromas, NF1 manifestations include learning disabilities and developmental abnormalities4–8.
+Neurofibromin, the protein product of the NF1 gene, is a tumor suppressor, and its GTPase-activating protein (GAP) domain negatively regulates Ras activity; when NF1 function is compromised, Ras becomes hyperactive.
+Neurofibromin also positively regulates the G protein–stimulated and Ca2+/calmodulin–sensitive adenylyl cyclase in both D. melanogaster and mice2.
+Consequently, inactivation of NF1 results in upregulation of the Ras/Raf pathway9 and downregulation of adenylyl cyclase/cAMP/protein kinase A (PKA) signaling6–8.
+Most studies on the pathophysiology NF1 have focused on the Ras/Raf pathway2,4,5 because of its well-established role in tumorigenesis9.
+However, recent research has demonstrated the importance of neurofibromin regulation of adenylyl cyclase, cAMP and PKA activity in the etiology of impaired learning and related electrophysiological abnormalities in D. melanogaster NF1 mutants6–8,10.
+Here we report extensive studies on both the inactivation and the overexpression of the NF1 gene in D. melanogaster, demonstrating that neurofibromin deficiency shortens life span and increases sensitivity to oxidative stress, whereas increased neurofibromin extends life span and improves resistance to oxidative and thermal stress.
+We show that  these phenotypes are mediated by modulation of the adenylyl cyclase/ cAMP/PKA pathway and are associated with changes in mitochondrial NADH-linked respiration and ROS production.
+Finally, we establish a causal role for cAMP and mitochondrial ROS production in determining life span, demonstrating that cAMP analogs can extend life spans of wild-type flies and that catalytic antioxidant drugs can ameliorate the life reduction of the NF1 mutants.
+RESULTS Phenotype and pathophysiology of NF1 mutant flies We generated two homozygous NF1 mutants (designated NF1P1 and NF1P2) via P element mutagenesis and tested them for their longevity.
+To control for genetic background effects, the NF1P1 and NF1P2 strains were backcrossed five generations to the w1118 (isoCJ1) strain to generate approximately 97% isogenic strains7 (Methods).
+The NF1P1 mutant strain had a 60%–73% reduction in life span, and the NF1P2 mutant strain had a 24%–40% reduction in life span, relative to the isogenic K33 control strain (Fig.
+1a).
+The NF1P1/P2 intercross heterozygotes had a life span similar to the NF1P2 flies (Fig.
+1a,b).
+The greater life reduction caused by the NF1P1 mutation might reflect the disruption of additional functional genes within an intron of NF1.
+The diminished life span of the NF1P2 mutants was rescued by the introduction into these flies of an NF1 transgene (hsNF1) integrated into the 2nd chromosome and driven by the heat shock gene promoter (Fig.
+1a).
+hsNF1 transgene expression increases in a temperature- and time-dependent manner6.
+1Center  for Molecular and Mitochondrial Medicine and Genetics with Departments of Biological Chemistry, Ecology and Evolutionary Biology and Pediatrics and Exercise Program, Biophysics and Physiology, University of California, Irvine, California 92697, USA.
+3National Jewish Medical Research Center, Denver, Colorado 80206, USA.
+Correspondence should be addressed to D.C.W.
+(dwallace@uci.edu).
+2Multidisciplinary  Received 23 August 2006; accepted 16 February 2007; published online 18 March 2007; doi:10.1038/ng2004  476  VOLUME 39  [  NUMBER 4  [  APRIL 2007 NATURE GENETICS  ARTICLES  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  b  Percentage survival  d  Locomotive index  a  Percentage survival  37 °C Figure 1 NF1 deficiency shortens D. melano22 °C K33 100 gaster life span through adenylyl cyclase/cAMP/ 1 NF1P1 80 PKA signaling.
+(a,b) Inactivation of the NF1 gene NF1P2 reduced life spans in females.
+NF1 mutant 60 NF1P1/P2 0.5 Control P1 P2 strains (NF1 and NF1 ) and their intercross 40 hsNF1/+;NF1P2 rut P1/P2 (NF1 ) showed shorter life spans than the 20 0 control K33 (log-rank test comparing NF1P1 0 0 50 100 150 0 40 80 120 and NF1P2 with control K33, P o 0.0001).
+Time (min) Time at 25 °C (d) Expression of D. melanogaster NF1 transgene in hsNF1/+;NF1P2 rescued the NF1 aging 100 phenotype (log-rank test: hsNF1/+;NF1P2 versus K33 K33 80 NF1P1 or NF1P2, P o 0.001; hsNF1/+;NF1P2 NF1P2 rut versus K33, P ¼ 0.28) (K33, n ¼ 260; NF1P1, 60 rut n ¼ 260; NF1P2, n ¼ 260; NF1P1/P2, n ¼ 260; rut; NF1P2 40 NF1P1 hsNF1/+;NF1P2, n ¼ 280, distributed in eight hsPKA/+;NF1P2 20 tubes).
+(b,c) Neurofibromin modulates life span NF1P2 0 through the adenylyl cyclase/cAMP/PKA pathway, 0 40 80 120 NF1P1/P2 as illustrated by median and maximal life spans Time at 25 °C (d) (mean ± s.d.).
+rutabaga mutants, including hsNF1/+;NF1P2 rut1 and rut2080, had shorter life spans.
+NF1 Life span Median Maximum Median Maximum mutation did not further reduce the life span rut ;NF1P2 44 ± 5 71 ± 2 50 ± 4 73 ± 3 K33 on the rut background, rut;NF1P2 (log-rank test, 12 ± 2 19 ± 2 20 ± 1 29 ± 3 NF1P1 dnc;NF1P2 34 ± 3 43 ± 2 38 ± 3 49 ± 2 P ¼ 0.127).
+Expression of PKA in hsPKA/+; NF1P2 34 ± 1 42 ± 1 38 ± 2 48 ± 2 NF1P1/P2 NF1P2 flies rescued the NF1 aging phenotype hsPKA/+;NF1P2 1 33 ± 2 40 ± 3 20 ± 1 41 ± 3 rut (NF1P2, n ¼ 360; rut1, n ¼ 240; rut2080, 2080 28 ± 3 38 ± 2 22 ± 2 35 ± 3 rut hsRasV12/+;K33 n ¼ 360; rut;NF1P2, n ¼ 260; dnc;NF1P2, 19 ± 4 51 ± 4 25 ± 3 51 ± 2 rut; NF1P2 49 ± 5 70 ± 4 52 ± 2 74 ± 4 dnc; NF1P2 n ¼ 260, hsPKA/+;NF1P2, n ¼ 320, hsRasV12/+; hsRaf*M7/+;K33 52 ± 3 77 ± 2 47 ± 3 67 ± 2 hsNF1/+;NF1P2 K33, n ¼ 320, hsRaf*M7 /+;K33, n ¼ 360, in 66 ± 3 79 ± 3 62 ± 3 74 ± 1 hsPKA/+;NF1P2 v12 eight repeats).
+(d) NF1/adenylyl cyclase/PKA 0 50 100 44 ± 3 70 ± 2 49 ± 3 67 ± 5 hsRas /+;K33 45 ± 3 69 ± 3 48 ± 3 70 ± 1 hsRaf*M7/+;K33 τ (min) regulation of up-climb behavior under heat stress (20 min, 37 1C).
+Locomotive index (LI) ¼ startleinduced up-climbing.
+Time (t; in min) to recovery of LI after heat shock.
+There was a significantly prolonged recovery time (t) in rut mutant flies (t ¼ 92 ± 4) compared with control flies (t ¼ 27 ± 3, P o 0.005, t test).
+(e) NF1-regulated heat stress recovery via the adenylyl cyclase/cAMP/PKA pathway (mean ± s.d.
+of six experiments; total of 100–140 flies per genotype).
+NF1P1, NF1P2, NF1P1/P2 and rut;NF1P2 showed delayed recovery time.
+This phenotype was rescued by (i) expressing neurofibromin in hsNF1/+;NF1P2, (ii) elevating cAMP by dunce, dnc;NF1P2 and (iii) overexpressing PKA in hsPKA/+;NF1P2 flies (*, P o 0.005, t test).
+hsRasV12/+;K33 and hsRaf*M7 /+;K33 showed a similar t as control K33 flies.
+e  c  To determine if the reduced life span was due to the upregulation of the Ras/Raf pathway or the downregulation of the adenylyl cyclase/ cAMP/PKA pathway, we tested life spans of flies harboring mutations specifically affecting these pathways.
+We upregulated the Ras/Raf pathway by introducing RasV12 and Raf* M7 transgenes, both under heat shock promoter regulation, into flies maintained at 25 1C (refs.
+4,5).
+Both hsRasV12/+;K33 and hsRaf*M7/+;K33 flies had normal life spans (Fig.
+1c).
+Thus, upregulation of Ras/Raf signaling did not shorten NF1 mutant life spans.
+To test if the short life was due to the adenylyl cyclase/cAMP/PKA pathway downregulation, we analyzed mutant alleles of the neurofibromin-dependent adenylyl cyclase, designated rutabaga (rut)6,11.
+Two different rutabaga mutants, rut1 and rut2080, had significantly shortened life spans, and the rut and NF1 double mutant (rut;NF1P2) did not further shorten the life span (Fig.
+1b,c), implicating cAMP in mediating longevity.
+To confirm that the reduced life span in NF1P2 was the product of reduced cAMP levels, we combined the NF1P2 allele with a cAMP phosphodiesterase gene mutation, dunce (dnc1), which inhibits cAMP degradation10,11.
+The life span of the dnc;NF1P2 flies was restored to normal (Fig.
+1c).
+Normal life was also restored in hsPKA/+;NF1P2 flies when NF1P2 was combined with the heat shock– inducible and constitutively active PKA (hsPKA*), which upregulates protein phosphorylation6 (Fig.
+1b).
+Therefore, the reduced life span of the NF1 mutants is the product of the impairment of adenylyl cyclase/cAMP/PKA signaling.
+To determine the effect of NF1 mutations on D. melanogaster physical fitness, we exploited the observation that NF1 mutants showed an inhibited escape response8.
+To quantify this phenotype,  NATURE GENETICS VOLUME 39  [  NUMBER 4  [  APRIL 2007  we startled flies in a vial by tapping them down to the bottom of the vial and then measuring their up-climbing capacity before, during and after a 20-min 37 1C heat stress (Fig.
+1d).
+The percentage of flies that climbed up 10 mm in 15 s was defined as the locomotive index, and the time necessary the for locomotive index to reach above 90% was defined as the recovery time (t) (Fig.
+1e).
+NF1P1, NF1P2 and NF1P1/P2 flies required over 100 min to recover from the heat stress, compared with 30 min for the K33 control.
+The reduced heat tolerance of the NF1 mutants was not due to the overexpression of the Ras/Raf pathway, as hsRaf* M7/+;K33 and hsRasV12/+;K33 flies showed t values similar to control K33 flies (Fig.
+1e).
+On the other hand, rut and rut;NF1P2 flies had the same delayed recovery time as the NF1P1/P2 mutant flies (Fig.
+1e).
+Moreover, when NF1P2 was combined with hsPKA* (to give hsPKA*;NF1P2 flies) or dnc (dnc;NF1P2), t returned to the normal range (Fig.
+1e).
+Thus, the reduced tolerance of the NF1 flies to heat stress must also be the product of the adenylyl cyclase/ cAMP/PKA pathway downregulation.
+To further investigate the fitness of NF1 mutants, we tested their tolerance to desiccation and oxidative stress.
+NF1P2 flies proved to be as resistant to desiccation as K33 controls (Supplementary Fig.
+1 online), but NF1P2, rut and rut;NF1P2 flies were all significantly more sensitive to paraquat-induced oxidative stress than controls (Fig.
+2a).
+Paraquat generates intracellular superoxide anion (O2–) through redox cycling12.
+The paraquat sensitivity of NF1P2 flies was eliminated in hsNF1/+;NF1P2 flies (Fig.
+2a).
+Furthermore, neurofibromin overexpression on a wild-type background (hsNF1/+;K33) or PKA overexpression on NF1 mutant background (hsPKA*/+;NF1P2) greatly increased resistance to paraquat-induced oxidative stress (Fig.
+2a).
+477  As the mitochondria are a major source of endogenous ROS13, and increased ROS could sensitize cells to paraquat, we assayed mitochondrial aconitase activity.
+The relative specific activity of aconitase is an effective indicator of endogenous mitochondrial oxidative stress, as the aconitase iron-sulfur center is particularly prone to superoxide anion inactivation14,15.
+In 30-d-old flies, mitochondrial aconitase activities were reduced by 36% in NF1P2 flies, 75% in rut flies and 76% in the double mutant rut;NF1P2 flies, relative to age-matched controls (Fig.
+2a).
+Furthermore, aconitase activity was restored by the hsNF1 transgene (hsNF1;NF1P2) and was increased more than 90% when neurofibromin was overexpressed on a wild-type background (hsNF1/+;K33) or when the constitutive PKA was overexpressed even in the absence of NF1 (hsPKA*;NF1P2) (Fig.
+2a).
+We confirmed that aconitase activity reductions were due to the inactivation of existing aconitase instead of reduced expression of the enzyme, because dithiothreitol and iron reactivated the enzymatic activities to the same degree in both mutant and control flies (Fig.
+2b).
+Thus, inactivation of the NF1 gene increased oxidative stress, mediated by downregulation of adenylyl cyclase/ cAMP/PKA.
+**  **  Aconitase activity (nmol NADPH/min/mg)  b  Control Reactivated  ATP synthesis (nmol ATP/min/mg) Aconiase activity (nmol NADPH/min/mg)  Survival time in paraquat (h)  60  K33  0.01  ru  NF1P1/P2  + MnTBAP  80  NF1P1/P2  + MnTDEIP  60 40 20 0 0  10  20  30  40  50  Time at 25 °C (d)  60  hs N  f  NF1P1/P2  100  70  80  Percentage survival  e  100 80 60 40 20 0  g  NF1P1/P2 NF1P1/P2  + MnTBAP  NF1P1/P2  + MnTDEIP  NF1P1/P2 NF1P1/P2 + MnTBAP  *  NF1P1/P2 + MnTDEIP  0  10  20  30  40  50  60  3 7/  +;  K3  2; K3  800  af *M  600  R  400 Time at 25 °C (s)  3  0 F1  200  *  0.02  N  0  *  *  0.03  V1  K33 control  rut;NF1P2  hs  NF1P1/P2  rut  P2  50  NF1P2  F1  d  Substrates 100  0  *  hsNF1/+; K33  as  hsPKA/+; NF1P2  ;N  hsNF1/+; NF1P2  hs R  rut; NF1P2  P2  rut  *  0  K3  Superoxide in fluorescent units  c  NF1P2  *  F1  K33  20  t  0  * **  40  t ;N  * **  **  P2  * *  **  *  3  20  *  Superoxide production rate (F/min/mg)  **  40  60  ru  80  /+  100  As inhibition of the mitochondrial electron transport chain can increase ROS, we analyzed respiration rates of NF1 mutant mitochondria versus control mitochondria during metabolism of the NADHlinked complex I substrates pyruvate and malate.
+The ADP-stimulated (state III) respiration rate (Supplementary Fig.
+2 online) and the derived ATP synthesis rate (Fig.
+2a) were reduced by approximately 50% in NF1P1, NF1P2, rut and rut;NF1P2 flies, whereas the non–ADPstimulated (state IV) respiration was unaffected (Supplementary Fig.
+2).
+Addition of the heat shock–inducible neurofibromin gene (hsNF1/+;NF1P2) or PKA overexpression (hsPKA*/+;NF1P2) restored the state III respiration rate (Supplementary Fig.
+2) and predicted ATP synthesis rates (Fig.
+2a) to normal levels.
+The NF1 mutant mitochondria were then tested for ROS production.
+Using the MitoSOX fluorescent indicator to monitor superoxide anion production that is a result of the direct transfer of an electron from the electron transport chain to O2 to generate O2–13, we found that NF1P1/P2 mitochondria generated more superoxide than control mitochondria (Fig.
+2c).
+Superoxide levels were increased in rut and rut;NF1P2 flies but were reduced to control levels by introduction of the hsNF1 transgene (hsNF1;NF1P2) (Fig.
+2d).
+Again,  F1  a  Percentage survival  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES  70  * 0  80  50  100  τ (min)  Time at 25 °C (d)  Figure 2 Mitochondrial energy deficiency and increased oxidative stress of NF1 mutants can be rescued by antioxidants.
+(a) Increased oxidative stress indicated by heightened paraquat sensitivity, reduced aconitase activity and reduced mitochondrial ATP production in K33, NF1P2, rut, rut;NF1P2, hsNF1/+;NF1P2, hsPKA/+;NF1P2 and hsNF1/+;K33 flies.
+(b) Reactivation of aconitase activity by dithiothreitol and iron confirms activity loss by oxidative stress.
+(a,b) Paraquat (20 mM), six experiments (180–220 females/genotype).
+Aconitase activities, mean ± s.d., five experiments, 400 flies/genotype.
+ATP synthesis calculated from mitochondrial respiration data (Supplementary Fig.
+2), mean ± s.d., five experiments, 75 males and females flies per experiment.
+*, P o 0.05; **, P o 0.01, t test (compared with control K33).
+(c) Superoxide signal, evaluated by MitoSOX fluorescence when metabolizing pyruvate and malate (green arrow), for control K33 and NF1P1/P2 mitochondria.
+(d) Superoxide production rates, measured from the initial slope of MitoSOX fluorescence, increased immediately after substrate addition (mean ± s.d., six experiments; 50 male and 50 female flies/experiment; 600 flies/genotype).
+The superoxide production increased significantly (by 101% in NF1P2 and 103% in rut and rut;NF1P2 mutants) but was restored in hsNF1/+;NF1P2 flies (*, P o 0.05; mean ± s.d.
+of six experiments; 50 males and 50 females/experiment; 600 flies/genotype).
+(e,f) MnTBAP (10 mM) and MnTDEIP (10 mM) feeding extended NF1P1/P2 life spans (eight experiments; 320–400 flies/group; log-rank test, P o 0.0001 for both treatments).
+There were no significant weight changes throughout the experiment.
+(g) MnTBAP and MnTDEIP feeding rescued delayed heat stress recovery time (*, P o 0.005, t test).
+478  VOLUME 39  [  NUMBER 4  [  APRIL 2007 NATURE GENETICS  Phenotype and physiology of NF1-overexpressing flies To further validate the importance of the adenylyl cyclase/cAMP/PKA pathway and its effects on mitochondrial respiration and ROS production in regulating life span, stress resistance and fecundity, we generated flies that overexpressed neurofibromin by introducing an extra copy of the NF1 gene, for a total of three copies.
+We used two different strategies to overexpress neurofibromin: (i) introduction of the heat shock–inducible NF1 transgene (hsNF1) into wild-type K33 flies and maintenance of the flies at 25 1C and (ii) combining  Time (d) 50 100  0  80  0  60 40  K33  20  hsNF1/+;K33  0 0  20  40  60  80  100  120  –2 –4 –6  K33  –8  hsNF1/+;K33  Time at 25 °C (d)  b  d 0  100 80 60 40 20 0  Time (d) 50  Ln mortality  hsNF1/+;K33 0  20  40  60  80  100  120  Time at 25 °C (d)  –2 –4 –6 –8  Arm-GAL4/+  K33 hsNF1/+;K33  100  UAS-dNF1/+ on 2nd  80  UAS-dNF1/+ on 3rd  60  Arm-GAL4/UAS-dNF1 on 2nd  40  Arm-GAL4/UAS-dNF1 on 3rd  20 0 0  20  40  60  80  100  120  Time at 25 °C (d)  f 100  0  K33  e  Percentage survival  c 100 Ln mortality  Percentage survival  a  a transgene in which the UAS cis element was fused to the D. melanogaster NF1 gene (UAS-dNF1) with a transgene in which the GAL4 enhancer was driven via either the systemic (Armadillo (Arm))8 or neuron-specific (ELAV) promoters (Arm-GAL4 and ELAVGAL4, respectively).
+Upregulation of NF1 gene expression by maintaining hsNF1/+;K33 flies at 25 1C throughout life resulted in higher levels of neurofibromin (Supplementary Fig.
+4 online), an increase in mean life span of 49% for male flies and 68% for females and an increase in maximum life span of 38% for males and 52% for females (Fig.
+3a,b).
+By contrast, when we maintained hsNF1/+;K33 flies at 25 1C through embryogenesis and 4 d into adulthood but then switched them to 18 1C for the remainder of their adult life, the amount of neurofibromin fell to near-control levels, the extension of maximum life span was eliminated and the extension of mean life span was minimized (Supplementary Fig.
+4).
+The residual increased neurofibromin observed in the 18 1C adults was probably carried over from the prior period when the flies were maintained at 25 1C.
+We plotted age-specific mortality curves of hsNF1/+;K33 and K33 flies on a natural log scale (Fig.
+3c,d) and estimated the Gompertz parameters (Supplementary Table 1 online).
+This showed that the mortality rates of the hsNF1/+;K33 and K33 flies were similar, but their intercepts differed by a factor of 2 to 3.
+Therefore, neurofibromin overexpression reduces the baseline mortality without altering the agedependent mortality rate.
+We also overexpressed neurofibromin using the GAL4-UAS system7.
+We studied two independent UAS-dNF1 transgenic lines after outcrossing all transgenic lines five generations to w1118 to generate an isogenic background.
+When we crossed the UAS-dNF1 lines with Arm-GAL4 flies to generate double heterozygous animals (Arm-GAL4/ +;UAS-dNF1/+), the resulting neurofibromin-overexpressing flies (Supplementary Fig.
+4) showed a mean life span increase of 74% in males and 81% in females and an increase in maximal life span of 65% in males and 70% in females, relative to the homozygous Arm-GAL4 or UAS-dNF1 or heterozygous Arm-GAL4 /+ and  Percentage survival  overexpression of Ras (hsRasV12/+;K33) or Raf (hsRaf M7/+;K33) did not affect superoxide production (Fig.
+2d), ruling out a role for the Ras/Raf pathway.
+The increased superoxide anion production of NF1P1/P2 flies could result from either increased generation of superoxide anion or decreased scavenging by manganese superoxide dismutase (MnSOD).
+However, analysis of total SOD, MnSOD and catalase activities from NF1P2 and K33 flies did not show any significant differences in enzyme activities (Supplementary Fig.
+3 online).
+Therefore, the elevated superoxide generated by NF1 mutant flies seems to be the result of increased production, not reduced scavenging.
+To further verify that increased superoxide anion production was the cause of the reduced NF1P1/P2 life span, we fed NF1P1/P2 flies with the metalloporphyrin catalytic antioxidants Mn(III)tetrakis(4-benzoic acid) porphrin (MnTBAP)16 and tetrakis(1,3-diethyl imidazolium2-yl) meso-substituted manganoporphyrin (MnTDEIP)17, both of which have broad-spectrum antioxidant activities, including SOD activity18,19.
+MnTBAP and MnTDEIP exposure increased the survivorship of NF1P1/P2 flies by approximately 50% (Fig.
+2e,f).
+These drugs also enhanced the recovery rate of locomotive performance of NF1P1/P2 mutants after heat stress (Fig.
+2g).
+Therefore, the reduced life span and reduced stress resistance of NF1P1/P2 and NF1P2 flies, associated with reduced cAMP and mitochondrial respiration, is a direct consequence of increased mitochondrial superoxide anion production.
+Percentage survival  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES  Arm-GAL4/+  100  UAS-dNF1/+ on 2nd  80  UAS-dNF1/+ on 3rd  60  Arm-GAL4/UAS-dNF1 on 2nd  40  Arm-GAL4/UAS-dNF1 on 3rd  20 0 0  20  40  60  80  100  120  Time at 25 °C (d)  Figure 3 Life extension in flies by overexpression of NF1.
+(a–d) NF1 overexpression using the heat shock promoter.
+a and b show hsNF1/+;K33 versus K33 flies at 25 1C (log-rank test: P o 0.0001 for males and females; seven or eight experiments with 40 flies each; total of 280 or 320 flies per category).
+c and d show age-specific mortality rates of hsNF1/+;K33 and K33 flies plotted on a natural log scale versus time, fit by Gompertz model (ln(mx) ¼ ln(m0) + ax ), where mx ¼ mortality rate at age x, m0 ¼ baseline mortality (intercept as ln(m0)) and a ¼ change of mortality with age (slope of the trajectory).
+Values are given in Table 1.
+(e,f) NF1 overexpression using the GAL4 -UAS system.
+Offspring from the crosses between homozygous Armadillo-GAL4 and two independent homozygous UAS-D. melanogaster NF1 transgenic lines yield double heterozygous flies (Arm-GAL4/UAS-dNF1), compared with individual transgene heterozygotes (Arm-GAL4/+ and UAS-dNF1/+ ).
+Results of log-rank test are shown (P o 0.0001 for both males and females, six experiments with 40 flies per experiment, total of 240 flies per category).
+NATURE GENETICS VOLUME 39  [  NUMBER 4  [  APRIL 2007  479  increase in survival time and the males a 51% increase in survival time during paraquat exposure, relative to K33 controls (Fig.
+4e,f).
+However, hsNF1/+;K33 flies were not more resistant to desiccation (Fig.
+4g,h).
+The life span extension of the neurofibromin-overexpressing flies was not due to the downregulation of the Ras/Raf pathway, as flies heterozygous for two different Ras mutants (Rase2F/+ or Rase1B/+) (homozygotes being lethal) had normal life spans (data not shown).
+On the other hand, the life span extension could be accounted for by the upregulation of the adenylyl cyclase/cAMP/PKA pathway.
+The cAMP concentrations were elevated approximately twofold in NF1-overexpressing hsNF1/+;K33 and Arm-GAL4/+;UAS-dNF/+ strains, relative to K33 or Arm-GAL4/+ of USA-dNF1/+ controls (Supplementary Fig.
+6 online).
+Moreover, feeding w1118 flies the cell-permeable cAMP analogs dibutyryl-cAMP (db-cAMP) and 8-bromo-cAMP increased life span.
+Adult males that were fed 1 mM or 10 mM db-cAMP showed a 30% increase in median life span, females that were fed 1 mM db-cAMP showed a 60% increase in life span and females fed 10 mM db-cAMP showed a 4100% increase in life span (Fig.
+5a,b).
+We obtained similar findings by 8-bromo-cAMP feeding (Fig.
+5c,d).
+This life span extension was unlikely to be due to calorie restriction, as the body weights of both males and females remained the same as controls (Supplementary Fig.
+6).
+As a further demonstration of the importance of increased cAMP in life extension, cAMP phosphodiesterase-deficient dunce mutants lived significantly longer than their control Canton S counterparts (Fig.
+5e,f).
+Similarly, PKA-overexpressing flies (hsPKA*/+ flies at 25 1C) also had extended life spans (Fig.
+5g,h).
+Thus, the increased life span of the NF1-overexpressing flies can be recapitulated by the adenylyl cyclase/cAMP/PKA activation.
+In many systems, life span extension is associated with inactivation of the insulin-like growth factor receptor-protein kinase B (Akt1/2  UAS-dNF1/+ parental strains (Fig.
+3e,f and Supplementary Table 1).
+Thus, we were able to extend D. melanogaster life span using two different genetic strategies to increase neurofibromin levels, involving three independent inserts of the NF1 transgene.
+Therefore, the life span extension must be a product of neurofibromin overexpression and not simply a consequence of heat shock or chromosomal position effects.
+To determine the proportion of the life span extension that was due to neurofibromin protection of neurons20,21, we combined the UASdNF1 transgene with the neuron-specific ELAV promoter (ELAVGAL4).
+Both male and female ELAV-GAL4/+;UAS-dNF1/+ flies also showed a life span extension of approximately 50% (Supplementary Fig.
+5 online).
+Thus, maintaining neuronal integrity must be an important component of longevity.
+The increased life span of NF1-overexpressing D. melanogaster suggests that they may also be more physically robust.
+To determine if this was true, we analyzed the reproductive fertility (Fig.
+4a) and fecundity (data not shown) of the hsNF1/+;K33 females and found that both fertility and fecundity were higher in the NF1-overexpressing flies than in controls.
+This was not because the NF1-overexpressing flies were bigger, as both hsNF1/+;K33 males and females had similar body lengths as K33 males and females, respectively (Fig.
+4b,c).
+Although the hsNF1/+;K33 females were slightly heavier than K33 females (Fig.
+4b,c) this could be because they carried more eggs.
+Thus, contrary to prevailing evolutionary theories that predict that longevity is inversely correlated with reproductive capacity22, neurofibromin overexpression increased both longevity and fertility.
+We tested the stress resistance of NF1-overexpressing flies by assessing up-climbing ability and found that the hsNF1/+;K33 flies were highly resistant to heat stress (Fig.
+4d).
+Similarly, the NF1-overexpressing flies were highly resistant to paraquat-induced oxidative stress, with the hsNF1/+;K33 females showing a 56%  b  20 10  37 °C  1 0.8 0.6 0.4 0.2  e  22 °C  K33 hsNF1/+;K33 0  40  80 120 Time (min)  160  Mean survival time under paraquat (h)  1 2 3 4 5 6 7 9 10 11 13 14 15 17 19 Time at 25 °C (d)  hsNF1/+;K33  1.5  K33  1  hsNF1/+;K33  0.5  K33 hsNF1/+;K33  0 0  10  f  80  40  0 K33  hsNF1/+;K33  K33 hsNF1/+;K33  20 30 Time at 25 °C (d)  40  K33 0.0  50  g 80 40 0 K33  1.0  2.0  3.0  Adult body length (mm)  hsNF1/+;K33  h  Percentage survival  30  0  d  c 2  1  K33 hsNF1/+;K33  0.5  Percentage survival  K33 hsNF1/+;K33  40  Mean survival time under paraquat (h)  Fertility (adult progeny/day/female)  50  Weight per fly (mg)  a  Locomotive index  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES  0 0 20 40 60 Time at 25 °C (h) under dessication 1  K33  Figure 4 Phenotypic analysis of hsNF1/+;K33 versus K33 flies.
+(a) Enhanced reproductive fitness of hsNF1/+;K33 hsNF1/+;K33 flies (mean fertility ± s.d.
+of daily offspring from five pairs of male and female flies per 0.5 genotype, 12 replicates; P o 0.05 every day; t test).
+(b) The body weight of hsNF1/+;K33 males was similar to that of K33 males, but the weight of hsNF1/+;K33 females was higher than that of K33 females (mean weight per fly ± s.d., four replicates at each time point).
+(c) Similar body lengths of hsNF1/+;K33 and K33 0 0 20 40 60 flies at 15 d (mean length per fly ± s.d.
+from 13 replicates; P ¼ 0.16 between males and P ¼ 0.062 Time at 25 °C (h) under dessication between females for hsNF1/+;K33 versus K33 flies; t test).
+(d) Resistance to heat shock of hsNF1/+;K33 flies in locomotive test, measured by up-climbing ability before, during and after a 20-min exposure to 37 1C (20 male and 20 female flies in each tube; for hsNF1/+;K33, n ¼ 7, total of 280 flies; for K33, n ¼ 5, total of 200 flies).
+(e,f) Enhanced resistance to paraquat oxidative stress of hsNF1/+;K33 flies.
+Males lived 51% longer (P ¼ 0.012, t ¼ 2.23, df ¼ 10, t test), and females lived 56% longer (P ¼ 0.007, t ¼ 2.25, df ¼ 10, t test) than K33 flies (40 flies per tube, n ¼ 6, total of 240 flies per category).
+(g,h) hsNF1/+;K33 and K33 flies had a similar desiccation tolerance (Wilcoxon test, 40 flies per tube, n ¼ 6, total of 240 flies per category).
+480  VOLUME 39  [  NUMBER 4  [  APRIL 2007 NATURE GENETICS  ARTICLES  Percentage survival  a  Dibutyryl-cAMP  b  0 µM  100 80 60 40 20 0  1 µM 10 µM  0  20  40  60  80  100  Percentage survival  e  c  0 µM 1 µM 10 µM  0  20  40  60  80  dunce  0  20  40  60  80  d  8-bromo-cAMP  0 µM  100 80 60 40 20 0  100  10 µM  20  40  60  80  100  100  0  20  40  60  80  0 µM 1 µM 10 µM  0  g  20  40  60  h  100 80 60 40 20 0  CS dunce  100 80 60 40 20 0  8-bromo-cAMP  100 80 60 40 20 0  1 µM  0  f CS  100 80 60 40 20 0  100  hsPKA /+;K33  0  20  40  60  80  hsPKA /+;K33  0  100  100  K33  100 80 60 40 20 0  K33  80  20  40  60  80  100  Time at 25 °C (d)  Figure 5 Upregulation of cAMP/PKA signaling extends D. melanogaster life span.
+(a–d) Feeding dibutyryl-cAMP and 8-bromo-cAMP extends life spans of male and female w1118 flies (five experiments, with a total of 180–200 flies; log-rank test, P o 0.001 for control flies versus those treated with 1 mM and 10 mM of either compound).
+(e,f) cAMP phosphodiesterase mutant (dunce) extends life span on the Canton-S (CS ) background (log-rank test, P o 0.0001 for males and females, five experiments, 220–240 flies per category).
+(g,h) Expression of a constitutive protein kinase A (PKA) catalytic subunit (hsPKA*) extends life span in hsPKA*/+;K33 flies compared with control K33 flies (log-rank test, P o 0.0001 in males and females, six experiments for K33 and eight experiments for hsPKA*/+;K33 flies, with 40–50 flies per experiment, Z240 flies per category).
+203.9  155.8  50 0  41.7  K33  40.6  f  2 2.1  1.7  0 K33  hsNF1/+;K33  2.9  2.8  1 0  hsNF1/+;K33  3  1  2  K33  g 400  300 K33  80  60  hsNF1/+;K33  500  hsNF1/+;K33  d  * 100  Respiratory rates with succinate (ng atom O/min/mg)  150  nmol NADH/min/mg protein  200  P/O ratio with pyruvate+malate  *  3  [H2O2] (nmol/min/mg of protein) with pyruvate+malate  e  250  100  c  b  Citrate synthase activity (nmol/min/mg protein)  Respiratory rates with pyruvate+malate (ng atom O/min/mg)  a  As NF1 inactivation decreased mitochondrial respiration and increased ROS production, we predicted that increased neurofibromin would have the opposite effects.
+Indeed, mitochondrial NADH-linked (pyruvate + malate) respiration rates of mitochondria from NF1overexpressing flies (hsNF1/+;K33 or Arm-GAL4/+;UAS-dNF1/+) were 25%–38% higher than those of K33 or Arm-GAL4/+;UASdNF1/+ control mitochondria, in the presence of ADP (state III  K33  **  0 K33  100 50  103.9  hsNF1/+;K33  84.8 47.4  39.5  0 hsNF1/+;K33  K33  h 4  2  150  hsNF1/+;K33  Aconitase activity (nmol NADPH/min/mg mitochondria)  kinase) pathway.
+This results in the dephosphorylation and activation of the forkhead transcription factors (FOXO) and induction of MnSOD13.
+However, inactivation of this pathway did not seem to account for the life extension resulting from NF1 overexpression, as we did not find any significant differences in dephosphorylated FOXO or MnSOD levels between hsNF1/+;K33 and K33 (Supplementary Fig.
+7 online).
+P/O ratio with succinate  *  ** 60  **  40 K33  20  hsNF1/+;K33 0 0  10  20 30 Age (d)  40  50  K33 Figure 6 NF1 overexpression increases complex I respiration and activity, reduces ROS production and hsNF1/+;K33 protects aconitase activity.
+Respiratory rate ¼ atomic oxygen consumed/min/mg mitochondrial protein.
+120 (a) Mitochondrial respiration with pyruvate + malate with ADP (state III) is elevated in hsNF1/+;K33 flies versus K33 flies (*, P ¼ 0.02, t test, left column) but not without ADP (state IV) (P ¼ 0.84, right column).
+80 ** (b) NF1 expression did not alter P/O ratio (P ¼ 0.69).
+(c) Rotenone-sensitive complex I activity (NADH:DB 40 coenzyme Q analog oxidoreductase assay) is elevated in hsNF1/+;K33 flies (mean ± s.d., six experiments; 50 males and 50 females /experiment; *, P ¼ 0.04, t test).
+We found no difference in residual activity in 0 the presence of rotenone (4 mM) for hsNF1/+;K33 (residual activity ¼ 6.4 ± 1.9) versus K33 (residual Before Reactivated activity ¼ 5.7 ± 2.7) flies (P ¼ 0.79, t test).
+(d,e) Mitochondrial respiration using succinate with ADP (state III, left column) or without ADP (state IV; right column) is similar between hsNF1/+;K33 and K33 flies (P ¼ 0.48 for III and P ¼ 0.33 for IV); their P/O ratios are similar (P ¼ 0.21) (mean ± s.d.
+of six experiments (a,b) or four experiments (d,e), 50 males + 50 females/experiment).
+(f) The activity of mitochondrial TCA cycle enzyme citrate synthase is the same in both genotypes (P ¼ 0.64, t test; three experiments).
+(g) H2O2 secretion is reduced by 58% in hsNF1/+;K33 mitochondria versus K33 mitochondria (**, P o 0.01, t test; three experiments).
+(h) Mitochondrial aconitase activity is higher in hsNF1/+;K33 versus K33 flies throughout life (*, P o 0.05; **, P o 0.01, t test; three experiments, 50 males and 50 females per experiment).
+(i) The difference in mitochondrial aconitase activity of 15-d-old K33 and hsNF1/+;K33 flies was reactivated to a similar level with dithiothreitol and iron (**, P o 0.01, t test; six experiments, 50 flies of mixed gender per experiment; 300 flies for each genotype).
+i  NATURE GENETICS VOLUME 39  [  NUMBER 4  [  APRIL 2007  Aconitase activity (nmol NADPH/min/mg mitochondria)  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  Dibutyryl-cAMP  100 80 60 40 20 0  481  ARTICLES Table 1 Overexpression of NF1 using the GAL4/UAS system increases mitochondrial respiration and complex I activity, reduces ROS production and stabilizes mitochondrial aconitase activity UAS-dNF1/+  UAS-dNF1/+  Arm-GAL4/ UAS-dNF1  Arm-GAL4/ UAS-dNF1  Arm-GAL4/+  on 2nd chr.
+on 3rd chr.
+on 2nd chr.
+on 3rd chr.
+150.6 42.1  157.1 39.5  152.3 43.3  210.6a 39.4  212.3a 40.1  2.9  2.8  2.9  2.9  2.7  105.3  110.9  101.4  103.9  106.4  44.3  43.1  39.5  40.3  41.8  74.4  75.2  78.5  110.1b  107.6b  459.1  463.8  467.0  470.9  468.2  3.2  3.5  3.1  1.4b  1.3b  33.1  39.7  42.5  70.8a  67.6a  Complex I substrates State III State IV  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  (ng atom O/min/mg) P/O ratio Complex II substrates State III State IV (ng atom O/min/mg) Complex I activity (nmol NADH/min/mg protein) Citrate cynthase (nmol/min/mg protein) H2O2 (nmol/min/mg protein) Aconitase (nmol NADPH/min/mg) Complex I (pyruvate + malate) and complex II (succinate) respiration rates, P/O ratio and complex I activity measurements were measured on mitochondria isolated from pooling 100 5-d-old flies (50 males and 50 females).
+The mean of five experiments are shown.
+Citrate synthase activities are averages of three independent experiments.
+H2O2 production rates are averages of three independent mitochondrial isolations from 10-d-old flies.
+The aconitase activities are averages of three independent mitochondria isolation from 20-d-old flies.
+Chr., chromosome.
+aP o 0.05; bP o 0.01 (t test).
+respiration), but not in the absence of ADP (state IV respiration) (Fig.
+6a and Table 1).
+Consequently, the respiratory control ratio (RCR) (state III O2 consumption rate/state IV O2 consumption rate) was significantly higher for mitochondria from NF1-overexpressing flies (hsNF1/+;K33) than for K33 mitochondria (4.8 versus 3.4, n ¼ 6, P ¼ 0.02, t test) (Fig.
+6a) and for Arm-GAL4/UAS-dNF1 mitochondria versus control Arm-GAL4/+ or UAS-dNF1 mitochondria (5.3 versus 3.6, n ¼ 5, P ¼ 0.008, t test) (Table 1).
+As the OXPHOS coupling efficiency (P/O ratio) was not changed (Fig.
+6b), we can calculate that the NF1-overexpressing (hsNF1/ +;K33) mitochondria have a 54% higher ATP production rate, when metabolizing NADH-linked substrates, than K33 control mitochondria (Fig.
+2a), which parallels an increase in complex I activity (Fig.
+6c).
+By contrast, the respiration rates we recorded when using the FADH2-linked complex II substrate succinate were essentially the same for neurofibromin-overexpressing mitochondria (hsNF1/+; K33) versus control K33 mitochondria (Fig.
+6d) and for Arm-GAL4/ UAS-dNF1 versus Arm-GAL4/+ or UAS-dNF1 mitochondria (Table 1), with or without ADP.
+Thus, the succinate-based RCR for hsNF1/+;K33 versus K33 mitochondria (1.9 versus 2.3 (n ¼ 4, P ¼ 0.26, t test)) and for Arm-GAL4/UAS-dNF1 versus Arm-GAL4/+ or UAS-dNF1 mitochondria (2.6 versus 2.5 (P ¼ 0.49, t test)) were not significantly different, and the P/O ratios were also unchanged (Fig.
+6e and Table 1).
+The NADH-linked and FADH2-linked respiration pathways share the downstream respiratory complexes III, IV and V, differing only in the initial enzyme complex (complex I for the NADH-linked sub-  482  strates and complex II for succinate).
+Thus, the differences in respiration rate observed between NF1-overexpressing and control mitochondria are most likely to reside with complex I.
+This proved to be the case, as complex I activity was 28% higher in NF1-overexpressing hsNF1/+;K33 versus K33 mitochondria (Fig.
+6c) and 38% higher in Arm-GAL4/UAS-dNF1 versus Arm-GAL4/+ or UAS-dNF1 mitochondria (Table 1).
+Mitochondrial citrate synthase specific activity did not differ between NF1-overexpressing and control mitochondria (Fig.
+6f and Table 1).
+Thus, the increased cAMP levels associated with increased neurofibromin resulted in increased mitochondrial complex I activity.
+Increased neurofibromin levels could also be expected to result in reduced mitochondrial ROS production.
+As expected, mitochondrial H2O2 production was reduced 58%–59% for both hsNF1/+;K33 versus K33 flies (Fig.
+6g) and Arm-GAL4/UAS-dNF1 versus ArmGAL4/+ or UAS-dNF1 flies (Table 1).
+This reduced mitochondrial ROS was also associated with increased mitochondrial aconitase activity throughout life, as demonstrated in hsNF1/+;K33 flies at 5, 20, and 40 d of adult age (Fig.
+6h) and also for Arm-GAL4/UAS-dNF1 fly mitochondria (Table 1).
+These differences in mitochondrial aconitase-specific activity were due to ROS modulation of the enzyme-specific activity, as both NF1-overexpressing and control fly mitochondrial aconitase activities were reactivated up to the same level by treatment with dithiothreitol plus iron (Fig.
+6i).
+Therefore, the increased longevity associated with NF1 overexpression is mediated by increased cAMP, resulting in increased NADH-linked respiration and complex I activity and decreased mitochondrial ROS production and oxidative stress.
+VOLUME 39  [  NUMBER 4  [  APRIL 2007 NATURE GENETICS  ARTICLES PDE (dunce) mutations rescue here AC (rutabaga) mutations attack here  AMP  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  NF1 expression acts here  MnTBAP and MnTDEIP act here  PDE  NF1 mutations attack here  NF1  PKA expression acts here  cAMP  PKA  ATP  Aconitase  Mitochondrial respiration  ROS  AC  Ras  Performance and resistance Aging  Tumorigenesis  Figure 7 The mechanism of neurofibromin-regulated life span.
+Neurofibromin regulates adenylyl cyclase (AC), which converts ATP to cAMP, activating PKA.
+PKA then increases mitochondrial respiration, possibly by phosphorylating complex I subunits, leading to an increase in ATP synthesis and a reduction in mitochondrial ROS production.
+By increasing ATP production and inhibiting ROS production, neurofibromin promotes longevity.
+The genetic and pharmacological manipulations discussed in the text influence the process in a positive (green arrows) or negative manner (red arrows).
+cAMP might modulate mitochondrial energy production and ROS generation (and thus life span) by regulating nuclear gene transcription as well.
+Catalytic antioxidants MnTBAP and MnTDEIP increase life spans in NF1 mutants by inhibiting a negative factor, ROS.
+Although D. melanogaster data do not support the role of Ras in neurofibromin-regulated longevity, further studies in mammalian models will be required to elucidate possible connections (dashed lines).
+PDE, phosphodiesterase.
+DISCUSSION We have discovered that in D. melanogaster, mutational loss of NF1 reduces life span and stress tolerance, inhibits mitochondrial respiration and leads to increased mitochondrial ROS production.
+Conversely, increased NF1 expression markedly extends life span, significantly improves oxidative stress resistance and reproductive fitness, activates mitochondrial complex I and reduces mitochondrial ROS production and oxidative damage.
+Moreover, treatment of D. melanogaster with exogenous cAMP markedly increases longevity, whereas treatment of NF1 mutant D. melanogaster with catalytic antioxidants ameliorates the associated reduction in life span.
+Therefore, at least in D. melanogaster, a significant component of the reduced life span and the other adverse effects of neurofibromin deficiency are mediated by cAMP regulation of mitochondrial function (Fig.
+7).
+The importance of cellular and mitochondrial oxidative stress in modulating D. melanogaster longevity has been actively investigated.
+D. melanogaster life span extension has been reported in transgenic flies that systemically overexpress MnSOD and copper/zinc super oxide dismutase (Cu/ZnSOD), the latter either alone or with catalase throughout life23,24,25.
+D. melanogaster life span has also been extended by overexpression of Cu/ZnSOD or MnSOD in motor neurons20,21.
+Moreover, flies with reduced life span due to Cu/ZnSOD and MnSOD deficiency that are treated with the catalytic antioxidant EUK-8 (manganese N,N’-bis(salicyidene) ethylenediamine chloride) or with mitochondrially targeted coenzyme Q (MitoQ) partially restored normal life span, although treatment of wild-type flies with EUK-8 or MitoQ shortened their life spans26.
+Our data show that treatment of short-lived NF1 mutant flies with MnTBAP restores normal life span, and MnTBAP has been shown to reduce mitochondrial ROS production and oxidative damage27,28.
+Moreover, NF1 overexpression extends life span in association with reduced mitochondrial ROS generation.
+Taken together, these results support a central role for mitochondrial ROS in determining the life span of D. melanogaster  NATURE GENETICS VOLUME 39  [  NUMBER 4  [  APRIL 2007  but also indicate that to achieve the optimal benefits of antioxidant treatment, it is necessary to define not only the specific ROS to be removed (superoxide anion, hydrogen peroxide, hydroxyl radical), but also the time during development, the cell type and the subcellular compartment to be targeted for ROS reduction.
+In multiple animal systems, life span extension has been achieved by the inactivation of the insulin-like receptor signal transduction pathway.
+When activated by insulin-like ligands, this pathway activates the Akt kinase that phosphorylates and inactivates the forkhead transcription factors (FOXOs).
+Active forkhead transcription factors upregulate MnSOD and the peroxisome proliferator–activated receptor g coactivator (PGC-1a) gene.
+The promoter of the mammalian PGC-1a gene encompasses three insulin response elements (IREs) that bind dephosphorylated and deacetylated FOXO transcription factors and one cAMP response element (CRE) that binds to phosphorylated CREB13,29.
+The PGC-1a protein, in turn, interacts with multiple transcription factors to upregulate mitochondrial biogenesis.
+Although inactivation of the insulin-like growth factor receptor pathway should upregulate mitochondrial biogenesis and reduce mitochondrial ROS production13, this is unlikely to explain the modulation of life spans in our current studies, as MnSOD expression and FOXO phosphorylation did not change in NF1 mutant and NF1-overexpressing flies.
+However, we found clear evidence for linkage between cAMP levels and the regulation of life span, mitochondrial respiration and mitochondrial ROS production.
+According to existing literature, there are two possible mechanisms by which cAMP levels could regulate mitochondrial oxidative phosphorylation: (i) transcriptional regulation of nuclear DNA–encoded mitochondrial genes and/or (ii) direct cAMP-activated PKA modification of complex I polypeptides.
+In mammalian systems, cAMP upregulates the expression of nuclear DNA–encoded mitochondrial genes through the activation of the PGC-1a gene, presumably through PKA phosphorylation of CREB and the binding of phosphorylated CREB to the CRE element in the PGC-1a gene promoter.
+This pathway might be a factor in our observations, as a PGC-1a homolog has recently been identified in D. melanogaster that induces upregulation of mitochondrial biogenesis through FOXO transcription factors30, and in silico analysis of the upstream sequences of the D. melanogaster PGC-1a gene (CG9809) showed putative cAMP response elements.
+However, functional analysis will be required to determine if such a pathway is important to the NF1 overexpression phenotype.
+Alternatively, cAMP could regulate mitochondrial respiration and ROS production by the direct activation of mitochondrial PKA and the phosphorylation of mitochondrial proteins.
+Mitochondrially localized cAMP-activated PKA has been reported to mediate phosphorylation of the complex I subunits31 ESSS and MWFE32 and/or 42 kDa and B14.5A33.
+This has been associated with increased complex I Vmax, increased NADH+-linked but not FADH2-linked respiration and suppression of mitochondrial ROS production without major alterations in the mitochondrial or cellular antioxidant defense systems31,34–36.
+These observations parallel our findings in NF1 mutant and NF1-overexpressing D. melanogaster, suggesting that neurofibromin could regulate mitochondrial respiration and ROS production through direct cAMP and PKA-mediated phosphorylation of mitochondrial proteins.
+However, the relative importance of nuclear oxidative phosphorylation gene regulation and mitochondrial protein modulation by neurofibromin regulation of cAMP levels still needs to be clarified.
+Regardless of the molecular mechanism, the neurofibromin modulation of mitochondrial respiration and ROS production via cAMP signaling directly implicate the mitochondria in the pathophysiology  483  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES of NF1.
+Consistent with this possibility, neurofibromas from individuals with NF1 have been found to acquire somatic mutations in the mtDNA control region37.
+Both germline and somatic mtDNA mutations have been observed in prostate cancers38, and somatic mtDNA mutations have been observed in a wide range of human tumors39.
+Moreover, mtDNA mutations have been linked to prostate cancer and associated with increased mitochondrial ROS production38, and ROS has been shown to act as a potent mitogen40.
+Therefore, the increased mitochondrial ROS production resulting from NF1 mutations could be an important factor in the generation of neurofibromas.
+If so, then the suppression of mitochondrial ROS production through the treatment with catalytic antioxidants such as MnTBAP and MnTDEIP may provide a powerful new approach to treat NF1, as well as other cancers.
+METHODS Fly stocks.
+All fly stocks were raised at 25 1C and 40%–50% humidity.
+K33 is the parental line upon which the NF1 mutant and transgenic lines were generated and thus was used as the control.
+Strains were compared on the w1118 (isoCJ1) isogenic background after backcrossing for five generations, yielding a 97% genetic similarity in the flies.
+Heterozygous hsNF1/+;NF1P2, hsPKA/+;NF1P2, hsRaf*M7/+;K33, hsRasV12/+;K33 and hsNF1/+;K33 flies were studied to avoid any recessive effects resulting from the insertion site of the transgenes.
+The hsPKA;K33 flies harbor a mouse PKA transgene, with His87Gln and Trp196Arg substitutions that prevent interaction with the PKA regulatory subunit6,7.
+GAL4 and UAS-D. melanogaster NF1 lines were also backcrossed to w1118 background for five generations.
+Longevity assay.
+Life spans were determined at 25 1C and 50% humidity with a 12-h light/dark cycle.
+Male and female flies were collected under brief CO2 anesthesia 2 to 3 d after eclosion, allowing time for mating.
+The number of deceased flies was recorded every 2 to 3 d, when flies were transferred to fresh cornmeal agar medium.
+Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.
+We analyzed survival data by Kaplan-Meier analysis in Statview 5.0.
+The log-rank (Mantel-Cox) test results are presented.
+Censored data were recorded and analyzed with GraphPad software.
+Reproductivity.
+Fecundity was defined as cumulative number of eggs laid per fertilized female.
+Fertility was defined as the cumulative number of adult progeny per fertilized female.
+Each experiment consisted of five females and five males, mated in vials containing standard food and transferred daily at 25 1C.
+The number of eggs laid in each vial were counted as a measure of fecundity, and the vials were kept until eclosion of all the adult progeny to determine fertility.
+The t test was employed for data analysis.
+Stress resistance.
+Stress assays were performed on 2- to 3-d-old flies collected overnight, with 40 flies per vial kept on regular food medium.
+Paraquat toxicity was tested by starving flies in empty vials for 6 h at 25 1C and then placing them in the vial with a filter paper saturated with 20 mM paraquat and 5% sucrose in distilled water.
+The effect of desiccation was determined by placing the flies in empty vials at 25 1C.
+In both cases, dead flies were counted every 2 h. Physical activity.
+Locomotive assays were performed on 3- to 4-d-old flies.
+Flies were placed in 90 mm  20 mm vertical tubes containing a small quantity of cornmeal food at the bottom with a line drawn horizontally 10 mm from the base.
+Every 5 min, the vials were tapped until the flies were at the bottom of the vials.
+Then, flies were given 15 s to climb (up-climbing behavior) toward the top of the vial, and the numbers of flies above the 10 mm line were recorded.
+The locomotive index is the percentage of flies that climbed up after 15 s. After 30 min of baseline recording at 22 1C, flies were subjected to a brief 20-min heat treatment at 37 1C and were then returned to 22 1C for recovery.
+The locomotive index was then plotted against time over the course of the experiment to determine the recovery time (t).
+cAMP feeding.
+cAMP-supplemented food was prepared using dibutyryl-cAMP and 8-bromo-cAMP (Sigma) dissolved in distilled water to prepare a stock solution.
+The stock solutions were subsequently diluted into food to make the  484  specific concentrations of 1 mM and 10 mM.
+Red food dye (six drops per 500 ml food) was added to the supplemented food to insure homogeneity.
+We did not observe any significant differences in the weekly measurements of body weight and length in flies fed cAMP analogs compared with control flies, confirming that the cAMP-fed flies did not live longer simply because of drug-induced dietary restriction.
+cAMP concentration measurement.
+cAMP concentrations were determined using a competitive immunoassay (Assay Designs’ Correlate-EIA cAMP kit).
+Mitochondrial respiration.
+Mitochondria were isolated by gently crushing 40 to 80 flies in a 10-ml Kontes homogenizer with seven strokes of the pestle in 3 ml homogenization buffer consisting of 225 mM mannitol, 75 mM sucrose, 10 mM MOPS, 1 mM EGTA and 0.5% BSA (pH 7.2) at 4 1C (ref.
+38).
+The extracts were filtered through eight layers of cheesecloth and then centrifuged at 300g for 3 min in a Beckman Avanti J25.
+The supernatant was centrifuged at 6,000g for 10 min to obtain a mitochondrial pellet.
+Mitochondrial protein was determined by the Bradford method using Bio-Rad reagents and correcting for the BSA content in the homogenization buffer.
+Respiration rates were determined by oxygen consumption using a Clark-type electrode and metabolic chamber containing 650 ml of reaction buffer consisting of 225 mM mannitol, 75 mM sucrose, 10 mM KCl, 10 mM Tris-HCl and 5 mM KH2PO4 (pH 7.2) at 25 1C.
+Mitochondrial ATP production rates were calculated from ADP consumption rates during state III respiration.
+Experiments used 5-d-old flies except unless otherwise indicated in the text.
+Complex I activity.
+The specific activity of complex I (NADH-ubiquinone oxidoreductase) was determined as the rotenone (4 mM)-sensitive NADH oxidation at 340 nm, using the coenzyme Q analog 2, 3-dimethyl-5-methyl 6-n-decyl-1,4-benzomethyluinone (DB) as an electron acceptor41.
+Citrate synthase.
+Citrate synthase was analyzed by the reduction of 5,5¢dithiobis-2-nitrobenzoic acid at 412 nm in the presence of acetyl-CoA and oxaloacetate41.
+ROS production.
+H2O2 leakage from intact mitochondria respiring on pyruvate and malate was quantified by the horseradish peroxidase–dependent oxidation of p-hydroxyphenol acetic acid.
+We monitored 320 nm excitation and 400 nm emission via a Perkin Elmer L20B luminescence spectrometer.
+Hydrogen peroxide levels were interpolated from standard curves.
+The rate of superoxide anion production was assayed in isolated mitochondria using MitoSOX (Invitrogen) fluorescence at 510 nm excitation/580 nm emission.
+Aconitase activity and reactivation.
+Mitochondrial aconitase activity was measured on mitochondria sonicated four times for 15 s in a Branson 450 sonicator in 50 mM Tris, 30 mM sodium citrate, 0.5 mM MnCl2 and 0.2 mM NADP (pH 7.3).
+The conversion of citrate into a-ketoglutarate was monitored at 340 nm at 25 1C using the coupled reduction of NADP to NADPH by 2 units/ml of isocitrate dehydrogenase in 50 mM Tris, 1 mM cysteine, 1 mM sodium citrate and 0.5 mM MnCl2 (pH 7.4).
+Aconitase was reactivated by incubation with 2 mM dithiothreitol and 0.2 mM ferrous ammonium sulfate for 5 min before repeating the enzymatic activity assay42.
+Superoxide dismutase and catalase activities.
+Superoxide dismutase activity was measured spectrophotometrically at 560 nm by recording the reduction of nitro blue tetrazolium.
+One unit of SOD activity was defined as the amount that inhibited nitro blue tetrazolium reduction half-maximally in a 1 ml reaction volume.
+MnSOD activity was measured by recording the cyanideinhabitable reduction of nitro blue tetrazolium43.
+Catalase activity was measured by spectrophotometrically monitoring the change in ultraviolet absorbance at 240 nm after adding whole cell extract or mitochondria alone44.
+Antioxidant feeding.
+MnTBAP (Oxis) and MnTDEIP (Aeolus Pharmaceuticals) were dissolved in PBS (Mediatech) before further dilution with cornmeal food to make desired concentration.
+Red food dye (six drops per 500 ml food) was added to the food to ensure homogeneity.
+Based on the body weight and length of the antioxidant-fed versus control flies monitored weekly, we did not see any evidence that suggested differential food intake by the experimental flies.
+VOLUME 39  [  NUMBER 4  [  APRIL 2007 NATURE GENETICS  © 2007 Nature Publishing Group http://www.nature.com/naturegenetics  ARTICLES Neurofibromin detection and quantification.
+Neurobromin levels were determined by protein blot analysis.
+Ten flies (five males and five females) of each category were homogenized in fly homogenization buffer containing 60 mM Tris-HCl (pH 6.8), 10% glycerol, 3% SDS, 2-mercaptoethanol, protease inhibitor cocktail (Roche) and phenylmethylsulfonyl fluoride.
+Protein concentrations were determined by the Bradford method.
+We separated 40 mg protein per lane by 10% SDS-PAGE (Invitrogen) and then transferred it overnight (15 h) at 200 mA to a nitrocellulose membrane.
+Nitrocellulose membranes were incubated overnight at 4 1C with antisera to neurofibromin (Bethyl, 1:1,000 dilution).
+Blots were washed four times with washing buffer (10 min each) and then incubated with horseradish peroxidase–labeled goat antibody against rabbit IgG (Amersham) for 1.5 h at room temperature.
+Blots were washed four times with washing buffer (5 min each wash), incubated using the ECL protein blotting analysis system (Amersham) for 1 min and exposed to X-ray film for 2 min.
+FOXO expression.
+The level of unphosphorylated (and thus active) FOXO transcription factor was evaluated by reacting the above protein blots with a FOXO1 antibody specific for the unphosphorylated form purchased from Cell Signaling.
+The antibody was diluted 1:1,000.
+Note: Supplementary information is available on the Nature Genetics website.
+ACKNOWLEDGMENTS We thank S. Summers, J. Nguyen, M. Holmbeck and A. Skejsol for their technical assistance.
+We also thank V. Caiozzo, V. Procaccio, L. Mueller, V. Subramaniam, K. Waymire, M. Kernan, E. Ruiz-Pesini, A. Flierl, G. McGregor, P. Coskun, S. Gaffey and M. T. Lott for their comments and help.
+We thank J. Williams (New Jersey Medical and Dental School) for the UAS-dNF1 transgenic lines.
+This work was supported by the Ellison New Opportunity Award, by a US National Institutes of Health (NIH) multidisciplinary exercise fellowship (AR-47752) and Grass Foundation fellowship awards for 2004 and 2006 to J.J.T.
+and by an Ellison Foundation Senior Investigator Award and NIH grants AG13154, AG24373, AG01751, DK73691, NS21328 and NS41850 awarded to D.C.W.
+AUTHOR CONTRIBUTIONS J.J.T.
+produced Figures 1–7 and Supplementary Figures 1, 2, 3b, 4, 5, 6, and 7a, prepared the manuscript and contributed to the revisions and correspondence during the review process.
+S.E.S.
+produced Supplementary Figures 3a and 7b and contributed to the manuscript revision.
+D.M.
+contributed to Figures 4a–c and 5 and Supplementary Figure 4c.
+B.J.D.
+provided MnTDEIP.
+D.C.W.
+supervised, managed and funded the research and revised and finalized the manuscript.
+COMPETING INTERESTS STATEMENT The authors declare competing financial interests: details accompany the full-text HTML version of the paper at www.nature.com/naturegenetics.
+Published online at http://www.nature.com/naturegenetics Reprints and permissions information is available online at http://npg.nature.com/ reprintsandpermissions 1.
+Korf, B.R.
+Malignancy in neurofibromatosis type 1.
+Oncologist 5, 477–485 (2000).
+2.
+Friedman, J.M.
+Epidemiology of neurofibromatosis type 1.
+Am.
+J. Med.
+Genet.
+89, 1–6 (1999).
+3.
+Arun, D. & Gutmann, D.H.
+Recent advances in neurofibromatosis type 1.
+Curr.
+Opin.
+Neurol.
+17, 101–105 (2004).
+4.
+Williams, J.A., Su, H.S., Bernards, A., Field, J.
+& Sehgal, A.
+A circadian output in Drosophila mediated by neurofibromatosis-1 and Ras/MAPK.
+Science 293, 2251–2256 (2001).
+5.
+Harrisingh, M.C.
+& Lloyd, A.C. Ras/Raf/ERK signalling and NF1.
+Cell Cycle 3, 1255–1258 (2004).
+6.
+Guo, H.F., Tong, J., Hannan, F., Luo, L. & Zhong, Y.
+A neurofibromatosis-1-regulated pathway is required for learning in Drosophila.
+Nature 403, 895–898 (2000).
+7.
+Tong, J., Hannan, F., Zhu, Y., Bernards, A.
+& Zhong, Y. Neurofibromin regulates G protein-stimulated adenylyl cyclase activity.
+Nat.
+Neurosci.
+5, 95–96 (2002).
+8.
+The, I. et al.
+Rescue of a Drosophila NF1 mutant phenotype by protein kinase A.
+Science 276, 791–794 (1997).
+9.
+Yohay, K.H.
+The genetic and molecular pathogenesis of NF1 and NF2.
+Semin.
+Pediatr.
+Neurol.
+13, 21–26 (2006).
+10.
+Guo, H.F., The, I., Hannan, F., Bernards, A.
+& Zhong, Y.
+Requirement of Drosophila NF1 for activation of adenylyl cyclase by PACAP38-like neuropeptides.
+Science 276, 795–798 (1997).
+11.
+Zhong, Y., Budnik, V. & Wu, C.F.
+Synaptic plasticity in Drosophila memory and hyperexcitable mutants: role of cAMP cascade.
+J. Neurosci.
+12, 644–651 (1992).
+NATURE GENETICS VOLUME 39  [  NUMBER 4  [  APRIL 2007  12.
+Bus, J.S.
+& Gibson, J.E.
+Paraquat: model for oxidant-initiated toxicity.
+Environ.
+Health Perspect.
+55, 37–46 (1984).
+13.
+Wallace, D.C. A mitochondrial paradigm of metabolic and degenerative diseases, aging, and cancer: a dawn for evolutionary medicine.
+Annu.
+Rev.
+Genet.
+39, 359–407 (2005).
+14.
+Das, N., Levine, R.L., Orr, W.C. & Sohal, R.S.
+Selectivity of protein oxidative damage during aging in Drosophila melanogaster.
+Biochem.
+J.
+360, 209–216 (2001).
+15.
+Yan, L.J., Levine, R.L.
+& Sohal, R.S.
+Oxidative damage during aging targets mitochondrial aconitase.
+Proc.
+Natl.
+Acad.
+Sci.
+USA [published erratum appears in Proc.
+Natl.
+Acad.
+Sci.
+USA 1998 Feb 17;95(4):1968] 94, 11168–11172 (1997).
+16.
+Day, B.J., Shawen, S., Liochev, S.I.
+& Crapo, J.D.
+A metalloporphyrin superoxide dismutase mimetic protects against paraquat-induced endothelial cell injury, in vitro.
+J. Pharmacol.
+Exp.
+Ther.
+275, 1227–1232 (1995).
+17.
+Kachadourian, R., Johnson, C.A., Min, E., Spasojevic, I.
+& Day, B.J.
+Flavin-dependent antioxidant properties of a new series of meso-N,N’-dialkyl-imidazolium substituted manganese(III) porphyrins.
+Biochem.
+Pharmacol.
+67, 77–85 (2004).
+18.
+Patel, M. & Day, B.J.
+Metalloporphyrin class of therapeutic catalytic antioxidants.
+Trends Pharmacol.
+Sci.
+20, 359–364 (1999).
+19.
+Day, B.J.
+Catalytic antioxidants: a radical approach to new therapeutics.
+Drug Discov.
+Today 9, 557–566 (2004).
+20.
+Parkes, T.L.
+et al.
+Extension of Drosophila life span by overexpression of human SOD1 in motorneurons.
+Nat.
+Genet.
+19, 171–174 (1998).
+21.
+Phillips, J.P., Parkes, T.L.
+& Hilliker, A.J.
+Targeted neuronal gene expression and longevity in Drosophila.
+Exp.
+Gerontol.
+35, 1157–1164 (2000).
+22.
+Williams, G.C.
+Pleiotropy, natural selection, and the evoluton of senescence.
+Evolution Int.
+J. Org.
+Evolution 11, 398–411 (1957).
+23.
+Orr, W.C. & Sohal, R.S.
+Extension of life-span by overexpression of superoxide dismutase and catalase in Drosophila melanogaster.
+Science 263, 1128–1130 (1994).
+24.
+Sun, J., Folk, D., Bradley, T.J. & Tower, J.
+Induced overexpression of mitochondrial Mnsuperoxide dismutase extends the life span of adult Drosophila melanogaster.
+Genetics 161, 661–672 (2002).
+25.
+Sun, J., Molitor, J.
+& Tower, J.
+Effects of simultaneous over-expression of Cu/ZnSOD and MnSOD on Drosophila melanogaster life span.
+Mech.
+Ageing Dev.
+125, 341–349 (2004).
+26.
+Magwere, T. et al.
+The effects of exogenous antioxidants on life span and oxidative stress resistance in Drosophila melanogaster.
+Mech.
+Ageing Dev.
+127, 356–370 (2006).
+27.
+Li, Q.Y., Pedersen, C., Day, B.J.
+& Patel, M. Dependence of excitotoxic neurodegeneration on mitochondrial aconitase inactivation.
+J. Neurochem.
+78, 746–755 (2001).
+28.
+Velsor, L.W.
+et al.
+Mitochondrial oxidative stress in human hepatoma cells exposed to stavudine.
+Toxicol.
+Appl.
+Pharmacol.
+199, 10–19 (2004).
+29.
+Daitoku, H., Yamagata, K., Matsuzaki, H., Hatta, M. & Fukamizu, A.
+Regulation of PGC-1 promoter activity by protein kinase B and the forkhead transcription factor FKHR.
+Diabetes 52, 642–649 (2003).
+30.
+Gershman, B. et al.
+High resolution dynamics of the transcriptional response to nutrition in Drosophila: a key role for dFOXO.
+Physiol.
+Genomics, published online 7 November 2006 (doi:10.1152/physiolgenomics.00061.2006).
+31.
+Technikova-Dobrova, Z. et al.
+Cyclic adenosine monophosphate-dependent phosphorylation of mammalian mitochondrial proteins: enzyme and substrate characterization and functional role.
+Biochemistry 40, 13941–13947 (2001).
+32.
+Chen, R., Fearnley, I.M., Peak-Chew, S.Y.
+& Walker, J.E.
+The phosphorylation of subunits of complex I from bovine heart mitochondria.
+J. Biol.
+Chem.
+279, 26036–26045 (2004).
+33.
+Pocsfalvi, G. et al.
+Phosphorylation of B14.5a subunit from bovine heart complex I identified by titanium dioxide selective enrichment and shotgun proteomics.
+Mol.
+Cell Proteomics 6, 231–237 (2006).
+34.
+Bellomo, F. et al.
+Regulation by the cAMP cascade of oxygen free radical balance in mammalian cells.
+Antioxid.
+Redox Signal.
+8, 495–502 (2006).
+35.
+Papa, S. et al.
+Complex I and the cAMP cascade in human physiopathology.
+Biosci.
+Rep. 22, 3–16 (2002).
+36.
+Piccoli, C. et al.
+cAMP controls oxygen metabolism in mammalian cells.
+FEBS Lett.
+580, 4539–4543 (2006).
+37.
+Kurtz, A. et al.
+Somatic mitochondrial DNA mutations in neurofibromatosis type 1associated tumors.
+Mol.
+Cancer Res.
+2, 433–441 (2004).
+38.
+Petros, J.A.
+et al.
+mtDNA mutations increase tumorigenicity in prostate cancer.
+Proc.
+Natl.
+Acad.
+Sci.
+USA 102, 719–724 (2005).
+39.
+Brandon, M., Baldi, P. & Wallace, D.C. Mitochondrial mutations in cancer.
+Oncogene 25, 4647–4662 (2006).
+40.
+Burdon, R.H. Superoxide and hydrogen peroxide in relation to mammalian cell proliferation.
+Free Radic.
+Biol.
+Med.
+18, 775–794 (1995).
+41.
+Barrientos, A.
+In vivo and in organello assessment of OXPHOS activities.
+Methods 26, 307–316 (2002).
+42.
+Williams, M.D.
+et al.
+Increased oxidative damage is correlated to altered mitochondrial function in heterozygous manganese superoxide dismutase knockout mice.
+J. Biol.
+Chem.
+273, 28510–28515 (1998).
+43.
+Beauchamp, C. & Fridovich, I. Superoxide dismutase: improved assays and an assay applicable to acrylamide gels.
+Anal.
+Biochem.
+44, 276–287 (1971).
+44.
+Beers, R. & Sizer, I.
+A spectrophotometric method for measuring the breakdown of hydrogen peroxide by catalase.
+J. Biol.
+Chem.
+195, 133–140 (1952).
+485

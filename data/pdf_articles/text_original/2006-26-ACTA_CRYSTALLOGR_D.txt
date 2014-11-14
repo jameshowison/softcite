@@ -1,0 +1,878 @@
+research papers
+Acta Crystallographica Section D
+
+Biological
+Crystallography
+
+Structural elucidation of the PDI-related chaperone
+Wind with the help of mutants
+
+ISSN 0907-4449
+
+Madhumati Sevvana,a Marianna
+Biadene,a Qingjun Ma,a‡
+Chaoshe Guo,b§ Hans-Dieter
+So
+¨ling,b} George M. Sheldricka*
+and David M. Ferraric
+a
+
+Lehrstuhl fu¨r Strukturchemie,
+Georg-August Universita¨t, Tammanstrasse 4,
+D-37077 Go¨ttingen, Germany, bDepartment of
+Neurobiology, Max Planck Institute for
+Biophysical Chemistry, Am Fassberg 11,
+Germany, and cMax Planck Research Unit for
+the Enzymology of Protein Folding,
+Weinbergweg 22, D-06120 Halle (saale),
+Germany
+
+‡ Present address: EMBL Hamburg, c/o DESY,
+Notkestrasse 85, D-22603 Hamburg, Germany.
+§ Present address: MCB, Harvard University,
+Cambridge, MA 02134, USA.
+} Deceased 6th March 2006.
+
+Correspondence e-mail:
+gsheldr@shelx.uni-ac.gwdg.de
+
+# 2006 International Union of Crystallography
+Printed in Denmark – all rights reserved
+
+Acta Cryst. (2006). D62, 589–594
+
+The structures of the PDI-related protein Wind (with a
+C-terminal His6 tag) and the mutants Y53S, Y53F and Y55K
+have been determined and compared with the wild-type
+structure with the His6 tag at the N-terminus. All five
+structures show the same mode of dimerization, showing that
+this was not an artefact introduced by the nearby N-terminal
+His6 tag and suggesting that this dimer may also be the
+biologically active form. Although the mutants Y53S and
+Y55K completely abrogate transport of the protein Pipe
+(which appears to be the primary function of Wind in the cell),
+only subtle differences can be seen in the putative Pipebinding region. The Pipe binding in the active forms appears
+to involve hydrophobic interactions between aromatic
+systems, whereas the inactive mutants may be able to bind
+more strongly with the help of hydrogen bonds, which could
+disturb the delicate equilibrium required for effective Pipe
+transport.
+
+Received 12 December 2005
+Accepted 22 March 2006
+
+PDB References: Wind-His,
+2c0e, r2c0esf; Y53F mutant,
+2c0f, r2cofsf; Y53S mutant,
+2c0g, r2cogsf; Y55K mutant,
+2c1y, r2c1ysf.
+
+1. Introduction
+Wind, a product of the Windbeutel gene, is required for dorsoventral patterning in the developing embryo of Drosophila
+melanogaster along with two other gene products, Nudel
+(nudel) and Pipe (pipe), that constitute three of the 11 genes
+localized in the somatic follicle cells (Konsolaki & Schu¨pbach,
+1997). Wind is an endoplasmic reticulum resident protein and
+belongs to the protein disulfide isomerase (PDI) related
+protein subfamily (PDI-D). PDIs are known for their varying
+redox and chaperone activities (Ferrari & So¨ling, 1999). The
+PDI-D group of proteins is characterized by the presence of
+one or two N-terminal domains of about 100–120 residues in
+length called the thioredoxin domain (b-domain) followed by
+an all--helical C-terminal domain about 110 residues in
+length termed the D-domain (Ferrari & So¨ling, 1999). Pipe is a
+Golgi-resident type-II transmembrane protein related to the
+vertebrate glycosaminoglycan-modifying enzyme heparan
+sulfate 2-O-sulfotransferase. It has been shown recently that
+Wind is required for correct targeting of Pipe to Golgi (Sen et
+al., 2000), but the mechanism by which this process takes place
+is not yet understood.
+The crystal structure of wild-type Wind has been described
+by Ma et al. (2003); the asymmetric unit consists of a dimer,
+with the dimerization-contact surface along the N-terminal
+b-domain. Based on this structure, a series of mutational
+studies have been carried out to map substrate-binding sites
+on the surface of Wind and a putative peptide-binding site in
+the Wind b-domain has been characterized with the help of in
+vitro binding assays (Barnewitz et al., 2004). Within the Wind
+dimer, a surface tyrosine cluster formed by Tyr53, Tyr55 and
+doi:10.1107/S0907444906010456
+
+589
+
+research papers
+Table 1
+Tyr86 is important for substrate binding.
+Crystallization and cryoprotectant conditions of Wind-His and its mutants.
+Mutations at these sites (Y53S, Y55K,
+Wind-His
+Y53S
+Y53F
+Y55K
+Y55S, Y86Q and Y86L) completely
+abrogate Pipe transport in in vivo
+0.1 M Tris–HCl
+0.1 M MES
+0.1 M MES
+Reservoir
+0.1 M MES
+assays. Both Y53S and Y55S are funcpH 8.2–8.8,
+pH 5.8–6.6,
+pH 5.8–6.6,
+pH 5.8–6.6,
+25 mM MgCl2,
+50 mM LiCl,
+50 mM NaCl,
+50 mM NaCl,
+tionally inactive, whereas Y86S retains
+16–20% PEG 400
+16–20% PEG 400,
+16–20% PEG 400
+10% PEG 4000,
+processing activity. These mutations
+5% glycerol
+5% glycerol
+enhance substrate binding, but reduce
+Protein† (mg ml1) 15
+10
+18
+5
+Reservoir +
+Reservoir +
+Reservoir +
+Cryoprotectant
+Reservoir +
+Pipe-processing efficiency. The Y55F
+20% glycerol
+25% PEG 400,
+25% PEG 400,
+25% PEG 400,
+mutant did not show any negative effect
+10% glycerol
+10% glycerol
+10% glycerol
+on Pipe processing, which further
+† Protein in all cases was dissolved in 5 mM HEPES pH 7.5, 25 mM NaCl, 0.0025%(v/v) -mercaptoethanol.
+suggests that the aromatic/hydrophobic
+behaviour of the inner Tyr53/Tyr55 pair
+mutants were obtained using the hanging-drop vapour-diffuplays a major role in Wind–Pipe interaction. In order to assess
+sion method (McPherson, 1992) at 293 K. The crystallization
+whether structural differences are responsible for these
+and cryoprotectant conditions are summarized in Table 1 and
+observations, we have determined the crystal structures of the
+the crystals are shown in Fig. 1. Large crystals of Wind-His,
+Wind Y53S, Y53F and Y55K mutants and performed some
+Y53S and Y53F grew within about 4 d, whereas crystals of
+hydrophobic molecular interaction field (MIF) calculations to
+Y55K appeared in about a week.
+look at the surface hydrophobic behaviour in these mutants.
+Independent mutational studies of the residues at the
+dimerization interface in ERp29 (a mammalian ortholog of
+2.2. Data collection and processing
+Wind) and a preliminary low-resolution crystal structure of
+The crystals of each of the mutants were soaked in a
+human ERp28 also provide a clue that the dimerization
+suitable cryoprotectant (Table 1) and mounted in a loop in a
+interfaces in Wind and ERp29 are similar (Lippert et al., 2006).
+cold nitrogen-gas stream. The data sets were collected in two
+The different dimerization interface proposed on the basis of
+passes: a high-resolution and a low-resolution pass. The datathe NMR structure of the rat ERp29 monomer (Liepinsh et al.,
+collection statistics are summarized in Table 2. All data sets
+2001) may prove to have been rather speculative, as the
+were processed with HKL (Otwinowski & Minor, 1997) and
+authors themselves acknowledged.
+the space group and data statistics were determined using
+Our original crystal structure of wild-type Wind (PDB code
+XPREP (Bruker AXS, Madison, WI, USA).
+1ovn) had been determined with a His6 tag at the N-terminus
+(His-Wind). To rule out the possibility that the His6 tag at the
+2.3. Structure solution, refinement and validation
+N-terminus, which is close to the dimerization region, was
+responsible for artefacts in the dimerization mode, we also
+The Wind-His, Y53S and Y53F structures were solved by
+report here the crystal structure of wild-type Wind with the
+molecular replacement using EPMR (Kissinger et al., 1999)
+His6 tag at the C-terminus (Wind-His).
+with search models taken from the His-Wind structure (PDB
+code 1ovn). Monomers consisting of one b-domain and one
+D-domain were used, except for the solution of Y55K, for
+which individual b-domains and D-domains were employed.
+2. Materials and methods
+Solutions were found with correlation coefficients of 49.6, 52.5
+2.1. Expression, purification and crystallization
+and 51.5% for Wind-His, Y53S and Y53F, respectively. The
+Y55K mutant proved to be more problematic and so
+Wild-type Wind-His protein (with the His6 tag at the CPHASER (McCoy et al., 2005) was employed. First the two
+terminus) and the His-Wind mutants Y53S, Y53F and Y55K
+b-domains were located, followed by a search for the
+(with His6 tags at the N-termini) were expressed and purified
+D-domains. It was only possible to locate the second Das described in Ma et al. (2003). Crystals of Wind-His and the
+
+Figure 1
+Crystals of (a) Wind-His (0.3  0.3  0.2 mm), (b) Y53S (0.4  0.1  0.05 mm), (c) Y53F (0.1  0.1  0.05 mm) and (d) Y55K (0.2  0.1  0.05 mm).
+
+590
+
+Sevvana et al.
+
+
+
+Wind
+
+Acta Cryst. (2006). D62, 589–594
+
+research papers
+Table 2
+Data-collection and refinement statistics.
+Values in parentheses are for the outer resolution shell.
+
+Data-collection statistics
+˚)
+Wavelength (A
+X-ray source
+Detector
+Space group
+Unit-cell parameters
+˚)
+a (A
+˚)
+b (A
+˚)
+c (A
+ ( )
+Mosaicity ( )
+˚)
+Resolution (A
+Reflections (unique)
+Redundancy
+Completeness (%)
+Mean I/(I)
+Rint† (%)
+Refinement statistics
+Final R factor (%)
+Working set
+Working + test set‡
+Final free R factor (%)
+R.m.s. deviations
+˚)
+Bond lengths (A
+Bond angles ( )
+˚ 2)
+Mean B value (A
+Monomer 1
+Main-chain atoms
+Side-chain atoms
+Monomer 2
+Main-chain atoms
+Side-chain atoms
+Solvent
+No. of protein atoms
+No. of solvent atoms
+PDB code
+† Rint =
+
+P
+
+Wind-His
+
+Y53S
+
+Y53F
+
+Y55K
+
+0.8976
+BESSY BL2
+MAR IP 345
+C2
+
+0.8976
+BESSY BL2
+MAR IP 345
+C2
+
+0.8976
+BESSY BL2
+MAR IP 345
+C2
+
+1.0
+DESY X13
+MAR CCD
+P21
+
+107.78
+50.36
+98.67
+112.19
+1.8
+2.35 (2.45–2.35)
+19292
+4.11 (3.00)
+98.28 (99.2)
+20.05 (9.46)
+4.05 (10.87)
+
+108.47
+50.55
+98.9
+112.06
+1.2
+1.75 (1.85–1.75)
+47523
+3.86 (2.96)
+99.1 (95.9)
+19.32 (3.96)
+4.36 (26.2)
+
+109.44
+51.71
+100.65
+112.70
+1.5
+2.28 (2.37–2.28)
+22333
+3.43 (3.0)
+98.3 (89.9)
+15.19 (4.55)
+4.99 (24.32)
+
+35.42
+119.09
+64.03
+112.20
+1.9
+2.25 (2.34–2.25)
+22938
+4.67 (2.62)
+97.8 (91.2)
+16.83 (3.51)
+6.5 (26.6)
+
+22.60
+22.95
+28.34
+
+21.92
+22.15
+26.75
+
+21.92
+22.24
+28.06
+
+22.27
+22.63
+29.25
+
+0.025
+2.057
+
+0.021
+1.784
+
+0.031
+2.377
+
+0.033
+2.745
+
+15.707
+15.313
+
+25.125
+28.175
+
+30.770
+29.646
+
+49.889
+49.065
+
+25.458
+22.696
+15.338
+3287
+108
+2c0e
+
+41.263
+37.593
+30.284
+3306
+167
+2c0g
+
+41.375
+38.636
+32.510
+3255
+98
+2c0f
+
+47.438
+46.207
+40.634
+2699
+55
+2c1y
+
+P
+jFo2  Fc2 ðmeanÞj= jFo2 j. ‡ 5% of reflections are selected in thin shells as the test data set.
+
+Table 3
+Dimer-interface interactions in all mutants.
+The conserved interactions are shown in bold.
+Mutant
+
+Residue 1
+
+Residue2
+
+˚)
+Distance (A
+
+Charge interaction
+
+Hydrogen bonding
+
+His-Wind
+
+Gly26 N
+Asp75 OD1
+Val28 CG1
+Arg41 NH2
+Gly26 N
+Asp75 OD1
+Val28 CG1
+Lys37 NZ
+Lys37 NZ
+Gly26 N
+Asp75 OD1
+Val28 CG1
+Arg41 NH2
+Lys37 NZ
+Lys37 NZ
+Thr73 O
+Gly26 N
+Asp75 OD1
+Arg41 NH2
+Gly26 N
+Asp75 OD1
+Val28 CG1
+
+Asp31 OD2
+Arg41 NH2
+Val28 CG1
+Lys74 O
+Asp31 OD2
+Arg41 NH2
+Val28 CG1
+Thr73 O
+His70 O
+Asp31 OD2
+Arg41 NH2
+Val28 CG1
+Lys74 O
+Thr73 O
+His70 O
+Lys37 NZ
+Asp31 OD2
+Arg41 NH2
+Lys74 O
+Asp31 OD2
+Arg41 NH2
+Val28 CG1
+
+2.47
+2.68
+3.30
+2.80
+2.59
+2.79
+3.64
+2.71
+3.09
+2.66
+2.51
+3.28
+2.85
+2.86
+3.01
+2.44
+2.74
+2.38
+2.99
+2.89
+2.81
+3.76
+
+N( )  O()
+O()  N(+) salt bridge
+C( )  C( )
+N(+)  O( )
+N( )  O()
+O()  N(+) salt bridge
+C( )  C( )
+N(+)  O( )
+N(+)  O( )
+N( )  O()
+O[]  N(+) salt bridge
+C( )  C( )
+N(+)  O( )
+N(+)  O( )
+N(+)  O( )
+O( )  N(+)
+N( )  O()
+O()  N(+) salt bridge
+N(+)  O( )
+N( )  O()
+O()  N(+) salt bridge
+C( )  C( )
+
+Hydrogen bond
+Hydrogen bond
+
+Wind-His
+
+Y53S
+
+Y53F
+
+Y55K
+
+Acta Cryst. (2006). D62, 589–594
+
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+
+domain with a much lower log-likelihood gain and a very low Z score.
+Though there was a solution for both
+the D-domains, the second D-domain
+had to be discarded because the B
+values were very high and there was no
+traceable electron density in this region
+during refinement. Prime-and-switch
+phasing in RESOLVE (Terwilliger,
+2004) was used to minimize model bias.
+The model was checked and rebuilt
+manually from the bias-minimized
+electron-density map from RESOLVE.
+All structures were refined against F
+using TLS refinement in REFMAC
+(Murshudov et al., 1997), alternating
+with model building in real space using
+2mFo  DFc and mFo  DFc maps in
+COOT (Emsley & Cowtan, 2004). The
+refinement statistics are summarized in
+Table 2. The structures were validated
+with PROCHECK (Laskowski et al.,
+1993). All residues lie within the
+allowed regions of the Ramachandran
+plot. Figures were drawn with
+CHIMERA (Pettersen et al., 2004),
+MOLSCRIPT (Kraulis, 1991) and
+RASTER3D (Merritt & Bacon, 1997).
+2.4. Hydrophobic molecularinteraction field
+
+The hydrophobic molecular-interaction fields at the surfaces of the different
+mutants were analysed using a DRY
+probe in the program package GRID
+(Goodford, 1985). The hydrophobic
+probe finds favourable locations that
+interact with other molecule(s) on the
+surface of a protein in an aqueous
+environment (Liljefors, 1998). All
+GRID calculations were performed for
+the whole volume of the protein using a
+˚.
+grid spacing of 1.0 A
+
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+
+3. Results and discussion
+
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+Hydrogen bond
+
+The overall fold of all three mutants
+is quite similar to the wild-type structure. The mutants crystallize as homodimers in the asymmetric unit, each
+monomer consisting of two domains, the
+N-terminal b-domain (118 residues) and
+the C-terminal D-domain (107 residues), connected by a flexible linker of
+
+3.1. Structure of Wind-His and its
+mutants
+
+Sevvana et al.
+
+
+
+Wind
+
+591
+
+research papers
+visible in the density. The second
+D-domain was completely absent in
+Y55K.
+3.2. Superposition of His-Wind and its
+mutants on Wind-His
+
+Least-squares superposition of the
+main-chain atoms of dimers of all the
+mutants (Y53S, Y53F, Y55K) and wildtype His-Wind on Wind-His gave an
+r.m.s.d. (root-mean-square deviation) of
+˚ for His0.247, 0.272, 0.365 and 0.434 A
+Wind, Y53S, Y53F and Y55K, respectively. The program ESCET (Schneider,
+2002) was used to determine conformationally invariant regions between
+different pairs of mutants. The CSI
+(conformational similarity index) relative to His-Wind, calculated using
+ESCET, is in the range of 90% for all
+the structures except for the Y55K
+mutant, which has a CSI of around 70%.
+In all the structures, the D-domains
+Figure 2
+show the least significant variations,
+Superposition of dimers of (a) Wind-His (blue) with Y53S (green), Y53F (yellow), Y55K (plum)
+which may in part be a consequence of
+and His-Wind (red). (b) Superposition of Wind-His dimer (blue) with Y55K dimer (plum). The Ntheir higher B values. There are some
+terminal b-domain and C-terminal D-domains are labelled.
+minor differences in the loop regions of
+the b-domains as illustrated in Fig. 2. All
+the structures show significant variations in the conformations
+of some side chains. Compared with the other structures, the
+D-domain of Y55K exhibits an appreciably different orientation relative to the b-domain, with a rotation of about 45
+around Gly145. With such an orientation of the D-domain
+with respect to the b-domain, residue Cys149 in the linker
+region is closer to Tyr143, with a C—C distance between
+˚ , compared with about 6.9 A
+˚ in the wildthem of about 4.4 A
+type and other mutant structures. Cys149 is also closer to
+˚ ) and Asn154 (3.94 A
+˚ ), thus stabilizing the
+Tyr194 (3.65 A
+movement of the D-domain. The relevance, if any, of these
+observations with respect to a recent suggestion of a key
+structural role of Cys125 in rat ERp29 (homologous to Cys149
+in Wind) in providing stability to the D-domain (Hermann et
+al., 2005) remains to be established.
+Figure 3
+
+Superposition of the five structures viewed approximately down the noncrystallographic twofold axis of the dimer, with the key residues in the
+structurally strongly conserved Wind-His dimer interface highlighted.
+
+11 residues. The b-domain adopts an /-fold with the order of
+secondary-structure elements 1-1-2-2-3-3-4-5-4.
+The strands of the -sheet form a central core surrounded by
+the four -helices. This fold, characteristic of protein-disulfide
+isomerases, is called the thioredoxin fold. The D-domain has a
+five-helix fold with all the helices in antiparallel arrangement.
+Both the N-terminal His6 tag in the case of Y53S, Y53F and
+Y55K and the C-terminal His6 tag of Wind-His were not
+
+592
+
+Sevvana et al.
+
+
+
+Wind
+
+3.3. The dimer interface
+
+The Wind dimer is formed by a head-to-tail arrangement of
+b-domains with the participation of residues constituting the
+1 strand and residues within and after the 1 and 2 helices,
+mediated through a variety of hydrophobic and hydrogenbonding interactions shown in Table 3. The partially conserved
+residues Gly26, Val28, Gln31 and Arg41 contribute to the
+dimer interface (Fig. 3). In wild-type Wind-His and all the
+mutants, the hydrogen-bonding distances in the region of the
+dimer interface agree within experimental error with those in
+His-Wind. The similarities in dimerization modes of Wind-His
+and His-Wind also indicate that the N-terminal His6 tag in HisActa Cryst. (2006). D62, 589–594
+
+research papers
+unknown. The diffraction data did not
+show any other indication of radiation
+damage.
+3.5. Substrate-binding site and
+hydrophobic molecular-interaction
+surface
+
+The substrate-binding site of the
+b-domain containing the Tyr53, Tyr55
+and Tyr86 residues was examined for
+possible structural differences amongst
+the mutants Y53S, Y53F and Y55K. This
+Figure 4
+region is close to the pseudo-twofold
+(a) Intact disulfide bond in Wind-His (His-Wind, Y53S and Y55K are similar) and (b) the open
+axis of the dimer, so it is possible that
+disulfide bridge in Y53F, which is accompanied by an approximately 180 rotation about (Thr25).
+the sites in the two monomers combine
+to make a single Pipe-binding site. The
+mutants Y53S and Y53F are conformationally very similar, but
+in Y55K the lysine side chain points upwards 90 away from
+the plane of the tyrosine ring (Fig. 5). It is possible that this
+results in a tighter association of the substrate (Pipe) with the
+Wind dimer, leading to a stronger complex, accounting for the
+observation in in vivo assays with the Wind-Y55K mutant and
+Pipe that Pipe translocation from Golgi was abrogated.
+To analyse the hypothesis that the Wind–Pipe interaction is
+predominantly hydrophobic, involving aromatic interactions,
+the relative hydrophobic potentials on the surface shown in
+Fig. 6 were estimated using a DRY (hydrophobic) probe in the
+program GRID (Goodford, 1985). The net charge on each of
+the dimers as calculated using GRIN (Goodford, 1985) are
+7.38, 9.05, 11.23 and 13.21 for Wind-His, Y53F, Y53S
+and Y55K, respectively: the two inactive mutants are appreFigure 5
+ciably more polar. In both wild-type Wind-His and the Y53F
+Superposition of the residues at the putative substrate binding site in
+mutant, the substrate-binding site has a much larger hydroWind-His, His-Wind and the Y53F, Y53S and Y55K mutants. The
+phobic interaction area at the ‘tyrosine triad’ than in the
+orientations of the residues Tyr53 and Lys55 in the Y55K mutant are
+slightly different to those in the other four structures. The binding site
+inactive mutants Y53S and Y55K.
+stretches over both monomers and in the wild type presents a non-polar
+surface composed of aromatic residues at the opposite end of the noncrystallographic twofold axis of the dimer to that shown in Fig. 3.
+
+Wind does not interfere with dimerization. The 1 angle of
+Val28 is not conserved in the mutant structure Y53F; this
+could be because of the changes in oxidation state of the Cys
+pair, which might further affect the dimerization surface and
+possibly the monomer/dimer ratio. In solution, Wind is present
+partly as a monomer but mainly as a dimer.
+
+3.4. Opening of the CTGC loop in Y53F
+
+In the crystal structure of Y53F, the CTGC loop in both
+monomers has lost its disulfide bond, as shown in Fig. 4. As a
+result of a change of approximately 180 in (Thr25), Cys27 is
+˚ from the carboxyl O atom of Glu32. The distance
+about 4.2 A
+˚ , which rules out the
+between Tyr53 and Cys27 is about 11.8 A
+possibility of the mutation affecting this opening of the
+cysteine loop. Whether such an opening has any physiological
+relevance or is a consequence of radiation damage is
+Acta Cryst. (2006). D62, 589–594
+
+3.6. Crystal-packing interactions in Y55K and Wind-His
+
+Y55K crystallized at a different pH and in a different space
+group to all the other mutants and attempts to crystallize
+Y55K at the pH of the wild-type crystallization conditions
+failed, although there is no difference in dimerization mode
+and in the secondary structure of the b-domains. In Y55K,
+Tyr53 of one of the b-domains forms a hydrogen bond with
+Arg218 and the second Tyr53 forms a hydrogen bond with
+Tyr44 of a symmetry-equivalent molecule. One of the Lys55
+residues forms a hydrogen bond with Ser137 of a symmetryequivalent molecule and the second Lys55 is involved in a
+hydrophobic interaction with a symmetry-equivalent Phe42.
+In wild-type Wind-His, except for one tyrosine (Tyr55) that
+forms a hydrogen bond with symmetry-equivalent Arg237, all
+other tyrosines are involved in hydrophobic interactions.
+These interactions may give an indication of the differences in
+the substrate binding of Y55K, which has been shown to bind
+much more strongly than wild-type Wind-His to Pipe or to
+peptides derived from fragments of the Pipe sequence
+(Barnewitz et al., 2004).
+Sevvana et al.
+
+
+
+Wind
+
+593
+
+research papers
+dimer interface, does not interfere with dimerization. The
+consistent form of dimerization for His-Wind and the four
+structures reported here lend support to the view that it also
+dominates in vivo, contrary to inferences based on the NMR
+monomer structure of a related protein, ERp29, from rat.
+We are grateful to the Fonds der Chemischen Industrie, the
+Deutsche Forschungsgemeinschaft (SFB416) and to the
+European Community (Access to Research Infrastructure
+Action of Improving Human Potential Programme to the
+EMBL Hamburg Outstation, contract No. HPRI-1999-CT000017) for support and to EMBL/DESY, Hamburg and
+BESSY, Berlin for generous allocations of beam time.
+
+References
+
+Figure 6
+Hydrophobic molecular-interaction field of (a) the Wind-His dimer and
+(b) the Y53S dimer, contoured at 0.71 kJ mol1, highlighting the
+putative substrate-binding surface (encircled). For Y53F the surface is
+similar to (a) and for Y55K it is similar to (b).
+
+4. Conclusions
+Although the mutants Y53S and Y55K completely abrogate
+Pipe transport, the structural differences in the binding
+regions between these two mutants and the functional Y53F
+mutant and wild-type Wind protein in the Pipe-binding region
+are subtle, despite a large difference in the orientation of the
+b-domain and D-domain to one another in the Y55K mutant.
+The interactions with symmetry-equivalent molecules suggest
+that Y53S and Y55K may bind more strongly to Pipe,
+disturbing the delicate equilibrium based on predominantly
+hydrophobic interactions necessary for Pipe transport. The
+very similar structures observed for His-Wind and Wind-His
+indicate that the N-terminal His6 tag, although close to the
+
+594
+
+Sevvana et al.
+
+
+
+Wind
+
+Barnewitz, K., Guo, C., Sevvana, M., Ma, Q., Sheldrick, G. M., So¨ling,
+H.-D. & Ferrari, D. M. (2004). J. Biol. Chem. 279, 39829–39837.
+Emsley, P. & Cowtan, K. (2004). Acta Cryst. D60, 2126–2132.
+Ferrari, D. M. & So¨ling, H.-D. (1999). Biochem. J. 339, 1–10.
+Goodford, P. J. (1985). J. Med. Chem. 28, 849–857.
+Hermann, V. M., Cutfield, J. F. & Hubbard, M. J. (2005). J. Biol.
+Chem. 280, 13529–13537.
+Kissinger, C. R., Gehlhaar, D. K. & Fogel, D. B. (1999). Acta Cryst.
+D55, 484–491.
+Konsolaki, M. & Schu¨pbach, T. (1997). Gene Dev. 12, 120–131.
+Kraulis, P. J. (1991). J. Appl. Cryst. 24, 946–950.
+Laskowski, R. A., MacArthur, M. W., Moss, D. S. & Thornton, J. M.
+(1993). J. Appl. Cryst. 26, 283–291.
+Liepinsh, E., Baryshev, M., Sharipo, A., Ingelman-Sundberg, M.,
+Otting, G. & Mkrtchian, S. (2001). Structure, 9, 457–471.
+Liljefors, T. (1998). Perspect. Drug Discov. Des. 9, 3–17.
+Lippert, U., Sevvana, M., So¨ling, H. D., Sheldrick, G. M. & Ferrari,
+D. M. (2006). In preparation.
+Ma, Q., Guo, C., Barnewitz, K., Sheldrick, G. M., So¨ling, H.-D., Uson,
+I. & Ferrari, D. M. (2003). J. Biol. Chem. 278, 44600–44607.
+McCoy, A. J., Grosse-Kunstleve, R. W., Storoni, L. C. & Read, R. J.
+(2005). Acta Cryst. D61, 458–464.
+McPherson, A. (1992). J. Cryst. Growth, 122, 161–167.
+Merritt, E. A. & Bacon, D. J. (1997). Methods Enzymol. 277, 505–524.
+Murshudov, G. N., Vagin, A. A. & Dodson, E. J. (1997). Acta Cryst.
+D53, 240–255.
+Otwinowski, Z. & Minor, W. (1997). Methods Enzymol. 276, 307–326.
+Pettersen, E. F., Goddard, T. D., Huang, C. C., Couch, G. S.,
+Greenblatt, D. M., Meng, E. C. & Ferrin, T. E. (2004). J. Comput.
+Chem. 25, 1605–1612.
+Schneider, T. R. (2002). Acta Cryst. D58, 195–208.
+Sen, J., Goltz, J. S., Konsolaki, M., Schu¨pbach, T. & Stein, D. (2000).
+Development, 127, 5541–5550.
+Terwilliger, T. C. (2004). Acta Cryst. D60, 2144–2149.
+
+Acta Cryst. (2006). D62, 589–594

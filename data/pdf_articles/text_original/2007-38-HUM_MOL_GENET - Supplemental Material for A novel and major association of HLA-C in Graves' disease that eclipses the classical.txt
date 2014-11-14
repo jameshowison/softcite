@@ -1,0 +1,621 @@
+Supplementary information
+Geography
+At each locus we examined the geographical variation in allele frequency by
+multinomial logistic regression, to check if we were justified in pooling all three case
+groups. We detected a significant variation in allele frequency between the case
+cohorts at HLA-C, P = 0.0008, supplementary Tables 1 and 2. We also tested whether
+the Midlands were different to the pooled South and Southwest case groups, again
+HLA-C was different, P = 0.002, Supplementary Table 1. The difference in allele
+frequency in our collection is attributable to HLA-C*03, which is less frequent in the
+southern regions than in the Midlands.
+Supplementary Table 1: Tests of geographical variation in allele frequency at the
+five MHC loci typed.
+Gene
+
+P value for all 3 regions
+
+P value for 2 regions
+
+0.0008
+0.39
+0.74
+0.91
+0.47
+
+0.002
+0.29
+0.56
+0.73
+0.31
+
+HLA-C
+HLA-B
+HLA-DRB1
+HLA-DQA1
+HLA-DQB1
+
+Supplementary Table 2: HLA-C allele frequencies by region; n = number of
+chromosomes.
+HLA-C allele
+
+*01
+*02
+*03
+*04
+*05
+*06
+*07
+*08
+*12
+*14
+*15
+*16
+*17
+Total number
+of
+chromosomes
+
+Frequency in
+Midlands,
+n (%)
+35 (2.6)
+52 (3.9)
+103 (7.7)
+123 (9.1)
+125 (9.3)
+98 (7.3)
+685 (50.9)
+34 (2.5)
+28 (2.1)
+4 (0.3)
+21 (1.6)
+26 (1.9)
+12 (0.9)
+
+Frequency in
+Southwest,
+n (%)
+3 (2.6)
+4 (3.4)
+1 (0.9)
+11 (9.5)
+10 (8.6)
+8 (6.9)
+73 (62.9)
+3 (2.6)
+2 (1.7)
+
+1346
+
+116
+
+1(0.9)
+
+Frequency in
+the South,
+n (%)
+10 (5.8)
+7 (4.1)
+4 (2.3)
+24 (14.0)
+20 (11.6)
+13 (7.6)
+70 (41.0)
+2 (1.2)
+11 (6.4)
+2 (1.2)
+6 (3.5)
+3 (1.7)
+
+South +
+Southwest,
+n (%)
+13 (4.5)
+11 (3.8)
+5 (1.7)
+35 (12.2)
+30 (10.4)
+21 (7.3)
+143 (49.7)
+5 (1.7)
+13 (4.5)
+2 (0.7)
+7 (2.4)
+3 (1.0)
+
+172
+
+288
+
+1
+
+Consequently, we analysed HLA-C in the Midlands as we did not have geographically
+matched controls from the South and South Western regions. For the other loci there
+was no evidence to suggest that allele frequency varied between centres of collection
+therefore we report here the results in the full dataset of 1,571 individuals.
+
+Association with Graves’ disease of the MHC loci in the full 1,571 subjects
+Supplementary Table 3: Association of HLA-C, HLA-B, HLA-DRB1, HLADQA1 and HLA-DQB1 in the full 1,571 Graves’ disease case control cohort. Pvalues are for multiplicative effects of alleles.
+Gene
+
+HLA-C
+HLA-B
+HLA-DRB1
+HLA-DQA1
+HLA-DQB1
+
+Number of Graves
+cases typed
+
+Number of
+controls typed
+
+P
+
+817
+822
+946
+946
+946
+
+492
+493
+621
+621
+621
+
+1.40 x 10-24
+1.07 x 10-7
+5.85 x 10-11
+4.27 x 10-13
+4.82 x 10-6
+
+Supplementary Table 4: Two locus association results, adding the alleles of the
+test locus, to the alleles and genotypes of HLA-C.
+Test locus
+Addition of test locus to
+Addition of test locus to
+*
+HLA-C alleles ,
+HLA-C genotypes**,
+P
+P
+-7
+3.83 x 10-6
+2.64 x 10
+HLA-B
+0.0013
+1.07 x 10-4
+HLA-DRB1
+0.0013
+7.71 x 10-5
+HLA-DQA1
+-5
+1.61 x 10-4
+9.86 x 10
+HLA-DQB1
+*
+
+Assumes a multiplicative model at HLA-C.
+Does not assume a specific mode of inheritance at HLA-C.
+
+**
+
+2
+
+Supplementary Table 5: Alleles of HLA-C; ORs with 95% confidence intervals are reported in all cases using the most common HLAC*07 allele as reference and also the neutral allele, HLA-C*05. Both unconditional ORs and ORs conditioned on HLA-B alleles are
+reported.
+HLA-C allele
+
+C*17
+C*07
+C*02
+C*01
+C*04
+C*05
+C*06
+C*15
+C*12
+C*08
+C*03
+C*16
+C*14
+
+Frequency in
+cases
+n (%)
+12 (0.7)
+828 (50.7)
+63 (3.9)
+48 (2.9)
+158 (9.7)
+155 (9.5)
+119 (7.3)
+28 (1.7)
+41 (2.5)
+39 (2.4)
+108 (6.6)
+29 (1.8)
+6 (0.4)
+
+Frequency in
+controls
+n (%)
+2 (0.20)
+328 (33.3)
+32 (3.3)
+26 (2.6)
+81 (8.2)
+101 (10.3)
+84 (8.5)
+20 (2.0)
+39 (4.0)
+40 (4.1)
+156 (15.9)
+59 (6.0)
+16 (1.6)
+
+Unconditional
+OR [95% CI]
+OR [95% CI]
+1.91 [0.46-7.97]
+1.00 [reference]
+0.89 [0.57-1.39]
+0.79 [0.48-1.28]
+0.79 [0.60-1.04]
+0.62 [0.47-0.82]
+0.56 [0.42-0.75]
+0.56 [0.32-0.97]
+0.44 [0.43-1.17]
+0.42 [0.27-0.65]
+0.29 [0.22-0.38]
+0.21 [0.13-0.33]
+0.15 [0.06-0.40]
+
+3.08 [0.72-13.07]
+1.61 [1.22-2.11]
+1.43 [0.86-2.36]
+1.26 [0.75-2.14]
+1.27 [0.89-1.80]
+1.00 [reference]
+0.91 [0.63-1.29]
+0.90 [0.50-1.62]
+0.71 [0.43-1.17]
+0.67 [0.41-1.09]
+0.47 [0.33-0.66]
+0.33 [0.20-0.55]
+0.24 [0.09-0.66]
+
+Conditioned on HLA-B
+OR [95% CI]
+OR [95% CI]
+1.19 [0.25-5.65]
+1.00 [reference]
+0.59 [0.32-1.10]
+0.55 [0.29-1.06]
+0.51 [0.32-0.82]
+0.67 [0.43-1.03]
+0.60 [0.34-1.07]
+0.36 [0.17-0.75]
+0.26 [0.14-0.49]
+0.15 [0.06-0.37]
+0.13 [0.08-0.21]
+0.21 [0.12-0.37]
+0.09 [0.03-0.29]
+
+1.79 [0.37-8.58]
+1.50 [0.97-2.32]
+0.89 [0.47-1.69]
+0.83 [0.42-1.62]
+0.76 [0.47-1.23]
+1.00 [reference]
+0.90 [0.50-1.64]
+0.53 [0.25-1.15]
+0.39 [0.20-0.75]
+0.22 [0.09-0.57]
+0.19 [0.12-0.33]
+0.31 [0.19-0.52]
+0.14 [0.04-0.44]
+
+3
+
+Supplementary Table 6: Alleles of HLA-B; ORs with 95% confidence intervals are reported, for all cases and controls, using the most
+common HLA-B*08 and the neutral HLA-B*07 allele as reference. Both unconditional ORs and ORs conditioned on HLA-C alleles are
+reported.
+HLA-B allele
+
+B*39
+B*08
+B*35
+B*38
+B*55
+B*07
+B*50
+B*37
+B*15
+B*27
+B*14
+B*18
+B*40
+B*57
+B*51
+B*44
+B*58
+B*49
+B*13
+rares
+
+Frequency in all
+cases
+n (%)
+46 (2.8)
+404 (24.6)
+136 (8.3)
+17 (1.0)
+34 (2.1)
+221 (13.4)
+12 (0.7)
+21 (1.3)
+103 (6.3)
+46 (2.8)
+56 (3.4)
+48 (2.9)
+116 (7.1)
+50 (3.0)
+56 (3.4)
+196 (11.9)
+7 (0.4)
+11 (0.7)
+11 (0.7)
+53 (3.2)
+
+Frequency in
+controls
+n (%)
+13 (1.3)
+154 (15.6)
+68 (6.9)
+8 (0.8)
+18 (1.8)
+122 (12.4)
+7 (0.7)
+13 (1.3)
+67 (6.8)
+30 (3.0)
+40 (4.1)
+31 (3.1)
+78 (7.9)
+41 (4.2)
+48 (4.9)
+176 (17.9)
+8 (0.8)
+15 (1.5)
+20 (2.0)
+29 (2.9)
+
+Unconditional
+OR [95% CI]
+OR [95% CI]
+1.79 [0.94-3.41]
+1.49 [1.11-1.99]
+1.11 [0.77-1.60]
+1.07 [0.46-2.50]
+1.02 [0.56-1.85]
+1.00 [reference]
+0.93 [0.38-2.24]
+0.91 [0.43-1.92]
+0.88 [0.61-1.28]
+0.85 [0.52-1.40]
+0.81 [0.51-1.28]
+0.81 [0.49-1.35]
+0.80 [0.55-1.15]
+0.69 [0.44-1.09]
+0.62 [0.40-0.97]
+0.62 [0.46-0.83]
+0.51 [0.18-1.50]
+0.46 [0.20-1.05]
+0.31 [0.14-0.66]
+0.97 [0.59-1.58]
+
+1.20 [0.64-2.26]
+1.00 [reference]
+0.75 [0.53-1.05]
+0.72 [0.31-1.67]
+0.68 [0.38-1.23]
+0.67 [0.50-0.90]
+0.62 [0.26-1.51]
+0.61 [0.30-1.27]
+0.59 [0.41-0.84]
+0.57 [0.35-0.93]
+0.55 [0.35-0.85]
+0.55 [0.33-0.90]
+0.53 [0.38-0.76]
+0.46 [0.30-0.72]
+0.42 [0.27-0.64]
+0.41 [0.31-0.55]
+0.34 [0.12-0.98]
+0.31 [0.14-0.70]
+0.20 [0.10-0.44]
+0.65 [0.40-1.06]
+
+Conditioned on HLA-C
+OR [95% CI]
+OR [95% CI]
+2.28 [1.37-6.03]
+1.51 [1.11-2.04]
+2.20 [1.25-3.89]
+3.34 [1.12-9.92]
+4.53 [2.12-9.69]
+1.00 [reference]
+1.53 [0.54-4.35]
+1.55 [0.58-4.09]
+2.89 [1.70-4.92]
+1.60 [0.78-3.29]
+4.63 [1.78-12.04]
+1.31 [0.71-2.39]
+3.31 [1.89-5.80]
+1.16 [0.58-2.33]
+2.16 [1.07-4.35]
+1.13 [0.71-1.79]
+0.91 [0.27-3.07]
+0.44 [0.18-1.08]
+0.52 [0.20-1.34]
+1.94 [1.01-3.25]
+
+1.91 [0.92-3.94]
+1.00 [reference]
+1.46 [0.83-2.56]
+2.21 [0.75-6.56]
+3.00 [1.42-6.36]
+0.66 [0.49-0.90]
+1.02 [0.36-2.89]
+1.03 [0.39-2.68]
+1.92 [1.14-3.21]
+1.06 [0.52-2.17]
+3.07 [1.19-7.92]
+0.87 [0.48-1.57]
+2.20 [1.27-3.79]
+0.77 [0.39-1.54]
+1.43 [0.71-2.87]
+0.75 [0.47-1.18]
+0.60 [0.18-2.01]
+0.29 [0.12-0.71]
+0.34 [0.13-0.88]
+1.29 [0.67-2.48]
+
+4
+
+Supplementary Table 7: Association of HLA-DRB1, using all subjects typed. All
+non-DRB1*03 and DRB1*07 alleles are coded X.
+
+HLA-DRB1
+genotype
+03
+07
+X
+
+OR [95% CI]
+
+OR [95% CI]
+
+1.00 [reference]
+0.33 [0.25-0.44]
+0.54 [0.45-0.66]
+
+1.87 [1.53-2.29]
+0.64 [0.50-0.81]
+1.00 [reference]
+
+03/03
+03/07
+03/X
+07/07
+07/X
+X/X
+
+3.08 [1.39-6.79]
+1.00 [reference]
+1.92 [1.15-3.20]
+0.35 [0.14-0.87]
+0.66 [0.38-1.13]
+0.98 [0.59-1.61]
+
+3.17 [1.62-6.18]
+0.90 [0.52-1.55]
+2.09 [1.62-2.69]
+0.40 [0.17-0.92]
+0.74 [0.54-1.03]
+1.00 [reference]
+
+Supplementary Table 8: Association of HLA-C, using all subjects typed. All nonHLA-C*03, *07 and *16 alleles are coded X.
+HLA-C
+genotype
+03
+07
+16
+X
+
+Cases,
+n (%)
+103 (7.7)
+685 (50.9)
+26 (1.9)
+532 (39.5)
+
+Controls,
+n (%)
+156 (15.9)
+328 (33.3)
+59 (6.0)
+441 (44.8)
+
+OR [95% CI]
+
+OR [95% CI]
+
+0.30 [0.22-0.39]
+1.00 [reference]
+0.21 [0.13-0.34]
+0.63 [0.53-0.74]
+
+0.55 [0.42-0.73]
+1.64 [1.38-1.95]
+0.37 [0.23-0.60]
+1.00 [reference]
+
+16/16
+03/16
+03/03
+03/07
+03/X
+07/16
+07/07
+07/X
+X/16
+X/X
+
+2 (0.2)
+2 (0.2)
+7 (0.9)
+53 (6.5)
+39 (4.8)
+14 (1.7)
+254 (31.1)
+253 (31.0)
+9 (1.1)
+184 (22.5)
+
+3 (0.6)
+9 (1.8)
+17 (3.5)
+54 (11.0)
+59 (12.0)
+23 (4.7)
+52 (10.6)
+147 (30.0)
+21 (4.3)
+107 (21.8)
+
+0.16 [0.03-1.00]
+0.03 [0.00-0.22]
+0.10 [0.04-0.26]
+0.23 [0.14-0.37]
+0.16 [0.09-0.26]
+0.13 [0.06-0.27]
+1.00 [reference]
+0.33 [0.23-0.47]
+0.10 [0.05-0.24]
+0.33 [0.22-0.49]
+
+0.39 [0.06-2.36]
+0.13 [0.03-0.61]
+0.24 [0.10-0.60]
+0.57 [0.36-0.89]
+0.38 [0.24-0.61]
+0.35 [0.17-0.72]
+2.84 [1.94-4.16]
+1.00 [0.73-1.37]
+0.25 [0.11-0.56]
+1.00 [reference]
+
+5

@@ -1,0 +1,93 @@
+1  Supplementary information - Methods Protein purification and crystallization The rat NR2A S1S2 ligand-binding core contains residues P401-R539 (S1) and Q661N802 (S2) connected by a Gly-Thr linker.
+NR2A S1S2 was expressed and purified as for rat NR1 S1S21 except that 0.5% CHAPS and 250 mM NaCl were included in the NiNTA purification step and trypsin was used to cleave the polyhistidine tag.
+NR2A S1S2 and NR1/NR2A S1S2 crystals were grown by vapour diffusion at 4oC.
+The NR2A S1S2 crystals were grown by mixing equal volumes of protein (5 mg ml-1) prepared in a buffer containing 10 mM HEPES (pH 7.0), 50 mM NaCl, and 1 mM sodium glutamate, and reservoir solution containing 8-17% PEG8000, 100 mM HEPES (pH 7.0), and 200 mM calcium acetate.
+The NR1/NR2A S1S2 crystals were made by mixing individually purified NR1 S1S2 and NR2A S1S2 in a 1:1 stoichiometric ratio (6 mg ml-1 total) and by combining the protein mix with reservoir solution containing 10-16% PEG8000, 100 mM HEPES (pH 7.0), and 100 mM calcium acetate in a 2:1 ratio.
+The crystals were cryoprotected by soaking in the reservoir solution supplemented with 18% glycerol.
+The bromide derivative was prepared by soaking the crystal in the cryobuffer with NaBr added to a final concentration of 0.5 M.  Crosslinking The mutants, NR1 N521C L777C and NR2A E516C L780C, were expressed in Xenopus oocytes using the same methods that were employed in the two-electrode voltage clamp experiments except that 5 ng of RNA was injected per oocyte.
+After two days, the membrane fraction from ten oocytes was solubilized in a buffer containing 20 mM Tris-HCl (pH 8.0), 50 mM NaCl, 1% β-dodecyl maltoside, 1/1,000 volume of protease inhibitor cocktail (Sigma), and 1 mM N-ethylmaleimide in a 100 µl volume.
+A  2  sample amount equivalent to one oocyte was loaded per lane in SDS-PAGE and subjected to the Western blot analysis using anti-NR1 (amino acids: 660-811) and antiNR2A (amino acids: 1253-1391, Chemicon) antibodies under reducing (100 mM DTT) and non-reducing conditions.
+Light scattering analysis A Superdex 200 HR (10/30) column was coupled to the light scattering system, refractive index (Wyatt Technology), and UV (Shimadzu) detectors.
+Light scattering was measured using a linearly polarized GaAs laser at λ = 690 nm.
+The system was equilibrated with a buffer containing 20 mM sodium phosphate (pH 7.5), 150 mM NaCl, 1 mM EDTA, 1 mM glycine, and 1 mM L-glutamate.
+All of the samples were concentrated to 0.8 mg ml-1 and dialyzed overnight against the same buffer as above.
+Light scattering data, collected from 57o to 126o by 9 detectors, were analyzed using the Debye equation with an assumption that a value of dn/dc (increment of refractive index/increment of protein concentration) is 0.187 ml g-1.
+Sedimentation velocity experiments Sedimentation velocity experiments were performed in a Beckman Coulter Optima XLI analytical ultracentrifuge with interference optics and sapphire windows.
+Prior to these runs, the wild-type proteins were prepared as described for the mutant proteins in the sedimentation equilibrium experiments.
+Samples were loaded into two-sector, 12-mm charcoal-filled Epon centerpieces at 3 mg ml-1 and run at 42,000 rpm in an An50Ti rotor at 4ºC until all of the material had completely pelleted.
+Interference scans were  acquired at 4-min intervals with a 0.003-cm spacing and one replicate per point.
+Data  3  were analyzed with the continuous distribution c(S) Lamm equation implemented in Sedfit2 using every other scan.
+1.
+2.
+Furukawa, H. & Gouaux, E. Mechanisms of activation, inhibition and specificity: crystal structures of the NMDA receptor NR1 ligand-binding core.
+EMBO.
+J.
+22, 2873-2885 (2003).
+Schuck, P. Size-distribution analysis of macromolecules by sedimentation velocity ultracentrifugation and lamm equation modeling.
+Biophys.
+J.
+78, 16061619 (2000).
+1  Supplementary information-Figure legends Figure S1 Mechanism of glutamate binding in NR2A.
+a, Fo-Fc ‘omit’ electron density map using data to 1.7 Å where coordinates for W1, W2, glutamate, and selected residues are omitted.
+The contour level is at 3.0 σ. b, Interaction of glutamate with the NR2A residues and the two water molecules.
+Dashed lines represent hydrogen bonds or salt bridges.
+c, Superposition of NR2A (slate) and GluR2 (pink) bound to the respective glutamate molecules.
+The water and the glutamate molecules for NR2A and GluR2 are coloured in cyan and orange, respectively.
+d, Possible mechanism for NMDA specificity in NMDA receptors.
+An NMDA molecule is modelled into the binding site using the bound glutamate structure as a guide.
+The arrow indicates how the GluR2 E705 side chain would collide with the N-methyl group (sphere) of NMDA, precluding the binding of NMDA to the GluR2 binding pocket.
+Figure S2 Sedimentation velocity analysis of the wild-type S1S2 proteins.
+a-c, NR1 S1S2 (a), NR2A S1S2 (b), and an equimolar mixture of the NR1/NR2A species (c), all at 3 mg ml-1, were centrifuged at 42,000 rpm and at 4ºC.
+For each sample, the four panels represent, from the top, experimental fringe units, residuals (in fringe units) from the continuous distribution c(S) Lamm equation model, continuous distribution [c(M)] of the sedimentation coefficient, and continuous distribution of the molecular weight.
+Scans were recorded at 4-min intervals, but in the uppermost panels, only every fourth scan is shown for clarity.
+Note the single major peaks at 1.82 S, 1.67 S, and 1.81 S in the sedimentation coefficient distribution for NR1, NR2A, and the NR1/NR2A equimolar mixture, respectively.
+These values correspond to molecular weights  2  of 35.9, 34.4, and 34.6 kDa, all of which are within 7-8% of the respective monomer sequence molecular weights.
+Figure S3 Effect of mutations at the NR1/NR2A interface on the glycine and glutamate EC50.
+a-b, Glutamate (a) and glycine (b) dose responses for the tyrosine mutants (NR1 N521Y/NR2A E516Y).
+c-d, Glutamate (c) and glycine (d) dose responses for the double cysteine mutants (NR1 N521C L777C/NR2A E516C L780C).
+The wild-type (WT) and mutant (M) NR1 and NR2A receptors, coexpressed in Xenopus oocytes, were assessed by two-electrode voltage clamp at -60 mV.
+In both the tyrosine and the cysteine mutants, significant increases in the glycine and glutamate EC50 values were only observed with the M/M combination (filled square), whereas significantly less or no effect was observed with WT/WT (circle), WT/M (triangle), or M/WT (filled diamond).
+Although speculative, we suggest that this increase in EC50 in M/M may represent an enhancement of negative cooperativity between the NR1 and NR2A subunits caused by a stabilization of the subunit interface.
+Error bars represent ± s.d.
+for normalized data points from the indicated number of experiments in Table S3.
+Figure S4 Effect of the NR1 Y535S mutation on the affinity of purified NR1 S1S2 for glycine.
+a, A representative plot for saturation binding of [3H]MDL105,519.
+The calculated Kd values are 17.7 ± 3.6 and 21.6 ± 2.5 nM for wild-type and NR1 Y535S, respectively.
+Error bars represent ± s.e.m.
+from a triplicate experiment.
+Two such experiments were carried out to determine the Kd values.
+b, Binding of [3H]MDL105,519 (30 nM) was displaced by various  3  concentrations of glycine.
+The calculated Ki values for glycine are 63.0 ± 24.4 and 157.2 ± 26.5 µM for wild-type and NR1 Y535S, respectively.
+Error bars represent ± s.e.m.
+for normalized data points from two triplicate experiments.
+Table S1 Data collection and refinement statistics Data Collection Space group Cell dimensions a (Å) b (Å) c (Å) Wavelength (Å) Resolution (Å) Rmerge† Completeness (%) Refinement Resolution (Å) No.
+reflections Rwork/ Rfree‡ No.
+atoms Protein Ligand Water B-factors Overall Main Ligand R.m.s deviations Bond lengths (Å) Bond angles (º)  NR2A  NR2A-NaBr  NR1/NR2A  P41212  P41212  P212121  52.11 52.11 198.68 0.9793 30-1.70 7.6 (19.7)* 99.3 (95.7)  51.95 51.95 197.91 0.9198 30-2.01 7.5 (15.5) 99.9 (100)  54.55 89.85 125.52 1.01 30-1.88 8.8 (74.2) 86.5 (47.4)  20-1.70 30,942 19.6/22.3  20-2.0 44,066 21.3/25.3  2,176 11 315  4,173 15 342  19.12 15.71 13.54  29.17 27.66 17.83  0.005 1.21  0.006 1.25  *Highest resolution shell is shown in parenthesis.
+†Rmerge = (∑|Ii - <Ii>|)/∑i |Ii|, where <Ii> is the mean Ii over symmetry-equivalent reflections.
+‡Ten percent of the reflections were set aside for calculation of the Rfree value  Table S2 Sedimentation equilibrium fitting statistics Samplea Modelb Monomer Mr (kDa)c Kd (µM)d NR1 S1S2-N521Y Mon ↔ Dim Fixed 33.3 22.4 (18.6, 27.0) Float 32.9 (32.0, 33.9) 20.1 (15.8, 25.8) NR2A S1S2-E516Y Mon, single species Fixed 31.8 N/A Float 31.6 (30.7, 32.4) N/A a  SRV (x10-3)e 4.91 4.91 4.25 4.23  All data were collected with the absorbance optical system at 280 nm.
+The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).
+b Data were fit to one of three possible models: single species monomer, monomer ↔ dimer equilibrium with the monomer molecular mass fixed to the correct sequence mass, or a monomer ↔ dimer equilibrium with the monomer mass allowed to float as a separate variable.
+Alternative models, such as single species dimer, monomer ↔ dimer ↔ tetramer, and monomer ↔ tetramer were also explored, but none of these possibilities fit the sedimentation data well.
+c Monomer mass from the fit, with 95% confidence intervals, or the fixed value employed in the monomer ↔ dimer equilibrium.
+d The dimer dissociation constant for NR1, with 95% confidence intervals, was calculated as described in "Methods".
+e Square-root of the variance in absorbance units.
+Table S3 Parameters from glutamate and glycine dose-response curves Mutant Combination nH nH EC50 (µM) EC50(µM) NR1/2A (Glutamate) (Glycine) (Glutamate) (Glycine) M/M Tyr 18.77 ± 1.24 1.31 ± 0.10 2.38 ± 0.26 1.29 ± 0.15 n=5 n=5 WT/M Tyr 4.05 ± 0.26 1.29 ± 0.09 1.58 ± 0.19 1.25 ± 0.10 n=5 n=4 M/WT Tyr 4.35 ± 0.25 1.30 ± 0.17 1.60 ± 0.12 1.45 ± 0.15 n=5 n=4 M/M Cys 25.23 ± 5.53 1.21 ± 0.23 24.46 ± 0.88 1.00 ± 0.05 n=5 n=6 WT/M Cys 6.27 ± 0.35 0.94 ± 0.14 3.59 ± 0.76 1.13 ± 0.18 n=4 n=4 M/WT Cys 6.93 ± 1.07 1.16 ± 0.26 1.45 ± 0.32 1.45 ± 0.32 n=4 n=5 WT/WT 4.79 ± 0.47 1.55 ± 0.23 1.35 ± 0.07 1.41 ± 0.09 n=4 n=4 Three different combinations of wild-type (WT) and mutant (M) (NR1/2A = M/M, WT/M, and M/WT) are expressed for the tyrosine mutants (Tyr) and the cysteine mutants (Cys) in Xenopus oocytes and assayed for glutamate or glycine dose-responses in the presence of 300 µM glycine or glutamate, respectively.
+The data points are fitted to the equation response = Emax(1+(EC50/[ligand])nH)-1 where Emax is the maximum response, EC50 is the half maximal response, [ligand] is the ligand concentrations, and nH is the Hill coefficient.
+Values are means ± s.d.
+from the indicated number of oocytes.
+Table S4 Kinetic parameters of the wild-type and the NR1 Y535 mutants τ weighted τ fast (ms) τ slow (ms) (ms)  % fast  WT (Glutamate)  65.9 ± 9.2  258.5 ± 59.6  80.5 ± 11.1  76.1 ± 13.8  Y535S (Glutamate)  30.6 ± 6.4*  243.7 ± 153.2  31.9 ± 6.5*  94.7 ± 4.2*  Y535A (Glutamate)  26.0 ± 6.7*  96.7 ± 50.1*  29.1 ± 6.2*  84.4 ± 15.5*  Y535L (Glutamate)  69.4 ± 13.3  368.7 ± 157.5  71.6 ± 12.8  95.7 ± 2.8*  Y535F (Glutamate)  88.9 ± 13.4*  331.4 ± 118.7  110.6 ± 23.5*  73.7 ± 13.3  Y535W (Glutamate)  134.5 ± 31.5*  470.5 ± 139.9*  166.5 ± 39.3*  74.1 ± 10.7  WT (Glycine)  81.6 ± 18.3  369.8 ± 139.4  96.8 ± 19.0  79.1 ± 11.5  Y535S (Glycine)  15.7 ± 1.9*  138.0 ± 127.6  16.8 ± 1.9*  91.7 ± 6.5*  Y535A (Glycine)  12.8 ± 2.7*  80.1 ± 53.4*  13.4 ± 2.8*  94.3 ± 4.9*  Y535L (Glycine)  57.8 ± 5.4*  488 ± 280.4  61.3 ± 5.4*  93.0 ± 6.3*  Y535F (Glycine)  134.6 ± 46.3*  464.8 ± 294.0  143.7 ± 42.0*  78.2 ± 14.7  Y535W (Glycine)  34.1 ± 5.0*  125.5 ± 61.5*  37.0 ± 6.0*  87.1 ± 7.8  The NR1 Y535 mutants or wild-type expressed with wild-type NR2A in HEK293 cells are assessed with outside-out patch clamp at -70 mV holding potential.
+The outside-out patch is exposed to 1 mM glutamate in the presence of 0.1 mM glycine for 3 ms and washed out with a buffer containing 0.1 mM glycine (Glutamate) or to 1 mM glycine in the presence of 0.1 mM glutamate for 3 ms and washed out with a buffer containing 0.1 mM glutamate (Glycine).
+Twenty to thirty traces are averaged per experiment and the current decays are fitted to the double exponential equation described in “Methods.” Values are means ± s.d.
+from ten different patches.
+As previously noted, we too observed variation in deactivation kinetics, perhaps due to variable degrees of receptor phosphorylation1.
+Labeled by asterisks are the mean values that are significantly different from the wild-type response (p < 0.05).
+1.
+Vicini, S. et al.
+Functional and pharmacological differences between recombinant N-methyl-D-aspartate receptors.
+J. Neurophysiol.
+79, 555-566 (1998).
+b  a H485  S511  S511 H485 E413  R518  R518 E413  W2  Glu  W2  Glu  D731  S689  D731  S689 W1 W1 Y730  Y730  T690  T690  d  c  H485 Y450  S511 P478 R518 R485  Y761 Y732 R518 R485  H485 Y450  E413 E402  E413 E402 W2  Glu  D731 E705  S689 S654  Y761 Y732 W3' D731 E705  W1' W1 W2'  T690 T655  S689 S654  Y730 L704  NR2A GluR2  T690 T655  NR2A GluR2  Figure S1 Furukawa et al.
+NR1 S1S2 WT  6.2  6.3  6.6 6.7 6.5 radius (cm)  6.4  6.8  6.9  25 20 15 10 5  Residuals (fringes)  6.4  6.5 6.6 6.7 radius (cm)  6.8  6.9  7.0  1.82 S  0  1  5 6 7 8 9 10 11 3 4 Sedimentation coefficient (S)  2  12  0.0006  35.9 kDa  c (M)  c (M)  0.0008 0.0004 0.0002  6.2  0.1 0 -0.1 6.0 6.1  c (S)  c (S)  6.3  10 9 8 7 6 5 4 3 2 1 0 6.0 6.1  7.0  0.1 0 -0.1 6.2  NR2A S1S2 WT  b  Residuals (fringes)  8 7 6 5 4 3 2 1 0  Concentration (fringes)  Concentration (fringes)  a  30 25 20 15 10 5 0  0.0008 0.0006  6.3  6.2  6.3  6.4 6.5 6.6 6.7 radius (cm)  6.4 6.5 6.6 radius (cm)  6.7  6.8  6.8  6.9 7.0  6.9 7.0  1.67 S  1  3  2  5 6 7 8 9 10 11 4 Sedimentation coefficient (S)  12  34.4 kDa  0.0004 0.0002  0  300 400 200 Molar mass (kDa)  100  c  500  600  0  100  200  300 400 Molar mass (kDa)  500  600  Residuals (fringes)  Concentration (fringes)  NR1/NR2A S1S2 WT 8 7 6 5 4 3 2 1 0 6.0 6.1 6.2  6.3  6.4 6.5 6.6 radius (cm)  6.7  6.8  6.9 7.0  6.3  6.4 6.5 6.6 radius (cm)  6.7  6.8  6.9 7.0  0.05 0 -0.05 6.0 6.1 6.2  c (S)  20 15 1.81 S  10 5 0  1  2  3 4 5 6 7 8 9 10 11 12 Sedimentation coefficient (S)  c (M)  0.0007 0.0005 0.0003  34.6 kDa  0.0001 0  100  300 400 200 Molar mass (kDa)  500  600  Figure S2 Furukawa et al.
+1.2  Relative Current  1  b  NR1 N521Y NR2A E516Y Glutamate  0.6  0.4  1 10 [Glutamate] (µM)  1.2  1  Relative Current  Relative Current  d  0.6  0.4  NR1/NR2A WT/WT M/M WT/M M/WT  0 0.1  NR1N521C L777C NR2A E516C L780C Glutamate  0.8  1  10 [Glycine] (µM)  100  NR1N521C L777C NR2A E516C L780C Glycine  0.8  0.6  0.4 NR1/NR2A WT/WT M/M WT/M M/WT  0.2  0 0.1  0.6  0.2  100  c  1  0.8  0.4 NR1/NR2A WT/WT M/M WT/M M/WT  0.2  1.2  NR1 N521Y NR2A E516Y Glycine  1  0.8  0 0.1  1.2  Relative Current  a  1  10 [Glutamate] (µM)  100  NR1/NR2A WT/WT M/M WT/M M/WT  0.2  0 0.1  1  10 [Glycine] (µM)  100  1000  Figure S3 Furukawa et al.
+a  b NR1 S1S2  NR1 S1S2  WT Y535S  WT Y535S  3500  120  3000 100 Bound [ H]MDL 105,519 (%)  2000  1500  80  60  3  count per minute  2500  1000  40  20  500  0 0  10  20  30 40 50 [ H] MDL 105,519 (nM) 3  60  70  0 -8  -7  -6  -5 -4 log [glycine] (M)  -3  -2  -1  Figure.
+S4 Furukawa et al.

@@ -1,0 +1,70 @@
+Supplementary Table 1
+Gompertz parameters
+♂
+Strain
+K33
+
+Intercept
+
+w
+
+hsNF1/+; K33
+
+w
+
+Arm-GAL4/+
+UAS-dNF1 on 2nd/+
+UAS-dNF1 on 3rd/+
+Arm-GAL4/UAS-dNF1 2nd
+Arm-GAL4/UAS-dNF1 3rd
+
+Slope
+
+Intercept
+
+♀
+Slope
+
+-5.78
+
+0.077
+
+-6.04
+
+0.075
+
+-8.67
+
+0.074
+
+-8.68
+
+0.073
+
+-5.03
+-3.59
+-4.42
+-7.01
+-6.42
+
+0.072
+0.064
+0.067
+0.061
+0.057
+
+-4.45
+-3.81
+-4.14
+-6.64
+-6.06
+
+0.077
+0.069
+0.073
+0.061
+0.053
+
+Gompertz mortality parameters were estimated by ln(μx) = ln(μ0) + ax
+The intercept ln(μ0) is used as an estimate of baseline or age-independent mortality
+and the slope a as the rate of mortality or age-dependent mortality.

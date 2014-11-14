@@ -1,0 +1,6 @@
+SOD Activity (U/mg)  500  b  Total SOD MnSOD  Total catalase activity (units/mg protein)  a 400 300 200 100 0  K33  NF1  P2  300 200 100 0 K33  NF1 P2  Supplementary Fig.
+3.
+Intact oxidative stress defense enzymes in NF1 mutants.
+a.
+& b.
+Total and mitochondrial superoxide dismutase (MnSOD) and catalase activities were similar between NF1 mutant and control mitochondria, mean ± SD of 4 experiments, 400 flies per genotype (P = 0.32 for total SOD; P = 0.98 for MnSOD, t - test; P = 0.64 for catalase).

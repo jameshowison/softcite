@@ -1,0 +1,8 @@
+Cyclic AMP (pmol/mg protein)  a  8  *  *  *  6 4 2 0  K33  Weight/Fly (mg)  b  hsNF1/+;K33  Arm-Gal4/+  cAMP  UAS-dNF1 on 2nd/+  0 μΜ  1 μΜ  UAS-dNF1 on 3rd/+  Arm-Gal4/UASdNF1 2nd  Arm-Gal4/UASdNF1 3rd  10 μΜ  1.5 1 0.5 0  ♂  ♀  Supplementary Fig.
+6.
+Elevated cAMP in NF1 over-expression flies and cAMP feeding did not alter fly body weights.
+a. NF1 over-expressing flies showed higher cAMP concentrations than controls (*: P < 0.02), from 4 experiments of 25 male and 25 female flies per experiment, total of 200 flies per genotype.
+b. Dietary supplementation of cAMP did not affect body weight.
+Male and female w 1118 flies were fed regular food containing 0 μM, 1 μM and 10 μM dibutyryl - cAMP until 45 days of age.
+Groups of 10 flies per treatment were weighted.
+n = 4, average weight per fly ± SD.

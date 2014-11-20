@@ -1,0 +1,304 @@
+Human Molecular Genetics, 2007, Vol.
+16, No.
+18 doi:10.1093/hmg/ddm165 Advance Access published on June 27, 2007  2149–2153  A novel and major association of HLA-C in Graves’ disease that eclipses the classical HLA-DRB1 effect Matthew J. Simmonds1, Joanna M.M.
+Howson2, Joanne M. Heward1, Jackie Carr-Smith1, Jayne A. Franklyn1, John A. Todd2 and Stephen C.L.
+Gough1,* 1  Received April 27, 2007; Revised and Accepted June 22, 2007  Association of the major histocompatibility complex (MHC) class II-encoded HLA-DRB1-DQA1-DQB1 haplotype with Graves’ disease (GD) has been known for several years.
+Recent evidence from other autoimmune diseases has suggested that the HLA class I encoded HLA-B/-C molecules could be conferring HLA-DRB1-DQA1-DQB1 independent effects on disease.
+The aim of this study was to determine the effect of HLA-B and HLA-C in GD in a white ethnic group of 806 patients with GD and 487 control subjects from the UK.
+Of the five loci (HLA-B, -C, -DRB1, -DQA1, -DQB1), HLA-C demonstrated the strongest association (P 5 1.20 3 10220) with HLA-C *07 predisposing [OR 5 1.63, 95% CI (1.23 – 2.17)] and both HLA-C* 03 [OR 5 0.54, 95% CI (0.38 – 0.77)], HLA-C*16 [OR 5 0.36, 95% CI (0.21 – 0.61)] protective.
+The other loci were then tested for HLA-C-independent associations.
+HLA-B was found to be associated independently of HLA-C (P 5 1.54 3 1026) with the other three loci, HLA-DRB1, HLA-DQB1 and HLA-DQA1, also improving the model but with less confidence (P > 1025).
+This study has for the first time provided evidence of a primary association of HLA-C, and to a lesser extent HLA-B, with GD.
+Class II loci could still have effects on GD, but they appear smaller than the HLA-C association.
+A full investigation of the MHC region, including all class I and II loci is now required.
+Our results point to a primary role for class I-mediated responses in GD, a condition classically assumed to be a straightforward HLA-class II-restricted autoantibody response to the thyroid stimulating hormone receptor.
+INTRODUCTION Components of the major histocompatibility complex (MHC) region are attractive candidate loci for autoimmune disease (AID), with the DRB1 –DQA1 –DQB1 molecules extensively examined for association with a series of AIDs including Graves’ disease (GD).
+The HLA class II region, including the DRB1 03 and DQA1 0501 alleles and the DRB1 03 – DQA1 0501– DQB1 02 (DR3) haplotype, have been consistently associated with GD (1).
+We have previously reported that the individual contributions of HLA-DQA1 and HLA-DRB1, to the association of the HLA class II-encoded HLA-DRB1_-DQA1_-DQB1 susceptibility haplotypes with GD were indistinguishable (2).
+We, and others (2,3), have *To whom correspondence should be addressed.
+Tel:  proposed that this association maybe attributable, in part, to HLA-DRB1 exon 2-encoded position b74.
+Recently, in the AIDs, type 1 diabetes and multiple sclerosis, evidence has arisen suggesting the existence of susceptibility loci within the HLA class I region, independent of known class II effects (4 – 7) (J.M.M.
+Howson and J.A.
+Todd, manuscript in preparation).
+Interestingly, upregulation of HLA class I molecules on thyroid cells, including HLA-B and HLA-C molecules, has been demonstrated in response to immune cell infiltration of the thyroid gland, which may be one of the earliest features of autoimmune attack in GD (8).
+Methimazole used in the treatment of GD has been shown to function, in part, by reducing HLA class I and class II expression on thyrocytes (8,9).
++44 1214158819; Fax: +44 1214158712; Email: s.c.gough@bham.ac.uk  # The Author 2007.
+Published by Oxford University Press.
+All rights reserved.
+For Permissions, please email: journals.permissions@oxfordjournals.org  Downloaded from http://hmg.oxfordjournals.org/ at University of Texas at Austin on March 17, 2012  Division of Medical Sciences, Institute of Biomedical Research, University of Birmingham, Birmingham B15 2TT, UK and 2Juvenile Diabetes Research Foundation/Wellcome Trust Diabetes and Inflammation Laboratory, Cambridge Institute for Medical Research, University of Cambridge, Cambridge CB2 0XY, UK  2150  Human Molecular Genetics, 2007, Vol.
+16, No.
+18  Table 1.
+Association of HLA-B, HLA-C, HLA-DRB1, HLA-DQB1 and HLA-DQA1 in British Graves’ disease cases and controls collected in the Midlands Gene  Number of Graves’ cases typed  Number of controls typed  P-value  HLA-C HLA-B HLA-DRB1 HLA-DQA1 HLA-DQB1  673 678 769 769 769  492 493 621 621 621  1.20  10220 2.31  1027 6.67  10212 1.52  10211 1.31  1026  RESULTS The newly typed HLA-B and HLA-C loci were combined with the previously typed HLA-DRB1, HLA-DQB1 and HLA-DQA1 data.
+The strongest association signal came from HLA-C (P ¼ 1.20  10220; Table 1) with the most common allele, HLA-C 07 being the most predisposing (OR ¼ 1.63, 95% CI ¼ 1.23– 2.17; Table 2).
+Protective effects were observed for HLA-C 03 and HLA-C 16: OR ¼ 0.54, 95% CI ¼ 0.38 – 0.77 and OR ¼ 0.36, 95% CI ¼ 0.21– 0.61, respectively, using the approximately neutral HLA-C 05 allele as a reference (Table 2).
+HLA-B was also strongly associated (P ¼ 2.31  1027; Table 1).
+The allele, HLA-B 08 (OR ¼ 1.62, 95% CI ¼ 1.19 –2.19; Table 3) was the most predisposing (using the neutral B 07 allele as reference), with a protective association for B 44 (OR ¼ 0.64, 95% CI ¼ 0.47 – 0.88; Table 3).
+Next, we tested if HLA-B, HLA-DRB1, HLA-DQA1 or HLA-DQB1, had an association with GD that was independent of HLA-C. Each locus in turn was added to the alleles or genotypes of HLA-C in a logistic model and a likelihood ratio test used to evaluate whether a given locus improved the model (10).
+HLA-B improved a model containing HLA-C whether the alleles or the genotypes of HLA-C were used as the null model (P ¼ 1.54  1026 and P ¼ 1.51  1025, respectively; Table 4).
+All three MHC class II loci, HLA-DRB1, HLA-DQB1 and HLA-DQA1, also improved HLA-C. Conversely, HLA-C significantly improved all models when added to HLA-B, HLA-DRB1, HLA-DQA1 or HLA-DQB1 (P ¼ 8.68  10 – 13 2 3.26  10219).
+As HLA-B may be contributing to the association of the MHC with GD, we examined the allelic ORs of both HLA-C and HLA-B having conditioned on the effects of the other MHC class I locus.
+Conditioning on HLA-B had little effect on the HLA-C allelic ORs (except the C 07 allele whose 95% CI crossed 1; Table 2).
+However, conditioning on HLA-C had a greater effect on the HLA-B ORs, with B 44 no longer showing a protective association (Table 3).
+We found there was linkage disequilibrium (LD) between the previously associated HLA-DRB1 03,  07 and the HLA-C 07,  03 alleles.
+HLA-C 03 has D0 ¼ 0.88 with  DISCUSSION Strong LD confounds determination of the exact location(s) of aetiological variant(s) in the MHC region.
+This study has for the first time provided evidence in support of a primary association of HLA-C with GD, which appears to eclipse the classical association of HLA-DRB1 in GD.
+Furthermore, a second class I locus, HLA-B, may also be associated with GD.
+This work therefore calls into doubt a primary contribution of position b74 to GD.
+However, we cannot rule out independent effects for components of the class II-encoded HLA-DRB1/ HLA-DQA1/HLA-DQB1 haplotypes in disease susceptibility in the British population but they do appear, unexpectedly, to be smaller than the MHC class I gene, HLA-C.
+Early studies investigating the HLA region and GD over 30 years ago reported association of the class I-encoded HLA-B 08 (11 –15) and HLA-A 08 (16) alleles.
+However, owing to strong LD and an inability of statistical methodology at the time to split these effects, association between class I loci and disease was presumed to be secondary to the class II region which appeared to be exerting a larger effect (17).
+Consequently, most subsequent studies focused on the class II loci.
+Interestingly, a more recent study investigated the HLA class I region, reported an association of the class I encoded HLA-A 02 in a small Taiwanese population, although conditional analyses to exclude a primary class II effect was not performed (18).
+HLA class I molecules could be playing a greater role than class II molecules in GD for a number of reasons.
+HLA class I molecules bind and present internally derived peptides including viral or bacterial antigens which may be linked to disease initiation through molecular mimicry (19).
+The most postulated bacterial trigger for GD is Yersinia enterocolitica.
+Antibodies raised against Y. enterocolitica have been shown to displace the thyroid stimulating hormone (TSH) from binding to its receptor (TSHR) (20,21), suggesting immune cross-reactivity between Y. enterocolitica and the TSHR.
+Several other viral triggers including human intracisternal type A retroviral particle (HIAP) (22) and gag protein from the human foamy virus (HPV) (23,24) have also been proposed, although further work is needed to determine a pathogenic role for these in GD.
+It has been suggested that viral or bacterial peptides could act as superantigens, causing a series of non-specific T cells to bind to the bacterial peptide/class I complex and become activated, some of which could crossreact, causing autoimmune attack of the thyroid gland (25).
+Cytotoxic T cells, including natural killer (NK) cells, specific for TSHR peptides could have an early regulatory  Downloaded from http://hmg.oxfordjournals.org/ at University of Texas at Austin on March 17, 2012  Owing to the strong evidence for a role of HLA class I-encoded molecules in GD susceptibility, the aim of this study was to extend the typing from our original MHC class II study (2) to investigate the contribution of the MHC class I encoded HLA-B and HLA-C genes to GD.
+HLA-DRB1 03 and D0 ¼ 0.75 with HLA-DRB1 07, and HLA-C 07 has D0 ¼ 0.66 and 0.65 with HLA-DRB1 03 and HLA-DRB1 07, respectively.
+The most common HLA-C_-B_-DRB1 haplotype was HLA-C 07_HLA-B 08_ HLA-DRB1 03 in both cases and controls.
+When LD was investigated between HLA-C 07 and the HLA-B 08-HLADRB1 03 haplotype, it was shown that the HLA-B 08-HLADRB1 03 haplotype did not add to HLA-C 07 (P ¼ 0.167), suggesting that the results seen at HLA-C 07 were not attributed to LD with the HLA-B 08-HLA-DRB1 03 haplotype.
+Human Molecular Genetics, 2007, Vol.
+16, No.
+18  2151  Table 2.
+Alleles of HLA-C Frequency in cases, n ¼ 1346 (%)  Frequency in controls, n ¼ 984 (%)  Unconditional OR(7) (95% CI)  OR(5) (95% CI)  Conditional OR(7) (95% CI)  OR(5) (95% CI)    12 (0.9) 685 (50.9) 52 (3.9) 123 (9.1) 35 (2.6) 125 (9.3) 98 (7.3) 21 (1.6) 34 (2.5) 28 (2.1) 103 (7.7) 26 (1.9) 4 (0.3)  2 (0.20) 328 (33.3) 32 (3.3) 81 (8.2) 26 (2.6) 101 (10.3) 84 (8.5) 20 (2.0) 40 (4.1) 39 (4.0) 156 (15.9) 59 (6.0) 16 (1.6)  2.23 (0.53–9.42) 1.00 (reference) 0.89 (0.56–1.40) 0.75 (0.56–1.01) 0.71 (0.42–1.19) 0.61 (0.46–0.81) 0.56 (0.41–0.76) 0.51 (0.28–0.92) 0.44 (0.28–0.69) 0.38 (0.24–0.63) 0.33 (0.25–0.44) 0.22 (0.14–0.36) 0.12 (0.04–0.38)  3.66 (0.85–15.72) 1.63 (1.23–2.17) 1.45 (0.86–2.43) 1.23 (0.85–1.78) 1.15 (0.65–2.03) 1.00 (reference) 0.91 (0.63–1.32) 0.83 (0.44–1.55) 0.71 (0.43–1.18) 0.63 (0.37–1.07) 0.54 (0.38–0.77) 0.36 (0.21–0.61) 0.20 (0.06–0.64)  1.39 (0.28–6.76) 1.00 (reference) 0.58 (0.31–1.11) 0.52 (0.31–0.86) 0.47 (0.23–0.97) 0.69 (0.44–1.10) 0.57 (0.32–1.03) 0.32 (0.14–0.74) 0.18 (0.07–0.45) 0.17 (0.8–0.35) 0.16 (0.10–2.64) 0.24 (0.13–0.43) 0.07 (0.02–0.26)  2.00 (0.41– 9.87) 1.44 (0.91– 2.86) 0.84 (0.43– 1.64) 0.75 (0.45– 1.24) 0.68 (0.33– 1.42) 1.00 (reference) 0.82 (0.44– 1.52) 0.46 (0.20– 1.07) 0.26 (0.10– 0.67) 0.24 (0.11– 0.52) 0.24 (0.14– 0.40) 0.34 (0.20– 0.59) 0.11 (0.03– 0.39)  17 07 02  04  01  05  06  15  08  12  03  16  14    ORs with 95% CI are reported for cases and controls from the Midlands, using the most common HLA-C 07 [OR(7)] and the approximately neutral HLA-C 05 allele [OR(5)] as reference.
+Both unconditional ORs and ORs conditioned on HLA-B alleles are reported.
+The most associated common alleles are in bold font.
+Table 3.
+Alleles of HLA-B HLA-B allele  Frequency in cases, n ¼ 1356 (%)  Frequency in controls, n ¼ 986 (%)  OR(8) (95% CI)  Unconditional OR(7) (95% CI)  Conditioned on HLA-C OR(8) (95% CI)  OR(7) (95% CI)    42 (3.1) 341 (25.2) 16 (1.2) 30 (2.2) 39 (2.9) 106 (7.8) 18 (1.3) 181 (13.4) 84 (6.2) 48 (3.5) 9 (0.7) 40 (3.0) 89 (6.6) 44 (3.2) 7 (0.5) 152 (11.2) 43 (3.2) 10 (0.7) 10 (0.7) 47 (3.5)  13 (1.3) 154 (15.6) 8 (0.8) 18 (1.8) 30 (3.0) 68 (6.9) 13 (1.3) 122 (12.4) 67 (6.8) 40 (4.1) 7 (0.7) 31 (3.1) 78 (7.9) 41 (4.2) 8 (0.8) 176 (17.9) 48 (4.9) 15 (1.5) 20 (2.0) 29 (2.9)  1.27 (0.67–2.39) 1.00 (reference) 0.79 (0.33–1.85) 0.70 (0.39–1.27) 0.70 (0.41–1.19) 0.70 (0.48–1.00) 0.64 (0.30–1.35) 0.62 (0.46–0.84) 0.57 (0.39–0.83) 0.56 (0.35–0.88) 0.55 (0.22–1.37) 0.55 (0.33–0.91) 0.49 (0.34–0.71) 0.49 (0.31–0.76) 0.42 (0.15–1.20) 0.40 (0.30–0.54) 0.38 (0.24–0.61) 0.32 (0.14–0.75) 0.22 (0.10–0.49) 0.57 (0.34–0.95)  2.05 (1.07–3.94) 1.62 (1.19–2.19) 1.27 (0.54–3.01) 1.13 (0.61–2.10) 1.13 (0.66–1.95) 1.12 (0.77–1.65) 1.03 (0.48–2.23) 1.00 (reference) 0.92 (0.62–1.37) 0.90 (0.56–1.45) 0.89 (0.35–2.23) 0.88 (0.52–1.50) 0.79 (0.54–1.17) 0.78 (0.49–1.25) 0.67 (0.23–1.96) 0.64 (0.47–0.88) 0.62 (0.39–1.00) 0.52 (0.22–1.23) 0.36 (0.16–0.80) 0.92 (0.55–1.53)  2.33 (1.08–5.03) 1.00 (reference) 3.80 (1.17–12.31) 2.85 (1.33–6.12) 1.14 (0.54–2.42) 1.38 (0.76–2.50) 1.12 (0.42–3.00) 0.64 (0.47–0.88) 1.74 (1.01–2.97) 2.65 (1.02–6.92) 0.96 (0.32–2.83) 0.90 (0.48–1.67) 1.87 (1.06–3.31) 0.84 (0.41–1.70) 0.69 (0.21–2.28) 0.69 (0.42–1.11) 1.49 (0.70–3.18) 0.32 (0.13–0.79) 0.38 (0.14–1.02) 1.41 (0.72–2.76)  3.64 (1.66–7.98) 1.56 (1.14–2.14) 5.92 (1.81–19.31) 4.44 (2.05–9.65) 1.78 (0.84–3.80) 2.15 (1.17–3.92) 1.75 (0.65–4.74) 1.00 (reference) 2.71 (1.56–4.70) 4.13 (1.57–10.92) 1.49 (0.51–4.40) 1.40 (0.75–2.62) 2.92 (1.63–5.23) 1.31 (0.64–2.66) 1.07 (0.32–3.60) 1.07 (0.66–1.74) 2.32 (1.09–4.96) 0.50 (0.20–1.25) 0.60 (0.22–1.61) 2.19 (1.11–4.32)  39 08  38  55  27  35  37  07  15  14  50  18  40  57  58  44  51  49  13 Rares   ORs with 95% CI are reported for cases and controls from the Midlands, using the most common HLA-B 08 [OR(8)] and the neutral HLA-B 07 alleles [OR(7)] as reference.
+Both unconditional ORs and ORs conditioned on HLA-C alleles are reported.
+The most associated common alleles are in bold font.
+or pathogenic role in GD, as has been proposed in type 1 diabetes.
+Killer immunoglobulin-like receptors (KIR) on the surface of NK cells interact with specific HLA molecules and play a key role in inhibiting NK cell-mediated destruction.
+For HLA-C there are two sets of KIRs, 2DL1 and 2DL2/2DL3 which recognize specific sets of HLA-C molecules, group C1 molecules (containing C 02,  04,  05 and  06) and group C2 molecules (containing C 01,  03,  07 and  08), respectively (26).
+Groups C1 and C2 are distinguished by the presence of serine at position 77 and asparagine at position 80 of the a1 helix or asparagine at position 77 and a lysine at position 80, respectively.
+KIR/HLA-C interactions can be altered by  peptide loading and presentation by HLA-C (27,28), which could suggest that interaction of the associated HLA-C molecules with a given autoantigen/s such as TSHR could be affecting KIR binding and that this could play a role in the onset of autoimmunity.
+Finally, specific class I molecules may be prone to misfolding or when they are themselves presented to the immune system by HLA class II molecules an autoimmune response could be triggered (29).
+These mechanisms are neither mutually exclusive nor exhaustive but represent hypotheses warranting further study.
+Given these findings, a full investigation of the MHC region is now justified and required in larger, more statistically  Downloaded from http://hmg.oxfordjournals.org/ at University of Texas at Austin on March 17, 2012  HLA-C allele  2152  Human Molecular Genetics, 2007, Vol.
+16, No.
+18  Table 4.
+Two locus association results, adding the alleles of the test locus, to the alleles and genotypes of HLA-C Test locus  Addition of test locus to HLA-C alleles , P  Addition of test locus to HLA-C genotypes , P  HLA-B HLA-DRB1 HLA-DQA1 HLA-DQB1  1.54  1026 0.0030 0.0049 9.73  1025  1.51  1025 0.0005 0.0005 0.0002  We were well powered to find the primary effects of the MHC loci in GD.
+With 800 cases and 500 controls assuming a multiplicative model and a minor allele frequency of 0.10, we had 98% power to find an effect size of 2.0 at a type 1 error rate, a ¼ 0.0001.
+Logistic regression in STATA (http://www.stata.
+com) with software written by David Clayton for use within that package (http://www.gene.cimr.cam.ac.uk/clayton/software/ stata) was used to test for association and calculate odds ratios (ORs) at all loci (10).
+No evidence was obtained for nonmultiplicative inheritance at any locus studied (P .
+0.3); hence, only allelic models, which assume a multiplicative model are reported.
+Analyses stratified by sex were performed; however, they were not qualitatively different to the unstratified analyses; hence, unstratified results are reported.
+Haplotypes were reconstructed in PHASE version 2.1.1 (32,33).
+All loci were in Hardy–Weinberg equilibrium in the controls (P .
+0.06).
+SUPPLEMENTARY MATERIAL MATERIALS AND METHODS  Supplementary Material is available at HMG Online.
+Subjects Unrelated white patients of UK origin with GD were recruited from thyroid clinics in Birmingham, Walsall, Bournemouth and Exeter, UK, as previously described (2,30).
+Patients were defined as having GD by the presence of biochemical hyperthyroidism together with either the presence of dysthyroid eye disease (NOPPSECS score .2) or two of the following criteria: diffuse goiter, a significant titer of microsomal, thyroglobulin or thyrotropin (TSH) receptor autoantibodies as described in detail previously (2,30).
+Control subjects were recruited from Birmingham, UK.
+All patients and subjects gave informed written consent and the project approved by the Local Research Ethics Committee.
+In total, DNA was obtained from 950 unrelated white British GD patients and 621 British, age- and gender-matched controls.
+The cases were collected from three locations in Great Britain: 773 cases were from Birmingham in the Midlands; 100 cases were from Exeter in the Southwest; and 77 cases were from Bournemouth in the South.
+All 621 controls were collected from the Birmingham area.
+We found that HLA-C allele frequencies were geographically variable (P ¼ 0.0008) and therefore, we only report analyses for the 1394 subjects from the Midlands.
+Geographical information and analyses for the full collection are reported in the Supplementary information (Supplementary Material, Tables S1 –S8).
+Materials and methods DNA was prepared from whole blood using the Nucleon Bacc II kit (Tepnel Life Sciences PLC, UK).
+Genotyping was performed at the University of Birmingham, UK using the primer sequences and methods published by Bunce et al.
+(31) with primers obtained from Sigma Genosys (Poole, UK).
+The HLA-DRB1, -DQB1 and -DQA1 regions were typed previously (2), however, 79 additional cases were typed for this study using the same method.
+ACKNOWLEDGEMENTS We acknowledge the Wellcome Trust and the Juvenile Diabetes Research Foundation for funding.
+Conflict of Interest statement.
+None of the authors have any conflicts of interest.
+REFERENCES 1.
+Simmonds, M.J. and Gough, S.C. (2004) Genetic insights into disease mechanisms of autoimmunity.
+Br.
+Med.
+Bull., 71, 93–113.
+2.
+Simmonds, M.J., Howson, J.M., Heward, J.M., Cordell, H.J., Foxall, H., Carr-Smith, J., Gibson, S.M., Walker, N., Tomer, Y., Franklyn, J.A.
+et al.
+(2005) Regression mapping of association between the human leukocyte antigen region and Graves disease.
+Am.
+J. Hum.
+Genet., 76, 157–163.
+3.
+Ban, Y., Davies, T.F., Greenberg, D.A., Concepcion, E.S., Osman, R., Oashi, T. and Tomer, Y.
+(2004) Arginine at position 74 of the HLA-DR beta1 chain is associated with Graves’ disease.
+Genes Immunol., 5, 203–208.
+4.
+Yeo, T.W., De Jager, P.L., Gregory, S.G., Barcellos, L.F., Walton, A., Goris, A., Fenoglio, C., Ban, M., Taylor, C.J., Goodman, R.S.
+et al.
+(2007) A second major histocompatibility complex susceptibility locus for multiple sclerosis.
+Ann.
+Neurol., 61, 228– 236.
+5.
+Fogdell-Hahn, A., Ligers, A., Gronning, M., Hillert, J. and Olerup, O.
+(2000) Multiple sclerosis: a modifying influence of HLA class I genes in an HLA class II associated autoimmune disease.
+Tissue Antigens, 55, 140–148.
+6.
+Lie, B.A.
+and Thorsby, E. (2005) Several genes in the extended human MHC contribute to predisposition to autoimmune diseases.
+Curr.
+Opin.
+Immunol., 17, 526–531.
+7.
+Johansson, S., Lie, B.A., Todd, J.A., Pociot, F., Nerup, J., Cambon-Thomsen, A., Kockum, I., Akselsen, H.E., Thorsby, E. and Undlien, D.E.
+(2003) Evidence of at least two type 1 diabetes susceptibility genes in the HLA complex distinct from HLA-DQB1, -DQA1 and -DRB1.
+Genes Immunol., 4, 46–53.
+8.
+Singer, D.S., Mozes, E., Kirshner, S. and Kohn, L.D.
+(1997) Role of MHC class I molecules in autoimmune disease.
+Crit.
+Rev.
+Immunol., 17, 463–468.
+9.
+Saji, M., Moriarty, J., Ban, T., Singer, D.S.
+and Kohn, L.D.
+(1992) Major histocompatibility complex class I gene expression in rat thyroid cells is regulated by hormones, methimazole, and iodide as well as interferon.
+J. Clin.
+Endocrinol.
+Metab., 75, 871– 878.
+Downloaded from http://hmg.oxfordjournals.org/ at University of Texas at Austin on March 17, 2012  powerful and independent datasets, including those of differing ethnic origin, using the dense SNP maps now available.
+This should include, for example, the third class I locus, HLA-A, as well as MICA and MICB and the HLA-DPB1 locus, in order to localize all the primary GD variants and establish whether HLA-C is causative or simply in LD with the aetiological variant(s).
+Statistical analysis  Human Molecular Genetics, 2007, Vol.
+16, No.
+18  22.
+Jaspan, J.B., Sullivan, K., Garry, R.F., Lopez, M., Wolfe, M., Clejan, S., Yan, C., Tenenbaum, S., Sander, D.M., Ahmed, B. et al.
+(1996) The interaction of a type A retroviral particle and class II human leukocyte antigen susceptibility genes in the pathogenesis of Graves’ disease.
+J. Clin.
+Endocrinol.
+Metab., 81, 2271–2279.
+23.
+Wick, G., Trieb, K., Aguzzi, A., Recheis, H., Anderl, H. and Grubeck-Loebenstein, B.
+(1993) Possible role of human foamy virus in Graves’ disease.
+Intervirology, 35, 101–107.
+24.
+Lee, H., Kim, S., Kang, M., Kim, W. and Cho, B.
+(1998) Prevalence of human foamy virus-related sequences in the Korean population.
+J. Biomed.
+Sci., 5, 267–273.
+25.
+Moller, E. (1998) Mechanisms for induction of autoimmunity in humans.
+Acta.
+Paediatr.
+Suppl., 424, 16–20.
+26.
+Bashirova, A.A., Martin, M.P., McVicar, D.W. and Carrington, M. (2006) The killer immunoglobulin-like receptor gene cluster: tuning the genome for defense.
+Annu.
+Rev.
+Genom.
+Hum.
+Genet., 7, 277–300.
+27.
+Malnati, M.S., Peruzzi, M., Parker, K.C., Biddison, W.E., Ciccone, E., Moretta, A. and Long, E.O.
+(1995) Peptide specificity in the recognition of MHC class I by natural killer cell clones.
+Science, 267, 1016–1018.
+28.
+Mandelboim, O., Wilson, S.B., Vales-Gomez, M., Reyburn, H.T.
+and Strominger, J.L.
+(1997) Self and viral peptides can initiate lysis by autologous natural killer cells.
+Proc.
+Natl Acad.
+Sci.
+USA, 94, 4604–4609.
+29.
+Marker-Hermann, E., Meyer zum Buschenfelde, K.H.
+and Wildner, G. (1997) HLA-B27-derived peptides as autoantigens for T lymphocytes in ankylosing spondylitis.
+Arthritis Rheum., 40, 2047–2054.
+30.
+Simmonds, M.J., Heward, J.M., Carr-Smith, J., Foxall, H., Franklyn, J.A.
+and Gough, S.C. (2006) Contribution of single nucleotide polymorphisms within FCRL3 and MAP3K7IP2 to the pathogenesis of Graves’ disease.
+J. Clin.
+Endocrinol.
+Metab., 91, 1056–1061.
+31.
+Bunce, M., O’Neill, C.M., Barnardo, M.C., Krausa, P., Browning, M.J., Morris, P.J.
+and Welsh, K.I.
+(1995) Phototyping: comprehensive DNA typing for HLA-A, B, C, DRB1, DRB3, DRB4, DRB5 and DQB1 by PCR with 144 primer mixes utilizing sequence-specific primers (PCR-SSP).
+Tissue Antigens, 46, 355 –367.
+32.
+Stephens, M., Smith, N.J. and Donnelly, P. (2001) A new statistical method for haplotype reconstruction from population data.
+Am.
+J. Hum.
+Genet., 68, 978 –989.
+33.
+Stephens, M. and Scheet, P. (2005) Accounting for decay of linkage disequilibrium in haplotype inference and missing-data imputation.
+Am.
+J. Hum.
+Genet., 76, 449 –462.
+Downloaded from http://hmg.oxfordjournals.org/ at University of Texas at Austin on March 17, 2012  10.
+Cordell, H.J.
+and Clayton, D.G.
+(2002) A unified stepwise regression procedure for evaluating the relative effects of polymorphisms within a gene using case/control or family data: application to HLA in type 1 diabetes.
+Am.
+J. Hum.
+Genet., 70, 124 –141.
+11.
+Farid, N.R., Barnard, J.M.
+and Marshall, W.H.
+(1976) The association of HLA with autoimmune thyroid disease in Newfoundland.
+The influence of HLA homozygosity in Graves’ disease.
+Tissue Antigens, 8, 181–189.
+12.
+Mather, B.A., Roberts, D.F., Scanlon, M.F., Mukhtar, E.D., Davies, T.F., Smith, B.R.
+and Hall, R. (1980) HLA antigens and thyroid autoantibodies in patients with Graves’ disease and their first degree relatives.
+Clin.
+Endocrinol.
+(Oxf.
+), 12, 155 –163.
+13.
+Stenszky, V., Kozma, L., Balazs, C., Bear, J.C. and Farid, N.R.
+(1986) The role of HLA antigens in the manifestation and course of Graves’ disease.
+Mol.
+Biol.
+Med., 3, 53–62.
+14.
+Farid, N.R., Stone, E. and Johnson, G. (1980) Graves’ disease and HLA: clinical and epidemiologic associations.
+Clin.
+Endocrinol.
+(Oxf.
+), 13, 535 –544.
+15.
+Dahlberg, P.A., Holmlund, G., Karlsson, F.A.
+and Safwenberg, J.
+(1981) HLA-A, -B, -C and -DR antigens in patients with Graves’ disease and their correlation with signs and clinical course.
+Acta.
+Endocrinol.
+(Copenh.
+), 97, 42 –47.
+16.
+Grumet, F.C., Payne, R.O., Konishi, J. and Kriss, J.P. (1974) HL-A antigens as markers for disease susceptibility and autoimmunity in Graves’ disease.
+J. Clin.
+Endocrinol.
+Metab., 39, 1115–1119.
+17.
+Bech, K., Lumholtz, B., Nerup, J., Thomsen, M., Platz, P., Ryder, L.P., Svejgaard, A., Siersbaek-Nielsen, K., Hansen, J.M.
+and Larsen, J.H.
+(1977) HLA antigens in Graves’ disease.
+Acta.
+Endocrinol.
+(Copenh.
+), 86, 510 –516.
+18.
+Huang, S.M., Wu, T.J., Lee, T.D., Yang, E.K., Shaw, C.K.
+and Yeh, C.C.
+(2003) The association of HLA -A, -B, and -DRB1 genotypes with Graves’ disease in Taiwanese people.
+Tissue Antigens, 61, 154–158.
+19.
+Albert, L.J.
+and Inman, R.D.
+(1999) Molecular mimicry and autoimmunity.
+N. Engl.
+J.
+Med., 341, 2068–2074.
+20.
+Wenzel, B.E., Peters, A. and Zubaschev, I.
+(1996) Bacterial virulence antigens and the pathogenesis of autoimmune thyroid diseases (AITD).
+Exp.
+Clin.
+Endocrinol.
+Diabetes, 104 (Suppl.
+4), 75 –78.
+21.
+Wenzel, B.E., Franke, T.F., Heufelder, A.E.
+and Heesemann, J.
+(1990) Autoimmune thyroid diseases and enteropathogenic Yersinia enterocolitica.
+Autoimmunity, 7, 295 –303.
+2153

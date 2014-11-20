@@ -1,0 +1,1512 @@
+Cladistics Cladistics 23 (2007) 229–254 10.1111/j.1096-0031.2006.00142.x  The role of wood anatomy in phylogeny reconstruction of Ericales Frederic Lensa,b,*, Ju¨rg Scho¨nenbergerc, Pieter Baasb, Steven Jansena,d and Erik Smetsa,b a Laboratory of Plant Systematics, Institute of Botany and Microbiology, Kasteelpark Arenberg 31, K.U.Leuven, BE-3001 Leuven; bNationaal Herbarium Nederland - Leiden University Branch, PO Box 9514, NL-2300 RA Leiden, The Netherlands; cDepartment of Botany, Stockholm University, Lilla Frescativa¨gen 5, SE-106 91 Stockholm, Sweden; dJodrell Laboratory, Royal Botanic Gardens, Kew, Richmond, Surrey TW9 3DS, UK  Accepted 14 September 2006  Abstract The systematic signiﬁcance of wood anatomical characters within Ericales is evaluated using separate and combined parsimony analyses including 23 wood characters and 3945 informative molecular characters.
+Analyses of wood features alone result in poorly resolved and conﬂicting topologies.
+However, when pedomorphic character states are coded as inapplicable, the combined bootstrap topology results in an increase of resolution and support at most deeper nodes compared with the molecular analyses.
+This suggests that phylogenetic information from the limited number of morphological characters is not completely swamped by an overwhelming amount of molecular data.
+Based on the morphology of vessels and ﬁbers, and the distribution of axial parenchyma, two major wood types can be distinguished within Ericales: (i) a ‘‘primitive’’ type, nearly identical to the wood structure in the more basal outgroup Cornales, which is likely to have persisted in one major clade, and (ii) a ‘‘derived’’ type that must have evolved in at least two separate evolutionary lines.
+The occurrence of the ﬁrst type is strongly correlated with shrubs to small trees growing in cold temperate or tropical montane regions, while the second type is common in tall trees of tropical lowlands.
+This favors the inclusion of ecologically adaptive features in phylogeny reconstruction.
+ The Willi Hennig Society 2007.
+History of Ericales: from morphology to molecules Ericales, as recognized today, is a ﬂowering plant order that includes about 11 500 species classiﬁed in 357 genera and, depending on the author, about 25 families (Stevens, 2001 onwards; Anderberg et al., 2002; Bremer et al., 2002; APG II, 2003; Barkman et al., 2004; Kubitzki, 2004; Table 1).
+Geographic distribution patterns of the families are diverse: some are almost cosmopolitan (e.g., Ericaceae and Myrsinaceae) or pantropical (e.g., Ebenaceae, Lecythidaceae and Sapotaceae), while others are restricted to the neotropics (e.g., Marcgraviaceae and Theophrastaceae) or concentrated in more temperate regions (e.g., Clethraceae, Cyrillaceae and Primulaceae) (Kubitzki, 2004).
+Representatives are predominantly (sub)shrubs, trees and sometimes lianas.
+*Corresponding author: E-mail address: frederic.lens@bio.kuleuven.be  The Willi Hennig Society 2007  Herbs comprise about 15% of the total number of species and are mainly restricted to Balsaminaceae, Diapensiaceae, Ericaceae, Mitrastemonaceae, Myrsinaceae, Primulaceae, Samolaceae and Sarraceniaceae (Stevens, 2001 onwards; Barkman et al., 2004; Kubitzki, 2004; Table 1).
+In the premolecular era, the Ericales were a morphologically homogeneous group including only three (Thorne, 1992) to eight families (Dahlgren, 1989).
+The current position in the asterids and the extended delimitation of the order is strongly supported by molecular data, and ﬁnds its origin in the rbcL analysis of Olmstead et al.
+(1992) who found a so-called ericalean clade consisting of Rhododendron (Ericaceae), Fouquieria (Fouquieriaceae) and Polemonium (Polemoniaceae).
+The newly deﬁned Ericales clade rapidly expanded since then.
+In 1993, a larger sampling of rbcL sequence data resulted in an Ericales delimitation that included various orders of Cronquist’s subclass Dilleniidae, plus a few additional families such as  Sarraceniaceae (3 ⁄ 15) SAR Styracaceae (11 ⁄ 160) STY Symplocaceae (1 ⁄ 320) SYM Tetrameristaceae (3 ⁄ 3-5) TET Theaceae (7 ⁄ 195-460) THE Theophrastaceae (7 ⁄ 90) THO  Polemoniaceae (18 ⁄ 380) POL Primulaceae (13 ⁄ 600) PRI Roridulaceae (1 ⁄ 2) ROR Samolaceae (1 ⁄ 12) SAM Sapotaceae (53 ⁄ 1100) SAP  Fouquieriaceae (1 ⁄ 11) FOU Lecythidaceae (25 ⁄ 311) LEC Maesaceae (1 ⁄ 150) MAE Marcgraviaceae (7 ⁄ 130) MAR Mitrastemonaceae (1 ⁄ 2) MIT Myrsinaceae (49 ⁄ 1500) MYR Pentaphylacaceae (14 ⁄ 342) PEN  Actinidiaceae (3 ⁄ 360) ACT Balsaminaceae (2 ⁄ 1000) BAL Clethraceae (2 ⁄ 95) CLE Cyrillaceae (2 ⁄ 2) CYR Diapensiaceae (5 ⁄ 13) DIA Ebenaceae (3 ⁄ 500-600) EBE Ericaceae (124 ⁄ 4100) ERI  Family names (number of genera ⁄ species) with their acronym Actinidia Impatiens Clethra Cyrilla Diapensia, Galax, Shortia Diospyros, Lissocarpa Chimaphila, Empetrum, Enkianthus, Rhododendron, Vaccinium Fouquieria Barringtonia, Couroupita, Napoleonaea Maesa Marcgravia, Norantea Not included Lysimachia, Myrsine Cleyera, Eurya, Ficalhoa, Pentaphylax, Sladenia, Ternstroemia Acanthogilia, Cantua, Cobaea, Polemonium Primula Roridula Samolus Madhuca, Manilkara, Palaquium, Pouteria, Sarcosperma, Sideroxylon Heliamphora, Sarracenia Bruinsmia, Halesia, Styrax Symplocos Pentamerista, Pelliciera, Tetramerista Camellia, Gordonia, Schima Clavija  Genera included  Nepenthales Ebenales Ebenales Theales Theales Primulales  Solanales Primulales Rosales Primulales Ebenales  Violales Lecythidales Primulales Theales Raﬄesiales Primulales Theales  Theales Geraniales Ericales Ericales Diapensiales Ebenales Ericales  Cronquist (1988)  Sarraceniales Ebenales Cornales Theales Theales Primulales  Solanales Primulales Cornales Primulales Ebenales  Fouquieriales Lecythidales Primulales Theales Raﬄesiales Primulales Theales  Ericales Balsaminales Ericales Ericales Cornales Ebenales Ericales  Dahlgren (1989)  Sarraceniales Styracales Styracales Theales Theales Primulales  Polemoniales Primulales Roridulales Primulales Sapotales  Fouquieriales Lecythidales Primulales Theales Raﬄesiales Primulales Theales  Actinidiales Balsaminales Ericales Ericales Diapensiales Ebenales Ericales  Takhtajan (1997)  Taxonomic arrangement by previous authors  Dilleniales Dilleniales Dilleniales Dilleniales Dilleniales Primulales  Polemoniales Primulales Bruniales Primulales Sapotales  Fouquieriales Dilleniales Primulales Dilleniales Raﬄesiales Primulales Dilleniales  Dilleniales Geraniales Dilleniales Dilleniales Diapensiales Sapotales Dilleniales  Thorne (2000)  sister to FOU primuloids ericoids primuloids sister to EBE+ primuloids ericoids sister to DIA sister to DIA + STY balsaminoids not resolved primuloids  sister to POL not resolved primuloids balsaminoids not included primuloids not resolved  ericoids balsaminoids ericoids ericoids sister to STY sister to primuloids ericoids  Scho¨nenberger et al.
+(2005)  Table 1 Overview of the current families recognized in Ericales with their systematic position according to Cronquist (1988), Dahlgren (1989), Takhtajan (1997), Thorne (2000) and Scho¨nenberger et al.
+(2005).
+Family names in bold represent taxa that are entirely or predominantly herbaceous  230 F. Lens et al.
+/ Cladistics 23 (2007) 229–254  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Balsaminaceae (Geraniales, Rosidae), Roridulaceae (Rosales, Rosidae) and Polemoniaceae (Solanales, Asteridae) (Table 1; Chase et al., 1993; Olmstead et al., 1993).
+The idea of an enlarged Ericales complex was further corroborated by analyses of: (i) more rbcL data (Morton et al., 1996, 1997); (ii) nuclear DNA sequences (Soltis et al., 1997); (iii) combined molecular and morphological data (Nandi et al., 1998); (iv) plastid and nuclear DNA (Soltis et al., 2000; Albach et al., 2001); (v) additional chloroplast sequences (Savolainen et al., 2000; Bremer et al., 2002; Hilu et al., 2003); and (vi) a combination of plastid and mitochondrial DNA (Anderberg et al., 2002).
+It did not take much time before the new Ericales were recognized in a formal classiﬁcation by the Angiosperm Phylogeny Group at the base of the asterids (APG, 1998; APG II, 2003).
+In that classiﬁcation, Cornales are the ﬁrst diverging asterid clade followed by Ericales, which are sister to euasterids, although in Hilu et al.
+(2003) the Cornales–Ericales position is reversed.
+Since APG II, analyses of mitochondrial DNA sequences have assigned the non-woody holoparasite Mitrastema (Mitrastemonaceae) to the Ericales (Barkman et al., 2004), and two additional studies using plastid, mitochondrial and nuclear DNA have been published (Geuten et al., 2004; Scho¨nenberger et al., 2005).
+Despite the strong molecular support for Ericales as a whole, many interfamily relationships remain obscure.
+However, recent phylogenetic analyses of molecular data revealed some clades that are well corroborated: balsaminoids (corresponding to Balsaminaceae, Marcgraviaceae, Tetrameristaceae) are sister to the rest of the order, followed by Fouquieriaceae–Polemoniaceae that in turn are sister to a large polytomy, including all other ericalean families (Anderberg et al., 2002; Geuten et al., 2004).
+In some analyses, Fouquieriaceae–Polemoniaceae are part of the polytomy (Bremer et al., 2002; Scho¨nenberger et al., 2005).
+In this polytomy, ericoids (including Actinidiaceae, Clethraceae, Cyrillaceae, Ericaceae, Roridulaceae and Sarraceniaceae) and primuloids (including Maesaceae, Myrsinaceae, Primulaceae, Samolaceae and Theophrastaceae) represent well-supported evolutionary lines as well.
+The Bayesian analysis of Scho¨nenberger et al.
+(2005) found an additional clade uniting ericoids, Diapensiaceae, Styracaceae, Symplocaceae and Theaceae, but the taxonomic position of other families, especially Lecythidaceae and Fouquieriaceae–Polemoniaceae, requires further study.
+From a morphological point of view, the present delimitation of Ericales is hard to understand because of its huge heterogeneity.
+As a result, synapomorphies for the order as a whole are diﬃcult to ﬁnd.
+Possible examples are the simple leaves bearing single-veined teeth with an opaque deciduous cap, gland or multicellular hair (theoid leaf teeth), and gynoecia with protruding diﬀuse placentae (Judd and Olmstead, 2004).
+Other  231  distinctive characters of Ericales in comparison with other asterids are the presence of ellagic acid, and the occurrence of ﬂowers usually with twice or more as many stamens as the number of petals (versus stamens equaling or fewer than the number of petals in most other asterids), although reduction (e.g., Marcgraviaceae, Polemoniaceae) and increase (e.g., Lecythidaceae, Symplocaceae and Theaceae) in stamen number has occurred within several ericalean families (Judd et al., 2002; Smets and Pyck, 2003; Scho¨nenberger et al., 2005).
+The huge morphological variation within Ericales could be related to an early diversiﬁcation of the order.
+It is remarkable that the oldest ericalean fossils, minute ﬂower buds of Paleoenkianthus (Ericaceae,  90 Myr), are among the oldest ones known from the core eudicots (Nixon and Crepet, 1993; Dilcher, 2000; Crepet et al., 2004; Schneider et al., 2004).
+Age estimates for Ericales based on molecular data suggest even older values, ranging from about 130 to 110 Myr (Wikstro¨m et al., 2001, 2003; Bremer et al., 2004).
+It is further estimated that the Ericales diversiﬁed about 109–103 Myr, with almost all families present by the early Eocene (50 Myr) (Sytsma et al., 2006).
+Wood anatomy in cladistic analyses Although it has repeatedly been demonstrated that wood features represent an important source of phylogenetic information that needs to be considered in systematic studies (Herendeen, 1996; Baas et al., 2000; Herendeen and Miller, 2000; Carlquist, 2001a; Olson, 2005), relatively few authors have included wood features in broader morphological cladistic studies of angiosperms (e.g., Loconte and Stevenson, 1991; Anderberg, 1992; Huﬀord, 1992; Keller et al., 1996; Nandi et al., 1998; Ka˚rehed et al., 1999; Ka˚rehed, 2001; Luna and Ochoterena, 2004).
+Furthermore, the number of anatomists who have incorporated their observations in phylogenetic analyses is limited (e.g., Baas et al., 1988; Zhang, 1992; Gasson, 1994, 1996; Noshiro and Baas, 1998; Klaassen, 1999; Olson, 2002; Male´cot et al., 2004).
+The limited use of wood anatomical characters in phylogenetic analyses of angiosperms likely is caused by an insuﬃcient knowledge of microscopic wood structure among many plant systematists.
+In addition, phylogenetic analyses of morphological features have to cope with some generally known problems, such as subjectivity in character choice and character coding, the often unfavorable ratio between the number of features and taxa studied, the presence of polymorphisms within taxa, and the occurrence of continuously varying characters (Nixon and Davis, 1991; Stevens, 1991; Wilkinson, 1992, 1995; Thiele, 1993; Pleijel, 1995; Kornet and Turner, 1999; Strong and Lipscomb, 1999; Herendeen and Miller, 2000; Hillis and Wiens, 2000; Wiens, 2001).
+Some  232  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  authors even take the view that the role of morphology in phylogenetic analyses should be a minor one by stating that ‘‘rigorous and critical anatomical studies of fewer morphological characters in the context of a molecular phylogeny is the way that integrated studies will and should develop’’ (Scotland et al., 2003).
+Reaction to this view soon followed, and elaborate counter-examples have been cited in subsequent papers (e.g., Jenner, 2004; Wiens, 2004).
+Indeed, most of the problems related to morphological analyses are also true for molecular data.
+In addition, many authors have demonstrated the systematic usefulness of morphological data in phylogenetic analyses, especially when combining morphological characters with molecular ones (e.g., Nixon and Carpenter, 1996; Pennington, 1996; Kress et al., 2001; Evans et al., 2003; Lee, 2004).
+Wood structure is inﬂuenced by macroclimatic conditions, diﬀerences in life forms, and the eﬀect of pedomorphism, and this needs to be considered in comparative wood anatomical studies.
+Ecological trends in wood have been investigated in numerous studies, and can be generalized as follows: (i) vessel element length and vessel diameter decrease from wet to dry regions and from tropical to cool temperate or arctic latitudes, while the reverse is true for vessel density; (ii) a high degree of vessel grouping and the occurrence of vasicentric tracheids are most common in arid ﬂoras; and (iii) prominent helical thickenings are most abundant in Mediterranean and temperate ﬂoras (van der Graaﬀ and Baas, 1974; van den Oever et al., 1981; Carlquist, 1985, 2001a; Baas, 1986b; Dickison, 2000; Noshiro and Baas, 2000; Baas et al., 2003).
+The functional signiﬁcance of some of these trends is not yet completely understood, such as helical sculpturing and vessel element length, but other trends can be explained by the interaction between two assumingly opposite aspects of water transport in plants: eﬃciency and safety.
+For example, species growing in arctic to cold temperate climates frequently undergo freeze–thaw cycles, which may result in the formation of air bubbles in the water column (embolisms), and this seriously reduces water transport.
+As vessels with a narrow diameter are less vulnerable to freezing-induced embolism, plants from cold climates will opt for wood that is characterized by narrow vessels with scalariform perforations as this provides a safe (but less eﬃcient) water transport system.
+On the other hand, wider vessels with simple perforations are more abundant in warm and dry areas, in which moments of peak transport are needed (cf.
+Hagen– Poiseuille’s law).
+Accordingly, tropical lowland species with typically high transpiration rates have a more eﬃcient (but less safe) water transport mechanism than species from colder climates (Baas, 1976; Zimmermann, 1983; Sperry et al., 1994; Ellerby and Ennos,  1998; Davis et al., 1999; Schulte, 1999; Feild and Brodribb, 2001).
+Some of the ecologically adaptive characters mentioned above may also have a correlation with habit.
+Small shrubs are characterized by many narrow vessels showing a high percentage of scalariform perforations, while a low frequency of relatively wide vessels with simple perforations are typical of tall trees (Baas, 1976; Carlquist and Hoekman, 1985; Baas and Schweingruber, 1987; Dickison, 2000; Carlquist, 2001a; Lens et al., 2004c).
+Also lianas are characterized by among others large mean vessel diameters and an increased abundance of axial parenchyma.
+The wider vessels result in a higher water conduction capacity that is required to provide suﬃcient water transport through the relatively narrow liana stems, and the abundant axial parenchyma provides more ﬂexibility to the stem in order to protect the water column (Carlquist, 1989a).
+There are also other wood characters that can be linked to habit, such as multiseriate ray width and height, but these correlations are often poorer (Lens et al., 2004c, in press).
+In some ericalean families, such as Balsaminaceae (Janssens et al., 2006) and Myrsinaceae (Ka¨llersjo¨ et al., 2000; Lens et al., 2005a), at least some woody taxa are known to have evolved from herbaceous ancestors, which in turn originated from primarily woody ancestors.
+So, these woody taxa have secondarily derived wood, which can be characterized by one or more indicators of pedomorphism or neoteny.
+Pedomorphism in wood is deﬁned as the phenomenon in which ‘‘juvenile characteristics—those of the primary xylem—have been protracted into the secondary xylem [ ¼ wood]’’ (Carlquist, 1962, p. 31).
+Examples of these indicators are the constant decrease of vessel element length from the pith towards the cambium, the occurrence of wide scalariform intervessel pitting, and the absence of rays or the presence of exclusively upright cells in multiseriate rays (Carlquist, 1962).
+Previous studies in Ericales have revealed that wood characters generally agree with molecular phylogenies at the (sub)family level, such as Ericaceae (Lens et al., 2003, 2004a,b), Lecythidaceae (Lens et al., in press), Marcgraviaceae (Lens et al., 2005b) and Theophrastaceae (Lens et al., 2005a).
+Here, we evaluate the phylogenetic value of wood anatomical characters at the ordinal level, using the results of our earlier studies together with data from literature and additional personal observations.
+In total, 23 wood characters are used and combined with the molecular matrix of Scho¨nenberger et al.
+(2005) (hereinafter SEA), including in total 3945 parsimony informative molecular characters from chloroplast, mitochondrial as well as nuclear origin.
+The objectives of this study are: (i) to provide an overview of the wood anatomical diversity within Ericales sensu APG II (2003); (ii) to demonstrate the systematic value of wood features, with particular  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  emphasis on ecologically adaptive features, variation in life forms, neoteny and continuously varying characters; (iii) to trace evolutionary patterns of selected wood anatomical characters; and (iv) to assess the impact of a wood anatomical data set combined with a molecular data set that has orders of magnitude more characters.
+Materials and methods Material and microtechniques In order to provide an overview of the wood anatomical diversity within Ericales, personal observations were carried out on 529 samples using light microscopy (LM) and scanning electron microscopy (SEM) (Lens, 2005; Appendix 2).
+Ninety-ﬁve percent of the samples studied were derived from balsaminoids (Lens et al., 2005b), Ebenaceae, Ericaceae (Lens et al., 2003, 2004a,b,c), Lecythidaceae, primuloids (Lens et al., 2005a), and Sapotaceae.
+Information from the other families was primarily based on comprehensive wood anatomical papers, and only few wood samples from each family were investigated to verify the literature data (Lechner, 1914; Cox, 1948a,b; Metcalfe and Chalk, 1950; Thomas, 1960; Carlquist, 1976, 1984, 1988, 1989b, 2001a,b; Giebel and Dickison, 1976; DeBuhr, 1977; Kukachka, 1978–82; van den Oever et al., 1981; Carlquist et al., 1984; Dickison and Phend, 1985; Gregory, 1988; Suzuki and Noshiro, 1988; de Zeeuw, 1990; Liang and Baas, 1990, 1991; Budi, 1993; Morton, 1994; Noshiro and Baas, 1998).
+Information on aluminum accumulation in wood was gathered from Jansen et al.
+(2004b) and new observations.
+The anatomical data for the outgroup genera Aucuba, Cornus, Ilex and Hydrangea were taken from Baas (1973), Stern (1978) and Noshiro and Baas (1998), and complemented with observations from InsideWood (2004 onwards).
+Wood sections, about 25 lm thick, were cut using a sledge microtome (Reichert, Vienna, Austria).
+After sectioning, the tissues were bleached with sodium hypochlorite and stained with a mixture of safranin and alcian blue (35 : 65).
+The safranin was prepared as a 1% solution in 50% ethanol.
+The 1% alcian blue stain was dissolved in pure water.
+Afterwards, the sections were dehydrated with 50–75–96% ethanol and mounted in euparal.
+Macerations were made according to Franklin (1945).
+Observations were carried out using a Dialux 20 light microscope (Leitz, Wetzlar, Germany).
+Pictures were taken using DP50-CU digital camera (Olympus, Hamburg, Germany).
+Wood sections for SEM observations were gold-coated with a sputter coater (SPI Supplies, West Chester, PA, USA) and observed using a JEOL JSM-5800 LV and a JEOL JSM-6360 scanning electron microscope (JEOL Ltd, Tokyo, Japan).
+233  Wood characters The wood anatomical terminology follows the IAWA list of microscopic features for hardwood identiﬁcation (IAWA Committee, 1989).
+Because of the incongruence between the deﬁnitions of Baas (1986a) and Carlquist (2001a) for types of imperforate tracheary elements, we prefer to give a detailed description of these cells (Appendix 1).
+For all quantitative data on tracheary elements, 25 measurements from macerations were made.
+When distinctly bordered vessel-ray pits are mentioned, we mean that the pit pairs are half-bordered, because the pit on the vessel side is bordered, but predominantly simple on the parenchyma cell side.
+The selection of characters is based on their variation within the order and their stability at generic level (Appendix 1), and is partly similar to the ones proposed by Herendeen and Miller (2000).
+Highly variable characters in Ericales with no clear distinction between character states at the genus level were expelled from the analysis (e.g., distinctness of growth rings, porosity, occurrence of pit membrane remnants, presence of two distinct ray sizes, and incidence of sheath cells).
+The presence of breakdown ray areas, i.e., cavities in rays caused by disintegration of neighboring ray cells (Lens et al., 2005a), was also excluded because it is autapomorphic for the genus Myrsine (other Myrsinaceae genera that also develop this feature are not included in the matrix).
+In addition, only one of two dependent characters was taken into account: vessel diameter ⁄ density, vessel element ⁄ ﬁber length, and uniseriate ⁄ multiseriate ray height.
+Likewise, the number of bars per perforation plate was not included because families with exclusively scalariform perforations often show many bars (30 or more), while taxa with mixed simple and scalariform plates have considerably fewer bars (1–10) (cf.
+Herendeen and Miller, 2000).
+Features that often are correlated with ecological factors, such as vessel perforation plate (char.
+2), vessel element length (char.
+3), vessel diameter (char.
+4), vessel density (not included), helical thickenings (char.
+8) and vasicentric tracheids (char.
+9) were incorporated in the matrix (Appendix 1).
+The inclusion of ecologically adaptive features should not necessarily be rejected a priori.
+Luckow and Bruneau (1997, p. 147) stated ‘‘although ecological characters may be dependent to varying degrees on ecological or [evolutionary] adaptive processes, this does not in itself aﬀect their reliability as indicators of phylogenetic relationship’’.
+This is further supported among others by Jansen et al.
+(2001, 2004a) and Baas et al.
+(2003), who discussed examples of ecologically adaptive wood features with a strong phylogenetic signal.
+In order to evaluate the impact of diﬀerent climatic conditions, seven ecotype categories were deﬁned based on the SEA matrix: (i) temperate to tropical (sub)montane; (ii) tropical (sub)montane;  234  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  A  B  Fig.
+1.
+(A) Strict consensus tree of 11 equally most parsimonious trees based on the original wood matrix, including 23 features (ANAL 1).
+(B) Strict consensus topology of 38 most parsimonious trees based on the original wood matrix without the pedomorphic taxa, i.e., Cobaea, Empetrum, , Heliamphora, Impatiens, Lysimachia and Sarracenia (ANAL 5).
+Symbols in front of the genus names indicate their ecological preferences: , tropical (sub)montane; , temperate to boreal ⁄ arctic ⁄ alpine; , temperate; , tropical lowland; temperate to tropical (sub)montane; , tropical lowland and tropical (sub)montane; , warm arid.
+The life form is indicated by underlined letters in front of the genus names: (a) shrub to small tree < 15 m; (b) tall tree > 15 m; (c) liana.
+‘‘P’’ refers to gray taxa that can be characterized by a primitive set of wood features in the Baileyan sense, ‘‘D’’ refers to black lineages with a so-called derived wood structure.
+BA ¼ balsaminoids, E ¼ ericoids, PR ¼ primuloids, OUT ¼ outgroup; an asterisk points to secondarily woody taxa; genera in bold are herbaceous.
+Three-letter acronyms refer to the families included in Table 1.
+(iii) temperate to boreal ⁄ arctic ⁄ alpine; (iv) temperate; (v) tropical lowland; (vi) tropical lowland and tropical (sub)montane; and (vii) warm arid (Figs 1 and 4).
+Lowland regions are lower than 500 m, while montane areas have an elevation above 1000 m (including the Guyana Highlands).
+Characters that are known to be often correlated with life forms are vessel perforation plate (char.
+2), vessel element length (char.
+3) and vessel diameter (char.
+4) (Appendix 1).
+Three habit groups were recognized to investigate the inﬂuence of this phenomenon: (i) shrubs  to small trees (< 15 m); (ii) tall trees; (> 15 m); and (iii) lianas (Figs 1 and 4).
+Some characters used in the analysis, such as extremely short vessel elements (char.
+3 states 0–1), the occurrence of wide scalariform intervessel pits (char.
+5 state 0), and the absence of rays or the presence of exclusively upright cells in multiseriate rays (char.
+17 state 2), usually are indicators of pedomorphism or neoteny (Carlquist, 1962).
+In the present study, pedomorphic wood is known for species in the genus Empetrum (Carlquist, 1989b), Impatiens (Lens et al.,  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  2005b) and Lysimachia (Lens et al., 2005a), and most likely also in the genera Cobaea (Carlquist et al., 1984), Heliamphora and Sarracenia (DeBuhr, 1977).
+In order to explore the inﬂuence of pedomorphism in our matrix, we have chosen to analyze a second wood matrix with non-applicable character states for every pedomorphic character state in these genera (cf.
+Wiens et al., 2005).
+As the impact of pedomorphism in wood can diﬀer among taxa, the number of non-applicable character states for pedomorphic taxa varies: Cobaea (chars 3, 15– 17), Empetrum (chars 3, 5–6, 15–17), Heliamphora (chars 5–6, 17), Impatiens (chars 3, 5–6, 12, 15–17), Lysimachia (chars 3, 12, 15–17) and Sarracenia (char.
+17) (Appendix 1).
+Out of the 23 wood characters used in the matrix, ﬁve are continuously varying (chars 3, 4, 6, 15 and 16; see Appendix 1) and coded following the gap weighting method of Thiele (1993) with a maximum of 10 diﬀerent character states.
+This method considers the order and distribution of the mean values for a certain character  235  (determined as the mean value for all available species’ means within one genus) and converts them to ordered, multistate characters.
+The distance between the means is represented by the distance between the ordered character states in the matrix.
+As ordered characters with 10 states would overestimate the importance of the continuous characters in the analysis, we have compensated this by assigning a weight of 0.1 to these characters.
+This weighting would imply that the continuous characters are equivalent to the binary characters if homoplasy is absent, but they would not be equivalent to the multistate characters.
+Therefore, the weight of the continuous characters is increased in separate analyses (Table 2).
+The statistical tests were performed using MorphoCode, an open-source software program that implements the gap weighting method (Schols et al., 2004).
+In addition, we have chosen to order ﬁve discrete characters (chars 1, 2, 5, 14 and 17), because numerous large-scale wood studies in angiosperms have demonstrated intermediate states in these characters (Bailey  Table 2 Circumscription of each analysis performed in this study, with reference to the number of characters and taxa, number of most parsimonious trees (MPTs), tree lengths, CI and RI values, and ﬁgure numbers Name  No.
+No.
+No.
+Tree chars.
+taxa MPTs length  CI  RI  Figure numbers and speciﬁcations  ANAL 1  Original wood analysis (¼ OWA)  23  52  11  ANAL 2  OWA with weight 0.5 for continuous chars OWA minus continuous chars OWA with pedomorphic char.
+states coded as non-applicable (¼ NPWA) OWA minus pedomorphic taxa  23  52  40  18  52  108  23  52  38  23  46  38  3945  59  101  3968  59  101  106.9 0.28 0.74 Non-applicable character states for Cobaea (3, 15–17), Empetrum (3, 5–6, 15–17), Heliamphora (5–6, 17), Impatiens (3, 5–6, 12, 15–17), Lysimachia (3, 12, 15–17), Sarracenia (17) 105.0 0.30 0.73 Fig.
+1B; Genera Cobaea, Empetrum, Heliamphora, Impatiens, Lysimachia and Sarracenia excluded 14899 0.43 0.52 Fig.
+2A; Duplicate taxa in SEA matrix are included only once; Herbaceous taxa included 14899 0.43 0.52 23 non-applicable characters are added  3968 3963  59 59  41 166  15063.7 0.42 0.52 Cf.
+ANAL 1 and 6 15041 0.42 0.52 Chars 3, 4, 6, 15, 16: excluded  3968  59  30  3968 3963  59 59  17 182  15046.3 0.42 0.52 Figs 2B, 3B and 4; Cf.
+ANAL 4 and 6 15015.3 0.43 0.52 Chars 2, 3, 4, 8, 9: excluded  3963  59  163  15026  3968  59  14  ANAL 3 ANAL 4  ANAL 5  ANAL 6  ANAL 7 ANAL 8 ANAL 9 ANAL 10  ANAL 11 ANAL 12 ANAL 13 ANAL 14  Molecular analysis based on SEA (¼ MOLSEA) MOLSEA + 23 empty chars MOLSEA + OWA MOLSEA + OWA minus continuous chars MOLSEA + OWA with 5 discrete chars unordered MOLSEA + NPWA MOLSEA + NPWA minus 5 ecological chars MOLSEA + NPWA minus 5 continuous chars MOLSEA + NPWA with 5 discrete chars unordered  118.6 0.27 0.72 Fig.
+1A; 7 herbaceous taxa excluded; chars 3, 4, 6, 15, 16: continuous, ordered, weight 0.1; chars 1, 2, 5, 14, 17: discrete, ordered 199.0 0.25 0.66 Chars 3, 4, 6, 15, 16: continuous, ordered, weight 0.5 97.0 0.28 0.75 Chars 3, 4, 6, 15, 16: excluded  15042.7 0.42 0.52 Chars 1, 2, 5, 14, 17: discrete, unordered  0.43 0.52 Chars 3, 4, 6, 15, 16: excluded  15034.3 0.43 0.52 Chars 1, 2, 5, 14, 17: discrete, unordered  236  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  and Tupper, 1918; Kribs, 1937; Metcalfe and Chalk, 1950; Carlquist, 2001a).
+Cladistic analyses The taxon sampling in this study is based on the molecular matrix of SEA, although some adjustments are made.
+In our analyses, the second SEA terminal of the genera Fouquieria, Shortia and Symplocos was deleted.
+Laplacea is removed from our analyses, as this genus is submerged within Gordonia (Kubitzki, 2004).
+The genus Monotheca is a synonym of Sideroxylon (Kubitzki, 2004).
+As a result, 59 of the 63 taxa that were included in the SEA study are retained.
+This implies that the number of informative characters in the original SEA study slightly diﬀers from our study (3914 versus 3945, respectively).
+Of the 59 taxa included, seven are herbaceous, so wood characters were coded as inapplicable for Chimaphila (Ericaceae), Diapensia (Diapensiaceae), Galax (Diapensiaceae), Polemonium (Polemoniaceae), Primula (Primulaceae), Samolus (Samolaceae) and Shortia (Diapensiaceae).
+The genera Aucuba (Garryaceae, Garryales, euasterid I), Cornus (Cornaceae, Cornales, basal asterids), Hydrangea (Hydrangeaceae, Cornales, basal asterids) and Ilex (Aquifoliaceae, Aquifoliales, euasterid II) form the outgroup.
+In the combined analysis, 23 informative wood characters (Appendix 1) were analyzed in combination with the molecular matrix of the SEA study including 19 768 characters of which 3945 characters are potentially parsimony informative.
+The sequence data are derived from the chloroplast (atpB, matK, ndhF, rbcL, rps16, trnT-F and trnv-atpE), mitochondrial (atp1 and matR) and nuclear DNA (18S and 26S).
+In order to assess the impact of a small number of morphological characters (n ¼ 23) on a molecular data set comprising orders of magnitude more parsimony informative characters (n ¼ 3945), we carried out an analysis with nonapplicable character states for all 23 wood characters (ANAL 7).
+Diﬀerences in bootstrap values between the latter analysis and the combined analysis will be discussed.
+In order to evaluate our search strategy, we ﬁrst analyzed the original SEA matrix using PAUP*4.0b10 (Swoﬀord, 2002) to compare our trees with the SEA topologies.
+As both analyses resulted in identical trees, the following search strategy was chosen: stepwise addition of 100 random taxa sequences, followed by Tree Bisection-Reconnection (TBR) branch swapping (100 trees held at each step during the stepwise addition, MULTREES on, STEEPEST DESCENT on).
+Bootstrap analyses were conducted with the same software program, employing a full heuristic search with 500 replicates, a simple addition sequence, and TBR swapping (10 trees held at each step, MULTREES on,  STEEPEST DESCENT on).
+The consensus of the bootstrap replicates was used to determine bootstrap values.
+The search strategy of the wood matrix was adjusted because of excessive computational time to run the analysis to completion.
+Therefore, MULTREES option was turned oﬀ, and a heuristic search using 1000 instead of 100 replicates was carried out.
+Furthermore, a topological constraint tree had to be postulated in which the ingroup was forced to be monophyletic.
+The ﬁnal cladogram ﬁgures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.
+As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.
+In addition, the option ‘‘soft polytomies’’ was used.
+A total number of 14 analyses are performed in this study (ANAL 1–14; Table 2).
+Each analysis represents an adjustment compared with the original analysis in order to assess the impact of the continuous, ecological and pedomorphic characters.
+Results Wood analyses (ANAL, 1–5; Fig.
+1) A parsimony analysis of the original wood matrix resulted in 11 equally parsimonious trees with a length of 118.6 steps (ANAL 1) [all characters are parsimony informative; consistency index (CI) ¼ 0.27; retention index (RI) ¼ 0.72].
+The strict consensus tree (Fig.
+1A) strongly deviates from the molecular phylogenies and most families prove to be para- or polyphyletic, except for Marcgraviaceae, Sapotaceae, Styracaceae and Tetrameristaceae.
+An early diverging clade includes Styracaceae plus Sladenia followed by a large polytomy.
+Within this large polytomy, several clades can be recognized, such as Impatiens–Empetrum–Heliamphora–Ficalhoa– Camellia–Gordonia, Roridula–Sarracenia, Acanthogilia– Cobaea, Fouquieriaceae–Lecythidaceae–Ebenaceae, Cantua–Sapotaceae, and primuloids(PR)–balsaminoids(BA) (without the pedomorphic genera Impatiens and Lysimachia).
+A bootstrap analysis gives a poorly resolved polytomy (not shown) in which only Marcgraviaceae (83), Sapotaceae without Sarcosperma (81), Tetramerista–Pentamerista (79), Barringtonia–Couroupita (80) and Roridula–Sarracenia (54) form a clade.
+If the weight of continuous characters is increased to 0.5, resolution of the strict consensus tree increases (topology not shown; ANAL 2): Styracaceae–Ficalhoa–Sladenia, Schima–Gordonia, and Roridula–Heliamphora– Empetrum–Sarracenia form early diverging clades, followed by Lecythidaceae–Sapotaceae–Ebenaceae, which is sister to primuloids–balsaminoids–Polemoniaceae  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  (without Acanthogilia).
+Exclusion of the continuous characters (topology not shown; ANAL 3) results in a less resolved topology in which only balsaminoids (without Impatiens) and Sapotaceae are monophyletic.
+When pedomorphic character states are coded as nonapplicable, parsimony analyses ﬁnd 38 most parsimonious trees with a length of 106.9 (ANAL 4) (CI ¼ 0.28, RI ¼ 0.75).
+The strict consensus topology (not shown) is somewhat diﬀerent from Fig.
+1A: the ﬁrst diverging lineages are all unresolved, but in the last diverging clades Fouquieriaceae–Lecythidaceae–Ebenaceae are sister to a large clade consisting of balsaminoids, primuloids, Sapotaceae and Cantua.
+Within the last diverging group, only Marcgraviaceae, Sapotaceae and Tetrameristaceae are monophyletic.
+These three families are also corroborated by bootstrap support values: Marcgraviaceae (76), Sapotaceae (82) and Tetrameristaceae (58).
+If the pedomorphic taxa are excluded from the wood analysis, heuristic searches ﬁnd 38 most parsimonious trees with 105.0 steps (ANAL 5) (CI ¼ 0.30, RI ¼ 0.73).
+The strict consensus (Fig.
+1B) resembles Fig.
+1A in the later diverging groups.
+In addition, there is another large clade uniting all genera of ericoids, Pentaphylacaceae (without Sladenia), Symplocaceae, and Theaceae plus the genus Acanthogilia.
+The bootstrap consensus tree (not shown) resembles the poorly resolved polytomy found in the original analysis.
+Molecular analyses (ANAL, 6–7; Figs 2A and 3) The analysis of the slightly adjusted SEA matrix (ANAL 6), including 59 taxa and 3945 informative characters, results in 101 equally parsimonious trees with length 14 899 (CI ¼ 0.43, RI ¼ 0.52).
+The strict consensus tree (Fig.
+2A) is similar to strict consensus topology of the combined analyses (Fig.
+2B) and to the parsimony topology in SEA: balsaminoids are sister to a large polytomy, including Ebenaceae–primuloids, ericoids, Fouquieriaceae–Polemoniaceae, Lecythidaceae, Pentaphylacaceae, Sapotaceae, Styracaceae–Diapensiaceae, Symplocaceae and Theaceae.
+The only diﬀerence with the SEA strict consensus tree is that the taxonomic position of Symplocaceae is unresolved in our analysis (probably because Symplocos is only included once in our study), and that Actinidia–Roridula and Heliamphora– Sarracenia are not resolved as sisters.
+The Bayesian analysis of SEA (Fig.
+3a) shows several additional clades within the large polytomy, such as Sapotaceae– Ebenaceae–primuloids (clade III) and ericoids–Symplocaceae–Theaceae–Styracaceae–Diapensiaceae.
+Likewise, the bootstrap consensus tree of ANAL 6 shows these two clades as well, plus an additional relationship between Lecythidaceae and Polemoniaceae–Fouquieriaceae (59) (Fig.
+3B).
+Within ericoids, Actinidia–Roridula and Heliamphora–Sarracenia form a clade (68) that is  237  fully supported as sister to the other genera.
+The strict and the bootstrap consensus trees of our molecular analyses are nearly identical to the trees based on the same matrix plus 23 non-applicable characters (topologies not shown; ANAL 7).
+Combined analyses of the molecular ⁄ original wood matrix (ANAL 8–10; Figs 2B and 3B) A parsimony analysis of the combined matrix revealed 41 most parsimonious trees with a length of 15 063.7 steps (ANAL 8) (3968 characters are parsimony-informative, CI ¼ 0.42, RI ¼ 0.52).
+The strict consensus tree of ANAL 8 (cf.
+Fig.
+2B; clades indicated by double arrows collapse) is nearly identical to Fig.
+2A, except for Lecythidaceae–(Fouquieriaceae– Polemoniaceae), and Ebenaceae–primuloids.
+The bootstrap topology of ANAL 8 strongly resembles the molecular bootstrap topology (ANAL 6; cf.
+Fig.
+3B).
+There is also some evidence for one additional clade: Pentaphylacaceae are sister to ericoids, Theaceae and Symplocaceae–Styracaceae–Diapensiaceae (61) forming clade IV (Fig.
+3B).
+The bootstrap support values of the combined data are slightly higher or lower than the values based on molecular data only (Fig.
+3B).
+If the same analysis is carried out without the ﬁve continuous characters (chars 3, 4, 6, 15, 16; ANAL 9), the sister relationship between Lecythidaceae and Fouquieriaceae–Polemoniaceae disappears in the strict consensus tree (not shown).
+The bootstrap topologies of the analyses including ⁄ excluding the continuous data remain the same, but two clades in ANAL 9 receive a slightly higher support value compared with ANAL 8: clade II (65 versus 59) and clade III (66 versus 57).
+The consideration of ﬁve ordered, non-continuous wood characters into unordered characters (chars 1, 2, 5, 14, 17; ANAL 10) leads again to the disappearance of the relationship between Lecythidaceae and Fouquieriaceae–Polemoniaceae in the strict consensus tree (topology not shown).
+The bootstrap topology and support values are very similar to the original combined analysis (Fig.
+3B): only clade II receives greater support (67 versus 59).
+Combined analyses of the molecular ⁄ non-pedomorphic wood matrix (ANAL 11–14; Figs 2B and 3B) When the pedomorphic character states are not taken into account (cf.
+Wiens et al., 2005), 17 most parsimonious trees are found with a length of 15 046.3 (ANAL 11; CI ¼ 0.42, RI ¼ 0.52).
+The strict consensus tree of this analysis (Fig.
+2B) is similar to the one of the original combined matrix (ANAL 8), and shows improved resolution for the relationships of Impatiens, Ebenaceae–primuloids, and Actinidia–Roridula–Heliamphora– Sarracenia (double arrows in Fig.
+2B).
+The bootstrap  238  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Fig.
+2.
+(A) Strict consensus tree of 101 equally most parsimonious trees based on the molecular matrix, including 3945 informative characters (ANAL 6).
+(B) Strict consensus topology of 17 equally most parsimonious trees based on 3968 informative characters of the combined wood and molecular matrix with the pedomorphic character states coded as inapplicable (ANAL 11).
+The strict consensus tree of the original combined analysis (ANAL 8) is similar, except for the clades marked by double arrows.
+The single arrows point to clades that collapse in (A).
+BA ¼ balsaminoids, E ¼ ericoids, PR ¼ primuloids, OUT ¼ outgroup; an asterisk points to secondarily woody taxa; genera in bold are herbaceous.
+Three-letter acronyms refer to the families included in Table 1.  topology of ANAL 11 is identical to the bootstrap topology of the original combined analysis (ANAL 8), but a slight increase of support values for the already established clades can be seen in comparison with the original combined analysis: clade II (69 versus 59), clade  III (65 versus 57), and Actinidia–Roridula–Heliamphora– Sarracenia (77 versus 70) (Fig.
+3B).
+The bootstrap support of the non-pedomorphic combined topology drops again to the values seen in the original combined tree (Fig.
+3B) if the ﬁve ecologic-  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  239  Fig.
+3.
+(A) Bayesian topology of the SEA study using 11 molecular markers (3945 informative characters, duplicate genera are excluded).
+Only branches with posterior probability of 1.0 are shown.
+(B) Bootstrap consensus tree based on the combined non-pedomorphic matrix using 11 molecular markers and 23 wood characters (ANAL 11).
+Major clades referred to in the text are numbered I–IV.
+Numbers above branches show bootstrap values of ANAL 11 ⁄ ANAL 8 ⁄ ANAL 6, respectively.
+Branches without support values have a bootstrap frequency of 100%.
+Arrows point to branches that are not present in (A).
+BA ¼ balsaminoids, E ¼ ericoids, PR ¼ primuloids, OUT ¼ outgroup; an asterisk points to secondarily woody taxa; genera in bold are herbaceous.
+Three-letter acronyms refer to the families included in Table 1.  ally adaptive features are omitted (chars 2, 3, 4, 8, 9; ANAL 12).
+The strict consensus tree of ANAL 12 (topology not shown) shows less resolution than Fig.
+2B, for instance in the relationship between Impatiens and Tetrameristaceae, Lecythidaceae and Polemo-  niaceae–Fouquieriaceae, Ficalhoa–Sladenia and the other Pentaphylacaceae, and between Actinidia–Roridula and Heliamphora–Sarracenia.
+As in the original combined analysis (ANAL 9), exclusion of continuous wood features (ANAL 13)  240  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Fig.
+4.
+Character evolution of selected wood anatomical features (chars 1, 2, 5, 7, 8, 9, 10, 13, 14, 17, 19, 21) plotted on the combined non, temperate to pedomorphic bootstrap tree (Fig.
+3b; ANAL 11).
+Symbols in front of the genus names indicate their ecological preferences: , tropical (sub)montane; , temperate to boreal ⁄ arctic ⁄ alpine; , temperate; , tropical lowland; , tropical lowland tropical (sub)montane; , warm arid.
+The life form is indicated by underlined letters in front of the genus names: (a) shrub to small tree and tropical (sub)montane; < 15 m; (b) tall tree > 15 m; (c) liana.
+‘‘P’’ refers to gray taxa that can be characterized by a primitive set of wood features in the Baileyan sense, ‘‘D’’ refers to black lineages with a so-called derived wood structure.
+BA ¼ balsaminoids, E ¼ ericoids, PR ¼ primuloids, OUT ¼ outgroup; an asterisk points to secondarily woody taxa; genera in bold are herbaceous.
+Three-letter acronyms refer to the families included in Table 1.
+Major clades referred to in the text are numbered I–IV.
+Character numbers and their states are listed in Appendix 1.  does not show sister relationships between Lecythidaceae and Fouquieriaceae–Polemoniaceae, and between Ebenaceae and primuloids in the strict consensus tree (topology not shown).
+Furthermore, the Actinidia–Roridula–Heliamphora–Sarracenia clade falls apart into Actinidia–Roridula and Heliamphora– Sarracenia, and falls outside ericoids.
+The bootstrap  topology of ANAL 13 shows similar relationships as in Fig.
+3B.
+Nevertheless, some of the bootstrap values are higher than in ANAL 11: Pentaphylacaceae (83 versus 76), and clade IV without Pentaphylacaceae (74 versus 67).
+If only the continuous characters are considered ordered (ANAL 14), the strict consensus tree (not  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  shown) is nearly identical to Fig.
+2B, except for the Actinidia–Roridula–Heliamphora–Sarracenia relationship, and the resolved position of Symplocos as sister to Styracaceae–Diapensiaceae.
+Also the bootstrap topology of ANAL 14 (not shown) is very similar, except for the bootstrap values that are somewhat lower compared with ANAL 11 (Fig.
+3B).
+Discussion Wood-based analyses The analyses of the wood matrix alone ﬁnd trees that largely contradict our current molecular-based insights in the phylogeny of Ericales.
+Furthermore, the majority of the families in the wood analysis do not appear monophyletic in the strict consensus topology (Fig.
+1A), while several molecular studies have demonstrated the opposite (e.g., Anderberg et al., 2002; Scho¨nenberger et al., 2005).
+The few families that can be delimited by a unique combination of wood features are Marcgraviaceae [Lens et al., 2005b; vasicentric axial parenchyma (char.
+13 state 2), high and wide multiseriate rays with heterocellular body ray cells (chars 15 state 6, 16 states 3–6, 17 state 1), and raphides (char.
+19 state 1)], Tetrameristaceae [Lens et al., 2005b; thick ﬁber walls (char.
+12 state 1), combination of apotracheal and paratracheal axial parenchyma (char.
+13 states 0 and 2), and raphides (char.
+19 state 1)], and Sapotaceae [Kukachka, 1978–82; thick ﬁber walls (char.
+12 state 1), banded axial parenchyma (char.
+13 state 1), narrow and low multiseriate rays (chars 15 state 0, 16 state 0), and crystal sand (char.
+21 state 1)].
+One explanation oﬀered for poorly resolved wood phylogenies is that there is an overwhelming amount of noise in a wood matrix (Baas et al., 1988; Zhang, 1992; Noshiro and Baas, 1998; Klaassen, 1999).
+The deviating wood topologies can be largely attributed to the correlation of the wood structure with (macro)climatic conditions, and this is most pronounced in vessel characters (chars 2, 3, 4, 8).
+It frequently has been discussed that similar ecological factors result in convergent wood anatomical trends and—to a lesser extent—in reversals that hamper the search for evolutionary relationships (Baas and Wheeler, 1996).
+The impact of these trends becomes obvious when the distribution area of the ericalean families is investigated: Fig.
+1 shows that nearly all families growing in (sub)tropical lowland regions are part of one clade comprising balsaminoids, primuloids, Ebenaceae, Lecythidaceae and Sapotaceae (largely corresponding to clades I and III in Fig.
+3B), together with the more xeromorphic Fouquieriaceae and the ecological more variable Polemoniaceae (corresponding to clade II in Fig.
+3B).
+Ecologically adaptive features that character-  241  ize this large group are relatively wide vessels that are 100 lm or more in tangential diameter (char.
+4 states 5– 9) and simple perforations (char.
+2 state 2), two features of which especially the former contributes to the eﬃciency of water transport (Zimmermann, 1983; Ellerby and Ennos, 1998; Schulte, 1999).
+This contrasts with the narrower vessels (char.
+4 states 0–4) having scalariform perforations (char.
+2 state 0) and helical thickenings (char.
+8 state 1) that deﬁne clade IV.
+Representatives of the latter clade generally grow in (sub)tropical montane to more temperate or even boreal–arctic areas in which high rates of water conduction are not needed, so a safe xylem transport prevails over an eﬃcient transport (e.g., Baas, 1976; Zimmermann, 1983; Feild and Brodribb, 2001).
+The clear ecological trends notwithstanding, clade IV is supported in the total evidence bootstrap topologies (Fig.
+3B) and also—to a large extent—in the Bayesian topology of SEA (Fig.
+3A), while the tropical lowland clades I–III form at least two evolutionary lines (Fig.
+3B).
+Furthermore, exclusion of the ecologically adaptive features (ANAL 12) results in a loss of resolution in the strict consensus trees and a decrease of bootstrap values among the major evolutionary lines.
+This indicates that ecologically adaptive features possess a supplementary phylogenetic signal, i.e., the adaptation from temperate or tropical montane Cornales-like ancestors towards tropical lowland Ericales lineages prove to coincide with cladogenesis, and therefore these features should not be excluded a priori in phylogenetic analyses (cf.
+Luckow and Bruneau, 1997).
+In addition to the ecological impact, wood anatomical features also vary with plant habit (Baas, 1976; Carlquist and Hoekman, 1985; Baas and Schweingruber, 1987; Dickison, 2000; Carlquist, 2001a; Lens et al., 2004c).
+This might explain why Polemoniaceae (shrubs and vines; Fig.
+1) are not reconstructed as a monophyletic group in the wood-based phylogeny (Fig.
+1), and appear not to be closely related to Fouquieriaceae (shrubs to columnar stem succulents; Kubitzki, 2004), despite a strong molecular relationship between both families.
+Parsimony analysis of ANAL 1 (Fig.
+1A) shows another suprafamily clade that corresponds well to molecular phylogenies: balsaminoids (without Impatiens).
+The presence of septate ﬁbers (char.
+11 state 1), mainly paratracheal axial parenchyma (char.
+13 state 2), high multiseriate rays (char.
+16 states 6–9), and the presence of raphides in rays (char.
+19 state 1) corroborate their monophyletic origin (Lens et al., 2005b).
+It is not surprising that Impatiens does not belong to the balsaminoids in the wood analyses, as the few woody Impatiens species are secondarily woody.
+The secondarily derived wood in Impatiens is very clear because of several deviating pedomorphic features: the constant decrease of vessel element length with age (char.
+3 state 0), very wide scalariform vessel pits (char.
+5 state 0; char.
+242  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  6 state 9), and extremely wide (char.
+15 state 9) and high multiseriate rays (char.
+16 state 9) with exclusively upright ray cells (char.
+17 state 2) (Lens et al., 2005b).
+Figure 1A shows two additional examples of the misleading eﬀect of pedomorphism on phylogeny reconstruction: (i) the genus Lysimachia is not associated with the other primuloids, and (ii) Empetrum (Ericacaceae) is part of a clade, including two other pedomorphic taxa: Impatiens and Heliamphora.
+These peculiar relationships provide evidence for the hypothesis of Carlquist (1962, p. 44) who stated that ‘‘Phylesis both toward or away from herbaceousness would involve juvenile expressions, so these could not be used as criteria of one ancestry or the other’’.
+Also Wiens et al.
+(2005, p. 100) commented on the eﬀect of pedomorphosis in his evolutionary study of salamanders: ‘‘the analysis of pedomorphic species can be problematic because of the absence of cladespeciﬁc adult traits that would allow their correct placement, rather than just the misleading presence of larval traits shared among all pedomorphic species’’.
+If the pedomorphic taxa are excluded from the wood matrix, two large clades appear that correspond well to macroclimatic zones (Fig.
+1B): (i) a largely (sub)tropical lowland clade (corresponding to clades I–III in Fig.
+3B, except for Acanthogilia), deﬁned by a so-called derived set of wood features in the Baileyan sense [i.e., distinct vessel multiples (char.
+1 states 1–2), simple perforations (char.
+2 state 2), alternate intervessel pitting (char.
+5 state 4), ﬁbers with simple to minutely bordered pits (char.
+10 state 0), and paratracheal or banded apotracheal axial parenchyma (char.
+13 states 1–2)], and (ii) a (sub)tropical montane to more temperate ⁄ boreal clade (comparable with clade IV in Fig.
+3B, except for Styracaceae and Sladenia), which can be characterized by a so-called primitive Baileyan syndrome of wood features [solitary vessels (char.
+1 state 0), scalariform perforations (char.
+2 state 0), mainly opposite to scalariform vessel pitting (char.
+5 states 0–2), ﬁbers with distinctly bordered pits (char.
+10 state 1), and diﬀuse or diﬀuse-in-aggregates axial parenchyma (char.
+13 state 0)] (Bailey and Tupper, 1918; Kribs, 1937; Fig.
+4).
+From a wood anatomical point of view, it is understandable that Styracaceae and Sladenia fall outside the two large clades: they share many features with the second clade (Fig.
+4), but there are also links with the ﬁrst clade, such as distinct vessel multiples (char.
+1 states 1–2) and the tendency to alternate intervessel pitting (char.
+5 states 3–4) (Dickison and Phend, 1985; Liang and Baas, 1990).
+The recognition of balsaminoids in Fig.
+1A together with the so-called primitive wood clade in Fig.
+1B demonstrates that wood anatomical features include phylogenetic signals that can deﬁne large evolutionary lines within Ericales.
+This corroborates the ﬁndings of various wood studies in Ericales at the family ⁄ tribal level that have demonstrated the systematic usefulness of wood characters in diﬀerent families (Lens et al.,  2003, 2004a,b, 2005a,b, in press), primuloids (Lens et al., 2005a) and balsaminoids (Lens et al., 2005b).
+The systematic signiﬁcance of wood anatomy is not only restricted to Ericales, but has also been demonstrated in many other dicotyledonous groups (e.g., Oleaceae: Baas et al., 1988; Sapindaceae: Klaassen, 1999; eudicots: Jansen et al., 2001; Moringaceae: Olson, 2002).
+Combined analyses The inclusion of morphological and molecular data in a combined analysis is widely accepted and encouraged by most systematists, because it generally presents the best way to unravel the phylogeny of a speciﬁc group, even if the number of informative morphological characters is swamped by molecular ones (Nixon and Carpenter, 1996; Pennington, 1996; Ka˚rehed, 2001; Kress et al., 2001; Evans et al., 2003; Lee, 2004).
+In the present study, the small morphological data set has a clear impact on phylogeny reconstruction, indicated by diﬀerences between the combined versus molecular topologies.
+For example, the strict consensus tree of combined non-pedomorphic analysis (ANAL 11) shows an increased resolution compared with the molecular analysis (ANAL 6) in the relationship of Impatiens, clade II, and Actinidia–Roridula and Heliamphora– Sarracenia (single arrows in Fig.
+2B).
+The topology of ANAL 11 diﬀers from ANAL 6 in the following aspects: (i) evidence is found for a sister relationship between Pentaphylacaceae and the other families with a primitive wood structure in the Baileyan sense (ericoids–Theaceae–Symplocaceae–Styracaceae–Diapensiaceae) leading to a monophyletic clade IV (also found in the original combined bootstrap topology), and (ii) several large evolutionary lines are supported by higher bootstrap values (Fig.
+3B).
+The increase in resolution and bootstrap support at higher taxonomic levels in the combined topologies of ANAL 11 compared with the molecular analysis (ANAL 6) can be compared with the improved resolution of the SEA Bayesian topology, which is based on molecular data alone (Fig.
+3).
+The positive eﬀect of this combined analysis oﬀers new evidence to emphasize the systematic importance of wood characters.
+Two examples can be cited, i.e., Actinidiaceae–Roridulaceae– Sarraceniaceae (77 versus 70), and clade III (65 versus 57) (Fig.
+3B).
+The former clade has already been well established in various molecular studies (Morton et al., 1997; Anderberg et al., 2002; Bremer et al., 2002; Scho¨nenberger et al., 2005), while the latter clade provides further evidence for the controversial taxonomic position of Sapotaceae, which is sometimes linked to Lecythidaceae (Morton et al., 1997; Anderberg et al., 2002).
+Another interesting relationship in the combined bootstrap trees of ANAL 11 (and ANAL 8) is that Pentaphylacaceae are sister to rest of clade IV.
+F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Although this large clade has never been proposed before in molecular analyses, this relationship makes sense from a wood anatomical point of view: nearly all its members are characterized by a unique primitive syndrome of wood features in the Baileyan sense, which is evident in all major cell types (Fig.
+4).
+Moreover, the presence of strong aluminum accumulators (Jansen et al., 2004b) and the occurrence of more than two fertile stamen whorls provides additional morphological evidence for the inclusion of Pentaphylacaceae within clade IV (Fig.
+4; Caris, personal communication).
+It is striking, but not uncommon in woody angiosperms, that so-called primitive wood features are characteristic of relatively derived APG clades at a high taxonomic level, e.g., the asterid orders Aquifoliales (e.g., Baas, 1973), Cornales (Noshiro and Baas, 1998) and Garryales (Noshiro and Baas, 1998).
+Other relationships in the combined analyses are more ambiguous.
+As demonstrated in our study, the position of Lecythidaceae remains problematic.
+Figures 2B and 3B provide evidence for a sister relationship between Lecythidaceae and Polemoniaceae– Fouquieriaceae (clade II), an association that has never been proposed before.
+However, removal of the ﬁve continuous wood characters, or exclusion of the ﬁve ecologically adaptive features, or a switch from the ﬁve discrete ordered to unordered characters leads to the disappearance of this clade in the strict consensus trees.
+Despite the large diﬀerences in life form between the three families, there are several wood characters that support clade II, such as simple perforations (char.
+2 state 2), relatively short vessel elements (char.
+3 states 0–2), alternate intervessel pits (char.
+5 state 4), banded axial parenchyma (char.
+13 state 1), and the presence of prismatic crystals in axial parenchyma (char.
+20 state 1; absent in Polemoniaceae).
+Furthermore, Fouquieria and Napoleonaea share vasicentric tracheids (char.
+9 state 1), a feature that is scarce in other ericalean members, except for Sapotaceae (Carlquist et al., 1984; de Zeeuw, 1990; Carlquist, 2001b; Kukachka, 1978–82; Lens et al., in press).
+However, most of these characters are common in clades I–III, and more morphological ⁄ molecular characters together with many more taxa need to be studied before this relationship can be further established.
+Symplocaceae is another family of which the closest relatives remain unresolved.
+In the molecular bootstrap analysis, the family is moderately supported as sister to Styracaceae–Diapensiaceae, a placement that agrees with ﬂower characters (Caris et al., 2002; SEA).
+From a wood anatomical point of view, Symplocaceae seem more closely related to Theaceae due to the co-occurrence of solitary vessels, and a distinctive combination of aluminum accumulation in the wood (char.
+23 state 1; Jansen et al., 2004b) and strongly reduced borders in the vessel-ray pits, although also distinctly bordered vessel-ray pits are  243  present (char.
+7 states 0–1; van den Oever et al., 1981; Liang and Baas, 1990, 1991).
+The strict consensus trees of the combined parsimony analyses of the data sets without the continuous characters (ANAL 9, 13) show similar but slightly less resolved topologies compared with the total evidence analyses (ANAL 8, 11).
+For instance, clade II disappears in ANAL 9 and 13, and the relationship between Ebenaceae and primuloids collapses in ANAL 13.
+Bootstrap topologies also remain similar, but, surprisingly, support values in ANAL 9 and 13 increase for several clades compared with the total evidence analyses: clade II (65 versus 59) and clade III (66 versus 57) receive higher support in ANAL 9, and Pentaphylacaceae (83 versus 76) and clade IV without Pentaphylacaceae (74 versus 67) shows higher support in ANAL 13.
+Evolution of wood characters in Ericales In order to trace the evolutionary patterns of the wood structure in Ericales, selected wood characters with potential systematic value are plotted on the combined non-pedomorphic bootstrap topology (Fig.
+4).
+The fact that morphological data are plotted on a tree that is partly based on the same features does not necessarily assume circular reasoning.
+It is more important that the characters included in the matrix are all independent, and that they possess potential phylogenetic information (for a detailed discussion, see Luckow and Bruneau, 1997).
+One must also take into account that the phylogenetic trees only show the wood diversity of the ericalean taxa included (55 versus 357).
+For more details on the separate lineages, we refer to wood anatomical papers in the list of references.
+The so-called primitive wood structure in Cornales (represented by Cornus and Hydrangea in the outgroup) is nearly identical to the anatomy present in clade IV in vessel (chars 2 state 0, 3 states 3–9, 4 states 0–4, 5 states 0–3, 8 state 1) and ﬁber morphology (char.
+10 state 1), axial parenchyma distribution (char.
+13 state 0), and uniseriate rays incidence (char.
+14 state 0) (Fig.
+4).
+As the position of balsaminoids as sister to the other ericalean lineages is strongly supported, the evolution towards a ‘‘derived’’ wood structure must have occurred at least twice depending on the ambiguous relationship between clades II, III and IV.
+As mentioned before, the adaptation of cornalean–ericalean ancestors from more temperate and boreal ⁄ arctic regions into warm tropical lowland forests is probably the driving force behind the convergent evolution to so-called derived vessel elements (shorter and wider cells with simple perforations and alternate pitting; chars 2 state 2, 3 states 0–2, 4 states 5–9, 5 state 4), ﬁbers with simple to minutely bordered pits (char.
+10 state 0), and banded or paratracheal parenchyma (char.
+13 states 1–2) (Bailey and Tupper, 1918; Kribs, 1937; Carlquist, 2001a).
+244  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  The majority consensus trees of the molecular (ANAL 6) and combined non-pedomorphic analyses (ANAL 11) ﬁnd conﬂicting hypotheses for the ambiguous relationships between clades II, III and IV: ANAL 11 shows evidence for a sister relationship between clades II and III (81%), but ANAL 6 ﬁnds much more parsimonious trees in which clades III and IV are sisters (77%).
+From a wood anatomical point of view, it is most unlikely that there has been a massive reversal from the derived to the primitive condition in the common ancestor of clade IV, even if this massive reversal would be a more or equally parsimonious way to explain character evolution.
+Therefore, we favor the retention hypothesis, in which we state that the so-called primitive wood structure in clade IV is a retention of the primitive anatomy present in Cornales.
+In this retention scenario, the relationships proposed in the majority consensus tree of ANAL 11 imply only two (instead of three in ANAL 6) convergent evolutionary lines to the derived condition: one to clade I, and one to the sister clades II–III.
+Evidence from fossils and DNA sequence data demonstrate that the diversiﬁcation into the two ericalean wood types most likely has taken place relatively shortly after the origin of Ericales, allowing most evolutionary lines in clades I–III to develop distinct wood features (Sytsma et al., 2006) (Fig.
+4).
+For example, balsaminoids (clade I) and primuloids (clade III) can be characterized by septate ﬁbers (char.
+11 state 1), and high multiseriate rays (char.
+16 states 6–9) with heterocellular body ray cells (char.
+17 state 1), but they clearly diﬀer in the presence of mineral inclusions [raphides (char.
+19 state 1) versus prismatic crystals (char.
+18 state 1) or silica bodies (char.
+22 state 1)].
+In addition, the families Ebenaceae, Sapotaceae (both clade III) and Lecythidaceae (clade II) share banded axial parenchyma (char.
+13 state 1), low (char.
+16 states 0–1) and narrow multiseriate rays (char.
+15 states 0–2) with exclusively procumbent body ray cells (char.
+17 state 0), and prismatic crystals in axial parenchyma (char.
+20 state 1), but they can be distinguished from each other based on the presence of vasicentric tracheids (char.
+9 state 1) and crystal sand (both typical of Sapotaceae; char.
+21 state 1), the presence of two types of vessel-ray pitting (unique to Sapotaceae and Lecythidaceae; char.
+7 state 2), and the tendency to form opposite to alternate intervessel pitting (Ebenaceae; char.
+5 state 3) (Fig.
+4).
+The wood diversity within clade IV is much lower: only Theaceae and many Symplocaceae can be distinguished anatomically from the other representatives by the occurrence of vessel-ray pitting with much reduced borders (char.
+7 state 1).
+There are some exceptions to the characterization of two major wood types at a lower taxonomic level, which is caused by diﬀerences in habitat, life form and secondary woodiness (Fig.
+4).
+The impact of  diﬀerent habitats is clear in the typical tropical lowland clades I–III: the common vessel type (relatively large diameter and predominantly simple perforations) is not present in the (sub)montane tropical genera Impatiens, Lissocarpa, Norantea and Pentamerista, which is a conﬁrmation for the generally accepted ecological trends in wood (e.g., Baas, 1976; Carlquist, 2001a).
+Furthermore, the eﬀect of diﬀerences in life form may provide an explanation why the vessel morphology between clades I–III and clade IV diﬀers: relatively wide vessel elements (char.
+4 states 5–9) with simple perforations (char.
+2 state 2) are common in clades I–III because of the abundance of tall trees, while narrow vessels with scalariform perforations are typical of clade IV in which shrubs and small trees are dominant (e.g., Baas, 1976).
+Genera that have an atypical life form compared with the other members of the same clade often show diﬀerences in vessel diameter and ⁄ or the type of perforation (Fig.
+4).
+For example, mixed scalariform ⁄ simple perforations (char.
+2 state 1) occur always in Napoleonaea (clade II), a typical member of the understorey vegetation in tropical West Africa.
+Also other Lecythidaceae that grow in the same understorey vegetation type, such as Brazzeia, Pierrina and Rhaptopetalum, have the same mixed perforation type (Carlquist, 1988; Lens et al., in press).
+Other examples that illustrate the impact of habit are relatively wide vessels in climbing Actinidia species (clade IV; char.
+4 state 7; Carlquist, 1989a) and in tall trees of Bruinsmia (clade IV; char.
+4 state 7; Dickison and Phend, 1985), while narrow vessels are present in shrubs to small trees of Acanthogilia, Cantua, Clavija, Fouquieria and Lysimachia (members of clades I–III; char.
+4 states 0–1; Carlquist et al., 1984; Carlquist, 2001b; Lens et al., 2005a).
+The eﬀect of secondary woodiness on the evolution of wood characters in Ericales has already been discussed in previous paragraphs.
+The genus that shows the most pedomorphic characters is Impatiens (chars 3, 5–6, 12, 15–17).
+The fact that all pedomorphic taxa included have narrow vessels (char.
+4 states 0–2) is not surprising because they are represented by small ‘‘woody herbs’’ or tiny shrubs.
+In the lianous genus Cobaea (clade II), the pedomorphic impact blurs the typical climbing anatomy, which is illustrated by relatively narrow vessel elements and the absence of rays (Carlquist et al., 1984; Carlquist, 1989a).
+Conclusions The wood structure of the highly diverse order Ericales contains phylogenetically important information, despite homoplasious trends caused by ecological adaptations, habit and secondary woodiness.
+Combined  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  wood ⁄ molecular matrices, including < 1% wood anatomical characters and with pedomorphic character states coded as inapplicable, lead to an improved resolution and support of the bootstrap topology as compared with the molecular analyses.
+Taxonomically useful features are vessel grouping, vessel perforation type, intervessel and vessel-ray pitting, axial parenchyma distribution, ﬁber type, frequency of uniseriate rays, shape of body ray cells and type of mineral inclusions.
+The wood anatomical diversity within Ericales can be divided into two wood types: (i) members growing in tropical montane or more temperate to arctic regions show a ‘‘primitive’’ type that probably has evolved with little change from the more basal outgroup Cornales, and (ii) tropical lowland taxa possess a ‘‘derived’’ type that has evolved at least twice in separate evolutionary lines.
+We hope that this paper encourages other wood anatomists ⁄ morphologists to carry out combined cladistic analyses, even when the number of morphological characters represents only a fraction of the total amount of data.
+Acknowledgments We thank Helga Ochoterena (UNAM) and Peter Hovenkamp (NHN-Leiden) for their useful comments on the paper.
+The curators of the xylaria of Kew, Leiden, Madison, Tervuren, Utrecht and Washington are acknowledged for their supply of wood samples.
+We also thank Miss Anja Vandeperre (K.U.Leuven) for technical assistance and Marcel Verhaegen (National Botanic Garden of Belgium) for assistance during SEM observations.
+This work has been ﬁnancially supported by research grants of the K.U.Leuven (OT ⁄ 05 ⁄ 35), the Fund for Scientiﬁc Research—Flanders (Belgium) (G.0268.04), and the Swedish Research Council.
+F.L.
+is a postdoctoral fellow of the Fund for Scientic Research—Flanders (Belgium) (F.W.O.—Vlaanderen).
+References Albach, D.C., Soltis, P.S., Soltis, D.E., Olmstead, R.G., 2001.
+Phylogenetic analysis of asterids based on sequences of four genes.
+Ann.
+Missouri Bot.
+Gard.
+88, 163–212.
+Anderberg, A.A., 1992.
+The circumscription of the Ericales, and their cladistic relationships to other families of ÔhigherÕ dicotyledons.
+Syst.
+Bot.
+17, 660–675.
+Anderberg, A.A., Rydin, C., Ka¨llersjo¨, M., 2002.
+Phylogenetic relationships in the order Ericales s.1.
+analyses of molecular data from ﬁve genes from the plastid and mitochondrial genomes.
+Am.
+J. Bot.
+89, 677–687.
+APG, 1998.
+An ordinal classiﬁcation for the families of ﬂowering plants.
+Ann.
+Missouri Bot.
+Gard.
+85, 531–553.
+APG II, 2003.
+An update of the Angiosperm Phylogeny Group classiﬁcation for the orders and families of ﬂowering plants: APG II.
+Bot.
+J. Linnean Soc.
+141, 399–436.
+245  Baas, P., 1973.
+The wood anatomical range in Ilex (Aquifoliaceae) and its ecological and phylogenetic signiﬁcance.
+Blumea, 21, 193–258.
+Baas, P., 1976.
+Some functional and adaptive aspects of vessel member morphology.
+Leiden Bot.
+Series, 3, 157–181.
+Baas, P., 1986a.
+Terminology of imperforate tracheary elements.
+defence of libriform ﬁbres with minutely bordered pits.
+IAWA Bull.
+7, 82–86.
+Baas, P., 1986b.
+Ecological patterns in xylem anatomy.
+In: Givnish, T.
+(Ed.
+), On the Economy of Plant Form and Function.
+Cambridge University Press, Cambridge, pp.
+327–349.
+Baas, P., Schweingruber, F., 1987.
+Ecological trends in the wood anatomy of trees, shrubs and climbers from Europe.
+IAWA Bull.
+N.S.
+8, 245–274.
+Baas, P., Wheeler, E.A., 1996.
+Parallelism and reversibility in xylem evolution—a review.
+IAWA J.
+17, 351–364.
+Baas, P., Esser, P.M., van der Westen, M.E.T., Zandee, M., 1988.
+Wood anatomy of the Oleaceae.
+IAWA Bull.
+N.S.
+9, 103–182.
+Baas, P., Wheeler, E., Chase, M., 2000.
+Dicotyledonous wood anatomy and the APG system of angiosperm classiﬁcation.
+Bot.
+J. Linnean Soc.
+134, 3–17.
+Baas, P., Jansen, S., Wheeler, E.A., 2003.
+Ecological adaptations and deep phylogenetic splits—evidence and questions from the secondary xylem.
+In: Stuessy, T., Mayer, V., Ho¨randl, E.
+(Eds.
+), Deep Morphology, Towards a Renaissance of Morphology in Plant Systematics.
+A.R.G.
+Gantner Verlag, Ruggell, pp.
+221–239.
+Bailey, I.W., Tupper, W.W., 1918.
+Size variation and tracheary elements.
+I.
+Comparison between the secondary xylems of vascular cryptogams, gymnosperms, and angiosperms.
+Proc.
+Am.
+Acad.
+Arts Sci.
+54, 149–204.
+Barkman, T.J., Lim, S.-H., Salleh, K.M., Nais, J., 2004.
+Mitochondrial DNA sequences reveal the photosynthetic relatives of Raﬄesia, the world’s largest ﬂower.
+Proc.
+Natl Acad.
+Sci.
+USA, 101, 787–792.
+Bremer, B., Bremer, K., Heidari, N., Erixon, P., Olmstead, R.G., Anderberg, A.A., Ka¨llersjo¨, M., Barkhordian, E., 2002.
+Phylogenetics of asterids based on 3 coding and 3 non-coding chloroplast DNA markers and the utility of non-coding DNA at higher taxonomic levels.
+Mol.
+Phyl.
+Evol.
+24, 274–301.
+Bremer, K., Friis, E.M., Bremer, B., 2004.
+Molecular phylogenetic dating of asterid ﬂowering plants shows that Early Cretaceous diversiﬁcation.
+Syst.
+Biol.
+53, 496–505.
+Budi, A.S., 1993.
+Struktur des sekunda¨ren Xylems und Taxonomie der Su¨dasiatisch-Paziﬁschen Sapotaceae.
+PhD Dissertation.
+University of Hamburg, Germany.
+Caris, P., Ronse Decraene, L.P., Smets, E., Clinckemaillie, D., 2002.
+The uncertain position of Symplocos (Symplocaceae): evidence from a ﬂoral ontogenetic study.
+Int.
+J.
+Plant Sci.
+163, 67–74.
+Carlquist, S., 1962.
+A theory of paedomorphosis in dicotyledonous woods.
+Phytomorphology, 12, 30–45.
+Carlquist, S., 1976.
+Wood anatomy of Roridulaceae: ecological and phylogenetic implications.
+Am.
+J. Bot.
+63, 1003–1008.
+Carlquist, S., 1984.
+Wood anatomy and relationships of Pentaphylacaceae: signiﬁcance of vessel features.
+Phytomorphology, 34, 84–90.
+Carlquist, S., 1985.
+Vasicentric tracheids as a drought survival mechanism in the woody ﬂora of southern California and similar regions; review of vasicentric tracheids.
+Aliso, 11, 37–68.
+Carlquist, S., 1988.
+Wood anatomy of Scytopetalaceae.
+Aliso, 12, 63–76.
+Carlquist, S., 1989a.
+Anatomy of vine and liana stems: a review and synthesis.
+In: Putz, F.E., Mooney, H.A.
+(Eds.
+), The Biology of Vines.
+Cambridge University Press, Cambridge, pp.
+53–71.
+Carlquist, S., 1989b.
+Wood and bark anatomy of Empetraceae: comments on paedomorphosis in woods of certain small shrubs.
+Aliso, 12, 497–515.
+Carlquist, S., 2001a.
+Comparative wood anatomy.
+Systematic, Ecological, and Evolutionary Aspects of Dicotyledon Wood, 2nd edn.
+Springer-Verlag, Berlin.
+246  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Carlquist, S., 2001b.
+Wood anatomy of Fouquieriaceae in relation to habit, ecology, and systematics; nature of meristems in wood and bark.
+Aliso, 19, 137–163.
+Carlquist, S., Eckhart, V., Michener, D., 1984.
+Wood anatomy of Polemoniaceae.
+Aliso, 10, 547–572.
+Carlquist, S., Hoekman, D.A., 1985.
+Ecological wood anatomy of the woody southern Californian ﬂora.
+IAWA Bull.
+N.S.
+6, 319–347.
+Chase, M.W., Soltis, D.E., Olmstead, R.G., Morgan, D., Les, D.H., Mishler, B.D., Duvall, M.R., Price, R.A., Hills, H.G., Qiu, Y.-L., Kron, K.A., Rettig, J.H., Conti, E., Palmer, J.D., Manhart, J.R., Sytsma, K.J., Michaels, H.J., Kress, W.J., Karol, K.G., Clark, W.D., Hedre´n, M., Gaut, B.S., Jansen, R.K., Kim, K.-J., Wimpee, C.F., Smith, J.F., Furnier, G.R., Strauss, S.H., Xiang, Q.-Y., Plunkett, G.M., Soltis, P.S., Swensen, S.M., Williams, S.E., Gadek, P.A., Quinn, C.J., Eguiarte, L.E., Golenberg, E., Learn, G.H., Graham, S.W., Barett, S.C.H., Dayanandan, S., Albert, V.A., 1993.
+Phylogenetics of seed plants: an analysis of nucleotide sequences from the plastid gene rbcL.
+Ann.
+Missouri Bot.
+Gard.
+80, 528–580.
+Cox, H.T., 1948a.
+Studies in the comparative anatomy of the Ericales.
+II.
+Ericaceae-subfamily Rhododendroideae.
+Am.
+Midl.
+Nat.
+39, 220–245.
+Cox, H.T., 1948b.
+Studies in the comparative anatomy of the Ericales.
+II.
+Ericaceae-subfamily Arbutoideae.
+Am.
+Midl.
+Nat.
+40, 493–516.
+Crepet, W.L., Nixon, K.N., Gandolfo, M.A., 2004.
+Fossil evidence and phylogeny: the age of major angiosperm clades based on mesofossil and macrofossil evidence from Cretaceous deposits.
+Am.
+J. Bot.
+91, 1666–1682.
+Cronquist, A., 1988.
+The Evolution and Classiﬁcation of Flowering Plants, 2nd edn.
+The New York Botanical Garden, New York.
+Dahlgren, G., 1989.
+The last Dahlgrenogram.
+System of classiﬁcation of ﬂowering plants.
+In: Tan, K.
+(Ed.
+), The Davis and Hedge Festschrift.
+Edinburgh University Press, Edinburgh, pp.
+249–260.
+Davis, S.D., Sperry, J.S., Hacke, U.G., 1999.
+The relationship between xylem conduit diameter and cavitation caused by freezing.
+Am.
+J. Bot.
+86, 1367–1372.
+DeBuhr, L.E., 1977.
+Wood anatomy of the Sarraceniaceae; ecological and evolutionary implications.
+Plant Syst.
+Evol.
+128, 159–169.
+Dickison, W.C., 2000.
+Integrative Plant Anatomy.
+Academic Press, San Diego.
+Dickison, W.C., Phend, K.D., 1985.
+Wood anatomy of the Styracaceae: evolutionary and ecological considerations.
+IAWA Bull.
+N.S.
+6, 3–22.
+Dilcher, D., 2000.
+Towards a new synthesis: major evolutionary trends in the angiosperm fossil records.
+Proc.
+Natl Acad.
+Sci.
+USA, 97, 7030–7036.
+Ellerby, D.J., Ennos, A.R., 1998.
+Resistances to ﬂuid ﬂow of model xylem vessels with simple and scalariform perforation plates.
+J. Exp.
+Bot.
+49, 979–985.
+Evans, T.M., Sytsma, K.J., Faden, R.B., Givnish, T.J., 2003.
+Phylogenetic relationships in the Commelinaceae: II.
+A cladistic analysis of rbcL sequences and morphology.
+Syst.
+Bot.
+28, 270–292.
+Feild, T.S., Brodribb, T., 2001.
+Stem water transport and freeze-thaw xylem embolism in conifers and angiosperms in a Tasmanian treeline heath.
+Oecologia, 127, 314–320.
+Franklin, G.L., 1945.
+Preparation of thin sections of synthetic resins and wood-resin composites, and a new maceration method for wood.
+Nature, 155, 51.
+Gasson, P., 1994.
+Wood anatomy of the Sophoreae and related Caesalpinioideae and Papilionoideae.
+In: Ferguson, K., Tucker, S.
+(Eds.
+), Advances in Legume Systematics, Part 6, Structural Botany.
+Royal Botanic Gardens, Kew, London, pp.
+165–203.
+Gasson, P., 1996.
+Wood anatomy of the tribe Swartzieae with comments on related papilionoid and caesalpinioid Leguminosae.
+IAWA J.
+17, 45–75.
+Geuten, K., Smets, E., Schols, P., Yuan, Y.-M., Janssens, S., Ku¨pfer, P., Pyck, N., 2004.
+Conﬂicting phylogenies of balsaminoid families and the polytomy in Ericales: combining data in a Bayesian framework.
+Mol.
+Phylogen.
+Evol.
+31, 711–729.
+Giebel, K.P., Dickison, W.C., 1976.
+Wood anatomy of Clethraceae.
+J. Elisha Mitchell Sci.
+Soc.
+92, 17–26.
+van der Graaﬀ, N.A., Baas, P., 1974.
+Wood anatomical variation in relation to latitude and altitude.
+Blumea, 22, 101–121.
+Gregory, G., 1988.
+6 Hydrangeaceae.
+In: Cutler, D.F., Gregory, M.
+(Eds.
+), The Anatomy of the Dicotyledons, 2nd edn, Vol.
+4, Saxifragales (sensu Armen Takhtajan 1983).
+Clarendon Press, Oxford, pp.
+85–109.
+Herendeen, P.S., 1996.
+Angiosperm phylogenetic systematics: is there a role for wood anatomical data in cladistic analyses?
+IAWA J.
+17, 250–251.
+Herendeen, P.S., Miller, R.B., 2000.
+Utility of wood anatomical characters in cladistic analyses.
+IAWA J.
+21, 247–276.
+Hillis, D.M., Wiens, J.J., 2000.
+Molecules versus morphology in systematics.
+In: Wiens, J.J.
+(Ed.
+), Phylogenetic Analysis of Morphological Data.
+Smithsonian Institution Press, Washington, DC, pp.
+1–19.
+Hilu, K.W., Borsch, T., Mu¨ller, K., Soltis, D., Soltis, P.S., Savolainen, V., Chase, M.W., Powell, M.P., Alice, L.A., Evans, R., Sauquet, H., Neinhuis, C., Slotta, T.A.B., Rohwer, J.G., Campbell, C.S., Chatrou, L.W., 2003.
+Angiosperm phylogeny based on matK sequence information.
+Am.
+J. Bot.
+90, 1748– 1776.
+Holmgren, P.K., Holmgren, N.H., Barnett, L.C., 1990.
+Index Herbariorum.
+Part I.
+The Herbaria of the World, 8th edn.
+Regn.
+Veg.
+120, 1–693.
+Huﬀord, L., 1992.
+Rosidae and their relationships to other nonmagnoliid dicotyledons: a phylogenetic analysis using morphological and chemical data.
+Ann.
+Missouri Bot.
+Gard.
+79, 218–248.
+IAWA Committee, 1989.
+IAWA list of microscopic features for hardwood identiﬁcation.
+IAWA Bull.
+N.S.
+10, 219–332.
+InsideWood, 2004. onwards.
+Published on the Internet.
+http://insidewood/lib.ncsu.edu/search [05 ⁄ 01 ⁄ 2006].
+Jansen, S., Baas, P., Smets, E., 2001.
+Vestured pits: distribution and phylogenetic signiﬁcance in eudicots.
+Taxon, 50, 135–167.
+Jansen, S., Baas, P., Gasson, P., Lens, F., Smets, E., 2004a.
+Variation in xylem structure from tropics to tundra: Evidence from vestures pits.
+Proc.
+Natl Acad.
+Sci.
+USA, 101, 8833–8837.
+Jansen, S., Watanabe, T., Caris, P., Geuten, G., Lens, F., Pyck, N., Smets, E., 2004b.
+The distribution and phylogeny of aluminium accumulating plants in the Ericales.
+Plant Biol.
+6, 498–505.
+Janssens, S., Geuten, K., Yuan, Y.-M., Song, Y., Ku¨pfer, P., Smets, E., 2006.
+Phylogenetics of Impatiens and Hydrocera (Balsaminaceae) using chloroplast atpB-rbcL spacer sequences.
+Syst.
+Bot.
+31, 171–180.
+Jenner, R.A., 2004.
+Accepting partnership by submission?
+Morphological phylogenetics in a molecular millenium.
+Syst.
+Biol.
+53, 333– 342.
+Judd, W.S., Olmstead, R.G., 2004.
+A survey of tricolpate (eudicot) phylogenetic relationships.
+Am.
+J. Bot.
+91, 1627–1644.
+Judd, W.S., Campbell, C.S., Kellog, E.A., Stevens, P.F., Donogue, M.J., 2002.
+Plant Systematics.
+a Phylogenetic Approach, 2nd edn.
+Sinauer Associates, Sunderland, MA.
+Ka¨llersjo¨, M., Bergqvist, G., Anderberg, A.A., 2000.
+Generic realignment in primuloid families of the Ericales s.1.
+a phylogenetic analysis based on DNA sequences from three chloroplast genes and morphology.
+Am.
+J. Bot.
+87, 1325–1341.
+Ka˚rehed, J., 2001.
+Multiple origin of the tropical forest tree family Icacinaceae.
+Am.
+J. Bot.
+88, 2259–2274.
+Ka˚rehed, J., Lundberg, J., Bremer, B., Bremer, K., 1999.
+Evolution of the Australasian families Alseuosmiaceae, Argophyllaceae, and Phellinaceae.
+Syst.
+Bot.
+24, 660–682.
+F. Lens et al.
+/ Cladistics 23 (2007) 229–254 Keller, J.A., Herendeen, P.S., Crane, P.R., 1996.
+Fossil ﬂowers and fruits of the Actinidiaceae from the Campanian (Late Cretaceous) of Georgia.
+Am.
+J. Bot.
+83, 528–541.
+Klaassen, R.K.W.M., 1999.
+Wood anatomy of the Sapindaceae.
+IAWA.
+J. Suppl.
+2, 1–214.
+Kornet, D.J., Turner, H., 1999.
+Coding polymorphism for phylogeny reconstruction.
+Syst.
+Biol.
+48, 365–379.
+Kress, W.J., Prince, L.M., Hahn, W.J., Zimmer, E.A., 2001.
+Unraveling the evolutionary radiation of the families of the Zingiberales using morphological and molecular evidence.
+Syst.
+Biol.
+50, 926– 944.
+Kribs, D.A., 1937.
+Salient lines of structural specialization in the wood parenchyma of dicotyledons.
+Bull.
+Torrey Bot.
+Club 64, 177–186.
+Kubitzki, K., 2004.
+Families and Genera of Flowering Plants, Vol.
+4.
+Springer-Verlag, Berlin, Germany.
+Kukachka, B.F., 1978–82.
+Wood Anatomy of the Neotropical Sapotaceae.
+I–XXXVIII.
+Research Papers.
+US Department of Agriculture, Forest Service, Forest Products Laboratory, Madison, WI.
+Lechner, S., 1914.
+Anatomische Untersuchingen u¨ber die Gattungen Actinidia, Saurauia, Clethra und Clematoclethra mit besonderen beru¨cksichtigung ihrer Stellung im System.
+Beih.
+Bot.
+Zentralbl.
+32, 431–467.
+Lee, M.S.Y., 2004.
+Molecular and morphological data sets have similar numbers of relevant phylogenetic characters.
+Taxon, 53, 1019–1022.
+Lens, F., 2005.
+Systematic signiﬁcance of wood anatomical characters in Ericales.
+PhD Dissertation.
+K.U.Leuven, Leuven, Belgium.
+Lens, F., Gasson, P., Smets, E., Jansen, S., 2003.
+Comparative wood anatomy of epacrids (Styphelioideae, Ericaceae s.1.).
+Ann.
+Bot.
+91, 835–856.
+Lens, F., Smets, E., Jansen, S., 2004a.
+Comparative wood anatomy of Andromedeae s.s., Gaultherieae, Lyonieae and Oxydendreae (Vaccinioideae, Ericaceae s.1.).
+Bot.
+J. Linn.
+Soc.
+144, 161–179.
+Lens, F., Kron, K.A., Luteyn, J.L., Smets, E., Jansen, S., 2004b.
+Comparative wood anatomy of the blueberry tribe (Vaccinieae, Ericaceae s.1.).
+Ann.
+Missouri Bot.
+Gard.
+91, 566–592.
+Lens, F., Luteyn, J.L., Smets, E., Jansen, S., 2004c.
+Ecological trends in the wood anatomy of Vaccinioideae (Ericaceae s.1.).
+Flora, 199, 309–319.
+Lens, F., Jansen, S., Caris, P., Serlet, L., Smets, E., 2005a.
+Comparative wood anatomy of the primuloid families.
+Syst.
+Bot.
+30, 162–182.
+Lens, F., Dressler, S., Jansen, S., Van Evelghem, L., Smets, E., 2005b.
+The relationships within balsaminoid Ericales: a wood anatomical approach.
+Am.
+J. Bot.
+92, 941–953.
+Lens, F., Baas, P., Jansen, S., Smets, E., in press.
+A search for phylogenetically informative wood characters within Lecythidaceae s.1.
+Am.
+J. Bot.
+Liang, D., Baas, P., 1990.
+Wood anatomy of trees and shrubs from China II.
+Theaceae.
+IAWA Bull.
+N.S.
+11, 337–378.
+Liang, D., Baas, P., 1991.
+The wood anatomy of the Theaceae.
+IAWA Bull.
+N.S.
+12, 333–353.
+Loconte, H., Stevenson, D.W., 1991.
+Cladistics of the Magnoliidae.
+Cladistics, 7, 267–296.
+Luckow, M., Bruneau, A., 1997.
+Circularity and independence in phylogenetic tests of ecological hypotheses.
+Cladistics, 13, 145–151.
+Luna, I., Ochoterena, H., 2004.
+Phylogenetic relationships of the genera of Theaceae based on morphology.
+Cladistics, 20, 223–270.
+Maddison, D.R., Maddison, W.P., 2005.
+Macclade 4.08.
+Sinauer Associates, Sunderland, MA.
+Male´cot, V., Nickrent, D.L., Baas, P., van den Oever, L., LobreauCallen, D., 2004.
+A morphological analysis of Olacaceae.
+Syst.
+Bot.
+29, 569–586.
+Metcalfe, C.R., Chalk, L., 1950.
+Anatomy of the Dicotyledons, 1st edn, Vol.
+2.
+Clarendon Press, Oxford.
+Morton, C.M., 1994.
+The use of pollen morphology and wood anatomy in the study of the phylogeny of Ebenaceae and Rutaceae  247  subtribe Cuspariinae.
+PhD Dissertation, City University of New York, New York, USA.
+Morton, C.M., Chase, M.W., Kron, K.A., Swensen, S.M., 1996.
+A molecular evaluation of the monophyly of the order Ebenales based on rbcL sequence data.
+Syst.
+Bot.
+21, 567–586.
+Morton, C.M., Mori, S.A., Prance, G.T., Karol, K.G., Chase, M.W., 1997.
+Phylogenetic relationships of Lecythidaceae: a cladistic analysis using rbcL sequence and morphological data.
+Am.
+J. Bot.
+84, 530–540.
+Nandi, O.I., Chase, M.W., Endress, P.K., 1998.
+A combined analysis of angiosperms using rbcL and non-molecular data sets.
+Ann.
+Missouri Bot.
+Gard.
+85, 137–212.
+Nixon, K.C., Carpenter, J.M., 1996.
+On simultaneous analysis.
+Cladistics, 12, 221–241.
+Nixon, K.C., Crepet, W.L., 1993.
+Late Cretaceous fossil ﬂowers of ericalean aﬃnity.
+Am.
+J. Bot.
+80, 616–623.
+Nixon, K.C., Davis, J.I., 1991.
+Polymorphic taxa, missing values and cladistic analysis.
+Cladistics, 7, 233–241.
+Noshiro, S., Baas, P., 1998.
+Systematic wood anatomy of Cornaceae and allies.
+IAWA J.
+19, 43–97.
+Noshiro, S., Baas, P., 2000.
+Latitudinal trends in wood anatomy within species and genera: case study in Cornus s. 1.
+(Cornaceae).
+Am.
+J. Bot.
+87, 1495–1506.
+van den Oever, L., Baas, P., Zandee, M., 1981.
+Comparative wood anatomy of Symplocos and latitude and altitude of provenance.
+IAWA Bull.
+N.S.
+2, 3–24.
+Olmstead, R.G., Michaels, H.J., Scott, K.M., Palmer, J.D., 1992.
+Monophyly of the Asteridae and identiﬁcation of their major lineages inferred from DNA sequences of rbcL.
+Ann.
+Missouri Bot.
+Gard.
+79, 249–265.
+Olmstead, R.G., Bremer, B., Scott, K.M., Palmer, J.D., 1993.
+A parsimony analysis of the Asteridae sensu lato based on rbcL sequences.
+Ann.
+Missouri Bot.
+Gard.
+80, 700–722.
+Olson, M.E., 2002.
+Combining data from DNA sequences and morphology for a phylogeny of Moringaceae.
+Syst.
+Bot.
+27, 55– 73.
+Olson, M.E., 2005.
+Commentary: typology, homology, and homoplasy in comparative wood anatomy.
+IAWA J.
+26, 507–522.
+Pennington, R.T., 1996.
+Molecular and morphological data provide phylogenetic resolution at diﬀerent hierarchical levels in Andira.
+Syst.
+Biol.
+45, 496–515.
+Pleijel, F., 1995.
+On character coding for phylogeny reconstruction.
+Cladistics, 11, 309–315.
+Savolainen, V., Chase, M.W., Hoot, S.B., Morton, C.M., Soltis, D.E., Clemens, B., Fay, M.F., De Bruiln, A.Y., Sullivan, S., Qiu, Y.-L., 2000.
+Phylogenetics of ﬂowering plants based on combined analysis of plastid atpB and rbcL gene sequences.
+Syst.
+Biol.
+49, 306–362.
+Schneider, H., Schuettpelz, E., Pryer, K.M., Cranﬁll, R., Magallo´n, S., Lupia, R., 2004.
+Ferns diversiﬁed in the shadow of angiosperms.
+Nature, 428, 553–557.
+Schols, P., D’Hondt, C., Geuten, K., Merckx, V., Janssens, S., Smets, E., 2004.
+MorphoCode: coding quantitative data for phylogenetic analyses.
+Phyloinformatics, 4, 1–4.
+Scho¨nenberger, J., Anderberg, A.A., Sytsma, K.J., 2005.
+Molecular phylogenetics and patterns of ﬂoral evolution in the Ericales.
+Int.
+J.
+Plant Sci.
+166, 265–288.
+Schulte, P.J., 1999.
+Water ﬂow through a 20-pore perforation plate in vessels of Liquidambar styraciﬂua.
+J. Exp.
+Bot.
+50, 1179–1187.
+Scotland, R.W., Olmstead, R.G., Benett, J.R., 2003.
+Phylogeny reconstruction: the role of morphology.
+Syst.
+Biol.
+52, 539–548.
+Smets, E., Pyck, N., 2003.
+Ericales (Rhododendron).
+In: Nature Encyclopedia of Life Sciences.
+Nature Publishing Group, London.
+http://www.els.net.
+Soltis, D.E., Soltis, P.S., Nickrent, D.L., Johnson, L.A., Hahn, W.J., Hoot, S.B., Sweere, J.A., Kuzoﬀ, R.K., Kron, K.A., Chase, M.W., Swensen, S.M., Zimmer, E.A., Chaw, S.-M., Gillespie, L.J., Kress,  248  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  W.J., Sytsma, K.J., 1997.
+Angiosperm phylogeny inferred from 18S ribosomal DNA sequences.
+Ann.
+Missouri Bot.
+Gard.
+84, 1–49.
+Soltis, D.E., Soltis, P.S., Chase, M.W., Mort, M.E., Albach, D.C., Zanis, M., Savolainen, V., Hahn, W.H., Hoot, S.B., Fay, M.F., Axtell, M., Swensen, S.M., Prince, L.M., Kress, W.J., Nixon, K.C., Farris, J.S., 2000.
+Angiosperm phylogeny inferred from 18S rDNA, rbcL, and atpB sequences.
+Bot.
+J. Linn.
+Soc.
+133, 381–461.
+Sperry, J.S., Nicols, K.L., Sullivan, J.E.M., Eastlack, S.E., 1994.
+Xylem embolism in ring-porous, diﬀuse-porous, and coniferous trees of northern Utah and interior Alaska.
+Ecology, 75, 1736– 1752.
+Stern, W.L., 1978.
+Comparative wood anatomy and systematics of woody Saxifragaceae.
+Hydrangea.
+Bot.
+J. Linnean Soc.
+76, 83–113.
+Stern, W.L., 1988.
+Index Xylariorum.
+IAWA Bull.
+N.S.
+9.
+Stevens, P.F., 1991.
+Character states, morphological variation, and phylogenetic analysis: a review.
+Syst.
+Bot.
+16, 553–583.
+Stevens, P.F., 2001. onwards.
+Angiosperm Phylogeny Website, Version 6, May 2005 [and more or less continuously updated since].
+http:// www.mobot.org/MOBOT/research/APweb/.
+Strong, E.E., Lipscomb, D., 1999.
+Character coding and inapplicable data.
+Cladistics, 15, 363–371.
+Suzuki, M., Noshiro, S., 1988.
+Wood structure in Himalayan Plants.
+In: Ohba, H., Malla.
+S.B.
+(Eds.
+), Himalayan Plants, Vol.
+1.
+University of Tokyo Press, Tokyo, pp.
+341–379.
+Swoﬀord, D.L., 2002.
+PAUP*: Phylogenetic Analysis Using Parsimony (and other methods), Version 4.0b10 for Macintosh.
+Sinauer Associates, Sunderland, MA.
+Sytsma, K., Walker, J.B., Scho¨nenberger, J., Anderberg, A.A., 2006.
+Phylogenetics, Biogeography, and Radiation of Ericales.
+Botany 2006.
+California State University, Chico, USA [Abstract].
+Takhtajan, A., 1997.
+Diversity and Classiﬁcation of Flowering Plants.
+Columbia University Press, New York.
+Thiele, K., 1993.
+The holy grail of the perfect character: the cladistic treatment of morphometric data.
+Cladistics, 9, 275–304.
+Thomas, J.L., 1960.
+A monographic study of the Cyrillaceae.
+Contrib.
+Gray Herb.
+Harvard Uni.
+186, 1–114.
+Thorne, R.F., 1992.
+An updated classiﬁcation of the ﬂowering plants.
+Aliso, 13, 365–389.
+Thorne, R.F., 2000.
+The classiﬁcation and geography of the ﬂowering plants: dicotyledons of the class Angiospermae.
+Bot.
+Rev.
+66, 441– 647.
+Welle ter, B.J.H., 1976.
+Silica grains in woody plants of the neotropics, especially Surinam.
+Leiden Bot.
+Ser.
+3, 107–142.
+Wiens, J.J., 2001.
+Character analysis in morphological phylogenetics: problems and solutions.
+Syst.
+Biol.
+50, 689–699.
+Wiens, J.J., 2004.
+The role of morphological data in phylogeny reconstruction.
+Syst.
+Biol.
+53, 653–661.
+Wiens, J.J., Bonett, R.M., Chippindale, P.T., 2005.
+Ontogeny discombobulates phylogeny: paedomorphosis and higher-level salamander relationships.
+Syst.
+Biol.
+54, 91–110.
+Wikstro¨m, N., Savolainen, V., Chase, M.W., 2001.
+Evolution of the angiosperms: calibrating the family tree.
+Proc.
+R. Soc.
+London, Ser.
+B 268, 2211–2220.
+Wikstro¨m, N., Savolainen, V., Chase, M.W., 2003.
+Angiosperm divergence times: congruence and incongruence between fossils and sequence divergence estimates.
+In: Donoghue, P.C.J., Smith, M.P.
+(Eds.
+), Telling the Evolutionary Time: Molecular Clocks and the Fossil Record.
+Taylor & Francis, London, pp.
+142–165.
+Wilkinson, M., 1992.
+Ordered versus unordered characters.
+Cladistics, 8, 375–385.
+Wilkinson, M., 1995.
+A comparison of the two methods of character reconstruction.
+Cladistics, 11, 297–308.
+de Zeeuw, C.H., 1990.
+Secondary Xylem of Neotropical Lecythidaceae.
+In: Mori, S.A., Prance, G.T.
+(Eds.
+), Lecythidaceae Part II.
+The Zygomorphic-ﬂowered New World Genera.
+Fl.
+Neotr.
+Monogr.
+21.
+The New York Botanical Garden, New York, pp.
+4–59.
+Zhang, S.-Y., 1992.
+Systematic wood anatomy of the Rosaceae.
+Blumea, 37, 81–158.
+Zimmermann, M.H., 1983.
+Xylem Structure and the Ascent of Sap.
+Springer Verlag, Berlin.
+Appendix 1 Overview of the Ericales wood matrix including apedomorphic character states, bcontinuous ordered characters, discrete ordered characters, decologically adaptive characters, and ehabit related characters; taxa with pedomorphic wood are indicated in bold.
+Herbaceous genera are excluded, as well as the genera that were included twice in the SEA study.
+Three-letter acronyms represent the families (cf.
+Table 1), OUT refers to outgroup.
+*Monotheca is now included in Sideroxylon, Laplacea is merged into Gordonia; – ¼ not applicable.
+c  Aucuba OUT Cornus OUT Hydrangea OUT Ilex OUT Acanthogilia POL Actinidia ACT Barringtonia LEC Bruinsmia STY Camellia THE Cantua POL Clavija THO Clethra CLE Cleyera PEN  1c  2cde 3bde 4bde 5c  6b 7 8d  9d 10 11  12  13  14c  15b 16b 17c 18  19 20 21 22 23  0 0&1 1 1&2 0 0 1 1 0 2 1 0 0  0 0 0 0 2 1 2 0 0 2 2 0 0  2 3 2 2 1 0 8 5 1 1 0 0 1  0 0 0 0 0 0 0 0 0 0 0 0 0  0 0 0 0&1 0 0 0 0 1 0 0 0 0  2 0 2 0 1 0 0&1 0 0 2 2 0 0  0 0 0&1 0 0 0 1 0 0 1 2 0 0  3 1 2 2 1 1 1 1 1 1 4 1 0  0 0 1 0 0 0 0 0 0 0 0 0 0  3 4 3 4 0 2 2 6 4 1 1 4 5  1 2 2 2 1 7 6 7 1 1 1 1 1  1 1 0 2 4 3&4 4 3&4 0&1 4 4 1&2 0&3  0 0 0 0 0 0 2 0 1 0 0 0 0  1 0&1 0&1 0&1 0&1 1 0 0 0&1 0 0 1 1  0 1 1 1 1 1 0 1 1 0 0 1 1  1 0 1 0 0 0 0&1 0 0 1 1 0 0  6 1 6 2 1 0 2 1 0 0 4 1 0  1 0 1 0 0 0 0 0 0 0 1 0 0  0 0 0 1 0 0 1 1 0&1 0 0 0 0  0 0 0 1 0 0 1 1 0 0 0 0 0  0 0 0 0 0 0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0 0 0 1 0 0  0 0 1 0 0 0 0 0 0 0 0 0 0  F. Lens et al.
+/ Cladistics 23 (2007) 229–254 1c 2cde 3bde 4bde 5c Cobaea POL Couroupita LEC Cyrilla CYR Diospyros EBE Empetrum ERI Enkianthus ERI Eurya PEN Ficalhoa PEN Fouquieria FOU Gordonia THE* Halesia STY Heliamphora SAR Impatiens BAL Lissocarpa EBE Lysimachia MYR Madhuca SAP Maesa MAE Manilkara SAP Marcgravia MAR Myrsine MYR Napoleonaea LEC Norantea MAR Palaquium SAP Pelliciera TET Pentamerista TET Pentaphylax PEN Pouteria SAP Rhododendron ERI Roridula ROR Sarcosperma SAP Sarracenia SAR Schima THE Sideroxylon SAP* Sladenia PEN Styrax STY Symplocos SYM Ternstroemia PEN Tetramerista TET Vaccinium ERI  0 1 0 1 0 0 0 0 1 0 1 0 0 2 1 2 1 2 1 1 1 1 2 2 2 0 2 0 0 2 0 0 2 2 1 0 0 2 0  2 2 0 2 1 0 0 0 2 0 0 0 2 1 2 2 1&2 2 2 1&2 1 1 2 2 1&2 0 2 0 0 2 0 0 2 0 0&1 0 0 2 1  a  0 2 3 2 0a 3 5 9 1 6 3 1 0a 3 1a 2 2 2 2 1 2 3 4 2 3 6 2 1 3 3 0 6 2 6 3 5 5 5 1  2 9 1 4 0 0 2 7 1 1 2 1 2 4 0 8 3 3 7 3 4 7 5 2 4 4 4 1 1 5 0 2 2 2 3 4 2 7 1  4 4 1&2 3&4 0&1a 3 1&3 0&3 4 0&1 2 0a 0a 3 4 4 4 4 4 4 3 4 4 4 4 0 4 4 4 4 4 0&1 4 3 3 0&1&2 0&3 4 3&4  6b 7 1 7 0 1 1a 1 2 9 2 3 2 1a 5a 1 1 2 1 2 3 1 2 3 2 1 1 2 2 0 0 3 0 3 1 2 2 1 2 1 0  0 2 0 0 0 0 0 0&1 0 1 0 0 0 0 0 2 0 2 0 0 1 0 2 0 0 1 2 0 0 2 0 1 2 0 0 0&1 0 0 0  8d 0 0 1 0 0&1 0&1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0&1 1 0 0&1 1 0 1  9d 10 11 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 1  The 23 features of the wood matrix are discussed below.
+The choice of the characters and their states are based on the literature and on personal observations using more than 500 wood samples (Lens, 2005).
+1 Vessel grouping (Figs 4 and 5A–C): (0) solitary; (1) solitary and in short radial multiples; (2) commonly in radial multiples.
+Typically solitary vessels apply when more than 90% of the vessels are solitary.
+This grouping characterizes ericoid taxa, Pentaphylacaceae, Symplocos, and Theaceae.
+In genera of Marcgraviaceae, primuloids and Diospyros, about 50% of the vessels are solitary and the other part is distributed in short radial multiples of two to four.
+Common radial multiples occur when more than 75% of the vessels are found in multiples of two to 10.
+This is observed in the genera Lissocarpa, Pelliciera and Sladenia, and in most Sapotaceae included.
+2 Vessel perforation (Figs 4 and 5D–F): (0) exclusively scalariform; (1) mixed scalariform ⁄ simple; (2) predominantly simple.
+Exclusively scalariform perforations occur in all genera of Clethraceae, Cyrillaceae, Pentaphylacaceae, Roridulaceae, Sarraceniaceae, Symplocaceae and Theaceae, and most genera of Actinidiaceae and Styracaceae.
+Some genera include a considerable number of species with mixed simple and scalariform perforations, such as Actinidia, Empetrum, Lissocarpa, Napoleonaea and Vaccinium.
+The genera that can be deﬁned by simple vessel perforations may also have a very small proportion of scalariform perforations, usually less than 5%.
+This is  1 0 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 0 0 1 0 0 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1  0 0 0 0 0 0 0 0 0 0 0 0&1 0 0 0 1 1 1 1 1 0 1 1 1 0&1 0 1 0 0 1 0 0 1 0 0 0 0 0&1 1  12 13 0 0 0 1 0 0 0 0 0 0 0 0 0a 1 0a 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 1 1 0  2 1 0 0&1 0 0 0 0 0 0 0 0 0&2 1 2 0&1 2 1 2 2 1 2 0&1 0&2 0 0 0&1 0 0 0 0 0 1 0 0 0 0 0 0  249  14c 15b 16b 17c 18 – 1 0 0 0 0 0 0 1 0 0 0 2 1 – 1 0 1 0 2 1 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0  a  – 1 1 1 –a 0 1 2 4 1 1 0 9a 0 –a 0 1 0 6 1 6 1 0 0 1 1 1 1 – 0 0 0 0 1 1 0 2 0 1  a  – 1 0 0 –a 1 1 1 1 0 0 0 9a 1 –a 0 2 0 9 6 3 3 0 1 3 1 0 0 – 0 0 0 0 1 1 1 3 4 1  a  – 0 0 0 –a 0 0 0 0 0 0 2a 2a 0 –a 0 1 0 1 1 0 1 0 1 1 0 0 0 – 0 2a 0 0 0 0 0 0 1 0  – 0 0&1 1 0 0 0 0 1 0 0 0 0 0 – 0 1 1 0 1 1 0 0 0 0 0 0 0 – 0 0 1 0 0 0&1 0&1 0&1 0 1  19 20  21  22  23  – 0 0 0 0 0 0 0 0 0 0 0 1 0 – 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0&1 0 0 1 0 0 1 0 0 0 0 0 0  – 0 0 0&1 0 0 0 0 0 0 0 0 0 0 – 1 0 1 0 0 0 0 1 0 0 1 1 0 0 0 0 0 0 0 0&1 0 0&1 0 0  0 0 0 0 0 0 0 0 0 0&1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  0 1 0 1 0 0 0 0 1 0&1 1 0 0 0 0 0&1 0 1 0 0 1 0 1 0 0 1 1 0 0 0 0 1 1 1 1 0&1 0 0 0  observed in among others Impatiens, Marcgravia, Maesa and Pentamerista.
+3 Mean vessel element length (coded with Thiele’s method; Fig.
+4): (0) 210–310 lm; (1) 340–500 lm; (2) 560–730 lm; (3) 770–945 lm; (4) 1000–1150 lm; (5) 1165–1350 lm; (6) 1380–1600 lm; (9) 2120 lm.
+Within Ericales, there are genera with long vessel elements (more than 1000 lm), e.g., Cyrilla, Symplocos, Tetramerista, and several genera of Pentaphylacaceae and Theaceae, while other taxa can be deﬁned by short vessel elements with a mean length of less than 300 lm (Cobaea, Empetrum, Impatiens).
+4 Mean tangential vessel diameter (coded with Thiele’s method): (0) 20–25 lm; (1) 30–45 lm; (2) 50–65 lm; (3) 70–80 lm (4) 90–100 lm (5) 115–120 lm (6) 125 lm (7) 150–160 lm; (8) 180 lm; (9) 190 lm.
+Vessel diameter shows a huge variation in Ericales: some genera can be identiﬁed by relatively wide vessels, often more than 100 lm in tangential width (Actinidia, Couroupita, Ficalhoa, Madhuca, Marcgravia, Norantea, Tetramerista), while other taxa characteristically have narrow vessel elements below 30 lm in width, such as Empetrum and Sarracenia.
+5 Intervessel pit arrangement (Figs 4 and 5G–I): (0) scalariform; (1) scalariform to opposite; (2) opposite; (3) opposite to alternate; (4) alternate.
+A constant incidence of exclusively scalariform intervessel pitting at the genus level is only found in few genera, e.g., Impatiens  250  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Fig.
+5.
+Wood photographs showing the distribution patterns of vessels (A–C, TS ¼ transverse section), the type of vessel perforation plates (D–F; RLS ¼ radial longitudinal section), the arrangements of intervessel pitting (G–I; TLS ¼ tangential longitudinal section), and the type of vessel-ray pitting (J–L; RLS).
+(A) Saurauia villosa.
+Solitary vessels.
+(B) Mimusops ebolowensis.
+Vessels solitary and in short radial multiples.
+(C) Manilkara multinervis.
+Vessels commonly in radial multiples.
+(D) Ternstroemia japonica.
+Vessel perforations scalariform with many bars.
+(E) Vaccinium calycinum.
+Perforations mixed scalariform and simple.
+(F) Chrysophyllum perpulchrum.
+Perforation plates exclusively simple.
+(G) Ternstroemia japonica.
+Intervessel pitting scalariform to opposite.
+(H) Clethra lanata.
+Intervessel pitting opposite.
+(I) Scytopetalum tieghemii.
+Intervessel pitting alternate.
+(J) Diospyros virginiana.
+Vessel-ray pitting distinctly bordered.
+(K) Symplocos guianensis.
+Vessel-ray pitting elongate (scalariform) with much reduced borders.
+(L) Bertholletia excelsa.
+Two distinct types of vessel-ray pitting.
+and Pentaphylax.
+A co-occurrence of scalariform and opposite intervessel pitting is found in diﬀerent ericalean families, such as Ericaceae, Symplocaceae, Pentaphylacaceae and Sarraceniaceae.
+In contrast to Herendeen and Miller (2000), the intermediate character state ‘‘opposite to alternate’’ is added, because this state is typical of some genera, such as Enkianthus, Diospyros, Lissocarpa and Styrax.
+Exclusively alternate intervessel pitting characterizes balsaminoids, primuloids, Lecythidaceae, Polemoniaceae, Roridulaceae and Sapotaceae.
+6 Mean intervessel pit diameter (coded with Thiele’s method): (0) 4 lm; (1) 5 lm; (2) 6–7 lm; (3) ¼ 8 lm; (5) ¼ 10 lm; (7) ¼ 12 lm; (8) ¼ 14 lm; (9) ¼ 15 lm.
+Many genera of Lecythidaceae and  F. Lens et al.
+/ Cladistics 23 (2007) 229–254 Sapotaceae characteristically have large intervessel pits of more than 6 lm, whereas other taxa show intervessel pitting that is always smaller than 6 lm (e.g., some ericoids).
+Genera in which opposite as well as scalariform pitting is observed (e.g., Cyrilla and Symplocos), only opposite pitting is taken into account in order to compare this with the pit diameter of genera without scalariform intervessel pitting.
+In case of exclusively scalariform pits in Impatiens and Pentaphylax, only the smallest pits were measured.
+7 Vessel-ray pitting (Figs 4 and 5J–L): (0) distinctly bordered; (1) elongated with much reduced borders; (2) two distinct types.
+Most Ericales show a vessel-ray pitting that is similar to intervessel pitting, i.e., a comparable arrangement and distinct pit borders at the vessel side.
+In some taxa, vessel-ray pitting is typically scalariform with reduced borders, such as Pentaphylax, Theaceae and Symplocos (although also distinctly bordered pits are present in the latter genus), and many genera of the tribe Vaccinieae (Ericaceae).
+Most Lecythidaceae and Sapotaceae can be deﬁned by the presence of two distinct types of vessel-ray pitting, i.e., ‘‘normal’’ alternate pits with distinct borders that co-occur with elongated, irregularly shaped pits with reduced borders.
+These two types may or may not be associated with the same ray cell.
+8 Helical thickenings: (0) absent; (1) present in vessels.
+This character is only coded as present when it is clearly visible; grooves interconnecting pit apertures are not taken into account.
+Helical thickenings are generally found in vessels of ericoids, Theaceae, Pentaphylacaceae and Symplocaceae.
+Generally they are restricted to the tail of vessel elements or around the inner pit apertures, but in some cases they are clearly developed throughout the body of a vessel element.
+9 Vasicentric tracheids (Fig.
+4): (0) absent; (1) present.
+We consider vasicentric tracheids to be long and narrow cells, with dense pitting in both radial and tangential walls ( 15–50 pits per 100 lm of tracheid length), that are closely associated with vessels.
+The abundant pits are conspicuously bordered and form two or three longitudinal rows on the radial and tangential walls.
+Vasicentric tracheids typically occur in Sapotaceae, and are more scattered among other ericalean members, such as Fouquieria, Napoleonaea and Vaccinium.
+10 Fibers with conspicuously bordered pits (Figs 4 and 6A,B): (0) absent; (1) present.
+Fibers with conspicuously bordered pits, often called ﬁber-tracheids in literature, are usually longer than tracheids, thin- or thick-walled, and contain a single row of distinctly bordered pits on the tangential walls ( 5–15 pits per 100 lm of ﬁber-tracheid length).
+The mean distance between two ﬁber-tracheid pits on the tangential wall is longer than the distance between two tracheid pits, although the pit borders usually do not diﬀer in size (often between 3 and 6 lm); the pit density in the radial walls is often higher.
+Fibertracheids are predominantly present in the genera of ericoids, Pentaphylacaceae, Roridulaceae, Sarraceniaceae, Styracaceae, Symplocaceae and Theaceae.
+Some genera show ﬁbers with conspicuously bordered pits as well as minutely bordered to even simple pits, such as Diospyros and several Ericaceae genera (incl.
+Vaccinium), although  251  only one type clearly dominates.
+In these genera, only the abundant type is coded as present.
+11 Septate ﬁbers (Figs 4 and 6C): (0) absent; (1) present.
+Septa in ﬁbers are often associated with ﬁbers having minutely bordered to simple pits (Lecythidaceae, Marcgraviaceae, primuloids, Sapotaceae), although some taxa possess septate ﬁber-tracheids (Marcgravia, Norantea).
+Personal observations revealed the presence of septate ﬁber-tracheids in Sarracenia, although this feature was overlooked by DeBuhr (1977).
+12 Fibers thick- to very thick-walled: (0) absent; (1) present.
+According to the IAWA list of microscopic features for hardwood identiﬁcation (IAWA Committee, 1989), the ﬁber lumina of (very) thickwalled ﬁbers are almost completely closed.
+This character is typical of some genera like Camellia, Tetramerista, Ternstroemia, many Sapotaceae, and some genera of Ebenaceae and Lecythidaceae.
+13 Axial parenchyma distribution (Figs 4 and 7A–C): (0) diﬀuse or diﬀuse-in-aggregates; (1) in bands; (2) predominantly scanty or vasicentric paratracheal.
+We have chosen not to divide this character into three separate binary characters (for each of the three characters only two states: absent and present), because of their dependency from each other: most genera have just one type of axial parenchyma distribution.
+The presence of few axial parenchyma cells lying next to vessels (paratracheal parenchyma) is neglected when the abundant parenchyma type is apotracheal (states 0 and 1), because of the widespread occurrence of few paratracheal parenchyma cells in the order.
+The states ‘‘diﬀuse’’ and ‘‘diﬀuse-in-aggregates’’ are combined into one because of the continuous variation in several genera, for instance Pentamerista and Vaccinium.
+This type of distribution is observed in most genera of ericoids, Pentaphylacaceae, Theaceae, Styracaceae and Symplocaceae.
+The so-called diﬀuse clusters type in Fouquieria (.
+Carlquist, 2001b) is considered here as diﬀuse-inaggregates.
+Banded axial parenchyma is typical of Acanthogilia (Polemoniaceae), Diospyros (Ebenaceae), Lissocarpa (Ebenaceae), and Sapotaceae and Lecythidaceae.
+The scanty and vasicentric parenchyma distribution is combined into one character because of continuous variation in primuloids and Diospyros.
+Marcgraviaceae is the only family in which vasicentric parenchyma is typical.
+14 Uniseriate ray incidence (Figs 4 and 8A–C): (0) obviously present; (1) scarce; (2) absent.
+In most Ericales, uniseriate rays are common, but they are scarce in Fouquieria, Lissocarpa, Polemoniaceae and Sapotaceae (less common than multiseriate rays, often between 0 and 2 ⁄ mm).
+Uniseriate rays are typically lacking in Impatiens, and in genera of Myrsinaceae (except in Aegiceras) and Theophrastaceae.
+15 Mean multiseriate ray width (number of cells, coded with Thiele’s method): (0) 2; (1) 3–4 (2) 6; (3) 7; (4) 8; (6) 10; (9) 15.
+The width of multiseriate rays shows much variation within Ericales, ranging from very wide rays (up to 42-seriate in some species of Marcgravia) to narrow two-seriate rays in many genera of Sapotaceae, Pelliciera and Tetramerista.
+Taxa that lack multiseriate rays (Cobaea, Empetrum, Lysimachia and Roridula) are coded as ‘‘–’’.
+Fig.
+6.
+SEM photographs of radial surfaces illustrating the main ﬁber types in Ericales.
+(A) Clethra lanata.
+Fibers with conspicuously bordered pits.
+(B) Diospyros cooperii.
+Fibers with simple to minutely bordered pits.
+(C) Marcgraviastrum mixtum.
+Septate ﬁbers.
+252  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Fig.
+7.
+LM pictures of transverse sections showing the main axial parenchyma distribution types in the wood of Ericales.
+(A) Saurauia villosa.
+Diﬀuse-in-aggregates.
+(B) Bertholletia excelsa.
+Banded.
+(C) Marcgravia sp.
+Vasicentric paratacheal (arrows).
+Fig.
+8.
+Major types of ray characters as observed in tangential (A–C; TLS) and radial sections using LM observations (D–F; RLS).
+(A) Jacquinia keyensis.
+Multiseriate rays wide and high, uniseriate rays absent.
+(B) Autranella congolensis.
+Multiseriate rays narrow and low, uniseriate rays scarce (arrows).
+(C) Gaultheria sp.
+Uniseriate rays obviously present.
+(D) Clethra sp.
+Exclusively procumbent body ray cells.
+(E) Tetramerista glabra.
+Mixture of procumbent, square and upright body ray cells.
+(F) Impatiens niamniamensis.
+Rays consisting of upright cells only.
+16 Mean multiseriate ray height (coded with Thiele’s method): (0) 350– 635 lm; (1) 765–1300 lm; (2) 1530– 2000 lm; (3) 2270–3000 lm; (4) 3500 lm; (6) 5000 lm; (9) 7000–7200 lm.
+The height of multiseriate rays is measured on tangential longitudinal sections.
+Some Ericales genera show multiseriate rays that are typically lower than 1 mm (Cleyera, Cyrilla, Diospyros, Halesia, many Sapotaceae), and others can be distinguished by very high multiseriate rays that sometimes exceed 10 mm in length (Clavija, Impatiens, Marcgravia and Myrsine).
+The absence of rays in some species of Impatiens is ignored, because rays are present in other species.
+Genera that lack multiseriate rays (Cobaea, Empetrum, Lysimachia and Roridula) are coded as ‘‘–’’.
+17 Body ray cell shape in multiseriate rays (Figs 4 and 8D–F): (0) exclusively procumbent; (1) mixture of procumbent, square and ⁄ or upright marginal; (2) exclusively upright.
+Body ray cells are ray cells in the multiseriate portion of a multiseriate ray.
+The majority of genera has exclusively procumbent body ray cells, as seen in radial longitudinal sections.
+Heterocellular body ray cells are typical of balsaminoid and primuloid taxa, and many species of the tribe Vaccinieae  (Ericaceae), while exclusively upright ray cells are present in Impatiens, Heliamphora, Roridula and Sarracenia.
+Genera that lack multiseriate rays (e.g., Cobaea, Empetrum, Lysimachia and Roridula) are coded as ‘‘–’’.
+18 Prismatic crystals in rays (Fig.
+9A): (0) absent; (1) present.
+Prismatic crystals often occur in rays of Diospyros, Fouquieria, Lecythidaceae and primuloids, and they are less frequently present in Cyrilla, Ericaceae, Sapotaceae, Styracaceae and Symplocaceae.
+Genera that lack rays (Cobaea, Empetrum, Lysimachia and Roridula) are coded as ‘‘–’’.
+19 Raphides (Figs 4 and 9B): (0) absent; (1) present.
+Raphides are characteristically present in the rays of Marcgraviaceae and Tetrameristaceae, and in tyloses of Balsaminaceae, but they are also sporadically found in axial parenchyma of Saurauia.
+20 Prismatic crystals in axial parenchyma (Fig.
+9C): (0) absent; (1) present.
+This feature is typically present in Diospyros, Fouquieria, Lecythidaceae, Sapotaceae, and Sladenia, but it is also observed in some Ericaceae, Styracaceae, Symplocaceae and Theaceae.
+F. Lens et al.
+/ Cladistics 23 (2007) 229–254  253  Fig.
+9.
+SEM images illustrating the major types of mineral inclusions in ericalean wood.
+(A) Barringtonia longisepala (TLS).
+Prismatic crystals in rays.
+(B) Pelliciera rhizophorae (RLS).
+Raphide bundle in ray cell.
+(C) Bertholletia excelsa (TLS).
+Prismatic crystals in axial parenchyma.
+(D) Sideroxylon puberulum (TLS).
+Crystal sand in an axial parenchyma cell.
+(E) Baillonella toxisperma (TLS).
+Silica grain in ray cell.
+21 Crystal sand (Figs 4 and 9D): (0) absent; (1) present.
+This character characterizes Sapotaceae within Ericales, although it is not observed in all species.
+22 Silica bodies (Fig.
+9E): (0) absent; (1) present.
+Silica grains are characteristic in rays of many Sapotaceae genera, and to a lesser extent also in Diospyros, Pentaphylax, Styrax, and some Lecythidaceae.
+The observations in Myrsinaceae and Symplocaceae by ter Welle (1976) could not be corroborated by extensive family treatments of Lens et al.
+(2005b) and van den Oever et al.
+(1981), respectively.
+Therefore, they are considered absent in the data matrix.
+The presence of silica grains in Pentaphylax was not mentioned by Carlquist (1984), but personal observations revealed silica grains in ray cells.
+23 Aluminum accumulation in wood (Fig.
+4): (0) absent; (1) present.
+Within Ericales, this feature is only present in wood of Theaceae and Symplocaceae.
+Al accumulation is more common in leaves, but this is not taken into account.
+Additional chrome azurol-S-tests were performed to determine the presence Al accumulation in the wood of Cornus and Hydrangea, but only Hydrangea tested positive.
+Appendix 2 The wood samples studied are listed per family in the appendix with reference to the origin, collector, and diameter of the wood sample.
+‘‘Mature’’ means that the wood sample is derived from a mature stem, primarily based on the divergence of the rays, although the exact diameter could not be traced.
+Institutional wood collections used in this study are abbreviated according to the Index Xylariorum (Stern, 1988) and Index Herbariorum (Holmgren et al., 1990).
+Voucher data  of ericalean groups that have already been published, i.e., balsaminoids, primuloids and Vaccinium (Lens et al., 2004b, 2005a,b), are omitted in this list.
+Actinidiaceae Actinidia chinensis Planch.
+Belgium (Brabant), R. Dechamps s.n.
+(Tw 38998), 26 mm; A. polygama Franch.
+and Sav.
+USA, M. Nee 43547 (MADw 47991), 28 mm.
+Clethraceae Clethra lanata Mart.
+and Galeotti: Mexico, L. Lebacq s.n.
+(Tw 24571), mature; C. sp.
+origin unknown, Little 15330 (Tw 30437), mature.
+Cyrillaceae Cliftonia nitida Gaertn.f.
+USA, H.H.
+Smith s.n.
+(MADw 28029), mature; Cyrilla racemiﬂora L. Cuba (Santiago de Cuba), R. Dechamps 12377 (Tw 49847), 18 mm.
+Ebenaceae Diospyros amazonica Krause: Brazil (Maranha˜o), B.A.
+Krukoﬀ 1713 (Tw 33963), mature; D. batocana Hiern: Angola (Bie´ Prov.
+), R. Dechamps 1407 (Tw 28273), mature; D. bipindensis Gu¨rke: Democratic Republic of Congo, T. Hart 1191 (Tw 50658), 16 mm; D.  254  F. Lens et al.
+/ Cladistics 23 (2007) 229–254  Sapotaceae  canaliculata De Wild.
+Democratic Republic of Congo, J. Louis 7852 (Tw 35917), 23 mm; D. caribaea (A.DC.)
+Standl.
+East Cuba, Irwest For.
+Center 116 A (Tw 44848), mature; D. conocarpa K.Schum.
+Democratic Republic of Congo (Kouilou), R. Dechamps 13160 (Tw 49213), 18 mm; D. cooperii (Hutch.
+and Dalziel) F.White: Libia (Bassa), Cooper 92 (Tw 26579), 23 mm; D. crassiﬂora Hiern: Democratic Republic of Congo, J. Louis 1782 (Tw 33268), 23 mm; D. ebenum Retz.
+Sri Lanka, A.H. Green s.n.
+(Tw 36100), mature; D. ferrea (Willd.)
+Bakh.
+USA (Hawaii), A.B.
+Curtis H25 (Tw 26784), mature; D. ferrea (Willd.)
+Bakh.
+Tonga Isles, S.H.
+Lamb 11 (Tw 43751), 53 mm; D. ferrea (Willd.)
+Bakh.
+USA (Hawaii), A.B.
+Curtis 35 (Tw 43928), mature; D. frutescens Blume: Malaysia (Sabah), Samd For.
+Department.
+58102 (Tw 18646), mature; D. gracipiles Hiern: Madagascar (Tamatave), L.S.
+Dorr 3138 (Tw 44772), 40 mm; D. heterotricha (B.L.Burtt) F.White: Democratic Republic of Congo, A. Maudoux 8 (Tw 41542), 30 mm; D. kirkii Hiern: Angola (Cuando-Cubangu), R. Dechamps 1347 (Tw 28194), mature; D. malabrica Kostel.
+var.
+siamensis (Hochr.)
+Phengklai: North Vietnam, CTFT France JG10016 (Tw 30850), 49 mm; D. mespiliformis A.DC.
+Guinea (Kouroussa), Pobeguin 680 (Tw 30059), mature; D. montana Roxb.
+Democratic Republic of Congo (Central Cuvette), EALA 55 (Tw 3871), 30 mm; D. morrisiana Hance: China (Guangdong), For.
+Res.
+Institute.
+1106 (Tw 42078), mature; D. mun A.Chev.
+Laos (Cammon), Amb s.n.
+(Tw 20644), mature; D. natalensis (Harv.)
+Brenan: Democratic Republic of Congo (Shaba), P. Bamps 8339 (Tw 45576), 20 mm; D. nitida Merr.
+Philippines, For.
+Res.
+Institute.
+Phil.
+242B (Tw 47432), mature; D. texana Scheele: USA (Texas), H. Nogle s.n.
+(Tw 18261), mature; D. virginiana L. USA (Virginia), F. Scruggs s.n.
+(Tw 19293), mature; D. whyteana (Hiern) P.White: South Africa, For.
+Department.
+Pret.
+s.n.
+(Tw 21536), mature; Lissocarpa benthamii Gu¨rke: Bolivia, B.A.
+Krukoﬀ 11072 (MADw 36617), mature; L. guianensis Gleason: Guyana, B. Maguire and Fanshawe 23381 (MADw 11883), mature.
+Manilkara butugi Chiov.
+Kenya, collector unknown (Tw 19976), 74 mm; M. cuneifolia (Bak.)
+Dubard: Uganda, For.
+Department.
+Pretoria s.n.
+(Tw 21560), 78 mm; M. discolor (Sond.)
+J.H.
+Hemsley: Democratic Republic of Congo (Shaba), F. Malaisse 9547 (Tw 32016), 63 mm; M. fouilloyana Aubr.
+and Pellegr.
+Gabon (Estuaire prov.
+), J. Gavage G58 (Tw 28785), mature; M. letouzei Aubr.
+Cameroon (Nyang and Samaga prov.
+), R. Letouyez 4333 (Tw 13231), 60 mm; M. mochisia (Bak.)
+Dubard: Democratic Republic of Congo (Shaba), F. Malaisse 11253 (Tw 41091), 53 mm; M. multinervis (Bak.)
+Dubard: Nigeria, FHI 4940 (Tw 39009), 73 mm; M. obovata (Sabine and G.Don) J.H.Hemsley: Cameroon, CTFT France 1654 (Tw 30896), 63 mm; M. obovata (Sabine and G.Don) J.H.Hemsley: Uganda, F.D.
+Kampala s.n.
+(Tw 20727), mature; M. pellegriniana Tisserant and Sillans: Cameroon, R. Letouyez 4534 (Tw 13233), 55 mm; Manilkara sp.
+Democratic Republic of Congo, J. Louis 3782 (Tw 35495), 45 mm; Pouteria adolphi-fredericii (Engl.)
+Meeuse: Ethiopia, FPRL Gr.
+Bretagna 21988 (Tw 30365), mature; P. alnifolia (Bak.)
+Roberty: Benin (Cotonou), A. Dansi s.n.
+(Tw 50793), 35 mm; P. altissima (A.Chev.)
+Baehni: Kenya (Kakamega forest), VIFI 15057 (Kw 11854), mature; P. altissima (A.Chev.)
+Baehni: Uganda, A.N.
+Green 3411 (Tw 22809), mature; P. pierrei (A.Chev.)
+Baehni: Ivory Coast, P. De´tienne 106 (Tw 29934), mature; Pouteria sp.
+Democratic Republic of Congo (Kasai), R. Dechamps 849 (Tw 8028), mature; Pouteria sp.
+Rwanda, G. Bouxin 1340 (Tw 26003), mature; P. superba (Vermoesen) L.Gaut: Democratic Republic of Congo, C. Domis 1444 (Tw 32218), 80 mm; Sarcosperma laurinum (Benth.)
+Hook.f.
+China (Guangdong), For.
+Res.
+Institute.
+174 (Tw 42084), mature; Sideroxylon inerme L. S Africa, A.N.
+Green 1792 (Tw 27809), mature; S. majus (Gaertn.f) Baehni: Mauritius, collector unknown (Tw 11198), mature; S. puberulum A.DC.
+Mauritius, collector unknown (Tw 11200), mature.
+Fouquieriaceae  Sarraceniaceae  Fouquieria digueti I.M.
+Johnston: Mexico, Hansen et al.
+1370 (MADw 36658), mature; Fouquieria splendens Engelm.
+USA, E.W.
+Karls s.n.
+(MADw 30415), 40 mm.
+Heliamphora tatei Gleason: Venezuela, M. Nee 31174 (MADw 44264), 14 mm.
+Lecythidaceae  Styracaceae  Barringtonia longisepala Payens: Malaysia, W. Meijer 122304 (MADw 48591), 60 mm; Couroupita guianensis Aubl.
+Brazil (Para´), B.A.
+Krukoﬀ 1236 (Tw 34585), mature; Napoleonaea vogelii Hook.
+and Planch.
+Ivory Coast, P. De´tienne 90 (MADw 36819).
+Halesia corymbosa Nicholson: China (Guangdong), For.
+Res.
+Institute.
+1074 (Tw 42092), mature; H. diptera L. USA (Texas), H. Nogle 488 (Tw 18381), mature; H. macgregorii Chun: China (Guangdong), For.
+Res.
+Institute.
+1215 (Tw 42088), mature; Styrax glabrum Sw. Venezuela (Amazonas), B. Maguire et al.
+42724 (Tw 36868), mature.
+Pentaphylacaceae  Symplocaceae  Eurya inaequilatera Melch.
+Bolivia, B.A.
+Krukoﬀ 11044 (MADw 35884), mature; Ficalhoa laurifolia Hiern: Eastern Africa, R.A.K.F.
+1527 (Uw 15502), 57 mm; Pentaphylax euryoides Gardn.
+and Champ.
+China, Institute.
+Wood Acad.
+53110 (Tw 50516), mature; Ternstroemia brasiliensis Cambess.
+Bolivia, B.A.
+Krukoﬀ 11212 (MADw 35903), 70 mm; Ternstroemia japonica Thunb.
+China (Guangdong), For.
+Res.
+Institute.
+1140 (Tw 41744), mature.
+Symplocos guianensis Gurke: Brazil, B. Maguire et al.
+51921 (MADw 21586), 40 mm; Symplocos odoratissima Zoll.
+Indonesia, B.A.
+Krukoﬀ 4414 (MADw 35867), mature.
+Polemoniaceae Cantua buxifolia Lam.
+Peru, H. Iltis and D. Ugent 449 (MADw 2), 35 mm.
+Theaceae Camellia furfuracea (Merr.)
+Cohen-Stuart: China, Institute.
+Wood Acad.
+35 (Tw 50431), mature; Gordonia lasianthus L. USA, H.H.
+Smith 74220 (MADw 35891), mature.

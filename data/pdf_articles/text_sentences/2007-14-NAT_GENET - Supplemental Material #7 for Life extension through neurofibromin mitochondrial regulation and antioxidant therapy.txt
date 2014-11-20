@@ -1,0 +1,9 @@
+160  Total SOD  w1118  K33  hsNF1/+;K33  dFOXO  SOD activity (units/mg protein)  MnSOD  120 80 40 0 K33  hsNF1/+;K33  Supplementary Fig.
+7.
+NF1 over-expression did not influence the level of whole fly dephosphorylated forkhead transcription factor (dFOXO) levels or a total superoxide dismutase (SOD) or MnSOD activities.
+a.
+Western blot analysis of FOXO1 detected by an antibody (Cell Signaling) that preferably binds to dephosphorylated FOXO.
+Similar levels of dephosphorylated FOXO were found for w1118, K33 and hsNF1/+;K33, verified by Image J densitometry analysis in 3 experiments, one example shown.
+b.
+Total SOD and MnSOD activities of K33 and hsNF1/+;K33 flies, mean ± SD of 5 experiments each involving 50 males and 50 females, total of 500 flies for each genotype.
+P = 0.79 between their total SOD activities and P = 0.15 between their MnSOD activities.

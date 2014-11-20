@@ -1,0 +1,4 @@
+ELAV-GAL4/+ ♂  % Survival  100  UAS-dNF1/+ on 2nd ♂  80  UAS-dNF1/+ on 3rd ♂  60  ELAV-GAL4/UAS-dNF1 on 2nd ♂  40  ELAV-GAL4/UAS-dNF1 on 3rd ♂  20  b % Survival  a  ELAV-GAL4/+ ♀  100  UAS-dNF1/+ on 2nd ♀  80  UAS-dNF1/+ on 3rd ♀  60  ELAV-GAL4/UAS-dNF1 on 2nd ♀  40  ELAV-GAL4/UAS-dNF1 on 3rd ♀  20 0  0 0  20  40  60  80 o  Days at 25 C  100  120  0  20  40  60  80  100  120  o  Days at 25 C  Supplementary Fig.
+5.
+Life extension in Drosophila by neuronal over-expression of NF1 via combining the neuronal promoter ELAV-GAL4 line with the independent UAS-dNF1 transgenic lines (ELAV-GAL4/UAS-dNF1 ) versus the individual transgene heterozygotes (ELAV-GAL4/+ or UAS-dNF1/+ ).
+Logrank test: P < 0.0001 for both males (a) and females (b), 6 experiments, 40 flies per experiment, 240 flies per category.

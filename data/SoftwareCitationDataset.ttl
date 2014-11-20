@@ -15638,7 +15638,7 @@ was calculated using biosys (Swofford & Selander 1981).""" ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-             	 ca:appliesCode [ a citec:software_name ; rdfs:label "BIOSYS" ] ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "biosys" ] ;
                ] ;
 
 			  bioj:has_reference bioj-cited:Mitton-2000 ;

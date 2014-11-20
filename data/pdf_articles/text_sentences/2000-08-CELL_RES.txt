@@ -26,13 +26,13 @@ The cell extract was incubated in 50 ml of TRAP reaction buffer containing 20 mM
 After a 30 min incubation at 30 o C for telomerasemediated extension of the primer, 0.1 μg of return primer ACX(5'-GCGCGG[CTTACC] 3 CTAACC3'), 0.1 mg internal control primer NT (5'-ATCGCTTCTCGGCCTTTT-3'), 0.01 aM of the internal control template TSNT(5'-AATCCGTCGAGCAGAGTTAAAAGGCCGAGAAGCGAT-3') and 2 units Taq DNA polymerase (Promega) were added.
 The reaction mixture was then subjected to PCR in a thermal cycler (Perkin-Elmer 2400) with 30 cycles at 94 oC for 30 s, 60 oC for 30 s, then one cycle of extension at 72 oC for 10 min[5].
 The PCR products were resolved by electrophoresis in a 15% polyacrylamide gel under nondenaturing conditions.
-The banding pattern was visualized by autoradiography for 12 h and analyzed by Gelworks 1D advanced software in Shanghai Institute of Biochemistry, Chinese Academy of Sciences.
+<mention id="bioj:a2000-08-CELL_RES-C01-mention" original_name="Gelworks 1D advanced">The banding pattern was visualized by autoradiography for 12 h and analyzed by Gelworks 1D advanced software in Shanghai Institute of Biochemistry, Chinese Academy of Sciences.</mention>
 72  Zhang RG et al.
 Non-radioisotopic method (NR method) The method newly established by us was performed as follows: The cell extract was incubated in 50 μl of TRAP reaction buffer containing 20 mM Tris-HCl (pH 8.3), 1.5 mM MgCl2, 63 mM KCl, 0.005% Tween-20, 1 mM EGTA, 50μM of each dNTPs and 0.1 μg TS.
 After a 30 min incubation at 30 oC, 0.1 μg ACX, 0.1 μg NT, 0.003 amol TSNT and 2 units Taq DNA polymerase were added.
 The reaction mixture was then subjected to PCR amplication with same cycle running as in RL method.
 The PCR products were resolved by electrophoresis in a 12% polyacrylamide gel under nondenaturing conditions.
-The gel was then stained with SYBR Green-I (FMC Bioproducts) for 15 min, visualized by UVP system and analyzed by Gelworks 1D advanced software.
+<mention id="bioj:a2000-08-CELL_RES-C02-mention" original_name="Gelworks 1D advanced">The gel was then stained with SYBR Green-I (FMC Bioproducts) for 15 min, visualized by UVP system and analyzed by Gelworks 1D advanced software.</mention>
 For RNase treatment, the extracts were incubated with 5 mg/ml RNase A for 20 min at 37 o C. Heat inactivation was performed by heating the extracts at 75 o C for 15 min.
 In every experiment, a negative control (1μl CHAPS lysis buffer) and 0.1 amol of the quantification standard oligon u c l e o t i d e R 8 ( 5 - A A T C C G T C G A G C A G A G T T A G [ G G T T A G ] 7- 3 ) w e r e i n c l u d e d .
 A l l e x p e r i ments were repeated at least twice.

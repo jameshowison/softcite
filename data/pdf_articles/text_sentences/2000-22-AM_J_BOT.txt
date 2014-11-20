@@ -129,7 +129,7 @@ Eryngium cuneifolium was examined in the same recently burned scrub at Apthorpe 
 We removed all plants and ground lichens within 30 cm of half of all focal plants in June 1995 and January and June 1996.
 We counted number of stems and total number of reproductive structures (flowering stalks of P. basiramia) and measured height and total branch length of each focal H. cumulicola and P. basiramia, and maximum width and its perpendicular width for each E. cuneifolium.
 We counted and identified all rooted plant species, recorded the pres-  NS NS NS NS NS NS  F  G  M  F  0.80 0.80 0.60 0.90  0.29 0.26 0.32 0.42  0.13 0.12 0.37 0.15  1.00 1.00 1.00 1.00  0.60 0.50 0.53 0.45  0.45 0.25 0.21 0.13  14.1 4.4 9.7* 12.9 3.1 9.9*  ence of ground lichens within 15 cm of studied individuals, measured the distance of every individual to the nearest oak and Florida rosemary, and measured the height of these shrubs.
-We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.
+<mention id="bioj:a2002-22-AM_J_BOT_B01-mention" original_name="PC-ORD">We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.</mention>
 RESULTS Seed germination, fire, and lichens (experiment 1)— Germination and soil seed dynamics were different among the three study species.
 Seed germination was highest for P. basiramia.
 Most (.95%) seeds of P. basiramia in the control petri dishes germinated during the first 4 d following their placement outdoors.

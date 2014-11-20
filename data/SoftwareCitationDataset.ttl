@@ -8520,7 +8520,7 @@ bioj:a2000-08-CELL_RES-C01 rdf:type bioj:selection ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Gelworks 1D Advanced" ] ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Gelworks 1D advanced" ] ;
                ] ;
 
 #begin citation functions
@@ -8562,7 +8562,7 @@ bioj:a2000-08-CELL_RES-C02 rdf:type bioj:selection ;
 			  ca:isTargetOf 
                [ rdf:type ca:CodeApplication ;
                  ca:hasCoder "cgrady" ;
-             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Gelworks 1D Advanced" ] ;
+             	 ca:appliesCode [ a citec:software_name ; rdfs:label "Gelworks 1D advanced" ] ;
                ] ;
 
 . # end coding for selection

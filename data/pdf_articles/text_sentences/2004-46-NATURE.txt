@@ -48,7 +48,7 @@ P30 is remarkably extended, with essentially no secondary structure and dimensio
 1d).
 The electron density of P30 is continuous, and detailed structural interpretation was assisted by the SeMet difference Fourier map, which pinpointed the methionine residues at positions 24, 45 and 69 (see Fig.
 1d).
-The molecule is rich in proline residues (13%) and analysis of its amino acid sequence with PONDR21 indicates that in the absence of other viral components at least the N-terminal half of the subunit would be disordered.
+<mention id="bioj:a2004-46-NATURE-C01-mention" original_name="PONDR">The molecule is rich in proline residues (13%) and analysis of its amino acid sequence with PONDR21 indicates that in the absence of other viral components at least the N-terminal half of the subunit would be disordered.</mention>
 The 60 copies of P30 completely festoon the virus, being suspended about 12 A˚ above the viral membrane by numerous interactions with P3 (Fig.
 1d).
 N-terminal hooks (the only deviation from a fully extended conformation) lock two P30 subunits into the dimeric building block of the network (dimer interactions are restricted to  about the first 30 residues of the subunit).
@@ -74,7 +74,7 @@ e, Stereo view of P31.
 Jellyroll strands are labelled B to G; the b-strand at the N terminus is labelled A. N-terminal and C-terminal segments are coloured blue and red respectively.
 b-strand residues: B, 22–31; C, 34–41; D, 48–55; E, 60–66; F, 69–76; G, 79–87; H, 90–97; I, 101–109.
 NATURE | VOL 432 | 4 NOVEMBER 2004 | www.nature.com/nature  ©2004 Nature Publishing Group  69  articles r.m.s.
-deviation of 2.9 A˚ as determined with program SHP22), although there is no sequence similarity between them.
+<mention id="bioj:a2004-46-NATURE-C02-mention" original_name="SHP">deviation of 2.9 A˚ as determined with program SHP22), although there is no sequence similarity between them.</mention>
 Finally, beneath each P31 pentamer lie five copies of protein P16.
 Residues 7–56 and 94–116 are visible in the electron density, with residues 7–28 forming a transmembrane helix.
 The assignment of P16 is described in Methods.
@@ -119,7 +119,7 @@ The loop connecting the two jellyrolls of the P3 subunit nearest the vertex (yel
 Protein termini are represented by balls.
 The outer and inner leaflet headgroup regions of the membrane are contoured in grey at 0.6j and 0.3j, respectively, with the transmembrane helix density contoured in red at 20.3j.
 The selenomethionine peak for P16 residue 41 (which identified the protein) is contoured in orange at 8.5j (see Methods).
-c, Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR49, green) and transmembrane helix prediction (TMHMM47, brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).
+<mention id="bioj:a2004-46-NATURE-C05-mention" original_name="PREDATOR" original_name="TMHMM">c, Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR49, green) and transmembrane helix prediction (TMHMM47, brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).</mention>
 The electron density for the P16 C-terminal helix, contoured at 1.5j, shows two large side chains consistent with the tyrosine residues at positions 103 and 110 (see Methods).
 ©2004 Nature Publishing Group  71  articles headgroups of the outer leaflet of the membrane.
 These membraneanchoring P3 subunits are found along the edge of the icosahedral facets and might help to stabilize the fold in the membrane that occurs at this intersection19.
@@ -175,8 +175,8 @@ Perhaps P16 acts as the component that transmits the receptor-binding signal to 
 In addition to P16, 11 further protein species have been reported to be associated with the viral membrane1,4,32–35; in particular, two integral membrane proteins and two capsid-associated proteins are located at a unique vertex responsible for DNA packaging5,6.
 We see no evidence of these proteins in the averaged electron density maps and unaveraged electron density maps show no features to suggest a preferred orientation of the special vertices within the crystal lattice.
 Visualization of the remaining membrane proteins is therefore probably beyond the reach of the current data.
-Table 2 Phase refinement statistics for the merged native-SeMet cell 1 and cell 2 data sets Resolution (A˚)  Merged cell 1 Completeness (%)  Averaging R-factor*  Cell 2 Correlation coefficient†  Completeness (%)  Averaging R-factor*  Correlation coefficient†  ...................................................................................................................................................................................................................................................................................................................................................................  100–4.2 5.01–4.97 4.23–4.21  57 54 17  0.33 0.36 0.34  0.55 0.25 0.26  16 7 1  0.18 0.21 0.18  0.90 0.80 0.77  ................................................................................................................................................................................................................................................................................................................................................................... * R-factor ¼ Sh jjF o jh 2 jF c jh j=SjF o jh where h are the unique reflection indices, F o are the observed structure factors and F c are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).
-† Correlation coefficient ¼ Sh(kjFojhl 2 jFojh)(kjFcjhl 2 jFcjh)/Sh[(kjFojhl 2 jFojh)2 2 (kjFcjhl 2 jFcjh)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).
+<mention id="bioj:a2004-46-NATURE-C07-mention" original_name="SHELLSCALE">Table 2 Phase refinement statistics for the merged native-SeMet cell 1 and cell 2 data sets Resolution (A˚)  Merged cell 1 Completeness (%)  Averaging R-factor*  Cell 2 Correlation coefficient†  Completeness (%)  Averaging R-factor*  Correlation coefficient†  ...................................................................................................................................................................................................................................................................................................................................................................  100–4.2 5.01–4.97 4.23–4.21  57 54 17  0.33 0.36 0.34  0.55 0.25 0.26  16 7 1  0.18 0.21 0.18  0.90 0.80 0.77  ................................................................................................................................................................................................................................................................................................................................................................... * R-factor ¼ Sh jjF o jh 2 jF c jh j=SjF o jh where h are the unique reflection indices, F o are the observed structure factors and F c are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).</mention>
+<mention id="bioj:a2004-46-NATURE-C08-mention" original_name="SHELLSCALE">† Correlation coefficient ¼ Sh(kjFojhl 2 jFojh)(kjFcjhl 2 jFcjh)/Sh[(kjFojhl 2 jFojh)2 2 (kjFcjhl 2 jFcjh)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).</mention>
 72  ©2004 Nature Publishing Group  NATURE | VOL 432 | 4 NOVEMBER 2004 | www.nature.com/nature  articles P30 and a model for viral assembly P30 cements P3 along the edge of the facet (Fig.
 2), with the C-terminal tail of P30 reaching the penton where it also interlocks with protein P16 (at residues 70–79 of P30).
 Large viruses frequently use a scaffolding protein to drive assembly and control the capsid size36, for example gp8 of bacteriophage P22 and gp7 of bacteriophage f29, both of which are elongated proteins with a substantial a-helical content36,37.
@@ -201,7 +201,7 @@ The PRD1 vertex protein, P31, resembles a single jellyroll domain of P3, and pre
 The divergence of P3 and P31 probably occurred before the separation of adenovirus from PRD1, so the adenovirus penton base might possess a much elaborated jellyroll (molecular mass 63 kDa, in comparison with 13 kDa for P31), echoing the relationship between P3 of PRD1 and the adenovirus hexon11.
 The pseudo-hexagonal arrangement of structurally homologous trimeric molecules into triangular facets is another core property of the PRD1/adenovirus lineage, which probably reflects underlying similarities in the assembly mechanism13–15.
 Thus, adenovirus might possess a homologue of P30.
-Although postulated to have an analogous function31, polypeptide IIIa is larger than expected for NATURE | VOL 432 | 4 NOVEMBER 2004 | www.nature.com/nature  a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR21 predicts to be disordered.
+<mention id="bioj:a2004-46-NATURE-C09-mention" original_name="PONDR">Although postulated to have an analogous function31, polypeptide IIIa is larger than expected for NATURE | VOL 432 | 4 NOVEMBER 2004 | www.nature.com/nature  a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR21 predicts to be disordered.</mention>
 The larger capsids such as PBCV-1 are, like PRD1 and adenovirus, assembled principally out of triangular plates composed of trimers of a single protein arranged with p3 symmetry39, with neighbouring plates related by icosahedral twofold axes, suggesting that all these viruses might use a tape-measure mechanism to control assembly.
 Further structural analyses are required to test this hypothesis.
 Discussion Bacteriophage PRD1 adopts a simple and effective strategy for protein shell assembly.
@@ -213,17 +213,17 @@ This model can be easily scaled to very large systems, and circumstantial eviden
 A  Methods Crystallographic data collection and processing The growth, purification and crystallization of PRD1 Sus539 mutant has been described1,18.
 For SeMet labelling, the virus was grown on M9 glucose–thiamine medium40 and 60 mg ml21 L-selenomethionine (Calbiochem) added 20 min after infection.
 Diffraction data were collected at ,21 8C on beamlines ID13 and ID14 of the European Synchrotron Radiation Facility (ESRF), Grenoble1,18.
-Data were analysed with DENZO41 and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).
-Data were scaled with a special version of SCALEPACK41.
-For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S.
-and J.M.D., unpublished program).
+<mention id="bioj:a2004-46-NATURE-C10-mention" original_name="DENZO"> original_name="TRIM_DENZO">Data were analysed with DENZO41 and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).</mention>
+<mention id="bioj:a2004-46-NATURE-C12-mention" original_name="SCALEPACK">Data were scaled with a special version of SCALEPACK41.</mention>
+<mention id="bioj:a2004-46-NATURE-C13-mention" original_name="POST">For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S.</mention>
+<mention id="bioj:a2004-46-NATURE-C13-mention-2" original_name="unpublished program">and J.M.D., unpublished program).</mention>
 The data from native crystals fall into two sets with the same spacegroup P212121 but different unit cell dimensions18.
 The SeMet-substituted crystals were isomorphous with native cell 1.
 The crystallographic asymmetric unit contains an entire virus particle.
 Data statistics are summarized in Table 1 and Supplementary Figure.
-Intensities were converted to structure factor amplitudes with TRUNCATE42.
+<mention id="bioj:a2004-46-NATURE-C14-mention" original_name="TRUNCATE">Intensities were converted to structure factor amplitudes with TRUNCATE42.</mention>
 Phasing and phase refinement Initial phases were obtained by molecular replacement with the use of a quasi-atomic model of the viral capsid (PDB entry 1HB7) derived from fitting a 14 A˚ cryo-EM reconstruction16.
-The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref.
+<mention id="bioj:a2004-46-NATURE-C15-mention" original_name="X-PLOR">The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref.</mention>
 43).
 This was performed separately for data from the cell 1 and cell 2 crystal forms.
 An initial estimate of the particle orientation was obtained from the self-rotation function calculated from the cell 1 data set.
@@ -231,15 +231,15 @@ Patterson correlation refinement44 was performed against 60–15-A˚ resolution 
 The position and orientation of the particle were then refined at 30 A˚ with the E1E1 target function43 (cc ¼ 0.196 for cell 1, 0.195 for cell 2), giving an initial set of noncrystallographic symmetry (NCS) operators for the two cell types.
 P3 trimers inside the icosahedral asymmetric unit were refined at 6 A˚ resolution and NCS operators were rerefined at 8 A˚ resolution43 (cc ¼ 0.375 for cell 1, 0.546 for cell 2).
 Further refinement of the trimer positions and the NCS operators with data to 5 A˚ gave final correlation coefficients of 0.230 and 0.423 for cell 1 and cell 2, respectively.
-A 2F o 2 F c map was calculated for each cell type (to 4.2 A˚ resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; F c was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.
-and J.M.G., unpublished program, and CCP4 programs42).
+<mention id="bioj:a2004-46-NATURE-C16-mention" original_name="GAP">A 2F o 2 F c map was calculated for each cell type (to 4.2 A˚ resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; F c was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.</mention>
+<mention id="bioj:a2004-46-NATURE-C17-mention" original_name="CCP4">and J.M.G., unpublished program, and CCP4 programs42).</mention>
 For missing reflections, including those at low resolution, appropriately weighted F c values were used.
-Calculation of the SeMet difference map The SeMet and native cell 1 data were scaled in resolution shells with the use of SHELLSCALE (D.I.S., unpublished program).
+<mention id="bioj:a2004-46-NATURE-C18-mention" original_name="SHELLSCALE">Calculation of the SeMet difference map The SeMet and native cell 1 data were scaled in resolution shells with the use of SHELLSCALE (D.I.S., unpublished program).</mention>
 Difference Fourier maps were calculated using cell 1 phases and difference attenuation weighting to down-weight terms with large experimental errors45.
 The maps were 60-fold averaged.
 The mean (m) and standard  ©2004 Nature Publishing Group  73  articles deviation (j) of the electron density was evaluated in hollow shells (outer and inner radii 30 and 15 A˚, respectively) around each methionine residue in the P3, P30, P31 and P16 models, as well as the height of the difference peak (r max) and the signal-to-noise ratio (r max 2 m)/j.
 Varying the partiality threshold and resolution showed that the difference map calculated to 4.2 A˚ with partiality threshold 0.5 gave the highest mean signal-to-noise ratio (9.4).
-Model building The P3 N- and C-terminal regions were built into the averaged map of cell 2 by using O46.
+<mention id="bioj:a2004-46-NATURE-C19-mention" original_name="O">Model building The P3 N- and C-terminal regions were built into the averaged map of cell 2 by using O46.</mention>
 Major movements of the loop regions of the different P3 subunits were fitted manually to the electron density.
 The SeMet difference Fourier showed five other strong peaks in the icosahedral asymmetric unit in addition to those attributable to P3.
 The location of three of these and the quality of the native map led to the unequivocal identification and tracing of the minor capsid protein P30 (residues 1–83).
@@ -250,13 +250,13 @@ The electron density maps revealed two apparently disconnected polypeptide fragm
 3b).
 Fragment I is a roughly 50-residue peptide containing a transmembrane helix about 20 residues long and a methionine residue (identified in the SeMet difference Fourier) about 11 residues from the point of contact with the membrane.
 Fragment II consists of about 23 amino acids, terminating in a roughly 17-residue a-helix.
-Analysing the relative positions of methionine residues and predicted transmembrane helices (program TMHMM47) in all the candidate sequences from the virus showed that fragment I belonged to the N-terminal region of the 117-residue integral membrane protein P16, predicted to possess an 18-residue transmembrane helix between residues 7 and 24.
+<mention id="bioj:a2004-46-NATURE-C20-mention" original_name="TMHMM">Analysing the relative positions of methionine residues and predicted transmembrane helices (program TMHMM47) in all the candidate sequences from the virus showed that fragment I belonged to the N-terminal region of the 117-residue integral membrane protein P16, predicted to possess an 18-residue transmembrane helix between residues 7 and 24.</mention>
 Placing an a-helix into the transmembrane electron density (Fig.
 3b, right) and positioning the P16 residue Met 41 in the vicinity of the SeMet peak enabled the construction of a Ca trace for P16 residues 7–56.
 To give the best fit to the electron density, the transmembrane helix was extended from residue 24 to residue 28.
 Fragment II was assigned as the P16 C terminus on the basis of protein packing density considerations in the cavity under the vertex (see Supplementary Methods) and the alignment of tyrosines at positions 103 and 110 (the largest amino acids in the C-terminal sequence) to two particularly pronounced bumps seven residues apart (Fig.
 3c).
-All structures were brought into conformity with expected backbone conformations and side chains were built with program CALPHA48.
+<mention id="bioj:a2004-46-NATURE-C21-mention" original_name="CALPHA">All structures were brought into conformity with expected backbone conformations and side chains were built with program CALPHA48.</mention>
 22.
 23.
 24.

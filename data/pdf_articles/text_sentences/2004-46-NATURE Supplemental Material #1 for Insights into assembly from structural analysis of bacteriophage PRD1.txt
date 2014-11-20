@@ -1,6 +1,6 @@
 Supplementary Figure  Left, plot of data completeness versus resolution for cell 1 (top) and cell 2 (bottom).
 Right, plot of correlation coefficient versus resolution for cell 1 (top) and cell 2 (bottom).Thick line F >2σ, thin line F>0.
-Correlation coefficient = Σh(<|Fo|h>-|Fo|h)(<|Fc|h>-|Fc|h)/Σh[(<|Fo|h>-|Fo|h)2-(<|Fc|h>-|Fc|h)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; DIS, unpublished program).
+<mention id="bioj:a2004-46-NATURE-C22-mention" original_name="SHELLSCALE">Correlation coefficient = Σh(<|Fo|h>-|Fo|h)(<|Fc|h>-|Fc|h)/Σh[(<|Fo|h>-|Fo|h)2-(<|Fc|h>-|Fc|h)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; DIS, unpublished program).</mention>
 1  Supplementary Methods The cavity under the vertex is roughly cylindrical, having a radius of ~25Å and depth ~30Å (Fig.
 3b).
 The P16 polypeptide chain becomes disordered after residue 56, and if this cavity had to accommodate the remaining 300 P16 residues (5 copies of 60 residues from the symmetry related P16 molecules around the vertex), the Matthews Coefficient Vm for the cavity would be 1.8Å3/Da.

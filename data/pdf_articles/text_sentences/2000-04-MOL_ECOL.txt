@@ -83,7 +83,7 @@ The annealing temperatures employed a touchdown temperature profile, with four c
 The 2.2-kb fragment was digested with RsaI, and visualized by silver staining (Klinkicht & Tautz 1992) after electrophoresis on a 5% denaturing acrylamide gel.
 The cleaved fragments of the amplified DNA were assigned numbers: 1 was assigned to the smallest fragment and other fragments were labelled sequentially with increasing size.
 Frequencies of mtDNA haplotypes were treated as allelic frequencies at a single locus for statistical purposes.
-FST was used to describe the variation among populations and was calculated using biosys (Swofford & Selander 1981).
+<mention id="bioj:a2000-04-MOL_ECOL-C01-mention" original_name="biosys" standardized_name="BIOSYS">FST was used to describe the variation among populations and was calculated using biosys (Swofford & Selander 1981).</mention>
 The homogeneity of haplotype frequencies was tested using a row-by-columns test of independence, which employs χ2.
 Because some of the sample sites had small sample sizes, we grouped the samples into the geographical regions listed in Table 1 for the calculation of χ2.
 Results Eight size variants of the cleaved fragment of the second intron of nad1 were detected (Table 1) and we refer to these as haplotypes 1 to 8.

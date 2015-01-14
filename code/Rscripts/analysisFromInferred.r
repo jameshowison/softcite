@@ -965,26 +965,77 @@ MentionTypes <- function() {}
 	
 SoftwareTypes <- function() {}
 	
-	# How many pieces of software?
 	query <- "
-	SELECT DISTINCT ?software
+	SELECT ?software ?category
 	WHERE {
-		?software rdf:type bioj:SoftwarePackage .
+		?software rdf:type bioj:SoftwarePackage ;
+		          citec:software_category ?category .
 	}
 	"
 
-	software_packages <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+	software <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 
+	software <- unique(software)
 
 	cat("--------------------\n")
 	cat("We found references to ")
-	cat(nrow(software_packages))
+	cat(nrow(software))
 	cat(" distinct pieces of software\n")
 	
 	# Overall (proprietary, non-commercial, explicitly open source)
+	msoftware <- melt(software, id=1) #software, variable, value
 	
+	# Arrange by order
+	msoftware$value <- factor(msoftware$value,levels=c("Proprietary","Non-commercial","Open source"))
+	
+	# Overall (proprietary, non-commercial, explicitly open source)
+	overall_total <- summarize(msoftware, count=n_distinct(software))[1,1]
+	
+	# group by value, sums and proportions
+	msoftware_overall <- msoftware %>% group_by(value) %>%
+	summarize(num=n_distinct(software), 
+	          proportion = round(n_distinct(software) / overall_total, 2)
+		     )
+
+	# Add confidence intervals
+	msoftware_overall <- ddply(msoftware_overall,c("value"),transform, 
+	                      conf_int_low = round(prop.test(num,overall_total)$conf.int[1],2), 
+						  conf_int_high = round(prop.test(num,overall_total)$conf.int[2],2) 
+						)
+
+	# Output table
+	print(msoftware_overall)
+	
+	#Output plot
+	title = "Types of Software"
+	
+	ggplot(msoftware_overall,aes(x=value,y=proportion,fill=value)) +
+	geom_bar(stat="identity") +
+	geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
+	              width=.2,                    # Width of the error bars
+	              position=position_dodge(.9)) + 
+	#facet_grid(.~strata,margins=T) +
+	scale_fill_grey(guide = guide_legend(title="")) +
+	scale_x_discrete(name="") +
+	scale_y_continuous(name="Proportion of software") +
+	ggtitle(title) +
+	theme(legend.position="none",
+	      panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_text(vjust=0.1),
+		text=element_text(size=10),
+		axis.text.x=element_text(angle=25,hjust=1)
+		)
+	thisFilename = paste("output/",title,".png",sep="")
+	ggsave(filename=thisFilename, width=5, height=4)
+	cat("--------------------\n")
+	cat("Outputted ",thisFilename,sep="")
 	
 	# Per strata
+	
+	
 
 FunctionsOfCitation <- function() {}
 	

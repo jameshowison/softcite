@@ -59,7 +59,7 @@ bioj:runFirstRule [ rdf:type sp:Construct ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
-		?this citec:software_category "Open Source" . 
+		?this citec:software_category "Open source" . 
 	}
 	WHERE {
 			?this		rdf:type              bioj:SoftwarePackageUsed ;

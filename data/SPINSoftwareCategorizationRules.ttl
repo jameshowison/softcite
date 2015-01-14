@@ -1,0 +1,72 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+@prefix sp:      <http://spinrdf.org/sp#> .
+@prefix spin:    <http://spinrdf.org/spin#> .
+@prefix spl:     <http://spinrdf.org/spl#> .
+
+<http://james.howison.name/ontologies/software-citation-coding-constraints>
+  rdf:type owl:Ontology ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://spinrdf.org/spl> .
+
+# Create a class of rules that run first.
+# This is needed to do a if not true then false clean up on is_credited.
+bioj:runFirstRule rdfs:subPropertyOf spin:rule .
+
+bioj:runFirstRule spin:nextRuleProperty spin:rule .
+
+bioj:SoftwarePackageUsed a rdfs:Class ;
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:software_category "Proprietary" . 
+	}
+	WHERE {
+			?this		rdf:type              bioj:SoftwarePackageUsed ;
+				        citec:is_accessible             true ;
+				        citec:is_explicitly_modifiable  false ;
+				        citec:is_free                   false ;
+				        citec:is_source_accessible      false .
+	}"""
+] ;    
+bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:software_category "Non-commercial" . 
+	}
+	WHERE {
+			?this		rdf:type              bioj:SoftwarePackageUsed ;
+				        citec:is_accessible             true ;
+				        citec:is_explicitly_modifiable  false ;
+				        citec:is_free                   true .
+	}"""
+] ;
+bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:software_category "Open Source" . 
+	}
+	WHERE {
+			?this		rdf:type              bioj:SoftwarePackageUsed ;
+				       	citec:is_accessible             true ;
+				        citec:is_explicitly_modifiable  true ;
+				        citec:is_free                   true ;
+				        citec:is_source_accessible      true .
+	}"""
+] ;
+.

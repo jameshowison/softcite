@@ -498,6 +498,8 @@ public class TTLRepository {
 	//	saveResults(resultsModel);
 		
 		resultsModel = runSPINruleSet(resultsModel, "SPINNegations.ttl");
+		
+		resultsModel = runSPINruleSet(resultsModel, "SPINSoftwareCategorizationRules.ttl");
 	
 		saveResults(resultsModel);
 			

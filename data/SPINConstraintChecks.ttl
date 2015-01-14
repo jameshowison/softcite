@@ -211,7 +211,13 @@ bioj:SoftwarePackageUsed a rdfs:Class ;
   	               spl:maxCount 1 ;
   	               spl:valueType xsd:boolean ;
   			   ] ;
-
+   spin:constraint
+                 [ a       spl:Attribute ;
+                   rdfs:comment "Must have one and exactly one software classification "^^xsd:string ;
+                   spl:predicate citec:software_category ;
+                   spl:minCount 1 ;
+                   spl:maxCount 1 ;
+                 ] ;
 
 .
 

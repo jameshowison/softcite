@@ -845,29 +845,32 @@ MentionTypes <- function() {}
 
 	GetProportionsAndGraph <- function (datain, title) {
 		
-		overall_total <- summarize(datain, count=n_distinct(mention))[1,1]
-		
+	#	overall_total <- summarise_(datain, count=interp(~n_distinct(var), var = as.name(id_column)))[1,1]
+		total_mentions <- summarise(datain, count=n_distinct(mention))[1,1]
+#		                 summarise_(data, count = interp(~n_distinct(var), var = as.name(col)))
+
 		# group by value, sums and proportions
 		datain_overall <- datain %>% group_by(value) %>%
-		summarize(num=n_distinct(mention), 
-		          proportion = round(n_distinct(mention) / total_mentions, 2)
-			     )
+		summarize(num=n_distinct(mention)) %>%
+		mutate(proportion = round(num / total_mentions, 2),
+			   total_mentions_in_frame = total_mentions
+			   )
 
-		# Add confidence intervals
-		datain_overall <- ddply(datain_overall,c("value"),transform, 
-		                      conf_int_low = round(prop.test(num,total_mentions)$conf.int[1],2), 
-							  conf_int_high = round(prop.test(num,total_mentions)$conf.int[2],2) 
+		#Add confidence intervals
+		datain_overall <- ddply(datain_overall,c("value"),transform,
+		                      conf_int_low = round(prop.test(num,total_mentions_in_frame)$conf.int[1],2),
+							  conf_int_high = round(prop.test(num,total_mentions_in_frame)$conf.int[2],2)
 							)
-	
+
 		# Output table
 		print(datain_overall)
-		
+
 		#Output plot
 		ggplot(datain_overall,aes(x=value,y=proportion,fill=value)) +
 		geom_bar(stat="identity") +
 		geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
 		              width=.2,                    # Width of the error bars
-		              position=position_dodge(.9)) + 
+		              position=position_dodge(.9)) +
 		#facet_grid(.~strata,margins=T) +
 		scale_fill_grey(guide = guide_legend(title="")) +
 		scale_x_discrete(name="") +
@@ -986,7 +989,7 @@ SoftwareTypes <- function() {}
 	msoftware <- melt(software, id=1) #software, variable, value
 	
 	# Arrange by order
-	msoftware$value <- factor(msoftware$value,levels=c("Proprietary","Non-commercial","Open source"))
+	msoftware$value <- factor(msoftware$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 	
 	# Overall (proprietary, non-commercial, explicitly open source)
 	overall_total <- summarize(msoftware, count=n_distinct(software))[1,1]
@@ -1034,12 +1037,96 @@ SoftwareTypes <- function() {}
 	cat("Outputted ",thisFilename,sep="")
 	
 	# Per strata
-	
-	
+	# Decided against this.
 
 FunctionsOfCitation <- function() {}
 	
 	# Unit of analysis: ArticleSoftwareLink
+	
+	query <- "
+	SELECT ?strata ?category ?software_article_link ?identifiable ?findable ?versioned ?version_findable ?credited 
+	WHERE {
+		?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
+								citec:is_credited       ?credited ;
+								citec:is_findable       ?findable ;
+								citec:is_identifiable   ?identifiable ;
+								citec:is_versioned      ?versioned ;
+								citec:version_is_findable ?version_findable ;
+		 						bioj:from_article ?article ;
+		 					    bioj:mentions_software ?software .
+	    ?software citec:software_category ?category .
+	# 	?article dc:isPartOf ?journal .
+	# 	?journal bioj:strata ?strata .
+	}
+	"
+	#
+	links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+	
+	# Overall.
+	
+	
+	# # get totals
+	# links_by_strata <- links %>% group_by(strata) %>%
+	# summarize(total_in_strata = n_distinct(software_article_link))
+	#
+	# # melt to vertical format.
+	# mlinks <- melt(links, id=1:4)
+	#
+	# # Count number of each category in each strata
+	# link_counts <- mlinks %>%
+	# group_by(strata,variable,value) %>%
+	# summarize(count = n())
+	#
+	# # Add the total for that strata to each row, to be used to create percentage
+	# links_by_strata <- merge(links_by_strata,link_counts)
+	#
+	# # create the percentage for each row.
+	# links_by_strata <- within(links_by_strata, proportion <- round(count / total_in_strata, 2))
+	#
+	# links_by_strata <- ddply(links_by_strata,c("strata","variable","value"),transform,
+	#                         conf_int_low = prop.test(count,total_in_strata)$conf.int[1],
+	# 						conf_int_high = prop.test(count,total_in_strata)$conf.int[2]
+	# 						)
+	#
+	#
+	#
+	# cat("--------------------\n")
+	# cat("ArticleSoftwareLinks and credited, findable, identifiable\n")
+	#
+	# links_by_strata_matrix <- dcast(filter(links_by_strata, value=="true"),variable ~ strata , sum , value.var="count")
+	#
+	# chisq.test(links_by_strata_matrix[,2:4],simulate.p.value=T)
+	#
+	#
+	# print(dcast(filter(links_by_strata, value=="true"),variable ~ strata , mean , value.var="proportion"))
+	#
+	#
+	#
+	# cat("Overall, with confidence intervals\n")
+	#
+	# all_link_counts <- mlinks %>% group_by(variable,value) %>% summarize(count = n())
+	#
+	# all_link_counts <- within(all_link_counts, proportion <- round(count / total_links, 2))
+	#
+	# ddply(all_link_counts,c("variable","value"),transform, conf_int_low = prop.test(count,total_links)$conf.int[1],
+	# 						conf_int_high = prop.test(count,total_links)$conf.int[2] )
+	#
+	#
+	#
+	# has_version_info <- nrow(filter(links,versioned == "true"))
+	#
+	# versions_found <- nrow(filter(links,versioned == "true" & version_findable == "true"))[1]
+	#
+	# cat("\nprovided any version information: ")
+	# cat(has_version_info)
+	# cat(" percent: ")
+	# cat(round(has_version_info/nrow(article_links),2))
+	# cat("\n")
+	# cat("provided any version information and could be found: ")
+	# cat(versions_found)
+	# cat(" percent: ")
+	# cat(round(versions_found/nrow(article_links),2))
+	# cat("\n")
 	
 	# Overall (identifiable, version_identifiable, findable, version_findable)
 	# Per strata

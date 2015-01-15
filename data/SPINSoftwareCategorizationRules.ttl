@@ -32,22 +32,11 @@ bioj:SoftwarePackageUsed a rdfs:Class ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
-		?this citec:software_category "Not-accessible" . 
+		?this citec:software_category "Not accessible" . 
 	}
 	WHERE {
 			?this		rdf:type              bioj:SoftwarePackageUsed ;
 				        citec:is_accessible          false .
-	}"""
-] ;    
-    bioj:runFirstRule [ rdf:type sp:Construct ;
-	sp:text """
-	# Interpret software package codes
-	CONSTRUCT {
-		?this citec:software_category "Not-identifiable" . 
-	}
-	WHERE {
-			?this		rdf:type              bioj:SoftwarePackageUsed ;
-				        citec:is_identifiable           false .
 	}"""
 ] ;    
 

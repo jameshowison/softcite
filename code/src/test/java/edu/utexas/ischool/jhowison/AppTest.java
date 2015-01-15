@@ -109,7 +109,7 @@ public class AppTest
 	@Test
 	public void testSPINConstraints()
 	{
-		TTLRepository.runSPINconstraintsOnly();
+		assertEquals(0, TTLRepository.runSPINconstraintsOnly());
 	}
 	
 	@Test

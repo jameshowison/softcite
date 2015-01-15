@@ -18257,8 +18257,9 @@ bioj:a2007-51-APPL_BIOCHEM_BIOTECH-B01 rdf:type bioj:selection ;
 	
 	ca:isTargetOf
 	[ rdf:type ca:CodeApplication ;
-	  ca:hasCoder "jbullard" ;
-	  ca:appliesCode [ rdf:type citec:source_available ];
+	  ca:hasCoder "jhowison" ;
+	  ca:appliesCode [ rdf:type citec:source_unavailable ];
+	  ca:comment "Note: changed by James. You cannot get full source for the base matlab" ;
 	] ;
 	
 	ca:isTargetOf 

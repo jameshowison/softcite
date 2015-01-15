@@ -32,14 +32,36 @@ bioj:SoftwarePackageUsed a rdfs:Class ;
 	sp:text """
 	# Interpret software package codes
 	CONSTRUCT {
+		?this citec:software_category "Not-accessible" . 
+	}
+	WHERE {
+			?this		rdf:type              bioj:SoftwarePackageUsed ;
+				        citec:is_accessible          false .
+	}"""
+] ;    
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
+		?this citec:software_category "Not-identifiable" . 
+	}
+	WHERE {
+			?this		rdf:type              bioj:SoftwarePackageUsed ;
+				        citec:is_identifiable           false .
+	}"""
+] ;    
+
+    bioj:runFirstRule [ rdf:type sp:Construct ;
+	sp:text """
+	# Interpret software package codes
+	CONSTRUCT {
 		?this citec:software_category "Proprietary" . 
 	}
 	WHERE {
 			?this		rdf:type              bioj:SoftwarePackageUsed ;
 				        citec:is_accessible             true ;
 				        citec:is_explicitly_modifiable  false ;
-				        citec:is_free                   false ;
-				        citec:is_source_accessible      false .
+				        citec:is_free                   false .
 	}"""
 ] ;    
 bioj:runFirstRule [ rdf:type sp:Construct ;

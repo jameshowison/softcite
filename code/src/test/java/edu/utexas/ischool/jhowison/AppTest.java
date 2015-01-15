@@ -104,6 +104,7 @@ public class AppTest
 	public void testSPINoutput()
 	{
 		TTLRepository.runSPINrules();
+		assertEquals(0, TTLRepository.runSPINconstraintsOnly());
 	}
 	
 	@Test

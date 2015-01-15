@@ -178,6 +178,7 @@ bioj:SoftwarePackage a rdfs:Class ;
 	                spl:maxCount 1 ;
 	                spl:valueType xsd:string ;
 				   ] ;
+
 .
 
 bioj:SoftwarePackageUsed a rdfs:Class ;
@@ -218,7 +219,6 @@ bioj:SoftwarePackageUsed a rdfs:Class ;
                    spl:minCount 1 ;
                    spl:maxCount 1 ;
                  ] ;
-
 .
 
 bioj:journal a rdfs:Class ;

@@ -17,8 +17,10 @@ inferredData = load.rdf("output/inferredStatements.ttl", format="TURTLE")
 
 prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UTF-8"), collapse=" ")
 
+global_fig_counter = 1
+
 # # Output goes to this file (using print)
-# sink("output/analysis_output.txt")
+# sink("output/fig-analysis_output.txt")
 #
 
 #
@@ -106,7 +108,7 @@ prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UT
 #  scale_y_continuous(name = "Mentions in article") +
 #  scale_x_discrete(name="Journal Impact Factor rank")
 #
-# ggsave(filename="output/Fig1-MentionsByStrataBoxplot.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig1-MentionsByStrataBoxplot.png", width=5, height=4)
 #
 # cat("--------------------\n")
 # cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")
@@ -162,7 +164,7 @@ prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UT
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/Fig2-TypesOfSoftwareMentions.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig2-TypesOfSoftwareMentions.png", width=5, height=4)
 # cat("--------------------\n")
 # cat("Outputted Figure 2: TypesOfSoftwareMentions.png\n")
 #
@@ -240,7 +242,7 @@ prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UT
 # 		axis.text.x=element_text(angle=25,hjust=1)) +
 #   ggtitle("Major software mention types by journal strata")
 #
-# ggsave(filename="output/Fig3-MentionTypesByStrata.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig3-MentionTypesByStrata.png", width=5, height=4)
 # cat("--------------------\n")
 # cat("Outputted Figure 3: MentionTypesByStrata.png\n")
 #
@@ -346,7 +348,7 @@ prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UT
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/Fig4-CiteTypesBySoftwareTypes.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig4-CiteTypesBySoftwareTypes.png", width=5, height=4)
 #
 # #########################
 # #
@@ -683,7 +685,7 @@ prefixes <- paste(readLines("code/Rscripts/sparql_prefixes.sparql", encoding="UT
 # 		axis.ticks.x=element_blank()
 # 		)
 #
-# ggsave(filename="output/Fig5-FunctionsByStrataBoxplot.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig5-FunctionsByStrataBoxplot.png", width=5, height=4)
 #
 # ########################
 # # Misses/Matches preferred citation
@@ -818,8 +820,10 @@ MentionBasics <- function() {}
 	 geom_boxplot() +
 	 scale_y_continuous(name = "Mentions in article") +
 	 scale_x_discrete(name="Journal Impact Factor rank")
-
-	ggsave(filename="output/Fig1-MentionsByStrataBoxplot.png", width=5, height=4)
+	
+	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.png",sep="")
+	assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
+	ggsave(filename=thisFilename, width=5, height=4)
 
 	cat("--------------------\n")
 	cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")
@@ -846,14 +850,17 @@ MentionTypes <- function() {}
 	mmentions_collapse$value <- factor(mmentions_collapse$value,levels=c("Cite to publication", "Like instrument" , "Other"))
 	
 
-	GetProportionsAndGraph <- function (datain, id_column, title) {
+	GetProportionsAndGraph <- function (datain, id_column, id_column_total, title) {
 		
 		# Not only used for mentions but not changing the var names.
 		mention <- id_column
-		total_mentions <- summarise_(datain, count=interp(~n_distinct(var), var = as.name(mention)))[1,1]
+		#total_mentions <- summarise_(datain, count=interp(~n_distinct(var), var = as.name(mention)))[1,1]
 #		total_mentions <- summarise(datain, count=n_distinct(mention))[1,1]
 #		                 summarise_(data, count = interp(~n_distinct(var), var = as.name(col)))
-
+		
+		total_mentions <- id_column_total
+		
+		print(total_mentions)
 		#group by value, sums and proportions
 		datain_overall <- datain %>% group_by(value) %>%
 		summarize_(num=interp(~n_distinct(var), var = as.name(mention))) %>%
@@ -863,8 +870,8 @@ MentionTypes <- function() {}
 
 		#Add confidence intervals
 		datain_overall <- ddply(datain_overall,c("value"),transform,
-		                      conf_int_low = round(prop.test(num,total_mentions_in_frame)$conf.int[1],2),
-							  conf_int_high = round(prop.test(num,total_mentions_in_frame)$conf.int[2],2)
+		                      conf_int_low = round(prop.test(num,total_mentions_in_frame,conf.level = 0.9)$conf.int[1],2),
+							  conf_int_high = round(prop.test(num,total_mentions_in_frame,conf.level = 0.9)$conf.int[2],2)
 							)
 
 		# Output table
@@ -890,13 +897,14 @@ MentionTypes <- function() {}
 			text=element_text(size=10),
 			axis.text.x=element_text(angle=25,hjust=1)
 			)
-		thisFilename = paste("output/",title,".png",sep="")
+	  	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".png",sep="")
+		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
 		ggsave(filename=thisFilename, width=5, height=4)
 		cat("--------------------\n")
-		cat("Outputted ",thisFilename,sep="")
+		cat("Outputted ",thisFilename,"\n\n",sep="")
 	}
 	
-	GetProportionsAndGraphByX <- function (datain, id_column, facet_column, title) {
+	GetProportionsByX <- function (datain, id_column, facet_column) {
 		
 		mention <- id_column
 		# Get total in strata
@@ -926,10 +934,12 @@ MentionTypes <- function() {}
 
 		# create confidence intervals
 		types_by_strata <- ddply(types_by_strata,c(facet_column,"value"),transform, 
-		                        conf_int_low = prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[1], 
-								conf_int_high = prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[2] 
+		                        conf_int_low = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[1],2), 
+								conf_int_high = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[2],2) 
 								)
-
+		
+		print(types_by_strata)
+		return(types_by_strata)
 		#ddply(types_by_strata,c("strata","category"),transform, conf_int_high = prop.test(type_in_strata,total_in_strata)$conf.int[2])
 		#types_by_strata <- within(types_by_strata, conf_low <- prop.test(type_in_strata,total_in_strata)$conf.int[1])
 
@@ -940,12 +950,16 @@ MentionTypes <- function() {}
 		#types_for_graph <- filter(types_by_strata, category %in% c("Cite to publication","Like instrument","Name only"))
 
 		# Then graph as dodged bars with errorbars.
-		ggplot(types_by_strata,aes(x=value,y=proportion,fill=value)) + 
+
+	}
+	
+	OutputGraph <- function(types_by_strata, facet_column, title) {
+		ggplot(types_by_strata,aes_string(x=facet_column,y=quote(proportion),fill=facet_column)) + 
 		  geom_bar(stat="identity") + 
 		  geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
 		                width=.2,                    # Width of the error bars
 		                position=position_dodge(.9)) + 
-		  facet_grid(paste(". ~ ",facet_column,sep="")) + 
+		  facet_grid(. ~ value) + 
 		  scale_y_continuous(name="Proportion",limits=c(0,max(types_by_strata$conf_int_high))) +
 		  scale_x_discrete(name="") +
 		  scale_fill_grey(guide = guide_legend(title="")) +
@@ -959,15 +973,21 @@ MentionTypes <- function() {}
 				axis.text.x=element_text(angle=25,hjust=1)) +
 		  ggtitle(title)
   
-  		thisFilename = paste("output/",title,".png",sep="")
+  		thisFilename = paste("output/fig-",global_fig_counter,"-",title,".png",sep="")
+		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
   		ggsave(filename=thisFilename, width=5, height=4)
   		cat("--------------------\n")
-  		cat("Outputted ",thisFilename,sep="")
+  		cat("Outputted ",thisFilename,"\n\n",sep="")
 	}
+	
+	GetProportionsAndGraphByX <- function (datain, id_column, facet_column, title) {
+		summary <- GetProportionsByX(datain, id_column, facet_column)
+		OutputGraph(summary, facet_column, title)
+	} 
 
-	GetProportionsAndGraph(mmentions, "mention", "Mentions, all categories")
+	GetProportionsAndGraph(mmentions, "mention", length(levels(mmentions$mention)), "Mentions, all categories")
 
-	GetProportionsAndGraph(mmentions_collapse, "mention", "Mentions, collapsed categories")
+	GetProportionsAndGraph(mmentions_collapse, "mention", length(levels(mmentions_collapse$mention)), "Mentions, collapsed categories")
 
 	# Per strata (Collapsed)	
 	GetProportionsAndGraphByX(mmentions_collapse, "mention", "strata", "Mentions by strata, collapsed categories")
@@ -975,6 +995,32 @@ MentionTypes <- function() {}
 	
 SoftwareTypes <- function() {}
 	
+	# Detailed software characteristics.
+	query <- "
+	SELECT ?software ?accessible ?modifiable ?source_available ?free
+	WHERE {
+		?software	rdf:type                        bioj:SoftwarePackageUsed ;
+					citec:is_accessible             ?accessible  ;
+					citec:is_explicitly_modifiable  ?modifiable  ;
+					citec:is_source_accessible      ?source_available      .
+		OPTIONAL { ?software citec:is_free          ?free  }
+
+	}
+	"
+	software_char <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+	
+	msoftware_char <- melt(software_char,id=1)
+	
+	# drop false, rejig dataframe to match functions above.
+	msoftware_char <- msoftware_char %>% filter(value == "true") 
+	msoftware_char <- msoftware_char %>% select(-value)
+	msoftware_char <- msoftware_char %>% rename(value = variable)
+	
+	msoftware_char$value <- factor(msoftware_char$value, levels=c("accessible", "free", "source_available", "modifiable"))
+	
+	GetProportionsAndGraph(msoftware_char, "software", length(levels(msoftware_char$software)), "Characteristics of mentioned software")
+	
+	# Simplified Software Types
 	query <- "
 	SELECT ?software ?category
 	WHERE {
@@ -998,9 +1044,11 @@ SoftwareTypes <- function() {}
 	# Arrange by order
 	msoftware$value <- factor(msoftware$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 
-	GetProportionsAndGraph(msoftware, "software", "Proportion of Software")
+	GetProportionsAndGraph(msoftware, "software", length(levels(msoftware$software)), "Types of Software mentioned")
 	# Per strata
-	# Decided against this.
+	# Decided against this, since software is mentioned in multiple strata.
+#	GetProportionsAndGraphByX(msoftware, "software", "strata", "Proportion of Software by strata")
+	
 	
 SoftwareTypeVsCitationType <- function() {}
 	# Does software of different types get cited differently?
@@ -1079,7 +1127,7 @@ FunctionsOfCitation <- function() {}
 	mlinks$mention_category <- factor(mlinks$mention_category,levels=c("Cite to publication", "Like instrument" , "Other"))
 	
 
-	GetProportionsAndGraph(mlinks, "software_article_link", "Functions of Citation")
+	GetProportionsAndGraph(mlinks, "software_article_link", length(levels(mlinks$software_article_link)), "Functions of Citation")
 	GetProportionsAndGraphByX(mlinks, "software_article_link", "strata","Functions of Citation By Strata")
 
 #######
@@ -1089,13 +1137,43 @@ FunctionsOfCitation <- function() {}
 CitationTypeByFunction <- function() {}
 	
 	# Which mention types are driving issues in functions?	
-	GetProportionsAndGraphByX(mlinks, "software_article_link", "mention_category","Functions of Citation By Mention Category")
+	#GetProportionsAndGraphByX(mlinks, "software_article_link", "mention_category","Functions of Citation By Mention Category")
+	
+	summary_by_function <- GetProportionsByX(mlinks, "software_article_link", "mention_category")
+	title = "Functions of Citation By Mention Category"
+	
+	# Special plotting.
+	ggplot(summary_by_function,aes(x=mention_category,y=proportion,fill=mention_category)) + 
+	  geom_bar(stat="identity") + 
+	  geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
+	                width=.2,                    # Width of the error bars
+	                position=position_dodge(.9)) + 
+	  facet_grid(. ~ value) + 
+	  scale_y_continuous(name="Proportion",limits=c(0,max(summary_by_function$conf_int_high))) +
+	  scale_x_discrete(name="") +
+	  scale_fill_grey(guide = guide_legend(title="")) +
+	  theme(legend.position="none",
+	        panel.grid.major.x = element_blank(),
+			panel.grid.minor.y = element_blank(),
+			panel.border = element_blank(),
+			axis.title.y=element_text(vjust=0.3),
+			axis.title.x=element_text(vjust=0.1),
+			text=element_text(size=10),
+			axis.text.x=element_text(angle=25,hjust=1)) +
+	  ggtitle(title)
+
+	thisFilename = paste("output/fig-",title,".png",sep="")
+	ggsave(filename=thisFilename, width=5, height=4)
+	cat("--------------------\n")
+	cat("Outputted ",thisFilename,sep="")
 
 SoftwareTypeByFunction <- function() {}
 	
 	# Which software types are driving issues in functions?
 
 	GetProportionsAndGraphByX(mlinks, "software_article_link", "software_category","Functions of Citation By Software Category")
+
+
 
 #####
 # Discussion

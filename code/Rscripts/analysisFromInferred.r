@@ -843,15 +843,17 @@ MentionTypes <- function() {}
 	mmentions_collapse$value <- factor(mmentions_collapse$value,levels=c("Cite to publication", "Like instrument" , "Other"))
 	
 
-	GetProportionsAndGraph <- function (datain, title) {
+	GetProportionsAndGraph <- function (datain, id_column, title) {
 		
-	#	overall_total <- summarise_(datain, count=interp(~n_distinct(var), var = as.name(id_column)))[1,1]
-		total_mentions <- summarise(datain, count=n_distinct(mention))[1,1]
+		# Not only used for mentions but not changing the var names.
+		mention <- id_column
+		total_mentions <- summarise_(datain, count=interp(~n_distinct(var), var = as.name(mention)))[1,1]
+#		total_mentions <- summarise(datain, count=n_distinct(mention))[1,1]
 #		                 summarise_(data, count = interp(~n_distinct(var), var = as.name(col)))
 
-		# group by value, sums and proportions
+		#group by value, sums and proportions
 		datain_overall <- datain %>% group_by(value) %>%
-		summarize(num=n_distinct(mention)) %>%
+		summarize_(num=interp(~n_distinct(var), var = as.name(mention))) %>%
 		mutate(proportion = round(num / total_mentions, 2),
 			   total_mentions_in_frame = total_mentions
 			   )
@@ -872,7 +874,7 @@ MentionTypes <- function() {}
 		              width=.2,                    # Width of the error bars
 		              position=position_dodge(.9)) +
 		#facet_grid(.~strata,margins=T) +
-		scale_fill_grey(guide = guide_legend(title="")) +
+		scale_fill_grey(guide = guide_legend(title=""),start=0.6,end=0.2) +
 		scale_x_discrete(name="") +
 		scale_y_continuous(name="Proportion of mentions") +
 		ggtitle(title) +
@@ -942,7 +944,7 @@ MentionTypes <- function() {}
 		  facet_grid(.~strata) + 
 		  scale_y_continuous(name="Proportion of mentions",limits=c(0,max(types_by_strata$conf_int_high))) +
 		  scale_x_discrete(name="") +
-		  scale_fill_grey(guide = guide_legend(title="")) +
+		  scale_fill_grey(guide = guide_legend(title=""),start=0.6,end=0.2) +
 		  theme(legend.position="none",
 		        panel.grid.major.x = element_blank(),
 				panel.grid.minor.y = element_blank(),
@@ -958,9 +960,9 @@ MentionTypes <- function() {}
 		cat("Outputted Figure 3: MentionTypesByStrata.png\n")
 	}
 
-	GetProportionsAndGraph(mmentions, "Mentions, all categories")
+	GetProportionsAndGraph(mmentions, "mention", "Mentions, all categories")
 
-	GetProportionsAndGraph(mmentions_collapse, "Mentions, collapsed categories")
+	GetProportionsAndGraph(mmentions_collapse, "mention", "Mentions, collapsed categories")
 
 	# Per strata (Collapsed)	
 	GetProportionsAndGraphByStrata(mmentions_collapse, "Mentions by strata, collapsed categories")
@@ -1059,8 +1061,12 @@ FunctionsOfCitation <- function() {}
 	# 	?journal bioj:strata ?strata .
 	}
 	"
+	
 	#
 	links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+	
+	links$category <- factor(links$category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
+	
 	
 	# Overall.
 	

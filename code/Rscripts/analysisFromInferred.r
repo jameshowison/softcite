@@ -7,6 +7,9 @@ library(dplyr)
 
 #scimapRegister()
 
+# Clear namespaces
+rm(list = ls())
+
 setwd("/Users/howison/Documents/UTexas/Projects/SoftwareCitations/softcite/")
 #source("code/Rscripts//analysisFromInferred.r")
 
@@ -893,11 +896,11 @@ MentionTypes <- function() {}
 		cat("Outputted ",thisFilename,sep="")
 	}
 	
-	GetProportionsAndGraphByStrata <- function (datain, id_column, title) {
+	GetProportionsAndGraphByX <- function (datain, id_column, facet_column, title) {
 		
 		mention <- id_column
 		# Get total in strata
-		totals_by_strata <- datain %>% group_by(strata) %>% summarize_(total_in_strata = interp(~n_distinct(var), var=as.name(mention)))
+		totals_by_strata <- datain %>% group_by_(interp(~var,var=as.name(facet_column))) %>% summarize_(total_in_strata = interp(~n_distinct(var), var=as.name(mention)))
 
 		#     strata total_in_strata
 		# 1     1-10             130
@@ -905,7 +908,7 @@ MentionTypes <- function() {}
 		# 3 111-1455              65
 
 		# Count number of each category in each strata
-		types_by_strata <- datain %>% group_by(strata, value) %>% summarize_(type_in_strata = interp(~n_distinct(var), var=as.name(mention)))
+		types_by_strata <- datain %>% group_by_(interp(~var,var=as.name(facet_column)), quote(value)) %>% summarize_(type_in_strata = interp(~n_distinct(var), var=as.name(mention)))
 
 		#      strata                category type_in_strata
 		# 1      1-10 Cite to name or website              2
@@ -922,9 +925,9 @@ MentionTypes <- function() {}
 		types_by_strata <- within(types_by_strata, proportion <- round(type_in_strata / total_in_strata, 2))
 
 		# create confidence intervals
-		types_by_strata <- ddply(types_by_strata,c("strata","value"),transform, 
-		                        conf_int_low = prop.test(type_in_strata,total_in_strata)$conf.int[1], 
-								conf_int_high = prop.test(type_in_strata,total_in_strata)$conf.int[2] 
+		types_by_strata <- ddply(types_by_strata,c(facet_column,"value"),transform, 
+		                        conf_int_low = prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[1], 
+								conf_int_high = prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[2] 
 								)
 
 		#ddply(types_by_strata,c("strata","category"),transform, conf_int_high = prop.test(type_in_strata,total_in_strata)$conf.int[2])
@@ -942,7 +945,7 @@ MentionTypes <- function() {}
 		  geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
 		                width=.2,                    # Width of the error bars
 		                position=position_dodge(.9)) + 
-		  facet_grid(.~strata) + 
+		  facet_grid(paste(". ~ ",facet_column,sep="")) + 
 		  scale_y_continuous(name="Proportion",limits=c(0,max(types_by_strata$conf_int_high))) +
 		  scale_x_discrete(name="") +
 		  scale_fill_grey(guide = guide_legend(title="")) +
@@ -967,7 +970,7 @@ MentionTypes <- function() {}
 	GetProportionsAndGraph(mmentions_collapse, "mention", "Mentions, collapsed categories")
 
 	# Per strata (Collapsed)	
-	GetProportionsAndGraphByStrata(mmentions_collapse, "mention", "Mentions by strata, collapsed categories")
+	GetProportionsAndGraphByX(mmentions_collapse, "mention", "strata", "Mentions by strata, collapsed categories")
 	
 	
 SoftwareTypes <- function() {}
@@ -996,18 +999,47 @@ SoftwareTypes <- function() {}
 	msoftware$value <- factor(msoftware$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 
 	GetProportionsAndGraph(msoftware, "software", "Proportion of Software")
-	
-	# cat("Outputted ",thisFilename,sep="")
-	#
 	# Per strata
 	# Decided against this.
+	
+SoftwareTypeVsCitationType <- function() {}
+	# Does software of different types get cited differently?
+	query <- "
+	SELECT ?mention ?mention_category ?software_category  
+	WHERE {
+		?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
+		 						bioj:from_article ?article ;
+		 					    bioj:mentions_software [ citec:software_category ?software_category ] ;
+								bioj:from_mention ?mention .
+		?mention citec:mention_category [ rdfs:label ?mention_category ] .
+	}
+	"
+	
+	categories <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
+	
+	mcategories <- melt(categories, id=1:2)
+	
+	mcategories$mention_category <- gsub("Cite to user manual","Cite to publication",mcategories$mention_category)
+
+	mcategories$mention_category <- gsub("URL in text","Other",mcategories$mention_category)
+	mcategories$mention_category <- gsub("Name only","Other",mcategories$mention_category)
+	mcategories$mention_category <- gsub("Not even name","Other",mcategories$mention_category)
+	mcategories$mention_category <- gsub("Cite to name or website","Other",mcategories$mention_category)
+	
+	mcategories$mention_category <- factor(mcategories$mention_category,levels=c("Cite to publication", "Like instrument" , "Other"))
+	
+	mcategories$value <- factor(mcategories$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
+	
+	
+	GetProportionsAndGraphByX(mcategories, "mention", "mention_category","Mention types and Software Types")
+	
 
 FunctionsOfCitation <- function() {}
 	
 	# Unit of analysis: ArticleSoftwareLink
 	
 	query <- "
-	SELECT ?strata ?software_article_link ?category ?identifiable ?findable ?versioned ?version_findable ?credited 
+	SELECT ?strata ?software_article_link ?software_category ?mention_category ?identifiable ?findable ?versioned ?version_findable ?credited 
 	WHERE {
 		?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
 								citec:is_credited       ?credited ;
@@ -1016,8 +1048,9 @@ FunctionsOfCitation <- function() {}
 								citec:is_versioned      ?versioned ;
 								citec:version_is_findable ?version_findable ;
 		 						bioj:from_article ?article ;
-		 					    bioj:mentions_software ?software .
-	    ?software citec:software_category ?category .
+		 					    bioj:mentions_software ?software ;
+								bioj:from_mention [ citec:mention_category [ rdfs:label ?mention_category ]].
+	    ?software citec:software_category ?software_category .
 		?article dc:isPartOf ?journal .
 		?journal bioj:strata ?strata .
 	}
@@ -1026,71 +1059,43 @@ FunctionsOfCitation <- function() {}
 	#
 	links <- data.frame(sparql.rdf(inferredData, paste(prefixes, query, collapse=" ")))
 	
-	links$category <- factor(links$category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
+	links$software_category <- factor(links$software_category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 	
-	mlinks <- melt(links, id=1:3)
+	mlinks <- melt(links, id=1:4)
 	
 	# drop false, rejig dataframe to match functions above.
 	mlinks <- mlinks %>% filter(value == "true") 
 	mlinks <- mlinks %>% select(-value)
 	mlinks <- mlinks %>% rename(value = variable)
 	
+	# Collpase mention_category
+	mlinks$mention_category <- gsub("Cite to user manual","Cite to publication",mlinks$mention_category)
+
+	mlinks$mention_category <- gsub("URL in text","Other",mlinks$mention_category)
+	mlinks$mention_category <- gsub("Name only","Other",mlinks$mention_category)
+	mlinks$mention_category <- gsub("Not even name","Other",mlinks$mention_category)
+	mlinks$mention_category <- gsub("Cite to name or website","Other",mlinks$mention_category)
+	
+	mlinks$mention_category <- factor(mlinks$mention_category,levels=c("Cite to publication", "Like instrument" , "Other"))
+	
 
 	GetProportionsAndGraph(mlinks, "software_article_link", "Functions of Citation")
-	GetProportionsAndGraphByStrata(mlinks, "software_article_link", "Functions of Citation By Strata")
-#		
-
-#mlinks$category <- factor(links$category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
-	
-	
-	# Overall.
-	
-
-	#
-	# cat("Overall, with confidence intervals\n")
-	#
-	# all_link_counts <- mlinks %>% group_by(variable,value) %>% summarize(count = n())
-	#
-	# all_link_counts <- within(all_link_counts, proportion <- round(count / total_links, 2))
-	#
-	# ddply(all_link_counts,c("variable","value"),transform, conf_int_low = prop.test(count,total_links)$conf.int[1],
-	# 						conf_int_high = prop.test(count,total_links)$conf.int[2] )
-	#
-	#
-	#
-	# has_version_info <- nrow(filter(links,versioned == "true"))
-	#
-	# versions_found <- nrow(filter(links,versioned == "true" & version_findable == "true"))[1]
-	#
-	# cat("\nprovided any version information: ")
-	# cat(has_version_info)
-	# cat(" percent: ")
-	# cat(round(has_version_info/nrow(article_links),2))
-	# cat("\n")
-	# cat("provided any version information and could be found: ")
-	# cat(versions_found)
-	# cat(" percent: ")
-	# cat(round(versions_found/nrow(article_links),2))
-	# cat("\n")
-	
-	# Overall (identifiable, version_identifiable, findable, version_findable)
-	# Per strata
+	GetProportionsAndGraphByX(mlinks, "software_article_link", "strata","Functions of Citation By Strata")
 
 #######
 # Analyses
 #######
 
-SoftwareTypeVsCitationType <- function() {}
-	
-	# Does software of different types get cited differently?
-
 CitationTypeByFunction <- function() {}
 	
-	# Which mention types are driving issues in functions?
+	# Which mention types are driving issues in functions?	
+	GetProportionsAndGraphByX(mlinks, "software_article_link", "mention_category","Functions of Citation By Mention Category")
 
 SoftwareTypeByFunction <- function() {}
 	
 	# Which software types are driving issues in functions?
+
+	GetProportionsAndGraphByX(mlinks, "software_article_link", "software_category","Functions of Citation By Software Category")
 
 #####
 # Discussion
@@ -1100,3 +1105,4 @@ SoftwareTypeByFunction <- function() {}
 
 sink()
 closeAllConnections()
+

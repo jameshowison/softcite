@@ -893,10 +893,11 @@ MentionTypes <- function() {}
 		cat("Outputted ",thisFilename,sep="")
 	}
 	
-	GetProportionsAndGraphByStrata <- function (datain, title) {
+	GetProportionsAndGraphByStrata <- function (datain, id_column, title) {
 		
+		mention <- id_column
 		# Get total in strata
-		totals_by_strata <- datain %>% group_by(strata) %>% summarize(total_in_strata = n_distinct(mention))
+		totals_by_strata <- datain %>% group_by(strata) %>% summarize_(total_in_strata = interp(~n_distinct(var), var=as.name(mention)))
 
 		#     strata total_in_strata
 		# 1     1-10             130
@@ -904,7 +905,7 @@ MentionTypes <- function() {}
 		# 3 111-1455              65
 
 		# Count number of each category in each strata
-		types_by_strata <- datain %>% group_by(strata, value) %>% summarize(type_in_strata = n_distinct(mention))
+		types_by_strata <- datain %>% group_by(strata, value) %>% summarize_(type_in_strata = interp(~n_distinct(var), var=as.name(mention)))
 
 		#      strata                category type_in_strata
 		# 1      1-10 Cite to name or website              2
@@ -942,9 +943,9 @@ MentionTypes <- function() {}
 		                width=.2,                    # Width of the error bars
 		                position=position_dodge(.9)) + 
 		  facet_grid(.~strata) + 
-		  scale_y_continuous(name="Proportion of mentions",limits=c(0,max(types_by_strata$conf_int_high))) +
+		  scale_y_continuous(name="Proportion",limits=c(0,max(types_by_strata$conf_int_high))) +
 		  scale_x_discrete(name="") +
-		  scale_fill_grey(guide = guide_legend(title=""),start=0.6,end=0.2) +
+		  scale_fill_grey(guide = guide_legend(title="")) +
 		  theme(legend.position="none",
 		        panel.grid.major.x = element_blank(),
 				panel.grid.minor.y = element_blank(),
@@ -953,11 +954,12 @@ MentionTypes <- function() {}
 				axis.title.x=element_text(vjust=0.1),
 				text=element_text(size=10),
 				axis.text.x=element_text(angle=25,hjust=1)) +
-		  ggtitle("Collapsed mention types by journal impact factor strata")
+		  ggtitle(title)
   
-		ggsave(filename="output/MentionTypesByStrata.png", width=5, height=4)
-		cat("--------------------\n")
-		cat("Outputted Figure 3: MentionTypesByStrata.png\n")
+  		thisFilename = paste("output/",title,".png",sep="")
+  		ggsave(filename=thisFilename, width=5, height=4)
+  		cat("--------------------\n")
+  		cat("Outputted ",thisFilename,sep="")
 	}
 
 	GetProportionsAndGraph(mmentions, "mention", "Mentions, all categories")
@@ -965,7 +967,7 @@ MentionTypes <- function() {}
 	GetProportionsAndGraph(mmentions_collapse, "mention", "Mentions, collapsed categories")
 
 	# Per strata (Collapsed)	
-	GetProportionsAndGraphByStrata(mmentions_collapse, "Mentions by strata, collapsed categories")
+	GetProportionsAndGraphByStrata(mmentions_collapse, "mention", "Mentions by strata, collapsed categories")
 	
 	
 SoftwareTypes <- function() {}
@@ -992,52 +994,11 @@ SoftwareTypes <- function() {}
 	
 	# Arrange by order
 	msoftware$value <- factor(msoftware$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
-	
-	# Overall (proprietary, non-commercial, explicitly open source)
-	overall_total <- summarize(msoftware, count=n_distinct(software))[1,1]
-	
-	# group by value, sums and proportions
-	msoftware_overall <- msoftware %>% group_by(value) %>%
-	summarize(num=n_distinct(software), 
-	          proportion = round(n_distinct(software) / overall_total, 2)
-		     )
 
-	# Add confidence intervals
-	msoftware_overall <- ddply(msoftware_overall,c("value"),transform, 
-	                      conf_int_low = round(prop.test(num,overall_total)$conf.int[1],2), 
-						  conf_int_high = round(prop.test(num,overall_total)$conf.int[2],2) 
-						)
-
-	# Output table
-	print(msoftware_overall)
+	GetProportionsAndGraph(msoftware, "software", "Proportion of Software")
 	
-	#Output plot
-	title = "Types of Software"
-	
-	ggplot(msoftware_overall,aes(x=value,y=proportion,fill=value)) +
-	geom_bar(stat="identity") +
-	geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
-	              width=.2,                    # Width of the error bars
-	              position=position_dodge(.9)) + 
-	#facet_grid(.~strata,margins=T) +
-	scale_fill_grey(guide = guide_legend(title="")) +
-	scale_x_discrete(name="") +
-	scale_y_continuous(name="Proportion of software") +
-	ggtitle(title) +
-	theme(legend.position="none",
-	      panel.grid.major.x = element_blank(),
-		panel.grid.minor.y = element_blank(),
-		panel.border = element_blank(),
-		axis.title.y=element_text(vjust=0.3),
-		axis.title.x=element_text(vjust=0.1),
-		text=element_text(size=10),
-		axis.text.x=element_text(angle=25,hjust=1)
-		)
-	thisFilename = paste("output/",title,".png",sep="")
-	ggsave(filename=thisFilename, width=5, height=4)
-	cat("--------------------\n")
-	cat("Outputted ",thisFilename,sep="")
-	
+	# cat("Outputted ",thisFilename,sep="")
+	#
 	# Per strata
 	# Decided against this.
 
@@ -1046,7 +1007,7 @@ FunctionsOfCitation <- function() {}
 	# Unit of analysis: ArticleSoftwareLink
 	
 	query <- "
-	SELECT ?strata ?category ?software_article_link ?identifiable ?findable ?versioned ?version_findable ?credited 
+	SELECT ?strata ?software_article_link ?category ?identifiable ?findable ?versioned ?version_findable ?credited 
 	WHERE {
 		?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
 								citec:is_credited       ?credited ;
@@ -1057,8 +1018,8 @@ FunctionsOfCitation <- function() {}
 		 						bioj:from_article ?article ;
 		 					    bioj:mentions_software ?software .
 	    ?software citec:software_category ?category .
-	# 	?article dc:isPartOf ?journal .
-	# 	?journal bioj:strata ?strata .
+		?article dc:isPartOf ?journal .
+		?journal bioj:strata ?strata .
 	}
 	"
 	
@@ -1067,46 +1028,24 @@ FunctionsOfCitation <- function() {}
 	
 	links$category <- factor(links$category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 	
+	mlinks <- melt(links, id=1:3)
+	
+	# drop false, rejig dataframe to match functions above.
+	mlinks <- mlinks %>% filter(value == "true") 
+	mlinks <- mlinks %>% select(-value)
+	mlinks <- mlinks %>% rename(value = variable)
+	
+
+	GetProportionsAndGraph(mlinks, "software_article_link", "Functions of Citation")
+	GetProportionsAndGraphByStrata(mlinks, "software_article_link", "Functions of Citation By Strata")
+#		
+
+#mlinks$category <- factor(links$category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
+	
 	
 	# Overall.
 	
-	
-	# # get totals
-	# links_by_strata <- links %>% group_by(strata) %>%
-	# summarize(total_in_strata = n_distinct(software_article_link))
-	#
-	# # melt to vertical format.
-	# mlinks <- melt(links, id=1:4)
-	#
-	# # Count number of each category in each strata
-	# link_counts <- mlinks %>%
-	# group_by(strata,variable,value) %>%
-	# summarize(count = n())
-	#
-	# # Add the total for that strata to each row, to be used to create percentage
-	# links_by_strata <- merge(links_by_strata,link_counts)
-	#
-	# # create the percentage for each row.
-	# links_by_strata <- within(links_by_strata, proportion <- round(count / total_in_strata, 2))
-	#
-	# links_by_strata <- ddply(links_by_strata,c("strata","variable","value"),transform,
-	#                         conf_int_low = prop.test(count,total_in_strata)$conf.int[1],
-	# 						conf_int_high = prop.test(count,total_in_strata)$conf.int[2]
-	# 						)
-	#
-	#
-	#
-	# cat("--------------------\n")
-	# cat("ArticleSoftwareLinks and credited, findable, identifiable\n")
-	#
-	# links_by_strata_matrix <- dcast(filter(links_by_strata, value=="true"),variable ~ strata , sum , value.var="count")
-	#
-	# chisq.test(links_by_strata_matrix[,2:4],simulate.p.value=T)
-	#
-	#
-	# print(dcast(filter(links_by_strata, value=="true"),variable ~ strata , mean , value.var="proportion"))
-	#
-	#
+
 	#
 	# cat("Overall, with confidence intervals\n")
 	#

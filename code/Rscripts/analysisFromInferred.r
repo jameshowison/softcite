@@ -1091,6 +1091,12 @@ SoftwareTypeVsCitationType <- function() {}
 	
 	GetProportionsAndGraphByX(mcategories, "mention", "mention_category","Mention types and Software Types")
 	
+	myTable <- dcast(mcategories,mention_category ~ value, length)
+	myTable2 <- as.matrix(myTable[1:3,2:4])
+	dimnames(myTable2) <- list(mention_category = myTable[,1], software_type = names(myTable)[2:4])
+	Xsq <- chisq.test(myTable2)
+	print(Xsq)
+	
 
 FunctionsOfCitation <- function() {}
 	

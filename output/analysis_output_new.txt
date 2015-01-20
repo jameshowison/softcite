@@ -124,6 +124,12 @@ Outputted output/fig-6-Types of Software mentioned.png
 --------------------
 Outputted output/fig-7-Mention types and Software Types.png
 
+
+	Pearson's Chi-squared test
+
+data:  myTable2
+X-squared = 29.8858, df = 4, p-value = 5.163e-06
+
 [1] 182
              value num proportion total_mentions_in_frame conf_int_low conf_int_high
 1     identifiable 169       0.93                     182         0.88          0.96

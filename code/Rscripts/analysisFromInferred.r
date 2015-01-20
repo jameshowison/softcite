@@ -4,6 +4,8 @@ library(ggplot2)
 library(reshape2)
 library(plyr)
 library(dplyr)
+library(scales)
+
 
 #scimapRegister()
 
@@ -849,6 +851,10 @@ MentionTypes <- function() {}
 	
 	mmentions_collapse$value <- factor(mmentions_collapse$value,levels=c("Cite to publication", "Like instrument" , "Other"))
 	
+	outputProportionAndCI <- function(datain) {
+		percent = percent(datain$proportion)
+		print(paste(percent, " (95% CI: ",sprintf("%.2f",datain$conf_int_low),"–",sprintf("%.2f",datain$conf_int_high),")",sep=""))
+	}
 
 	GetProportionsAndGraph <- function (datain, id_column, id_column_total, title) {
 		
@@ -870,12 +876,15 @@ MentionTypes <- function() {}
 
 		#Add confidence intervals
 		datain_overall <- ddply(datain_overall,c("value"),transform,
-		                      conf_int_low = round(prop.test(num,total_mentions_in_frame,conf.level = 0.9)$conf.int[1],2),
-							  conf_int_high = round(prop.test(num,total_mentions_in_frame,conf.level = 0.9)$conf.int[2],2)
+		                      conf_int_low = round(prop.test(num,total_mentions_in_frame,conf.level = 0.95)$conf.int[1],2),
+							  conf_int_high = round(prop.test(num,total_mentions_in_frame,conf.level = 0.95)$conf.int[2],2)
 							)
 
 		# Output table
 		print(datain_overall)
+		
+		
+		d_ply(datain_overall, c("value"),outputProportionAndCI)
 
 		#Output plot
 		ggplot(datain_overall,aes(x=value,y=proportion,fill=value)) +
@@ -934,11 +943,12 @@ MentionTypes <- function() {}
 
 		# create confidence intervals
 		types_by_strata <- ddply(types_by_strata,c(facet_column,"value"),transform, 
-		                        conf_int_low = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[1],2), 
-								conf_int_high = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.9)$conf.int[2],2) 
+		                        conf_int_low = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.95)$conf.int[1],2), 
+								conf_int_high = round(prop.test(type_in_strata,total_in_strata,conf.level = 0.95)$conf.int[2],2) 
 								)
 		
 		print(types_by_strata)
+		d_ply(types_by_strata, c(facet_column,"value"),outputProportionAndCI)
 		return(types_by_strata)
 		#ddply(types_by_strata,c("strata","category"),transform, conf_int_high = prop.test(type_in_strata,total_in_strata)$conf.int[2])
 		#types_by_strata <- within(types_by_strata, conf_low <- prop.test(type_in_strata,total_in_strata)$conf.int[1])
@@ -1141,6 +1151,9 @@ CitationTypeByFunction <- function() {}
 	
 	summary_by_function <- GetProportionsByX(mlinks, "software_article_link", "mention_category")
 	title = "Functions of Citation By Mention Category"
+	
+	print(summary_by_function)
+		d_ply(summary_by_function, c("mention_category","value"),outputProportionAndCI)
 	
 	# Special plotting.
 	ggplot(summary_by_function,aes(x=mention_category,y=proportion,fill=mention_category)) + 

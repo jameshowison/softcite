@@ -790,7 +790,7 @@ MentionBasics <- function() {}
 	article_count = 90
 
 	query <- "
-	SELECT ?article ?journal ?strata ?selection ?mention ?category
+	SELECT ?article ?journal ?strata ?selection ?mention ?category ?major_mention_category
 	WHERE {
 		?mention rdf:type bioj:SoftwareMention ;
 				 citec:mention_category [ rdfs:label ?category ] ;
@@ -964,12 +964,12 @@ MentionTypes <- function() {}
 	}
 	
 	OutputGraph <- function(types_by_strata, facet_column, title) {
-		ggplot(types_by_strata,aes_string(x=facet_column,y=quote(proportion),fill=facet_column)) + 
+		ggplot(types_by_strata,aes(x=value,y=proportion,fill=value)) + 
 		  geom_bar(stat="identity") + 
 		  geom_errorbar(aes(ymin=conf_int_low, ymax=conf_int_high),
 		                width=.2,                    # Width of the error bars
 		                position=position_dodge(.9)) + 
-		  facet_grid(. ~ value) + 
+		  facet_grid(paste(". ~ ",facet_column,sep="")) + 
 		  scale_y_continuous(name="Proportion",limits=c(0,max(types_by_strata$conf_int_high))) +
 		  scale_x_discrete(name="") +
 		  scale_fill_grey(guide = guide_legend(title="")) +
@@ -1063,13 +1063,13 @@ SoftwareTypes <- function() {}
 SoftwareTypeVsCitationType <- function() {}
 	# Does software of different types get cited differently?
 	query <- "
-	SELECT ?mention ?mention_category ?software_category  
+	SELECT ?mention ?software_category ?major_mention_category  
 	WHERE {
 		?software_article_link 	rdf:type bioj:ArticleSoftwareLink ;
 		 						bioj:from_article ?article ;
 		 					    bioj:mentions_software [ citec:software_category ?software_category ] ;
 								bioj:from_mention ?mention .
-		?mention citec:mention_category [ rdfs:label ?mention_category ] .
+		?mention citec:mention_category [ citec:major_mention_category ?major_mention_category ] .
 	}
 	"
 	
@@ -1077,23 +1077,16 @@ SoftwareTypeVsCitationType <- function() {}
 	
 	mcategories <- melt(categories, id=1:2)
 	
-	mcategories$mention_category <- gsub("Cite to user manual","Cite to publication",mcategories$mention_category)
-
-	mcategories$mention_category <- gsub("URL in text","Other",mcategories$mention_category)
-	mcategories$mention_category <- gsub("Name only","Other",mcategories$mention_category)
-	mcategories$mention_category <- gsub("Not even name","Other",mcategories$mention_category)
-	mcategories$mention_category <- gsub("Cite to name or website","Other",mcategories$mention_category)
+	mcategories$value <- factor(mcategories$value,levels=c("Cite to publication", "Like instrument" , "Other"))
 	
-	mcategories$mention_category <- factor(mcategories$mention_category,levels=c("Cite to publication", "Like instrument" , "Other"))
-	
-	mcategories$value <- factor(mcategories$value,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
+	mcategories$software_category <- factor(mcategories$software_category,levels=c("Not accessible","Proprietary","Non-commercial","Open source"))
 	
 	
-	GetProportionsAndGraphByX(mcategories, "mention", "mention_category","Mention types and Software Types")
+	GetProportionsAndGraphByX(mcategories, "mention", "software_category", "Software types and Mention types")
 	
-	myTable <- dcast(mcategories,mention_category ~ value, length)
-	myTable2 <- as.matrix(myTable[1:3,2:4])
-	dimnames(myTable2) <- list(mention_category = myTable[,1], software_type = names(myTable)[2:4])
+	myTable <- dcast(mcategories,software_category ~ value, length)
+	myTable2 <- as.matrix(myTable[1:4,2:4])
+	dimnames(myTable2) <- list(software_type  = myTable[,1], mention_category = names(myTable)[2:4])
 	Xsq <- chisq.test(myTable2)
 	print(Xsq)
 	

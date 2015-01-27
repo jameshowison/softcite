@@ -111,10 +111,10 @@ global_fig_counter = 1
 #  scale_y_continuous(name = "Mentions in article") +
 #  scale_x_discrete(name="Journal Impact Factor rank")
 #
-# ggsave(filename="output/fig-Fig1-MentionsByStrataBoxplot.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig1-MentionsByStrataBoxplot.tiff", width=5, height=4)
 #
 # cat("--------------------\n")
-# cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")
+# cat("Outputted Figure 1: MentionsByStrataBoxplot.tiff\n")
 #
 #
 # ######################
@@ -167,9 +167,9 @@ global_fig_counter = 1
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/fig-Fig2-TypesOfSoftwareMentions.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig2-TypesOfSoftwareMentions.tiff", width=5, height=4)
 # cat("--------------------\n")
-# cat("Outputted Figure 2: TypesOfSoftwareMentions.png\n")
+# cat("Outputted Figure 2: TypesOfSoftwareMentions.tiff\n")
 #
 # ####################
 # # Major mention types by strata.
@@ -245,9 +245,9 @@ global_fig_counter = 1
 # 		axis.text.x=element_text(angle=25,hjust=1)) +
 #   ggtitle("Major software mention types by journal strata")
 #
-# ggsave(filename="output/fig-Fig3-MentionTypesByStrata.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig3-MentionTypesByStrata.tiff", width=5, height=4)
 # cat("--------------------\n")
-# cat("Outputted Figure 3: MentionTypesByStrata.png\n")
+# cat("Outputted Figure 3: MentionTypesByStrata.tiff\n")
 #
 # #types_for_graph <- dcast(filter(types_for_graph, value=="true"),variable ~ strata , sum , value.var="count")
 #
@@ -351,7 +351,7 @@ global_fig_counter = 1
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/fig-Fig4-CiteTypesBySoftwareTypes.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig4-CiteTypesBySoftwareTypes.tiff", width=5, height=4)
 #
 # #########################
 # #
@@ -688,7 +688,7 @@ global_fig_counter = 1
 # 		axis.ticks.x=element_blank()
 # 		)
 #
-# ggsave(filename="output/fig-Fig5-FunctionsByStrataBoxplot.png", width=5, height=4)
+# ggsave(filename="output/fig-Fig5-FunctionsByStrataBoxplot.tiff", width=5, height=4)
 #
 # ########################
 # # Misses/Matches preferred citation

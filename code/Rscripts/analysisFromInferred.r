@@ -822,14 +822,22 @@ MentionBasics <- function() {}
 	ggplot(mention_count_by_article,aes(x=strata,y=mention_count)) +
 	 geom_boxplot() +
 	 scale_y_continuous(name = "Mentions in article") +
-	 scale_x_discrete(name="Journal Impact Factor rank")
+	 scale_x_discrete(name="Journal Impact Factor rank") +
+  	theme(legend.position="none",
+        panel.grid.major.x = element_blank(),
+		panel.grid.minor.y = element_blank(),
+		panel.border = element_blank(),
+		axis.title.y=element_text(vjust=0.3),
+		axis.title.x=element_text(vjust=0.1),
+		text=element_text(size=8)) 
+		#+ ggtitle("Distribution of mentions in articles")
 	
-	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.png",sep="")
+	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.tiff",sep="")
 	assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
 	ggsave(filename=thisFilename, width=5, height=2)
 
 	cat("--------------------\n")
-	cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")
+	cat("Outputted Figure 1: MentionsByStrataBoxplot.tiff\n")
 
 MentionTypes <- function() {}
 
@@ -896,8 +904,8 @@ MentionTypes <- function() {}
 		#facet_grid(.~strata,margins=T) +
 		scale_fill_grey(guide = guide_legend(title=""),start=0.6,end=0.2) +
 		scale_x_discrete(name="") +
-		scale_y_continuous(name="Proportion of mentions") +
-		ggtitle(title) +
+		scale_y_continuous(name="Proportion") +
+		#ggtitle(title) +
 		theme(legend.position="none",
 		      panel.grid.major.x = element_blank(),
 			panel.grid.minor.y = element_blank(),
@@ -905,9 +913,9 @@ MentionTypes <- function() {}
 			axis.title.y=element_text(vjust=0.3),
 			axis.title.x=element_text(vjust=0.1),
 			text=element_text(size=10),
-			axis.text.x=element_text(angle=25,hjust=1)
+			axis.text.x=element_text(angle=31,hjust=1)
 			)
-	  	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".png",sep="")
+	  	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
 		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
 		ggsave(filename=thisFilename, width=5, height=4)
 		cat("--------------------\n")
@@ -981,10 +989,10 @@ MentionTypes <- function() {}
 				axis.title.y=element_text(vjust=0.3),
 				axis.title.x=element_text(vjust=0.1),
 				text=element_text(size=10),
-				axis.text.x=element_text(angle=25,hjust=1)) +
-		  ggtitle(title)
+				axis.text.x=element_text(angle=31,hjust=1))
+		 # + ggtitle(title)
   
-  		thisFilename = paste("output/fig-",global_fig_counter,"-",title,".png",sep="")
+  		thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
 		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
   		ggsave(filename=thisFilename, width=5, height=4)
   		cat("--------------------\n")
@@ -1172,19 +1180,19 @@ CitationTypeByFunction <- function() {}
 			axis.title.y=element_text(vjust=0.3),
 			axis.title.x=element_text(vjust=0.1),
 			text=element_text(size=10),
-			axis.text.x=element_text(angle=25,hjust=1)) +
-	  ggtitle(title)
+			axis.text.x=element_text(angle=31,hjust=1)) 
+	 #+ ggtitle(title)
 
-	thisFilename = paste("output/fig-",title,".png",sep="")
+	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
 	ggsave(filename=thisFilename, width=5, height=4)
 	cat("--------------------\n")
 	cat("Outputted ",thisFilename,sep="")
 
-SoftwareTypeByFunction <- function() {}
+#SoftwareTypeByFunction <- function() {}
 	
 	# Which software types are driving issues in functions?
 
-	GetProportionsAndGraphByX(mlinks, "software_article_link", "software_category","Functions of Citation By Software Category")
+	#GetProportionsAndGraphByX(mlinks, "software_article_link", "software_category","Functions of Citation By Software Category")
 
 
 

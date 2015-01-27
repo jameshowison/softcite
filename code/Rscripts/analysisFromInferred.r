@@ -826,7 +826,7 @@ MentionBasics <- function() {}
 	
 	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.png",sep="")
 	assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
-	ggsave(filename=thisFilename, width=5, height=4)
+	ggsave(filename=thisFilename, width=5, height=2)
 
 	cat("--------------------\n")
 	cat("Outputted Figure 1: MentionsByStrataBoxplot.png\n")

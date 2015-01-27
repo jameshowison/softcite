@@ -5,6 +5,7 @@ library(reshape2)
 library(plyr)
 library(dplyr)
 library(scales)
+library(lazyeval)
 
 
 #scimapRegister()
@@ -790,7 +791,7 @@ MentionBasics <- function() {}
 	article_count = 90
 
 	query <- "
-	SELECT ?article ?journal ?strata ?selection ?mention ?category ?major_mention_category
+	SELECT ?article ?journal ?strata ?selection ?mention ?category
 	WHERE {
 		?mention rdf:type bioj:SoftwareMention ;
 				 citec:mention_category [ rdfs:label ?category ] ;

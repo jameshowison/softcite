@@ -1,0 +1,29 @@
+bioj:a2004-46-NATURE-C10     rdf:type         bioj:selection , bioj:InTextSelection ;
+        bioj:full_quote     "Data were analysed with DENZO [41] and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program)." ;
+        bioj:has_reference  bioj-cited:Otwinowski-1997 ;
+        ca:isTargetOf       [ a               ca:CodeApplication ;
+                              ca:appliesCode  [ a  citec:unfindable_version ] ;
+                              ca:hasCoder     "jbullard"
+                            ] ;
+        ca:isTargetOf       [ ca:appliesCode  [ a  citec:source_unavailable ] ;
+                              ca:hasCoder     "auto-coder"
+                            ] ;
+        ca:isTargetOf       [ a               ca:CodeApplication ;
+                              ca:appliesCode  [ a  citec:findable ] ;
+                              ca:hasCoder     "jbullard"
+                            ] ;
+        ca:isTargetOf       [ a               ca:CodeApplication ;
+                              ca:appliesCode  [ a  citec:identifiable ] ;
+                              ca:hasCoder     "jbullard"
+                            ] ;
+        ca:isTargetOf       [ a               ca:CodeApplication ;
+                              ca:appliesCode  [ a           citec:software_name ;
+                                                rdfs:label  "DENZO"
+                                              ] ;
+                              ca:hasCoder     "cgrady"
+                            ] ;
+        ca:isTargetOf       [ a               ca:CodeApplication ;
+                              ca:appliesCode  [ a  citec:no_access ] ;
+                              ca:hasCoder     "jbullard"
+                            ] ;
+.

@@ -388,7 +388,7 @@ Trends Microbiol.
 13.
 Bamford, D. H., Burnett, R. M. & Stuart, D. I. Evolution of viral structure.
 
-<annotation article="bioj:a2004-46-NATURE",mention="bioj:a2004-46-NATURE-C09-mention",software_name="PONDR">Theor.</annotation>
+Theor.
 
 Popul.
 Biol.

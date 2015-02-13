@@ -111,10 +111,10 @@ global_fig_counter = 1
 #  scale_y_continuous(name = "Mentions in article") +
 #  scale_x_discrete(name="Journal Impact Factor rank")
 #
-# ggsave(filename="output/fig-Fig1-MentionsByStrataBoxplot.tiff", width=5, height=4)
+# ggsave(filename="output/fig-Fig1-MentionsByStrataBoxplot.eps", width=5, height=4)
 #
 # cat("--------------------\n")
-# cat("Outputted Figure 1: MentionsByStrataBoxplot.tiff\n")
+# cat("Outputted Figure 1: MentionsByStrataBoxplot.eps\n")
 #
 #
 # ######################
@@ -167,9 +167,9 @@ global_fig_counter = 1
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/fig-Fig2-TypesOfSoftwareMentions.tiff", width=5, height=4)
+# ggsave(filename="output/fig-Fig2-TypesOfSoftwareMentions.eps", width=5, height=4)
 # cat("--------------------\n")
-# cat("Outputted Figure 2: TypesOfSoftwareMentions.tiff\n")
+# cat("Outputted Figure 2: TypesOfSoftwareMentions.eps\n")
 #
 # ####################
 # # Major mention types by strata.
@@ -245,9 +245,9 @@ global_fig_counter = 1
 # 		axis.text.x=element_text(angle=25,hjust=1)) +
 #   ggtitle("Major software mention types by journal strata")
 #
-# ggsave(filename="output/fig-Fig3-MentionTypesByStrata.tiff", width=5, height=4)
+# ggsave(filename="output/fig-Fig3-MentionTypesByStrata.eps", width=5, height=4)
 # cat("--------------------\n")
-# cat("Outputted Figure 3: MentionTypesByStrata.tiff\n")
+# cat("Outputted Figure 3: MentionTypesByStrata.eps\n")
 #
 # #types_for_graph <- dcast(filter(types_for_graph, value=="true"),variable ~ strata , sum , value.var="count")
 #
@@ -351,7 +351,7 @@ global_fig_counter = 1
 # 	axis.text.x=element_text(angle=25,hjust=1)
 # 	)
 #
-# ggsave(filename="output/fig-Fig4-CiteTypesBySoftwareTypes.tiff", width=5, height=4)
+# ggsave(filename="output/fig-Fig4-CiteTypesBySoftwareTypes.eps", width=5, height=4)
 #
 # #########################
 # #
@@ -688,7 +688,7 @@ global_fig_counter = 1
 # 		axis.ticks.x=element_blank()
 # 		)
 #
-# ggsave(filename="output/fig-Fig5-FunctionsByStrataBoxplot.tiff", width=5, height=4)
+# ggsave(filename="output/fig-Fig5-FunctionsByStrataBoxplot.eps", width=5, height=4)
 #
 # ########################
 # # Misses/Matches preferred citation
@@ -832,12 +832,12 @@ MentionBasics <- function() {}
 		text=element_text(size=8)) 
 		#+ ggtitle("Distribution of mentions in articles")
 	
-	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.tiff",sep="")
+	thisFilename = paste("output/fig-",global_fig_counter,"-MentionsByStrataBoxplot.eps",sep="")
 	assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
 	ggsave(filename=thisFilename, width=5, height=2)
 
 	cat("--------------------\n")
-	cat("Outputted Figure 1: MentionsByStrataBoxplot.tiff\n")
+	cat("Outputted Figure 1: MentionsByStrataBoxplot.eps\n")
 
 MentionTypes <- function() {}
 
@@ -915,7 +915,7 @@ MentionTypes <- function() {}
 			text=element_text(size=10),
 			axis.text.x=element_text(angle=31,hjust=1)
 			)
-	  	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
+	  	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".eps",sep="")
 		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
 		ggsave(filename=thisFilename, width=5, height=4)
 		cat("--------------------\n")
@@ -992,7 +992,7 @@ MentionTypes <- function() {}
 				axis.text.x=element_text(angle=31,hjust=1))
 		 # + ggtitle(title)
   
-  		thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
+  		thisFilename = paste("output/fig-",global_fig_counter,"-",title,".eps",sep="")
 		assign("global_fig_counter", global_fig_counter + 1, envir = .GlobalEnv)
   		ggsave(filename=thisFilename, width=5, height=4)
   		cat("--------------------\n")
@@ -1183,7 +1183,7 @@ CitationTypeByFunction <- function() {}
 			axis.text.x=element_text(angle=31,hjust=1)) 
 	 #+ ggtitle(title)
 
-	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".tiff",sep="")
+	thisFilename = paste("output/fig-",global_fig_counter,"-",title,".eps",sep="")
 	ggsave(filename=thisFilename, width=5, height=4)
 	cat("--------------------\n")
 	cat("Outputted ",thisFilename,sep="")

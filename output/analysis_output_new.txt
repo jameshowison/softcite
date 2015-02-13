@@ -2,7 +2,7 @@
 There were 59 articles with mentions and 31 articles without.
 At a confidence interval of 95%, the proportion of articles in the population that mention software is between 0.55 and 0.75
 --------------------
-Outputted Figure 1: MentionsByStrataBoxplot.tiff
+Outputted Figure 1: MentionsByStrataBoxplot.eps
 [1] 286
                     value num proportion total_mentions_in_frame conf_int_low
 1     Cite to publication 105       0.37                     286         0.31
@@ -28,7 +28,7 @@ Outputted Figure 1: MentionsByStrataBoxplot.tiff
 [1] "31% (95% CI: 0.26–0.37)"
 [1] "1% (95% CI: 0.00–0.04)"
 --------------------
-Outputted output/fig-2-Mentions, all categories.tiff
+Outputted output/fig-2-Mentions, all categories.eps
 
 [1] 286
                 value num proportion total_mentions_in_frame conf_int_low
@@ -43,7 +43,7 @@ Outputted output/fig-2-Mentions, all categories.tiff
 [1] "19% (95% CI: 0.14–0.24)"
 [1] "43% (95% CI: 0.37–0.49)"
 --------------------
-Outputted output/fig-3-Mentions, collapsed categories.tiff
+Outputted output/fig-3-Mentions, collapsed categories.eps
 
     strata               value type_in_strata total_in_strata proportion
 1     1-10 Cite to publication             50             130       0.38
@@ -75,7 +75,7 @@ Outputted output/fig-3-Mentions, collapsed categories.tiff
 [1] "8% (95% CI: 0.03–0.18)"
 [1] "51% (95% CI: 0.38–0.63)"
 --------------------
-Outputted output/fig-4-Mentions by strata, collapsed categories.tiff
+Outputted output/fig-4-Mentions by strata, collapsed categories.eps
 
 [1] 146
              value num proportion total_mentions_in_frame conf_int_low
@@ -93,7 +93,7 @@ Outputted output/fig-4-Mentions by strata, collapsed categories.tiff
 [1] "32% (95% CI: 0.24–0.40)"
 [1] "20% (95% CI: 0.14–0.27)"
 --------------------
-Outputted output/fig-5-Characteristics of mentioned software.tiff
+Outputted output/fig-5-Characteristics of mentioned software.eps
 
 --------------------
 We found references to 146 distinct pieces of software
@@ -113,7 +113,7 @@ We found references to 146 distinct pieces of software
 [1] "27% (95% CI: 0.21–0.36)"
 [1] "20% (95% CI: 0.14–0.27)"
 --------------------
-Outputted output/fig-6-Types of Software mentioned.tiff
+Outputted output/fig-6-Types of Software mentioned.eps
 
    software_category               value type_in_strata total_in_strata
 1     Not accessible Cite to publication             17              39
@@ -154,7 +154,7 @@ Outputted output/fig-6-Types of Software mentioned.tiff
 [1] "4% (95% CI: 0.01–0.12)"
 [1] "56% (95% CI: 0.44–0.68)"
 --------------------
-Outputted output/fig-7-Software types and Mention types.tiff
+Outputted output/fig-7-Software types and Mention types.eps
 
 
 	Pearson's Chi-squared test
@@ -181,7 +181,7 @@ X-squared = 49.248, df = 6, p-value = 6.65e-09
 [1] "5% (95% CI: 0.03–0.10)"
 [1] "77% (95% CI: 0.70–0.83)"
 --------------------
-Outputted output/fig-8-Functions of Citation.tiff
+Outputted output/fig-8-Functions of Citation.eps
 
      strata            value type_in_strata total_in_strata proportion
 1      1-10     identifiable             72              77       0.94
@@ -228,7 +228,7 @@ Outputted output/fig-8-Functions of Citation.tiff
 [1] "6% (95% CI: 0.01–0.22)"
 [1] "79% (95% CI: 0.61–0.90)"
 --------------------
-Outputted output/fig-9-Functions of Citation By Strata.tiff
+Outputted output/fig-9-Functions of Citation By Strata.eps
 
       mention_category            value type_in_strata total_in_strata
 1  Cite to publication     identifiable             83              88
@@ -325,4 +325,4 @@ Outputted output/fig-9-Functions of Citation By Strata.tiff
 [1] "9% (95% CI: 0.04–0.20)"
 [1] "43% (95% CI: 0.31–0.56)"
 --------------------
-Outputted output/fig-10-Functions of Citation By Mention Category.tiff
+Outputted output/fig-10-Functions of Citation By Mention Category.eps

@@ -14,3 +14,6 @@ Contact:
 James Howison
 jhowison@ischool.utexas.edu
 
+[![DOI](https://zenodo.org/badge/9584/jameshowison/softcite.svg)](http://dx.doi.org/10.5281/zenodo.14727)
+
+

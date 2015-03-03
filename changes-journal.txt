@@ -1013,3 +1013,31 @@ Fri Aug 15 10:58:04 CDT 2014
 ===============================================================
 
 bioj:software-Opticon%20Monitor%202  
+
+===============================================================
+Thu Jan  8 12:40:05 CST 2015
+===============================================================
+
+are people consistent within an article.
+
+What if you treat it by article?  but not consistent between articles - what matters for the question of diversity is what readers perceive, and since they read articles by many authors, the data shows that they'd see a large variety of types of mentions.'  The article/journal level influence makes it appear like there would be more consistency, so it's a conservative hypothesis.'
+
+
+===============================================================
+Thu Jan  8 12:54:31 CST 2015
+===============================================================
+
+CrossTable in gmodels, sresid=T.  g>2 or <-2.  posthoc for Chisq test.
+
+===============================================================
+Fri Jan  9 09:34:41 CST 2015
+===============================================================
+
+- consider a formal hypothesis test for the between strata parts that actually seem to be statistically significantly different.
+1. redo Fig 1 without the zero articles.
+2. do comparison between commercial and non-commercial software, does it determine "like instrumment" vs others?
+- redo abstract to include plus/minus on percentages.
+
+
+
+

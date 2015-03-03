@@ -27,22 +27,30 @@ citec:CitationMentionCategorization rdfs:subClassOf citec:MentionCategorization 
 # Set of individuals, one for each type, with text labels
 
 citec:CiteToPublicationMentionCategorization a citec:CitationMentionCategorization ;
-	rdfs:label "Cite to publication" .
+	rdfs:label "Cite to publication" ;
+	citec:major_mention_category "Cite to publication" .
   
 citec:CiteToUserManualMentionCategorization a citec:CitationMentionCategorization ;
-	rdfs:label "Cite to user manual" .
+ 	rdfs:label "Cite to user manual" ;
+	citec:major_mention_category "Cite to publication" .
 
 citec:CiteToNameOrWebsiteMentionCategorization a citec:CitationMentionCategorization ;
-	rdfs:label "Cite to name or website" .
-
+	rdfs:label "Cite to name or website" ;
+	citec:major_mention_category "Other" .
+  
 citec:LikeInstrumentMentionCategorization a citec:MentionCategorization ;
-	rdfs:label  "Like instrument" .
+	rdfs:label  "Like instrument" ;
+	citec:major_mention_category "Like instrument" .
+  
 
 citec:URLinTextMentionCategorization a citec:MentionCategorization ;
-	rdfs:label  "URL in text" .
+	rdfs:label  "URL in text" ;
+	citec:major_mention_category "Other" .
 
 citec:NameOnlyMentionCategorization a citec:MentionCategorization ;
-    rdfs:label "Name only" .
+    rdfs:label "Name only" ;
+    citec:major_mention_category "Other" .
 
 citec:NotEvenNameMentionCategorization a citec:MentionCategorization ;
-	rdfs:label  "Not even name" .
+	rdfs:label  "Not even name" ;
+	citec:major_mention_category "Other" .

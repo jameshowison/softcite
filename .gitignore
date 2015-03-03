@@ -15,5 +15,10 @@ output/*.csv
 output/*.pdf
 output/*.png
 output/*.ttl
+output/*.tif
+output/*.tiff
+output/*.eps
+
 .RData
+Rplots.pdf
 

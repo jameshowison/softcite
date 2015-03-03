@@ -1,0 +1,1002 @@
+{
+    "1": {
+        "article_id": "bioj:a2000-04-MOL_ECOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2000-04-MOL_ECOL-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "FST was used to describe the variation among populations and was calculated using biosys (Swofford & Selander 1981).<BIOSYS>"
+        }, 
+        "original_full_quote & software": "FST was used to describe the variation among populations and was calculated using biosys (Swofford & Selander 1981).<BIOSYS>"
+    }, 
+    "2": {
+        "article_id": "bioj:a2000-08-CELL_RES", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2000-08-CELL_RES-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "The banding pattern was visualized by autoradiography for 12 h and analyzed by Gelworks 1D advanced software in Shanghai Institute of Biochemistry, Chinese Academy of Sciences.<Gelworks 1D Advanced>"
+        }, 
+        "original_full_quote & software": "The banding pattern was visualized by autoradiography for 12 h and analyzed by Gelworks 1D advanced software in Shanghai Institute of Biochemistry, Chinese Academy of Sciences.<Gelworks 1D Advanced>"
+    }, 
+    "3": {
+        "article_id": "bioj:a2000-08-CELL_RES", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2000-08-CELL_RES-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "The gel was then stained with SYBR Green-I (FMC Bioproducts) for 15 min, visualized by UVP system and analyzed by Gelworks 1D advanced software.<Gelworks 1D Advanced>"
+        }, 
+        "original_full_quote & software": "The gel was then stained with SYBR Green-I (FMC Bioproducts) for 15 min, visualized by UVP system and analyzed by Gelworks 1D advanced software.<Gelworks 1D Advanced>"
+    }, 
+    "4": {
+        "article_id": "bioj:a2000-22-AM_J_BOT", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2002-22-AM_J_BOT_B01-mention", 
+        "nltk_output_fragment": {
+            "0": "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.<PC-ORD>"
+        }, 
+        "original_full_quote & software": "We used Detrended Correspondence Analysis in PC-ORD (McCune, 1993) to depict multivariate changes in dominance of species neighborhoods for each focal species in recently burned and long-unburned sites.<PC-ORD>"
+    }, 
+    "5": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C07-mention", 
+        "nltk_output_fragment": {
+            "0": "*R-factor=[FORMULA DID NOT COPY] where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).<SHELLSCALE>"
+        }, 
+        "original_full_quote & software": "*R-factor=[FORMULA DID NOT COPY] where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program).<SHELLSCALE>"
+    }, 
+    "6": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C16-mention", 
+        "nltk_output_fragment": {
+            "0": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.<GAP>", 
+            "1": "and J.M.G., unpublished program, and CCP4 programs [42]).<GAP>"
+        }, 
+        "original_full_quote & software": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S. and J.M.G., unpublished program, and CCP4 programs [42]).<GAP>"
+    }, 
+    "7": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C17-mention", 
+        "nltk_output_fragment": {
+            "0": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.<CCP4>", 
+            "1": "and J.M.G., unpublished program, and CCP4 programs [42]).<CCP4>"
+        }, 
+        "original_full_quote & software": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S. and J.M.G., unpublished program, and CCP4 programs [42]).<CCP4>"
+    }, 
+    "8": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C21-mention", 
+        "nltk_output_fragment": {
+            "0": "All structures were brought into conformity with expected backbone conformations and side chains were built with program CALPHA [48].<CALPHA>"
+        }, 
+        "original_full_quote & software": "All structures were brought into conformity with expected backbone conformations and side chains were built with program CALPHA [48].<CALPHA>"
+    }, 
+    "9": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C09-mention", 
+        "nltk_output_fragment": {
+            "0": "Although postulated to have an analogous function [31], polypeptide IIIa is larger than expected for a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR [21] predicts to be disordered.<PONDR>", 
+            "1": "The<PONDR>"
+        }, 
+        "original_full_quote & software": "Although postulated to have an analogous function [31], polypeptide IIIa is larger than expected for a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR [21] predicts to be disordered. The<PONDR>"
+    }, 
+    "10": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C20-mention", 
+        "nltk_output_fragment": {
+            "0": "Analysing the relative positions of methionine residues and predicted transmembrane helices (program TMHMM [47])<TMHMM>"
+        }, 
+        "original_full_quote & software": "Analysing the relative positions of methionine residues and predicted transmembrane helices (program TMHMM [47])<TMHMM>"
+    }, 
+    "11": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C22-mention", 
+        "nltk_output_fragment": {
+            "0": "Correlation coefficient = \u03a3h(<|Fo|h>-|Fo|h)(<|Fc|h>-|Fc|h)/\u03a3h[(<|Fo|h>-|Fo|h)2-(<|Fc|h>-|Fc|h)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; DIS, unpublished program).<SHELLSCALE>"
+        }, 
+        "original_full_quote & software": "Correlation coefficient = \u03a3h(<|Fo|h>-|Fo|h)(<|Fc|h>-|Fc|h)/\u03a3h[(<|Fo|h>-|Fo|h)2-(<|Fc|h>-|Fc|h)2]1/2 where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; DIS, unpublished program).<SHELLSCALE>"
+    }, 
+    "12": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C11-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analysed with DENZO [41] and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).<TRIM_DENZO>"
+        }, 
+        "original_full_quote & software": "Data were analysed with DENZO [41] and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).<TRIM_DENZO>"
+    }, 
+    "13": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C10-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analysed with DENZO [41] and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).<DENZO>"
+        }, 
+        "original_full_quote & software": "Data were analysed with DENZO [41] and the resolution limit was determined with TRIM_DENZO (D.I.S., unpublished program).<DENZO>"
+    }, 
+    "14": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C12-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were scaled with a special version of SCALEPACK [41].<SCALEPACK>"
+        }, 
+        "original_full_quote & software": "Data were scaled with a special version of SCALEPACK [41].<SCALEPACK>"
+    }, 
+    "15": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C13-mention", 
+        "nltk_output_fragment": {
+            "0": "For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S.<POST>", 
+            "1": "and J.M.D., unpublished program).<POST>"
+        }, 
+        "original_full_quote & software": "For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S. and J.M.D., unpublished program).<POST>"
+    }, 
+    "16": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C14-mention", 
+        "nltk_output_fragment": {
+            "0": "Intensities were converted to structure factor amplitudes with TRUNCATE [42].<TRUNCATE>"
+        }, 
+        "original_full_quote & software": "Intensities were converted to structure factor amplitudes with TRUNCATE [42].<TRUNCATE>"
+    }, 
+    "17": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "P31 resembles half of a P3 subunit and can be superposed almost equally well on either of the P3 jellyrolls (82 and 83 C atoms superposed for domains 1 and 2, respectively, in each case with an r.m.s.<SHP>", 
+            "1": "deviation of 2.9A as determined with program SHP [22] ), although there is no sequence similarity between them.<SHP>"
+        }, 
+        "original_full_quote & software": "P31 resembles half of a P3 subunit and can be superposed almost equally well on either of the P3 jellyrolls (82 and 83 C atoms superposed for domains 1 and 2, respectively, in each case with an r.m.s. deviation of 2.9A as determined with program SHP [22] ), although there is no sequence similarity between them.<SHP>"
+    }, 
+    "18": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "PREDATOR<PREDATOR>"
+        }, 
+        "original_full_quote & software": "PREDATOR<PREDATOR>"
+    }, 
+    "19": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C05-mention", 
+        "nltk_output_fragment": {
+            "0": "Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR [49], green) and transmembrane helix prediction (TMHMM [47], brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).<PREDATOR>"
+        }, 
+        "original_full_quote & software": "Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR [49], green) and transmembrane helix prediction (TMHMM [47], brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).<PREDATOR>"
+    }, 
+    "20": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C06-mention", 
+        "nltk_output_fragment": {
+            "0": "Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR [49], green) and transmembrane helix prediction (TMHMM [47], brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).<TMHMM>"
+        }, 
+        "original_full_quote & software": "Secondary structure elements of our P16 model (red), secondary structure prediction (PREDATOR [49], green) and transmembrane helix prediction (TMHMM [47], brown), aligned with the amino acid sequence (amino acids visible in the electron density are in red).<TMHMM>"
+    }, 
+    "21": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "TMHMM<TMHMM>"
+        }, 
+        "original_full_quote & software": "TMHMM<TMHMM>"
+    }, 
+    "22": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C19-mention", 
+        "nltk_output_fragment": {
+            "0": "The P3 N- and C-terminal regions were built into the averaged map of cell 2 by using O [46].<O>"
+        }, 
+        "original_full_quote & software": "The P3 N- and C-terminal regions were built into the averaged map of cell 2 by using O [46].<O>"
+    }, 
+    "23": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C18-mention", 
+        "nltk_output_fragment": {
+            "0": "The SeMet and native cell 1 data were scaled in resolution shells with the use of SHELLSCALE (D.I.S., unpublished program).<SHELLSCALE>"
+        }, 
+        "original_full_quote & software": "The SeMet and native cell 1 data were scaled in resolution shells with the use of SHELLSCALE (D.I.S., unpublished program).<SHELLSCALE>"
+    }, 
+    "24": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "The molecule is rich in proline residues (13%) and analysis of its amino acid sequence with PONDR [21] indicates that in the absence of other viral components at least the N-terminal half of the subunit would be disordered.<PONDR>"
+        }, 
+        "original_full_quote & software": "The molecule is rich in proline residues (13%) and analysis of its amino acid sequence with PONDR [21] indicates that in the absence of other viral components at least the N-terminal half of the subunit would be disordered.<PONDR>"
+    }, 
+    "25": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C15-mention", 
+        "nltk_output_fragment": {
+            "0": "The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref.<X-PLOR>", 
+            "1": "43).<X-PLOR>", 
+            "2": "This was performed separately for data from the cell 1 and cell 2 crystal forms.<X-PLOR>", 
+            "3": "An initial estimate of the particle orientation was obtained from the self-rotation function calculated from the cell 1 data set.<X-PLOR>", 
+            "4": "Patterson correlation refinement [44] was performed against 60\u201315-A resolution data to optimize the orientation (final correlation coefficient (cc) of 0.021 for cell 1 and 0.027 for cell 2).<X-PLOR>", 
+            "5": "The position and orientation of the particle were then refined at 30A with the E1E1 target function [43] (cc = 0.196 for cell 1, 0.195 for cell 2), giving an initial set of non-crystallographic symmetry (NCS) operators for the two cell types.<X-PLOR>", 
+            "6": "P3 trimers inside the icosahedral asymmetric unit were refined at 6A resolution and NCS operators were re-refined at 8A resolution [43] (cc = 0.375 for cell 1, 0.546 for cell 2).<X-PLOR>", 
+            "7": "Further refinement of the trimer positions and the NCS operators with data to 5A gave final correlation coefficients of 0.230 and 0.423 for cell 1 and cell 2, respectively.<X-PLOR>"
+        }, 
+        "original_full_quote & software": "The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref. 43). This was performed separately for data from the cell 1 and cell 2 crystal forms. An initial estimate of the particle orientation was obtained from the self-rotation function calculated from the cell 1 data set. Patterson correlation refinement [44] was performed against 60\u201315-A resolution data to optimize the orientation (final correlation coefficient (cc) of 0.021 for cell 1 and 0.027 for cell 2). The position and orientation of the particle were then refined at 30A with the E1E1 target function [43] (cc = 0.196 for cell 1, 0.195 for cell 2), giving an initial set of non-crystallographic symmetry (NCS) operators for the two cell types. P3 trimers inside the icosahedral asymmetric unit were refined at 6A resolution and NCS operators were re-refined at 8A resolution [43] (cc = 0.375 for cell 1, 0.546 for cell 2). Further refinement of the trimer positions and the NCS operators with data to 5A gave final correlation coefficients of 0.230 and 0.423 for cell 1 and cell 2, respectively.<X-PLOR>"
+    }, 
+    "26": {
+        "article_id": "bioj:a2004-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2004-46-NATURE-C08-mention", 
+        "nltk_output_fragment": {
+            "0": "\u2020Correlation coefficient =[FORMULA DID NOT COPY] where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program)<SHELLSCALE>"
+        }, 
+        "original_full_quote & software": "\u2020Correlation coefficient =[FORMULA DID NOT COPY] where h are the unique reflection indices, Fo are the observed structure factors and Fc are the structure factors obtained from inversion of the solvent-flattened map (SHELLSCALE; D.I.S., unpublished program)<SHELLSCALE>"
+    }, 
+    "27": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C11-mention", 
+        "nltk_output_fragment": {
+            "0": "All data were collected with the absorbance optical system at 280 nm.<WinNONLIN>", 
+            "1": "The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).<WinNONLIN>"
+        }, 
+        "original_full_quote & software": "All data were collected with the absorbance optical system at 280 nm. The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).<WinNONLIN>"
+    }, 
+    "28": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C08-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<WinNONLIN>", 
+            "1": "Solvent density and viscosity were calculated with Sednterp [49].<WinNONLIN>", 
+            "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN>"
+        }, 
+        "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN>"
+    }, 
+    "29": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C08-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<WinNONLIN106>", 
+            "1": "Solvent density and viscosity were calculated with Sednterp [49].<WinNONLIN106>", 
+            "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN106>"
+        }, 
+        "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN106>"
+    }, 
+    "30": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C09-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<Sednterp>", 
+            "1": "Solvent density and viscosity were calculated with Sednterp [49].<Sednterp>", 
+            "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<Sednterp>"
+        }, 
+        "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<Sednterp>"
+    }, 
+    "31": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C10-mention", 
+        "nltk_output_fragment": {
+            "0": "Data were analyzed with the continuous distribution c(S) Lamm equation implemented in Sedfit [2] using every other scan.<Sedfit>"
+        }, 
+        "original_full_quote & software": "Data were analyzed with the continuous distribution c(S) Lamm equation implemented in Sedfit [2] using every other scan.<Sedfit>"
+    }, 
+    "32": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C07-mention", 
+        "nltk_output_fragment": {
+            "0": "Iterative rounds of model building in the program O [47] were carried out by using Fo - Fc omit maps,coupled with Powell minimization and individual B-factor refinement, until Rfree converged<O>"
+        }, 
+        "original_full_quote & software": "Iterative rounds of model building in the program O [47] were carried out by using Fo - Fc omit maps,coupled with Powell minimization and individual B-factor refinement, until Rfree converged<O>"
+    }, 
+    "33": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C06-mention", 
+        "nltk_output_fragment": {
+            "0": "Refinement was done with CNS [46].<CNS>"
+        }, 
+        "original_full_quote & software": "Refinement was done with CNS [46].<CNS>"
+    }, 
+    "34": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C06-mention", 
+        "nltk_output_fragment": {
+            "0": "Refinement was done with CNS [46].<Crystallography & NMR system>"
+        }, 
+        "original_full_quote & software": "Refinement was done with CNS [46].<Crystallography & NMR system>"
+    }, 
+    "35": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "Superposition was carried out on 256 residues from domain 1 with the program LSQKAB [50].<LSQKAB>"
+        }, 
+        "original_full_quote & software": "Superposition was carried out on 256 residues from domain 1 with the program LSQKAB [50].<LSQKAB>"
+    }, 
+    "36": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<SOLVE>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SOLVE>"
+        }, 
+        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SOLVE>"
+    }, 
+    "37": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<AmoRe>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<AmoRe>"
+        }, 
+        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<AmoRe>"
+    }, 
+    "38": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<Amore>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<Amore>"
+        }, 
+        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<Amore>"
+    }, 
+    "39": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<SIGMAA>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SIGMAA>"
+        }, 
+        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SIGMAA>"
+    }, 
+    "40": {
+        "article_id": "bioj:a2005-46-NATURE", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2005-46-NATURE-C05-mention", 
+        "nltk_output_fragment": {
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<DM>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<DM>"
+        }, 
+        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<DM>"
+    }, 
+    "41": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "All data sets were processed with HKL (Otwinowski & Minor, 1997) and the space group and data statistics were determined using XPREP (Bruker AXS, Madison, WI, USA).<HKL>"
+        }, 
+        "original_full_quote & software": "All data sets were processed with HKL (Otwinowski & Minor, 1997) and the space group and data statistics were determined using XPREP (Bruker AXS, Madison, WI, USA).<HKL>"
+    }, 
+    "42": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "All data sets were processed with HKL (Otwinowski & Minor, 1997) and the space group and data statistics were determined using XPREP (Bruker AXS, Madison, WI, USA).<XPREP>"
+        }, 
+        "original_full_quote & software": "All data sets were processed with HKL (Otwinowski & Minor, 1997) and the space group and data statistics were determined using XPREP (Bruker AXS, Madison, WI, USA).<XPREP>"
+    }, 
+    "43": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C06-mention", 
+        "nltk_output_fragment": {
+            "0": "All structures were refined against F using TLS refinement in REFMAC (Murshudov et al., 1997), alternating with model building in real space using 2mFo - DFc and mFo - DFc maps in COOT (Emsley & Cowtan, 2004).<REFMAC>"
+        }, 
+        "original_full_quote & software": "All structures were refined against F using TLS refinement in REFMAC (Murshudov et al., 1997), alternating with model building in real space using 2mFo - DFc and mFo - DFc maps in COOT (Emsley & Cowtan, 2004).<REFMAC>"
+    }, 
+    "44": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C07-mention", 
+        "nltk_output_fragment": {
+            "0": "All structures were refined against F using TLS refinement in REFMAC (Murshudov et al., 1997), alternating with model building in real space using 2mFo - DFc and mFo - DFc maps in COOT (Emsley & Cowtan, 2004).<COOT>"
+        }, 
+        "original_full_quote & software": "All structures were refined against F using TLS refinement in REFMAC (Murshudov et al., 1997), alternating with model building in real space using 2mFo - DFc and mFo - DFc maps in COOT (Emsley & Cowtan, 2004).<COOT>"
+    }, 
+    "45": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C09-mention", 
+        "nltk_output_fragment": {
+            "0": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<CHIMERA>"
+        }, 
+        "original_full_quote & software": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<CHIMERA>"
+    }, 
+    "46": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C10-mention", 
+        "nltk_output_fragment": {
+            "0": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<MOLSCRIPT>"
+        }, 
+        "original_full_quote & software": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<MOLSCRIPT>"
+    }, 
+    "47": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C11-mention", 
+        "nltk_output_fragment": {
+            "0": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<RASTER3D>"
+        }, 
+        "original_full_quote & software": "Figures were drawn with CHIMERA (Pettersen et al., 2004), MOLSCRIPT (Kraulis, 1991) and RASTER3D (Merritt & Bacon, 1997).<RASTER3D>"
+    }, 
+    "48": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C05-mention", 
+        "nltk_output_fragment": {
+            "0": "Prime-and-switch phasing in RESOLVE (Terwilliger, 2004) was used to minimize model bias.<RESOLVE>", 
+            "1": "The model was checked and rebuilt manually from the bias-minimized electron-density map from RESOLVE.<RESOLVE>"
+        }, 
+        "original_full_quote & software": "Prime-and-switch phasing in RESOLVE (Terwilliger, 2004) was used to minimize model bias. The model was checked and rebuilt manually from the bias-minimized electron-density map from RESOLVE.<RESOLVE>"
+    }, 
+    "49": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "The Wind-His, Y53S and Y53F structures were solved by molecular replacement using EPMR (Kissinger et al., 1999) with search models taken from the His-Wind structure (PDB code 1ovn).<EPMR>"
+        }, 
+        "original_full_quote & software": "The Wind-His, Y53S and Y53F structures were solved by molecular replacement using EPMR (Kissinger et al., 1999) with search models taken from the His-Wind structure (PDB code 1ovn).<EPMR>"
+    }, 
+    "50": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "The Y55K mutant proved to be more problematic and so PHASER (McCoy et al., 2005) was employed.<PHASER>"
+        }, 
+        "original_full_quote & software": "The Y55K mutant proved to be more problematic and so PHASER (McCoy et al., 2005) was employed.<PHASER>"
+    }, 
+    "51": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C12-mention", 
+        "nltk_output_fragment": {
+            "0": "The hydrophobic molecular-interac-tion fields at the surfaces of the different mutants were analysed using a DRY probe in the program package GRID (Goodford, 1985).<GRID>", 
+            "1": "The hydrophobic probe finds favourable locations that interact with other molecule(s) on the surface of a protein in an aqueous environment (Liljefors, 1998).<GRID>", 
+            "2": "All GRID calculations were performed for the whole volume of the protein using a grid spacing of 1.0 A\u02da.<GRID>"
+        }, 
+        "original_full_quote & software": "The hydrophobic molecular-interac-tion fields at the surfaces of the different mutants were analysed using a DRY probe in the program package GRID (Goodford, 1985). The hydrophobic probe finds favourable locations that interact with other molecule(s) on the surface of a protein in an aqueous environment (Liljefors, 1998). All GRID calculations were performed for the whole volume of the protein using a grid spacing of 1.0 A\u02da.<GRID>"
+    }, 
+    "52": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C15-mention", 
+        "nltk_output_fragment": {
+            "0": "The net charge on each of the dimers as calculated using GRIN (Goodford, 1985) are -7.38, -9.05, -11.23 and -13.21 for Wind-His, Y53F, Y53S and Y55K, respectively:<GRIN>"
+        }, 
+        "original_full_quote & software": "The net charge on each of the dimers as calculated using GRIN (Goodford, 1985) are -7.38, -9.05, -11.23 and -13.21 for Wind-His, Y53F, Y53S and Y55K, respectively:<GRIN>"
+    }, 
+    "53": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C13-mention", 
+        "nltk_output_fragment": {
+            "0": "The program ESCET (Schneider, 2002) was used to determine confor-mationally invariant regions between different pairs of mutants.<ESCET>", 
+            "1": "The CSI (conformational similarity index) rela-tive to His-Wind, calculated using ESCET, is in the range of 90% for all the structures except for the Y55K mutant, which has a CSI of around 70%.<ESCET>"
+        }, 
+        "original_full_quote & software": "The program ESCET (Schneider, 2002) was used to determine confor-mationally invariant regions between different pairs of mutants. The CSI (conformational similarity index) rela-tive to His-Wind, calculated using ESCET, is in the range of 90% for all the structures except for the Y55K mutant, which has a CSI of around 70%.<ESCET>"
+    }, 
+    "54": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C08-mention", 
+        "nltk_output_fragment": {
+            "0": "The structures were validated with PROCHECK (Laskowski et al., 1993).<PROCHECK>"
+        }, 
+        "original_full_quote & software": "The structures were validated with PROCHECK (Laskowski et al., 1993).<PROCHECK>"
+    }, 
+    "55": {
+        "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C14-mention", 
+        "nltk_output_fragment": {
+            "0": "To analyse the hypothesis that the Wind\u2013Pipe interaction is predominantly hydrophobic, involving aromatic interactions, the relative hydrophobic potentials on the surface shown in Fig.<GRID>", 
+            "1": "6 were estimated using a DRY (hydrophobic) probe in the program GRID (Goodford, 1985).<GRID>"
+        }, 
+        "original_full_quote & software": "To analyse the hypothesis that the Wind\u2013Pipe interaction is predominantly hydrophobic, involving aromatic interactions, the relative hydrophobic potentials on the surface shown in Fig. 6 were estimated using a DRY (hydrophobic) probe in the program GRID (Goodford, 1985).<GRID>"
+    }, 
+    "56": {
+        "article_id": "bioj:a2007-14-NAT_GENET", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-14-NAT_GENET-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.<Statview>", 
+            "1": "We analyzed survival data by Kaplan-Meier analysis in Statview 5.0.<Statview>", 
+            "2": "The log-rank (Mantel-Cox) test results are presented.<Statview>", 
+            "3": "Censored data were recorded and analyzed with GraphPad software.<Statview>"
+        }, 
+        "original_full_quote & software": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis. We analyzed survival data by Kaplan-Meier analysis in Statview 5.0. The log-rank (Mantel-Cox) test results are presented. Censored data were recorded and analyzed with GraphPad software.<Statview>"
+    }, 
+    "57": {
+        "article_id": "bioj:a2007-14-NAT_GENET", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-14-NAT_GENET-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.<GraphPad Prism>", 
+            "1": "We analyzed survival data by Kaplan-Meier analysis in Statview 5.0.<GraphPad Prism>", 
+            "2": "The log-rank (Mantel-Cox) test results are presented.<GraphPad Prism>", 
+            "3": "Censored data were recorded and analyzed with GraphPad software.<GraphPad Prism>"
+        }, 
+        "original_full_quote & software": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis. We analyzed survival data by Kaplan-Meier analysis in Statview 5.0. The log-rank (Mantel-Cox) test results are presented. Censored data were recorded and analyzed with GraphPad software.<GraphPad Prism>"
+    }, 
+    "58": {
+        "article_id": "bioj:a2007-14-NAT_GENET", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2007-14-NAT_GENET-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "Similar increases in NF1 protein levels were generated by both the heat shock and GAL4-UAS systems, detected by western blot measured using Image J densitometry analysis, mean \u00b1 SD of 3 experiments (*:P < 0.05, t - test).<Image J>"
+        }, 
+        "original_full_quote & software": "Similar increases in NF1 protein levels were generated by both the heat shock and GAL4-UAS systems, detected by western blot measured using Image J densitometry analysis, mean \u00b1 SD of 3 experiments (*:P < 0.05, t - test).<Image J>"
+    }, 
+    "59": {
+        "article_id": "bioj:a2007-14-NAT_GENET", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2007-14-NAT_GENET-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "Similar levels of dephosphorylated FOXO were found for w1118, K33 and hsNF1/+;K33, verified by Image J densitometry analysis in 3 experiments, one example shown.<Image J>"
+        }, 
+        "original_full_quote & software": "Similar levels of dephosphorylated FOXO were found for w1118, K33 and hsNF1/+;K33, verified by Image J densitometry analysis in 3 experiments, one example shown.<Image J>"
+    }, 
+    "60": {
+        "article_id": "bioj:a2007-27-CLADISTICS", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-27-CLADISTICS-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "In order to evaluate our search strategy, we first analyzed the original SEA matrix using PAUP*4.0b10 (Swofford, 2002) to compare our trees with the SEA topologies.<PAUP*>", 
+            "1": "As both analyses resulted in identical trees, the following search strategy was chosen: stepwise addition of 100 random taxa sequences, followed by Tree Bisection-Reconnection (TBR) branch swapping (100 trees held at each step during the stepwise addition, MULTREES on, STEEPEST DESCENT on).<PAUP*>", 
+            "2": "Boot-strap analyses were conducted with the same software program, employing a full heuristic search with 500 replicates, a simple addition sequence, and TBR swap-ping (10 trees held at each step, MULTREES on, STEEPEST DESCENT on).<PAUP*>", 
+            "3": "The consensus of the bootstrap replicates was used to determine bootstrap values.<PAUP*>", 
+            "4": "The search strategy of the wood matrix was adjusted because of excessive computational time to run the analysis to completion.<PAUP*>", 
+            "5": "Therefore, MULTREES option was turned off, and a heuristic search using 1000 instead of 100 replicates was carried out.<PAUP*>", 
+            "6": "Furthermore, a topological constraint tree had to be postulated in which the ingroup was forced to be monophyletic.<PAUP*>"
+        }, 
+        "original_full_quote & software": "In order to evaluate our search strategy, we first analyzed the original SEA matrix using PAUP*4.0b10 (Swofford, 2002) to compare our trees with the SEA topologies. As both analyses resulted in identical trees, the following search strategy was chosen: stepwise addition of 100 random taxa sequences, followed by Tree Bisection-Reconnection (TBR) branch swapping (100 trees held at each step during the stepwise addition, MULTREES on, STEEPEST DESCENT on). Boot-strap analyses were conducted with the same software program, employing a full heuristic search with 500 replicates, a simple addition sequence, and TBR swap-ping (10 trees held at each step, MULTREES on, STEEPEST DESCENT on). The consensus of the bootstrap replicates was used to determine bootstrap values. The search strategy of the wood matrix was adjusted because of excessive computational time to run the analysis to completion. Therefore, MULTREES option was turned off, and a heuristic search using 1000 instead of 100 replicates was carried out. Furthermore, a topological constraint tree had to be postulated in which the ingroup was forced to be monophyletic.<PAUP*>"
+    }, 
+    "61": {
+        "article_id": "bioj:a2007-27-CLADISTICS", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-27-CLADISTICS-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<MacClade>", 
+            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<MacClade>", 
+            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<MacClade>"
+        }, 
+        "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<MacClade>"
+    }, 
+    "62": {
+        "article_id": "bioj:a2007-27-CLADISTICS", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-27-CLADISTICS-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<Macclade>", 
+            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<Macclade>", 
+            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Macclade>"
+        }, 
+        "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Macclade>"
+    }, 
+    "63": {
+        "article_id": "bioj:a2007-27-CLADISTICS", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2007-27-CLADISTICS-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<Adobe INDesign CS>", 
+            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<Adobe INDesign CS>", 
+            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Adobe INDesign CS>"
+        }, 
+        "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Adobe INDesign CS>"
+    }, 
+    "64": {
+        "article_id": "bioj:a2007-27-CLADISTICS", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2007-27-CLADISTICS-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "The statistical tests were performed using MorphoCode, an open-source software program that implements the gap weighting method (Schols et al., 2004).<MorphoCode>"
+        }, 
+        "original_full_quote & software": "The statistical tests were performed using MorphoCode, an open-source software program that implements the gap weighting method (Schols et al., 2004).<MorphoCode>"
+    }, 
+    "65": {
+        "article_id": "bioj:a2007-38-HUM_MOL_GENET", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2007-38-HUM_MOL_GENET-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "Haplotypes were recon-structed in PHASE version 2.1.1 (32,33).<PHASE>"
+        }, 
+        "original_full_quote & software": "Haplotypes were recon-structed in PHASE version 2.1.1 (32,33).<PHASE>"
+    }, 
+    "66": {
+        "article_id": "bioj:a2007-38-HUM_MOL_GENET", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2007-38-HUM_MOL_GENET-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "Logistic regression in STATA (http://www.stata.com) with software written by David Clayton for use within that package (http://www.gene.cimr.cam.ac.uk/clayton/software/stata) was used to test for association and calculate odds ratios (ORs) at all loci (10).<STATA>"
+        }, 
+        "original_full_quote & software": "Logistic regression in STATA (http://www.stata.com) with software written by David Clayton for use within that package (http://www.gene.cimr.cam.ac.uk/clayton/software/stata) was used to test for association and calculate odds ratios (ORs) at all loci (10).<STATA>"
+    }, 
+    "67": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C21-mention", 
+        "nltk_output_fragment": {
+            "0": "An RNA integrity number (RIN) was generated for each sample using the Agilent 2100 Expert Software (Version B.02.03) based on the ratio of ribosomal bands and also the presence or absence of degradation products on the electrophoretic and gel-like images.<Agilent 2100 Expert Software>"
+        }, 
+        "original_full_quote & software": "An RNA integrity number (RIN) was generated for each sample using the Agilent 2100 Expert Software (Version B.02.03) based on the ratio of ribosomal bands and also the presence or absence of degradation products on the electrophoretic and gel-like images.<Agilent 2100 Expert Software>"
+    }, 
+    "68": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C01-mention", 
+        "nltk_output_fragment": {
+            "0": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<geNorm>"
+        }, 
+        "original_full_quote & software": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<geNorm>"
+    }, 
+    "69": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C02-mention", 
+        "nltk_output_fragment": {
+            "0": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<NormFinder>"
+        }, 
+        "original_full_quote & software": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<NormFinder>"
+    }, 
+    "70": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C03-mention", 
+        "nltk_output_fragment": {
+            "0": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "Data analysis using descriptive statistics, geNorm, NormFinder and qBasePlus indicated significant difference in variances between candidate EC genes.<qBasePlus>"
+    }, 
+    "71": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C13-mention", 
+        "nltk_output_fragment": {
+            "0": "Figure 2 Analysis of candidate EC genes using geNorm.<geNorm>", 
+            "1": "(A): Average expression stability values of eligible EC genes.<geNorm>", 
+            "2": "Expression stability of the control genes as calculated by geNorm.<geNorm>", 
+            "3": "Stability<geNorm>"
+        }, 
+        "original_full_quote & software": "Figure 2 Analysis of candidate EC genes using geNorm. (A): Average expression stability values of eligible EC genes. Expression stability of the control genes as calculated by geNorm. Stability<geNorm>"
+    }, 
+    "72": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C18-mention", 
+        "nltk_output_fragment": {
+            "0": "For GeNorm, lower stability values (M) indicate greater stability.<geNorm>", 
+            "1": "In the case of NormFinder, stability is calculated from inter- and intra-group variation.<geNorm>", 
+            "2": "By grouping the tissues into tumour and normal the best combination of genes was identified.<geNorm>", 
+            "3": "For geNorm stability was based on the estimation of pair-wise variation.<geNorm>"
+        }, 
+        "original_full_quote & software": "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation.<geNorm>"
+    }, 
+    "73": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C19-mention", 
+        "nltk_output_fragment": {
+            "0": "For GeNorm, lower stability values (M) indicate greater stability.<NormFinder>", 
+            "1": "In the case of NormFinder, stability is calculated from inter- and intra-group variation.<NormFinder>", 
+            "2": "By grouping the tissues into tumour and normal the best combination of genes was identified.<NormFinder>", 
+            "3": "For geNorm stability was based on the estimation of pair-wise variation.<NormFinder>"
+        }, 
+        "original_full_quote & software": "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation.<NormFinder>"
+    }, 
+    "74": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C08-mention", 
+        "nltk_output_fragment": {
+            "0": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].<geNorm>", 
+            "1": "No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue.<geNorm>", 
+            "2": "Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<geNorm>"
+        }, 
+        "original_full_quote & software": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<geNorm>"
+    }, 
+    "75": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C09-mention", 
+        "nltk_output_fragment": {
+            "0": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].<NormFinder>", 
+            "1": "No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue.<NormFinder>", 
+            "2": "Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<NormFinder>"
+        }, 
+        "original_full_quote & software": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<NormFinder>"
+    }, 
+    "76": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C10-mention", 
+        "nltk_output_fragment": {
+            "0": "In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes.<geNorm>", 
+            "1": "B2M and PPIA were identified as the most stable pairing.<geNorm>", 
+            "2": "In order to achieve a pair-wise variation value (V) below the cut-off of 0.15 additional genes should theoretically be used; however this cut-off point is not absolute [14] and may not always be achievable [42].<geNorm>", 
+            "3": "No significant difference in target gene expression was observed when the top three most stable EC genes identified by geNorm were used confirming that using of a pair of genes may be more practicable given cost, work load and sample availability considerations.<geNorm>"
+        }, 
+        "original_full_quote & software": "In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes. B2M and PPIA were identified as the most stable pairing. In order to achieve a pair-wise variation value (V) below the cut-off of 0.15 additional genes should theoretically be used; however this cut-off point is not absolute [14] and may not always be achievable [42]. No significant difference in target gene expression was observed when the top three most stable EC genes identified by geNorm were used confirming that using of a pair of genes may be more practicable given cost, work load and sample availability considerations.<geNorm>"
+    }, 
+    "77": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C25-mention", 
+        "nltk_output_fragment": {
+            "0": "It is further validated with qBasePlus.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "It is further validated with qBasePlus.<qBasePlus>"
+    }, 
+    "78": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C11-mention", 
+        "nltk_output_fragment": {
+            "0": "NormFinder was designed to identify EC genes with the lowest stability values; these values are calculated based on intra- and inter-group variation.<NormFinder>", 
+            "1": "In this study NormFinder was used to define the best combination of genes using tumour and normal as group identifiers in the calculations<NormFinder>"
+        }, 
+        "original_full_quote & software": "NormFinder was designed to identify EC genes with the lowest stability values; these values are calculated based on intra- and inter-group variation. In this study NormFinder was used to define the best combination of genes using tumour and normal as group identifiers in the calculations<NormFinder>"
+    }, 
+    "79": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C12-mention", 
+        "nltk_output_fragment": {
+            "0": "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms.<qBasePlus>", 
+            "1": "QBasePlus was used to confirm our selection of the B2M and PPIA pairing as the best combination of ECs in colorectal tissue.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms. QBasePlus was used to confirm our selection of the B2M and PPIA pairing as the best combination of ECs in colorectal tissue.<qBasePlus>"
+    }, 
+    "80": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C20-mention", 
+        "nltk_output_fragment": {
+            "0": "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used.<qBasePlus>"
+    }, 
+    "81": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C22-mention", 
+        "nltk_output_fragment": {
+            "0": "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes.<qBasePlus>", 
+            "1": "It applies \u2206\u2206Ct method was used where \u2206\u2206Ct =(Ct target gene, test sample - Ct endogenous control, test sample) - (Ct target gene, calibrator sample - Ct endogenous control, calibrator sample).<qBasePlus>", 
+            "2": "Relative quanti- ties were corrected for efficiency of amplification and fold change in gene expression between groups was cal- culated as E-\u2206\u2206Ct \u00b1 s.e.m.<qBasePlus>", 
+            "3": "Where more than one endo- genous control are used, fold change estimates were calculated using the geometric mean of EC quantities relative to the calibrator sample which could be the minimum, maximum or a named sample or an average.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes. It applies \u2206\u2206Ct method was used where \u2206\u2206Ct =(Ct target gene, test sample - Ct endogenous control, test sample) - (Ct target gene, calibrator sample - Ct endogenous control, calibrator sample). Relative quanti- ties were corrected for efficiency of amplification and fold change in gene expression between groups was cal- culated as E-\u2206\u2206Ct \u00b1 s.e.m. Where more than one endo- genous control are used, fold change estimates were calculated using the geometric mean of EC quantities relative to the calibrator sample which could be the minimum, maximum or a named sample or an average.<qBasePlus>"
+    }, 
+    "82": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C26-mention", 
+        "nltk_output_fragment": {
+            "0": "Sta- tistical analysis was carried out with Minitab\u00ae 15 (Mini- tab Ltd, Coventry, UK).<Minitab>"
+        }, 
+        "original_full_quote & software": "Sta- tistical analysis was carried out with Minitab\u00ae 15 (Mini- tab Ltd, Coventry, UK).<Minitab>"
+    }, 
+    "83": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C23-mention", 
+        "nltk_output_fragment": {
+            "0": "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.<geNorm>"
+        }, 
+        "original_full_quote & software": "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.<geNorm>"
+    }, 
+    "84": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C24-mention", 
+        "nltk_output_fragment": {
+            "0": "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.<NormFinder>"
+        }, 
+        "original_full_quote & software": "Stability of the EC genes expression was evaluated with two freely available statistical models, geNorm and NormFinder.<NormFinder>"
+    }, 
+    "85": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C06-mention", 
+        "nltk_output_fragment": {
+            "0": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<qBasePlus>", 
+            "1": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<qBasePlus>", 
+            "2": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<qBasePlus>", 
+            "3": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<qBasePlus>", 
+            "4": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
+        }, 
+        "original_full_quote & software": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
+    }, 
+    "86": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C07-mention", 
+        "nltk_output_fragment": {
+            "0": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<qBasePlus>", 
+            "1": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<qBasePlus>", 
+            "2": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<qBasePlus>", 
+            "3": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<qBasePlus>", 
+            "4": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
+        }, 
+        "original_full_quote & software": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
+    }, 
+    "87": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C15-mention", 
+        "nltk_output_fragment": {
+            "0": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<geNorm>"
+        }, 
+        "original_full_quote & software": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<geNorm>"
+    }, 
+    "88": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C16-mention", 
+        "nltk_output_fragment": {
+            "0": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<NormFinder>"
+        }, 
+        "original_full_quote & software": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<NormFinder>"
+    }, 
+    "89": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "F", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C17-mention", 
+        "nltk_output_fragment": {
+            "0": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<qBasePlus>"
+        }, 
+        "original_full_quote & software": "Table 3 Ranking and best combination of EC genes as determined by geNorm, NormFinder and qBasePlus.<qBasePlus>"
+    }, 
+    "90": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C14-mention", 
+        "nltk_output_fragment": {
+            "0": "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation.<geNorm>", 
+            "1": "This factor is calculated using the variable V as the pairwise variation (Vn/Vn + 1) between two sequential NFs (NFn and NFn + 1).<geNorm>", 
+            "2": "To meet the recommended cut off V-value which is the point at which it is unnecessary to include additional genes in a normalisation strategy.<geNorm>", 
+            "3": "The recommended limit for V value is 0.15 but it is not always achievable.<geNorm>", 
+            "4": "In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three.<geNorm>"
+        }, 
+        "original_full_quote & software": "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation. This factor is calculated using the variable V as the pairwise variation (Vn/Vn + 1) between two sequential NFs (NFn and NFn + 1). To meet the recommended cut off V-value which is the point at which it is unnecessary to include additional genes in a normalisation strategy. The recommended limit for V value is 0.15 but it is not always achievable. In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three.<geNorm>"
+    }, 
+    "91": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C04-mention", 
+        "nltk_output_fragment": {
+            "0": "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes.<geNorm>", 
+            "1": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<geNorm>", 
+            "2": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<geNorm>", 
+            "3": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<geNorm>", 
+            "4": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<geNorm>", 
+            "5": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<geNorm>"
+        }, 
+        "original_full_quote & software": "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<geNorm>"
+    }, 
+    "92": {
+        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
+        "change": "T", 
+        "match": "", 
+        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C05-mention", 
+        "nltk_output_fragment": 

@@ -1,0 +1,328 @@
+--------------------------
+There were 59 articles with mentions and 31 articles without.
+At a confidence interval of 95%, the proportion of articles in the population that mention software is between 0.55 and 0.75
+--------------------
+Outputted Figure 1: MentionsByStrataBoxplot.eps
+[1] 286
+                    value num proportion total_mentions_in_frame conf_int_low
+1     Cite to publication 105       0.37                     286         0.31
+2     Cite to user manual   6       0.02                     286         0.01
+3 Cite to name or website  15       0.05                     286         0.03
+4         Like instrument  53       0.19                     286         0.14
+5             URL in text  13       0.05                     286         0.03
+6               Name only  90       0.31                     286         0.26
+7           Not even name   4       0.01                     286         0.00
+  conf_int_high
+1          0.43
+2          0.05
+3          0.09
+4          0.24
+5          0.08
+6          0.37
+7          0.04
+[1] "37% (95% CI: 0.31–0.43)"
+[1] "2% (95% CI: 0.01–0.05)"
+[1] "5% (95% CI: 0.03–0.09)"
+[1] "19% (95% CI: 0.14–0.24)"
+[1] "5% (95% CI: 0.03–0.08)"
+[1] "31% (95% CI: 0.26–0.37)"
+[1] "1% (95% CI: 0.00–0.04)"
+--------------------
+Outputted output/fig-2-Mentions, all categories.eps
+
+[1] 286
+                value num proportion total_mentions_in_frame conf_int_low
+1 Cite to publication 111       0.39                     286         0.33
+2     Like instrument  53       0.19                     286         0.14
+3               Other 122       0.43                     286         0.37
+  conf_int_high
+1          0.45
+2          0.24
+3          0.49
+[1] "39% (95% CI: 0.33–0.45)"
+[1] "19% (95% CI: 0.14–0.24)"
+[1] "43% (95% CI: 0.37–0.49)"
+--------------------
+Outputted output/fig-3-Mentions, collapsed categories.eps
+
+    strata               value type_in_strata total_in_strata proportion
+1     1-10 Cite to publication             50             130       0.38
+2     1-10     Like instrument             33             130       0.25
+3     1-10               Other             47             130       0.36
+4   11-110 Cite to publication             34              91       0.37
+5   11-110     Like instrument             15              91       0.16
+6   11-110               Other             42              91       0.46
+7 111-1455 Cite to publication             27              65       0.42
+8 111-1455     Like instrument              5              65       0.08
+9 111-1455               Other             33              65       0.51
+  conf_int_low conf_int_high
+1         0.30          0.47
+2         0.18          0.34
+3         0.28          0.45
+4         0.28          0.48
+5         0.10          0.26
+6         0.36          0.57
+7         0.30          0.54
+8         0.03          0.18
+9         0.38          0.63
+[1] "38% (95% CI: 0.30–0.47)"
+[1] "25% (95% CI: 0.18–0.34)"
+[1] "36% (95% CI: 0.28–0.45)"
+[1] "37% (95% CI: 0.28–0.48)"
+[1] "16% (95% CI: 0.10–0.26)"
+[1] "46% (95% CI: 0.36–0.57)"
+[1] "42% (95% CI: 0.30–0.54)"
+[1] "8% (95% CI: 0.03–0.18)"
+[1] "51% (95% CI: 0.38–0.63)"
+--------------------
+Outputted output/fig-4-Mentions by strata, collapsed categories.eps
+
+[1] 146
+             value num proportion total_mentions_in_frame conf_int_low
+1       accessible 115       0.79                     146         0.71
+2             free  69       0.47                     146         0.39
+3 source_available  46       0.32                     146         0.24
+4       modifiable  29       0.20                     146         0.14
+  conf_int_high
+1          0.85
+2          0.56
+3          0.40
+4          0.27
+[1] "79% (95% CI: 0.71–0.85)"
+[1] "47% (95% CI: 0.39–0.56)"
+[1] "32% (95% CI: 0.24–0.40)"
+[1] "20% (95% CI: 0.14–0.27)"
+--------------------
+Outputted output/fig-5-Characteristics of mentioned software.eps
+
+--------------------
+We found references to 146 distinct pieces of software
+[1] 146
+           value num proportion total_mentions_in_frame conf_int_low
+1 Not accessible  31       0.21                     146         0.15
+2    Proprietary  46       0.32                     146         0.24
+3 Non-commercial  40       0.27                     146         0.21
+4    Open source  29       0.20                     146         0.14
+  conf_int_high
+1          0.29
+2          0.40
+3          0.36
+4          0.27
+[1] "21% (95% CI: 0.15–0.29)"
+[1] "32% (95% CI: 0.24–0.40)"
+[1] "27% (95% CI: 0.21–0.36)"
+[1] "20% (95% CI: 0.14–0.27)"
+--------------------
+Outputted output/fig-6-Types of Software mentioned.eps
+
+   software_category               value type_in_strata total_in_strata
+1     Not accessible Cite to publication             17              39
+2     Not accessible     Like instrument             12              39
+3     Not accessible               Other             10              39
+4        Proprietary Cite to publication             20              93
+5        Proprietary     Like instrument             33              93
+6        Proprietary               Other             40              93
+7     Non-commercial Cite to publication             41              75
+8     Non-commercial     Like instrument              5              75
+9     Non-commercial               Other             29              75
+10       Open source Cite to publication             29              73
+11       Open source     Like instrument              3              73
+12       Open source               Other             41              73
+   proportion conf_int_low conf_int_high
+1        0.44         0.28          0.60
+2        0.31         0.18          0.48
+3        0.26         0.14          0.42
+4        0.22         0.14          0.31
+5        0.35         0.26          0.46
+6        0.43         0.33          0.54
+7        0.55         0.43          0.66
+8        0.07         0.02          0.16
+9        0.39         0.28          0.51
+10       0.40         0.29          0.52
+11       0.04         0.01          0.12
+12       0.56         0.44          0.68
+[1] "44% (95% CI: 0.28–0.60)"
+[1] "31% (95% CI: 0.18–0.48)"
+[1] "26% (95% CI: 0.14–0.42)"
+[1] "22% (95% CI: 0.14–0.31)"
+[1] "35% (95% CI: 0.26–0.46)"
+[1] "43% (95% CI: 0.33–0.54)"
+[1] "55% (95% CI: 0.43–0.66)"
+[1] "7% (95% CI: 0.02–0.16)"
+[1] "39% (95% CI: 0.28–0.51)"
+[1] "40% (95% CI: 0.29–0.52)"
+[1] "4% (95% CI: 0.01–0.12)"
+[1] "56% (95% CI: 0.44–0.68)"
+--------------------
+Outputted output/fig-7-Software types and Mention types.eps
+
+
+	Pearson's Chi-squared test
+
+data:  myTable2
+X-squared = 49.248, df = 6, p-value = 6.65e-09
+
+[1] 182
+             value num proportion total_mentions_in_frame conf_int_low
+1     identifiable 169       0.93                     182         0.88
+2         findable 156       0.86                     182         0.80
+3        versioned  51       0.28                     182         0.22
+4 version_findable  10       0.05                     182         0.03
+5         credited 140       0.77                     182         0.70
+  conf_int_high
+1          0.96
+2          0.90
+3          0.35
+4          0.10
+5          0.83
+[1] "93% (95% CI: 0.88–0.96)"
+[1] "86% (95% CI: 0.80–0.90)"
+[1] "28% (95% CI: 0.22–0.35)"
+[1] "5% (95% CI: 0.03–0.10)"
+[1] "77% (95% CI: 0.70–0.83)"
+--------------------
+Outputted output/fig-8-Functions of Citation.eps
+
+     strata            value type_in_strata total_in_strata proportion
+1      1-10     identifiable             72              77       0.94
+2      1-10         findable             68              77       0.88
+3      1-10        versioned             17              77       0.22
+4      1-10         credited             63              77       0.82
+5    11-110     identifiable             65              67       0.97
+6    11-110         findable             58              67       0.87
+7    11-110        versioned             23              67       0.34
+8    11-110 version_findable              8              67       0.12
+9    11-110         credited             51              67       0.76
+10 111-1455     identifiable             32              33       0.97
+11 111-1455         findable             30              33       0.91
+12 111-1455        versioned             11              33       0.33
+13 111-1455 version_findable              2              33       0.06
+14 111-1455         credited             26              33       0.79
+   conf_int_low conf_int_high
+1          0.85          0.98
+2          0.78          0.94
+3          0.14          0.33
+4          0.71          0.89
+5          0.89          0.99
+6          0.76          0.93
+7          0.23          0.47
+8          0.06          0.23
+9          0.64          0.85
+10         0.82          1.00
+11         0.75          0.98
+12         0.19          0.52
+13         0.01          0.22
+14         0.61          0.90
+[1] "94% (95% CI: 0.85–0.98)"
+[1] "88% (95% CI: 0.78–0.94)"
+[1] "22% (95% CI: 0.14–0.33)"
+[1] "82% (95% CI: 0.71–0.89)"
+[1] "97% (95% CI: 0.89–0.99)"
+[1] "87% (95% CI: 0.76–0.93)"
+[1] "34% (95% CI: 0.23–0.47)"
+[1] "12% (95% CI: 0.06–0.23)"
+[1] "76% (95% CI: 0.64–0.85)"
+[1] "97% (95% CI: 0.82–1.00)"
+[1] "91% (95% CI: 0.75–0.98)"
+[1] "33% (95% CI: 0.19–0.52)"
+[1] "6% (95% CI: 0.01–0.22)"
+[1] "79% (95% CI: 0.61–0.90)"
+--------------------
+Outputted output/fig-9-Functions of Citation By Strata.eps
+
+      mention_category            value type_in_strata total_in_strata
+1  Cite to publication     identifiable             83              88
+2  Cite to publication         findable             77              88
+3  Cite to publication        versioned             10              88
+4  Cite to publication version_findable              2              88
+5  Cite to publication         credited             88              88
+6      Like instrument     identifiable             39              42
+7      Like instrument         findable             34              42
+8      Like instrument        versioned             20              42
+9      Like instrument version_findable              2              42
+10     Like instrument         credited             42              42
+11               Other     identifiable             65              65
+12               Other         findable             62              65
+13               Other        versioned             24              65
+14               Other version_findable              6              65
+15               Other         credited             28              65
+   proportion conf_int_low conf_int_high
+1        0.94         0.87          0.98
+2        0.88         0.78          0.93
+3        0.11         0.06          0.20
+4        0.02         0.00          0.09
+5        1.00         0.95          1.00
+6        0.93         0.79          0.98
+7        0.81         0.65          0.91
+8        0.48         0.32          0.63
+9        0.05         0.01          0.17
+10       1.00         0.90          1.00
+11       1.00         0.93          1.00
+12       0.95         0.86          0.99
+13       0.37         0.26          0.50
+14       0.09         0.04          0.20
+15       0.43         0.31          0.56
+[1] "94% (95% CI: 0.87–0.98)"
+[1] "88% (95% CI: 0.78–0.93)"
+[1] "11% (95% CI: 0.06–0.20)"
+[1] "2% (95% CI: 0.00–0.09)"
+[1] "100% (95% CI: 0.95–1.00)"
+[1] "93% (95% CI: 0.79–0.98)"
+[1] "81% (95% CI: 0.65–0.91)"
+[1] "48% (95% CI: 0.32–0.63)"
+[1] "5% (95% CI: 0.01–0.17)"
+[1] "100% (95% CI: 0.90–1.00)"
+[1] "100% (95% CI: 0.93–1.00)"
+[1] "95% (95% CI: 0.86–0.99)"
+[1] "37% (95% CI: 0.26–0.50)"
+[1] "9% (95% CI: 0.04–0.20)"
+[1] "43% (95% CI: 0.31–0.56)"
+      mention_category            value type_in_strata total_in_strata
+1  Cite to publication     identifiable             83              88
+2  Cite to publication         findable             77              88
+3  Cite to publication        versioned             10              88
+4  Cite to publication version_findable              2              88
+5  Cite to publication         credited             88              88
+6      Like instrument     identifiable             39              42
+7      Like instrument         findable             34              42
+8      Like instrument        versioned             20              42
+9      Like instrument version_findable              2              42
+10     Like instrument         credited             42              42
+11               Other     identifiable             65              65
+12               Other         findable             62              65
+13               Other        versioned             24              65
+14               Other version_findable              6              65
+15               Other         credited             28              65
+   proportion conf_int_low conf_int_high
+1        0.94         0.87          0.98
+2        0.88         0.78          0.93
+3        0.11         0.06          0.20
+4        0.02         0.00          0.09
+5        1.00         0.95          1.00
+6        0.93         0.79          0.98
+7        0.81         0.65          0.91
+8        0.48         0.32          0.63
+9        0.05         0.01          0.17
+10       1.00         0.90          1.00
+11       1.00         0.93          1.00
+12       0.95         0.86          0.99
+13       0.37         0.26          0.50
+14       0.09         0.04          0.20
+15       0.43         0.31          0.56
+[1] "94% (95% CI: 0.87–0.98)"
+[1] "88% (95% CI: 0.78–0.93)"
+[1] "11% (95% CI: 0.06–0.20)"
+[1] "2% (95% CI: 0.00–0.09)"
+[1] "100% (95% CI: 0.95–1.00)"
+[1] "93% (95% CI: 0.79–0.98)"
+[1] "81% (95% CI: 0.65–0.91)"
+[1] "48% (95% CI: 0.32–0.63)"
+[1] "5% (95% CI: 0.01–0.17)"
+[1] "100% (95% CI: 0.90–1.00)"
+[1] "100% (95% CI: 0.93–1.00)"
+[1] "95% (95% CI: 0.86–0.99)"
+[1] "37% (95% CI: 0.26–0.50)"
+[1] "9% (95% CI: 0.04–0.20)"
+[1] "43% (95% CI: 0.31–0.56)"
+--------------------
+Outputted output/fig-10-Functions of Citation By Mention Category.eps

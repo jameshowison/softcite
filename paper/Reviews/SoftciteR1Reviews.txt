@@ -1,0 +1,55 @@
+Your manuscript Manuscript # JASIST-2014-08-0571 entitled "How is software visible in the scientific literature?" which you submitted to the Journal of the Association for Information Science and Technology has been refereed.
+
+The referees'’ comments are appended to this letter and referees'’ attached comments (if any) are linked from Manuscript Central (http://mc.manuscriptcentral.com/jasist; from your Submitting Author Center, select “Manuscripts with Decisions” and click on “view decision letter”).
+
+A revised version of your manuscript that takes into account the referees'’ comments will be reconsidered for publication. Please note that submitting a revision of your manuscript does not guarantee acceptance. The revised version may be re-reviewed by the referee(s) before a decision is made.
+
+Please also make sure that you provide a detailed response to the referees' comments.
+
+You can upload and submit your revised manuscript through Manuscript Central. You will also be able to respond to the comments made by the referees and document any changes you make to the original manuscript.
+
+IMPORTANT: We have your original files. When submitting (uploading) your revised manuscript, please delete the file(s) that you wish to replace and then upload the revised file(s).
+
+Once again, thank you for submitting your manuscript to the Journal of the Association of Information Science and Technology. I look forward to receiving your revision.
+
+Sincerely,
+
+Professor Blaise Cronin
+Editor-in-Chief
+Journal of the Association of Information Science and Technology
+
+
+Referees' Comments to Author:
+
+Reviewer: 1
+
+Comments to the Author
+This is a well-conceived and executed work about a the problem of uneven citation of software used in reporting scientific research.  The authors explain and justify antecedent research, theory, methods, and coding schemes clearly (and convincingly).  The problem of software citation as described by the author is novel, challenging, and of significance to the broader scholarly community.  The subject is important; the questions & thoughts I list below arise from my view that this preliminary work needs to be extended and that the paper needs to more forcefully make its point.
+The division of articles into "strata" or "tiers" based on impact factor appears to be logarithmic.  Could this influence the analysis?
+There are instances in the text (pg 6, pg 17) in which the authors equate "high impact factor" and "high quality".  I am not certain that the two phrases are synonymous and would urge caution in the use of such value-judgment laden verbiage.
+The authors selected 3 sets of 30 articles from each of the impact factor tiers.  Of these, a smaller number were appropriate for subsequent analysis.  This is (these are) a small sample(s) - is it still significant? (Certainly, intra-strata comparison would be challenging with such small samples.) If these results are to be extended past the field of biology, the sample may need to be larger, or the sample significance verified.  Also, given the great difference in performance among the tiers, I wonder whether the journals among the tiers can be compared to each other without considering other characteristics such as institutional affiliation or the nature of the research reported.  (i.e. are software-heavy projects disproportionately coming from better funded/higher profile sources? Do they come from sources that have greater access to computational facilities/personnel?)
+
+It would be valuable to know if these results are consistent across disciplines.  The problem of software citation is relevant across scholarly communication - is the problem similar in areas outside of the sample?
+
+The authors used a very sophisticated data management system, so their reliance of relatively basic statistics is a surprise. If it is deliberate, the reader should be informed.
+
+ The results presented are largely descriptive (incidence of citation, nature of citation).  In the spirit of extensibility, I would love to see a degree of comparison between disciplines, (perhaps comparing top and second-tier journals in similar, but distinct areas, such as bio informatics and health informatics.)  Are there correlations or hypothesis testing to be done? Can these results be extended across the "Republic of Science"?
+This paper is significant and well-written.  As I read, I kept wanting more - more sample size, more statistical analysis, and more comparison.  By expanding the scope of the comparison, I believe that the paper could compel interest more broadly - and the subject is certainly of sufficient importance to warrant such treatment.
+ In summary, I feel that this research needs to be made more forceful.  As reported, the results address a small subset of the biomedical literature.  These limited findings hint at a serious issue in scholarly communication - I would like to see this issue addressed in such a way that the importance to the scientific community in general were easy to see.
+
+
+Reviewer: 2
+
+Comments to the Author
+The manuscript by Howison and Bullard (How is software visible in the scientific literature?; JAIST-2014-08-0571) presents and analysis of software mentions in scientific literature.  While the manuscript undertakes an analysis of an important, but relatively neglected part of the scientific literature, I have several concerns about the work as presented.
+1.  The authors group ‘software” as a single entity, and include both commercial (for profit software) and freely available and open source software.  Authors note that three main systems of citation are in place (“cite to publication”, “like an Instrument” and “name only”), but there seems to be no distinct analysis of whether commercial software is generally cited like an instrument, while open source is cited like a paper or by name.  These would seem to be the appropriate methods of citation.  Indeed, a question the authors should address is whether commercial and open source/freely available software can or should be cited in the same way?
+2.  While I can see that “accessibility” of the software (i.e. being able to find the software) is a component of “visibility” (and replication), I disagree with the contention that the ability to modify source code is an aspect of “visibility”.  In this regard, the authors blur the lines between “visibility” and “utility”.  Again, lumping commercial and non-commercial software together seems overly simplistic.
+3.  The authors note that in their selection of 90 articles, 59 articles mentioned software, but 31 did not.  However, the authors did not apparently further explore whether the articles that did not mention software should have cited software.  Was there evidence in these papers that software should have been mentioned?  (Examples would include evidence of statistical analysis or complex data generation).
+4.  While the authors explain their selection of three strata for journals, I am not sure that this is really justified in the context of the study (“visibility in the literature”).  Firstly, in terms of publishing weight, 90-99% of all publications are published in the authors tier 3 journals.  What is going on in effectively 5 (tier 1) journals really does tell much about the wider field of science.  In this regards papers in Tier 1 journals tend to have extensive editorial input, and so again are less reflective of practices in the wider field.  In this regards, authors also need to choose their words more carefully.  While there is no objection to the use of “higher impact factor” (or indeed “lower impact factor”, the use of “higher and lower quality” (e.g. page 6, line 55) and “higher quality” and “lower quality” (Page 17, lines 53 and 54) should be avoided.  Indeed, given the considerable reservations towards impact factors (with impact factors generally being the product of a relatively small proportion of a journals total paper output), the use of impact factor for stratification would appear to be relatively outdated.  A more representative picture would have been obtained by selecting equal article numbers based upon stratification by journal quartiles, or, ideally through the use of article specific metrics.
+5.  The issue of “improving credit” (page 20) again would seem to link poorly to the central theme of the paper “visibility”.  While there is certainly a case to be made that credit should be appropriately assigned, is this an issue of “visibility”?  Again, should commercial and non-commercial software be held to the same criteria?
+6.  The authors reference a number of pieces of software used to create graphs or to analyze data (Acknowledgements).  I was unable to find a single version number, and the authors themselves use a number of citation styles.  This would have seemed to be the ideal place for the authors to reference the software they used in the manner in which they advocate.    Indeed, some clear examples of what the authors themselves think of as “ideal” citation styles would have been extremely helpful.
+7.  No test of statistical significance has been applied to any of the data, and this should be corrected. Are the differences seen between strata statistically significant or not significant?
+8.  Titles of papers should generally be “informative”.  In this regard the title of the manuscript is not informative - it tells us what the study is about, but not what the study found.  The title should be re-written, avoiding structuring the title as a question.
+9.  References need to be re-checked.  See reference to “Loo, M.P.J van der” for an example of incomplete referencing.
+
+If there are referee comments attached, they can be accessed from your Submitting Author Dashboard by selecting “Manuscripts with Decisions” and clicking on “view decision letter.”

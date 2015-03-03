@@ -498,12 +498,14 @@ public class TTLRepository {
 	//	saveResults(resultsModel);
 		
 		resultsModel = runSPINruleSet(resultsModel, "SPINNegations.ttl");
+		
+		resultsModel = runSPINruleSet(resultsModel, "SPINSoftwareCategorizationRules.ttl");
 	
 		saveResults(resultsModel);
 			
 	}
 	
-	public static void runSPINconstraintsOnly() {
+	public static int runSPINconstraintsOnly() {
 		
 		Model resultsModel = ModelFactory.createDefaultModel();
 		// read 
@@ -511,7 +513,7 @@ public class TTLRepository {
 		// Run contraint checks
 		resultsModel.read(path + "VocabularyStatements.ttl");
 	
-		runSPINconstraints(resultsModel, "SPINConstraintChecks.ttl");
+		return runSPINconstraints(resultsModel, "SPINConstraintChecks.ttl");
 	}
 	
 	private static void saveResults(Model newTriples) {
@@ -570,7 +572,7 @@ public class TTLRepository {
 		return incoming;
 	}
 	
-	private static void runSPINconstraints(Model incoming, String rulePath) {	
+	private static int runSPINconstraints(Model incoming, String rulePath) {	
 		//Create a copy of incoming to add rules to.
 		Model tempModel = ModelFactory.createDefaultModel();
 		tempModel.add(incoming);
@@ -598,5 +600,6 @@ public class TTLRepository {
 		for(ConstraintViolation cv : cvs) {
 			System.out.println(" - at " + SPINLabels.get().getLabel(cv.getRoot()) + ": " + cv.getMessage());
 		}
+		return cvs.size();
 	}
 }

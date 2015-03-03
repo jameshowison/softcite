@@ -55,8 +55,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C16-mention", 
         "nltk_output_fragment": {
-            "0": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.<GAP>", 
-            "1": "and J.M.G., unpublished program, and CCP4 programs [42]).<GAP>"
+            "0": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.<GAP>"
         }, 
         "original_full_quote & software": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S. and J.M.G., unpublished program, and CCP4 programs [42]).<GAP>"
     }, 
@@ -66,8 +65,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C17-mention", 
         "nltk_output_fragment": {
-            "0": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S.<CCP4>", 
-            "1": "and J.M.G., unpublished program, and CCP4 programs [42]).<CCP4>"
+            "0": "and J.M.G., unpublished program, and CCP4 programs [42]).<CCP4>"
         }, 
         "original_full_quote & software": "A 2Fo - Fc map was calculated for each cell type (to 4.2A resolution) with the corresponding model phases, which were then refined by iterative solvent flattening and 60-fold averaging; Fc was calculated from the starting model or from Fourier transformation of the modified map (see Table 2) (program GAP; D.I.S. and J.M.G., unpublished program, and CCP4 programs [42]).<CCP4>"
     }, 
@@ -87,8 +85,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C09-mention", 
         "nltk_output_fragment": {
-            "0": "Although postulated to have an analogous function [31], polypeptide IIIa is larger than expected for a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR [21] predicts to be disordered.<PONDR>", 
-            "1": "The<PONDR>"
+            "0": "Although postulated to have an analogous function [31], polypeptide IIIa is larger than expected for a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR [21] predicts to be disordered.<PONDR>"
         }, 
         "original_full_quote & software": "Although postulated to have an analogous function [31], polypeptide IIIa is larger than expected for a P30 homologue and is a less attractive candidate than polypeptide VIII, which is proline-rich, is almost exactly the expected length (110 residues) and possesses an N-terminal sequence that PONDR [21] predicts to be disordered. The<PONDR>"
     }, 
@@ -148,8 +145,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C13-mention", 
         "nltk_output_fragment": {
-            "0": "For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S.<POST>", 
-            "1": "and J.M.D., unpublished program).<POST>"
+            "0": "For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S.<POST>"
         }, 
         "original_full_quote & software": "For the native data and SeMet data, reflections with fractional partialities of 0.7 or more and 0.5, respectively, were scaled to full intensity and incorporated into the data set as fully recorded reflections (program POST: D.I.S. and J.M.D., unpublished program).<POST>"
     }, 
@@ -169,8 +165,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C02-mention", 
         "nltk_output_fragment": {
-            "0": "P31 resembles half of a P3 subunit and can be superposed almost equally well on either of the P3 jellyrolls (82 and 83 C atoms superposed for domains 1 and 2, respectively, in each case with an r.m.s.<SHP>", 
-            "1": "deviation of 2.9A as determined with program SHP [22] ), although there is no sequence similarity between them.<SHP>"
+            "0": "deviation of 2.9A as determined with program SHP [22] ), although there is no sequence similarity between them.<SHP>"
         }, 
         "original_full_quote & software": "P31 resembles half of a P3 subunit and can be superposed almost equally well on either of the P3 jellyrolls (82 and 83 C atoms superposed for domains 1 and 2, respectively, in each case with an r.m.s. deviation of 2.9A as determined with program SHP [22] ), although there is no sequence similarity between them.<SHP>"
     }, 
@@ -250,14 +245,7 @@
         "match": "", 
         "mention_id": "bioj:a2004-46-NATURE-C15-mention", 
         "nltk_output_fragment": {
-            "0": "The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref.<X-PLOR>", 
-            "1": "43).<X-PLOR>", 
-            "2": "This was performed separately for data from the cell 1 and cell 2 crystal forms.<X-PLOR>", 
-            "3": "An initial estimate of the particle orientation was obtained from the self-rotation function calculated from the cell 1 data set.<X-PLOR>", 
-            "4": "Patterson correlation refinement [44] was performed against 60\u201315-A resolution data to optimize the orientation (final correlation coefficient (cc) of 0.021 for cell 1 and 0.027 for cell 2).<X-PLOR>", 
-            "5": "The position and orientation of the particle were then refined at 30A with the E1E1 target function [43] (cc = 0.196 for cell 1, 0.195 for cell 2), giving an initial set of non-crystallographic symmetry (NCS) operators for the two cell types.<X-PLOR>", 
-            "6": "P3 trimers inside the icosahedral asymmetric unit were refined at 6A resolution and NCS operators were re-refined at 8A resolution [43] (cc = 0.375 for cell 1, 0.546 for cell 2).<X-PLOR>", 
-            "7": "Further refinement of the trimer positions and the NCS operators with data to 5A gave final correlation coefficients of 0.230 and 0.423 for cell 1 and cell 2, respectively.<X-PLOR>"
+            "0": "The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref.<X-PLOR>"
         }, 
         "original_full_quote & software": "The position and orientation of this model were refined against the experimental data using X-PLOR 3.1 (ref. 43). This was performed separately for data from the cell 1 and cell 2 crystal forms. An initial estimate of the particle orientation was obtained from the self-rotation function calculated from the cell 1 data set. Patterson correlation refinement [44] was performed against 60\u201315-A resolution data to optimize the orientation (final correlation coefficient (cc) of 0.021 for cell 1 and 0.027 for cell 2). The position and orientation of the particle were then refined at 30A with the E1E1 target function [43] (cc = 0.196 for cell 1, 0.195 for cell 2), giving an initial set of non-crystallographic symmetry (NCS) operators for the two cell types. P3 trimers inside the icosahedral asymmetric unit were refined at 6A resolution and NCS operators were re-refined at 8A resolution [43] (cc = 0.375 for cell 1, 0.546 for cell 2). Further refinement of the trimer positions and the NCS operators with data to 5A gave final correlation coefficients of 0.230 and 0.423 for cell 1 and cell 2, respectively.<X-PLOR>"
     }, 
@@ -277,8 +265,7 @@
         "match": "", 
         "mention_id": "bioj:a2005-46-NATURE-C11-mention", 
         "nltk_output_fragment": {
-            "0": "All data were collected with the absorbance optical system at 280 nm.<WinNONLIN>", 
-            "1": "The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).<WinNONLIN>"
+            "0": "The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).<WinNONLIN>"
         }, 
         "original_full_quote & software": "All data were collected with the absorbance optical system at 280 nm. The global fit in WinNONLIN included three rotor speeds (13,000, 18,000, and 25,000 rpm) and three loading concentrations (0.2, 0.4, 0.8 mg/ml).<WinNONLIN>"
     }, 
@@ -289,34 +276,10 @@
         "mention_id": "bioj:a2005-46-NATURE-C08-mention", 
         "nltk_output_fragment": {
             "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<WinNONLIN>", 
-            "1": "Solvent density and viscosity were calculated with Sednterp [49].<WinNONLIN>", 
+            "1": "Solvent density and viscosity were calculated with Sednterp [49].<Sednterp>", 
             "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN>"
         }, 
         "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN>"
-    }, 
-    "29": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C08-mention", 
-        "nltk_output_fragment": {
-            "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<WinNONLIN106>", 
-            "1": "Solvent density and viscosity were calculated with Sednterp [49].<WinNONLIN106>", 
-            "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN106>"
-        }, 
-        "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<WinNONLIN106>"
-    }, 
-    "30": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C09-mention", 
-        "nltk_output_fragment": {
-            "0": "Data were analysed by nonlinear regression in WinNONLIN [48].<Sednterp>", 
-            "1": "Solvent density and viscosity were calculated with Sednterp [49].<Sednterp>", 
-            "2": "Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<Sednterp>"
-        }, 
-        "original_full_quote & software": "Data were analysed by nonlinear regression in WinNONLIN [48]. Solvent density and viscosity were calculated with Sednterp [49]. Association constants for any monomer\u2013dimer equilibria obtained from WinNONLIN were converted from absorbance (K2,abs) to molar units (K2,M) with the equation K2,M = K2,abs(1l)/2,<Sednterp>"
     }, 
     "31": {
         "article_id": "bioj:a2005-46-NATURE", 
@@ -374,54 +337,10 @@
         "match": "", 
         "mention_id": "bioj:a2005-46-NATURE-C02-mention", 
         "nltk_output_fragment": {
-            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<SOLVE>", 
-            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SOLVE>"
+            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<SOLVE,AmoRe>", 
+            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SIGMAA,DM>"
         }, 
         "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SOLVE>"
-    }, 
-    "37": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C03-mention", 
-        "nltk_output_fragment": {
-            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<AmoRe>", 
-            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<AmoRe>"
-        }, 
-        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<AmoRe>"
-    }, 
-    "38": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C03-mention", 
-        "nltk_output_fragment": {
-            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<Amore>", 
-            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<Amore>"
-        }, 
-        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<Amore>"
-    }, 
-    "39": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C04-mention", 
-        "nltk_output_fragment": {
-            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<SIGMAA>", 
-            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SIGMAA>"
-        }, 
-        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<SIGMAA>"
-    }, 
-    "40": {
-        "article_id": "bioj:a2005-46-NATURE", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2005-46-NATURE-C05-mention", 
-        "nltk_output_fragment": {
-            "0": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43].<DM>", 
-            "1": "Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<DM>"
-        }, 
-        "original_full_quote & software": "The bromide sites were found with SOLVE [42] and molecular replacement was done with AmoRe [43]. Phase combination and extension were accomplished with SIGMAA [44] and DM [45], respectively.<DM>"
     }, 
     "41": {
         "article_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D", 
@@ -531,7 +450,6 @@
         "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C12-mention", 
         "nltk_output_fragment": {
             "0": "The hydrophobic molecular-interac-tion fields at the surfaces of the different mutants were analysed using a DRY probe in the program package GRID (Goodford, 1985).<GRID>", 
-            "1": "The hydrophobic probe finds favourable locations that interact with other molecule(s) on the surface of a protein in an aqueous environment (Liljefors, 1998).<GRID>", 
             "2": "All GRID calculations were performed for the whole volume of the protein using a grid spacing of 1.0 A\u02da.<GRID>"
         }, 
         "original_full_quote & software": "The hydrophobic molecular-interac-tion fields at the surfaces of the different mutants were analysed using a DRY probe in the program package GRID (Goodford, 1985). The hydrophobic probe finds favourable locations that interact with other molecule(s) on the surface of a protein in an aqueous environment (Liljefors, 1998). All GRID calculations were performed for the whole volume of the protein using a grid spacing of 1.0 A\u02da.<GRID>"
@@ -573,8 +491,7 @@
         "match": "", 
         "mention_id": "bioj:a2006-26-ACTA_CRYSTALLOGR_D-C14-mention", 
         "nltk_output_fragment": {
-            "0": "To analyse the hypothesis that the Wind\u2013Pipe interaction is predominantly hydrophobic, involving aromatic interactions, the relative hydrophobic potentials on the surface shown in Fig.<GRID>", 
-            "1": "6 were estimated using a DRY (hydrophobic) probe in the program GRID (Goodford, 1985).<GRID>"
+            "0": "6 were estimated using a DRY (hydrophobic) probe in the program GRID (Goodford, 1985).<GRID>"
         }, 
         "original_full_quote & software": "To analyse the hypothesis that the Wind\u2013Pipe interaction is predominantly hydrophobic, involving aromatic interactions, the relative hydrophobic potentials on the surface shown in Fig. 6 were estimated using a DRY (hydrophobic) probe in the program GRID (Goodford, 1985).<GRID>"
     }, 
@@ -584,25 +501,11 @@
         "match": "", 
         "mention_id": "bioj:a2007-14-NAT_GENET-C01-mention", 
         "nltk_output_fragment": {
-            "0": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.<Statview>", 
+            "0": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.<Statview, Prism GraphPad>", 
             "1": "We analyzed survival data by Kaplan-Meier analysis in Statview 5.0.<Statview>", 
-            "2": "The log-rank (Mantel-Cox) test results are presented.<Statview>", 
-            "3": "Censored data were recorded and analyzed with GraphPad software.<Statview>"
+            "2": "Censored data were recorded and analyzed with GraphPad software.<GraphPad>"
         }, 
         "original_full_quote & software": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis. We analyzed survival data by Kaplan-Meier analysis in Statview 5.0. The log-rank (Mantel-Cox) test results are presented. Censored data were recorded and analyzed with GraphPad software.<Statview>"
-    }, 
-    "57": {
-        "article_id": "bioj:a2007-14-NAT_GENET", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2007-14-NAT_GENET-C02-mention", 
-        "nltk_output_fragment": {
-            "0": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis.<GraphPad Prism>", 
-            "1": "We analyzed survival data by Kaplan-Meier analysis in Statview 5.0.<GraphPad Prism>", 
-            "2": "The log-rank (Mantel-Cox) test results are presented.<GraphPad Prism>", 
-            "3": "Censored data were recorded and analyzed with GraphPad software.<GraphPad Prism>"
-        }, 
-        "original_full_quote & software": "Both Statview 5.0 and Prism GraphPad software were used for survival data and mortality curves analysis. We analyzed survival data by Kaplan-Meier analysis in Statview 5.0. The log-rank (Mantel-Cox) test results are presented. Censored data were recorded and analyzed with GraphPad software.<GraphPad Prism>"
     }, 
     "58": {
         "article_id": "bioj:a2007-14-NAT_GENET", 
@@ -630,13 +533,7 @@
         "match": "", 
         "mention_id": "bioj:a2007-27-CLADISTICS-C02-mention", 
         "nltk_output_fragment": {
-            "0": "In order to evaluate our search strategy, we first analyzed the original SEA matrix using PAUP*4.0b10 (Swofford, 2002) to compare our trees with the SEA topologies.<PAUP*>", 
-            "1": "As both analyses resulted in identical trees, the following search strategy was chosen: stepwise addition of 100 random taxa sequences, followed by Tree Bisection-Reconnection (TBR) branch swapping (100 trees held at each step during the stepwise addition, MULTREES on, STEEPEST DESCENT on).<PAUP*>", 
-            "2": "Boot-strap analyses were conducted with the same software program, employing a full heuristic search with 500 replicates, a simple addition sequence, and TBR swap-ping (10 trees held at each step, MULTREES on, STEEPEST DESCENT on).<PAUP*>", 
-            "3": "The consensus of the bootstrap replicates was used to determine bootstrap values.<PAUP*>", 
-            "4": "The search strategy of the wood matrix was adjusted because of excessive computational time to run the analysis to completion.<PAUP*>", 
-            "5": "Therefore, MULTREES option was turned off, and a heuristic search using 1000 instead of 100 replicates was carried out.<PAUP*>", 
-            "6": "Furthermore, a topological constraint tree had to be postulated in which the ingroup was forced to be monophyletic.<PAUP*>"
+            "0": "In order to evaluate our search strategy, we first analyzed the original SEA matrix using PAUP*4.0b10 (Swofford, 2002) to compare our trees with the SEA topologies.<PAUP*>"
         }, 
         "original_full_quote & software": "In order to evaluate our search strategy, we first analyzed the original SEA matrix using PAUP*4.0b10 (Swofford, 2002) to compare our trees with the SEA topologies. As both analyses resulted in identical trees, the following search strategy was chosen: stepwise addition of 100 random taxa sequences, followed by Tree Bisection-Reconnection (TBR) branch swapping (100 trees held at each step during the stepwise addition, MULTREES on, STEEPEST DESCENT on). Boot-strap analyses were conducted with the same software program, employing a full heuristic search with 500 replicates, a simple addition sequence, and TBR swap-ping (10 trees held at each step, MULTREES on, STEEPEST DESCENT on). The consensus of the bootstrap replicates was used to determine bootstrap values. The search strategy of the wood matrix was adjusted because of excessive computational time to run the analysis to completion. Therefore, MULTREES option was turned off, and a heuristic search using 1000 instead of 100 replicates was carried out. Furthermore, a topological constraint tree had to be postulated in which the ingroup was forced to be monophyletic.<PAUP*>"
     }, 
@@ -646,35 +543,9 @@
         "match": "", 
         "mention_id": "bioj:a2007-27-CLADISTICS-C03-mention", 
         "nltk_output_fragment": {
-            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<MacClade>", 
-            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<MacClade>", 
-            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<MacClade>"
+            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<MacClade,Adobe InDesign CS>"
         }, 
         "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<MacClade>"
-    }, 
-    "62": {
-        "article_id": "bioj:a2007-27-CLADISTICS", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2007-27-CLADISTICS-C03-mention", 
-        "nltk_output_fragment": {
-            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<Macclade>", 
-            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<Macclade>", 
-            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Macclade>"
-        }, 
-        "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Macclade>"
-    }, 
-    "63": {
-        "article_id": "bioj:a2007-27-CLADISTICS", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2007-27-CLADISTICS-C04-mention", 
-        "nltk_output_fragment": {
-            "0": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS.<Adobe INDesign CS>", 
-            "1": "As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal.<Adobe INDesign CS>", 
-            "2": "In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Adobe INDesign CS>"
-        }, 
-        "original_full_quote & software": "The final cladogram figures were made using MacClade 4.04 (Maddison and Maddison, 2005) and edited with Adobe InDesign CS. As some of the branches in the bootstrap consensus tree are not highly supported, we chose to code uncertainties in character evolution as equivocal. In addition, the option \u2018\u2018soft polytomies\u2019\u2019 was used.<Adobe INDesign CS>"
     }, 
     "64": {
         "article_id": "bioj:a2007-27-CLADISTICS", 
@@ -752,10 +623,7 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C13-mention", 
         "nltk_output_fragment": {
-            "0": "Figure 2 Analysis of candidate EC genes using geNorm.<geNorm>", 
-            "1": "(A): Average expression stability values of eligible EC genes.<geNorm>", 
-            "2": "Expression stability of the control genes as calculated by geNorm.<geNorm>", 
-            "3": "Stability<geNorm>"
+            "0": "Figure 2 Analysis of candidate EC genes using geNorm.<geNorm>"
         }, 
         "original_full_quote & software": "Figure 2 Analysis of candidate EC genes using geNorm. (A): Average expression stability values of eligible EC genes. Expression stability of the control genes as calculated by geNorm. Stability<geNorm>"
     }, 
@@ -766,24 +634,10 @@
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C18-mention", 
         "nltk_output_fragment": {
             "0": "For GeNorm, lower stability values (M) indicate greater stability.<geNorm>", 
-            "1": "In the case of NormFinder, stability is calculated from inter- and intra-group variation.<geNorm>", 
-            "2": "By grouping the tissues into tumour and normal the best combination of genes was identified.<geNorm>", 
-            "3": "For geNorm stability was based on the estimation of pair-wise variation.<geNorm>"
+            "1": "In the case of NormFinder, stability is calculated from inter- and intra-group variation.<NormFinder>", 
+            "2": "For geNorm stability was based on the estimation of pair-wise variation.<geNorm>"
         }, 
         "original_full_quote & software": "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation.<geNorm>"
-    }, 
-    "73": {
-        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C19-mention", 
-        "nltk_output_fragment": {
-            "0": "For GeNorm, lower stability values (M) indicate greater stability.<NormFinder>", 
-            "1": "In the case of NormFinder, stability is calculated from inter- and intra-group variation.<NormFinder>", 
-            "2": "By grouping the tissues into tumour and normal the best combination of genes was identified.<NormFinder>", 
-            "3": "For geNorm stability was based on the estimation of pair-wise variation.<NormFinder>"
-        }, 
-        "original_full_quote & software": "For GeNorm, lower stability values (M) indicate greater stability. In the case of NormFinder, stability is calculated from inter- and intra-group variation. By grouping the tissues into tumour and normal the best combination of genes was identified. For geNorm stability was based on the estimation of pair-wise variation.<NormFinder>"
     }, 
     "74": {
         "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
@@ -791,23 +645,10 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C08-mention", 
         "nltk_output_fragment": {
-            "0": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].<geNorm>", 
-            "1": "No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue.<geNorm>", 
-            "2": "Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<geNorm>"
+            "0": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].<geNorm,NormFinder>", 
+            "2": "Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<geNorm,NormFinder>"
         }, 
         "original_full_quote & software": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<geNorm>"
-    }, 
-    "75": {
-        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C09-mention", 
-        "nltk_output_fragment": {
-            "0": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35].<NormFinder>", 
-            "1": "No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue.<NormFinder>", 
-            "2": "Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<NormFinder>"
-        }, 
-        "original_full_quote & software": "In the present study the stability of expression of candi- date EC genes was determined using a pair-wise com- parison model: geNorm [8] and an MS Excel ANOVA based model, NormFinder [35]. No effect of disease sta- tus EC gene expression was identified in colorectal tis- sue. Since both geNorm and NormFinder are based on the assumption that candidate genes are not differen- tially expressed between samples, this was an important first step prior to their continued use [9,10].<NormFinder>"
     }, 
     "76": {
         "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
@@ -815,9 +656,7 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C10-mention", 
         "nltk_output_fragment": {
-            "0": "In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes.<geNorm>", 
-            "1": "B2M and PPIA were identified as the most stable pairing.<geNorm>", 
-            "2": "In order to achieve a pair-wise variation value (V) below the cut-off of 0.15 additional genes should theoretically be used; however this cut-off point is not absolute [14] and may not always be achievable [42].<geNorm>", 
+            "0": "In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes.<GeNorm>", 
             "3": "No significant difference in target gene expression was observed when the top three most stable EC genes identified by geNorm were used confirming that using of a pair of genes may be more practicable given cost, work load and sample availability considerations.<geNorm>"
         }, 
         "original_full_quote & software": "In this study GeNorm was used to identify the most stably expressed EC genes from our panel of candidates and also provided a measure of the optimal number of EC genes. B2M and PPIA were identified as the most stable pairing. In order to achieve a pair-wise variation value (V) below the cut-off of 0.15 additional genes should theoretically be used; however this cut-off point is not absolute [14] and may not always be achievable [42]. No significant difference in target gene expression was observed when the top three most stable EC genes identified by geNorm were used confirming that using of a pair of genes may be more practicable given cost, work load and sample availability considerations.<geNorm>"
@@ -849,7 +688,7 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C12-mention", 
         "nltk_output_fragment": {
-            "0": "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms.<qBasePlus>", 
+            "0": "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms.<qBasePlus,geNorm,qBase>", 
             "1": "QBasePlus was used to confirm our selection of the B2M and PPIA pairing as the best combination of ECs in colorectal tissue.<qBasePlus>"
         }, 
         "original_full_quote & software": "QBasePlus real-time PCR data manager programme was developed based on geNorm and qBase [36] algorithms. QBasePlus was used to confirm our selection of the B2M and PPIA pairing as the best combination of ECs in colorectal tissue.<qBasePlus>"
@@ -860,7 +699,7 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C20-mention", 
         "nltk_output_fragment": {
-            "0": "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used.<qBasePlus>"
+            "0": "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used.<qBasePlus,geNorm,qBase>"
         }, 
         "original_full_quote & software": "QBasePlus through its components, geNorm and qBase, identified coefficient of variation (CV) and stability (M) values and thereby the best combination of genes for normalisation only when more than one gene is used.<qBasePlus>"
     }, 
@@ -870,10 +709,7 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C22-mention", 
         "nltk_output_fragment": {
-            "0": "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes.<qBasePlus>", 
-            "1": "It applies \u2206\u2206Ct method was used where \u2206\u2206Ct =(Ct target gene, test sample - Ct endogenous control, test sample) - (Ct target gene, calibrator sample - Ct endogenous control, calibrator sample).<qBasePlus>", 
-            "2": "Relative quanti- ties were corrected for efficiency of amplification and fold change in gene expression between groups was cal- culated as E-\u2206\u2206Ct \u00b1 s.e.m.<qBasePlus>", 
-            "3": "Where more than one endo- genous control are used, fold change estimates were calculated using the geometric mean of EC quantities relative to the calibrator sample which could be the minimum, maximum or a named sample or an average.<qBasePlus>"
+            "0": "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes.<QBasePlus>"
         }, 
         "original_full_quote & software": "QBasePlus was used for calculation of PDCD4 expression relative to each of the EC genes. It applies \u2206\u2206Ct method was used where \u2206\u2206Ct =(Ct target gene, test sample - Ct endogenous control, test sample) - (Ct target gene, calibrator sample - Ct endogenous control, calibrator sample). Relative quanti- ties were corrected for efficiency of amplification and fold change in gene expression between groups was cal- culated as E-\u2206\u2206Ct \u00b1 s.e.m. Where more than one endo- genous control are used, fold change estimates were calculated using the geometric mean of EC quantities relative to the calibrator sample which could be the minimum, maximum or a named sample or an average.<qBasePlus>"
     }, 
@@ -914,27 +750,10 @@
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C06-mention", 
         "nltk_output_fragment": {
             "0": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<qBasePlus>", 
-            "1": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<qBasePlus>", 
-            "2": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<qBasePlus>", 
-            "3": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<qBasePlus>", 
-            "4": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
+            "3": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<GeNorm>"
         }, 
         "original_full_quote & software": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
-    }, 
-    "86": {
-        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C07-mention", 
-        "nltk_output_fragment": {
-            "0": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<qBasePlus>", 
-            "1": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<qBasePlus>", 
-            "2": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<qBasePlus>", 
-            "3": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<qBasePlus>", 
-            "4": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
-        }, 
-        "original_full_quote & software": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<qBasePlus>"
-    }, 
+    },  
     "87": {
         "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
         "change": "F", 
@@ -971,11 +790,8 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C14-mention", 
         "nltk_output_fragment": {
-            "0": "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation.<geNorm>", 
-            "1": "This factor is calculated using the variable V as the pairwise variation (Vn/Vn + 1) between two sequential NFs (NFn and NFn + 1).<geNorm>", 
-            "2": "To meet the recommended cut off V-value which is the point at which it is unnecessary to include additional genes in a normalisation strategy.<geNorm>", 
-            "3": "The recommended limit for V value is 0.15 but it is not always achievable.<geNorm>", 
-            "4": "In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three.<geNorm>"
+            "0": "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation.<GeNorm>", 
+            "1": "In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three.<geNorm>"
         }, 
         "original_full_quote & software": "The GeNorm programme calculates a normalisation factor (NF) which is used to determine the optimal number of EC genes required for accurate normalisation. This factor is calculated using the variable V as the pairwise variation (Vn/Vn + 1) between two sequential NFs (NFn and NFn + 1). To meet the recommended cut off V-value which is the point at which it is unnecessary to include additional genes in a normalisation strategy. The recommended limit for V value is 0.15 but it is not always achievable. In this instance, the GeNorm output file indicated that the optimal number of genes required for normalisation was three.<geNorm>"
     }, 
@@ -985,18 +801,9 @@
         "match": "", 
         "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C04-mention", 
         "nltk_output_fragment": {
-            "0": "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes.<geNorm>", 
-            "1": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<geNorm>", 
-            "2": "These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data.<geNorm>", 
-            "3": "The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3.<geNorm>", 
-            "4": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<geNorm>", 
-            "5": "Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<geNorm>"
+            "0": "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes.<geNorm,NormFinder>", 
+            "1": "Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package.<qBasePlus>", 
+            "4": "In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3).<GeNorm>", 
         }, 
         "original_full_quote & software": "The stability of candidate EC genes was analysed using geNorm [8] and NormFinder [35] programmes. Stability was further evaluated using qBasePlus [8,36], a commer- cially available RQ-PCR data mining package. These programmes were used to calculate amplification effi- ciency-corrected relative quantities from raw fluores- cence data. The ranking of candidate EC genes as determined by each of these programmes is illustrated in Table 3. In the case of GeNorm the variable V indi- cating the pairwise variation (Vn/Vn+1) between two sequential normalisation factors (NFn/NFn+1) indicated that three EC genes was the optimal number of genes for accurate normalisation (figure 2), however, target genes expression did not differ significantly if two rather than three EC genes were used (figure 3). Use of all three programmes confirmed that B2M and PPIA was the best combination of genes for normalising RQ-PCR data in CRC tissues (table 3).<geNorm>"
-    }, 
-    "92": {
-        "article_id": "bioj:a2010-05-BMC_MOL_BIOL", 
-        "change": "T", 
-        "match": "", 
-        "mention_id": "bioj:a2010-05-BMC_MOL_BIOL-C05-mention", 
-        "nltk_output_fragment": 
+    }
